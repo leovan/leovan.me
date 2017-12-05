@@ -1,0 +1,129 @@
+baseurl: "https://leovan.me/"
+languageCode: "en-us"
+title: "Leo | 范叶亮"
+theme: "hugo-ivy"
+googleAnalytics: "UA-48667916-2"
+disqusShortname: "chineseleovan"
+ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage: true
+enableEmoji: true
+footnotereturnlinkcontents: "↩"
+rssLimit: 30
+
+permalinks:
+  cn: "/cn/:year/:month/:slug/"
+  en: "/en/:year/:month/:slug/"
+
+menu:
+  main:
+    - name: "About"
+      url: "/en/about/"
+      weight: 1
+    - name: "Blog"
+      url: "/en/"
+      weight: 2
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 3
+    - name: "博客"
+      url: "/cn/"
+      weight: 4
+  en:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "/en/about/"
+      weight: 2
+    - name: "Blog"
+      url: "/en/"
+      weight: 3
+    - name: ""
+      url: ""
+      weight: 4
+    - name: "Categories"
+      url: "/categories/"
+      weight: 5
+    - name: "Tags"
+      url: "/tags/"
+      weight: 6
+    - name: " "
+      url: ""
+      weight: 7
+    - name: "中文"
+      url: "/cn/"
+      weight: 8
+  cn:
+    - name: "首页"
+      url: "/"
+      weight: 1
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 2
+    - name: "博客"
+      url: "/cn/"
+      weight: 3
+    - name: "书籍"
+      url: "/cn/books/"
+      weight: 4
+    - name: "音乐"
+      url: "/cn/music/"
+      weight: 5
+    - name: "电影"
+      url: "/cn/movie/"
+      weight: 6
+    - name: "摄影"
+      url: "/cn/photography/"
+      weight: 7
+    - name: ""
+      url: ""
+      weight: 8
+    - name: "分类"
+      url: "/categories/"
+      weight: 9
+    - name: "标签"
+      url: "/tags/"
+      weight: 10
+    - name: " "
+      url: ""
+      weight: 11
+    - name: "English"
+      url: "/en/"
+      weight: 12
+
+params:
+  description: "Personal website of Leo Van; 范叶亮的个人网站"
+  quote: "SOLDIER TO SOLDIER!"
+  footer: "&copy; [Leo Van](/) 2017 - 2017 | I am Mr. Black"
+  disqusURL: "http://leovan.me"
+  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
+  githubContentURL: "https://github.com/leovan/leovan.me/edit/master/content/"
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion: "9.12.0"
+  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsLang: ["r", "python", "yaml", "tex"]
+  highlightjsTheme: "atom-one-light"
+
+  logo:
+    img: "/images/icons/gravatar.png"
+    url: "/"
+    alt: "Mr. Black"
+    tag: ""
+
+  author:
+    en: "Leo Van"
+    cn: "范叶亮"
+
+  lang:
+    edit:
+      cn: "编辑"
+    license:
+      cn: "版权"
+    subscribe:
+      cn: "订阅"
+    categories: "分类 | Categories"
+
+blackfriday:
+    extensionsmask: ["noIntraEmphasis"]
+    fractions: false

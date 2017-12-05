@@ -1,0 +1,41 @@
+---
+title: '书籍'
+slug: 'cn/books'
+disable_comments: true
+from_Rmd: yes
+---
+
+## 读书，不是非做不可的事，而是想要去做的事。
+
+# 书单
+
+
+
+<table>
+<thead><tr>
+<th style="text-align:left;text-align: right;"> 书名 </th>
+   <th style="text-align:left;text-align: right;"> 作者 </th>
+   <th style="text-align:left;text-align: right;"> 买了 </th>
+   <th style="text-align:left;text-align: right;"> 读了 </th>
+   <th style="text-align:left;text-align: right;"> 读完了 </th>
+   <th style="text-align:left;text-align: right;"> 打个分 </th>
+  </tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> 為了活下去：脫北女孩朴研美 </td>
+   <td style="text-align:left;width: 4em; "> 朴研美 </td>
+   <td style="text-align:left;width: 5.8em; "> 2017-09-28 </td>
+   <td style="text-align:left;width: 5.8em; "> 2017-12-03 </td>
+   <td style="text-align:left;width: 5.8em; "> 2017-12-31 </td>
+   <td style="text-align:left;width: 4em; "> ⭑⭑⭑⭑⭑ </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> 為了活下去：脫北女孩朴研美 </td>
+   <td style="text-align:left;width: 4em; "> 朴研美 </td>
+   <td style="text-align:left;width: 5.8em; "> 2017-09-28 </td>
+   <td style="text-align:left;width: 5.8em; "> 2017-12-03 </td>
+   <td style="text-align:left;width: 5.8em; ">  </td>
+   <td style="text-align:left;width: 4em; "> ⭑⭑⭑⭒⭒ </td>
+  </tr>
+</tbody>
+</table>

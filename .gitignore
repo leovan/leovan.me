@@ -1,0 +1,14 @@
+# R Blogdown
+blogdown
+public
+
+# R Common
+.Rhistory
+.Rproj.user
+.RData
+.Ruserdata
+
+# System
+.DS_Store
+Thumbs.db
+

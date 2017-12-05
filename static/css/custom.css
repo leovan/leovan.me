@@ -1,0 +1,74 @@
+@media screen and (min-width: 960px) {
+  html {
+    background: #fafafa;
+  }
+  body {
+    background: #fff;
+  }
+}
+.menu li:not([class]) a, a:hover, .copyright a {
+  border-bottom: none;
+}
+.main {
+  hyphens: auto;
+}
+.main, .masthead {
+  padding: 1em 40px;
+}
+.en .main header ~ p:first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: .05em;
+  font-size: 1.1em;
+}
+.en .main header ~ p:first-of-type::first-letter {
+  font-size: 3em;
+  padding: .1em .1em 0 0;
+  float: left;
+  line-height: 1em;
+}
+code {
+  hyphens: none;
+}
+iframe, twitterwidget, video {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+#TableOfContents {
+  background-color: #f8f8f8;
+  padding: .5em;
+}
+table {
+  min-width: 50%;
+  max-width: 100%;
+  margin: auto;
+}
+pre .nohighlight {
+  background-color: transparent;
+}
+.hljs-comment {
+  font-style: inherit;
+}
+.hljs {
+  padding: 1em;
+}
+.home hr {
+  margin: 2em auto 1em;
+}
+.masthead img {
+  max-width: 80px;
+}
+
+@media print {
+  del, footer, .masthead {
+    display: none;
+  }
+  body {
+    max-width: 700px;
+  }
+  .main {
+    margin-left: 0;
+    border-left: none;
+    padding-left: 10px;
+  }
+}

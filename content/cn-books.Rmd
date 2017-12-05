@@ -1,0 +1,51 @@
+---
+title: '书籍'
+slug: 'cn/books'
+disable_comments: true
+---
+
+## 读书，不是非做不可的事，而是想要去做的事。
+
+# 书单
+
+```{r setup, include=F}
+library(tidyverse)
+library(formattable)
+library(knitr)
+library(kableExtra)
+options(knitr.kable.NA = '')
+```
+
+```{r book_list, echo=F, message=F, warning=F}
+output_col_names <- c(
+    '书名',
+    '作者',
+    '买了',
+    '读了',
+    '读完了',
+    '打个分'
+)
+
+book_list <- read_tsv(
+    '../data/books/book-list.tsv',
+    col_types = 'cccccDDDi')
+
+book_list %>%
+    mutate(
+        book = ifelse(is.na(blog_link),
+                      book,
+                      text_spec(book, link = blog_link)),
+        stars = paste0(str_dup('&#11089;', stars),
+                       str_dup('&#11090;', 5-stars))
+    ) %>%
+    select(c('book', 'author', 'purchasing_date', 
+             'reading_start_date', 'reading_finish_date', 'stars')) %>%
+    setNames(output_col_names) %>%
+    kable("html", escape = F) %>%
+    row_spec(0, align = 'right') %>%
+    column_spec(2, width = '4em') %>%
+    column_spec(3, width = '5.8em') %>%
+    column_spec(4, width = '5.8em') %>%
+    column_spec(5, width = '5.8em') %>%
+    column_spec(6, width = '4em')
+```
