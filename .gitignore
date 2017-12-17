@@ -8,7 +8,12 @@ public
 .RData
 .Ruserdata
 
+# VS Code
+.vscode
+
+# Python
+*.pyd
+
 # System
 .DS_Store
 Thumbs.db
-
