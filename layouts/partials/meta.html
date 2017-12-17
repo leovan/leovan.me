@@ -4,6 +4,29 @@
 {{ if .IsPage }}
 <h3>{{ with or (or .Params.author (index .Site.Params.author .Section)) "" }}{{  print . " / " }}{{ end }}
 {{ if .Params.date }}{{ .Date.Format "2006-01-02" }}{{ end }}</h3>
+
+{{ if or (.Params.categories) (.Params.tags) }}
+<h3 class="meta-categories-tags">
+{{ if .Params.categories }}
+{{ if gt (len .Params.categories) 0 }}
+<strong>{{ default "Categories" (index $.Site.Params.lang.categories .Section) }}: </strong>
+{{ range $index, $categories := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+{{ end }}
+{{ end }}
+{{ if and (.Params.categories) (.Params.tags) }}
+{{ if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+|
+{{ end }}
+{{ end }}
+{{ if .Params.tags }}
+{{ if gt (len .Params.tags) 0 }}
+<strong>{{ default "Tags" (index $.Site.Params.lang.tags .Section) }}: </strong>
+{{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+{{ end }}
+{{ end }}
+</h3>
+{{ end }}
+
 {{ end }}
 <hr>
 {{ end }}

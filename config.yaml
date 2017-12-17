@@ -93,36 +93,38 @@ menu:
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
-  quote: "SOLDIER TO SOLDIER!"
   footer: "&copy; [Leo Van](/) 2017 - 2017 | I am Mr. Black"
   disqusURL: "http://leovan.me"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
-  githubContentURL: "https://github.com/leovan/leovan.me/edit/master/content/"
-
+  
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdn.bootcss.com"
   highlightjsLang: ["r", "python", "yaml", "tex"]
   highlightjsTheme: "atom-one-light"
+  highlightLineNumberVersion: "2.1.0"
 
   logo:
     img: "/images/icons/gravatar.png"
     url: "/"
     alt: "Mr. Black"
-    tag: ""
+    tag: "Soldier to Solider"
 
   author:
     en: "Leo Van"
     cn: "范叶亮"
 
   lang:
-    edit:
-      cn: "编辑"
     license:
       cn: "版权"
     subscribe:
       cn: "订阅"
-    categories: "分类 | Categories"
+    categories:
+      cn: "分类"
+      en: "Categories"
+    tags:
+      cn: "标签"
+      en: "Tags"
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
