@@ -3,7 +3,7 @@ languageCode: "en-us"
 title: "Leo | 范叶亮"
 theme: "hugo-ivy"
 googleAnalytics: "UA-48667916-2"
-disqusShortname: "chineseleovan"
+disqusShortname: "leovan"
 ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
 hasCJKLanguage: true
 enableEmoji: true
