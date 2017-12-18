@@ -5,10 +5,10 @@ body {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
 }
 code {
-  font-family: "Lucida Console", 'Andale Mono', 'STKaiti', 'KaiTi', 'SimKai', monospace;
+  font-family: "Lucida Console", 'Andale Mono', "Microsoft YaHei", "微软雅黑", 'SimSun', "宋体", 'STXihei', "华文细黑", 'Heiti', "黑体", monospace;
 }
 pre code {
-  font-family: "Lucida Console", Monaco, 'STKaiti', 'KaiTi', 'SimKai', monospace;
+  font-family: "Lucida Console", Monaco, "Microsoft YaHei", "微软雅黑", 'SimSun', "宋体", 'STXihei', "华文细黑", 'Heiti', "黑体", monospace;
 }
 p code, li code {
   font-size: 90%;
