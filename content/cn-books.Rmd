@@ -35,8 +35,8 @@ book_table <- function(books) {
     which_year <- ifelse(is.na(which_year),
                          '忘了是哪年',
                          paste0(which_year, ' 年'))
-    cat('<h2>', which_year,'</h2>')
-    books %>%
+    header_ <- paste0('<h2>', which_year,'</h2>')
+    table_ <- books %>%
         mutate(
             purchasing_date_month_day = ifelse(
                 is.na(purchasing_date),
@@ -44,6 +44,7 @@ book_table <- function(books) {
                 paste(month(purchasing_date), day(purchasing_date), sep = '-')
             )
         ) %>%
+        arrange(desc(purchasing_date), author, book) %>%
         select(c('book', 'author', 'purchasing_date_month_day', 
                  'reading_start_date', 'reading_finish_date', 'stars')) %>%
         setNames(output_col_names) %>%
@@ -53,9 +54,10 @@ book_table <- function(books) {
         column_spec(3, width = '3.2em') %>%
         column_spec(4, width = '5.8em') %>%
         column_spec(5, width = '5.8em') %>%
-        column_spec(6, width = '4em') %>%
-        print
-    cat('<br/>')
+        column_spec(6, width = '4em')
+    footer_ <- '<br/>'
+    
+    tibble(table_ = paste0(header_, table_, footer_))
 }
 
 book_list %>%
@@ -65,10 +67,13 @@ book_list %>%
                       text_spec(book, link = blog_link)),
         stars = ifelse(is.na(stars),
                        '',
-                       paste0(str_dup('&#11089;', stars),
-                              str_dup('&#11090;', 5-stars))),
+                       paste0(str_dup('★', stars),
+                              str_dup('☆', 5-stars))),
         purchasing_year = year(purchasing_date)
     ) %>%
-    arrange(desc(purchasing_date, author, isbn, book)) %>%
-    d_ply(.(purchasing_year), book_table)
+    ddply(.(purchasing_year), book_table) %>%
+    arrange(desc(purchasing_year)) %>%
+    select(table_) %>%
+    unlist %>%
+    cat
 ```
