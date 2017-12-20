@@ -350,10 +350,10 @@ $$`
 `$$
 C = \dfrac{1}{n} X' X'^T = \left\lgroup
 \begin{array}{cccc}
-   \dfrac{1}{n} \sum_{i=1}^{n} x_{1i}^2 & \dfrac{1}{n} \sum_{i=1}^{n} x_{1i} x_{2i} & \dotsm & \dfrac{1}{n} \sum_{}^{} x_{1i} x_{ni} \\
-   \dfrac{1}{n} \sum_{i=1}^{n} x_{2i} x_{1i} & \dfrac{1}{n} \sum_{i=1}^{n} x_{2i}^2 & \dotsm & \dfrac{1}{n} \sum_{}^{} x_{2i} x_{ni} \\
+   \dfrac{1}{n} \sum_{i=1}^{n} x_{1i}^2 & \dfrac{1}{n} \sum_{i=1}^{n} x_{1i} x_{2i} & \cdots & \dfrac{1}{n} \sum_{}^{} x_{1i} x_{ni} \\
+   \dfrac{1}{n} \sum_{i=1}^{n} x_{2i} x_{1i} & \dfrac{1}{n} \sum_{i=1}^{n} x_{2i}^2 & \cdots & \dfrac{1}{n} \sum_{}^{} x_{2i} x_{ni} \\
    \vdots & \vdots & & \vdots \\
-   \dfrac{1}{n} \sum_{i=1}^{n} x_{mi} x_{1i} & \dfrac{1}{n} \sum_{i=1}^{n} x_{mi} x_{2i} & \dotsm & \dfrac{1}{n} \sum_{}^{} x_{mi}^2 \\
+   \dfrac{1}{n} \sum_{i=1}^{n} x_{mi} x_{1i} & \dfrac{1}{n} \sum_{i=1}^{n} x_{mi} x_{2i} & \cdots & \dfrac{1}{n} \sum_{}^{} x_{mi}^2 \\
 \end{array}
 \right\rgroup
 $$`
