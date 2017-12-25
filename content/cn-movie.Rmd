@@ -1,7 +1,0 @@
----
-title: '电影'
-slug: 'cn/movie'
-disable_comments: true
----
-
-## 认知，情愫，共鸣，观念
