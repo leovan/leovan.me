@@ -27,7 +27,6 @@ document.addEventListener('keyup', function(e) {
 <script async src="{{ . | relURL }}"></script>
 {{ end }}
 
-<script src='{{ $.Site.Params.jQueryCDN | default "//cdn.bootcss.com" }}/jquery/{{ $.Site.Params.jQueryVersion | default "3.2.1" }}/jquery.min.js'></script>
 <script src='{{ $.Site.Params.katexCDN | default "//cdn.bootcss.com" }}/KaTeX/{{ $.Site.Params.katexVersion | default "0.8.3" }}/katex.min.js'></script>
 <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/js/pseudocode.min.js"></script>
