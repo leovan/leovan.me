@@ -67,29 +67,32 @@ menu:
       url: "/cn/books/"
       weight: 4
     - name: "音乐"
-      url: "/cn/music/"
+      url: "/categories/音乐/"
       weight: 5
     - name: "电影"
-      url: "/cn/movie/"
+      url: "/categories/电影/"
       weight: 6
-    - name: "摄影"
-      url: "/cn/photography/"
+    - name: "旅行"
+      url: "/categories/旅行/"
       weight: 7
+    - name: "摄影"
+      url: "/categories/摄影/"
+      weight: 8
     - name: ""
       url: ""
-      weight: 8
+      weight: 9
     - name: "分类"
       url: "/categories/"
-      weight: 9
+      weight: 10
     - name: "标签"
       url: "/tags/"
-      weight: 10
+      weight: 11
     - name: " "
       url: ""
-      weight: 11
+      weight: 12
     - name: "English"
       url: "/en/"
-      weight: 12
+      weight: 13
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
@@ -110,6 +113,10 @@ params:
   # options for jQuery
   jQueryVersion: "3.2.1"
   jQueryCDN: "//cdn.bootcss.com"
+  
+  # options for photoswipe
+  photoswipeVersion: "4.1.2"
+  photoswipeCDN: "//cdn.bootcss.com"
 
   logo:
     img: "/images/icons/gravatar.png"
