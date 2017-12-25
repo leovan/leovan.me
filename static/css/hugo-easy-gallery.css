@@ -9,7 +9,7 @@ Grid Layout Styles
 */
 .gallery {
     overflow: hidden;
-    margin: 10px;
+    margin: 10px 0 10px 0;
     max-width: 768px;
 }
 .gallery .box {
@@ -40,6 +40,14 @@ Grid Layout Styles
       padding-bottom: 25%;
    }
 }
+.tiles-2 .box {
+    width: 50%;
+    padding-bottom: 50%;
+}
+.tiles-3 .box {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+}
 
 /*
 Transition styles
@@ -59,11 +67,14 @@ figure styles
 figure {
     position:relative; /* purely to allow absolution positioning of figcaption */
     overflow: hidden;
+    line-height: 0.5;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .gallery figure {
     position: absolute;
-    left: 5px;
-    right: 5px;
+    left: 0;
+    right: 0;
     top: 5px;
     bottom: 5px;
 }
@@ -106,6 +117,9 @@ figure a {
     right: 0;
     top: 0;
     bottom: 0;
+    text-decoration: none;
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 
 /*
@@ -124,6 +138,7 @@ figcaption styles
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
     cursor: pointer;
+    line-height: 1.5;
 }
 .gallery.caption-position-none figcaption,
 .fancy-figure.caption-position-none figcaption  {
