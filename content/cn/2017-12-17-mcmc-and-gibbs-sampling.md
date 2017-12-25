@@ -22,7 +22,7 @@ tags:
 \dfrac{A_c}{A_s} = \dfrac{\pi r^2}{\left(2r\right)^2} = \dfrac{\pi}{4}
 $$`
 
-![](/images/mc-pi.png)
+![](/images/cn/2017-12-17-mcmc-and-gibbs-sampling/mc-pi.png)
 
 如果我们在矩形内随机的生成均匀分布的点，则在圆内的点的个数的占比即为 `$\dfrac{\pi}{4}$`，因此通过模拟即可求出 `$\pi$` 的近似值
 
@@ -67,7 +67,7 @@ print(estimated_pi)
 
 模拟 `$1000$` 个随机点的结果如图所示
 
-![](/images/mc-pi-simulation.png)
+![](/images/cn/2017-12-17-mcmc-and-gibbs-sampling/mc-pi-simulation.png)
 
 对于简单的分布 `$p\left(x\right)$`，我们可以相对容易的生成其样本，但对于复杂的分布或高维的分布，样本的生成就比较困难了[^rickjin2013lda]，例如：
 
@@ -80,7 +80,7 @@ print(estimated_pi)
 
 马尔可夫过程 (Markov Process) 是因俄国数学家安德雷·安德耶维齐·马尔可夫 (Андрей Андреевич Марков) 而得名一个随机过程，在该随机过程中，给定当前状态和过去所有状态的条件下，其下一个状态的条件概率分布仅依赖于当前状态，通常具备离散状态的马尔科夫过程称之为马尔科夫链 (Markov Chain)。因此，马尔科夫链可以理解为一个有限状态机，给定了当前状态为 `$s_i$` 时，下一时刻状态为 `$s_j$` 的概率，不同状态之间变换的概率称之为转移概率。下图描述了 3 个状态 `$S_a, S_b, S_c$` 之间转换状态的马尔科夫链。
 
-![](/images/markov-chain-demo.png)
+![](/images/cn/2017-12-17-mcmc-and-gibbs-sampling/markov-chain-demo.png)
 
 对于马尔科夫链，我们设 `$X_t$` 表示 `$t$` 时刻随机变量 `$X$` 的取值，则马尔科夫链可以表示为
 
@@ -378,6 +378,6 @@ for (i in 1:iter) {
 
 可视化结果如下
 
-![](/images/gibbs-sampling-bivariate-guassian-distribution.gif)
+![](/images/cn/2017-12-17-mcmc-and-gibbs-sampling/gibbs-sampling-bivariate-guassian-distribution.gif)
 
 [^rickjin2013lda]: LDA 数学八卦，靳志辉，2013

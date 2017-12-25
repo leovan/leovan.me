@@ -28,7 +28,7 @@ $$`
 
 后续为了便于理解，我们以二维向量为例，则 `$\pmb{\alpha} = \left(x_1, y_1\right)^T, \pmb{\beta} = \left(x_2, y_2\right)^T$`，在直角座标系中可以两个向量表示如下：
 
-![](/images/vector-inner-product-and-projection.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-inner-product-and-projection.png)
 
 我们从 `$A$` 点向向量 `$\pmb{\beta}$` 的方向做一条垂线，交于点 `$C$`，则称 `$OC$` 为 `$OA$` 在 `$OB$` 方向上的投影。设向量 `$\pmb{\alpha}$` 和向量 `$\pmb{\beta}$` 的夹角为 `$\theta$`，则：
 
@@ -46,11 +46,11 @@ $$`
 
 其中 `$\left(1, 0\right)^T$` 和 `$\left(0, 1\right)^T$` 为二维空间中的一组基。
 
-![](/images/vector-bases.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-bases.png)
 
 因此，当我们确定好一组基之后，我们仅需利用向量在基上的投影值即可表示对应的向量。一般情况下，我们会选择由坐标轴方向上的单位向量构成的基作为默认的基来表示向量，但我们仍可选择其他的基。例如，我们选择 `$\left(-\dfrac{1}{\sqrt{2}}, \dfrac{1}{\sqrt{2}}\right)$` 和 `$\left(\dfrac{1}{\sqrt{2}}, \dfrac{1}{\sqrt{2}}\right)$` 作为一组基，则向量在这组基上的坐标为 `$\left(-\dfrac{1}{\sqrt{2}}, \dfrac{5}{\sqrt{2}}\right)$`，示例如下：
 
-![](/images/vector-change-of-bases.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-change-of-bases.png)
 
 ### 线性变换
 
@@ -113,7 +113,7 @@ x' =
 \right\rgroup
 $$`
 
-![](/images/vector-linear-transformation-1.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-1.png)
 
 (2) 通过变换将任意一个点 `$x$` 变成它关于 `$y = x$` 对称的点 `$x'$`
 
@@ -139,7 +139,7 @@ x' =
 \right\rgroup
 $$`
 
-![](/images/vector-linear-transformation-2.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-2.png)
 
 (3) 变换将任意一个点 `$x$` 变成在它与原点连线上，与原点距离伸缩为 `$|\lambda|$` 倍的点 `$x'$`
 
@@ -165,7 +165,7 @@ x' =
 \right\rgroup
 $$`
 
-![](/images/vector-linear-transformation-3.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-3.png)
 
 (4) 通过变换将任意一个点 `$x$` 绕原点旋转了角度 `$\theta$` 的点 `$x'$`
 
@@ -203,7 +203,7 @@ x' =
 \right\rgroup
 $$`
 
-![](/images/vector-linear-transformation-4.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-4.png)
 
 (5) 变换将任意一个点 `$x$` 变成它在 `$x$` 轴上 的投影点 `$x'$`
 
@@ -229,7 +229,7 @@ x' =
 \right\rgroup
 $$`
 
-![](/images/vector-linear-transformation-5.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-5.png)
 
 ## 特征值分解
 
@@ -315,11 +315,11 @@ $$`
 
 我们利用经典的 lena 图片展示一下 SVD 的作用，lena图片为一张 `$512*512$` 像素的彩色图片
 
-![](/images/lena-std.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/lena-std.png)
 
 我们对原始图片进行灰度处理后，进行特征值分解，下图中从左到右，从上到下分别是原始的灰度图像，利用 20 个左奇异向量和 20 个右奇异向量重构图像，利用 50 个左奇异向量和 100 个右奇异向量重构图像，利用 200 个左奇异向量和 200 个右奇异向量重构图像。
 
-![](/images/lena-reconstruction.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/lena-reconstruction.png)
 
 从图中可以看出，我们仅用了 200 个左奇异向量和 200 个右奇异向量重构图像与原始灰度图像已经基本看不出任何区别。因此，我们利用 SVD 可以通过仅保留较大的奇异值实现数据的压缩。
 
@@ -409,6 +409,6 @@ print(x_)
 
 降维的投影结果如图所示
 
-![](/images/pca-projection.png)
+![](/images/cn/2017-12-11-evd-svd-and-pca/pca-projection.png)
 
 [^wold1987principal]: Wold, Svante, Kim Esbensen, and Paul Geladi. "Principal component analysis." _Chemometrics and intelligent laboratory systems_ 2.1-3 (1987): 37-52.
