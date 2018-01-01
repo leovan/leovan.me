@@ -237,7 +237,7 @@ $$`
 
 `$$A \pmb{\alpha} = \lambda \pmb{\alpha}$$`
 
-则 `$\lambda$` 称为 `$A$` 的一个**特征值**，`$\lambda$` 称为 `$A$` 的一个**特征向量**。通过
+则 `$\lambda$` 称为 `$A$` 的一个**特征值**，`$\pmb{\alpha}$` 称为 `$A$` 的一个**特征向量**。通过
 
 `$$
 \begin{align}
