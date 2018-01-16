@@ -22,27 +22,27 @@ $$`
 
 ### 向量与基
 
-首先，定义 `$\pmb{\alpha}$` 为列向量，则维度相同的两个向量 `$\pmb{\alpha}, \pmb{\beta}$` 的内积可以表示为：
+首先，定义 `$\boldsymbol{\alpha}$` 为列向量，则维度相同的两个向量 `$\boldsymbol{\alpha}, \boldsymbol{\beta}$` 的内积可以表示为：
 
-`$$\pmb{\alpha} \cdot \pmb{\beta} = \pmb{\alpha}^T \pmb{\beta} = \sum_{i=1}^{n}{\alpha_i b_i}$$`
+`$$\boldsymbol{\alpha} \cdot \boldsymbol{\beta} = \boldsymbol{\alpha}^T \boldsymbol{\beta} = \sum_{i=1}^{n}{\alpha_i b_i}$$`
 
-后续为了便于理解，我们以二维向量为例，则 `$\pmb{\alpha} = \left(x_1, y_1\right)^T, \pmb{\beta} = \left(x_2, y_2\right)^T$`，在直角座标系中可以两个向量表示如下：
+后续为了便于理解，我们以二维向量为例，则 `$\boldsymbol{\alpha} = \left(x_1, y_1\right)^T, \boldsymbol{\beta} = \left(x_2, y_2\right)^T$`，在直角座标系中可以两个向量表示如下：
 
 ![](/images/cn/2017-12-11-evd-svd-and-pca/vector-inner-product-and-projection.png)
 
-我们从 `$A$` 点向向量 `$\pmb{\beta}$` 的方向做一条垂线，交于点 `$C$`，则称 `$OC$` 为 `$OA$` 在 `$OB$` 方向上的投影。设向量 `$\pmb{\alpha}$` 和向量 `$\pmb{\beta}$` 的夹角为 `$\theta$`，则：
+我们从 `$A$` 点向向量 `$\boldsymbol{\beta}$` 的方向做一条垂线，交于点 `$C$`，则称 `$OC$` 为 `$OA$` 在 `$OB$` 方向上的投影。设向量 `$\boldsymbol{\alpha}$` 和向量 `$\boldsymbol{\beta}$` 的夹角为 `$\theta$`，则：
 
-`$$\cos \left(\theta\right) = \dfrac{\pmb{\alpha} \cdot \pmb{\beta}}{\lvert\pmb{\alpha}\rvert \lvert\pmb{\beta}\rvert}$$`
+`$$\cos \left(\theta\right) = \dfrac{\boldsymbol{\alpha} \cdot \boldsymbol{\beta}}{\lvert\boldsymbol{\alpha}\rvert \lvert\boldsymbol{\beta}\rvert}$$`
 
-其中，`$\lvert\pmb{\alpha}\rvert = \sqrt{x_1^2 + y_1^2}$`，则 `$OC$` 的长度为 `$\lvert\pmb{\alpha}\rvert \cos\left(\theta\right)$`。
+其中，`$\lvert\boldsymbol{\alpha}\rvert = \sqrt{x_1^2 + y_1^2}$`，则 `$OC$` 的长度为 `$\lvert\boldsymbol{\alpha}\rvert \cos\left(\theta\right)$`。
 
-在 `$n$` 维的线性空间 `$V$` 中，`$n$` 个线性无关的向量 `$\pmb{\epsilon_1, \epsilon_2, ..., \epsilon_n}$` 称为 `$V$` 的一组**基**。则对于 `$V$` 中的任一向量 `$\pmb{\alpha}$` 可以由这组基线性表示出来：
+在 `$n$` 维的线性空间 `$V$` 中，`$n$` 个线性无关的向量 `$\boldsymbol{\epsilon_1, \epsilon_2, ..., \epsilon_n}$` 称为 `$V$` 的一组**基**。则对于 `$V$` 中的任一向量 `$\boldsymbol{\alpha}$` 可以由这组基线性表示出来：
 
-`$$\pmb{\alpha} = x_1 \pmb{\epsilon_1} + x_2 \pmb{\epsilon_2} + ... + x_n \pmb{\epsilon_n}$$`
+`$$\boldsymbol{\alpha} = x_1 \boldsymbol{\epsilon_1} + x_2 \boldsymbol{\epsilon_2} + ... + x_n \boldsymbol{\epsilon_n}$$`
 
-则对于向量 `$\pmb{\alpha} = \left(3, 2\right)^T$`，可以表示为：
+则对于向量 `$\boldsymbol{\alpha} = \left(3, 2\right)^T$`，可以表示为：
 
-`$$\pmb{\alpha} = 2 \left(1, 0\right)^T + 3 \left(0, 1\right)^T$$`
+`$$\boldsymbol{\alpha} = 2 \left(1, 0\right)^T + 3 \left(0, 1\right)^T$$`
 
 其中 `$\left(1, 0\right)^T$` 和 `$\left(0, 1\right)^T$` 为二维空间中的一组基。
 
@@ -65,10 +65,10 @@ A = \left\lgroup
 \right\rgroup
 $$`
 
-则对于二维空间中一个向量 `$\pmb{\alpha} = \left(x, y\right)^T$` ，通过同上述矩阵进行乘法运算，可得
+则对于二维空间中一个向量 `$\boldsymbol{\alpha} = \left(x, y\right)^T$` ，通过同上述矩阵进行乘法运算，可得
 
 `$$
-\pmb{\alpha'} = A \pmb{\alpha} =
+\boldsymbol{\alpha'} = A \boldsymbol{\alpha} =
 \left\lgroup
     \begin{array}{cc}
         a_{11} & a_{12} \\
@@ -233,17 +233,17 @@ $$`
 
 ## 特征值分解
 
-设 `$A$` 是线性空间 `$V$` 上的一个线性变换，对于一个非零向量 `$\pmb{\alpha} = \left(x_1, x_2, ..., x_n\right)^T$` 使得
+设 `$A$` 是线性空间 `$V$` 上的一个线性变换，对于一个非零向量 `$\boldsymbol{\alpha} = \left(x_1, x_2, ..., x_n\right)^T$` 使得
 
-`$$A \pmb{\alpha} = \lambda \pmb{\alpha}$$`
+`$$A \boldsymbol{\alpha} = \lambda \boldsymbol{\alpha}$$`
 
-则 `$\lambda$` 称为 `$A$` 的一个**特征值**，`$\pmb{\alpha}$` 称为 `$A$` 的一个**特征向量**。通过
+则 `$\lambda$` 称为 `$A$` 的一个**特征值**，`$\boldsymbol{\alpha}$` 称为 `$A$` 的一个**特征向量**。通过
 
 `$$
 \begin{align}
-    A \pmb{\alpha} &= \lambda \pmb{\alpha} \\
-    A \pmb{\alpha} - \lambda \pmb{\alpha} &= 0 \\
-    \left(A - \lambda E\right) \pmb{\alpha} &= 0 \\
+    A \boldsymbol{\alpha} &= \lambda \boldsymbol{\alpha} \\
+    A \boldsymbol{\alpha} - \lambda \boldsymbol{\alpha} &= 0 \\
+    \left(A - \lambda E\right) \boldsymbol{\alpha} &= 0 \\
     A - \lambda E &= 0
 \end{align}
 $$`
@@ -305,7 +305,7 @@ print(A_re)
 
 ## 奇异值分解
 
-特征值分解针对的是方阵，对于一个 `$m*n$` 的矩阵是无法进行特征值分解的，这时我们就需要使用奇异值分解来解决这个问题。对于 `$m*n$` 的矩阵 `$A$`，可得 `$A A^T$` 是一个 `$m*m$` 的方阵，则针对 `$A A^T$`，通过 `$\left(A A^T\right) \pmb{\alpha} = \lambda \pmb{\alpha}$`，即可求解这个方阵的特征值和特征向量。针对矩阵 `$A$`，奇异值分解是将原矩阵分解为三个部分
+特征值分解针对的是方阵，对于一个 `$m*n$` 的矩阵是无法进行特征值分解的，这时我们就需要使用奇异值分解来解决这个问题。对于 `$m*n$` 的矩阵 `$A$`，可得 `$A A^T$` 是一个 `$m*m$` 的方阵，则针对 `$A A^T$`，通过 `$\left(A A^T\right) \boldsymbol{\alpha} = \lambda \boldsymbol{\alpha}$`，即可求解这个方阵的特征值和特征向量。针对矩阵 `$A$`，奇异值分解是将原矩阵分解为三个部分
 
 `$$
 A_{m*n} = U_{m*r} \sum\nolimits_{r*r} V_{r*n}^T
@@ -325,19 +325,19 @@ $$`
 
 ## 主成份分析
 
-主成份分析[^wold1987principal]可以通俗的理解为一种降维方法。其目标可以理解为将一个 `$m$` 维的数据转换称一个 `$k$` 维的数据，其中 `$k < m$`。对于具有 `$n$` 个样本的数据集，设 `$\pmb{x_i}$` 表示 `$m$` 维的列向量，则
+主成份分析[^wold1987principal]可以通俗的理解为一种降维方法。其目标可以理解为将一个 `$m$` 维的数据转换称一个 `$k$` 维的数据，其中 `$k < m$`。对于具有 `$n$` 个样本的数据集，设 `$\boldsymbol{x_i}$` 表示 `$m$` 维的列向量，则
 
 `$$
-X_{m*n} = \left(\pmb{x_1}, \pmb{x_2}, ..., \pmb{x_n}\right)
+X_{m*n} = \left(\boldsymbol{x_1}, \boldsymbol{x_2}, ..., \boldsymbol{x_n}\right)
 $$`
 
 对每一个维度进行零均值化，即减去这一维度的均值
 
 `$$
-X'_{m*n} = X - \pmb{u}\pmb{h}
+X'_{m*n} = X - \boldsymbol{u}\boldsymbol{h}
 $$`
 
-其中，`$\pmb{u}$` 是一个 `$m$` 维的行向量，`$\pmb{u}[m] = \dfrac{1}{n} \sum_{i=1}^{n} X[m, i]$`；`$h$` 是一个值全为 `$1$` 的 `$n$` 维行向量。
+其中，`$\boldsymbol{u}$` 是一个 `$m$` 维的行向量，`$\boldsymbol{u}[m] = \dfrac{1}{n} \sum_{i=1}^{n} X[m, i]$`；`$h$` 是一个值全为 `$1$` 的 `$n$` 维行向量。
 
 对于两个随机变量，我们可以利用协方差简单表示这两个变量之间的相关性
 
@@ -360,7 +360,7 @@ $$`
 
 因为矩阵 `$X'$` 已经经过了零均值化处理，因此矩阵 `$C$` 中对角线上的元素为维度 `$m$` 的方差，其他元素则为两个维度之间的协方差。
 
-从 PCA 的目标来看，我们则可以通过求解矩阵 `$C$` 的特征值和特征向量，讲其特征值按照从大到小的顺序按行重排其对应的特征向量，则取前 `$k$` 个，则实现了数据从 `$m$` 维降至 `$k$` 维。
+从 PCA 的目标来看，我们则可以通过求解矩阵 `$C$` 的特征值和特征向量，将其特征值按照从大到小的顺序按行重排其对应的特征向量，则取前 `$k$` 个，则实现了数据从 `$m$` 维降至 `$k$` 维。
 
 例如，我们将二维数据
 

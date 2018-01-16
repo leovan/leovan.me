@@ -72,7 +72,7 @@ print(estimated_pi)
 对于简单的分布 `$p\left(x\right)$`，我们可以相对容易的生成其样本，但对于复杂的分布或高维的分布，样本的生成就比较困难了[^rickjin2013lda]，例如：
 
 1. `$p\left(x\right) = \dfrac{\tilde{p}\left(x\right)}{\int\tilde{p}\left(x\right) dx}$`，其中 `$\tilde{p}\left(x\right)$` 是可以计算的，而分母中的积分是无法显式计算的。
-2. `$p\left(x, y\right)$` 是一个二维分布函数，函数本身计算很困难，但其条件分布 `$p\left(x | y\right)$` 和 `$p\left(y | x\right)$` 计算相对简单。对于高维情况 `$p\left(\pmb{x}\right)$`，这种情况则更加明显。
+2. `$p\left(x, y\right)$` 是一个二维分布函数，函数本身计算很困难，但其条件分布 `$p\left(x | y\right)$` 和 `$p\left(y | x\right)$` 计算相对简单。对于高维情况 `$p\left(\boldsymbol{x}\right)$`，这种情况则更加明显。
 
 这时候则需要更加复杂的模拟方法来生成样本了。
 
@@ -203,7 +203,7 @@ print(pi)
 则这样的马尔科夫链，无论 `$\pi_0$` 取值如何，最终随机变量的分布都会收敛于 `$\pi^*$`，即
 
 `$$
-\pi^* = \lim_{t \to \infty}{\pi^{\left(0\right)} \pmb{P}^t}
+\pi^* = \lim_{t \to \infty}{\pi^{\left(0\right)} \boldsymbol{P}^t}
 $$`
 
 `$\pi^*$` 称之为这个马尔科夫链的平稳分布。
@@ -299,10 +299,10 @@ $$`
 p\left(X\right) Q\left(X \to Y\right) = p\left(Y\right) Q\left(Y \to X\right)
 $$`
 
-对于如上过程，我们不难推广到多维情况，将 `$x_1$` 变为多维情形 `$\pmb{x_1}$`，容易验证细致平稳条件依旧成立。
+对于如上过程，我们不难推广到多维情况，将 `$x_1$` 变为多维情形 `$\boldsymbol{x_1}$`，容易验证细致平稳条件依旧成立。
 
 `$$
-p\left(\pmb{x_1}, y_1\right) p\left(y_2 | \pmb{x_1}\right) = p\left(\pmb{x_1}, y_2\right) p\left(y_1 | \pmb{x_1}\right)
+p\left(\boldsymbol{x_1}, y_1\right) p\left(y_2 | \boldsymbol{x_1}\right) = p\left(\boldsymbol{x_1}, y_2\right) p\left(y_1 | \boldsymbol{x_1}\right)
 $$`
 
 对于 `$n$` 维的情况，通过不断的转移得到样本 `$\left(x_1^{\left(1\right)}, x_2^{\left(1\right)}, ..., x_n^{\left(1\right)}\right)$`, `$\left(x_1^{\left(2\right)}, x_2^{\left(2\right)}, ..., x_n^{\left(2\right)}\right)$`, ...，当马尔科夫链收敛后，后续得到的样本即为 `$p\left(x_1, x_2, ..., x_n\right)$` 的样本，收敛之前的这一阶段我们称之为 **burn-in period**。在进行转移的时候，坐标轴轮换的采样方法并不是必须的，可以在坐标轴轮换中引入随机性。至此，我们就得到了吉布斯采样算法
@@ -325,13 +325,13 @@ $$`
 我们以二元高斯分布为例，演示如何用 Gibbs Sampling 方法进行采样，二元高斯分布定义为
 
 `$$
-\left(X, Y\right) \sim \mathcal{N}\left(\pmb{\mu}, \pmb{\Sigma}\right)
+\left(X, Y\right) \sim \mathcal{N}\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)
 $$`
 
 其中
 
 `$$
-\pmb{\mu} = \left\lgroup \begin{array}{c} \mu_X \\ \mu_Y \end{array} \right\rgroup, \pmb{\Sigma} = \left\lgroup \begin{array}{cc} \sigma_X^2 & \rho \sigma_X \sigma_Y \\ \rho \sigma_X \sigma_Y & \sigma_Y^2 \end{array} \right\rgroup
+\boldsymbol{\mu} = \left\lgroup \begin{array}{c} \mu_X \\ \mu_Y \end{array} \right\rgroup, \boldsymbol{\Sigma} = \left\lgroup \begin{array}{cc} \sigma_X^2 & \rho \sigma_X \sigma_Y \\ \rho \sigma_X \sigma_Y & \sigma_Y^2 \end{array} \right\rgroup
 $$`
 
 因此可得
