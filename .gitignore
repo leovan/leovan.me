@@ -14,6 +14,18 @@ public
 # Python
 *.pyd
 
+# JetBrains
+.idea
+
+# Data
+*.zip
+*.tgz
+*.gz
+*.tar
+
+# Models
+models
+
 # System
 .DS_Store
 Thumbs.db
