@@ -1,7 +1,7 @@
 ---
 title: Ising 模型，Hopfield 网络和受限的玻尔兹曼机 (RBM)
 author: 范叶亮
-date: '2018-01-19'
+date: '2018-01-17'
 slug: ising-hopfield-and-rbm
 categories:
   - 机器学习
@@ -27,7 +27,7 @@ Ising 模型假设铁磁物质是由一堆规则排列的小磁针构成，每�
 
 考虑一个二维的情况
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/ising-model.svg)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/ising-model.svg)
 
 如图所示，每个节点都有两种状态 `$s_i \in \{+1, -1\}$`，则我们可以定义这个系统的能量为
 
@@ -122,7 +122,7 @@ diff_steps_matrix <- ising_simulation(100, 5000, ising_config,
 
 模拟结果可视化效果如图所示
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/ising-different-steps.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/ising-different-steps.png)
 
 对于二维的 Ising 模型，存在一个相变点，在相变点上的温度 `$T_c$` 满足
 
@@ -150,7 +150,7 @@ diff_t_matrix <- lapply(ising_config_t, function(t) {
 
 模拟结果可视化效果如图所示
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/ising-different-t.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/ising-different-t.png)
 
 ## Hopfield 神经网络
 
@@ -162,7 +162,7 @@ Hopfield 神经网络[^hopfield1987neural]是一种基于能量的反馈人工�
 
 对于离散型 Hopfield 神经网络，其网络结果如下
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/hopfield-network.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/hopfield-network.png)
 
 对于具有 `$n$` 个神经元的网络，我们设 `$t$` 时刻的网络状态为 `$\boldsymbol{X}^{\left(t\right)} = \left(x_1^{\left(t\right)}, x_2^{\left(t\right)}, ..., x_n^{\left(t\right)}\right)^T$`，对于 `$t+1$` 时刻网络的状态
 
@@ -252,9 +252,9 @@ $$`
 
 #### 示例
 
-我们通过一个手写数字识别的例子介绍一些 Hopfield 网络的功能，我们存在如下 10 个数字的图片，每张为像素 16*16 的二值化图片，其中背景色为白色，前景色为黑色 (每个图片的名称为 `num.png`，图片位于 `/images/cn/2018-01-19-ising-hopfield-and-rbm` 目录)。
+我们通过一个手写数字识别的例子介绍一些 Hopfield 网络的功能，我们存在如下 10 个数字的图片，每张为像素 16*16 的二值化图片，其中背景色为白色，前景色为黑色 (每个图片的名称为 `num.png`，图片位于 `/images/cn/2018-01-17-ising-hopfield-and-rbm` 目录)。
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/digits.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/digits.png)
 
 首先我们载入每张图片的数据
 
@@ -323,7 +323,7 @@ digits_test_patterns <- lapply(digits_test, function(digit) {
 })
 ```
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/digits-test.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test.png)
 
 我们利用训练好的 Hopfield 网络运行测试数据，我们迭代 300 次并保存最后的网络输出
 
@@ -375,11 +375,11 @@ digits_test_results <- lapply(digits_test_results_patterns,
 
 网络变换过程中，图像的变换如图所示
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/digits-test-results.gif)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test-results.gif)
 
 最终网络的输出如图所示
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/digits-test-results.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test-results.png)
 
 从结果中可以看出，部分测试图片还是得到了比较好的恢复，但如上文所说，由于我们给定的模式之间并不是两两正交的，因此，网络的推断就很可能出错 (例如：数字 5 恢复的结果更像 9 多一些)，甚至结果会收敛到伪吸引子上。
 
@@ -726,7 +726,7 @@ best_tsp_solution_path_p <- ggplot(ordered_cities) +
 print(best_tsp_solution_path_p)
 ```
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/tsp-best-solution-path.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/tsp-best-solution-path.png)
 
 ## 受限的玻尔兹曼机 (RBM)
 
@@ -734,7 +734,7 @@ print(best_tsp_solution_path_p)
 
 **受限的玻尔兹曼机** (Restricted Boltzmann Machine, RBM) 或**簧风琴** (harmonium) 是由 Smolensky 与 1986年在**玻尔兹曼机** (Boltzmann Machine, BM) 基础上提出的一种随机神经网络 (Stochastic Neural Networks)[^smolensky1986information]。受限的玻尔兹曼机对于原始的玻尔兹曼机做了相应的限制，在其网络结构中包含**可见节点**和**隐藏节点**，并且**可见节点**和**隐藏节点**内部不允许存在连接，更加形象的可以将其理解为一个二分图。
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/rbm-network.svg)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/rbm-network.svg)
 
 对于二值版本的 RBM 而言，其中可见层 `$\mathbf{v} = \left(v_1, v_2, ..., v_{n_v}\right)^T$` 由 `$n_v$` 个二值随机变量构成；隐藏层 `$\mathbf{h} = \left(h_1, h_2, ..., h_{n_h}\right)^T$` 由 `$n_h$` 个二值随机变量构成。
 
@@ -1095,7 +1095,7 @@ plt.style.use('ggplot')
 plt.plot(bbrbm_errs)
 ```
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/bbrbm-mnist-errs.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/bbrbm-mnist-errs.png)
 
 我们从 MNIST 的测试集中针对每个数字选取 10 个样本，共 100 个样本作为测试数据，利用训练好的 RBM 模型重构这 100 个样本
 
@@ -1153,7 +1153,7 @@ def plot_mnist(mnist_images, nrows, ncols, cmap='gray'):
 plot_mnist(mnist_test_images_samples_plt, 10, 20)
 ```
 
-![](/images/cn/2018-01-19-ising-hopfield-and-rbm/bbrbm-mnist.png)
+![](/images/cn/2018-01-17-ising-hopfield-and-rbm/bbrbm-mnist.png)
 
 测试集上的重构误差为
 
