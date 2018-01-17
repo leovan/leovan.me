@@ -1187,6 +1187,6 @@ gbrbm.get_err(mnist_test_images_samples)
 
 [^tfrbm]: https://github.com/meownoid/tensorfow-rbm
 
-[^hinton2010practical]: Hinton, Geoffrey. "A practical guide to training restricted Boltzmann machines." Momentum 9.1 (2010): 926.
+[^hinton2010practical]: Hinton, Geoffrey. "A practical guide to training restricted Boltzmann machines." _Momentum_ 9.1 (2010): 926.
 
-[^yamashita2014bernoulli]: Yamashita, Takayoshi, et al. "To be Bernoulli or to be Gaussian, for a Restricted Boltzmann Machine." Pattern Recognition (ICPR), 2014 22nd International Conference on. IEEE, 2014.
+[^yamashita2014bernoulli]: Yamashita, Takayoshi, et al. "To be Bernoulli or to be Gaussian, for a Restricted Boltzmann Machine." _Pattern Recognition (ICPR), 2014 22nd International Conference on. IEEE_, 2014.
