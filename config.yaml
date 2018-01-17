@@ -139,6 +139,9 @@ params:
     tags:
       cn: "标签"
       en: "Tags"
+    wordcount:
+      cn: "字数"
+      en: "Word Count"
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
