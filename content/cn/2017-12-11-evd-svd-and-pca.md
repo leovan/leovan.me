@@ -2,7 +2,7 @@
 title: 特征值分解 (EVD)，奇异值分解 (SVD) 和主成份分析 (PCA) 
 author: 范叶亮
 date: '2017-12-11'
-slug: pca-and-svd
+slug: evd-svd-and-pca
 categories:
   - 机器学习
 tags:
