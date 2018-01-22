@@ -16,17 +16,17 @@ permalinks:
 
 menu:
   main:
-    - name: "About"
-      url: "/en/about/"
-      weight: 1
-    - name: "Blog"
-      url: "/en/"
-      weight: 2
     - name: "关于"
       url: "/cn/about/"
-      weight: 3
+      weight: 1
     - name: "博客"
       url: "/cn/"
+      weight: 2
+    - name: "About"
+      url: "/en/about/"
+      weight: 3
+    - name: "Blog"
+      url: "/en/"
       weight: 4
   en:
     - name: "Home"
@@ -63,36 +63,21 @@ menu:
     - name: "博客"
       url: "/cn/"
       weight: 3
-    - name: "书籍"
-      url: "/cn/books/"
-      weight: 4
-    - name: "音乐"
-      url: "/categories/音乐/"
-      weight: 5
-    - name: "电影"
-      url: "/categories/电影/"
-      weight: 6
-    - name: "旅行"
-      url: "/categories/旅行/"
-      weight: 7
-    - name: "摄影"
-      url: "/categories/摄影/"
-      weight: 8
     - name: ""
       url: ""
-      weight: 9
+      weight: 4
     - name: "分类"
       url: "/categories/"
-      weight: 10
+      weight: 5
     - name: "标签"
       url: "/tags/"
-      weight: 11
+      weight: 6
     - name: " "
       url: ""
-      weight: 12
+      weight: 7
     - name: "English"
       url: "/en/"
-      weight: 13
+      weight: 8
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
