@@ -13,6 +13,8 @@ public
 
 # Python
 *.pyd
+*.pyc
+*.pyo
 
 # JetBrains
 .idea
@@ -23,8 +25,8 @@ public
 *.gz
 *.tar
 
-# Models
-models
+# Outputs
+outputs
 
 # System
 .DS_Store
