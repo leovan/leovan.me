@@ -102,6 +102,10 @@ params:
   # options for photoswipe
   photoswipeVersion: "4.1.2"
   photoswipeCDN: "//cdn.bootcss.com"
+  
+  # options for video.js
+  videojsVersion: "6.7.1"
+  videojsCDN: "//cdn.bootcss.com"
 
   logo:
     img: "/images/icons/gravatar.png"
