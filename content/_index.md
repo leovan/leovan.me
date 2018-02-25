@@ -13,5 +13,4 @@ disable_highlight: true
 > 用眼裡的空洞，去無視沉重，歲月不倒流，就讓淚倒流，醃漬離愁。  
 > 狂風停，雲也該放開手，淡淡地走。
 
-I'm Leo (Fan Yeliang). I got my Master degree of Management in 2012. I love R, yet not hate Python, just a litte bit uncomfortable with its aligned code style. Now, I am doing AI related things which seems not quite matched with my major. I don't like math, 
-especially long equations, but it's really a good friend to help me solve problems. I love reading, thinking, music, movie, cooking, photography and fitness. All these things make me feel be loved by this world. Thanks all for making this damn world not so good, yet not so bad. Live in the real moments, and life goes on and on ...
+I'm Leo (Fan Yeliang). I got my Master degree of Management in 2012. I love R, yet not hate Python, just a litte bit uncomfortable with its aligned code style. Now, I am doing AI related things which seems not quite matched with my major. I don't like math, especially long equations, but it's really a good friend to help me solve problems. I love reading, thinking, music, movie, cooking, photography and fitness. All these things make me feel be loved by this world. Thanks all for making this damn world not so good, yet not so bad. Live in the real moments, and life goes on and on ...
