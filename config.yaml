@@ -92,7 +92,7 @@ params:
   highlightjsTheme: "atom-one-light"
   
   # options for KaTeX (for pseudocode.js)
-  katexVersion: "0.9.0-beta"
+  katexVersion: "0.9.0"
   katexCDN: "//cdn.bootcss.com"
   
   # options for jQuery
