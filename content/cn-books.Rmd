@@ -27,7 +27,7 @@ output_col_names <- c(
 )
 
 book_list <- read_tsv(
-    '../data/books/book-list.txt',
+    '../data/books/book-list.tsv',
     col_types = 'cccccDDDi')
 
 book_table <- function(books) {
