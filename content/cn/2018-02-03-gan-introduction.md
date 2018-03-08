@@ -1,5 +1,5 @@
 ---
-title: GAN 简介
+title: 生成对抗网络 (GAN) 简介
 author: 范叶亮
 date: '2018-02-03'
 slug: gan-introduction
