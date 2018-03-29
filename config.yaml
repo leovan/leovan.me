@@ -37,24 +37,27 @@ menu:
     - name: "About"
       url: "/en/about/"
       weight: 2
+    - name: "Resume"
+      url: "/en/resume/"
+      weight: 3
     - name: "Blog"
       url: "/en/"
-      weight: 3
+      weight: 4
     - name: ""
       url: ""
-      weight: 4
+      weight: 5
     - name: "Categories"
       url: "/categories/"
-      weight: 5
+      weight: 6
     - name: "Tags"
       url: "/tags/"
-      weight: 6
+      weight: 7
     - name: " "
       url: ""
-      weight: 7
+      weight: 8
     - name: "中文"
       url: "/cn/"
-      weight: 8
+      weight: 9
   cn:
     - name: "首页"
       url: "/"
@@ -62,24 +65,27 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 2
+    - name: "简历"
+      url: "/cn/resume/"
+      weight: 3
     - name: "博客"
       url: "/cn/"
-      weight: 3
+      weight: 4
     - name: ""
       url: ""
-      weight: 4
+      weight: 5
     - name: "分类"
       url: "/categories/"
-      weight: 5
+      weight: 6
     - name: "标签"
       url: "/tags/"
-      weight: 6
+      weight: 7
     - name: " "
       url: ""
-      weight: 7
+      weight: 8
     - name: "English"
       url: "/en/"
-      weight: 8
+      weight: 9
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
