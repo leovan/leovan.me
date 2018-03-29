@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1031"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="topological-space-example.svg"
+   inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/topological-space-sample.png"
+   inkscape:export-xdpi="130.10001"
+   inkscape:export-ydpi="130.10001">
+  <defs
+     id="defs1025" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="259.05533"
+     inkscape:cy="116.63013"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1349"
+     inkscape:window-height="882"
+     inkscape:window-x="558"
+     inkscape:window-y="146"
+     inkscape:window-maximized="0"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0" />
+  <metadata
+     id="metadata1028">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="path1576"
+       cx="39.6875"
+       cy="275.83331"
+       rx="13.079166"
+       ry="7.7874999"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="path1597"
+       cx="28.045834"
+       cy="266.30832"
+       r="1.4375"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="path1599"
+       cx="39.6875"
+       cy="273.71664"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="273.71664"
+       cx="33.072918"
+       id="circle1601"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="273.71664"
+       cx="46.302082"
+       id="circle1603"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="31.891594"
+       y="278.47916"
+       id="text1607"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1605"
+         x="31.891594"
+         y="278.47916"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">1</tspan></text>
+    <text
+       id="text1611"
+       y="278.47916"
+       x="38.635368"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="278.47916"
+         x="38.635368"
+         id="tspan1609"
+         sodipodi:role="line">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="45.24995"
+       y="278.47916"
+       id="text1615"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1613"
+         x="45.24995"
+         y="278.47916"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">3</tspan></text>
+    <ellipse
+       ry="7.7874999"
+       rx="13.079166"
+       cy="254.66666"
+       cx="39.6875"
+       id="ellipse1617"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="1.4375"
+       cy="245.14165"
+       cx="28.045834"
+       id="circle1619"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="252.54997"
+       cx="39.6875"
+       id="circle1621"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1623"
+       cx="33.072918"
+       cy="252.54997"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1625"
+       cx="46.302082"
+       cy="252.54997"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       id="text1629"
+       y="257.3125"
+       x="31.891596"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="257.3125"
+         x="31.891596"
+         id="tspan1627"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="38.635368"
+       y="257.3125"
+       id="text1633"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1631"
+         x="38.635368"
+         y="257.3125"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">2</tspan></text>
+    <text
+       id="text1637"
+       y="257.3125"
+       x="45.24995"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="257.3125"
+         x="45.24995"
+         id="tspan1635"
+         sodipodi:role="line">3</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="path1639"
+       cx="33.072918"
+       cy="275.83331"
+       rx="2.4958334"
+       ry="4.6125002"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       ry="7.7874999"
+       rx="13.079166"
+       cy="254.66666"
+       cx="71.4375"
+       id="ellipse1641"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="1.4375"
+       cy="245.14165"
+       cx="59.795834"
+       id="circle1643"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="252.54997"
+       cx="71.4375"
+       id="circle1645"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1647"
+       cx="64.822914"
+       cy="252.54997"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1649"
+       cx="78.052078"
+       cy="252.54997"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       id="text1653"
+       y="257.3125"
+       x="63.641594"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="257.3125"
+         x="63.641594"
+         id="tspan1651"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="70.385368"
+       y="257.3125"
+       id="text1657"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1655"
+         x="70.385368"
+         y="257.3125"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">2</tspan></text>
+    <text
+       id="text1661"
+       y="257.3125"
+       x="76.999947"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="257.3125"
+         x="76.999947"
+         id="tspan1659"
+         sodipodi:role="line">3</tspan></text>
+    <ellipse
+       ry="4.6125002"
+       rx="2.4958334"
+       cy="254.66666"
+       cx="64.822914"
+       id="ellipse1663"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1665"
+       cx="71.4375"
+       cy="254.66666"
+       rx="2.4958334"
+       ry="4.6125002"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="path1667"
+       cx="67.997917"
+       cy="254.66666"
+       rx="8.8458328"
+       ry="5.9354167"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1669"
+       cx="71.4375"
+       cy="275.83331"
+       rx="13.079166"
+       ry="7.7874999"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1671"
+       cx="59.795834"
+       cy="266.30832"
+       r="1.4375"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1673"
+       cx="71.4375"
+       cy="273.71664"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="273.71664"
+       cx="64.822914"
+       id="circle1675"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="273.71664"
+       cx="78.052078"
+       id="circle1677"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="63.641594"
+       y="278.47916"
+       id="text1681"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1679"
+         x="63.641594"
+         y="278.47916"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">1</tspan></text>
+    <text
+       id="text1685"
+       y="278.47916"
+       x="70.385368"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="278.47916"
+         x="70.385368"
+         id="tspan1683"
+         sodipodi:role="line">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="76.999947"
+       y="278.47916"
+       id="text1689"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1687"
+         x="76.999947"
+         y="278.47916"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">3</tspan></text>
+    <ellipse
+       ry="4.6125002"
+       rx="2.4958334"
+       cy="275.83331"
+       cx="71.4375"
+       id="ellipse1693"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       ry="5.9354167"
+       rx="8.8458328"
+       cy="275.83331"
+       cx="67.997917"
+       id="ellipse1695"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1697"
+       cx="74.877083"
+       cy="275.83331"
+       rx="8.8458328"
+       ry="5.9354167"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1699"
+       cx="103.1875"
+       cy="254.66666"
+       rx="13.079166"
+       ry="7.7874999"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1701"
+       cx="91.54583"
+       cy="245.14165"
+       r="1.4375"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1703"
+       cx="103.1875"
+       cy="252.54997"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="252.54997"
+       cx="96.572914"
+       id="circle1705"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="252.54997"
+       cx="109.80207"
+       id="circle1707"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="95.391594"
+       y="257.3125"
+       id="text1711"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1709"
+         x="95.391594"
+         y="257.3125"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">1</tspan></text>
+    <text
+       id="text1715"
+       y="257.3125"
+       x="102.13536"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="257.3125"
+         x="102.13536"
+         id="tspan1713"
+         sodipodi:role="line">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="108.74995"
+       y="257.3125"
+       id="text1719"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1717"
+         x="108.74995"
+         y="257.3125"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">3</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1721"
+       cx="109.80209"
+       cy="254.66666"
+       rx="2.4958334"
+       ry="4.6125002"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       ry="4.6125002"
+       rx="2.4958334"
+       cy="254.66666"
+       cx="103.1875"
+       id="ellipse1723"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       ry="7.7874999"
+       rx="13.079166"
+       cy="275.83331"
+       cx="103.1875"
+       id="ellipse1727"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="1.4375"
+       cy="266.30832"
+       cx="91.54583"
+       id="circle1729"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       r="0.64375001"
+       cy="273.71664"
+       cx="103.1875"
+       id="circle1731"
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1733"
+       cx="96.572914"
+       cy="273.71664"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="circle1735"
+       cx="109.80208"
+       cy="273.71664"
+       r="0.64375001"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       id="text1739"
+       y="278.47916"
+       x="95.391594"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="278.47916"
+         x="95.391594"
+         id="tspan1737"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="102.13537"
+       y="278.47916"
+       id="text1743"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1741"
+         x="102.13537"
+         y="278.47916"
+         style="font-size:3.52777767px;stroke-width:0.26458332px">2</tspan></text>
+    <text
+       id="text1747"
+       y="278.47916"
+       x="108.74995"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-size:3.52777767px;stroke-width:0.26458332px"
+         y="278.47916"
+         x="108.74995"
+         id="tspan1745"
+         sodipodi:role="line">3</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       id="ellipse1751"
+       cx="99.747917"
+       cy="275.83331"
+       rx="8.8458328"
+       ry="5.9354167"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <ellipse
+       ry="5.9354167"
+       rx="8.8458328"
+       cy="275.83331"
+       cx="106.62708"
+       id="ellipse1753"
+       style="fill:none;fill-opacity:1;stroke:#36332f;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99047618;paint-order:markers stroke fill"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="113.16105"
+       y="246.72916"
+       id="text1759"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         sodipodi:role="line"
+         id="tspan1757"
+         x="113.16105"
+         y="246.72916"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ff0000;fill-opacity:1;stroke-width:0.26458332px">X</tspan></text>
+    <text
+       id="text1763"
+       y="267.89581"
+       x="113.16105"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:export-filename="/Users/leo/Documents/Projects/R/leovan.me/static/images/cn/2018-03-16-manifold-learning/text1763.png"
+       inkscape:export-xdpi="130.10001"
+       inkscape:export-ydpi="130.10001"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ff0000;fill-opacity:1;stroke-width:0.26458332px"
+         y="267.89581"
+         x="113.16105"
+         id="tspan1761"
+         sodipodi:role="line">X</tspan></text>
+  </g>
+</svg>
