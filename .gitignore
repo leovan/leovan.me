@@ -15,6 +15,7 @@ public
 *.pyd
 *.pyc
 *.pyo
+.ipynb_checkpoints
 
 # JetBrains
 .idea
