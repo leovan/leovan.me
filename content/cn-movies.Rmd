@@ -1,0 +1,70 @@
+---
+title: '影视'
+slug: 'cn/movies'
+disable_comments: true
+---
+
+<link rel="stylesheet" type="text/css" href="/css/star-rating-svg.css">
+
+## 共鸣，情愫，观念，认知，体验，情怀
+
+```{r setup, include=F}
+library(plyr)
+library(tidyverse)
+library(lubridate)
+library(formattable)
+library(knitr)
+library(kableExtra)
+options(knitr.kable.NA = '')
+
+source('../scripts/cn/utils.R')
+```
+
+```{r moive_list, echo=F, message=F, warning=F, results = 'asis'}
+output_col_names <- c(
+    '名称',
+    '导演',
+    '主演',
+    'IMDB 评分',
+    '豆瓣评分',
+    '打个分'
+)
+
+movie_list <- read_tsv(
+    '../data/cn/movie-list.tsv',
+    col_types = 'ccccccDDiii')
+
+movie_table <- function(movies) {
+    which_year <- movies[1, ]$purchasing_year
+    which_year <- which_year_(which_year)
+    header_ <- paste0('<h2>', which_year, '</h2>')
+    table_ <- movies %>%
+        arrange(desc(release_date), director, name) %>%
+        select(c('name', 'director', 'actors', 'imdb_rating', 'douban_rating', 'stars')) %>%
+        setNames(output_col_names) %>%
+        kable("html", escape = F) %>%
+        row_spec(0, align = 'right') %>%
+        column_spec(4, width = '3em') %>%
+        column_spec(5, width = '3em') %>%
+        column_spec(6, width = '7em')
+    footer_ <- '<br/>'
+    
+    tibble(table_ = paste0(header_, table_, footer_))
+}
+
+movie_list %>%
+    mutate(
+        name = ifelse(is.na(blog_link), name, text_spec(name, link = blog_link)),
+        imdb_rating = imdb_rating_(imdb_id),
+        douban_rating = douban_rating_(douban_id),
+        stars = stars_(rating)
+    ) %>%
+    ddply(.(release_date), movie_table) %>%
+    arrange(desc(release_date)) %>%
+    select(table_) %>%
+    unlist %>%
+    cat
+```
+
+<script src="/js/star-rating-svg.js"></script>
+<script src="/js/star-rating-default.js"></script>
