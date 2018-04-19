@@ -32,10 +32,10 @@ output_col_names <- c(
 
 movie_list <- read_tsv(
     '../data/cn/movie-list.tsv',
-    col_types = 'ccccccDDiii')
+    col_types = 'ccccccDDddd')
 
 movie_table <- function(movies) {
-    which_year <- movies[1, ]$purchasing_year
+    which_year <- movies[1, ]$release_year
     which_year <- which_year_(which_year)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- movies %>%
@@ -52,15 +52,20 @@ movie_table <- function(movies) {
     tibble(table_ = paste0(header_, table_, footer_))
 }
 
-movie_list %>%
+movie_list <- movie_list %>%
     mutate(
         name = ifelse(is.na(blog_link), name, text_spec(name, link = blog_link)),
         imdb_rating = imdb_rating_(imdb_id),
-        douban_rating = douban_rating_(douban_id),
-        stars = stars_(rating)
-    ) %>%
-    ddply(.(release_date), movie_table) %>%
-    arrange(desc(release_date)) %>%
+        douban_rating = douban_rating_(douban_id))
+
+write_tsv(movie_list, '../data/cn/movie-list.tsv')
+
+movie_list %>%
+    mutate(
+        stars = stars_(rating),
+        release_year = year(release_date)) %>%
+    ddply(.(release_year), movie_table) %>%
+    arrange(desc(release_year)) %>%
     select(table_) %>%
     unlist %>%
     cat
