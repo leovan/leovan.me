@@ -61,8 +61,7 @@ book_list %>%
     mutate(
         title = ifelse(is.na(blog_link), title, text_spec(title, link = blog_link)),
         stars = stars_(rating),
-        purchasing_year = year(purchasing_date)
-    ) %>%
+        purchasing_year = year(purchasing_date)) %>%
     ddply(.(purchasing_year), book_table) %>%
     arrange(desc(purchasing_year)) %>%
     select(table_) %>%
