@@ -23,7 +23,7 @@ tags:
 
 {{< figure link="/images/cn/2017-08-26-trip-to-melbourne/first-sight-of-melbourne-night.jpg" caption="First Sight of Melbourne's Night" caption-position="bottom" caption-effect="fade" >}}
 
-谈到澳大利亚，最熟知的两种动物就是精壮的袋鼠和呆萌的拉，晚上吃饭看了菜单发现居然有袋鼠肉，味道还是很不错的，没什么奇怪的味道。后来得知，在澳洲袋鼠的数量算得上略微的泛滥，所以法律是允许吃袋鼠的，如果你在路上开车不幸撞上了一只袋鼠，那么请快速的结束他的生命就好，免得痛苦，但如果你撞了一只考拉，那好吧，估计你出不去澳大利亚了......
+谈到澳大利亚，最熟知的两种动物就是精壮的袋鼠和呆萌的考拉，晚上吃饭看了菜单发现居然有袋鼠肉，味道还是很不错的，没什么奇怪的味道。后来得知，在澳洲袋鼠的数量算得上略微的泛滥，所以法律是允许吃袋鼠的，如果你在路上开车不幸撞上了一只袋鼠，那么请快速的结束他的生命就好，免得痛苦，但如果你撞了一只考拉，那好吧，估计你出不去澳大利亚了......
 
 {{< gallery caption-position="bottom" caption-effect="fade" >}}
 {{< figure link="/images/cn/2017-08-26-trip-to-melbourne/kangaroo.jpg" caption="袋鼠：“你瞅啥？”" >}}
