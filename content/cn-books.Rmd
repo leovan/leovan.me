@@ -22,6 +22,7 @@ source('../scripts/cn/utils.R')
 
 ```{r book_list, echo=F, message=F, warning=F, results = 'asis'}
 output_col_names <- c(
+    'ISBN',
     '书名',
     '作者',
     '买了',
@@ -42,16 +43,18 @@ book_table <- function(books) {
         mutate(purchasing_date_month_day = 
                    date_month_day_format_(purchasing_date)) %>%
         arrange(desc(purchasing_date), author, title) %>%
-        select(c('title', 'author', 'purchasing_date_month_day', 
+        select(c('isbn', 'title', 'author', 'purchasing_date_month_day', 
                  'reading_start_date', 'reading_finish_date', 'stars')) %>%
         setNames(output_col_names) %>%
-        kable("html", escape = F) %>%
+        kable("html", escape = F, table.attr = 'class="book-table"') %>%
+        kable_styling(bootstrap_options = 'striped') %>%
         row_spec(0, align = 'right') %>%
-        column_spec(2, width = '8em') %>%
-        column_spec(3, width = '3.2em') %>%
-        column_spec(4, width = '5.8em') %>%
+        column_spec(1, extra_css = 'display: none;', include_thead = T) %>%
+        column_spec(3, width = '8em') %>%
+        column_spec(4, width = '3.2em') %>%
         column_spec(5, width = '5.8em') %>%
-        column_spec(6, width = '7em')
+        column_spec(6, width = '5.8em') %>%
+        column_spec(7, width = '7em')
     footer_ <- '<br/>'
     
     tibble(table_ = paste0(header_, table_, footer_))
@@ -59,7 +62,7 @@ book_table <- function(books) {
 
 book_list %>%
     mutate(
-        title = ifelse(is.na(blog_link), title, text_spec(title, link = blog_link)),
+        title = linked_text_(title, blog_link),
         stars = stars_(rating),
         purchasing_year = year(purchasing_date)) %>%
     ddply(.(purchasing_year), book_table) %>%

@@ -12,9 +12,15 @@ disable_comments: true
 <h2>
 2018 年
 </h2>
-<table>
+<table class="movie-table table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
+<th style="text-align:left;text-align: right;display: none;">
+IMDB ID
+</th>
+<th style="text-align:left;text-align: right;display: none;">
+DOUBAN ID
+</th>
 <th style="text-align:left;text-align: right;">
 名称
 </th>
@@ -27,7 +33,7 @@ disable_comments: true
 <th style="text-align:left;text-align: right;">
 IMDB 评分
 </th>
-<th style="text-align:right;text-align: right;">
+<th style="text-align:left;text-align: right;">
 豆瓣评分
 </th>
 <th style="text-align:left;text-align: right;">
@@ -37,6 +43,12 @@ IMDB 评分
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left;display: none;">
+<span class="imdb-id">tt6878882</span>
+</td>
+<td style="text-align:left;display: none;">
+<span class="douban-id">26861685</span>
+</td>
 <td style="text-align:left;">
 红海行动
 </td>
@@ -47,15 +59,13 @@ IMDB 评分
 张译,黄景瑜,海清,杜江,蒋璐霞
 </td>
 <td style="text-align:left;width: 3em; ">
-7.4
+<span class="imdb-rating"></span>
 </td>
-<td style="text-align:right;width: 3em; ">
-8.5
+<td style="text-align:left;width: 3em; ">
+<span class="douban-rating"></span>
 </td>
 <td style="text-align:left;width: 7em; ">
-<div class="star-rating" data-rating="4">
-
-</div>
+<span class="star-rating" data-rating="4"></span>
 </td>
 </tr>
 </tbody>
