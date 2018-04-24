@@ -33,7 +33,7 @@ stars_ <- function(rating) {
 #' @param imdb_id IMDB ID
 #' @return IMDB 评分
 imdb_rating_ <- function(imdb_id) {
-    url <- glue('http://www.omdbapi.com/?apikey=31ee42cc&i={imdb_id}')
+    url <- glue('https://www.omdbapi.com/?apikey=31ee42cc&i={imdb_id}')
     res <- GET(url)
     res_json <- fromJSON(content(res, as = 'text'))
     rating <- res_json$imdbRating

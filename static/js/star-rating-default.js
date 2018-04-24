@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(".imdb-rating").each(function() {
         var imdb_id = $(this).closest("tr").find(".imdb-id:first").html();
-        var url = "http://www.omdbapi.com/?apikey=31ee42cc&i=" +
+        var url = "https://www.omdbapi.com/?apikey=31ee42cc&i=" +
             imdb_id + "&callback=?";
         var current_elem = $(this);
         
