@@ -84,8 +84,9 @@ disable_comments: true
 
 ### 论文
 
-1. Li Jie, **Fan Yeliang**, et al. "An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM." _Information Science and Cloud Computing Companion(ISCC-C), 2013 International Conference on._ IEEE,.
-2. 基于网络外部性的数字产品动态定价策略研究. _硕士学位论文, 2014._
+1. Feng Zhou, Huafei Li, Lizhang Zhan, **Yeliang Fan**, Hua Yin and Liu Jiang. "A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction." _Big Data and Artificial Intelligence, 2018 International Conference on._, 2018.
+2. Li Jie, **Fan Yeliang\***, et al. "An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM." _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on._ IEEE, 2013.
+3. 基于网络外部性的数字产品动态定价策略研究. _硕士学位论文, 2014._
 
 ### 专利
 
@@ -97,3 +98,4 @@ disable_comments: true
 ### 开源项目
 
 1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)
+2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。
