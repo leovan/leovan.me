@@ -89,14 +89,14 @@ menu:
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
-  footer: "&copy; [Leo Van](/) 2017 - 2018 | [Github](https://github.com/leovan) | I am Mr. Black"
+  footer: "&copy; [Leo Van](/) 2017 - 2018 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "http://leovan.me"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js"]
   
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdn.bootcss.com"
-  highlightjsLang: ["r", "python", "yaml", "tex"]
+  highlightjsLang: ["r", "python", "json", "xml", "yaml", "tex", "bash", "dos", "qml"]
   highlightjsTheme: "atom-one-light"
   
   # options for KaTeX (for pseudocode.js)
