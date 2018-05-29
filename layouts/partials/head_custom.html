@@ -21,3 +21,23 @@
 <link rel="stylesheet" type="text/css" href="{{ "/css/custom.css" | relURL }}" />
 
 <script src='{{ $.Site.Params.jQueryCDN | default "//cdn.bootcss.com" }}/jquery/{{ $.Site.Params.jQueryVersion | default "3.2.1" }}/jquery.min.js'></script>
+
+{{ if not .Keywords }}
+  {{ if .Params.tags }}
+  <meta property="keywords" content ="{{ delimit .Params.tags ", " }}">
+  {{ end }}
+{{ end }}
+
+{{ if ne .URL "/" }}
+  {{ if not .Description }}
+  <meta name="description" property="og:description" content="{{ .Title }}">
+  {{ end }}
+{{ end }}
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2608165017777396",
+    enable_page_level_ads: true
+  });
+</script>
