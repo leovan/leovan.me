@@ -1,4 +1,4 @@
-baseurl: "https://leovan.me/"
+baseURL: "https://leovan.me/"
 languageCode: "en-us"
 title: "Leo | 范叶亮"
 theme: "hugo-ivy"
