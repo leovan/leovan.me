@@ -6,7 +6,7 @@
 {{ if .Params.date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h3>
 
 {{ if or (.Params.categories) (.Params.tags) }}
-<h3 class="meta-categories-tags">
+<h3 class="meta-info">
 {{ if .Params.categories }}
 {{ if gt (len .Params.categories) 0 }}
 <strong>{{ default "Categories" (index $.Site.Params.lang.categories .Section) }}: </strong>

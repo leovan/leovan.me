@@ -91,14 +91,15 @@ pre .nohighlight {
   font-weight: bold;
 }
 
-.meta-categories-tags {
+.meta-info {
   font-size: 0.9em;
-  margin-top: 0em;
+  line-height: 1.8em;
+  margin-top: 0;
   margin-bottom: 1em;
 }
-.meta-categories-tags a {
+.meta-info a {
   text-decoration: none;
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 
 h4, h5, h6 {
