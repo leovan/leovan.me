@@ -74,6 +74,7 @@ disable_comments: true
 - R: ★★★★☆
 - Python: ★★★☆☆
 - Java: ★★★☆☆
+- Lisp: ★★☆☆☆
 
 ### 外语能力
 
@@ -97,5 +98,5 @@ disable_comments: true
 
 ### 开源项目
 
-1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)
+1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。
 2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。
