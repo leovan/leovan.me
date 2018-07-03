@@ -6,8 +6,8 @@
     background: #fff;
   }
   .masthead {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 2em;
   }
 }
 
