@@ -1,5 +1,5 @@
-/feed/        /cn/index.xml
-/rss/         /cn/index.xml
+/feed/        /index.xml
+/rss/         /index.xml
 /cn/feed/     /cn/index.xml
 /cn/rss/      /cn/index.xml
 /en/feed/     /en/index.xml
