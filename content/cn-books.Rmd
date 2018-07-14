@@ -17,7 +17,7 @@ library(knitr)
 library(kableExtra)
 options(knitr.kable.NA = '')
 
-source('../scripts/cn/utils.R')
+source('../scripts/common/utils.R')
 ```
 
 ```{r book_list, echo=F, message=F, warning=F, results = 'asis'}
@@ -37,11 +37,11 @@ book_list <- read_tsv(
 
 book_table <- function(books) {
     which_year <- books[1, ]$purchasing_year
-    which_year <- which_year_(which_year)
+    which_year <- gen_which_year(which_year)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- books %>%
-        mutate(purchasing_date_month_day = 
-                   date_month_day_format_(purchasing_date)) %>%
+        mutate(
+            purchasing_date_month_day = format_month_day(purchasing_date)) %>%
         arrange(desc(purchasing_date), author, title) %>%
         select(c('isbn', 'title', 'author', 'purchasing_date_month_day', 
                  'reading_start_date', 'reading_finish_date', 'stars')) %>%
@@ -62,8 +62,8 @@ book_table <- function(books) {
 
 book_list %>%
     mutate(
-        title = linked_text_(title, blog_link),
-        stars = stars_(rating),
+        title = gen_linked_text_html(title, blog_link),
+        stars = gen_stars_html(rating),
         purchasing_year = year(purchasing_date)) %>%
     ddply(.(purchasing_year), book_table) %>%
     arrange(desc(purchasing_year)) %>%
