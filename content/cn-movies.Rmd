@@ -15,7 +15,7 @@ library(lubridate)
 library(formattable)
 library(knitr)
 library(kableExtra)
-options(knitr.kable.NA = 'N/A')
+options(knitr.kable.NA = '')
 
 source('../scripts/common/utils.R')
 ```
@@ -34,7 +34,7 @@ output_col_names <- c(
 
 movie_list <- read_tsv(
     '../data/cn/movie-list.tsv',
-    col_types = 'cccccccccDDddd', na = c('', 'NA', 'N/A'))
+    col_types = 'cccccccccDDdddiD')
 
 movie_table <- function(movies) {
     which_year <- movies[1, ]$release_year
@@ -47,8 +47,10 @@ movie_table <- function(movies) {
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="movie-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
-        row_spec(0, align = 'right') %>%
+        row_spec(0, align = 'center') %>%
         column_spec(1:2, extra_css = 'display: none;', include_thead = T) %>%
+        column_spec(3, width = '7em') %>%
+        column_spec(4, width = '5em') %>%
         column_spec(6, width = '3em') %>%
         column_spec(7, width = '3em') %>%
         column_spec(8, width = '7em')
@@ -57,8 +59,25 @@ movie_table <- function(movies) {
     tibble(table_ = paste0(header_, table_, footer_))
 }
 
+split_top_n_concat <- function(string, pattern, n) {
+    res <- NA
+    
+    if (!is.na(string)) {
+        res <- string %>%
+            str_split(pattern, simplify = T) %>%
+            as.character %>%
+            head(n) %>%
+            paste(collapse = pattern)
+    }
+    
+    res
+}
+split_top_n_concat <- Vectorize(split_top_n_concat)
+
 movie_list %>%
     mutate(
+        directors = directors %>% split_top_n_concat(',', 3),
+        casts = casts %>% split_top_n_concat(',', 3),
         stars = gen_stars_html(rating),
         release_year = year(release_date),
         imdb_id_html = gen_imdb_id_html(imdb_id),
@@ -74,17 +93,34 @@ movie_list %>%
 ```
 
 ```{r update_movie_info, eval=F, include=F}
-movie_list_ <- movie_list %>%
-    select(-c('name_zh', 'name', 'directors', 'casts', 'countries', 'genres',
-              'imdb_rating', 'douban_rating')) %>%
+movie_list_columns <- c(
+    'imdb_id', 'douban_id', 'blog_link', 'name_zh', 'name',
+    'directors', 'casts', 'countries', 'genres', 'release_date', 'watch_date',
+    'imdb_rating', 'douban_rating', 'rating', 'auto_update', 'updated_date')
+auto_update_colunms <- c(
+    'name_zh', 'name', 'directors', 'casts', 'countries', 'genres',
+    'release_date', 'imdb_rating', 'douban_rating')
+
+movie_list_auto_update <- movie_list %>%
+    filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
+    select(-auto_update_colunms)
+
+movie_list_manual_update <- movie_list %>%
+    filter(auto_update == 0 | (Sys.Date() - updated_date <= 30)) %>%
+    select(movie_list_columns)
+
+movie_list_auto_update <- movie_list_auto_update %>%
     mutate(imdb_rating = get_imdb_rating(imdb_id)) %>%
-    mutate(douban_info = map(douban_id, get_douban_info)) %>%
+    mutate(douban_info = map(douban_id, crawl_douban_info)) %>%
     unnest(douban_info)
 
-movie_list_ %>%
-    select(c('imdb_id', 'douban_id', 'blog_link', 'name_zh', 'name',
-             'directors', 'casts', 'countries', 'genres', 'release_date',
-             'watch_date', 'imdb_rating', 'douban_rating', 'rating')) %>%
+movie_list_auto_update %>%
+    select(movie_list_columns) %>%
+    mutate(updated_date = Sys.Date(),
+           imdb_rating = as.numeric(imdb_rating),
+           douban_rating = as.numeric(douban_rating)) %>%
+    union_all(movie_list_manual_update) %>%
+    arrange(desc(release_date)) %>%
     write_tsv('../data/cn/movie-list.tsv')
 ```
 
