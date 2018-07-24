@@ -4,8 +4,6 @@ slug: 'cn/movies'
 disable_comments: true
 ---
 
-<link rel="stylesheet" type="text/css" href="/css/star-rating-svg.css">
-
 ## 共鸣，情愫，观念，认知，体验，情怀
 
 ```{r setup, include=F}
@@ -43,17 +41,17 @@ movie_table <- function(movies) {
     table_ <- movies %>%
         arrange(desc(release_date), directors, name_zh) %>%
         select(c('imdb_id_html', 'douban_id_html', 'linked_name', 'directors',
-                 'casts', 'imdb_rating_html', 'douban_rating_html', 'stars')) %>%
+                 'casts', 'imdb_rating_html', 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="movie-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
         row_spec(0, align = 'center') %>%
         column_spec(1:2, extra_css = 'display: none;', include_thead = T) %>%
-        column_spec(3, width = '7em') %>%
+        column_spec(3, width = '9em') %>%
         column_spec(4, width = '5em') %>%
-        column_spec(6, width = '3em') %>%
-        column_spec(7, width = '3em') %>%
-        column_spec(8, width = '7em')
+        column_spec(6, width = '3em', extra_css = 'text-align: center;') %>%
+        column_spec(7, width = '3em', extra_css = 'text-align: center;') %>%
+        column_spec(8, width = '3em', extra_css = 'text-align: center;')
     footer_ <- '<br/>'
     
     tibble(table_ = paste0(header_, table_, footer_))
@@ -78,7 +76,6 @@ movie_list %>%
     mutate(
         directors = directors %>% split_top_n_concat(',', 3),
         casts = casts %>% split_top_n_concat(',', 3),
-        stars = gen_stars_html(rating),
         release_year = year(release_date),
         imdb_id_html = gen_imdb_id_html(imdb_id),
         douban_id_html = gen_douban_id_html(douban_id),
@@ -123,6 +120,3 @@ movie_list_auto_update %>%
     arrange(desc(release_date)) %>%
     write_tsv('../data/cn/movie-list.tsv')
 ```
-
-<script src="/js/star-rating-svg.js"></script>
-<script src="/js/star-rating-default.js"></script>

@@ -21,16 +21,6 @@ format_month_day <- function(date) {
         '{month}-{day}', month = month(date), day = day(date)))
 }
 
-#' 评分 转 星星
-#' 
-#' @param 评分 (十分制)
-#' @return 星星 (五星制)
-gen_stars_html <- function(rating) {
-    ifelse(is.na(rating), '', glue(
-        '<span class="star-rating" data-rating="{rating}"></span>',
-        rating = rating / 2))
-}
-
 #' 根据 IMDB ID 获取 IMDB 评分
 #'
 #' @param imdb_id IMDB ID

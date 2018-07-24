@@ -4,8 +4,6 @@ slug: 'cn/books'
 disable_comments: true
 ---
 
-<link rel="stylesheet" type="text/css" href="/css/star-rating-svg.css">
-
 ## 读书，不是非做不可的事，而是想要去做的事。
 
 ```{r setup, include=F}
@@ -44,17 +42,17 @@ book_table <- function(books) {
             purchasing_date_month_day = format_month_day(purchasing_date)) %>%
         arrange(desc(purchasing_date), author, title) %>%
         select(c('isbn', 'title', 'author', 'purchasing_date_month_day', 
-                 'reading_start_date', 'reading_finish_date', 'stars')) %>%
+                 'reading_start_date', 'reading_finish_date', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="book-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
         row_spec(0, align = 'center') %>%
         column_spec(1, extra_css = 'display: none;', include_thead = T) %>%
         column_spec(3, width = '8em') %>%
-        column_spec(4, width = '3.2em') %>%
-        column_spec(5, width = '5.8em') %>%
-        column_spec(6, width = '5.8em') %>%
-        column_spec(7, width = '7em')
+        column_spec(4, width = '3.2em', extra_css = 'text-align: center;') %>%
+        column_spec(5, width = '5.8em', extra_css = 'text-align: center;') %>%
+        column_spec(6, width = '5.8em', extra_css = 'text-align: center;') %>%
+        column_spec(7, width = '3.8em', extra_css = 'text-align: center;')
     footer_ <- '<br/>'
     
     tibble(table_ = paste0(header_, table_, footer_))
@@ -63,7 +61,6 @@ book_table <- function(books) {
 book_list %>%
     mutate(
         title = gen_linked_text_html(title, blog_link),
-        stars = gen_stars_html(rating),
         purchasing_year = year(purchasing_date)) %>%
     ddply(.(purchasing_year), book_table) %>%
     arrange(desc(purchasing_year)) %>%
@@ -71,6 +68,3 @@ book_list %>%
     unlist %>%
     cat
 ```
-
-<script src="/js/star-rating-svg.js"></script>
-<script src="/js/star-rating-default.js"></script>
