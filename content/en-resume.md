@@ -95,5 +95,5 @@ disable_comments: true
 
 ### Open Source Projects
 
-1. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r) A getting started tutorial of data science based on R (in Chinese). 
-2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA) Sci-Hub EVA is a cross-platform Sci-Hub GUI application.
+1. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA), Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)

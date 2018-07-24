@@ -128,3 +128,7 @@ a[href^="#fn:"]:before {
 a[href^="#fn:"]:after {
   content: "]"
 }
+
+img[alt="stars"] {
+  vertical-align: middle;
+}
