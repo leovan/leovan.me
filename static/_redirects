@@ -1,3 +1,7 @@
+# Netlify
+https://leovan.netlify.com/* https://leovan.me/:splat 301!
+
+# Custom
 /feed/        /index.xml
 /rss/         /index.xml
 /cn/feed/     /cn/index.xml
