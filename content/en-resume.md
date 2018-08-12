@@ -15,8 +15,8 @@ disable_comments: true
 
 ## Education
 
-- 2012.09 ~ 2015.03 **Hebei University of Technology**, M.S. in Management
-- 2008.09 ~ 2012.07 **Hebei University of Technology**, B.S. in Management
+- 2012.09 ~ 2015.03 **Hebei University of Technology**, M.S. in Business Management
+- 2008.09 ~ 2012.07 **Hebei University of Technology**, B.S. in Information Management
 
 ## Work Experiences
 
