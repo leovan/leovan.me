@@ -32,14 +32,14 @@ disable_comments: true
 
 ### Daat (Knowledge Graph of Finance)
 
-2018.01 ~ Now **JD Finance** Project Leader
+2018.04 ~ Now **JD Finance** Project Leader
 
-- Writing the documentation of JD Finance Knowledge Graph Technical White Paper.
-- Building a unified NLP service engine.
+- **JD Finance Knowledge Graph Technical White Paper**：Investigate the entire Knowledge Graph technology stack, including realted models, data, evaluation reports and open source tools, and summarize the final research report.
+- **Automatic Sensitive Information Identification**：Automatic sensitive information identification for data stored in the data warehouse, assisted with data encryption policy implementation. The model is constructed using the Wide & Deep network based on the meta-information of the data (e.g., table name, table comment, column name, column comment, etc.) and value-information of the data (e.g., the data values of every column). Build the Wide network with extracted traditional features and the Deep network with text features using Char Embeddding + CNN, and the F1-Score on test data is 95%+.
 
 ### All Seeing Eyes (Chinese Address Analytics)
 
-2015.03 ~ 2017.12 **JD Finance** Project Leader
+2015.03 ~ 2018.04 **JD Finance** Project Leader
 
 - Development of **Chinese address analytics algorithms**, including: segmentataion, classification, integrity, POI identification and similarity **(accuracy 90%+)**.
 - Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by 30%+ in the offline payment service.
@@ -50,20 +50,20 @@ disable_comments: true
 
 ### User Behavior Analytics
 
-2017.10 ~ 2017.12 **JD Finance** Algorithms Engineering
+2017.10 ~ 2017.12 **JD Finance** Algorithms Engineer
 
 - Development of a user behavior representation method named on Behavior2Vec. Based on hierarchical clustering and depth search, a hybrid model for identifying user abnormal behavior is proposed. Compared with Bag of Words and N-GRAM methods, the number of abnormal users identified is **3+ times** of traditional methods.
 
 ### Mortgage Loan
 
-2015.03 ~ 2015.10 **JD Finance** Algorithms Engineering
+2015.03 ~ 2015.10 **JD Finance** Algorithms Engineer
 
 - Development of a hybird product life cycle identifacation model based on Bass Diffusion model, optimized time series similarity method and clustring method. It got an **accuracy of 95%+** when identifing the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
 ### Smart Public Security (EzMap)
 
-2013.11 ~ 2014.02 **Founder International Co., Ltd.** Algorithms Engineering
+2013.11 ~ 2014.02 **Founder International Co., Ltd.** Algorithms Engineer
 
 - Development of a series prediction algorithm based on EMD and SVR for crime analysis and time series prediction in smart city project.
 - Development of a serial crime cases identifacation algorithm based on k-Prototypes.

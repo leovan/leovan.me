@@ -30,14 +30,14 @@ disable_comments: true
 
 ### Daat (金融领域知识图谱)
 
-2018.01 ~ 至今 **京东金融** 项目负责人
+2018.04 ~ 至今 **京东金融** 项目负责人
 
-- 编写京东金融知识图谱技术白皮书。
-- 构建统一 NLP 服务引擎。
+- **京东金融知识图谱技术白皮书**：调研整个知识图谱技术栈，包括各细分领域的相关模型，数据，评测和开源工具，汇总整理最终调研报告。
+- **自动化敏感信息识别**：对于入库到数据仓库中的数据进行自动敏感信息识别，辅助数据加密策略实施。根据数据的元信息 (例如：表名，表注释，字段名，字段注释等) 和值信息 (即字段存储的数据值)，利用 Wide & Deep 网络构建识别模型。提取传统特征构建 Wide 网络，针对文本特征，利用 Char Embedding + CNN 构建 Deep 网络，模型测试数据的 F1-Score 为 95%+。
 
 ### 全视之眼 (中文地址分析)
 
-2015.03 ~ 2017.12 **京东金融** 项目负责人
+2015.03 ~ 2018.04 **京东金融** 项目负责人
 
 - **地址分析算法引擎**：设计开发地址分词，分类，完整度，POI 识别，相似度等算法 **(准确率 90%+)**。
 - **地址画像系统**：依托地址分析算法引擎，设计地址 POI。 画像相关指标体系，存储和服务框架。对内，服务于线下支付等场景下的营销和运营，平均提升用户转化率 30%+；对外，接入京东金融稻田等平台，提供精确查询，模糊查询和经纬度范围查询等多种查询方式，实现金融科技的对外输出。
@@ -69,7 +69,7 @@ disable_comments: true
 
 ## 专业技能
 
-### 编程语言
+### 开发语言
 
 - R: ★★★★☆
 - Python: ★★★☆☆
@@ -85,8 +85,8 @@ disable_comments: true
 
 ### 论文
 
-1. Feng Zhou, Huafei Li, Lizhang Zhan, **Yeliang Fan**, Hua Yin and Liu Jiang. "A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction." _Big Data and Artificial Intelligence, 2018 International Conference on._, 2018.
-2. Li Jie, **Fan Yeliang\***, et al. "An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM." _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on._ IEEE, 2013.
+1. Zhou Feng, Li Huafei, Zhan Lizhang, **Fan Yeliang**, et al. (2018) A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _Big Data and Artificial Intelligence, 2018 International Conference on._
+2. Li Jie, **Fan Yeliang\***, et al. (2013) An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on,_ (pp. 722-727). IEEE.
 3. 基于网络外部性的数字产品动态定价策略研究. _硕士学位论文, 2014._
 
 ### 专利
