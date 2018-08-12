@@ -114,6 +114,10 @@ params:
   # options for video.js
   videojsVersion: "6.7.1"
   videojsCDN: "//cdn.bootcss.com"
+  
+  # options for material-design-icons
+  materialDesignIconsVersion: "3.0.1"
+  materialDesignIconsCDN: "//cdn.bootcss.com"
 
   logo:
     img: "/images/icons/gravatar.png"
