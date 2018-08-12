@@ -4,6 +4,8 @@ slug: 'cn/resume'
 disable_comments: true
 ---
 
+## <a href="//statics.leovan.me/documents/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons" style="vertical-align: text-bottom;">&#xE884;</i></a>
+
 ## 研究兴趣
 
 - 自然语言处理 (Natural Language Processing)

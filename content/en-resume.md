@@ -6,6 +6,8 @@ disable_comments: true
 
 <p><!-- disable capitalize the first letter --></p>
 
+## <a href="//statics.leovan.me/documents/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons" style="vertical-align: text-bottom;">&#xE884;</i></a>
+
 ## Research Interest
 
 - Natural Language Processing
