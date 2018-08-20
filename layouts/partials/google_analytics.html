@@ -1,0 +1,10 @@
+{{ with .Site.GoogleAnalytics }}
+<script>
+    if (window.location.hostname != "127.0.0.1" && window.location.hostname != "localhost") {
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '{{ . }}', 'auto');
+        ga('send', 'pageview');
+    }
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+{{ end }}
