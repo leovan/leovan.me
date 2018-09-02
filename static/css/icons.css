@@ -1,0 +1,39 @@
+.icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1em;
+  height: 1em;
+}
+
+.icon:before {
+  background-size: auto 1em;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em; 
+  height: 1em;
+  content: "";
+}
+
+.icon-tensorflow:before {
+  background-image: url("../images/icons/tensorflow.png");
+}
+
+.icon-keras:before {
+  background-image: url("../images/icons/keras.png");
+}
+
+.icon-pytorch:before {
+  background-image: url("../images/icons/pytorch.png");
+}
+
+.icon-caffe2:before {
+  background-image: url("../images/icons/caffe2.png");
+}
+
+.icon-mxnet:before {
+  background-image: url("../images/icons/mxnet.png");
+}
