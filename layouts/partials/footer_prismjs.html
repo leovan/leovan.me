@@ -1,0 +1,38 @@
+{{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+{{ $prismjsVersion := .Site.Params.prismjsVersion }}
+{{ $prismjsCDN := (.Site.Params.prismjsCDN | default "//cdn.bootcss.com") }}
+{{ if (not (eq $prismjsVersion "")) }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
+{{ range $.Site.Params.prismjsLang }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/components/prism-{{ . }}.min.js"></script>
+{{ end }}
+<script>
+    (function() {
+        if (!self.Prism) {
+            return;
+        }
+        
+        Prism.languages.xml = Prism.languages.markup;
+        Prism.languages.html = Prism.languages.markup;
+        Prism.languages.tex = Prism.languages.latex;
+        Prism.languages.dos = Prism.languages.powershell;
+        Prism.languages.json={property:/"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,string:{pattern:/"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,greedy:!0},number:/-?\d+\.?\d*([Ee][+-]?\d+)?/,punctuation:/[{}[\],]/,operator:/:/g,"boolean":/\b(?:true|false)\b/i,"null":/\bnull\b/i};
+        Prism.languages.qml=Prism.languages.javascript;
+        
+        var Languages = {
+            'r': 'R', 'python': 'Python', 'xml': 'XML', 'html': 'HTML',
+            'yaml': 'YAML', 'latex': 'LaTeX', 'tex': 'TeX',
+            'powershell': 'PowerShell', 'javascipt': 'JavaScript',
+            'dos': 'DOS', 'qml': 'QML', 'json': 'JSON', 'bash': 'Bash'
+        };
+        Prism.hooks.add('before-highlight', function(env) {
+        	var language = Languages[env.language] || env.language;
+        	env.element.setAttribute('data-language', language);
+        });
+    })();
+</script>
+{{ range $.Site.Params.prismjsPlugin }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
+{{ end }}
+{{ end }}
+{{ end }}

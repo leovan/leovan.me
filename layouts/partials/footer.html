@@ -1,6 +1,7 @@
   <footer>
   {{ partial "foot_custom.html" . }}
-  {{ partial "footer_highlightjs" . }}
+  <!-- {{ partial "footer_highlightjs" . }} -->
+  {{ partial "footer_prismjs.html" . }}
   {{ with .Site.Params.footer }}
   <hr>
   <div class="copyright">{{ . | markdownify }}</div>

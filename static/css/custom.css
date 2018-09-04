@@ -36,10 +36,6 @@
   line-height: 1em;
 }
 
-code {
-  hyphens: none;
-}
-
 iframe, twitterwidget, video {
   max-width: 100%;
   display: block;
@@ -57,6 +53,20 @@ table {
   margin: auto;
 }
 
+/* Code */
+
+pre code {
+  font-size: .9em;
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  background: #f9f9f9;
+}
+
+/* Codes highlightjs
+/* 
 pre .nohighlight {
   background-color: transparent;
 }
@@ -67,6 +77,34 @@ pre .nohighlight {
 
 .hljs {
   padding: 1em;
+}
+*/
+
+/* Codes prismjs*/
+
+pre[class*="language-"] {
+  padding: 0;
+  position: relative;
+  overflow: inherit;
+}
+
+pre[class*='language-'] > code[data-language]::before {
+  content: attr(data-language);
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none;
+}
+
+code[class*="language-"] {
+  padding: 1em;
+  line-height: 1.75;
 }
 
 .home hr {
