@@ -93,7 +93,7 @@ params:
   disqusURL: "http://leovan.me"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   
-  # options for highlight.js (version, additional languages, and theme)
+  # options for highlight.js
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdn.bootcss.com"
   highlightjsLang: ["r", "python", "json", "xml", "yaml", "tex", "bash", "dos", "qml"]
@@ -119,7 +119,7 @@ params:
   photoswipeCDN: "//cdn.bootcss.com"
   
   # options for video.js
-  videojsVersion: "6.7.1"
+  videojsVersion: "7.0.3"
   videojsCDN: "//cdn.bootcss.com"
   
   # options for material-design-icons

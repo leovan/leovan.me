@@ -1,12 +1,12 @@
 <video class="video-js vjs-big-play-centered"
        data-setup='{
-         "controls": {{ .Get "controls"| default true }},
+         "controls": {{ .Get "controls" | default true }},
          {{ with .Get "poster" }} "poster": "{{ . }}", {{ end }}
          {{ with .Get "width" }} "width": "{{ . }}", {{ end }}
          {{ with .Get "height" }} "height": "{{ . }}", {{ end }}
-         "autoplay": {{ .Get "autoplay"| default false }},
+         "autoplay": {{ .Get "autoplay" | default false }},
          "preload": "auto",
-         "loop": {{ .Get "loop"| default true }}
+         "loop": {{ .Get "loop" | default true }}
        }'>
   
   <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
