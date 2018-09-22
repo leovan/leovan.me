@@ -2,8 +2,8 @@
 {{ $prismjsVersion := .Site.Params.prismjsVersion }}
 {{ $prismjsCDN := (.Site.Params.prismjsCDN | default "//cdn.bootcss.com") }}
 {{ $prismjsTheme := .Site.Params.prismjsTheme }}
-<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css" />
+<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css">
 {{ if (not (eq $prismjsTheme "")) }}
-<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ $.Site.Params.prismjsVersion }}/themes/prism-{{ $prismjsTheme }}.min.css" />
+<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ $.Site.Params.prismjsVersion }}/themes/prism-{{ $prismjsTheme }}.min.css">
 {{ end }}
 {{ end }}

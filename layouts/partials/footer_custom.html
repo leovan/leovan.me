@@ -50,4 +50,7 @@ $(document).ready(function() {
 });
 </script>
 
-<script src='{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js'></script>
+<script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
+
+<script src="{{ $.Site.Params.materialComponentsWebCDN }}/material-components-web@{{ $.Site.Params.materialComponentsWebVersion }}/dist/material-components-web.min.js"></script>
+<script>window.mdc.autoInit()</script>

@@ -25,12 +25,12 @@
     {{ end }}
 
     {{ if .RSSLink }}
-    <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
     {{ end }}
-    {{ partial "head_prismjs.html" . }}
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
-    {{ partial "head_custom.html" . }}
+    {{ partial "header_prismjs.html" . }}
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
+    {{ partial "header_custom.html" . }}
   </head>
 
   {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}

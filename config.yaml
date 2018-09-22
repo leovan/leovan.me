@@ -106,8 +106,8 @@ params:
   prismjsTheme: ""
   prismjsPlugin: ["show-language"]
   
-  # options for KaTeX (for pseudocode.js)
-  katexVersion: "0.9.0"
+  # options for KaTeX
+  katexVersion: "0.10.0-alpha"
   katexCDN: "//cdn.bootcss.com"
   
   # options for jQuery
@@ -125,6 +125,10 @@ params:
   # options for material-design-icons
   materialDesignIconsVersion: "3.0.1"
   materialDesignIconsCDN: "//cdn.bootcss.com"
+  
+  # options for material-components-web
+  materialComponentsWebVersion: "latest"
+  materialComponentsWebCDN: "//unpkg.com"
 
   logo:
     img: "/images/icons/gravatar.png"
