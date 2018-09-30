@@ -106,6 +106,10 @@ params:
   prismjsTheme: ""
   prismjsPlugin: ["show-language"]
   
+  # options for MathJax
+  mathjaxVersion: "2.7.4"
+  mathjaxCDN: "//cdn.bootcss.com"
+  
   # options for KaTeX
   katexVersion: "0.10.0-alpha"
   katexCDN: "//cdn.bootcss.com"
