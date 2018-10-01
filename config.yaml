@@ -93,44 +93,38 @@ params:
   disqusURL: "http://leovan.me"
   customJS: ["js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   
-  # options for highlight.js
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdn.bootcss.com"
   highlightjsLang: ["r", "python", "json", "xml", "yaml", "tex", "bash", "dos", "qml"]
   highlightjsTheme: "atom-one-light"
   
-  # options for prism.js
-  prismjsVersion: "9000.0.1"
-  prismjsCDN: "//cdn.bootcss.com"
+  prismjsVersion: "1.15.0"
+  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsLang: ["r", "python", "markup", "yaml", "latex", "bash", "powershell", "javascript"]
   prismjsTheme: ""
   prismjsPlugin: ["show-language"]
   
-  # options for MathJax
-  mathjaxVersion: "2.7.4"
-  mathjaxCDN: "//cdn.bootcss.com"
+  mathjaxVersion: "2.7.5"
+  mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for KaTeX
-  katexVersion: "0.10.0-alpha"
-  katexCDN: "//cdn.bootcss.com"
+  katexVersion: "0.10.0-rc.1"
+  katexCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for jQuery
-  jQueryVersion: "3.2.1"
-  jQueryCDN: "//cdn.bootcss.com"
+  jQueryVersion: "3.3.1"
+  jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for photoswipe
   photoswipeVersion: "4.1.2"
-  photoswipeCDN: "//cdn.bootcss.com"
+  photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for video.js
-  videojsVersion: "7.0.3"
-  videojsCDN: "//cdn.bootcss.com"
+  videojsVersion: "7.2.4"
+  videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for material-design-icons
   materialDesignIconsVersion: "3.0.1"
-  materialDesignIconsCDN: "//cdn.bootcss.com"
+  materialDesignIconsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  # options for material-components-web
+  panguVersion: "3.3.0"
+  panguCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
   materialComponentsWebVersion: "latest"
   materialComponentsWebCDN: "//unpkg.com"
 
