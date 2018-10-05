@@ -6,7 +6,7 @@ disable_comments: true
 
 <p><!-- disable capitalize the first letter --></p>
 
-## <a href="//statics.leovan.me/documents/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons" style="vertical-align: text-bottom;">&#xE884;</i></a>
+<h2><a href="//statics.leovan.me/documents/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons">get_app</i></a></h2>
 
 ## Research Interest
 
@@ -32,7 +32,7 @@ disable_comments: true
 
 ## Project Experiences
 
-### Daat (Knowledge Graph of Finance)
+### Daat (Complex Network & Knowledge Graph)
 
 2018.04 ~ Now **JD Finance** Project Leader
 
@@ -75,10 +75,10 @@ disable_comments: true
 
 ### Programing Languages
 
-- R: ★★★★☆
-- Python: ★★★☆☆
-- Java: ★★★☆☆
-- Lisp: ★★☆☆☆
+- R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ## Research
 
@@ -97,5 +97,5 @@ disable_comments: true
 
 ### Open Source Projects
 
-1. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
-2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA), Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+1. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA), Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)

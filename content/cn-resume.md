@@ -4,7 +4,7 @@ slug: 'cn/resume'
 disable_comments: true
 ---
 
-## <a href="//statics.leovan.me/documents/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons" style="vertical-align: text-bottom;">&#xE884;</i></a>
+<h2><a href="//statics.leovan.me/documents/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons">get_app</i></a></h2>
 
 ## 研究兴趣
 
@@ -30,7 +30,7 @@ disable_comments: true
 
 ## 项目经历
 
-### Daat (金融领域知识图谱)
+### Daat (复杂网络和知识图谱)
 
 2018.04 ~ 至今 **京东金融** 项目负责人
 
@@ -73,10 +73,10 @@ disable_comments: true
 
 ### 开发语言
 
-- R: ★★★★☆
-- Python: ★★★☆☆
-- Java: ★★★☆☆
-- Lisp: ★★☆☆☆
+- R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 外语能力
 
@@ -100,5 +100,5 @@ disable_comments: true
 
 ### 开源项目
 
-1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
-2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
