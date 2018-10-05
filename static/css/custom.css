@@ -62,7 +62,7 @@ pre code {
   box-shadow: 5px 5px 5px #eee;
   padding: 1em;
   overflow-x: auto;
-  background: #f9f9f9;
+  background: #f9f9f9 !important;
 }
 
 /* Codes highlightjs
@@ -165,4 +165,20 @@ a[href^="#fn:"]:before {
 
 a[href^="#fn:"]:after {
   content: "]"
+}
+
+.material-icons {
+  font-size: 100%;
+  vertical-align: text-bottom;
+}
+
+img[alt="github-stars"] {
+  vertical-align: text-bottom;
+}
+
+.blockquote {
+  display: block;
+  margin: 1.3em 0;
+  padding: 0.1em 1em;
+  background: #eee;
 }
