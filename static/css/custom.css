@@ -155,10 +155,6 @@ h4, h5, h6 {
   display: none;
 }
 
-.katex-html {
-  display: none;
-}
-
 a[href^="#fn:"]:before {
   content: "["
 }
