@@ -8,7 +8,7 @@ categories:
   - 表示学习
 tags:
   - 词向量
-  - 维数字灾难
+  - 维数灾难
   - Curse of Dimensionality
   - Word Embedding
   - N-gram
