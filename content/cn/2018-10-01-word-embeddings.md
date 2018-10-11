@@ -116,13 +116,13 @@ CBOW 和 Skip-gram 均考虑一个词的上下文信息，两种模型的结构�
 
 两者在给定的上下文信息中 (即前后各 `$m$` 个词) 忽略了上下文环境的序列信息，CBOW (上图左) 是利用上下文环境中的词预测当前的词，而 Skip-gram (上图右) 则是用当前词预测上下文中的词。
 
-对于 CBOW，`$x_{1k}, x_{2k}, ..., x_{Ck}$` 为上下文词的 One-Hot 表示，`$\boldsymbol{\mathrm{W}}_{V \times N}$` 为所有词向量构成的矩阵 (词汇表)，`$y_j$` 为利用上下文信息预测得到的当前词的 One-Hot 表示输出，其中 `$C$` 为上下文词汇的数量，`$V$` 为词汇表中词的总数量，`$N$` 为词向量的维度。从输入层到隐含层，我们对输入层词对应的词向量进行简单的加和，即：
+对于 CBOW，`$x_{1k}, x_{2k}, ..., x_{Ck}$` 为上下文词的 One-Hot 表示，`$\mathbf{W}_{V \times N}$` 为所有词向量构成的矩阵 (词汇表)，`$y_j$` 为利用上下文信息预测得到的当前词的 One-Hot 表示输出，其中 `$C$` 为上下文词汇的数量，`$V$` 为词汇表中词的总数量，`$N$` 为词向量的维度。从输入层到隐含层，我们对输入层词对应的词向量进行简单的加和，即：
 
 `$$
-h_i = \sum_{c=1}^{C}{x_{ck} \boldsymbol{\mathrm{W}}_{V \times N}}
+h_i = \sum_{c=1}^{C}{x_{ck} \mathbf{W}_{V \times N}}
 $$`
 
-对于 Skip-gram，`$x_k$` 为当前词的 One-Hot 表示，`$\boldsymbol{\mathrm{W}}_{V \times N}$` 为所有词向量构成的矩阵 (词汇表)，`$y_{1j}, y_{2j}, ..., y_{Cj}$` 为预测的上次文词汇的 One-Hot 表示输出。从输入层到隐含层，直接将 One-Hot 的输入向量转换为词向量表示即可。
+对于 Skip-gram，`$x_k$` 为当前词的 One-Hot 表示，`$\mathbf{W}_{V \times N}$` 为所有词向量构成的矩阵 (词汇表)，`$y_{1j}, y_{2j}, ..., y_{Cj}$` 为预测的上次文词汇的 One-Hot 表示输出。从输入层到隐含层，直接将 One-Hot 的输入向量转换为词向量表示即可。
 
 除此之外两者还有一些其他的区别：
 
@@ -141,8 +141,8 @@ Mikolov 等人 [^mikolov2013efficient] 利用上面介绍的 CBOW 和 Skip-gram 
 
 其中：
 
-1. **输入层**：包含了 `$C$` 个词的词向量，`$\boldsymbol{\mathrm{v}} \left(w_1\right), \boldsymbol{\mathrm{v}} \left(w_2\right), ..., \boldsymbol{\mathrm{v}} \left(w_C\right) \in \mathbb{R}^N$`，`$N$` 为词向量的维度。
-2. **投影层**：将输入层的向量进行加和，即：`$\boldsymbol{\mathrm{x}}_w = \sum_{i=1}^{C}{\boldsymbol{\mathrm{v}} \left(w_i\right)} \in \mathbb{R}^N$`。
+1. **输入层**：包含了 `$C$` 个词的词向量，`$\mathbf{v} \left(w_1\right), \mathbf{v} \left(w_2\right), ..., \mathbf{v} \left(w_C\right) \in \mathbb{R}^N$`，`$N$` 为词向量的维度。
+2. **投影层**：将输入层的向量进行加和，即：`$\mathbf{x}_w = \sum_{i=1}^{C}{\mathbf{v} \left(w_i\right)} \in \mathbb{R}^N$`。
 3. **输出层**：输出为一颗二叉树，是根据语料构建出来的 Huffman 树 [^huffman-coding]，其中每个叶子节点为词汇表中的一个词。
 
 Hierarchical Softmax 是解决概率语言模型中计算效率的关键，CBOW 模型去掉了隐含层，同时将输出层改为了 Huffman 树。对于该模型的优化求解，我们首先引入一些符号，对于 Huffman 树的一个叶子节点 (即词汇表中的词 `$w$`)，记：
@@ -153,40 +153,40 @@ Hierarchical Softmax 是解决概率语言模型中计算效率的关键，CBOW 
 - `$d_2^w, d_3^w, ..., d_{l^w}^w \in \{0, 1\}$`：词 `$w$` 的 Huffman 编码，由 `$l^w - 1$` 位编码构成，`$d_j^w$` 表示路径 `$p^w$` 中第 `$j$` 个结点对应的编码。
 - `$\theta_1^w, \theta_1^w, ..., \theta_{l^w - 1}^w \in \mathbb{R}^N$`：路径 `$p^w$` 中非叶子节点对应的向量，`$\theta_j^w$` 表示路径 `$p^w$` 中第 `$j$` 个非叶子节点对应的向量。
 
-首先我们需要根据向量 `$\boldsymbol{\mathrm{x}}_w$` 和 Huffman 树定义条件概率 `$p \left(w | Context\left(w\right)\right)$`。我们可以将其视为一系列的二分类问题，在到达对应的叶子节点的过程中，经过的每一个非叶子节点均为对应一个取值为 0 或 1 的 Huffman 编码。因此，我们可以将编码为 1 的节点定义为负类，将编码为 0 的节点定义为正类 (即分到左边为负类，分到右边为正类)，则这条路径上对应的标签为：
+首先我们需要根据向量 `$\mathbf{x}_w$` 和 Huffman 树定义条件概率 `$p \left(w | Context\left(w\right)\right)$`。我们可以将其视为一系列的二分类问题，在到达对应的叶子节点的过程中，经过的每一个非叶子节点均为对应一个取值为 0 或 1 的 Huffman 编码。因此，我们可以将编码为 1 的节点定义为负类，将编码为 0 的节点定义为正类 (即分到左边为负类，分到右边为正类)，则这条路径上对应的标签为：
 
 `$$
 Label \left(p_i^w\right) = 1 - d_i^w, i = 2, 3, ..., l^w
 $$`
 
-则对于一个节点被分为正类的概率为 `$\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta\right)$`，被分为负类的概率为 `$1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta\right)$`。则条件概率可以表示为：
+则对于一个节点被分为正类的概率为 `$\sigma \left(\mathbf{x}_w^{\top} \theta\right)$`，被分为负类的概率为 `$1 - \sigma \left(\mathbf{x}_w^{\top} \theta\right)$`。则条件概率可以表示为：
 
 `$$
-p \left(w | Context\left(w\right)\right) = \prod_{j=2}^{l^w}{p \left(d_j^w | \boldsymbol{\mathrm{x}}_w, \theta_{j-1}^w\right)}
+p \left(w | Context\left(w\right)\right) = \prod_{j=2}^{l^w}{p \left(d_j^w | \mathbf{x}_w, \theta_{j-1}^w\right)}
 $$`
 
 其中
 
 `$$
-p \left(d_j^w | \boldsymbol{\mathrm{x}}_w, \theta_{j-1}^w\right) =
+p \left(d_j^w | \mathbf{x}_w, \theta_{j-1}^w\right) =
 \begin{cases}
-\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta\right) & d_j^w = 0 \\
-1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta\right) & d_j^w = 1
+\sigma \left(\mathbf{x}_w^{\top} \theta\right) & d_j^w = 0 \\
+1 - \sigma \left(\mathbf{x}_w^{\top} \theta\right) & d_j^w = 1
 \end{cases}
 $$`
 
 或表示为：
 
 `$$
-p \left(d_j^w | \boldsymbol{\mathrm{x}}_w, \theta_{j-1}^w\right) = \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}\right)\right]^{1 - d_j^w} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}\right)\right]^{d_j^w}
+p \left(d_j^w | \mathbf{x}_w, \theta_{j-1}^w\right) = \left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{1 - d_j^w} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{d_j^w}
 $$`
 
 则对数似然函数为：
 
 `$$
 \begin{align}
-\mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{j=2}^{l^w}{\left\{\left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}\right)\right]^{1 - d_j^w} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}\right)\right]^{d_j^w}\right\}}} \\
-&= \sum_{w \in \mathcal{C}}{\sum_{j=2}^{l^w}{\left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right]\right\}}}
+\mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{j=2}^{l^w}{\left\{\left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{1 - d_j^w} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{d_j^w}\right\}}} \\
+&= \sum_{w \in \mathcal{C}}{\sum_{j=2}^{l^w}{\left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right]\right\}}}
 \end{align}
 $$`
 
@@ -194,29 +194,29 @@ $$`
 
 `$$
 \begin{align}
-\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \theta_{j-1}^w} &= \dfrac{\partial}{\partial \theta_{j-1}^w} \left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right]\right\} \\
-&= \left(1 - d_j^w\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] \boldsymbol{\mathrm{x}}_w - d_j^w \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right) \boldsymbol{\mathrm{x}}_w \\
-&= \left\{\left(1 - d_j^w\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] - d_j^w \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right\} \boldsymbol{\mathrm{x}}_w \\
-&= \left[1 - d_j^w - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] \boldsymbol{\mathrm{x}}_w
+\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \theta_{j-1}^w} &= \dfrac{\partial}{\partial \theta_{j-1}^w} \left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right]\right\} \\
+&= \left(1 - d_j^w\right) \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \mathbf{x}_w - d_j^w \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right) \mathbf{x}_w \\
+&= \left\{\left(1 - d_j^w\right) \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] - d_j^w \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right\} \mathbf{x}_w \\
+&= \left[1 - d_j^w - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \mathbf{x}_w
 \end{align}
 $$`
 
 则 `$\theta_{j-1}^w$` 的更新方式为：
 
 `$$
-\theta_{j-1}^w \gets \theta_{j-1}^w + \eta \left[1 - d_j^w - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] \boldsymbol{\mathrm{x}}_w
+\theta_{j-1}^w \gets \theta_{j-1}^w + \eta \left[1 - d_j^w - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \mathbf{x}_w
 $$`
 
-同理可得，`$\mathcal{L} \left(w, j\right)$` 关于 `$\boldsymbol{\mathrm{x}}_w$` 的梯度为：
+同理可得，`$\mathcal{L} \left(w, j\right)$` 关于 `$\mathbf{x}_w$` 的梯度为：
 
 `$$
-\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \boldsymbol{\mathrm{x}}_w} = \left[1 - d_j^w - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)\right] \theta_{j-1}^w
+\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \mathbf{x}_w} = \left[1 - d_j^w - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \theta_{j-1}^w
 $$`
 
-但 `$\boldsymbol{\mathrm{x}}_w$` 为上下文词汇向量的加和，Word2Vec 的做法是将梯度贡献到上下文中的每个词向量上，即：
+但 `$\mathbf{x}_w$` 为上下文词汇向量的加和，Word2Vec 的做法是将梯度贡献到上下文中的每个词向量上，即：
 
 `$$
-\boldsymbol{\mathrm{v}} \left(u\right) \gets \boldsymbol{\mathrm{v}} \left(u\right) + \eta \sum_{j=2}^{l^w}{\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \boldsymbol{\mathrm{x}}_w}}, u \in Context \left(w\right)
+\mathbf{v} \left(u\right) \gets \mathbf{v} \left(u\right) + \eta \sum_{j=2}^{l^w}{\dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \mathbf{x}_w}}, u \in Context \left(w\right)
 $$`
 
 基于 Hierarchical Softmax 的 CBOW 模型的随机梯度上升算法伪代码如下：
@@ -225,16 +225,16 @@ $$`
 \begin{algorithm}
 \caption{基于 Hierarchical Softmax 的 CBOW 随机梯度上升算法}
 \begin{algorithmic}
-\STATE $\boldsymbol{\mathrm{e}} = 0$
-\STATE $\boldsymbol{\mathrm{x}}_w = \sum_{u \in Context \left(w\right)}{\boldsymbol{\mathrm{v}} \left(u\right)}$
+\STATE $\mathbf{e} = 0$
+\STATE $\mathbf{x}_w = \sum_{u \in Context \left(w\right)}{\mathbf{v} \left(u\right)}$
 \FOR{$j = 2, 3, ..., l^w$}
-    \STATE $q = \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^w\right)$
+    \STATE $q = \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)$
     \STATE $g = \eta \left(1 - d_j^w - q\right)$
-    \STATE $\boldsymbol{\mathrm{e}} \gets \boldsymbol{\mathrm{e}} + g \theta_{j-1}^w$
-    \STATE $\theta_{j-1}^w \gets \theta_{j-1}^w + g \boldsymbol{\mathrm{x}}_w$
+    \STATE $\mathbf{e} \gets \mathbf{e} + g \theta_{j-1}^w$
+    \STATE $\theta_{j-1}^w \gets \theta_{j-1}^w + g \mathbf{x}_w$
 \ENDFOR
 \FOR{$u \in Context \left(w\right)$}
-    \STATE $\boldsymbol{\mathrm{v}} \left(u\right) \gets \boldsymbol{\mathrm{v}} \left(u\right) + \boldsymbol{\mathrm{e}}$
+    \STATE $\mathbf{v} \left(u\right) \gets \mathbf{v} \left(u\right) + \mathbf{e}$
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
@@ -253,21 +253,21 @@ $$`
 类似于 CBOW 模型的思想，有：
 
 `$$
-p \left(u | w\right) = \prod_{j=2}^{l^u}{p \left(d_j^u | \boldsymbol{\mathrm{v}} \left(w\right), \theta_{j-1}^u\right)}
+p \left(u | w\right) = \prod_{j=2}^{l^u}{p \left(d_j^u | \mathbf{v} \left(w\right), \theta_{j-1}^u\right)}
 $$`
 
 其中
 
 `$$
-p \left(d_j^u | \boldsymbol{\mathrm{v}} \left(w\right), \theta_{j-1}^u\right) = \left[\sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{1 - d_j^u} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{d_j^u}
+p \left(d_j^u | \mathbf{v} \left(w\right), \theta_{j-1}^u\right) = \left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{1 - d_j^u} \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{d_j^u}
 $$`
 
 可得对数似然函数为：
 
 `$$
 \begin{align}
-\mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{u \in Context \left(w\right)}{\prod_{j=2}^{l^u}{\left\{\left[\sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]^{1 - d_j^u} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{d_j^u}\right\}}}} \\
-&= \sum_{w \in \mathcal{C}}{\sum_{u \in Context \left(w\right)}{\sum_{j=2}^{l^u}{\left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\}}}}
+\mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{u \in Context \left(w\right)}{\prod_{j=2}^{l^u}{\left\{\left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]^{1 - d_j^u} \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{d_j^u}\right\}}}} \\
+&= \sum_{w \in \mathcal{C}}{\sum_{u \in Context \left(w\right)}{\sum_{j=2}^{l^u}{\left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\}}}}
 \end{align}
 $$`
 
@@ -275,29 +275,29 @@ $$`
 
 `$$
 \begin{align}
-\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \theta_{j-1}^{u}} &= \dfrac{\partial}{\partial \theta_{j-1}^{u}} \left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\} \\
-&= \left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \boldsymbol{\mathrm{v}} \left(w\right) - d_j^u \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right) \boldsymbol{\mathrm{v}} \left(w\right) \\
-&= \left\{\left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] - d_j^u \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right\} \boldsymbol{\mathrm{v}} \left(w\right) \\
-&= \left[1 - d_j^u - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \boldsymbol{\mathrm{v}} \left(w\right)
+\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \theta_{j-1}^{u}} &= \dfrac{\partial}{\partial \theta_{j-1}^{u}} \left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\} \\
+&= \left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \mathbf{v} \left(w\right) - d_j^u \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right) \mathbf{v} \left(w\right) \\
+&= \left\{\left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] - d_j^u \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right\} \mathbf{v} \left(w\right) \\
+&= \left[1 - d_j^u - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \mathbf{v} \left(w\right)
 \end{align}
 $$`
 
 则 `$\theta_{j-1}^u$` 的更新方式为：
 
 `$$
-\theta_{j-1}^u \gets \theta_{j-1}^u + \eta \left[1 - d_j^u - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \boldsymbol{\mathrm{v}} \left(w\right)
+\theta_{j-1}^u \gets \theta_{j-1}^u + \eta \left[1 - d_j^u - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \mathbf{v} \left(w\right)
 $$`
 
-同理可得，`$\mathcal{L} \left(w, u, j\right)$` 关于 `$\boldsymbol{\mathrm{v}} \left(w\right)$` 的梯度为：
+同理可得，`$\mathcal{L} \left(w, u, j\right)$` 关于 `$\mathbf{v} \left(w\right)$` 的梯度为：
 
 `$$
-\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \boldsymbol{\mathrm{v}} \left(w\right)} = \left[1 - d_j^u - \sigma \left(\boldsymbol{\mathrm{v}} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \theta_{j-1}^u
+\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \mathbf{v} \left(w\right)} = \left[1 - d_j^u - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \theta_{j-1}^u
 $$`
 
-则 `$\boldsymbol{\mathrm{v}} \left(w\right)$` 的更新方式为：
+则 `$\mathbf{v} \left(w\right)$` 的更新方式为：
 
 `$$
-\boldsymbol{\mathrm{v}} \left(w\right) \gets \boldsymbol{\mathrm{v}} \left(w\right) + \eta \sum_{u \in Context \left(w\right)}{\sum_{j=2}^{l^u}{\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \boldsymbol{\mathrm{v}} \left(w\right)}}}
+\mathbf{v} \left(w\right) \gets \mathbf{v} \left(w\right) + \eta \sum_{u \in Context \left(w\right)}{\sum_{j=2}^{l^u}{\dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \mathbf{v} \left(w\right)}}}
 $$`
 
 基于 Hierarchical Softmax 的 Skip-gram 模型的随机梯度上升算法伪代码如下：
@@ -306,16 +306,16 @@ $$`
 \begin{algorithm}
 \caption{基于 Hierarchical Softmax 的 Skig-gram 随机梯度上升算法}
 \begin{algorithmic}
-\STATE $\boldsymbol{\mathrm{e}} = 0$
+\STATE $\mathbf{e} = 0$
 \FOR{$u \in Context \left(w\right)$}
     \FOR{$j = 2, 3, ..., l^u$}
-        \STATE $q = \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta_{j-1}^u\right)$
+        \STATE $q = \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^u\right)$
         \STATE $g = \eta \left(1 - d_j^u - q\right)$
-        \STATE $\boldsymbol{\mathrm{e}} \gets \boldsymbol{\mathrm{e}} + g \theta_{j-1}^u$
-        \STATE $\theta_{j-1}^u \gets \theta_{j-1}^u + g \boldsymbol{\mathrm{v}} \left(w\right)$
+        \STATE $\mathbf{e} \gets \mathbf{e} + g \theta_{j-1}^u$
+        \STATE $\theta_{j-1}^u \gets \theta_{j-1}^u + g \mathbf{v} \left(w\right)$
     \ENDFOR
 \ENDFOR
-\STATE $\boldsymbol{\mathrm{v}} \left(w\right) \gets \boldsymbol{\mathrm{v}} \left(w\right) + \boldsymbol{\mathrm{e}}$
+\STATE $\mathbf{v} \left(w\right) \gets \mathbf{v} \left(w\right) + \mathbf{e}$
 \end{algorithmic}
 \end{algorithm}
 {{< /pseudocode >}}
@@ -345,7 +345,7 @@ $$`
 或表示为：
 
 `$$
-p \left(u | Context \left(w\right)\right) = \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]^{L^w \left(w\right)} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]^{1 - L^w \left(w\right)}
+p \left(u | Context \left(w\right)\right) = \left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{L^w \left(w\right)} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{1 - L^w \left(w\right)}
 $$`
 
 即增大正样本概率的同时减少负样本的概率。对于一个给定的语料库 `$\mathcal{C}$`，对数似然函数为：
@@ -353,8 +353,8 @@ $$`
 `$$
 \begin{align}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log g \left(w\right)} \\
-&= \sum_{w \in \mathcal{C}}{\log \prod_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{\left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}} \\
-&= \sum_{w \in \mathcal{C}}{\sum_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]\right\}}}
+&= \sum_{w \in \mathcal{C}}{\log \prod_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{\left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}} \\
+&= \sum_{w \in \mathcal{C}}{\sum_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]\right\}}}
 \end{align}
 $$`
 
@@ -362,29 +362,29 @@ $$`
 
 `$$
 \begin{align}
-\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right]\right\} \\
-&= L^w \left(u\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{w}}_w^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{x}}_w - \left[1 - L^w \left(u\right)\right] \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right) \boldsymbol{\mathrm{x}}_w \\
-&= \left\{L^w \left(u\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{w}}_w^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)\right\} \boldsymbol{\mathrm{x}}_w \\
-&= \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{w}}_w^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{x}}_w
+\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]\right\} \\
+&= L^w \left(u\right) \left[1 - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \mathbf{x}_w - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{x}_w^{\top} \theta^u\right) \mathbf{x}_w \\
+&= \left\{L^w \left(u\right) \left[1 - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right\} \mathbf{x}_w \\
+&= \left[L^w \left(u\right) - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \mathbf{x}_w
 \end{align}
 $$`
 
 则 `$\theta^u$` 的更新方式为：
 
 `$$
-\theta^u \gets \theta^u + \eta \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{w}}_w^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{x}}_w
+\theta^u \gets \theta^u + \eta \left[L^w \left(u\right) - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \mathbf{x}_w
 $$`
 
-同理可得，`$\mathcal{L} \left(w, u\right)$` 关于 `$\boldsymbol{\mathrm{x}}_w$` 的梯度为：
+同理可得，`$\mathcal{L} \left(w, u\right)$` 关于 `$\mathbf{x}_w$` 的梯度为：
 
 `$$
-\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \boldsymbol{\mathrm{x}}_w} = \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{w}}_w^{\top} \theta^u\right)\right] \theta^u
+\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \mathbf{x}_w} = \left[L^w \left(u\right) - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \theta^u
 $$`
 
-则 `$\boldsymbol{\mathrm{v}} \left(\tilde{w}\right), \tilde{w} \in Context \left(w\right)$` 的更新方式为：
+则 `$\mathbf{v} \left(\tilde{w}\right), \tilde{w} \in Context \left(w\right)$` 的更新方式为：
 
 `$$
-\boldsymbol{\mathrm{v}} \left(\tilde{w}\right) \gets \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) + \eta \sum_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \boldsymbol{\mathrm{x}}_w}}, \tilde{w} \in Context \left(w\right)
+\mathbf{v} \left(\tilde{w}\right) \gets \mathbf{v} \left(\tilde{w}\right) + \eta \sum_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \mathbf{x}_w}}, \tilde{w} \in Context \left(w\right)
 $$`
 
 基于 Negative Sampling 的 CBOW 模型的随机梯度上升算法伪代码如下：
@@ -393,16 +393,16 @@ $$`
 \begin{algorithm}
 \caption{基于 Negative Sampling 的 CBOW 随机梯度上升算法}
 \begin{algorithmic}
-\STATE $\boldsymbol{\mathrm{e}} = 0$
-\STATE $\boldsymbol{\mathrm{x}}_w = \sum_{u \in Context \left(w\right)}{\boldsymbol{\mathrm{v}} \left(u\right)}$
+\STATE $\mathbf{e} = 0$
+\STATE $\mathbf{x}_w = \sum_{u \in Context \left(w\right)}{\mathbf{v} \left(u\right)}$
 \FOR{$u \in Context \left\{w\right\} \cup NEG \left(w\right)$}
-    \STATE $q = \sigma \left(\boldsymbol{\mathrm{x}}_w^{\top} \theta^u\right)$
+    \STATE $q = \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)$
     \STATE $g = \eta \left(L^w \left(u\right) - q\right)$
-    \STATE $\boldsymbol{\mathrm{e}} \gets \boldsymbol{\mathrm{e}} + g \theta^u$
-    \STATE $\theta^u \gets \theta^u + g \boldsymbol{\mathrm{x}}_w$
+    \STATE $\mathbf{e} \gets \mathbf{e} + g \theta^u$
+    \STATE $\theta^u \gets \theta^u + g \mathbf{x}_w$
 \ENDFOR
 \FOR{$u \in Context \left(w\right)$}
-    \STATE $\boldsymbol{\mathrm{v}} \left(u\right) \gets \boldsymbol{\mathrm{v}} \left(u\right) + \boldsymbol{\mathrm{e}}$
+    \STATE $\mathbf{v} \left(u\right) \gets \mathbf{v} \left(u\right) + \mathbf{e}$
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
@@ -421,15 +421,15 @@ $$`
 `$$
 p \left(u | \tilde{w}\right) = 
 \begin{cases}
-\sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right) & L^w \left(u\right) = 1 \\
-1 - \sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right) & L^w \left(u\right) = 0
+\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right) & L^w \left(u\right) = 1 \\
+1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right) & L^w \left(u\right) = 0
 \end{cases}
 $$`
 
 或表示为：
 
 `$$
-p \left(u | \tilde{w}\right) = \left[\sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}
+p \left(u | \tilde{w}\right) = \left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}
 $$`
 
 对于一个给定的语料库 `$\mathcal{C}$`，对数似然函数为：
@@ -437,8 +437,8 @@ $$`
 `$$
 \begin{align}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log g \left(w\right)} \\
-&= \sum_{w \in \mathcal{C}}{\log \prod_{\tilde{w} \in Context \left(w\right)}{\prod_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{\left[\sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}}} \\
-&= \sum_{w \in \mathcal{C}}{\sum_{\tilde{w} \in Context \left(w\right)}{\sum_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\}}}}
+&= \sum_{w \in \mathcal{C}}{\log \prod_{\tilde{w} \in Context \left(w\right)}{\prod_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{\left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}}} \\
+&= \sum_{w \in \mathcal{C}}{\sum_{\tilde{w} \in Context \left(w\right)}{\sum_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\}}}}
 \end{align}
 $$`
 
@@ -446,29 +446,29 @@ $$`
 
 `$$
 \begin{align}
-\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\boldsymbol{\mathrm{v}}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\} \\
-&= L^w \left(u\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) - \left[1 - L^w \left(u\right)\right] \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right) \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) \\
-&= \left\{L^w \left(u\right) \left[1 - \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right\} \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) \\
-&= \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{v}} \left(\tilde{w}\right)
+\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\} \\
+&= L^w \left(u\right) \left[1 - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \mathbf{v} \left(\tilde{w}\right) - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right) \mathbf{v} \left(\tilde{w}\right) \\
+&= \left\{L^w \left(u\right) \left[1 - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right\} \mathbf{v} \left(\tilde{w}\right) \\
+&= \left[L^w \left(u\right) - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \mathbf{v} \left(\tilde{w}\right)
 \end{align}
 $$`
 
 则 `$\theta^u$` 的更新方式为：
 
 `$$
-\theta^u \gets \theta^u + \eta \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \boldsymbol{\mathrm{v}} \left(\tilde{w}\right)
+\theta^u \gets \theta^u + \eta \left[L^w \left(u\right) - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \mathbf{v} \left(\tilde{w}\right)
 $$`
 
-同理可得，`$\mathcal{L} \left(w, \tilde{w}, u\right)$` 关于 `$\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)$` 的梯度为：
+同理可得，`$\mathcal{L} \left(w, \tilde{w}, u\right)$` 关于 `$\mathbf{v} \left(\tilde{w}\right)$` 的梯度为：
 
 `$$
-\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \boldsymbol{\mathrm{v}} \left(\tilde{w}\right)} = \left[L^w \left(u\right) - \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \theta^u
+\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \mathbf{v} \left(\tilde{w}\right)} = \left[L^w \left(u\right) - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \theta^u
 $$`
 
-则 `$\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)$` 的更新方式为：
+则 `$\mathbf{v} \left(\tilde{w}\right)$` 的更新方式为：
 
 `$$
-\boldsymbol{\mathrm{v}} \left(\tilde{w}\right) \gets \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) + \eta \sum_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \boldsymbol{\mathrm{v}} \left(\tilde{w}\right)}}
+\mathbf{v} \left(\tilde{w}\right) \gets \mathbf{v} \left(\tilde{w}\right) + \eta \sum_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \mathbf{v} \left(\tilde{w}\right)}}
 $$`
 
 基于 Negative Sampling 的 Skig-gram 模型的随机梯度上升算法伪代码如下：
@@ -477,16 +477,16 @@ $$`
 \begin{algorithm}
 \caption{基于 Negative Sampling 的 Skig-gram 随机梯度上升算法}
 \begin{algorithmic}
-\STATE $\boldsymbol{\mathrm{e}} = 0$
+\STATE $\mathbf{e} = 0$
 \FOR{$\tilde{w} \in Context \left(w\right)$}
     \FOR{$u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)$}
-        \STATE $q = \sigma \left(\boldsymbol{\mathrm{v}} \left(\tilde{w}\right)^{\top} \theta^u\right)$
+        \STATE $q = \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)$
         \STATE $g = \eta \left(L^w \left(u\right) - q\right)$
-        \STATE $\boldsymbol{\mathrm{e}} \gets \boldsymbol{\mathrm{e}} + g \theta^u$
-        \STATE $\theta^u \gets \theta^u + g \boldsymbol{\mathrm{v}} \left(\tilde{w}\right)$
+        \STATE $\mathbf{e} \gets \mathbf{e} + g \theta^u$
+        \STATE $\theta^u \gets \theta^u + g \mathbf{v} \left(\tilde{w}\right)$
     \ENDFOR
 \ENDFOR
-\STATE $\boldsymbol{\mathrm{v}} \left(\tilde{w}\right) \gets \boldsymbol{\mathrm{v}} \left(\tilde{w}\right) + \boldsymbol{\mathrm{e}}$
+\STATE $\mathbf{v} \left(\tilde{w}\right) \gets \mathbf{v} \left(\tilde{w}\right) + \mathbf{e}$
 \end{algorithmic}
 \end{algorithm}
 {{< /pseudocode >}}
@@ -594,10 +594,10 @@ fastText 是由 Bojanowski 和 Grave 等人 [^bojanowski2017enriching] 提出的
 
 对于一个词 `$w$`，利用一系列的 N-gram 进行表示，同时在词的前后添加 `<` 和 `>` 边界符号以同其他文本序列进行区分。同时还将词语本身也包含在这个 N-gram 集合中，从而学习到词语的向量表示。例如，对于词 `$where$` 和 `$n = 3$`，则 N-gram 集合为：`<wh, whe, her, ere, re>`，同时包含词本身 `<where>`。需要注意的是，序列 `<her>` 与词 `$where$` 中的 tri-gram `her` 是两个不同的概念。模型提取所有 `$3 \leq n \leq 6$` 的 N-gram 序列。
 
-假设 N-gram 词典的大小为 `$G$`，对于一个词 `$w$`，`$\mathcal{G}_w \subset \left\{1, ..., G\right\}$` 表示词中出现的 N-gram 的集合。针对任意一个 N-gram `$g$`，用向量 `$\boldsymbol{\mathrm{z}}_g$` 表示，则我们利用一个词的所有 N-gram 的向量的加和表示该词。可以得到该模型的评分函数为：
+假设 N-gram 词典的大小为 `$G$`，对于一个词 `$w$`，`$\mathcal{G}_w \subset \left\{1, ..., G\right\}$` 表示词中出现的 N-gram 的集合。针对任意一个 N-gram `$g$`，用向量 `$\mathbf{z}_g$` 表示，则我们利用一个词的所有 N-gram 的向量的加和表示该词。可以得到该模型的评分函数为：
 
 `$$
-s \left(w, c\right) = \sum_{g \in \mathcal{G}_w}{\boldsymbol{\mathrm{z}}_g^{\top} \boldsymbol{\mathrm{v}}_c}
+s \left(w, c\right) = \sum_{g \in \mathcal{G}_w}{\mathbf{z}_g^{\top} \mathbf{v}_c}
 $$`
 
 模型在学习不同词向量时可以共享权重 (不同词的可能包含相同的 N-gram)，使得在学习低频词时也可得到可靠的向量表示。
@@ -606,28 +606,28 @@ $$`
 
 WordRank 是由 Ji 等人 [^ji2016wordrank] 提出的一种词向量表示方法，其将词向量学习问题转换成一个排序问题。
 
-我们令 `$\boldsymbol{\mathrm{u}}_w$` 表示当前词 `$w$` 的 `$k$` 维词向量，`$\boldsymbol{\mathrm{v}}_c$` 表示当前词上下文 `$c$` 的词向量。通过两者的内积 `$\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c \rangle$` 来捕获词 `$w$` 和上下文 `$c$` 之间的关系，两者越相关则该内积越大。对于一个给定的词 `$w$`，利用上下文集合 `$\mathcal{C}$` 同词的内积分数进行排序，对于一个给定的上下文 `$c$`，排序为：
+我们令 `$\mathbf{u}_w$` 表示当前词 `$w$` 的 `$k$` 维词向量，`$\mathbf{v}_c$` 表示当前词上下文 `$c$` 的词向量。通过两者的内积 `$\langle \mathbf{u}_w, \mathbf{v}_c \rangle$` 来捕获词 `$w$` 和上下文 `$c$` 之间的关系，两者越相关则该内积越大。对于一个给定的词 `$w$`，利用上下文集合 `$\mathcal{C}$` 同词的内积分数进行排序，对于一个给定的上下文 `$c$`，排序为：
 
 `$$
 \begin{align}
-\text{rank} \left(w, c\right) &= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c \rangle - \langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_{c'} \rangle \leq 0\right)} \\
-&= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'}  \rangle \leq 0\right)}
+\text{rank} \left(w, c\right) &= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \mathbf{u}_w, \mathbf{v}_c \rangle - \langle \mathbf{u}_w, \mathbf{v}_{c'} \rangle \leq 0\right)} \\
+&= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'}  \rangle \leq 0\right)}
 \end{align}
 $$`
 
 其中，`$I \left(x \leq 0\right)$` 为一个 0-1 损失函数，当 `$x \leq 0$` 时为 1 其他情况为 0。由于 `$I \left(x \leq 0\right)$` 为一个非连续函数，因此我们可以将其替换为一个凸上限函数 `$\ell \left(\cdot\right)$`，其可以为任意的二分类损失函数，构建排序的凸上限如下：
 
 `$$
-\text{rank} \left(w, c\right) \leq \overline{\text{rank}} \left(w, c\right) = \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right)}
+\text{rank} \left(w, c\right) \leq \overline{\text{rank}} \left(w, c\right) = \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right)}
 $$`
 
 我们期望排序模型将更相关的上下文排在列表的顶部，基于此构建损失函数如下：
 
 `$$
-J \left(\boldsymbol{\mathrm{U}}, \boldsymbol{\mathrm{V}}\right) := \sum_{w \in \mathcal{W}}{\sum_{c \in \Omega_w}{r_{w, c} \cdot \rho \left(\dfrac{\overline{\text{rank}} \left(w, c\right) + \beta}{\alpha}\right)}}
+J \left(\mathbf{U}, \mathbf{V}\right) := \sum_{w \in \mathcal{W}}{\sum_{c \in \Omega_w}{r_{w, c} \cdot \rho \left(\dfrac{\overline{\text{rank}} \left(w, c\right) + \beta}{\alpha}\right)}}
 $$`
 
-其中，`$\mathcal{W}$` 表示词典，`$\boldsymbol{\mathrm{U}} := \left\{\boldsymbol{\mathrm{u}}_w\right\}_{w \in \mathcal{W}}$` 和 `$\boldsymbol{\mathrm{V}} := \left\{\boldsymbol{\mathrm{c}}_w\right\}_{c \in \mathcal{C}}$` 分别表示词及其上下文词向量的参数，`$\Omega_w$` 表示与词 `$w$` 共现的上下文的集合，`$r_{w, c}$` 为衡量 `$w$` 和 `$c$` 之间关系的权重，`$\rho \left(\cdot\right)$` 为用于衡量排序好坏的单调递增的损失函数，`$\alpha \geq 0, \beta \geq 0$` 为超参数。可选的有：
+其中，`$\mathcal{W}$` 表示词典，`$\mathbf{U} := \left\{\mathbf{u}_w\right\}_{w \in \mathcal{W}}$` 和 `$\mathbf{V} := \left\{\mathbf{c}_w\right\}_{c \in \mathcal{C}}$` 分别表示词及其上下文词向量的参数，`$\Omega_w$` 表示与词 `$w$` 共现的上下文的集合，`$r_{w, c}$` 为衡量 `$w$` 和 `$c$` 之间关系的权重，`$\rho \left(\cdot\right)$` 为用于衡量排序好坏的单调递增的损失函数，`$\alpha \geq 0, \beta \geq 0$` 为超参数。可选的有：
 
 `$$
 r_{w, c} =
@@ -650,7 +650,7 @@ $$`
 损失函数可以等价的定义为：
 
 `$$
-J \left(\boldsymbol{\mathrm{U}}, \boldsymbol{\mathrm{V}}\right) := \sum_{\left(w, c\right) \in \Omega}{r_{w, c} \cdot \rho \left(\dfrac{\overline{\text{rank}} \left(w, c\right) + \beta}{\alpha}\right)}
+J \left(\mathbf{U}, \mathbf{V}\right) := \sum_{\left(w, c\right) \in \Omega}{r_{w, c} \cdot \rho \left(\dfrac{\overline{\text{rank}} \left(w, c\right) + \beta}{\alpha}\right)}
 $$`
 
 在训练过程中，外层的求和符号容易利用 SDG 算法解决，但对于内层的求和符号除非 `$\rho \left(\cdot\right)$` 是一个线性函数，否则难以求解。然而，`$\rho \left(\cdot\right)$` 函数的性质要求其不能是一个线性函数，但我们可以利用其凹函数的特性对其进行一阶泰勒分解，有：
@@ -659,13 +659,13 @@ $$`
 \rho \left(x\right) \leq \rho \left(\xi^{-1}\right) + \rho' \left(\xi^{-1}\right) \cdot \left(x - \xi^{-1}\right)
 $$`
 
-对于任意 `$x$` 和 `$\xi \neq 0$` 均成立，同时当且仅当 `$\xi = x^{-1}$` 时等号成立。因此，令 `$\Xi := \left\{\xi_{w, c}\right\}_{\left(w, c\right) \in \Sigma}$`，则可以得到 `$J \left(\boldsymbol{\mathrm{U}}, \boldsymbol{\mathrm{V}}\right)$` 的一个上界：
+对于任意 `$x$` 和 `$\xi \neq 0$` 均成立，同时当且仅当 `$\xi = x^{-1}$` 时等号成立。因此，令 `$\Xi := \left\{\xi_{w, c}\right\}_{\left(w, c\right) \in \Sigma}$`，则可以得到 `$J \left(\mathbf{U}, \mathbf{V}\right)$` 的一个上界：
 
 `$$
 \begin{align}
-\overline{J} \left(\boldsymbol{\mathrm{U}}, \boldsymbol{\mathrm{V}}, \Xi\right) &:= \sum_{\left(w, c\right) 
-\in \Omega}{r_{w, c} \cdot \left\{\rho \left(\xi_{wc}^{-1}\right) + \rho' \left(\xi_{wc}^{-1}\right) \cdot \left(\alpha^{-1} \beta + \alpha^{-1} \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right) - \xi_{w, c}^{-1}}\right)\right\}} \\
-&= \sum_{\left(w, c, c'\right)}{r_{w, c} \cdot \left(\dfrac{\rho \left(\xi_{w, c}^{-1}\right) + \rho' \left(\xi_{w, c}^{-1}\right) \cdot \left(\alpha^{-1} \beta - \xi_{w, c}^{-1}\right)}{\lvert \mathcal{C} \rvert - 1} + \dfrac{1}{\alpha} \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right)\right)}
+\overline{J} \left(\mathbf{U}, \mathbf{V}, \Xi\right) &:= \sum_{\left(w, c\right) 
+\in \Omega}{r_{w, c} \cdot \left\{\rho \left(\xi_{wc}^{-1}\right) + \rho' \left(\xi_{wc}^{-1}\right) \cdot \left(\alpha^{-1} \beta + \alpha^{-1} \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) - \xi_{w, c}^{-1}}\right)\right\}} \\
+&= \sum_{\left(w, c, c'\right)}{r_{w, c} \cdot \left(\dfrac{\rho \left(\xi_{w, c}^{-1}\right) + \rho' \left(\xi_{w, c}^{-1}\right) \cdot \left(\alpha^{-1} \beta - \xi_{w, c}^{-1}\right)}{\lvert \mathcal{C} \rvert - 1} + \dfrac{1}{\alpha} \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right)\right)}
 \end{align}
 $$`
 
@@ -678,20 +678,20 @@ $$`
 \caption{WordRank 算法}
 \begin{algorithmic}
 \STATE $\eta$ 为学习率
-\WHILE{$\boldsymbol{\mathrm{U}}$，$\boldsymbol{\mathrm{V}}$ 和 $\Xi$ 未收敛}
-    \STATE \COMMENT{阶段1：更新 $\boldsymbol{\mathrm{U}}$ 和 $\boldsymbol{\mathrm{V}}$}
-    \WHILE{$\boldsymbol{\mathrm{U}}$ 和 $\boldsymbol{\mathrm{V}}$ 未收敛}
+\WHILE{$\mathbf{U}$，$\mathbf{V}$ 和 $\Xi$ 未收敛}
+    \STATE \COMMENT{阶段1：更新 $\mathbf{U}$ 和 $\mathbf{V}$}
+    \WHILE{$\mathbf{U}$ 和 $\mathbf{V}$ 未收敛}
         \STATE 从 $\Omega$ 中均匀采样 $\left(w, c\right)$
         \STATE 从 $\mathcal{C} \setminus \left\{c\right\}$ 中均匀采样 $c'$
         \STATE \COMMENT{同时更新如下 3 个参数}
-        \STATE $\boldsymbol{\mathrm{u}}_w \gets \boldsymbol{\mathrm{u}}_w - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right) \cdot \left(\boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'}\right)$
-        \STATE $\boldsymbol{\mathrm{v}}_c \gets \boldsymbol{\mathrm{v}}_c - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right) \cdot \boldsymbol{\mathrm{u}}_w$
-        \STATE $\boldsymbol{\mathrm{v}}_{c'} \gets \boldsymbol{\mathrm{v}}_{c'} - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right) \cdot \boldsymbol{\mathrm{u}}_w$
+        \STATE $\mathbf{u}_w \gets \mathbf{u}_w - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) \cdot \left(\mathbf{v}_c - \mathbf{v}_{c'}\right)$
+        \STATE $\mathbf{v}_c \gets \mathbf{v}_c - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) \cdot \mathbf{u}_w$
+        \STATE $\mathbf{v}_{c'} \gets \mathbf{v}_{c'} - \eta \cdot r_{w, c} \cdot \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell' \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) \cdot \mathbf{u}_w$
     \ENDWHILE
     \STATE \COMMENT{阶段2：更新 $\Xi$}
     \FOR{$w \in \mathcal{W}$}
         \FOR{$c \in \mathcal{C}$}
-            \STATE $\xi_{w, c} = \alpha / \left(\sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \boldsymbol{\mathrm{u}}_w, \boldsymbol{\mathrm{v}}_c - \boldsymbol{\mathrm{v}}_{c'} \rangle\right) + \beta}\right)$
+            \STATE $\xi_{w, c} = \alpha / \left(\sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) + \beta}\right)$
         \ENDFOR
     \ENDFOR
 \ENDWHILE
