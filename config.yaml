@@ -94,7 +94,7 @@ params:
   customJS: ["js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   
   highlightjsVersion: "9.12.0"
-  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   highlightjsLang: ["r", "python", "json", "xml", "yaml", "tex", "bash", "dos", "qml"]
   highlightjsTheme: "atom-one-light"
   

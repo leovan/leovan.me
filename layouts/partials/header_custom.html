@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.katexCDN }}/KaTeX/{{ $.Site.Params.katexVersion }}/katex.min.css">
-<link rel="stylesheet" type="text/css" href="/css/pseudocode.css">
+<link rel="stylesheet" type="text/css" href="/css/pseudocode.min.css">
 
 <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video-js.min.css">
 
@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 
-<script src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion | default "3.2.1" }}/jquery.min.js'></script>
+<script async src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion | default "3.2.1" }}/jquery.min.js'></script>
 
 {{ if not .Keywords }}
   {{ if .Params.tags }}

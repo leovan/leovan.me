@@ -12,14 +12,16 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 - If your template already loads jQuery in the header then you don't need to load it again here.
 - If your template already loads jQuery in the footer, then you could load load-photoswipe.js from the footer instead
 -->
-<script src='{{ $.Site.Params.jQueryCDN | default "//cdn.bootcss.com" }}/jquery/{{ $.Site.Params.jQueryVersion | default "3.2.1" }}/jquery.min.js'></script>
+<!--
+<script src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js'></script>
+-->
 <script src="/js/load-photoswipe.js"></script>
 
 <!-- Photoswipe css/js libraries -->
-<link rel="stylesheet" href='{{ $.Site.Params.photoswipeCDN | default "//cdn.bootcss.com" }}/photoswipe/{{ $.Site.Params.photoswipeVersion | default "4.1.2" }}/photoswipe.min.css'/>
-<link rel="stylesheet" href='{{ $.Site.Params.photoswipeCDN | default "//cdn.bootcss.com" }}/photoswipe/{{ $.Site.Params.photoswipeVersion | default "4.1.2" }}/default-skin/default-skin.min.css'/>
-<script src='{{ $.Site.Params.photoswipeCDN | default "//cdn.bootcss.com" }}/photoswipe/{{ $.Site.Params.photoswipeVersion | default "4.1.2" }}/photoswipe.min.js'></script>
-<script src='{{ $.Site.Params.photoswipeCDN | default "//cdn.bootcss.com" }}/photoswipe/{{ $.Site.Params.photoswipeVersion | default "4.1.2" }}/photoswipe-ui-default.min.js'></script>
+<link rel="stylesheet" href='{{ $.Site.Params.photoswipeCDN }}/photoswipe/{{ $.Site.Params.photoswipeVersion }}/photoswipe.min.css'/>
+<link rel="stylesheet" href='{{ $.Site.Params.photoswipeCDN }}/photoswipe/{{ $.Site.Params.photoswipeVersion }}/default-skin/default-skin.min.css'/>
+<script src='{{ $.Site.Params.photoswipeCDN }}/photoswipe/{{ $.Site.Params.photoswipeVersion }}/photoswipe.min.js'></script>
+<script src='{{ $.Site.Params.photoswipeCDN }}/photoswipe/{{ $.Site.Params.photoswipeVersion }}/photoswipe-ui-default.min.js'></script>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
