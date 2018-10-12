@@ -51,3 +51,5 @@ Pattaya 的水上市场虽然有商业景区的味道，但还是保留了很多
 {{< figure link="/images/cn/2018-09-15-tour-of-thailand/target-sheet.jpg" caption="还不赖的结果" >}}
 {{< figure link="/images/cn/2018-09-15-tour-of-thailand/shotgun.jpg" caption="霰弹枪" >}}
 {{< /gallery >}}
+
+{{< load-photoswipe >}}
