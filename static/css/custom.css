@@ -1,16 +1,3 @@
-@media screen and (min-width: 960px) {
-  html {
-    background: #fafafa;
-  }
-  body {
-    background: #fff;
-  }
-  .masthead {
-    position: fixed;
-    top: 2em;
-  }
-}
-
 .menu li:not([class]) a, a:hover, .copyright a {
   border-bottom: none;
 }
@@ -113,6 +100,75 @@ code[class*="language-"] {
 
 .masthead img {
   max-width: 99px;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    background: #fafafa;
+  }
+  
+  body {
+    background: #fff;
+    padding: 10px 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 2em auto 1.5em auto;
+  }
+  
+  .title h2, .title h3 {
+    margin: 1.5em auto;
+  }
+  
+  .main .title h1 {
+    margin: 1em auto 0 auto;
+  }
+  
+  .title hr {
+    margin: 2em auto;
+  }
+  
+  .masthead .menu {
+    max-width: inherit;
+  }
+  
+  .masthead h1 {
+    margin-bottom: 10px;
+  }
+  
+  .masthead .menu ul {
+    text-align: center;
+  }
+  
+  .masthead .menu a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #444;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .masthead .menu .active a {
+    background: none;
+    border: 1px solid #444;
+    color: #000;
+  }
+  
+  .masthead .menu a[href="#menu-separator"] {
+    background: none;
+    padding: 5px 3px;
+    pointer-events: none;
+  }
+  
+  .masthead .menu li, .masthead .menu li:first-child {
+    border: none;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  .masthead .menu .menu-extra {
+    display: none;
+  }
 }
 
 @media print {

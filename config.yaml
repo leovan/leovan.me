@@ -43,8 +43,8 @@ menu:
     - name: "Blog"
       url: "/en/"
       weight: 4
-    - name: ""
-      url: ""
+    - identifier: "en-menu-separator-1"
+      url: "#menu-separator"
       weight: 5
     - name: "Categories"
       url: "/categories/"
@@ -52,8 +52,8 @@ menu:
     - name: "Tags"
       url: "/tags/"
       weight: 7
-    - name: " "
-      url: ""
+    - identifier: "en-menu-separator-2"
+      url: "#menu-separator"
       weight: 8
     - name: "中文"
       url: "/cn/"
@@ -71,8 +71,8 @@ menu:
     - name: "博客"
       url: "/cn/"
       weight: 4
-    - name: ""
-      url: ""
+    - identifier: "cn-menu-separator-1"
+      url: "#menu-separator"
       weight: 5
     - name: "分类"
       url: "/categories/"
@@ -80,8 +80,8 @@ menu:
     - name: "标签"
       url: "/tags/"
       weight: 7
-    - name: " "
-      url: ""
+    - identifier: "cn-menu-separator-2"
+      url: "#menu-separator"
       weight: 8
     - name: "English"
       url: "/en/"
