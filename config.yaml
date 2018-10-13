@@ -34,23 +34,23 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "About"
-      url: "/en/about/"
-      weight: 2
-    - name: "Resume"
-      url: "/en/resume/"
-      weight: 3
     - name: "Blog"
       url: "/en/"
+      weight: 2
+    - name: "Categories"
+      url: "/categories/"
+      weight: 3
+    - name: "Tags"
+      url: "/tags/"
       weight: 4
     - identifier: "en-menu-separator-1"
       url: "#menu-separator"
       weight: 5
-    - name: "Categories"
-      url: "/categories/"
+    - name: "About"
+      url: "/en/about/"
       weight: 6
-    - name: "Tags"
-      url: "/tags/"
+    - name: "Resume"
+      url: "/en/resume/"
       weight: 7
     - identifier: "en-menu-separator-2"
       url: "#menu-separator"
@@ -62,23 +62,23 @@ menu:
     - name: "首页"
       url: "/"
       weight: 1
-    - name: "关于"
-      url: "/cn/about/"
-      weight: 2
-    - name: "简历"
-      url: "/cn/resume/"
-      weight: 3
     - name: "博客"
       url: "/cn/"
+      weight: 2
+    - name: "分类"
+      url: "/categories/"
+      weight: 3
+    - name: "标签"
+      url: "/tags/"
       weight: 4
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
       weight: 5
-    - name: "分类"
-      url: "/categories/"
+    - name: "关于"
+      url: "/cn/about/"
       weight: 6
-    - name: "标签"
-      url: "/tags/"
+    - name: "简历"
+      url: "/cn/resume/"
       weight: 7
     - identifier: "cn-menu-separator-2"
       url: "#menu-separator"
@@ -91,7 +91,7 @@ params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
   footer: "&copy; [Leo Van](/) 2017 - 2018 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "http://leovan.me"
-  customJS: ["js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
+  customJS: ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"

@@ -10,6 +10,23 @@
   padding: 1em 40px;
 }
 
+.masthead {
+  position: fixed;
+  top: 2em;
+}
+
+.masthead h1 {
+  margin-bottom: 0px;
+}
+
+.masthead img {
+  max-width: 100px;
+}
+  
+.masthead .menu .menu-separator {
+  list-style-type: none;
+}
+
 .en .main header ~ p:first-of-type::first-line {
   font-variant: small-caps;
   letter-spacing: .05em;
@@ -40,8 +57,6 @@ table {
   margin: auto;
 }
 
-/* Code */
-
 pre code {
   font-size: .9em;
   display: block;
@@ -51,23 +66,6 @@ pre code {
   overflow-x: auto;
   background: #f9f9f9 !important;
 }
-
-/* Codes highlightjs
-/* 
-pre .nohighlight {
-  background-color: transparent;
-}
-
-.hljs-comment {
-  font-style: inherit;
-}
-
-.hljs {
-  padding: 1em;
-}
-*/
-
-/* Codes prismjs*/
 
 pre[class*="language-"] {
   padding: 0;
@@ -98,10 +96,6 @@ code[class*="language-"] {
   margin: 2em auto 1em;
 }
 
-.masthead img {
-  max-width: 99px;
-}
-
 @media screen and (max-width: 960px) {
   html {
     background: #fafafa;
@@ -127,13 +121,21 @@ code[class*="language-"] {
   .title hr {
     margin: 2em auto;
   }
+
+  .masthead {
+    position: inherit;
+  }
   
   .masthead .menu {
     max-width: inherit;
   }
   
   .masthead h1 {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+  }
+
+  .masthead .tagline {
+    display: none;
   }
   
   .masthead .menu ul {
@@ -154,19 +156,13 @@ code[class*="language-"] {
     color: #000;
   }
   
-  .masthead .menu a[href="#menu-separator"] {
-    background: none;
-    padding: 5px 3px;
-    pointer-events: none;
-  }
-  
   .masthead .menu li, .masthead .menu li:first-child {
     border: none;
     display: inline-block;
     margin-top: 5px;
   }
   
-  .masthead .menu .menu-extra {
+  .masthead .menu .menu-separator {
     display: none;
   }
 }
@@ -175,9 +171,11 @@ code[class*="language-"] {
   del, footer, .masthead {
     display: none;
   }
+
   body {
     max-width: 700px;
   }
+
   .main {
     margin-left: 0;
     border-left: none;

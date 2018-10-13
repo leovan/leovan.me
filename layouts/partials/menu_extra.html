@@ -1,6 +1,6 @@
 {{ if and (not .IsHome) .Content }}
 {{ $section := default .Section ($.Scratch.Get "section") }}
-<li class="meu-extra"></li>
+<li class="menu-separator"><span>&nbsp;</span></li>
 {{ with .Section }}
 <li><a href="/{{ . }}/index.xml" type="application/rss+xml" title="RSS feed">{{ default "Subscribe" (index $.Site.Params.lang.subscribe $section) }}</a></li>
 {{ end }}
