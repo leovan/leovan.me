@@ -1,3 +1,8 @@
+{{ if not ($.Page.Scratch.Get "videojsloaded") }}
+  {{ $.Page.Scratch.Set "videojsloaded" 1 }}
+<script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
+{{ end }}
+
 <video class="video-js vjs-big-play-centered"
        data-setup='{
          "controls": {{ .Get "controls" | default true }},
