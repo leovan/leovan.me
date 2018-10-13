@@ -1,3 +1,18 @@
+@media screen and (min-width: 960px) {
+  html {
+    background: #fafafa;
+  }
+  
+  body {
+    background: #fff;
+  }
+
+  .masthead {
+    position: fixed;
+    top: 2em;
+  }
+}
+
 .menu li:not([class]) a, a:hover, .copyright a {
   border-bottom: none;
 }
@@ -8,11 +23,6 @@
 
 .main, .masthead {
   padding: 1em 40px;
-}
-
-.masthead {
-  position: fixed;
-  top: 2em;
 }
 
 .masthead h1 {
@@ -120,10 +130,6 @@ code[class*="language-"] {
   
   .title hr {
     margin: 2em auto;
-  }
-
-  .masthead {
-    position: inherit;
   }
   
   .masthead .menu {
