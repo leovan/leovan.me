@@ -1,1 +1,7 @@
+{{ if not ($.Page.Scratch.Get "pseudocode-loaded") }}
+  {{ $.Page.Scratch.Set "pseudocode-loaded" 1 }}
+<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.katexCDN }}/KaTeX/{{ $.Site.Params.katexVersion }}/katex.min.css">
+<link rel="stylesheet" type="text/css" href="/css/pseudocode.min.css">
+{{ end }}
+
 <div><pre class="pseudocode">{{ .Inner }}</pre></div>

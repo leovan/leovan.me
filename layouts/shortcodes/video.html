@@ -1,5 +1,6 @@
-{{ if not ($.Page.Scratch.Get "videojsloaded") }}
-  {{ $.Page.Scratch.Set "videojsloaded" 1 }}
+{{ if not ($.Page.Scratch.Get "videojs-loaded") }}
+  {{ $.Page.Scratch.Set "videojs-loaded" 1 }}
+<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video-js.min.css">
 <script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
 {{ end }}
 
