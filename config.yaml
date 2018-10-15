@@ -129,7 +129,7 @@ params:
   materialComponentsWebCDN: "//unpkg.com"
 
   logo:
-    img: "/images/icons/gravatar.png"
+    img: "/images/avatar.svg"
     url: "/"
     alt: "Mr. Black"
     tag: "Soldier to Solider"
