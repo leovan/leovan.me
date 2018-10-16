@@ -20,39 +20,38 @@ source('../scripts/common/utils.R')
 
 ```{r book_list, echo=F, message=F, warning=F, results = 'asis'}
 output_col_names <- c(
+    'DOUBAN ID',
     'ISBN',
     '书名',
     '作者',
-    '买了',
     '读了',
     '读完了',
+    '豆瓣评分',
     '打个分'
 )
 
 book_list <- read_tsv(
     '../data/cn/book-list.tsv',
-    col_types = 'cccccDDDi')
+    col_types = 'ccccccccccDDDddiD')
 
 book_table <- function(books) {
     which_year <- books[1, ]$purchasing_year
     which_year <- gen_which_year(which_year)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- books %>%
-        mutate(
-            purchasing_date_month_day = format_month_day(purchasing_date)) %>%
-        arrange(desc(purchasing_date), author, title) %>%
-        select(c('isbn', 'title', 'author', 'purchasing_date_month_day', 
-                 'reading_start_date', 'reading_finish_date', 'rating')) %>%
+        arrange(desc(purchasing_date), author, title_zh) %>%
+        select(c('douban_id_html', 'isbn', 'title_zh_html', 'author',
+                 'begin_reading_date', 'finish_reading_date', 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="book-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
         row_spec(0, align = 'center') %>%
-        column_spec(1, extra_css = 'display: none;', include_thead = T) %>%
-        column_spec(3, width = '8em') %>%
-        column_spec(4, width = '3.2em', extra_css = 'text-align: center;') %>%
+        column_spec(1:2, extra_css = 'display: none;', include_thead = T) %>%
+        column_spec(4, width = '10em') %>%
         column_spec(5, width = '5.8em', extra_css = 'text-align: center;') %>%
         column_spec(6, width = '5.8em', extra_css = 'text-align: center;') %>%
-        column_spec(7, width = '3.8em', extra_css = 'text-align: center;')
+        column_spec(7, width = '3em', extra_css = 'text-align: center;') %>%
+        column_spec(8, width = '3em', extra_css = 'text-align: center;')
     footer_ <- '<br/>'
     
     tibble(table_ = paste0(header_, table_, footer_))
@@ -60,11 +59,42 @@ book_table <- function(books) {
 
 book_list %>%
     mutate(
-        title = gen_linked_text_html(title, blog_link),
-        purchasing_year = year(purchasing_date)) %>%
+        douban_id_html = gen_douban_id_html(douban_id),
+        title_zh_html = gen_linked_text_html(title_zh, blog_link),
+        purchasing_year = year(purchasing_date),
+        douban_rating_html = gen_book_douban_rating_link_html(douban_rating, douban_id)) %>%
     ddply(.(purchasing_year), book_table) %>%
     arrange(desc(purchasing_year)) %>%
     select(table_) %>%
     unlist %>%
     cat
+```
+
+```{r update_book_info, eval=F, include=F}
+book_list_columns <- c(
+    'isbn', 'douban_id', 'blog_link', 'title_zh', 'subtitle_zh', 'title', 'author',
+    'publisher', 'published_date', 'pages', 'purchasing_date', 'begin_reading_date',
+    'finish_reading_date', 'douban_rating', 'rating', 'auto_update', 'updated_date')
+auto_update_colunms <- c(
+    'title_zh', 'subtitle_zh', 'title', 'author', 'publisher', 'published_date', 'pages', 'douban_rating')
+
+book_list_auto_update <- book_list %>%
+    filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
+    select(-auto_update_colunms)
+
+book_list_manual_update <- book_list %>%
+    filter(auto_update == 0 | (Sys.Date() - updated_date <= 30)) %>%
+    select(book_list_columns)
+
+book_list_auto_update <- book_list_auto_update %>%
+    mutate(douban_info = map(douban_id, crawl_book_douban_info)) %>%
+    unnest(douban_info)
+
+book_list_auto_update %>%
+    mutate(updated_date = Sys.Date(),
+           douban_rating = as.numeric(douban_rating)) %>%
+    union_all(book_list_manual_update) %>%
+    select(book_list_columns) %>%
+    arrange(desc(purchasing_date)) %>%
+    write_tsv('../data/cn/book-list.tsv')
 ```
