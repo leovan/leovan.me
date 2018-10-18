@@ -1,1 +1,16 @@
-<div class="blockquote" style='border-left: 3px solid {{ .Get "color" | default "#0594cb" }};'>{{ .Inner }}</div>
+{{ $type := .Get "type" | default "note" }}
+
+{{ $color := "#369BE5" }}
+{{ if (eq $type "note") }}
+  {{ $color = "#369BE5" }}
+{{ else if (eq $type "info") }}
+  {{ $color = "#369BE5" }}
+{{ else if (eq $type "warn") }}
+  {{ $color = "#F66E40" }}
+{{ else if (eq $type "caution") }}
+  {{ $color = "#F66E40" }}
+{{ else if (eq $type "error") }}
+  {{ $color = "#F51744" }}
+{{ end }}
+
+<div class="blockquote" style='border-left: 4px solid {{ .Get "color" | default $color }};'>{{ .Inner }}</div>
