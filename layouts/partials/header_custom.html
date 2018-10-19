@@ -1,6 +1,3 @@
-<link rel="stylesheet" type="text/css" href="{{ "/css/custom.css" | relURL }}">
-<link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
-
 <script async src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js'></script>
 
 {{ if ne .URL "/" }}
@@ -10,3 +7,6 @@
 {{ partial "header_prismjs.html" . }}
 {{ partial "google_analytics.html" . }}
 {{ partial "google_adsense.html" . }}
+
+<link rel="stylesheet" type="text/css" href="{{ "/css/custom.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
