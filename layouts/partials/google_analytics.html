@@ -1,10 +1,11 @@
 {{ with .Site.GoogleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
-    if (window.location.hostname != "127.0.0.1" && window.location.hostname != "localhost") {
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '{{ . }}', 'auto');
-        ga('send', 'pageview');
-    }
+if (window.location.hostname != "127.0.0.1" && window.location.hostname != "localhost") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+}
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 {{ end }}

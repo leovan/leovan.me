@@ -22,6 +22,7 @@ document.addEventListener('keyup', function(e) {
 {{ end }}
 
 {{ partial "disqus.html" . }}
+{{ partial "footer_prismjs.html" . }}
 
 {{ range .Site.Params.customJS }}
 <script async src="{{ . | relURL }}"></script>

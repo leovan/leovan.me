@@ -92,6 +92,7 @@ params:
   footer: "&copy; [Leo Van](/) 2017 - 2018 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "https://leovan.me"
   customJS: ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
+  googleAdsense: "ca-pub-2608165017777396"
   
   highlightjsVersion: "9.12.0"
   highlightjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
