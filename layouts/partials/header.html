@@ -38,9 +38,10 @@
     {{ end }}
     
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
     
     {{ partial "header_custom.html" . }}
+    
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
   </head>
 
   {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}

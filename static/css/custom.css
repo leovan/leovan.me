@@ -83,7 +83,7 @@ pre[class*="language-"] {
   overflow: inherit;
 }
 
-pre[class*='language-'] > code[data-language]::before {
+pre[class*="language-"] > code[data-language]::before {
   content: attr(data-language);
   color: black;
   background-color: #CFCFCF;
