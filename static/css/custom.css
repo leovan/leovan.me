@@ -238,3 +238,7 @@ img[alt="github-stars"] {
   padding: 0.1em 1em;
   background: #eee;
 }
+
+footer .adsbygoogle {
+  margin-top: 20px;
+}
