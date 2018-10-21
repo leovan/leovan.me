@@ -2,6 +2,7 @@
 title: '书籍'
 slug: 'cn/books'
 disable_comments: true
+disable_adsense: true
 ---
 
 ## 读书，不是非做不可的事，而是想要去做的事。

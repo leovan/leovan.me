@@ -2,6 +2,7 @@
 title: 'About'
 slug: 'en/about'
 disable_comments: true
+disable_adsense: true
 ---
 
 # Who am I?

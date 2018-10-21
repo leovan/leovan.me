@@ -1,9 +1,13 @@
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
 {{ with $.Site.Params.googleAdsense }}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
+if (window.location.hostname != "127.0.0.1" && window.location.hostname != "localhost") {
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "{{ . }}",
     enable_page_level_ads: true
   });
+}
 </script>
+{{ end }}
 {{ end }}
