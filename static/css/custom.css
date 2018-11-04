@@ -242,3 +242,15 @@ img[alt="github-stars"] {
 footer .adsbygoogle {
   margin-top: 20px;
 }
+
+.toc-depth-1 nav ul li ul {
+  display: none;
+}
+
+.toc-depth-2 nav ul li ul li ul {
+  display: none;
+}
+
+.toc-depth-3 nav ul li ul li ul li ul {
+  display: none;
+}

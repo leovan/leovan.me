@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+{{ if .Params.show_toc }}
+<div{{ with .Params.toc_depth }} class="toc-depth-{{ . }}" {{ end }}>{{ .TableOfContents }}</div> 
+{{ end }}
+
+{{ .Content }}
+
+{{ partial "footer.html" . }}
