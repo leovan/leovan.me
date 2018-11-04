@@ -6,6 +6,9 @@
 {{ range $.Site.Params.prismjsLang }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/components/prism-{{ . }}.min.js"></script>
 {{ end }}
+{{ range $.Site.Params.prismjsPlugin }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
+{{ end }}
 <script>
     (function() {
         if (!self.Prism) {
@@ -31,8 +34,5 @@
         });
     })();
 </script>
-{{ range $.Site.Params.prismjsPlugin }}
-<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
-{{ end }}
 {{ end }}
 {{ end }}
