@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="480"
+   viewBox="0 0 800 500"
+   id="svg2">
+  <defs
+     id="defs">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         id="path3951"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-244.09451)"
+     id="layer1">
+    <g
+       id="axes">
+      <path
+         d="m 400,743.74706 0,-490.32139 0,-8.9837"
+         id="axis-v"
+         style="fill:#babdb6;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-mid:url(#Arrow1Lend);marker-end:none" />
+      <text
+         x="-604.09448"
+         y="394.52811"
+         transform="matrix(0,-1,1,0,0,0)"
+         id="complexity"
+         xml:space="preserve"
+         style="font-size:12.83532333px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="-604.09448"
+           y="394.52811"
+           id="tspan4945">Complexity</tspan></text>
+      <path
+         d="m 0,644.09451 800,0"
+         id="axis-h"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 6;stroke-dashoffset:0" />
+    </g>
+    <text
+       x="199.77734"
+       y="703.30811"
+       id="neq-math"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"><tspan
+         x="199.77734"
+         y="703.30811"
+         id="tspan3330">P ≠ NP</tspan></text>
+    <text
+       x="599.77734"
+       y="703.30811"
+       id="eq-math"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"><tspan
+         x="599.77734"
+         y="703.30811"
+         id="tspan3358">P = NP</tspan></text>
+    <g
+       id="neq-diag">
+      <path
+         d="m 284.25694,339.62939 a 168.29141,168.29141 0 1 1 -336.58283,0 168.29141,168.29141 0 1 1 336.58283,0 z"
+         transform="matrix(0.73561878,0,0,0.73561878,114.69358,269.45843)"
+         id="path3134"
+         style="fill:none;stroke:#000000;stroke-width:2.71879959;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         d="m 40,244.09451 c 0,140 60,260 160,260 100,0 160,-120 160,-260"
+         id="path3332"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-mid:none;marker-end:none" />
+      <text
+         x="199.91759"
+         y="333.68689"
+         id="text3334"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="199.91759"
+           y="333.68689"
+           id="tspan3336">NP-Hard</tspan></text>
+      <text
+         x="199.49458"
+         y="459.33737"
+         id="text3338"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="199.49458"
+           y="459.33737"
+           id="tspan3340">NP-Complete</tspan></text>
+      <path
+         d="m 336.61418,345.47244 a 97.440948,62.007874 0 1 1 -194.8819,0 97.440948,62.007874 0 1 1 194.8819,0 z"
+         transform="matrix(0.84440268,0,0,0.76872578,-1.958519,329.77868)"
+         id="path3344"
+         style="fill:none;stroke:#000000;stroke-width:2.48238683;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.48238675, 2.48238675;stroke-dashoffset:0" />
+      <text
+         x="199.28583"
+         y="603.55432"
+         id="text3346"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="199.28583"
+           y="603.55432"
+           id="tspan3348">P</tspan></text>
+      <text
+         x="111.67521"
+         y="527.99121"
+         id="text3350"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="111.67521"
+           y="527.99121"
+           id="tspan3352">NP</tspan></text>
+    </g>
+    <g
+       id="eq-diag">
+      <path
+         d="m 284.25694,339.62939 a 168.29141,168.29141 0 1 1 -336.58283,0 168.29141,168.29141 0 1 1 336.58283,0 z"
+         transform="matrix(0.73561878,0,0,0.73561878,514.69358,269.45843)"
+         id="path3354"
+         style="fill:none;stroke:#000000;stroke-width:2.71879959;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         d="m 440,244.09451 c 0,200 17.69912,399.49491 160,399.49491 142.30088,0 160,-199.49491 160,-399.49491"
+         id="path3360"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-mid:none;marker-end:none" />
+      <text
+         x="599.9176"
+         y="333.73788"
+         id="text3362"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="599.9176"
+           y="333.73788"
+           id="tspan3364">NP-Hard</tspan></text>
+      <text
+         x="599.49457"
+         y="511.09412"
+         id="text3372"
+         xml:space="preserve"
+         style="font-size:22.50210381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><tspan
+           x="599.49457"
+           y="511.09412"
+           id="tspan3200">P = NP =</tspan><tspan
+           x="599.49457"
+           y="539.22174"
+           id="tspan3210">NP-Complete</tspan></text>
+    </g>
+  </g>
+</svg>
