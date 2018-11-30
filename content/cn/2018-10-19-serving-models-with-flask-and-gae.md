@@ -192,16 +192,16 @@ def validate_json(schema, force=False):
 Model Serving Demo
 
 Usage:
-    main.py [-a=<A> | --host=<A>] [-p=<P> | --port=<P>] [-d | --debug]
+    main.py [--host <host>] [--port <port>] [--debug]
     main.py (-h | --help)
     main.py --version
 
 Options:
+    --host <host>                     绑定的 Host [default: 0.0.0.0]
+    --port <port>                     绑定的 Port [default: 9999]
+    --debug                           是否开启 Debug [default: False]
     -h --help                         显示帮助
     -v --version                      显示版本
-    -a=<A> --host=<A>                 绑定的 Host [default: 0.0.0.0]
-    -p=<P> --port=<P>                 绑定的 Port [default: 9999]
-    -d --debug                        是否开启 Debug [default: False]
 
 """
 
