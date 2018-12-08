@@ -26,7 +26,7 @@
 }
 
 .masthead h1 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .masthead img {
@@ -83,7 +83,7 @@ pre[class*="language-"] {
   overflow: inherit;
 }
 
-pre[class*="language-"] > code[data-language]::before {
+pre[class*="language-"] > code[data-language]:before {
   content: attr(data-language);
   color: black;
   background-color: #CFCFCF;
@@ -137,7 +137,7 @@ code[class*="language-"] {
   }
   
   .masthead h1 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .masthead .tagline {
@@ -199,6 +199,7 @@ code[class*="language-"] {
   margin-top: 0;
   margin-bottom: 1em;
 }
+
 .meta-info a {
   text-decoration: none;
   border-bottom: 0;
@@ -215,12 +216,20 @@ h4, h5, h6 {
   display: none;
 }
 
-a[href^="#fn:"]:before {
-  content: "["
+.footnote-ref a:before {
+  content: "[";
 }
 
-a[href^="#fn:"]:after {
-  content: "]"
+.footnote-ref a:after {
+  content: "]";
+}
+
+.MathJax_ref:before {
+  content: "(";
+}
+
+.MathJax_ref:after {
+  content: ")";
 }
 
 .material-icons {
@@ -234,7 +243,6 @@ img[alt="github-stars"] {
 
 .blockquote {
   display: block;
-  margin: 1.3em 0;
   padding: 0.1em 1em;
   background: #eee;
 }
