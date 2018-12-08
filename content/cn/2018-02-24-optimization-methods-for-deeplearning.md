@@ -130,10 +130,12 @@ $$`
 Momentum 算法则在其变化量中添加了一个动量分量，即
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \boldsymbol{v}_t &= - \alpha \nabla_{\boldsymbol{\theta}} J \left(\boldsymbol{\theta}_t\right) + \gamma \boldsymbol{v}_{t-1} \\
 \boldsymbol{\theta}_t &= \boldsymbol{\theta}_{t-1} + \boldsymbol{v}_t
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 对于添加的动量项，当第 `$t$` 步和第 `$t-1$` 步的梯度方向**相同**时，`$\boldsymbol{\theta}$` 则以更快的速度更新；当第 `$t$` 步和第 `$t-1$` 步的梯度方向**相反**时，`$\boldsymbol{\theta}$` 则以较慢的速度更新。利用 SGD 和 Momentum 两种方法，在峡谷行的二维梯度上更新参数的示意图如下所示
@@ -145,10 +147,12 @@ $$`
 NAG (Nesterov Accelerated Gradient)[^nesterov1983method] 是一种 Momentum 算法的变种，其核心思想会利用“下一步的梯度”确定“这一步的梯度”，当然这里“下一步的梯度”并非真正的下一步的梯度，而是指仅根据动量项更新后位置的梯度。Sutskever[^sutskever2013training] 给出了一种更新参数的方法：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \boldsymbol{v}_t &= - \alpha \nabla_{\boldsymbol{\theta}} J \left(\boldsymbol{\theta}_t + \gamma \boldsymbol{v}_{t-1}\right) + \gamma \boldsymbol{v}_{t-1} \\
 \boldsymbol{\theta}_t &= \boldsymbol{\theta}_{t-1} + \boldsymbol{v}_t
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 针对 Momentum 和 NAG 两种不同的方法，其更新权重的差异如下图所示：
@@ -232,19 +236,23 @@ $$`
 Adam (Adaptive Moment Estimation)[^kingma2014adam] 是另一种类型的自适应学习率方法，类似 Adadelta，Adam 对于每个参数都计算各自的学习率。Adam 方法中包含一个一阶梯度衰减项 `$m_t$` 和一个二阶梯度衰减项 `$v_t$`
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 m_t &= \beta_1 m_{t-1} + \left(1 - \beta_1\right) g_t \\
 v_t &= \beta_2 v_{t-1} + \left(1 - \beta_2\right) g_t^2
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 算法中，`$m_t$` 和 `$v_t$` 初始化为零向量，作者发现两者会更加偏向 `$0$`，尤其是在训练的初始阶段和衰减率很小的时候 (即 `$\beta_1$` 和 `$\beta_2$` 趋近于1的时候)。因此，对其偏差做如下校正
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \hat{m}_t &= \dfrac{m_t}{1 - \beta_1^t} \\
 \hat{v}_t &= \dfrac{v_t}{1 - \beta_2^t}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 最终得到 Adam 算法的参数更新量如下
@@ -258,21 +266,25 @@ $$`
 在 Adam 中参数的更新方法利用了 `$L_2$` 正则形式的历史梯度 (`$v_{t-1}$`) 和当前梯度 (`$|g_t|^2$`)，因此，更一般的，我们可以使用 `$L_p$` 正则形式，即
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 v_t &= \beta_2^p v_{t-1} + \left(1 - \beta_2^p\right) |g_t|^p \\
 &= \left(1 - \beta_2^p\right) \sum_{i=1}^{t} \beta_2^{p\left(t-i\right)} \cdot |g_t|^p
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 这样的变换对于值较大的 `$p$` 而言是很不稳定的，但对于极端的情况，当 `$p$` 趋近于无穷的时候，则变为了一个简单并且稳定的算法。则在 `$t$` 时刻对应的我们需要计算 `$v_t^{1/p}$`，令 `$u_t = \lim_{p \to \infty} \left(v_t\right)^{1/p}$`，则有
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 u_t &= \lim_{p \to \infty} \left(\left(1 - \beta_2^p\right) \sum_{i=1}^{t} \beta_2^{p\left(t-i\right)} \cdot |g_t|^p\right)^{1/p} \\
 &= \lim_{p \to \infty} \left(1 - \beta_2^p\right)^{1/p} \left(\sum_{i=1}^{t} \beta_2^{p\left(t-i\right)} \cdot |g_t|^p\right)^{1/p} \\
 &= \lim_{p \to \infty} \left(\sum_{i=1}^{t} \beta_2^{p\left(t-i\right)} \cdot |g_t|^p\right)^{1/p} \\
 &= \max \left(\beta_2^{t-1} |g_1|, \beta_2^{t-2} |g_2|, ..., \beta_{t-1} |g_t|\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 写成递归的形式，则有
@@ -292,21 +304,25 @@ $$`
 Adam 算法可以看做是对 RMSprop 和 Momentum 的结合：历史平方梯度的衰减项 `$v_t$` (RMSprop) 和 历史梯度的衰减项 `$m_t$` (Momentum)。Nadam (Nesterov-accelerated Adaptive Moment Estimation)[^dozat2016incorporating] 则是将 Adam 同 NAG 进行了进一步结合。我们利用 Adam 中的符号重新回顾一下 NAG 算法
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 g_t &= \nabla_{\theta} J \left(\theta_t - \gamma m_{t-1}\right) \\
 m_t &= \gamma m_{t-1} + \alpha g_t \\
 \theta_t &= \theta_{t-1} - m_t
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 NAG 算法的核心思想会利用“下一步的梯度”确定“这一步的梯度”，在 Nadam 算法中，作者在考虑“下一步的梯度”时对 NAG 进行了改动，修改为
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 g_t &= \nabla_{\theta} J \left(\theta_t\right) \\
 m_t &= \gamma m_{t-1} + \alpha g_t \\
 \theta_t &= \theta_{t-1} - \left(\gamma m_t + \alpha g_t\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 对于 Adam，根据
@@ -318,10 +334,12 @@ $$`
 则有
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \Delta \theta &= - \dfrac{\alpha}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t \\
 &= - \dfrac{\alpha}{\sqrt{\hat{v}_t} + \epsilon} \left(\dfrac{\beta_1 m_{t-1}}{1 - \beta_1^t} + \dfrac{\left(1 - \beta_1\right) g_t}{1 - \beta_1^t}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 上式中，仅 `$\dfrac{\beta_1 m_{t-1}}{1 - \beta_1^t}$` 和动量项相关，因此我们类似上文中对 NAG 的改动，通过简单的替换加入 Nesterov 动量项，最终得到 Nadam 方法的参数的更新量
@@ -335,12 +353,14 @@ $$`
 对于前面提到的 Adadelta，RMSprop，Adam 和 Nadam 方法，他们均采用了平方梯度的指数平滑平均值迭代产生新的梯度，但根据观察，在一些情况下这些算法并不能收敛到最优解。Reddi 等提出了一种新的 Adam 变体算法 AMSGrad[^reddi2018convergence]，在文中作者解释了为什么 RMSprop 和 Adam 算法无法收敛到一个最优解的问题。通过分析表明，为了保证得到一个收敛的最优解需要保留过去梯度的“长期记忆”，因此在 AMSGrad 算法中使用了历史平方梯度的最大值而非滑动平均进行更新参数，即
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 m_t &= \beta_1 m_{t-1} + \left(1 - \beta_1\right) g_t \\
 v_t &= \beta_2 v_{t-1} + \left(1 - \beta_2\right) g_t^2 \\
 \hat{v}_t &= \max \left(\hat{v}_{t-1}, v_t\right) \\
 \Delta \theta &= - \dfrac{\alpha}{\sqrt{\hat{v}_t} + \epsilon} m_t
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 作者在一些小数据集和 CIFAR-10 数据集上得到了相比于 Adam 更好的效果，但与此同时一些其他的 [实验](https://fdlm.github.io/post/amsgrad/) 却得到了相比与 Adam 类似或更差的结果，因此对于 AMSGrad 算法的效果还有待进一步确定。

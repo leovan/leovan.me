@@ -13,9 +13,7 @@ tags:
   - Hopfield
 ---
 
-`$$
-\renewcommand{\sign}{\operatorname{sign}}
-$$`
+`$\renewcommand{\sign}{\operatorname{sign}}$`
 
 ## Ising 模型
 
@@ -221,9 +219,11 @@ $$`
 则以**异步更新**方式，不难推导得出
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \Delta E\left(t\right) = -\Delta x_i^{\left(t\right)} \left(\sum_{j=1}^{n}{\left(w_{ij}x_j - T_j\right)}\right) - \dfrac{1}{2} \Delta x_i^{\left(t\right)2} w_{ii}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 由于网络中的神经元不存在自反馈，即 `$w_{ii} = 0$`，则上式可以化简为
@@ -497,10 +497,12 @@ $$`
 其中，`$A, B, C, D > 0$` 分别为每个能量分量的权重。针对这样的能量函数，我们可得对应神经元 `$x_i$` 和 `$y_i$` 之间的权重为
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 w_{x_i, y_i} = &-2A \delta_{xy} \left(1-\delta_{xy}\right) - 2B \delta_{ij} \left(1-\delta_{xy}\right) \\
 &- 2C -2D d_{xy} \left(\delta_{j, i+1} + \delta_{i, j+1}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中
@@ -520,10 +522,12 @@ $$`
 因此可以得到网络关于时间的导数
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{d u_{xi}}{d t} = &-2A \sum_{j \neq i}^{n}{v_{xj}} - 2B \sum_{y \neq x}^{n}{v_{yi}} - 2C \left(\sum_{x=1}^{n}{\sum_{j=1}^{n}{v_{xj}}} - n\right) \\
 &- 2D \sum_{y \neq x}^{n}{d_{xy}\left(v_{y, i+1} + v_{y, i-1}\right)} - \dfrac{u_{xi}}{\tau}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 据此，我们以一个 10 个城市的数据为例，利用 CHNN 求解 TSP 问题，其中 10 个城市的座标为
@@ -777,7 +781,8 @@ $$`
 则 `$P\left(h_k = 1 | \boldsymbol{v}\right)$` 定义如下：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &P\left(h_k = 1 | \boldsymbol{v}\right) \\
 = &P\left(h_k = 1 | h_{-k}, \boldsymbol{v}\right) \\
 = &\dfrac{P\left(h_k = 1, h_{-k}, \boldsymbol{v}\right)}{P\left(h_{-k}, \boldsymbol{v}\right)} \\
@@ -785,49 +790,58 @@ $$`
 = &\dfrac{\dfrac{1}{Z} e^{-E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right)}}{\dfrac{1}{Z} e^{-E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right)} + \dfrac{1}{Z} e^{-E\left(h_k = 0, h_{-k}, \boldsymbol{v}\right)}} \\
 = &\dfrac{e^{-E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right)}}{e^{-E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right)} + e^{-E\left(h_k = 0, h_{-k}, \boldsymbol{v}\right)}} \\
 = &\dfrac{1}{1 + e^{E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right) - E\left(h_k = 0, h_{-k}, \boldsymbol{v}\right)}} \\
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &E\left(h_k = 1, h_{-k}, \boldsymbol{v}\right) \\
 = &E\left(h_k = 1, \boldsymbol{v}\right) \\
 = &-\sum_{i=1}^{n_v}{b_i v_i} - \sum_{j=1, j \neq k}^{n_h}{c_j h_j} - \sum_{i=1}^{n_v}{\sum_{j=1, j \neq k}^{n_h}{v_i W_{i, j} h_i}} - c_k - \sum_{i=1}^{n_v}{v_i W_{i, k}} \\
 &E\left(h_k = 0, h_{-k}, \boldsymbol{v}\right) \\
 = &E\left(h_k = 0, \boldsymbol{v}\right) \\
 = &-\sum_{i=1}^{n_v}{b_i v_i} - \sum_{j=1, j \neq k}^{n_h}{c_j h_j} - \sum_{i=1}^{n_v}{\sum_{j=1, j \neq k}^{n_h}{v_i W_{i, j} h_i}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 因此，`$P\left(h_k = 1 | \boldsymbol{v}\right)$` 可以化简为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &P\left(h_k = 1 | \boldsymbol{v}\right) \\
 = &\dfrac{1}{1 + e^{-\left(c_k + \sum_{i=1}^{n_v}{v_i W_{i, k}}\right)}} \\
 = &\sigma\left(c_k + \sum_{i=1}^{n_v}{v_i W_{i, k}}\right) \\
 = &\sigma\left(c_k + \boldsymbol{v}^T \boldsymbol{W}_{:, k}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中，`$\sigma$` 为 sigmoid 函数。因此，我们可以将条件分布表示为连乘的形式：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 P\left(\boldsymbol{h} | \boldsymbol{v}\right) &= \prod_{j=1}^{n_h}{P\left(h_j | \boldsymbol{v}\right)} \\
 &= \prod_{j=1}^{n_h}{\sigma\left(\left(2h - 1\right) \odot \left(\boldsymbol{c} + \boldsymbol{W}^T \boldsymbol{v}\right)\right)_j}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 同理可得：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 P\left(\boldsymbol{v} | \boldsymbol{h}\right) &= \prod_{i=1}^{n_v}{P\left(v_i | \boldsymbol{h}\right)} \\
 &= \prod_{i=1}^{n_v}{\sigma\left(\left(2v - 1\right) \odot \left(\boldsymbol{b} + \boldsymbol{W} \boldsymbol{h}\right)\right)_i}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 ### 模型训练[^itplus-rbm]
@@ -853,7 +867,8 @@ $$`
 对于单个样本 `$\boldsymbol{\color{red}{v'}}$` ，有：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \ln\mathcal{L}_S}{\partial \theta} &= \dfrac{\partial \ln P\left(\boldsymbol{\color{red}{v'}}\right)}{\partial \theta} = \dfrac{\partial \ln \left(\dfrac{1}{Z} \sum_{\boldsymbol{h}}{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}}\right)}{\partial \theta} \\
 &= \dfrac{\partial \left(\ln \sum_{\boldsymbol{h}}{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}} - \ln Z\right)}{\partial \theta} = \dfrac{\partial \left(\ln \sum_{\boldsymbol{h}}{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}} - \ln \sum_{\boldsymbol{v, h}}{e^{-E\left(\boldsymbol{v, h}\right)}}\right)}{\partial \theta} \\
 &= \dfrac{\partial}{\partial \theta} \left(\ln \sum_{\boldsymbol{h}}{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}}\right) - \dfrac{\partial}{\partial \theta} \left(\ln \sum_{\boldsymbol{v, h}}{e^{-E\left(\boldsymbol{v, h}\right)}}\right) \\
@@ -862,22 +877,26 @@ $$`
 &= -\sum_{\boldsymbol{h}}{\dfrac{\dfrac{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}}{Z}}{\dfrac{\sum_{\boldsymbol{h}}{e^{-E\left(\boldsymbol{\color{red}{v'}, h}\right)}}}{Z}} \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial \theta}} + \sum_{\boldsymbol{v, h}}{\dfrac{e^{-E\left(\boldsymbol{v, h}\right)}}{\sum_{\boldsymbol{v, h}}{e^{-E\left(\boldsymbol{v, h}\right)}}} \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}} \\
 &= -\sum_{\boldsymbol{h}}{\dfrac{P\left(\boldsymbol{\color{red}{v'}, h}\right)}{P\left(\boldsymbol{\color{red}{v'}}\right)} \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial \theta}} + \sum_{\boldsymbol{v, h}}{\dfrac{e^{-E\left(\boldsymbol{v, h}\right)}}{\sum_{\boldsymbol{v, h}}{e^{-E\left(\boldsymbol{v, h}\right)}}} \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}} \\
 &= -\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h | \color{red}{v'}}\right) \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial \theta}} + \sum_{\boldsymbol{v, h}}{P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \sum_{\boldsymbol{v, h}}{P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}} &= \sum_{\boldsymbol{v}}{\sum_{\boldsymbol{h}}{P\left(\boldsymbol{v}\right) P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}}} \\
 &= \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) \sum_{\boldsymbol{h}}{P \left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial \theta}}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则对于参数 `$w_{i, j}$` 可得：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial w_{i, j}}} \\
 = &-\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) h_i v_j} \\
 = &-\sum_{\boldsymbol{h}}{\prod_{k=1}^{n_h}{P\left(h_k | \boldsymbol{v}\right) h_i v_j}} \\
@@ -887,24 +906,28 @@ $$`
 = &-\sum_{\boldsymbol{h_i}}{P\left(h_i | \boldsymbol{v}\right) h_i v_j} \\
 = &-\left(P\left(h_i = 0 | \boldsymbol{v}\right) \cdot 0 \cdot v_j + P\left(h_i = 1 | \boldsymbol{v}\right) \cdot 1 \cdot v_j\right) \\
 = &-P\left(h_i = 1 | \boldsymbol{v}\right) v_j
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则对于参数 `$b_i$` 可得：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial b_i}} \\
 = &-\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) v_i} \\
 = &-v_i \sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right)} \\
 = &-v_i
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则对于参数 `$c_j$` 可得：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial c_j}} \\
 = &-\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h|v}\right) h_j} \\
 = &-\sum_{\boldsymbol{h}}{\prod_{k=1}^{n_h}{P\left(h_k | \boldsymbol{v}\right) h_j}} \\
@@ -914,30 +937,35 @@ $$`
 = &-\sum_{h_j}{P\left(h_i | \boldsymbol{v}\right) h_j} \\
 = &-\left(P\left(h_j = 0 | \boldsymbol{v}\right) \cdot 0 + P\left(h_j = 1 | \boldsymbol{v}\right) \cdot 1\right) \\
 = &-P\left(h_j = 1 | \boldsymbol{v}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 综上所述，可得：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \ln P\left(\color{red}{\boldsymbol{v'}}\right)}{\partial w_{i, j}} &= -\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h | \color{red}{v'}}\right) \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial w_{i, j}}} + \sum_{\boldsymbol{v, h}}{P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial w_{i, j}}} \\
 &= P\left(h_i = 1 | \boldsymbol{\color{red}{v'}}\right) \color{red}{v'_j} - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) P\left(h_i = 1 | \boldsymbol{v}\right) v_j}\\
 \dfrac{\partial \ln P\left(\color{red}{\boldsymbol{v'}}\right)}{\partial b_i} &= -\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h | \color{red}{v'}}\right) \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial b_i}} + \sum_{\boldsymbol{v, h}}{P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial b_i}} \\
 &= \color{red}{v'_i} - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) v_i} \\
 \dfrac{\partial \ln P\left(\color{red}{\boldsymbol{v'}}\right)}{\partial c_j} &= -\sum_{\boldsymbol{h}}{P\left(\boldsymbol{h | \color{red}{v'}}\right) \dfrac{\partial E\left(\boldsymbol{\color{red}{v'}, h}\right)}{\partial c_j}} + \sum_{\boldsymbol{v, h}}{P\left(\boldsymbol{h | v}\right) \dfrac{\partial E\left(\boldsymbol{v, h}\right)}{\partial c_j}} \\
 &= P\left(h_j = 1 | \boldsymbol{\color{red}{v'}}\right) - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) P\left(h_j = 1 | \boldsymbol{v}\right)} \\
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 对于多个样本 `$S = \left\lbrace{\boldsymbol{v^1}, \boldsymbol{v^2}, ..., \boldsymbol{v^{n_s}}}\right\rbrace$`，有：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \ln \mathcal{L}_S}{\partial w_{i, j}} &= \sum_{m=1}^{n_S}{\left[P\left(h_i = 1 | \boldsymbol{v^m}\right) v_j^m - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) P\left(h_i = 1 | \boldsymbol{v} v_j\right)}\right]} \\
 \dfrac{\partial \ln \mathcal{L}_S}{\partial b_i} &= \sum_{m=1}^{n_S}{\left[v_i^m - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) v_i}\right]} \\
 \dfrac{\partial \ln \mathcal{L}_S}{\partial c_j} &= \sum_{m=1}^{n_S}{\left[P\left(h_j = 1 | \boldsymbol{v^m}\right) - \sum_{\boldsymbol{v}}{P\left(\boldsymbol{v}\right) P\left(h_j = 1 | \boldsymbol{v}\right)}\right]}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 针对如上方法，我们需要计算 `$\sum_{\boldsymbol{v}}$` 相关项，如上文所述，其计算复杂度为 `$O\left(2^{n_v + n_h}\right)$`，因为其条件概率计算比较容易，因此我们可以用 Gibbs 采样的方法进行估计，但由于 Gibbs 采样方法存在 burn-in period，因此需要足够次数的状态转移后才能够收敛到目标分布，因此这就增大了利用这种方法训练 RBM 模型的时间。
@@ -948,11 +976,13 @@ $$`
 2. 执行 `$k$` 步 Gibbs 采样，对于第 `$t$` 步，分别利用 `$P\left(\boldsymbol{h} | \boldsymbol{v}^{\left(t-1\right)}\right)$` 和 `$P\left(\boldsymbol{v} | \boldsymbol{h}^{\left(t-1\right)}\right)$` 采样出 `$\boldsymbol{h}^{\left(t-1\right)}$` 和 `$\boldsymbol{v}^{\left(t\right)}$`。
 3. 利用采样得到的 `$\boldsymbol{v}^{\left(k\right)}$` **近似估计** `$\sum_{\boldsymbol{v}}$` 相关项：
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \ln P\left(\boldsymbol{v}\right)}{\partial w_{i, j}} &\approx P\left(h_i=1|\boldsymbol{v}^{\left(0\right)}\right) v_j^{\left(0\right)} - P\left(h_i=1|\boldsymbol{v}^{\left(k\right)}\right) v_j^{\left(k\right)} \\
 \dfrac{\partial \ln P\left(\boldsymbol{v}\right)}{\partial b_i} &\approx v_i^{\left(0\right)} - v_i^{\left(k\right)} \\
 \dfrac{\partial \ln P\left(\boldsymbol{v}\right)}{\partial c_j} &\approx P\left(h_j=1|\boldsymbol{v}^{\left(0\right)}\right) - P\left(h_j=1|\boldsymbol{v}^{\left(k\right)}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 **近似估计**可以看做是利用

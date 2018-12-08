@@ -35,7 +35,7 @@ Pattaya 的水上市场虽然有商业景区的味道，但还是保留了很多
 
 只在金沙岛上呆了小半天，天公还算作美，早起下着小雨，上岛了雨就停了。想想上次下水游泳还是上初中时候的事情了，虽然不怎么太会游，但至少还能扑腾两下。下次再有机会来，一定直奔普吉岛，舒舒服服的在岛上呆上几天，别的啥也不干，就游游泳，晒晒太阳。
 
-{{< video mp4="//statics.leovan.me/videos/cn/2018-09-15-tour-of-thailand/snorkeling.mp4" poster="/images/cn/2018-09-15-tour-of-thailand/snorkeling.jpg" width="620" >}}
+{{< video mp4="//cdn.leovan.me/videos/blog/cn/2018-09-15-tour-of-thailand/snorkeling.mp4" poster="/images/cn/2018-09-15-tour-of-thailand/snorkeling.jpg" width="620" >}}
 
 这边最多的当然是各种各样的水果和超大只的海鲜，第一次吃到蛇皮果，据说这东西很壮阳。最鲜的还是螃蟹，越大只越好，泰国的酱料味道还是很特别的，不难吃但不是很习惯，不过海鲜什么都不沾，也很鲜甜。
 

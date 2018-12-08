@@ -123,10 +123,12 @@ Xu 等人 [^xu2015show] 在图像标题生成 (Image Caption Generation) 任务�
 对于 Hard Attention 而言，令 `$s_t$` 表示在生成第 `$t$` 个词时所关注的位置变量，`$s_{t, i} = 1$` 表示当第 `$i$` 个位置用于提取视觉特征。将注意力位置视为一个中间潜变量，可以以一个参数为 `$\left\{\alpha_i\right\}$` 的多项式分布表示，同时将上下文向量 `$\hat{\mathbf{z}}_t$` 视为一个随机变量：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 & p \left(s_{t, i} = 1 | s_{j < t}, \mathbf{a}\right) = \alpha_{t, i} \\
 & \hat{\mathbf{z}}_t = \sum_{i}{s_{t, i} \mathbf{a}_i}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 因此 Hard Attention 可以依据概率值从隐状态中进行采样计算得到上下文向量，同时为了实现梯度的反向传播，需要利用蒙特卡罗采样的方法来估计梯度。
@@ -148,10 +150,12 @@ $$`
 Luong 等人 [^luong2015effective] 提出了 Global Attention 和 Local Attention 两种不同的注意力机制用于机器翻译。Global Attention 的思想是在计算上下文向量 `$c_t$` 时将编码器的所有隐状态均考虑在内。对于对齐向量 `$\boldsymbol{a}_t$`，通过比较当前目标的隐状态 `$\boldsymbol{h}_t$` 与每一个输入的隐状态 `$\bar{\boldsymbol{h}}_s$` 得到，即：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \boldsymbol{a}_t &= \text{align} \left(\boldsymbol{h}_t, \bar{\boldsymbol{h}}_s\right) \\
 &= \dfrac{\exp \left(\text{score} \left(\boldsymbol{h}_t, \bar{\boldsymbol{h}}_s\right)\right)}{\sum_{s'}{\exp \left(\text{score} \left(\boldsymbol{h}_t, \bar{\boldsymbol{h}}_{s'}\right)\right)}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中 `$\text{score}$` 为一个基于内容 (content-based) 的函数，可选的考虑如下三种形式：
@@ -227,10 +231,12 @@ $$`
 Multi-Head Attention 的计算过程如下所示：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \text{MultiHead} \left(Q, K, V\right) &= \text{Concat} \left(\text{head}_1, \dotsc, \text{head}_h\right) W^O \\
 \textbf{where } \text{head}_i &= \text{Attention} \left(QW_i^Q, KW_i^K, VW_i^V\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中，`$W_i^Q \in \mathbb{R}^{d_{\text{model}} \times d_k}, W_i^K \in \mathbb{R}^{d_{\text{model}} \times d_k}, W_i^V \in \mathbb{R}^{d_{\text{model}} \times d_v}, W_i^O \in \mathbb{R}^{h d_v \times d_{\text{model}}}, $` 为映射的参数，`$h = 8$` 为重复的次数，则有 `$d_k = d_v = d_{\text{model}} / h = 64$`。
@@ -256,19 +262,23 @@ $$`
 Transformer 模型由于未使用任何循环和卷积组件，因此为了利用序列的位置信息则在模型的 Embedding 输入中添加了 **Position Encoding**。Position Encoding 的维度同 Embedding 的维度相同，从而可以与 Embedding 进行加和，文中使用了如下两种形式：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 PE_{\left(pos, 2i\right)} &= \sin \left(pos / 10000^{2i / d_{\text{model}}}\right) \\
 PE_{\left(pos, 2i+1\right)} &= \cos \left(pos / 10000^{2i / d_{\text{model}}}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中，`$pos$` 为位置，`$i$` 为对应的维度，选用这种表示形式的原因是对于一个固定的偏移 `$k$`，`$PE_{pos + k}$` 都可以利用 `$PE_{pos}$` 线性表示。这是因为对于正弦和余弦函数有：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \sin \left(\alpha + \beta\right) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
 \cos \left(\alpha + \beta\right) &= \cos \alpha \sin \beta - \sin \alpha \sin \beta
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 #### Why Self-Attention
@@ -307,11 +317,13 @@ Yang 等人 [^yang2016hierarchical] 提出了一种层级的注意力 (Hierarchi
 对于一个给定的句子 `$w_{it}, t \in \left[0, T\right]$`，通过一个 Embedding 矩阵 `$W_e$` 得到每个词的向量表示，再应用一个双向的 GRU，即：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 x_{it} &= W_e w_{it}, t \in \left[1, T\right] \\
 \overrightarrow{h}_{it} &= \overrightarrow{\text{GRU}} \left(x_{it}\right), t \in \left[1, T\right] \\
 \overleftarrow{h}_{it} &= \overleftarrow{\text{GRU}} \left(x_{it}\right), t \in \left[T, 1\right]
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 最后将前向的隐状态 `$\overrightarrow{h}_{it}$` 和后向的隐状态 `$\overleftarrow{h}_{it}$` 进行拼接，得到 `$h_{ij} = \left[\overrightarrow{h}_{it}, \overleftarrow{h}_{it}\right]$` 为整个句子在词 `$w_{ij}$` 附近的汇总信息。
@@ -321,11 +333,13 @@ $$`
 Word Attention 同一般的 Attention 机制类似，计算方式如下：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 u_{it} &= \tanh \left(W_w h_{it} + b_w\right) \\
 a_{it} &= \dfrac{\exp \left(u_{it}^{\top} u_w\right)}{\sum_{t}{\exp \left(u_{it}^{\top} u_w\right)}} \\
 s_i &= \sum_{t}{a_{it} h_{it}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 #### Sentence Encoder
@@ -333,10 +347,12 @@ $$`
 在 Word Attention 之后，我们得到了一个句子的表示 `$s_i$`，类似的我们利用一个双向的 GRU 编码文档中的 `$L$` 个句子：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \overrightarrow{h}_i &= \overrightarrow{\text{GRU}} \left(s_i\right), i \in \left[1, L\right] \\
 \overleftarrow{h}_i &= \overleftarrow{\text{GRU}} \left(s_i\right), i \in \left[L, 1\right]
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 最后将前向的隐状态 `$\overrightarrow{h}_i$` 和后向的隐状态 `$\overleftarrow{h}_i$` 进行拼接，得到 `$h_i = \left[\overrightarrow{h}_i, \overleftarrow{h}_i\right]$` 为整个文档关于句子 `$s_i$` 的注意力汇总信息。
@@ -346,11 +362,13 @@ $$`
 同理可得 Sentence Attention 的计算方式如下：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 u_i &= \tanh \left(W_s h_i + b_s\right) \\
 a_i &= \dfrac{\exp \left(u_i^{\top} u_s\right)}{\sum_{i}{\exp \left(u_i^{\top} u_s\right)}} \\
 v &= \sum_{i}{a_i h_i}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 最终得到整个文档的向量表示 `$v$`。
@@ -370,10 +388,12 @@ M \left(i, j\right) = h_{doc} \left(i\right)^{\top} \cdot h_{query} \left(j\righ
 $$`
 3. 按照 **列** 的方向对矩阵 `$M$` 应用 softmax 函数，矩阵中的每一列为考虑一个 Query 中的词的 Document 级别的 Attention，因此定义 `$\alpha \left(t\right) \in \mathbb{R}^{\lvert \mathcal{D} \rvert}$` 为 `$t$` 时刻的 Document 级别 Attention (**_query-to-document_ attention**)。计算方式如下：
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \alpha \left(t\right) &= \text{softmax} \left(M \left(1, t\right), \dotsc, M \left(\lvert \mathcal{D} \rvert, t\right)\right) \\
 \alpha &= \left[\alpha \left(1\right), \alpha \left(2\right), \dotsc, \alpha \left(\lvert \mathcal{Q} \rvert\right)\right]
-\end{align}
+\end{split}
+\end{equation}
 $$`
 4. 同理按照 **行** 的方向对矩阵 `$M$` 应用 softmax 函数，可以得到 `$\beta \left(t\right) \in \mathbb{R}^{\lvert \mathcal{Q} \rvert}$` 为 `$t$` 时刻的 Query 级别的 Attention (**_document-to-query_ attention**)。计算方式如下：
 `$$

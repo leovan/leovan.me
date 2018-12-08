@@ -37,11 +37,13 @@ $$`
 首先，在给定 `$G$` 的时候，我们可以通过最大化 `$V \left(G, D\right)$` 得到最优 `$D^*$`
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 V \left(G, D\right) &= \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}\left(\boldsymbol{z}\right)}{\left[\log \left(1 - D\left(G\left(\boldsymbol{z}\right)\right)\right)\right]} \\
 &= \int_{\boldsymbol{x}}{p_{data}\left(\boldsymbol{x}\right) \log D\left(\boldsymbol{x}\right) dx} + \int_{\boldsymbol{z}}{p_{\boldsymbol{z}} \left(\boldsymbol{z}\right) \log \left(1 - D\left(g\left(\boldsymbol{z}\right)\right)\right) dz} \\
 &= \int_{\boldsymbol{x}}{p_{data}\left(\boldsymbol{x}\right) \log D\left(\boldsymbol{x}\right) + p_g\left(\boldsymbol{x}\right) \log \left(1 - D\left(\boldsymbol{x}\right)\right) dx}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 对于给定的任意 `$a, b \in \mathbb{R}^2 \setminus \{0, 0\}$`，`$a \log\left(x\right) + b \log\left(1 - x\right)$`在 `$x = \dfrac{a}{a+b}$` 处取得最大值，`$D$` 的最优值为
@@ -53,16 +55,19 @@ $$`
 因此，`$\max_{D} V \left(G, D\right)$` 可重写为
 
 `$$
-\begin{align}
-C\left(G\right) &= \max_{D} V \left(G, D\right) = V \left(G, D^*\right) \\
-&= \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D_{G}^{*}\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}\left(\boldsymbol{z}\right)}{\left[\log \left(1 - D_{G}^{*}\left(G\left(\boldsymbol{z}\right)\right)\right)\right]} \\
-&= \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D_{G}^{*}\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{x} \sim p_g\left(\boldsymbol{x}\right)}{\left[\log \left(1 - D_{G}^{*}\left(\boldsymbol{x}\right)\right)\right]} \\
-&= \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log \dfrac{p_{data} \left(\boldsymbol{x}\right)}{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)} \right]} + \mathbb{E}_{\boldsymbol{x} \sim p_g\left(\boldsymbol{x}\right)}{\left[\log  \dfrac{p_g \left(\boldsymbol{x}\right)}{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}\right]} \\
-&= \int_{x}{p_{data} \left(\boldsymbol{x}\right) \log \dfrac{\dfrac{1}{2} p_{data} \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + \int_{x}{p_g \left(\boldsymbol{x}\right) \log  \dfrac{\dfrac{1}{2} p_g \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} \\
-&= \int_{x}{p_{data} \left(\boldsymbol{x}\right) \log \dfrac{p_{data} \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + \int_{x}{p_g \left(\boldsymbol{x}\right) \log  \dfrac{p_g \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + 2 \log \dfrac{1}{2} \\
-&= KL \left(p_{data} \left(\boldsymbol{x}\right) \Vert \dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}\right) + KL \left(p_g \left(\boldsymbol{x}\right) \Vert \dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}\right) - 2 \log 2 \\
-&= 2 JS \left(p_{data} \left(\boldsymbol{x}\right) \Vert p_g \left(\boldsymbol{x}\right) \right) - 2 \log 2
-\end{align}
+\begin{equation}
+\begin{split}
+&C\left(G\right) \\
+=& \max_{D} V \left(G, D\right) = V \left(G, D^*\right) \\
+=& \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D_{G}^{*}\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}\left(\boldsymbol{z}\right)}{\left[\log \left(1 - D_{G}^{*}\left(G\left(\boldsymbol{z}\right)\right)\right)\right]} \\
+=& \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D_{G}^{*}\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{x} \sim p_g\left(\boldsymbol{x}\right)}{\left[\log \left(1 - D_{G}^{*}\left(\boldsymbol{x}\right)\right)\right]} \\
+=& \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log \dfrac{p_{data} \left(\boldsymbol{x}\right)}{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)} \right]} + \mathbb{E}_{\boldsymbol{x} \sim p_g\left(\boldsymbol{x}\right)}{\left[\log  \dfrac{p_g \left(\boldsymbol{x}\right)}{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}\right]} \\
+=& \int_{x}{p_{data} \left(\boldsymbol{x}\right) \log \dfrac{\dfrac{1}{2} p_{data} \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + \int_{x}{p_g \left(\boldsymbol{x}\right) \log  \dfrac{\dfrac{1}{2} p_g \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} \\
+=& \int_{x}{p_{data} \left(\boldsymbol{x}\right) \log \dfrac{p_{data} \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + \int_{x}{p_g \left(\boldsymbol{x}\right) \log  \dfrac{p_g \left(\boldsymbol{x}\right)}{\dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}} dx} + 2 \log \dfrac{1}{2} \\
+=& KL \left(p_{data} \left(\boldsymbol{x}\right) \Vert \dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}\right) + KL \left(p_g \left(\boldsymbol{x}\right) \Vert \dfrac{p_{data} \left(\boldsymbol{x}\right) + p_g \left(\boldsymbol{x}\right)}{2}\right) - 2 \log 2 \\
+=& 2 JS \left(p_{data} \left(\boldsymbol{x}\right) \Vert p_g \left(\boldsymbol{x}\right) \right) - 2 \log 2
+\end{split}
+\end{equation}
 $$`
 
 其中 `$KL$` 表示 KL 散度[^kl-divergence]，`$JS$` 表示 JS 散度[^jsd-divergence]，因此在全局最优情况下 `$p_g = p_{data}$`。
@@ -103,10 +108,12 @@ $$`
 上图中，左边为一个基于 MLP 的生成器，右边为一个 DCGAN[^radford2015unsupervised] 生成器，两者均有一个 DCGAN 的判别器。根据上文我们可以知道判别器的目标是最大化
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 L \left(D, \theta_g\right) &= \mathbb{E}_{\boldsymbol{x} \sim p_{data}{\left(\boldsymbol{x}\right)}}{\left[\log D_{G}^{*}\left(\boldsymbol{x}\right)\right]} + \mathbb{E}_{\boldsymbol{x} \sim p_g\left(\boldsymbol{x}\right)}{\left[\log \left(1 - D_{G}^{*}\left(\boldsymbol{x}\right)\right)\right]} \\
 &= 2 JS \left(p_{data} \left(\boldsymbol{x}\right) \Vert p_g \left(\boldsymbol{x}\right) \right) - 2 \log 2
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 上图中 Y 轴绘制的为 `$\dfrac{1}{2} L \left(D, \theta_g\right) + \log 2$`，因为 `$-2 \log 2 \leq L \left(D, \theta_g\right) \leq 0$`，因此我们可得 `$0 \leq \dfrac{1}{2} L \left(D, \theta_g\right) + \log 2 \leq \log 2$`。从图中我们可以看出，针对两种不同的情况，其值均很快的逼近最大值 `$\log 2 \approx 0.69$`，当接近最大值的时候，判别器将具有接近于零的损失，此时我们可以发现，尽管 JS 散度很快趋于饱和，但 DCGAN 生成器的效果却仍在不断的变好，因此，使用 JS 散度作为判别其的目标就显得不是很合适。

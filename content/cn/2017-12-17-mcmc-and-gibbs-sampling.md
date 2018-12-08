@@ -97,11 +97,13 @@ $$`
 设 `$\pi_{k}^{\left(t\right)}$` 表示随机变量 `$X$` 在 `$t$` 时刻取值为 `$s_k$` 的概率，则 `$X$` 在 `$t+1$` 时刻取值为 `$s_i$` 的概率为
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
     \pi_{i}^{\left(t+1\right)} &= P\left(X_{t+1} = s_i\right) \\
     &= \sum_{k}{P\left(X_{t+1} = s_i | X_t = s_k\right) \cdot P\left(X_t = s_k\right)} \\
     &= \sum_{k}{P_{ki} \cdot \pi_{k}^{\left(t\right)}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 我们通过一个例子来理解一下马尔科夫链，我们使用 LDA 数学八卦[^rickjin2013lda]一文中的例子，对于人口，我们将其经济状况分为 3 类：下层，中层和上层，其父代到子代收入阶层的转移情况如表所示
@@ -268,29 +270,35 @@ $$`
 对于 Metropolis-Hastings 算法，由于存在接受跳转概率 `$\alpha < 1$`，因此为了提高算法效率，我们尝试构建一个转移矩阵，使得 `$\alpha = 1$`。以二维情形为例，对于概率分布 `$p\left(x, y\right)$`，考虑两个点 `$A\left(x_1, y_1\right)$` 和 `$B\left(x_1, y_2\right)$`
 
 `$$
-\begin{align}
-    p\left(x_1, y_1\right) p\left(y_2 | x_1\right) &= p\left(x_1\right) p\left(y_1 | x_1\right) p\left(y_2 | x_1\right) \\
-    p\left(x_1, y_2\right) p\left(y_1 | x_1\right) &= p\left(x_1\right) p\left(y_2 | x_1\right) p\left(y_1 | x_1\right)
-\end{align}
+\begin{equation}
+\begin{split}
+p\left(x_1, y_1\right) p\left(y_2 | x_1\right) &= p\left(x_1\right) p\left(y_1 | x_1\right) p\left(y_2 | x_1\right) \\
+p\left(x_1, y_2\right) p\left(y_1 | x_1\right) &= p\left(x_1\right) p\left(y_2 | x_1\right) p\left(y_1 | x_1\right)
+\end{split}
+\end{equation}
 $$`
 
 可得
 
 `$$
-\begin{align}
-    p\left(x_1, y_1\right) p\left(y_2 | x_1\right) &= p\left(x_1, y_2\right) p\left(y_1 | x_1\right) \\
-    p\left(A\right) p\left(y_2 | x_1\right) &= p\left(B\right) p\left(y_1 | x_1\right)
-\end{align}
+\begin{equation}
+\begin{split}
+p\left(x_1, y_1\right) p\left(y_2 | x_1\right) &= p\left(x_1, y_2\right) p\left(y_1 | x_1\right) \\
+p\left(A\right) p\left(y_2 | x_1\right) &= p\left(B\right) p\left(y_1 | x_1\right)
+\end{split}
+\end{equation}
 $$`
 
 可以得出在 `$x = x_1$` 上任意两点之间进行转移均满足细致平稳条件，同理可得在 `$y = y_1$`上也满足。因此，对于二维情况，我们构建满足如下调价的概率转移矩阵 `$Q$`
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 &Q\left(A \to B\right) = p\left(y_B | x_1\right), \text{for} \ x_A = x_B = x_1 \\
 &Q\left(A \to C\right) = p\left(x_C | y_1\right), \text{for} \ y_A = y_C = y_1 \\
 &Q\left(A \to D\right) = 0, \text{others}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则对于平面上任意两点 `$X, Y$` 满足细致平稳条件
@@ -337,19 +345,23 @@ $$`
 因此可得
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \mu_{x|y} &= \mu_x + \sigma_x \rho_x\left(\dfrac{y - \mu_y}{\sigma_y}\right), \sigma_{x|y}^2 = \sigma_x^2 \left(1 - \rho^2\right) \\
 \mu_{y|x} &= \mu_y + \sigma_y \rho_y\left(\dfrac{y - \mu_x}{\sigma_x}\right), \sigma_{y|x}^2 = \sigma_y^2 \left(1 - \rho^2\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 X|Y &= \mu_{x|y} + \sigma_{x|y} \mathcal{N}\left(0, 1\right) \\
 Y|X &= \mu_{y|x} + \sigma_{y|x} \mathcal{N}\left(0, 1\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 对于 `$\mu_x = 0, \mu_y = 0, \sigma_x = 10, \sigma_y = 1, \rho = 0.8$`，采样过程如下

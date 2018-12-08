@@ -31,7 +31,7 @@ tags:
 所以，在处理中文之前我们往往需要对原始文本进行分词，在此我们不谈这部分工作，假设我们已经得到了分词完的文本，即我们后续需要处理的“**词**”。早期的词表示方法多采用独热编码 (One-Hot Encoding)，对于每一个不同的词都使用一个单独的向量进行表示。对于一个包含 `$n$` 个词的语料而言，一个词的向量表示 `$\text{word}_i \in \left\{0, 1\right\}^n$` 仅在第 `$i$` 的位置值为 1，其他位置的值均为 0。例如，我们可以将“父亲”表示为：
 
 `$$
-\left[1, 0, 0, 0, 0, 0, ...\right]
+\left[1, 0, 0, 0, 0, 0, ...\right] \nonumber
 $$`
 
 One-Hot Encoding 的表示方法十分简洁，但也存在着一些问题。
@@ -184,21 +184,25 @@ $$`
 则对数似然函数为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{j=2}^{l^w}{\left\{\left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{1 - d_j^w} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}\right)\right]^{d_j^w}\right\}}} \\
 &= \sum_{w \in \mathcal{C}}{\sum_{j=2}^{l^w}{\left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right]\right\}}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 记上式花括号中的内容为 `$\mathcal{L} \left(w, j\right)$`，则 `$\mathcal{L} \left(w, j\right)$` 关于 `$\theta_{j-1}^w$` 的梯度为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \mathcal{L} \left(w, j\right)}{\partial \theta_{j-1}^w} &= \dfrac{\partial}{\partial \theta_{j-1}^w} \left\{\left(1 - d_j^w\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] + d_j^w \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right]\right\} \\
 &= \left(1 - d_j^w\right) \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \mathbf{x}_w - d_j^w \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right) \mathbf{x}_w \\
 &= \left\{\left(1 - d_j^w\right) \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] - d_j^w \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right\} \mathbf{x}_w \\
 &= \left[1 - d_j^w - \sigma \left(\mathbf{x}_w^{\top} \theta_{j-1}^w\right)\right] \mathbf{x}_w
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则 `$\theta_{j-1}^w$` 的更新方式为：
@@ -265,21 +269,25 @@ $$`
 可得对数似然函数为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log \prod_{u \in Context \left(w\right)}{\prod_{j=2}^{l^u}{\left\{\left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]^{1 - d_j^u} \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^u\right)\right]^{d_j^u}\right\}}}} \\
 &= \sum_{w \in \mathcal{C}}{\sum_{u \in Context \left(w\right)}{\sum_{j=2}^{l^u}{\left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\}}}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 记上式花括号中的内容为 `$\mathcal{L} \left(w, u, j\right)$`，在 `$\mathcal{L} \left(w, u, j\right)$` 关于 `$\theta_{j-1}^u$` 的梯度为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \mathcal{L} \left(w, u, j\right)}{\partial \theta_{j-1}^{u}} &= \dfrac{\partial}{\partial \theta_{j-1}^{u}} \left\{\left(1 - d_j^u\right) \cdot \log \left[\sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] + d_j^u \cdot \log \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right]\right\} \\
 &= \left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \mathbf{v} \left(w\right) - d_j^u \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right) \mathbf{v} \left(w\right) \\
 &= \left\{\left(1 - d_j^u\right) \cdot \left[1 - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] - d_j^u \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right\} \mathbf{v} \left(w\right) \\
 &= \left[1 - d_j^u - \sigma \left(\mathbf{v} \left(w\right)^{\top} \theta_{j-1}^{u}\right)\right] \mathbf{v} \left(w\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则 `$\theta_{j-1}^u$` 的更新方式为：
@@ -351,22 +359,26 @@ $$`
 即增大正样本概率的同时减少负样本的概率。对于一个给定的语料库 `$\mathcal{C}$`，对数似然函数为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log g \left(w\right)} \\
 &= \sum_{w \in \mathcal{C}}{\log \prod_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{\left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}} \\
 &= \sum_{w \in \mathcal{C}}{\sum_{u \in \left\{w\right\} \cup NEG \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]\right\}}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 记上式花括号中的内容为 `$\mathcal{L} \left(w, u\right)$`，则 `$\mathcal{L} \left(w, u\right)$` 关于 `$\theta^u$` 的梯度为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \mathcal{L} \left(w, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right]\right\} \\
 &= L^w \left(u\right) \left[1 - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \mathbf{x}_w - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{x}_w^{\top} \theta^u\right) \mathbf{x}_w \\
 &= \left\{L^w \left(u\right) \left[1 - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{x}_w^{\top} \theta^u\right)\right\} \mathbf{x}_w \\
 &= \left[L^w \left(u\right) - \sigma \left(\mathbf{w}_w^{\top} \theta^u\right)\right] \mathbf{x}_w
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则 `$\theta^u$` 的更新方式为：
@@ -435,22 +447,26 @@ $$`
 对于一个给定的语料库 `$\mathcal{C}$`，对数似然函数为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \mathcal{L} &= \sum_{w \in \mathcal{C}}{\log g \left(w\right)} \\
 &= \sum_{w \in \mathcal{C}}{\log \prod_{\tilde{w} \in Context \left(w\right)}{\prod_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{\left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{L^w \left(u\right)} \cdot \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]^{1 - L^w \left(u\right)}\right\}}}} \\
 &= \sum_{w \in \mathcal{C}}{\sum_{\tilde{w} \in Context \left(w\right)}{\sum_{u \in \left\{w\right\} \cup NEG^{\tilde{w}} \left(w\right)}{\left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\}}}}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 记上式花括号中的内容为 `$\mathcal{L} \left(w, \tilde{w}, u\right)$`，则 `$\mathcal{L} \left(w, \tilde{w}, u\right)$` 关于 `$\theta^u$` 的梯度为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \dfrac{\partial \mathcal{L} \left(w, \tilde{w}, u\right)}{\partial \theta^u} &= \dfrac{\partial}{\partial \theta^u} \left\{L^w \left(u\right) \cdot \log \left[\sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right] + \left[1 - L^w \left(u\right)\right] \cdot \log \left[1 - \sigma \left(\mathbf{v}\left(\tilde{w}\right)^{\top} \theta^u\right)\right]\right\} \\
 &= L^w \left(u\right) \left[1 - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \mathbf{v} \left(\tilde{w}\right) - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right) \mathbf{v} \left(\tilde{w}\right) \\
 &= \left\{L^w \left(u\right) \left[1 - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] - \left[1 - L^w \left(u\right)\right] \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right\} \mathbf{v} \left(\tilde{w}\right) \\
 &= \left[L^w \left(u\right) - \sigma \left(\mathbf{v} \left(\tilde{w}\right)^{\top} \theta^u\right)\right] \mathbf{v} \left(\tilde{w}\right)
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 则 `$\theta^u$` 的更新方式为：
@@ -609,10 +625,12 @@ WordRank 是由 Ji 等人 [^ji2016wordrank] 提出的一种词向量表示方法
 我们令 `$\mathbf{u}_w$` 表示当前词 `$w$` 的 `$k$` 维词向量，`$\mathbf{v}_c$` 表示当前词上下文 `$c$` 的词向量。通过两者的内积 `$\langle \mathbf{u}_w, \mathbf{v}_c \rangle$` 来捕获词 `$w$` 和上下文 `$c$` 之间的关系，两者越相关则该内积越大。对于一个给定的词 `$w$`，利用上下文集合 `$\mathcal{C}$` 同词的内积分数进行排序，对于一个给定的上下文 `$c$`，排序为：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \text{rank} \left(w, c\right) &= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \mathbf{u}_w, \mathbf{v}_c \rangle - \langle \mathbf{u}_w, \mathbf{v}_{c'} \rangle \leq 0\right)} \\
 &= \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{I \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'}  \rangle \leq 0\right)}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中，`$I \left(x \leq 0\right)$` 为一个 0-1 损失函数，当 `$x \leq 0$` 时为 1 其他情况为 0。由于 `$I \left(x \leq 0\right)$` 为一个非连续函数，因此我们可以将其替换为一个凸上限函数 `$\ell \left(\cdot\right)$`，其可以为任意的二分类损失函数，构建排序的凸上限如下：
@@ -640,11 +658,13 @@ $$`
 其中 `$x_{\max} = 100, \epsilon = 0.75$`。根据 `$\rho \left(\cdot\right)$` 的要求，损失函数在排序的顶部 (rank 值小) 的地方更加敏感，同时对于 rank 值较大的地方不敏感。这可以使得模型变得更加稳健 (避免语法错误和语言的非常规使用造成干扰)，因此可选的有：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \rho \left(x\right) &:= \log_2 \left(1 + x\right) \\
 \rho \left(x\right) &:= 1 - \dfrac{1}{\log_2 \left(2 + x\right)} \\
 \rho \left(x\right) &:= \dfrac{x^{1 - t} - 1}{1 - t}, t \neq 1
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 损失函数可以等价的定义为：
@@ -662,11 +682,13 @@ $$`
 对于任意 `$x$` 和 `$\xi \neq 0$` 均成立，同时当且仅当 `$\xi = x^{-1}$` 时等号成立。因此，令 `$\Xi := \left\{\xi_{w, c}\right\}_{\left(w, c\right) \in \Sigma}$`，则可以得到 `$J \left(\mathbf{U}, \mathbf{V}\right)$` 的一个上界：
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 \overline{J} \left(\mathbf{U}, \mathbf{V}, \Xi\right) &:= \sum_{\left(w, c\right) 
 \in \Omega}{r_{w, c} \cdot \left\{\rho \left(\xi_{wc}^{-1}\right) + \rho' \left(\xi_{wc}^{-1}\right) \cdot \left(\alpha^{-1} \beta + \alpha^{-1} \sum_{c' \in \mathcal{C} \setminus \left\{c\right\}}{\ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right) - \xi_{w, c}^{-1}}\right)\right\}} \\
 &= \sum_{\left(w, c, c'\right)}{r_{w, c} \cdot \left(\dfrac{\rho \left(\xi_{w, c}^{-1}\right) + \rho' \left(\xi_{w, c}^{-1}\right) \cdot \left(\alpha^{-1} \beta - \xi_{w, c}^{-1}\right)}{\lvert \mathcal{C} \rvert - 1} + \dfrac{1}{\alpha} \rho' \left(\xi_{w, c}^{-1}\right) \cdot \ell \left(\langle \mathbf{u}_w, \mathbf{v}_c - \mathbf{v}_{c'} \rangle\right)\right)}
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 其中，`$\left(w, c, c'\right) \in \Omega \times \left(\mathcal{C} \setminus \left\{c\right\}\right)$`，至此我们可以通过均匀采样 `$\left(w, c\right) \in \Sigma$` 和 `$c' \in \mathcal{C} \setminus \left\{c\right\}$` 解决训练问题。

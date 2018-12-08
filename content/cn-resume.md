@@ -5,11 +5,12 @@ disable_comments: true
 disable_adsense: true
 ---
 
-<h2><a href="//statics.leovan.me/documents/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons">get_app</i></a></h2>
+<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons">get_app</i></a></h2>
 
 ## 研究兴趣
 
 - 自然语言处理 (Natural Language Processing)
+- 复杂网路 (Complex Network)
 - 知识图谱 (Knowledge Graph)
 - 深度学习 (Deep Learning)
 - 强化学习 (Reinforcement Learning)
@@ -46,7 +47,7 @@ disable_adsense: true
 - **地址画像系统**：依托地址分析算法引擎，设计地址 POI。 画像相关指标体系，存储和服务框架。对内，服务于线下支付等场景下的营销和运营，平均提升用户转化率 30%+；对外，接入京东金融稻田等平台，提供精确查询，模糊查询和经纬度范围查询等多种查询方式，实现金融科技的对外输出。
 - **授信和反欺诈模型**：依据地址画像构建授信策略，辅筛选和授信用户超过 **1000 万人**；依托地址分析算法和地址画像，构建中介识别等反欺诈模型，识别套现订单金额约 **20 万元/日**。
 - 全视之眼项目斩获 2017 年度京东集团京芽杯创新大赛 **“创新种子奖”**，排名 **20/378**。
-- **企业地址画像系统**：构建企业、地址和用户关系，设计企业地址画像相关指标体系，服务于 [**京东蓝鲸征信系统**](https://icredit.jd.com/)。
+- **企业地址画像系统**：构建企业、地址和用户关系，设计企业地址画像相关指标体系，服务于 [**京东企业信用**](https://icredit.jd.com/)。
 - **农村金融小站选址系统**：根据地址画像系统，结合农村金融相关业务，构建基于地址画像的农村金融小站选址模型和系统。
 
 ### 用户行为分析
@@ -99,6 +100,8 @@ disable_adsense: true
 2. 一种产品库存预测方法及装置 (CN106056239A，第一发明人，2016)
 3. 一种产品生命周期的识别方法和装置 (CN106408217A，第一发明人，2017)
 4. 一种计算地址相似度的方法和装置 (CN107239442A，第一发明人，2017)
+5. 一种数据仓库信息处理方法 (第一发明人，2018) (基于信息抽取的数据仓库宽表自动化构建)
+6. 确定表字段的类型的方法和装置 (第一发明人，2018) (基于宽度和深度网络的表敏感字段识别)
 
 ### 开源项目
 

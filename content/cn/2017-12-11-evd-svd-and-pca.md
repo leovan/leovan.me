@@ -13,10 +13,7 @@ tags:
   - Dimensionality Reduction
 ---
 
-`$$
-\renewcommand{\diag}{\operatorname{diag}}
-\renewcommand{\cov}{\operatorname{cov}}
-$$`
+`$\renewcommand{\diag}{\operatorname{diag}}\renewcommand{\cov}{\operatorname{cov}}$`
 
 ## 准备知识
 
@@ -240,12 +237,14 @@ $$`
 则 `$\lambda$` 称为 `$A$` 的一个**特征值**，`$\boldsymbol{\alpha}$` 称为 `$A$` 的一个**特征向量**。通过
 
 `$$
-\begin{align}
-    A \boldsymbol{\alpha} &= \lambda \boldsymbol{\alpha} \\
-    A \boldsymbol{\alpha} - \lambda \boldsymbol{\alpha} &= 0 \\
-    \left(A - \lambda E\right) \boldsymbol{\alpha} &= 0 \\
-    A - \lambda E &= 0
-\end{align}
+\begin{equation}
+\begin{split}
+A \boldsymbol{\alpha} &= \lambda \boldsymbol{\alpha} \\
+A \boldsymbol{\alpha} - \lambda \boldsymbol{\alpha} &= 0 \\
+\left(A - \lambda E\right) \boldsymbol{\alpha} &= 0 \\
+A - \lambda E &= 0
+\end{split}
+\end{equation}
 $$`
 
 其中 `$E = \diag \left(1, 1, ..., 1\right)$` 为单位对角阵，即可求解其特征值，进而求解特征向量。若 `$A$` 是一个可逆矩阵，则上式可以改写为：

@@ -7,11 +7,12 @@ disable_adsense: true
 
 <p><!-- disable capitalize the first letter --></p>
 
-<h2><a href="//statics.leovan.me/documents/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons">get_app</i></a></h2>
+<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons">get_app</i></a></h2>
 
 ## Research Interest
 
 - Natural Language Processing
+- Complex Network
 - Knowledge Graph
 - Deep Learning
 - Reinforcement Learning
@@ -48,7 +49,7 @@ disable_adsense: true
 - Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by 30%+ in the offline payment service.
 - Development of the anti-fraud and credit model based on the Chinese address analysis system. The anti-fraud model identified illegal encashment orders with **200,000 yuan/day**, and more than **10 million users** were granted credit with the credit model.
 - This project has beed awarded the **"Innovation Seed" prize** of JingYa Cup innovation competition in JD.com ranking **20 of 378**.
-- Development of **Enterprise Address Profile System** based on the basic algorithm engine which was embeeded into [**JD LangJing Credit System**](https://icredit.jd.com/).
+- Development of **Enterprise Address Profile System** based on the basic algorithm engine which was embeeded into [**JD Enterprise Credit**](https://icredit.jd.com/).
 - Development of **Rural Finance Service Station Location Solution** base on the Address Profile System.
 
 ### User Behavior Analytics

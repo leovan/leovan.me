@@ -65,11 +65,13 @@ tags:
 最后我们回过头来解释到底什么是**流形**？流形并不是一个“形状”，而是一个“空间”[^pluskid]。最容易定义的流形是**拓扑流形**，它局部看起来象一些“普通”的欧几里得空间 `$\mathbb{R}^n$`，一个拓扑流形是一个局部同胚于一个欧几里得空间的拓扑空间。根据 Whitney 嵌入理论[^wikipedia-whitney]，任何一个流形都可以嵌入到高维的欧氏空间中。例如，地球的表面可以理解为一个嵌入 3 维空间的 2 维流形，其局部同胚于 2 维的欧式空间，对于一个球体的表面，用极坐标的形式可以表示为
 
 `$$
-\begin{align}
+\begin{equation}
+\begin{split}
 x &= r \sin \theta \cos \phi \\
 y &= r \sin \theta \sin \phi \\
 z &= r \cos \theta
-\end{align}
+\end{split}
+\end{equation}
 $$`
 
 也就是说其 3 个维度实际上是由 2 个变量控制的。
@@ -215,10 +217,12 @@ SNE 为我们提供了一种很好的降维方法，但是其本身也存在一�
 
 针对不对称问题，Maaten 采用的方法是用联合概率分布来替代条件概率分布。高维控件中的联合概率分布为 `$P$`，低维空间中的联合概率分布为 `$Q$`，则对于任意的 `$i, j$`，有 `$p_{ij} = p_{ji}, q_{ij} = q_{ji}$`，联合概率定义为：
 
-`$$\begin{aligned}
+`$$
+\begin{align}
 p_{ij} &= \dfrac{\exp \left(\dfrac{- \left\lVert x_i - x_j \right\rVert ^ 2}{2 \sigma^2}\right)}{\sum_{k \neq l} \exp \left(\dfrac{- \left\lVert x_k - x_l \right\rVert ^ 2}{2 \sigma^2}\right)} \\
 q_{ij} &= \dfrac{\exp \left(- \left\lVert y_i - y_j \right\rVert ^ 2\right)}{\sum_{k \neq l} \exp \left(- \left\lVert y_k - y_l \right\rVert ^ 2\right)}
-\end{aligned}$$`
+\end{align}
+$$`
 
 虽然这样保证了对称性，但是对于异常的情况，例如数据点 `$x_i$` 在距离群簇较远，则 `$\lVert x_i − x_j \rVert ^ 2$` 的值会很大，而 `$p_{ij}$` 会相应变得非常小，也就是说 `$x_i$` 的位置很远这件事情对损失函数影响很小 (惩罚过小)，那这个点在低维空间中将无法从其他点中区分出来。因此 Maaten 提出了对称的条件概率来重新定义上述联合概率 `$p_{ij}$` ，对于数量为 `$n$` 的数据点，新的概率公式是：
 
