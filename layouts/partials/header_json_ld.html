@@ -27,7 +27,7 @@
             "name": "{{ .Params.author }}",
             "logo": {
                 "@type": "ImageObject",
-                "url": "{{ "/images/svator.svg" | absURL}}"
+                "url": "{{ "/images/avatar.svg" | absURL}}"
             }
         },
         "url": "{{ .Permalink }}"
@@ -37,7 +37,7 @@
     <script type="application/ld+json">
     { 
         "@context": "http://schema.org",
-        "@type": "WebSite",
+        "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
         "name": "{{ .Title }} - {{ .Site.Title }}",
         "description": "{{ .Title }}",
         "author": {
