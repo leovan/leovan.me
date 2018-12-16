@@ -14,6 +14,8 @@ tags:
   - RESTful
   - 模型部署
   - 模型服务
+images:
+  - /images/cn/2018-10-19-serving-models-with-flask-and-gae/model-serving.png
 ---
 
 {{% blockquote %}}
@@ -28,7 +30,7 @@ tags:
 
 本文方案的模型部署和服务调用框架如下图所示：
 
-![RNN-Encoder-Decoder](/images/cn/2018-10-19-serving-models-with-flask-and-gae/model-serving.png)
+![Model-Serving](/images/cn/2018-10-19-serving-models-with-flask-and-gae/model-serving.png)
 
 其主要特性如下：
 

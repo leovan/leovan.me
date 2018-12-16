@@ -10,6 +10,23 @@ tags:
   - Australia
   - 墨尔本
   - Melbourne
+images:
+  - /images/cn/2017-08-26-trip-to-melbourne/first-sight-of-melbourne-night.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/airport-bus-chinese-online-payment.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/shared-bikes.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/kangaroo.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/kangaroo-meat.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/koala.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/ijcai-opening.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/ijcai-jd-me.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/road-show-singer-1.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/road-show-singer-2.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/free-train.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/city-hall.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/loch-ard-gorge.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/the-twelve-apostles.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/shrine-of-remembrance-commemoration.jpg
+  - /images/cn/2017-08-26-trip-to-melbourne/shrine-of-remembrance.jpg
 ---
 
 从下了飞机到酒店，一路上体验到了我国互联网对世界各地的影响，机场巴士可以用微信和支付宝，下了巴士发现这里也有共享单车，不过人家还配了头盔，想想这要是在我天朝，[敏感用语，此处忽略若干字...]

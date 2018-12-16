@@ -16,6 +16,16 @@ tags:
   - LE
   - LTSA
   - MDS
+images:
+  - /images/cn/2018-03-16-manifold-learning/manifold-examples.png
+  - /images/cn/2018-03-16-manifold-learning/topological-space-sample.png
+  - /images/cn/2018-03-16-manifold-learning/mug-and-torus-morph.gif
+  - /images/cn/2018-03-16-manifold-learning/swiss-roll-isomap.png
+  - /images/cn/2018-03-16-manifold-learning/gassion-t-comparison.png
+  - /images/cn/2018-03-16-manifold-learning/mnist-t-sne.png
+  - /images/cn/2018-03-16-manifold-learning/s-curve.png
+  - /images/cn/2018-03-16-manifold-learning/swiss-roll.png
+  - /images/cn/2018-03-16-manifold-learning/severed-sphere.png
 ---
 
 # 降维

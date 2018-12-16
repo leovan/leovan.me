@@ -11,6 +11,18 @@ tags:
   - PCA
   - 降维
   - Dimensionality Reduction
+images:
+  - /images/cn/2017-12-11-evd-svd-and-pca/pca-projection.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-inner-product-and-projection.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-bases.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-change-of-bases.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-1.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-2.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-3.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-4.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-5.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/lena-std.png
+  - /images/cn/2017-12-11-evd-svd-and-pca/lena-reconstruction.png
 ---
 
 `$\renewcommand{\diag}{\operatorname{diag}}\renewcommand{\cov}{\operatorname{cov}}$`

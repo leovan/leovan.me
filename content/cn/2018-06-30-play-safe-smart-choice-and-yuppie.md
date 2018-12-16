@@ -16,6 +16,10 @@ tags:
   - 雅皮士
   - 教育
   - 思辨
+images:
+  - /images/cn/2018-06-30-play-safe-smart-choice-and-yuppie/yappie-ep1-screen-shot.png
+  - /images/cn/2018-06-30-play-safe-smart-choice-and-yuppie/trolley-problem.png
+  - /images/cn/2018-06-30-play-safe-smart-choice-and-yuppie/wildebeest-from-birdbox-studio.gif
 ---
 
 最近是看了 Youtube 上 [Wong Fu Productions](https://www.youtube.com/user/WongFuProductions) 的一个系列视频 [Yappie](https://www.youtube.com/playlist?list=PLSHabwxChOtX1HLAKXle8-w7FvQ5Xg8gD)，一下子把脑子中包括很久之前的一些思考就全都串联回忆起来了，所以就写了本文，把这些凌乱的思考拼凑起来。截止到本文写完，Yappie 已经出了两集，视频可能需要梯子，为了不影响理解，简单勾勒一下剧情。

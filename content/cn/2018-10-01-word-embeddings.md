@@ -19,6 +19,13 @@ tags:
   - fastText
   - WordRank
   - cw2vec
+images:
+  - /images/cn/2018-10-01-word-embeddings/cbow-skipgram.png
+  - /images/cn/2018-10-01-word-embeddings/2d-points.png
+  - /images/cn/2018-10-01-word-embeddings/3d-points.png
+  - /images/cn/2018-10-01-word-embeddings/nplm-network.png
+  - /images/cn/2018-10-01-word-embeddings/hierarchical-softmax-skipgram.png
+  - /images/cn/2018-10-01-word-embeddings/cw2vec-stroke-n-gram-generation.png
 ---
 
 ## 文本表示

@@ -18,6 +18,11 @@ tags:
   - Adamax
   - Nadam
   - AMSGrad
+images:
+  - /images/cn/2018-02-24-optimization-methods-for-deeplearning/sgd-and-momentum.png
+  - /images/cn/2018-02-24-optimization-methods-for-deeplearning/momentum-and-nag.png
+  - /images/cn/2018-02-24-optimization-methods-for-deeplearning/contours-evaluation-optimizers.gif
+  - /images/cn/2018-02-24-optimization-methods-for-deeplearning/saddle-point-evaluation-optimizers.gif
 ---
 
 在构建神经网络模型的时候，除了网络结构设计以外，选取合适的优化算法也对网络起着至关重要的作用，本文将对神经网络中常用的优化算法进行简单的介绍和对比，本文部分参考了 Ruder 的关于梯度下降优化算法一文[^ruder2016overview]。首先，我们对下文中使用的符号进行同意说明：网络中的参数同一表示为 `$\theta$`，网络的假设函数为 `$h_{\boldsymbol{\theta}}\left(\boldsymbol{x}\right)$`，网络的损失函数为 `$J\left(\boldsymbol{\theta}\right)$`，学习率为 `$\alpha$`，假设训练数据中共包含 `$m$` 个样本，网络参数个数为 `$n$`。

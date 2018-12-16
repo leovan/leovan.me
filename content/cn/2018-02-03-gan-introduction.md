@@ -10,6 +10,11 @@ tags:
   - GAN
   - DCGAN
   - 生成对抗网络
+images:
+  - /images/cn/2018-02-03-gan-introduction/zhoubotong.png
+  - /images/cn/2018-02-03-gan-introduction/different-generator-jsd.png
+  - /images/cn/2018-02-03-gan-introduction/mode-collapse-demo.png
+  - /images/cn/2018-02-03-gan-introduction/mnist-gan-keras-train-history.png
 ---
 
 # Generative Adversarial Networks (GAN)

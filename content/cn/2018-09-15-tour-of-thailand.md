@@ -12,6 +12,18 @@ tags:
   - Bangkok
   - 芭提雅
   - Pattaya
+images:
+  - /images/cn/2018-09-15-tour-of-thailand/grand-palace.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/blue-sky.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/wat-arun.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/tanker-in-night.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/pattaya-floating-market.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/beach-sunset.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/fruit.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/seafood.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/45mm-gun.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/target-sheet.jpg
+  - /images/cn/2018-09-15-tour-of-thailand/shotgun.jpg
 ---
 
 近来这大半年的工作感觉活活像一场清宫剧，对于我们这种一心只想撸代码，两耳不闻窗外事的人来说，确实太累了。从年初换了工作方向后，交接了所有之前的线上任务和系统，所以这次旅行格外的清净，没有一封报警邮件。北京已经入秋，走之前还很热，回来已凉意浓浓，去的路上天气格外的好。

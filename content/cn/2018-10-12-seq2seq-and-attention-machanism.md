@@ -17,6 +17,21 @@ tags:
   - 自注意力
   - Self-attention
   - Intra-attention
+images:
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/rnn-encoder-decoder.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/beam-search.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/seq2seq-birnn-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/image-caption-generation-visual-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/global-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/local-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/self-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/scaled-dot-product-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/multi-head-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/self-attention-long-distance-dependencies.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/self-attention-anaphora-resolution.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/hierarchical-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/attention-over-attention.png
+  - /images/cn/2018-10-12-seq2seq-and-attention-machanism/multi-step-attention.png
 ---
 
 ## Encoder-Decoder & Seq2Seq

@@ -10,6 +10,11 @@ tags:
   - MCMC
   - 吉布斯采样
   - Gibbs Sampling
+images:
+  - /images/cn/2017-12-17-mcmc-and-gibbs-sampling/markov-chain-demo.png
+  - /images/cn/2017-12-17-mcmc-and-gibbs-sampling/mc-pi.png
+  - /images/cn/2017-12-17-mcmc-and-gibbs-sampling/mc-pi-simulation.png
+  - /images/cn/2017-12-17-mcmc-and-gibbs-sampling/gibbs-sampling-bivariate-guassian-distribution.gif
 ---
 
 ## 蒙特卡罗方法 (Monte Carlo, MC)

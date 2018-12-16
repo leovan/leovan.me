@@ -24,6 +24,8 @@ tags:
   - 最短路问题
   - Shortest Path Problem
   - Floyd-Warshall 算法
+images:
+  - /images/cn/2018-11-18-computational-complexity-and-dynamic-programming/shortest-path.png
 ---
 
 ## 计算复杂性

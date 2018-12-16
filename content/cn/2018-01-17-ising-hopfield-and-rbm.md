@@ -11,6 +11,17 @@ tags:
   - RBM
   - Ising
   - Hopfield
+images:
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/ising-different-steps.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/ising-different-t.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/hopfield-network.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/digits.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test-results.gif
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/digits-test-results.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/tsp-best-solution-path.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/bbrbm-mnist-errs.png
+  - /images/cn/2018-01-17-ising-hopfield-and-rbm/bbrbm-mnist.png
 ---
 
 `$\renewcommand{\sign}{\operatorname{sign}}$`
