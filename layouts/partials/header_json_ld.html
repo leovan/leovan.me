@@ -1,34 +1,34 @@
     {{if .IsPage }}
     <script type="application/ld+json">
     { 
-        "@context": "http://schema.org", 
+        "@context": "http://schema.org",
         "@type": "BlogPosting",
         "name": "{{ .Title }}",
         "headline": "{{ .Title }}",
         "description" : "{{ if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}",
-        "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",  
+        "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
         "author": {
             "@type": "Person",
             "name": "{{ .Params.author }}"
         },
-        "url": "{{ .Permalink }}",
         "wordCount": "{{ .WordCount }}",
-        "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}"
+        "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}",
+        "url": "{{ .Permalink }}"
     }
     </script>
     {{ else }}
     <script type="application/ld+json">
     { 
-        "@context": "http://schema.org", 
-        "@type": "WebSite", 
-        "url": "{{ .Permalink }}", 
+        "@context": "http://schema.org",
+        "@type": "WebSite",
         "name": "{{ .Title }} - {{ .Site.Title }}",
         "author": {
             "@type": "Person",
             "name": "{{ delimit .Site.Params.author " " }}"
         },
         "description": "{{ .Title }}",
+        "url": "{{ .Permalink }}"
     }
     </script>
     {{ end }}
