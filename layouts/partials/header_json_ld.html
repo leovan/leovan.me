@@ -8,12 +8,12 @@
         "description" : "{{ if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}",
         "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
+        "wordCount": "{{ .WordCount }}",
+        "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}",
         "author": {
             "@type": "Person",
             "name": "{{ .Params.author }}"
         },
-        "wordCount": "{{ .WordCount }}",
-        "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}",
         "url": "{{ .Permalink }}"
     }
     </script>
@@ -23,11 +23,11 @@
         "@context": "http://schema.org",
         "@type": "WebSite",
         "name": "{{ .Title }} - {{ .Site.Title }}",
+        "description": "{{ .Title }}",
         "author": {
             "@type": "Person",
             "name": "{{ delimit .Site.Params.author " " }}"
         },
-        "description": "{{ .Title }}",
         "url": "{{ .Permalink }}"
     }
     </script>
