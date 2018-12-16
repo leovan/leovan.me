@@ -3,16 +3,32 @@
     { 
         "@context": "http://schema.org",
         "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Section | absURL }}"
+        },
         "name": "{{ .Title }}",
         "headline": "{{ .Title }}",
         "description" : "{{ if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}",
         "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
+        "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
         "wordCount": "{{ .WordCount }}",
         "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}",
+        "image": [
+            {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}"{{ $e | absURL }}"{{ end }}
+        ],
         "author": {
             "@type": "Person",
             "name": "{{ .Params.author }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ .Params.author }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ "/images/svator.svg" | absURL}}"
+            }
         },
         "url": "{{ .Permalink }}"
     }
