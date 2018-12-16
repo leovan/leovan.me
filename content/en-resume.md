@@ -1,6 +1,8 @@
 ---
-title: 'Resume'
-slug: 'en/resume'
+title: Resume
+author: Leo Van
+date: '2017-12-04'
+slug: en/resume
 disable_comments: true
 disable_adsense: true
 ---
@@ -87,8 +89,8 @@ disable_adsense: true
 
 ### Paper
 
-1. Feng Zhou, Huafei Li, Lizhang Zhan, **Yeliang Fan**, Hua Yin and Liu Jiang. "A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction." _Big Data and Artificial Intelligence, 2018 International Conference on._, 2018.
-2. Li Jie, **Fan Yeliang\***, et al. "An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM." _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on._ IEEE, 2013.
+1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In 2018 _International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
+2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013, December). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
 3. Research on Dynamic Pricing Strategies of Digital Products based on Network Externality. _Master Thesis, 2014._
 
 ### Patents

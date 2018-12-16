@@ -4,34 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ if eq .URL "/" }}
-    <title>{{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:type" content="website">
-    <meta name="description" property="og:description" content="{{ .Site.Params.description }}">
-    {{ else }}
-    <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-    {{ with or .Params.author (index .Site.Params.author .Section) }}
-    <meta name="author" property="article:author" content="{{ . }}">
-    {{ end }}
-    {{ with .Params.date }}
-    <meta name="date" property="article:published_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
-    {{ end }}
-      {{ if .Description }}
-      <meta name="description" property="og:description" content="{{ .Description }}">
-      {{ else }}
-      <meta name="description" property="og:description" content="{{ .Title }}">
-      {{ end }}
-    {{ end }}
-
-    {{ if .Keywords }}
-    <meta name="keywords" property="article:tag" content ="{{ delimit .Keywords "," }}">
-    {{ else }}
-      {{ if .Params.tags }}
-      <meta name="keywords" property="article:tag" content ="{{ delimit .Params.tags "," }}">
-      {{ end }}
-    {{ end }}
+    {{ partial "header_meta.html" . }}
+    {{ partial "header_json_ld.html" . }}
 
     {{ if .RSSLink }}
     <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
@@ -53,5 +27,5 @@
 
     <article class="main">
       <header class="title">
-      {{ partial "meta.html" . }}
+      {{ partial "post_meta.html" . }}
       </header>

@@ -1,6 +1,8 @@
 ---
-title: '简历'
-slug: 'cn/resume'
+title: 简历
+author: 范叶亮
+date: '2017-12-04'
+slug: cn/resume
 disable_comments: true
 disable_adsense: true
 ---
@@ -90,18 +92,19 @@ disable_adsense: true
 
 ### 论文
 
-1. Zhou Feng, Li Huafei, Zhan Lizhang, **Fan Yeliang**, et al. (2018) A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _Big Data and Artificial Intelligence, 2018 International Conference on._
-2. Li Jie, **Fan Yeliang\***, et al. (2013) An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on,_ (pp. 722-727). IEEE.
+1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In 2018 _International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
+2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013, December). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
 3. 基于网络外部性的数字产品动态定价策略研究. _硕士学位论文, 2014._
 
 ### 专利
 
-1. 一种中文地址分词方法及系统 (CN105159949A，第一发明人，2015)
-2. 一种产品库存预测方法及装置 (CN106056239A，第一发明人，2016)
-3. 一种产品生命周期的识别方法和装置 (CN106408217A，第一发明人，2017)
-4. 一种计算地址相似度的方法和装置 (CN107239442A，第一发明人，2017)
-5. 一种数据仓库信息处理方法 (第一发明人，2018) (基于信息抽取的数据仓库宽表自动化构建)
-6. 确定表字段的类型的方法和装置 (第一发明人，2018) (基于宽度和深度网络的表敏感字段识别)
+1. 一种中文地址分词方法及系统 (发明，CN105159949A，第一发明人，2015)
+2. 一种产品库存预测方法及装置 (发明，CN106056239A，第一发明人，2016)
+3. 一种产品生命周期的识别方法和装置 (发明，CN106408217A，第一发明人，2017)
+4. 一种计算地址相似度的方法和装置 (发明，CN107239442A，第一发明人，2017)
+5. 一种数据仓库信息处理方法 (发明，申请中，第一发明人，2018)
+6. 确定表字段的类型的方法和装置 (发明，申请中，第一发明人，2018)
+7. 一种大规模异构网络到序列的加权随机抽样方法 (发明，申请中，第一发明人，2018)
 
 ### 开源项目
 
