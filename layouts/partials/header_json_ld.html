@@ -10,7 +10,7 @@
         "name": "{{ .Title }}",
         "headline": "{{ .Title }}",
         "description" : "{{ if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}",
-        "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
+        "genre": "{{ if .Params.categories }}{{ delimit .Params.categories "," }}{{ end }}",
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
         "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
         "wordCount": "{{ .WordCount }}",

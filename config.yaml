@@ -115,7 +115,7 @@ params:
   photoswipeVersion: "4.1.2"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  videojsVersion: "7.3.0"
+  videojsVersion: "7.4.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   materialDesignIconsVersion: "3.0.1"
