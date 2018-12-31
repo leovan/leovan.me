@@ -12,7 +12,7 @@ disable_adsense: true
 ## 研究兴趣
 
 - 自然语言处理 (Natural Language Processing)
-- 复杂网路 (Complex Network)
+- 复杂网络 (Complex Network)
 - 知识图谱 (Knowledge Graph)
 - 深度学习 (Deep Learning)
 - 强化学习 (Reinforcement Learning)
