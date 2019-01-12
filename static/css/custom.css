@@ -193,14 +193,14 @@ code[class*="language-"] {
   font-weight: bold;
 }
 
-.meta-info {
+.post-meta {
   font-size: 0.9em;
   line-height: 1.8em;
   margin-top: 0;
   margin-bottom: 1em;
 }
 
-.meta-info a {
+.post-meta a {
   text-decoration: none;
   border-bottom: 0;
 }

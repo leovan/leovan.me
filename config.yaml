@@ -89,7 +89,7 @@ menu:
 
 params:
   description: "Personal website of Leo Van; 范叶亮的个人网站"
-  footer: "&copy; [Leo Van](/) 2017 - 2018 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
+  footer: "&copy; [Leo Van](/) 2017 - 2019 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "https://leovan.me"
   customJS: ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   googleAdsense: "ca-pub-2608165017777396"
@@ -112,10 +112,10 @@ params:
   jQueryVersion: "3.3.1"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  photoswipeVersion: "4.1.2"
+  photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  videojsVersion: "7.4.1"
+  videojsVersion: "7.4.2"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   materialDesignIconsVersion: "3.0.1"
