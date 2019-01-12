@@ -3,6 +3,7 @@ title: About
 author: Leo Van
 date: '2017-12-04'
 slug: en/about
+disable_author_date: true
 disable_comments: true
 disable_adsense: true
 ---

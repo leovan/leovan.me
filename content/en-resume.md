@@ -3,13 +3,12 @@ title: Resume
 author: Leo Van
 date: '2017-12-04'
 slug: en/resume
+disable_author_date: true
 disable_comments: true
 disable_adsense: true
 ---
 
-<p><!-- disable capitalize the first letter --></p>
-
-<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons">get_app</i></a></h2>
+## Fan Yeliang (Leo Van)
 
 ## Research Interest
 
@@ -104,3 +103,5 @@ disable_adsense: true
 
 1. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA), Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+
+<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-icons">get_app</i></a></h2>

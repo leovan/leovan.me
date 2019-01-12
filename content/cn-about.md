@@ -1,8 +1,9 @@
 ---
 title: 关于
 author: 范叶亮
-date: 2017-12-04
+date: '2017-12-04'
 slug: cn/about
+disable_author_date: true
 disable_comments: true
 disable_adsense: true
 ---
