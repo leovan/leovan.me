@@ -32,7 +32,7 @@ disable_adsense: true
 
 ### 爵士
 
-听爵士乐并不多，而且开始听爵士乐也很机缘巧合，还是从喜欢的 _Vincent_ 说起，后面 [**杜丽莎**](https://music.douban.com/musician/105345/) 老师又在比赛中唱过，很好听，就开始搜索各个版本。最后，无意间发现了 [**林忆莲**](https://music.douban.com/musician/104329/) 老师的版本，后来就渐渐的开始了解一些爵士曲风了。
+听爵士乐并不多，而且开始听爵士乐也很机缘巧合，还是从喜欢的 _Vincent_ 说起，后面 [**杜丽莎**](https://music.douban.com/musician/105345/) 老师又在比赛中唱过，很好听，就开始搜索各个版本。最后，无意间发现了 [**王若琳**](https://music.douban.com/musician/104596/) 的版本，后来就渐渐的开始了解一些爵士曲风了。
 
 ### 流行
 

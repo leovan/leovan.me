@@ -25,7 +25,7 @@ When I was young, I was really like following new and fashion things like most y
 
 ### Jazz
 
-- Chinese: [Sandy Lam 林忆莲](https://en.wikipedia.org/wiki/Sandy_Lam)
+- Chinese: [Joanna Wang 王若琳](https://en.wikipedia.org/wiki/Joanna_Wang)
 
 ### Pop
 
