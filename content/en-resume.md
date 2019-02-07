@@ -94,10 +94,10 @@ disable_adsense: true
 
 ### Patents
 
-1. Chinese address segmentataion method and system (CN105159949A, 1st Inventor, 2015)
-2. Product inventory predicting method and device (CN106056239A, 1st Inventor, 2016)
-3. Product life cycle identifacation method and device (CN106408217A, 1st Inventor, 2017)
-4. Chinese address similarity calculation method and device (CN107239442A, 1st Inventor, 2017)
+1. Chinese address segmentataion method and system (CN 105159949, 1st Inventor, 2015)
+2. Product inventory predicting method and device (CN 106056239, 1st Inventor, 2016)
+3. Product life cycle identifacation method and device (CN 106408217, 1st Inventor, 2017)
+4. Chinese address similarity calculation method and device (CN 107239442, 1st Inventor, 2017)
 
 ### Open Source Projects
 
