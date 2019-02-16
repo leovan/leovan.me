@@ -8,6 +8,8 @@ disable_comments: true
 disable_adsense: true
 ---
 
+<p><!-- disable capitalize the first letter --></p>
+
 ## Fan Yeliang (Leo Van)
 
 ## Research Interest
@@ -20,58 +22,58 @@ disable_adsense: true
 
 ## Education
 
-- 2012.09 ~ 2015.03 **Hebei University of Technology**, M.S. in Business Management
-- 2008.09 ~ 2012.07 **Hebei University of Technology**, B.S. in Information Management
+- 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Business Management
+- 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Information Management
 
 ## Work Experiences
 
 ### Full Time
 
-1. 2015.03 ~ Now **JD Finance**, Algorithm Engineer
+1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer
 
 ### Intern
 
-1. 2013.11 ~ 2014.02 **Founder International Co., Ltd.**, Algorithm Engineer
+1. 2013.11 ~ 2014.02, **Founder International Co., Ltd.**, Algorithm Engineer
 
 ## Project Experiences
 
 ### Daat (Complex Network & Knowledge Graph)
 
-2018.04 ~ Now **JD Finance** Project Leader
+_2018.04 ~ Present, Project Leader_
 
-- **JD Finance Knowledge Graph Technical White Paper**：Investigate the entire Knowledge Graph technology stack, including realted models, data, evaluation reports and open source tools, and summarize the final research report.
-- **Automatic Sensitive Information Identification**：Automatic sensitive information identification for data stored in the data warehouse, assisted with data encryption policy implementation. The model is constructed using the Wide & Deep network based on the meta-information of the data (e.g., table name, table comment, column name, column comment, etc.) and value-information of the data (e.g., the data values of every column). Build the Wide network with extracted traditional features and the Deep network with text features using Char Embeddding + CNN, and the F1-Score on test data is 95%+.
+- **JD Finance Knowledge Graph Technical White Paper**：Investigate the entire Knowledge Graph technology stack, including related models, data, evaluation reports and open source tools, and summarize the final research report.
+- **Automatic Sensitive Information Identification**：Automatic sensitive information identification for data stored in the data warehouse, assisted with data encryption policy implementation. The model is constructed using the Wide & Deep network based on the meta-information of the data (e.g., table name, table comment, column name, column comment, etc.) and value-information of the data (e.g., the data values of every column). Build the Wide network with extracted traditional features and the Deep network with text features using Char Embedding + CNN, and the F1-Score on test data is 95%+.
 
 ### All Seeing Eyes (Chinese Address Analytics)
 
-2015.03 ~ 2018.04 **JD Finance** Project Leader
+_2015.03 ~ 2018.04, Project Leader_
 
-- Development of **Chinese address analytics algorithms**, including: segmentataion, classification, integrity, POI identification and similarity **(accuracy 90%+)**.
+- Development of **Chinese address analytics algorithms**, including: segmentation, classification, integrity, POI identification and similarity **(accuracy 90%+)**.
 - Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by 30%+ in the offline payment service.
-- Development of the anti-fraud and credit model based on the Chinese address analysis system. The anti-fraud model identified illegal encashment orders with **200,000 yuan/day**, and more than **10 million users** were granted credit with the credit model.
-- This project has beed awarded the **"Innovation Seed" prize** of JingYa Cup innovation competition in JD.com ranking **20 of 378**.
-- Development of **Enterprise Address Profile System** based on the basic algorithm engine which was embeeded into [**JD Enterprise Credit**](https://icredit.jd.com/).
+- Development of the anti-fraud and credit model based on the Chinese address analysis system. The anti-fraud model identified illegal encashment orders with **200,000 CNY/day**, and more than **10 million users** were granted credit with the credit model.
+- This project has beed awarded the **"Innovation Seed" prize** of JingYa Cup Innovation Competition in JD.com ranking **20 of 378**.
+- Development of **Enterprise Address Profile System** based on the basic algorithm engine which was part of [**JD Enterprise Credit**](https://icredit.jd.com/).
 - Development of **Rural Finance Service Station Location Solution** base on the Address Profile System.
 
 ### User Behavior Analytics
 
-2017.10 ~ 2017.12 **JD Finance** Algorithms Engineer
+_2017.10 ~ 2017.12, Algorithms Engineer_
 
 - Development of a user behavior representation method named on Behavior2Vec. Based on hierarchical clustering and depth search, a hybrid model for identifying user abnormal behavior is proposed. Compared with Bag of Words and N-GRAM methods, the number of abnormal users identified is **3+ times** of traditional methods.
 
 ### Mortgage Loan
 
-2015.03 ~ 2015.10 **JD Finance** Algorithms Engineer
+_2015.03 ~ 2015.10, Algorithms Engineer_
 
-- Development of a hybird product life cycle identifacation model based on Bass Diffusion model, optimized time series similarity method and clustring method. It got an **accuracy of 95%+** when identifing the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
+- Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
 ### Smart Public Security (EzMap)
 
-2013.11 ~ 2014.02 **Founder International Co., Ltd.** Algorithms Engineer
+_2013.11 ~ 2014.02, Algorithms Engineer_
 
 - Development of a series prediction algorithm based on EMD and SVR for crime analysis and time series prediction in smart city project.
-- Development of a serial crime cases identifacation algorithm based on k-Prototypes.
+- Development of a serial crime cases identification algorithm based on k-Prototypes.
 - Development of public security metadata import tools and XML based police GIS database upgrade tools.
 
 ## Skills
@@ -94,9 +96,9 @@ disable_adsense: true
 
 ### Patents
 
-1. Chinese address segmentataion method and system (CN 105159949, 1st Inventor, 2015)
+1. Chinese address segmentation method and system (CN 105159949, 1st Inventor, 2015)
 2. Product inventory predicting method and device (CN 106056239, 1st Inventor, 2016)
-3. Product life cycle identifacation method and device (CN 106408217, 1st Inventor, 2017)
+3. Product life cycle identification method and device (CN 106408217, 1st Inventor, 2017)
 4. Chinese address similarity calculation method and device (CN 107239442, 1st Inventor, 2017)
 
 ### Open Source Projects
