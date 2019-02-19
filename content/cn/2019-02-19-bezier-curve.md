@@ -9,6 +9,11 @@ categories:
 tags:
   - 贝塞尔曲线
   - Bézier Curve
+images:
+  - /images/cn/2019-02-19-bezier-curve/1st-power-bezier-curve.png
+  - /images/cn/2019-02-19-bezier-curve/2nd-power-bezier-curve.png
+  - /images/cn/2019-02-19-bezier-curve/3rd-power-bezier-curve.png
+  - /images/cn/2019-02-19-bezier-curve/4th-power-bezier-curve.png
 ---
 
 知道**贝塞尔曲线 (Bézier Curve)** 这个名字已经有很长一段时间了，但一直没有去详细了解一番。直到最近想要绘制一个比较复杂的曲线，才发现很多工具都以贝塞尔曲线为基础的，这包括 Adobe 全家桶中的钢笔工具，还有 OmniGraffle 中的曲线。迫于仅靠猜其是如何工作的但一直没猜透的无奈，只能去详细了解一下其原理再使用了。
