@@ -79,10 +79,16 @@ _2013.11 ~ 2014.02 算法设计和开发_
 ### 开发语言
 
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Julia: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Go: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+
+### 框架
+
+- Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 外语能力
 
@@ -106,6 +112,7 @@ _2013.11 ~ 2014.02 算法设计和开发_
 5. 一种数据仓库信息处理方法 (发明，申请中，第一发明人，2018)
 6. 确定表字段的类型的方法和装置 (发明，申请中，第一发明人，2018)
 7. 一种大规模异构网络到序列的加权随机抽样方法 (发明，申请中，第一发明人，2018)
+8. 一种基于用户网络和用户行为的推荐候选集生成方法 (发明，申请中，第一发明人，2019)
 
 ### 开源项目
 

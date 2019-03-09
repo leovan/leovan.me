@@ -10,11 +10,9 @@ disable_adsense: true
 
 # Who am I?
 
-My name is **Leo Van** (**Yeliang Fan 范叶亮** in Chinese). You can know more with my work on [resume](../resume/) page. This page will let you know with my lifestyle.
+I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](../resume/) page. This page will let you know my lifestyle.
 
-# What I like?
-
-When I was young, I was really like following new and fashion things like most youngsters. As time goes by, I find out I'd prefer some old things now, something even older than me. But I am sure it is not because that I refuse embracing new ideas. With more and more experiences, I got a deeper understanding of things I already known. Thus, I'd like go over these old things again to achieve more insights.
+# What do I like?
 
 ## Music
 

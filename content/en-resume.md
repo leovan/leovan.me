@@ -81,10 +81,16 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 ### Programing Languages
 
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Julia: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Go: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+
+### Frameworks
+
+- Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ## Research
 
