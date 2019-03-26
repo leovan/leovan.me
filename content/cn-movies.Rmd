@@ -67,8 +67,13 @@ split_top_n_concat <- function(string, pattern, n) {
         res <- string %>%
             str_split(pattern, simplify = T) %>%
             as.character %>%
-            head(n) %>%
-            paste(collapse = pattern)
+            head(n)
+        
+        if (n != length(str_split(string, pattern, simplify = T))) {
+            res <- c(res, ' ...')
+        }
+        
+        res <- paste(res, collapse = pattern)
     }
     
     res
@@ -77,7 +82,7 @@ split_top_n_concat <- Vectorize(split_top_n_concat)
 
 movie_list %>%
     mutate(
-        directors = directors %>% split_top_n_concat(',', 3),
+        directors = directors %>% split_top_n_concat(',', 1),
         casts = casts %>% split_top_n_concat(',', 3),
         release_year = year(release_date),
         imdb_id_html = gen_imdb_id_html(imdb_id),
