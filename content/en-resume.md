@@ -102,10 +102,11 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 
 ### Patents
 
-1. Chinese address segmentation method and system (CN 105159949, 1st Inventor, 2015)
-2. Product inventory predicting method and device (CN 106056239, 1st Inventor, 2016)
-3. Product life cycle identification method and device (CN 106408217, 1st Inventor, 2017)
-4. Chinese address similarity calculation method and device (CN 107239442, 1st Inventor, 2017)
+1. A kind of Chinese address segmenting method and system (CN 105159949, Issued, 2015)
+2. Product inventory predicting method and device (CN 106056239, Under Examination, 2016)
+3. Product life cycle identification method and device (CN 106408217, Under Examination, 2017)
+4. Chinese address similarity calculation method and device (CN 107239442, Under Examination, 2017)
+5. Data warehouse information processing method, device, system, medium (CN 109388637, Under Examination, 2018)
 
 ### Open Source Projects
 
