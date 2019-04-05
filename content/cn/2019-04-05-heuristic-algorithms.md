@@ -41,6 +41,18 @@ tags:
   - Hyper-Heuristic Algorithms
 images:
   - /images/cn/2019-04-05-heuristic-algorithms/heuristic-algorithms.png
+  - /images/cn/2019-04-05-heuristic-algorithms/hill-climbing.png
+  - /images/cn/2019-04-05-heuristic-algorithms/simulated-annealing.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-process.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-roulette-wheel.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-crossover-one-point.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-crossover-two-points.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-crossover-uniform.png
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-tsp.gif
+  - /images/cn/2019-04-05-heuristic-algorithms/ga-mona-lisa.png
+  - /images/cn/2019-04-05-heuristic-algorithms/aco-shortest-path.png
+  - /images/cn/2019-04-05-heuristic-algorithms/rosenbrock-pso.gif
+  - /images/cn/2019-04-05-heuristic-algorithms/hyper-heuristic-algorithms-model.png
 ---
 
 # 启发式算法 (Heuristic Algorithms)
