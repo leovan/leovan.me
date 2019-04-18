@@ -7,9 +7,9 @@
     {{ partial "header_meta.html" . }}
     {{ partial "header_json_ld.html" . }}
 
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-    {{ end }}
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
     
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
   </head>
 
-  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}
+  {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     <header class="masthead">
       {{ partial "tagline.html" . }}

@@ -1,6 +1,6 @@
 <script async src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js'></script>
 
-{{ if ne .URL "/" }}
+{{ if not .IsHome }}
 <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.materialDesignIconsCDN }}/material-design-icons/{{ $.Site.Params.materialDesignIconsVersion }}/iconfont/material-icons.min.css">
 {{ end }}
 

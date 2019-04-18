@@ -69,7 +69,7 @@ $(document).ready(function() {
 <script>window.mdc.autoInit()</script>
 {{ end }}
 
-{{ if or .IsHome (len (findRE "^/cn/" .URL)) }}
+{{ if or .IsHome (len (findRE "^/cn/" .RelPermalink)) }}
 <script async src="/js/load-typekit.js"></script>
 <script src="{{ $.Site.Params.panguCDN }}/pangu/{{ $.Site.Params.panguVersion }}/pangu.min.js"></script>
 <script>
