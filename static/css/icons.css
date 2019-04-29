@@ -16,6 +16,7 @@
   width: 1em; 
   height: 1em;
   content: "";
+  vertical-align: middle;
 }
 
 .icon-tensorflow:before {
