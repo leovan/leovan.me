@@ -1,22 +1,26 @@
-    {{if .IsPage }}
+    {{ if .IsPage }}
     <script type="application/ld+json">
     { 
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "{{ .Section | absURL }}"
+            "@id": {{ .Section | absURL | jsonify | safeJS }}
         },
-        "name": "{{ .Title }}",
-        "headline": "{{ .Title }}",
-        "description" : "{{ if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}",
-        "genre": "{{ if .Params.categories }}{{ delimit .Params.categories "," }}{{ end }}",
+        "name": {{ .Title | jsonify | safeJS }},
+        "headline": {{ .Title | jsonify | safeJS }},
+        "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage}}{{ .Summary | jsonify | safeJS }}{{ end }},
+        "genre": [
+            {{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}
+        ],
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
         "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
         "wordCount": "{{ .WordCount }}",
-        "keywords": "{{ if .Keywords }}{{ delimit .Keywords "," }}{{ else if .Params.tags }}{{ delimit .Params.tags "," }}{{ end }}",
+        "keywords": [
+            {{ if .Keywords }}{{ range $i, $e := .Keywords }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}{{ else if .Params.tags }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}{{ end }}
+        ],
         "image": [
-            {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}"{{ $e | absURL }}"{{ end }}
+            {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL | jsonify | safeJS }}{{ end }}
         ],
         "author": {
             "@type": "Person",
@@ -27,10 +31,10 @@
             "name": "{{ .Params.author }}",
             "logo": {
                 "@type": "ImageObject",
-                "url": "{{ "/images/publisher-logo.png" | absURL}}"
+                "url": {{ "/images/publisher-logo.png" | absURL | jsonify | safeJS }}
             }
         },
-        "url": "{{ .Permalink }}"
+        "url": {{ .Permalink | absURL | jsonify | safeJS }}
     }
     </script>
     {{ else }}
@@ -44,7 +48,7 @@
             "@type": "Person",
             "name": "{{ delimit .Site.Params.author " " }}"
         },
-        "url": "{{ .Permalink }}"
+        "url": {{ .Permalink | absURL | jsonify | safeJS }}
     }
     </script>
     {{ end }}
