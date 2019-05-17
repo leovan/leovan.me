@@ -552,7 +552,7 @@ $$`
 整个偏移的链条如下：
 
 1. 梯度的条件分布 `$g^t \left(\mathbf{x}_k, y_k\right) \ | \ \mathbf{x}_k$` 同测试样本对应的分布 `$g^t \left(\mathbf{x}, y\right) \ | \ \mathbf{x}$` 存在偏移。
-2. 由式 \ref{eq:catboost-obj} 定义的基学习器 `$h^t$` 同由式  \ref{eq:catboost-obj-approx} 定义的估计方法存在偏移。
+2. 由式 `$\ref{eq:catboost-obj}$` 定义的基学习器 `$h^t$` 同由式 `$\ref{eq:catboost-obj-approx}$` 定义的估计方法存在偏移。
 3. 最终影响训练模型 `$F^t$` 的泛化能力。
 
 每一步梯度的估计所使用的标签值同构建当前模型 `$F^{t-1}$` 使用的相同。但是，对于一个训练样本 `$\mathbf{x}_k$` 而言，条件分布 `$F^{t-1} \left(\mathbf{x}_k \ | \ \mathbf{x}_k\right)$` 相对一个测试样本 `$\mathbf{x}$` 对应的分布 `$F^{t-1} \left(\mathbf{x}\right) \ | \ \mathbf{x}$` 发生了偏移，我们称这为预测偏移 (Prediction Shift)。
