@@ -94,7 +94,7 @@ params:
   customJS: ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   googleAdsense: "ca-pub-2608165017777396"
   
-  prismjsVersion: "1.15.0"
+  prismjsVersion: "1.16.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsLang: ["r", "python", "markup", "yaml", "latex", "bash", "powershell", "javascript"]
   prismjsTheme: ""
@@ -103,19 +103,19 @@ params:
   mathjaxVersion: "2.7.5"
   mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  katexVersion: "0.10.1"
+  katexVersion: "0.10.2"
   katexCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.leovan.me/libraries"
   
-  jQueryVersion: "3.3.1"
+  jQueryVersion: "3.4.1"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  videojsVersion: "7.5.2"
+  videojsVersion: "7.5.4"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   materialDesignIconsVersion: "3.0.1"
