@@ -37,7 +37,8 @@
             'r': 'R', 'python': 'Python', 'xml': 'XML', 'html': 'HTML',
             'yaml': 'YAML', 'latex': 'LaTeX', 'tex': 'TeX',
             'powershell': 'PowerShell', 'javascript': 'JavaScript',
-            'dos': 'DOS', 'qml': 'QML', 'json': 'JSON', 'bash': 'Bash'
+            'dos': 'DOS', 'qml': 'QML', 'json': 'JSON', 'bash': 'Bash',
+            'text': 'Text', 'txt': 'Text'
         };
         Prism.hooks.add('before-highlight', function(env) {
         	var language = Languages[env.language] || env.language;

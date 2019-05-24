@@ -77,10 +77,19 @@ pre code {
   background: #f9f9f9 !important;
 }
 
+code[class*="language-"] {
+  padding: 1em;
+  line-height: 1.75;
+}
+
 pre[class*="language-"] {
   padding: 0;
   position: relative;
   overflow: inherit;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: .9em;
 }
 
 pre[class*="language-"] > code[data-language]:before {
@@ -95,11 +104,6 @@ pre[class*="language-"] > code[data-language]:before {
   border-radius: 0 0 0 5px;
   padding: 0 0.5em;
   text-shadow: none;
-}
-
-code[class*="language-"] {
-  padding: 1em;
-  line-height: 1.75;
 }
 
 .home hr {
