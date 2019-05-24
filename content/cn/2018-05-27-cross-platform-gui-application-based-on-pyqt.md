@@ -1,5 +1,5 @@
 ---
-title: 基于 PyQt 的跨平台 GUI 程序开发
+title: 基于 PyQt5/PySide2 和 QML 的跨平台 GUI 程序开发
 author: 范叶亮
 date: '2018-05-27'
 slug: cross-platform-gui-application-based-on-pyqt
@@ -8,6 +8,9 @@ categories:
 tags:
   - Qt
   - PyQt
+  - PyQt5
+  - PySide2
+  - QML
   - GUI
   - Cross-Platform
   - 跨平台
@@ -19,6 +22,10 @@ images:
 ---
 
 先聊聊写界面化程序的目的，在 B/S 结构软件盛行的今天，C/S 结构的软件还有人用吗？答案是肯定的，至少你想用 B/S 结构的软件的时候你得有个 C/S 结构的浏览器，对吧？这样说显得有点抬杠，当然，我认为最重要的还是“简单”，或者说“用户友好”。再 Geek 的人应该也喜欢有的时候偷懒，虽然我称不上 Geek，但也经常在黑框框中不用鼠标敲着各种代码，但是还是希望能够有些小工具只要能够点个几下就能帮忙干些事情的。至于对于更普通的用户而言，就应该更加希望能够用最“简单，清晰，明了”的方式“快速”的完成一项任务，有点像 Windows 用户把桌面上的快捷方式拖到回收站，然后和我说：好了，程序卸载了，我只能回答说：或许你该换个 MAC。
+
+## :exclamation: 更新 :exclamation:
+
+[SciHubEVA](https://github.com/leovan/SciHubEVA) 最新版本已经采用 [PySide2](https://wiki.qt.io/Qt_for_Python) 进行改写，Windows 版本安装包构建工作迁移至 [Inno Setup 6](http://www.jrsoftware.org/isinfo.php)，更多变更请参见 [CHANGELOG](https://github.com/leovan/SciHubEVA/blob/master/CHANGELOG.md)。
 
 ## 跨平台 GUI 程序开发方案选型
 
@@ -335,4 +342,4 @@ Windows 下我们使用 NSIS 构建安装包，同样 NSIS 也支持多语言安
 
 ![NSIS](/images/cn/2018-05-27-cross-platform-gui-application-based-on-pyqt/nsis.png)
 
-整个 Sci-Hub EVA 的编译打包和安装包制作过程请参见[说明文档](https://github.com/leovan/SciHubEVA/blob/master/BUILDING.md)。
+整个 Sci-Hub EVA 的编译打包和安装包制作过程请参见 [构建说明文档](https://github.com/leovan/SciHubEVA/tree/master/building)。
