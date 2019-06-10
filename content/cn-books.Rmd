@@ -2,6 +2,7 @@
 title: 书籍
 author: 范叶亮
 date: '2017-12-04'
+lastmod: '`r Sys.Date()`'
 slug: cn/books
 disable_comments: true
 disable_adsense: true
@@ -44,7 +45,8 @@ book_table <- function(books) {
     table_ <- books %>%
         arrange(desc(purchasing_date), author, title_zh) %>%
         select(c('douban_id_html', 'isbn', 'title_zh_html', 'author',
-                 'begin_reading_date', 'finish_reading_date', 'douban_rating_html', 'rating')) %>%
+                 'begin_reading_date', 'finish_reading_date',
+                 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="book-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
@@ -65,7 +67,8 @@ book_list %>%
         douban_id_html = gen_douban_id_html(douban_id),
         title_zh_html = gen_linked_text_html(title_zh, blog_link),
         purchasing_year = year(purchasing_date),
-        douban_rating_html = gen_book_douban_rating_link_html(douban_rating, douban_id)) %>%
+        douban_rating_html = gen_book_douban_rating_link_html(
+            douban_rating, douban_id)) %>%
     ddply(.(purchasing_year), book_table) %>%
     arrange(desc(purchasing_year)) %>%
     select(table_) %>%
@@ -75,11 +78,13 @@ book_list %>%
 
 ```{r update_book_info, eval=F, include=F}
 book_list_columns <- c(
-    'isbn', 'douban_id', 'blog_link', 'title_zh', 'subtitle_zh', 'title', 'author',
-    'publisher', 'published_date', 'pages', 'purchasing_date', 'begin_reading_date',
-    'finish_reading_date', 'douban_rating', 'rating', 'auto_update', 'updated_date')
+    'isbn', 'douban_id', 'blog_link', 'title_zh', 'subtitle_zh', 'title',
+    'author', 'publisher', 'published_date', 'pages', 'purchasing_date',
+    'begin_reading_date', 'finish_reading_date', 'douban_rating', 'rating',
+    'auto_update', 'updated_date')
 auto_update_colunms <- c(
-    'title_zh', 'subtitle_zh', 'title', 'author', 'publisher', 'published_date', 'pages', 'douban_rating')
+    'title_zh', 'subtitle_zh', 'title', 'author', 'publisher',
+    'published_date', 'pages', 'douban_rating')
 
 book_list_auto_update <- book_list %>%
     filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%

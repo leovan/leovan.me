@@ -2,6 +2,7 @@
 title: 影视
 author: 范叶亮
 date: '2017-12-04'
+lastmod: '`r Sys.Date()`'
 slug: cn/movies
 disable_comments: true
 disable_adsense: true
@@ -43,8 +44,9 @@ movie_table <- function(movies) {
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- movies %>%
         arrange(desc(release_date), directors, name_zh) %>%
-        select(c('imdb_id_html', 'douban_id_html', 'name_zh_html', 'directors',
-                 'casts', 'imdb_rating_html', 'douban_rating_html', 'rating')) %>%
+        select(c('imdb_id_html', 'douban_id_html', 'name_zh_html',
+                 'directors', 'casts', 'imdb_rating_html',
+                 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="movie-table"') %>%
         kable_styling(bootstrap_options = 'striped') %>%
@@ -88,8 +90,10 @@ movie_list %>%
         imdb_id_html = gen_imdb_id_html(imdb_id),
         douban_id_html = gen_douban_id_html(douban_id),
         name_zh_html = gen_linked_text_html(name_zh, blog_link),
-        imdb_rating_html = gen_movie_imdb_rating_link_html(imdb_rating, imdb_id),
-        douban_rating_html = gen_movie_douban_rating_link_html(douban_rating, douban_id)) %>%
+        imdb_rating_html = gen_movie_imdb_rating_link_html(
+            imdb_rating, imdb_id),
+        douban_rating_html = gen_movie_douban_rating_link_html(
+            douban_rating, douban_id)) %>%
     ddply(.(release_year), movie_table) %>%
     arrange(desc(release_year)) %>%
     select(table_) %>%
