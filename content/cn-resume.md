@@ -2,6 +2,7 @@
 title: 简历
 author: 范叶亮
 date: '2017-12-04'
+lastmod: '2019-06-25'
 slug: cn/resume
 disable_author_date: true
 disable_comments: true
@@ -12,11 +13,20 @@ disable_adsense: true
 
 ## 研究兴趣
 
+### 当下
+
+- 深度学习 (Deep Learning)
+- 强化学习 (Reinforcement Learning)
+- 因果推断和推理 (Causal Inference & Reasoning)
+- 计算视觉 (Computer Vision)
+- 物联网 (Internet of Things, IoT, AIoT)
+- 智慧农业 (Intelligent Agriculture, Agritech)
+
+### 之前
+
 - 自然语言处理 (Natural Language Processing)
 - 复杂网络 (Complex Network)
 - 知识图谱 (Knowledge Graph)
-- 深度学习 (Deep Learning)
-- 强化学习 (Reinforcement Learning)
 
 ## 教育背景
 
@@ -27,7 +37,7 @@ disable_adsense: true
 
 ### 全职
 
-1. 2015.03 ~ 至今 **京东金融** 算法工程师
+1. 2015.03 ~ 至今 **京东数字科技 (京东金融)** 算法工程师 / 产品经理
 
 ### 实习
 
@@ -35,19 +45,25 @@ disable_adsense: true
 
 ## 项目经历
 
+### 智能农业
+
+_2019.07 ~ 至今 产品经理_
+
 ### Daat (复杂网络和知识图谱)
 
-_2018.04 ~ 至今 项目负责人_
+_2018.04 ~ 2019.06 项目负责人_
 
-- **京东金融知识图谱技术白皮书**：调研整个知识图谱技术栈，包括各细分领域的相关模型，数据，评测和开源工具，汇总整理最终调研报告。
-- **自动化敏感信息识别**：对于入库到数据仓库中的数据进行自动敏感信息识别，辅助数据加密策略实施。根据数据的元信息 (例如：表名，表注释，字段名，字段注释等) 和值信息 (即字段存储的数据值)，利用 Wide & Deep 网络构建识别模型。提取传统特征构建 Wide 网络，针对文本特征，利用 Char Embedding + CNN 构建 Deep 网络，模型测试数据的 F1-Score 为 95%+。
+- **数据知识工程和知识问答系统**：设计和构建数据仓库，数据集市和数据工具领域的知识本体，并据此进行知识抽取和知识库构建。设计和构建数据知识问答系统，包括：用户问题意图识别，槽填充，查询改写，结果排序以及基于深度语义模型 (DSSM) 的问题匹配。问答系统主要用于辅助数据使用者对于仓库和集市数据的查询使用，以及相关概念、流程、工具等方面问题的解答。
+- **自动化敏感信息识别**：对于入库到数据仓库中的数据进行自动敏感信息识别，辅助数据加密策略实施。根据数据的元信息 (例如：表名，表注释，字段名，字段注释等) 和值信息 (即字段存储的数据值)，利用 Wide & Deep 网络构建识别模型。提取传统特征构建 Wide 网络，针对文本特征，利用 Char Embedding + CNN 构建 Deep 网络，模型测试数据的 **F1-Score 为 95%+**。
+- **大规模异构网络嵌入**：实现针对**千万级别**顶点和**亿级别**边的异构网络嵌入算法。通过 Alias 方法进行高效地加权节点采样，实现了基于具有丰富业务含义元路径 (Meta-Path) 和其他算法的网络节点嵌入。利用异构网络节点嵌入结果作为节点特征 (例如：用户) 为其他业务模型和系统提供服务。
+- **基于用户网络和用户行为的推荐和营销**：通过用户的历史购买记录构建包含用户，商品 (实物，理财等) 等多类型节点和边的异构网络，并利用异构网络嵌入算法构建不同类型节点的向量表示。结合用户传统特征和用户在线行为，构建推荐候选结果生成和营销人群生成模型，结合最终业务模型，平均辅助**提升效果 20%+**。
 
 ### 全视之眼 (中文地址分析)
 
 _2015.03 ~ 2018.04 项目负责人_
 
 - **地址分析算法引擎**：设计开发地址分词，分类，完整度，POI 识别，相似度等算法 **(准确率 90%+)**。
-- **地址画像系统**：依托地址分析算法引擎，设计地址 POI。 画像相关指标体系，存储和服务框架。对内，服务于线下支付等场景下的营销和运营，平均提升用户转化率 30%+；对外，接入京东金融稻田等平台，提供精确查询，模糊查询和经纬度范围查询等多种查询方式，实现金融科技的对外输出。
+- **地址画像系统**：依托地址分析算法引擎，设计地址 POI。 画像相关指标体系，存储和服务框架。对内，服务于线下支付等场景下的营销和运营，平均提升用户转化率 **30%+**；对外，接入京东金融稻田等平台，提供精确查询，模糊查询和经纬度范围查询等多种查询方式，实现金融科技的对外输出。
 - **授信和反欺诈模型**：依据地址画像构建授信策略，辅筛选和授信用户超过 **1000 万人**；依托地址分析算法和地址画像，构建中介识别等反欺诈模型，识别套现订单金额约 **20 万元/日**。
 - 全视之眼项目斩获 2017 年度京东集团京芽杯创新大赛 **“创新种子奖”**，排名 **20/378**。
 - **企业地址画像系统**：构建企业、地址和用户关系，设计企业地址画像相关指标体系，服务于 [**京东企业信用**](https://icredit.jd.com/)。
@@ -80,15 +96,20 @@ _2013.11 ~ 2014.02 算法设计和开发_
 
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Julia: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Go: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 框架
 
 - Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+
+### 工具
+
+- Axure: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Sketch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Omnigraffle: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 
 ### 外语能力
 

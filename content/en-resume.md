@@ -2,6 +2,7 @@
 title: Resume
 author: Leo Van
 date: '2017-12-04'
+lastmod: '2019-06-25'
 slug: en/resume
 disable_author_date: true
 disable_comments: true
@@ -14,11 +15,20 @@ disable_adsense: true
 
 ## Research Interest
 
+### Current
+
+- Deep Learning
+- Reinforcement Learning
+- Causal Inference & Reasoning
+- Computer Vision
+- Internet of Things, IoT, AIoT
+- Intelligent Agriculture, Agritech
+
+### Previously
+
 - Natural Language Processing
 - Complex Network
 - Knowledge Graph
-- Deep Learning
-- Reinforcement Learning
 
 ## Education
 
@@ -29,7 +39,7 @@ disable_adsense: true
 
 ### Full Time
 
-1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer
+1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer / Product Manager
 
 ### Intern
 
@@ -37,19 +47,25 @@ disable_adsense: true
 
 ## Project Experiences
 
+### Intelligent Agriculture
+
+_2019.07 ~ Present, Product Manager_
+
 ### Daat (Complex Network & Knowledge Graph)
 
-_2018.04 ~ Present, Project Leader_
+_2018.04 ~ 2019.06, Project Leader_
 
-- **JD Finance Knowledge Graph Technical White Paper**：Investigate the entire Knowledge Graph technology stack, including related models, data, evaluation reports and open source tools, and summarize the final research report.
-- **Automatic Sensitive Information Identification**：Automatic sensitive information identification for data stored in the data warehouse, assisted with data encryption policy implementation. The model is constructed using the Wide & Deep network based on the meta-information of the data (e.g., table name, table comment, column name, column comment, etc.) and value-information of the data (e.g., the data values of every column). Build the Wide network with extracted traditional features and the Deep network with text features using Char Embedding + CNN, and the F1-Score on test data is 95%+.
+- **Data Knowledge Engineering & Data QA System**: Design and development of ontology of data warehouse, data market and data tools. Based on the ontology and the extracted knowledge, we build the knowledge base of data. We also develop the data QA system with techniques such as: intent classification, slot filling, query rewrite, ranking and question matching based on DSSM. Data QA system is aimed at improving the usability and convenience for users to make use of data warehouse and data market. It can also answer the questions related to data concept, data processing flow and data tools.
+- **Automatic Sensitive Information Identification**：Development of automatic sensitive information identification for data warehouse, which helps to make data encryption policy. The model is based on the Wide & Deep network with meta-information of the data (e.g., table name, table comment, column name, column comment, etc.) and value-information of the data (e.g., the data values of every column). Building the Wide network with extracted traditional features and the Deep network with text features using Char Embedding + CNN, it achieves **95%+ of the F1-Score** on test data.
+- **Large Scale Heterogeneous Network Embedding**: Development of large scale (**ten millions of vertexes and hundred millions of edges**) heterogeneous network embedding algorithm. We implement the algorithm based on meta-path with rich business meanings, and provide the embedding results as features for other models.
+- **Recommendation and Marketing based on User Network and User Behavior**: Leveraging historical orders, we build a large heterogeneous network of users which contains users, address, goods, and etc. With the embedding results of this network, we develop an algorithm for candidates generation of recommendation, which achieves **20%+ improvement** compared with traditional methods.
 
 ### All Seeing Eyes (Chinese Address Analytics)
 
 _2015.03 ~ 2018.04, Project Leader_
 
 - Development of **Chinese address analytics algorithms**, including: segmentation, classification, integrity, POI identification and similarity **(accuracy 90%+)**.
-- Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by 30%+ in the offline payment service.
+- Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by **30%+** in the offline payment service.
 - Development of the anti-fraud and credit model based on the Chinese address analysis system. The anti-fraud model identified illegal encashment orders with **200,000 CNY/day**, and more than **10 million users** were granted credit with the credit model.
 - This project has beed awarded the **"Innovation Seed" prize** of JingYa Cup Innovation Competition in JD.com ranking **20 of 378**.
 - Development of **Enterprise Address Profile System** based on the basic algorithm engine which was part of [**JD Enterprise Credit**](https://icredit.jd.com/).
@@ -82,15 +98,20 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Julia: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Go: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### Frameworks
 
 - Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+
+### Tools
+
+- Axure: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Sketch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Omnigraffle: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 
 ## Research
 
@@ -105,8 +126,9 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 1. A kind of Chinese address segmenting method and system (CN 105159949, Issued, 2015)
 2. Product inventory predicting method and device (CN 106056239, Under Examination, 2016)
 3. Product life cycle identification method and device (CN 106408217, Under Examination, 2017)
-4. Chinese address similarity calculation method and device (CN 107239442, Under Examination, 2017)
+4. Address similarity calculation method and apparatus (CN 107239442, Under Examination, 2017)
 5. Data warehouse information processing method, device, system, medium (CN 109388637, Under Examination, 2018)
+6. The method and apparatus for determining the type of literary name section (CN 109784407, Under Examination, 2019)
 
 ### Open Source Projects
 

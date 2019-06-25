@@ -2,6 +2,7 @@
 title: 关于
 author: 范叶亮
 date: '2017-12-04'
+lastmod: '2019-06-25'
 slug: cn/about
 disable_author_date: true
 disable_comments: true
@@ -48,6 +49,7 @@ disable_adsense: true
 
 - [**李宗盛**](https://music.douban.com/musician/104294/)，有人说年轻人听不懂李宗盛的歌，不过是欠些生活阅历，歌曲所表达的感情不就是源自于人生旅程中的点滴吗。
 - [**蔡琴**](https://music.douban.com/musician/103876/)，有大河的深沉，有黄昏的惆怅，还有宿醉难醒的缠绵 - By 龙应台。
+- [**齐豫**](https://music.douban.com/musician/104445/)，姐姐的歌有些仙儿。
 
 ## 书籍
 

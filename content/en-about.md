@@ -2,6 +2,7 @@
 title: About
 author: Leo Van
 date: '2017-12-04'
+lastmod: '2019-06-25'
 slug: en/about
 disable_author_date: true
 disable_comments: true
@@ -32,7 +33,7 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
 
 ### Something Special
 
-- Chinese: [Jonathan Lee 李宗盛](https://en.wikipedia.org/wiki/Jonathan_Lee_(musician)), [Tsai Chin 蔡琴](https://en.wikipedia.org/wiki/Tsai_Chin_(singer))
+- Chinese: [Jonathan Lee 李宗盛](https://en.wikipedia.org/wiki/Jonathan_Lee_(musician)), [Tsai Chin 蔡琴](https://en.wikipedia.org/wiki/Tsai_Chin_(singer)), [Chyi Yu 齐豫](https://en.wikipedia.org/wiki/Chyi_Yu)
 
 ## Books
 
