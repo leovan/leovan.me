@@ -123,12 +123,12 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 
 ### Patents
 
-1. A kind of Chinese address segmenting method and system (CN 105159949, Issued, 2015)
-2. Product inventory predicting method and device (CN 106056239, Under Examination, 2016)
-3. Product life cycle identification method and device (CN 106408217, Under Examination, 2017)
-4. Address similarity calculation method and apparatus (CN 107239442, Under Examination, 2017)
-5. Data warehouse information processing method, device, system, medium (CN 109388637, Under Examination, 2018)
-6. The method and apparatus for determining the type of literary name section (CN 109784407, Under Examination, 2019)
+1. A kind of Chinese address segmenting method and system ([CN 105159949](https://patents.google.com/patent/CN105159949B/en), Issued, 2015)
+2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239A/en), Under Examination, 2016)
+3. Product life cycle identification method and device ([CN 106408217](https://patents.google.com/patent/CN106408217A/en), Under Examination, 2017)
+4. Address similarity calculation method and apparatus ([CN 107239442](https://patents.google.com/patent/CN107239442A/en), Under Examination, 2017)
+5. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637A/en), Under Examination, 2018)
+6. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), Under Examination, 2019)
 
 ### Open Source Projects
 
