@@ -287,3 +287,11 @@ gen_linked_text_html <- Vectorize(gen_linked_text_html)
 add_anchor <- function(html, anchor) {
     glue('<span id="{anchor}">{html}</span>')
 }
+
+#' 清理 HTML 表格
+#' 
+#' @param html HTML
+#' @return 清理后 HTML 表格
+clean_html_table <- function(html) {
+    html %>% str_replace_all('\\s+style="text-align:[a-zA-Z]+;"', '')
+}
