@@ -1,7 +1,7 @@
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-    <meta name="description" property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage}}{{ .Summary }}{{ end }}">
+    <meta name="description" property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
@@ -10,8 +10,11 @@
     <meta name="author" property="article:author" content="{{ . }}">
     {{ end }}
     
-    {{ with .Params.date }}
+    {{ with .Date }}
     <meta name="date" property="article:published_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
+    {{ end }}
+    {{ with .Lastmod }}
+    <meta name="date" property="article:modified_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
     {{ end }}
 
     {{ if .Keywords }}

@@ -5,7 +5,7 @@
 {{ if .IsPage }}
 {{ if not .Params.disable_author_date }}
 <h3>{{ with or (or .Params.author (index .Site.Params.author .Section)) "" }}{{  print . " / " }}{{ end }}
-{{ if .Params.date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h3>
+{{ if .Lastmod }}{{ if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{ end }}{{ else if .Date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h3>
 {{ end }}
 
 {{ if or (.Params.categories) (.Params.tags) }}

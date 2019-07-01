@@ -9,7 +9,7 @@
         },
         "name": {{ .Title | jsonify | safeJS }},
         "headline": {{ .Title | jsonify | safeJS }},
-        "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage}}{{ .Summary | jsonify | safeJS }}{{ end }},
+        "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage }}{{ .Summary | jsonify | safeJS }}{{ end }},
         "genre": [
             {{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}
         ],
@@ -43,7 +43,7 @@
         "@context": "http://schema.org",
         "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
         "name": "{{ .Title }} - {{ .Site.Title }}",
-        "description": "{{ .Title }}",
+        "description": "{{ .Site.Params.description }}",
         "author": {
             "@type": "Person",
             "name": "{{ delimit .Site.Params.author " " }}"
