@@ -30,6 +30,7 @@ document.addEventListener('keyup', function(e) {
 <script async src="{{ . | relURL }}"></script>
 {{ end }}
 
+{{ if and (not .Params.disable_highlight) (not .IsHome) }}
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   TeX: {
@@ -40,6 +41,7 @@ MathJax.Hub.Config({
 });
 </script>
 <script async src="{{ $.Site.Params.mathjaxCDN }}/mathjax/{{ $.Site.Params.mathjaxVersion }}/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{{ end }}
 
 {{ if $.Page.Scratch.Get "pseudocode-loaded" }}
 <script src='{{ $.Site.Params.katexCDN }}/KaTeX/{{ $.Site.Params.katexVersion }}/katex.min.js'></script>
