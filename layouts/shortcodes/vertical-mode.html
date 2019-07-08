@@ -1,0 +1,25 @@
+{{ $horizontal_align := .Get "horizontal-align" | default "center" }}
+{{ $vertical_align := .Get "vertical-align" | default "top" }}
+{{ $font := .Get "font" | default "kai"}}
+
+{{ $horizontal_align_style := "" }}
+{{ if (eq $horizontal_align "left") }}
+  {{ $horizontal_align_style = " margin-right: auto;" }}
+{{ else if (eq $horizontal_align "center") }}
+  {{ $horizontal_align_style = " margin-left: auto; margin-right: auto;" }}
+{{ else if (eq $horizontal_align "right") }}
+  {{ $horizontal_align_style = " margin-left: auto;" }}
+{{ end }}
+
+{{ $vertical_align_style := "" }}
+{{ if (eq $vertical_align "top") }}
+  {{ $vertical_align_style = " text-align: left;" }}
+{{ else if (eq $vertical_align "middle") }}
+  {{ $vertical_align_style = " text-align: center;" }}
+{{ else if (eq $vertical_align "bottom") }}
+  {{ $vertical_align_style = " text-align: right;" }}
+{{ end }}
+
+<div class="vertical-mode {{ $font | safeCSS }}" style='writing-mode: tb-rl; -webkit-writing-mode: vertical-rl; writing-mode: vertical-rl; max-width: 100%; height: {{ .Get "height" | default "auto" | safeCSS }}; overflow: auto;{{ $horizontal_align_style | safeCSS }}{{ $vertical_align_style | safeCSS }}'>
+  {{ .Inner | markdownify }}
+</div>
