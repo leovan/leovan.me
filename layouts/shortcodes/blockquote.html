@@ -1,5 +1,3 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-
 {{ $type := .Get "type" | default "note" }}
 
 {{ $color := "#369BE5" }}
@@ -15,4 +13,4 @@
   {{ $color = "#F51744" }}
 {{ end }}
 
-<div class="blockquote" style='border-left: 4px solid {{ .Get "color" | default $color }};'>{{ .Inner }}</div>
+<div class="blockquote" style='border-left: 4px solid {{ .Get "color" | default $color | safeCSS }};'>{{ .Inner | markdownify }}</div>

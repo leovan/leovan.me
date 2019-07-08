@@ -179,7 +179,9 @@ $$`
 (4) 通过变换将任意一个点 `$x$` 绕原点旋转了角度 `$\theta$` 的点 `$x'$`
 
 `$$
-x' =
+\begin{equation}
+\begin{split}
+x'& =
 \left\lgroup
     \begin{array}{cc}
         \cos \theta & -\sin \theta \\
@@ -191,7 +193,8 @@ x' =
         x \\
         y
     \end{array}
-\right\rgroup = 
+\right\rgroup \\
+& = 
 \left\lgroup
     \begin{array}{cc}
         \cos \theta & -\sin \theta \\
@@ -203,13 +206,16 @@ x' =
         r \cos \phi \\
         r \sin \phi
     \end{array}
-\right\rgroup = 
+\right\rgroup \\
+& = 
 \left\lgroup
     \begin{array}{c}
         r \cos \left(\phi + \theta\right) \\
         r \sin \left(\phi + \theta\right)
     \end{array}
 \right\rgroup
+\end{split}
+\end{equation}
 $$`
 
 ![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-4.png)
