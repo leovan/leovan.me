@@ -1,0 +1,5 @@
+{{ if not ($.Page.Scratch.Get "douban-card") }}
+<link rel="stylesheet" href="/css/douban-card.css" />
+{{ $.Page.Scratch.Add "douban-card" 1 }}
+{{ end }}
+<div class='douban-card douban-card-{{ .Get "type" | default "book" }}' id='douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}' douban-id='{{ .Get "id" }}'></div>

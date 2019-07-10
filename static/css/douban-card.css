@@ -1,0 +1,173 @@
+.douban-card {
+  max-height: 12.6em;
+  margin: 1em auto;
+  position: relative;
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .25), 0 0 2px rgba(0, 0, 0, .25);
+}
+
+.douban-card a {
+  text-decoration: none;
+  border: none;
+}
+
+.douban-card--middle {
+  width: 75%;
+  padding: 1.5em;
+}
+
+.douban-card--title {
+  font-size: 18px;
+  font-weight: bold;
+  max-height: 1.8em;
+  overflow: hidden;
+}
+
+.douban-card--tags {
+  font-size: 14px;
+  max-height: 1.8em;
+  line-height: 1.8em;
+  color: #999;
+  overflow: hidden;
+}
+
+.douban-card--summary {
+  font-size: 14px;
+  line-height: 1.8em;
+  max-height: 5.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.douban-card--right {
+  width: 25%;
+  float: right;
+}
+
+.douban-card--right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width:550px) {
+  .douban-card {
+    max-height: 11.2em;
+  }
+  .douban-card--middle {
+    width: 60%;
+  }
+  .douban-card--right {
+    width: 40%;
+  }
+  .douban-card--stars {
+    display: none !important;
+  }
+  .douban-card--tags {
+    max-height: 5.4em;
+  }
+  .douban-card--summary {
+    display: none;
+  }
+}
+
+.douban-card--stars-rating {
+  font-size: 14px;
+  max-height: 1.8em;
+  line-height: 1.8em;
+  overflow: hidden;
+}
+
+.douban-card--stars-rating span {
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+}
+
+.douban-card--logo-dou {
+  color: #FFF;
+  width: 1.5em;
+  background-color: #42BE57;
+  border: 1px solid #42BE57;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.douban-card--logo-rating {
+  color: #42BE57;
+  width: 4.5em;
+  border: 1px solid #42BE57;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.douban-card--stars {
+  width: 75px;
+  height: 15px !important;
+  background-image: url(/images/icons/douban-stars.png);
+  background-image: -webkit-image-set(url(/images/icons/douban-stars.png) 1x, url(/images/icons/douban-stars@2x.png) 2x);
+  background-image: -moz-image-set(url(/images/icons/douban-stars.png) 1x, url(/images/icons/douban-stars@2x.png) 2x);
+  background-image: -o-image-set(url(/images/icons/douban-stars.png) 1x, url(/images/icons/douban-stars@2x.png) 2x);
+  background-image: -ms-image-set(url(/images/icons/douban-stars.png) 1x, url(/images/icons/douban-stars@2x.png) 2x);
+  overflow: hidden;
+  margin-left: .6em;
+  vertical-align: text-top;
+}
+
+.douban-card--rating {
+  color: #777;
+  font-weight: bold;
+  margin-left: .6em;
+}
+
+.douban-card--stars-10 {
+  background-position: 0px 0px;
+}
+
+.douban-card--stars-9 {
+  background-position: 0px -15px;
+}
+
+.douban-card--stars-8 {
+  background-position: 0px -30px;
+}
+
+.douban-card--stars-7 {
+  background-position: 0px -45px;
+}
+
+.douban-card--stars-6 {
+  background-position: 0px -60px;
+}
+
+.douban-card--stars-5 {
+  background-position: 0px -75px;
+}
+
+.douban-card--stars-4 {
+  background-position: 0px -90px;
+}
+
+.douban-card--stars-3 {
+  background-position: 0px -105px;
+}
+
+.douban-card--stars-2 {
+  background-position: 0px -120px;
+}
+
+.douban-card--stars-1 {
+  background-position: 0px -135px;
+}
+
+.douban-card--stars-0 {
+  background-position: 0px -150px;
+}
