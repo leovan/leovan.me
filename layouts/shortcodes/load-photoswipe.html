@@ -4,8 +4,8 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 -->
 
 <!-- prevent this shortcode from being loaded more than once per page -->
-{{ if not ($.Page.Scratch.Get "photoswipe_loaded") }}
-  {{ $.Page.Scratch.Set "photoswipe_loaded" 1 }}
+{{ if not ($.Page.Scratch.Get "photoswipe-loaded") }}
+  {{ $.Page.Scratch.Set "photoswipe-loaded" 1 }}
 
 <!--
 *** jQuery must be loaded before load-photoswipe.js ***

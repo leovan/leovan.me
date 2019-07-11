@@ -1,0 +1,22 @@
+{{ if $.Page.Scratch.Get "pseudocode" }}
+<script src='{{ $.Site.Params.katexCDN }}/KaTeX/{{ $.Site.Params.katexVersion }}/katex.min.js'></script>
+<script src="{{ $.Site.Params.pseudocodeCDN }}/pseudocode/{{ $.Site.Params.pseudocodeVersion }}/pseudocode.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var captionCount = 0;
+    $(".pseudocode").each(function() {
+        var pseudocode_options = {
+            indentSize: '{{ $.Site.Params.indentSize | default "1.2em" }}',
+            commentDelimiter: '{{ $.Site.Params.commentDelimiter | default "//" }}',
+            lineNumber: {{ $.Site.Params.lineNumber | default true }},
+            lineNumberPunc: '{{ $.Site.Params.lineNumberPunc | default ":" }}',
+            noEnd: {{ $.Site.Params.noEnd | default false }}
+        };
+        pseudocode_options.captionCount = captionCount;
+        captionCount += 1;
+        var codeEl = $(this).get(0);
+        pseudocode.render(codeEl.textContent, codeEl.parentElement, pseudocode_options);
+    });
+});
+</script>
+{{ end }}

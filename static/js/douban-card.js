@@ -25,22 +25,25 @@ $(document).ready(function() {
           var pubdate_str = data.pubdate.substring(0, 4);
           tags.push(pubdate_str);
 
+          var title = data.title;
           var stars = Math.round(data.rating.average);
+          var rating = data.rating.average;
           var img_url = data.images.small;
+          var summary = data.summary.replace(/[\n|\r]/g, '');
 
           $('#douban-card-book-' + book_id).html(
             '<div class="douban-card--middle">' +
               '<div class="douban-card--title">' +
-                '<a href="https://book.douban.com/subject/' + book_id + '/" target="_blank">' + data.title + '</a>' +
+                '<a href="https://book.douban.com/subject/' + book_id + '/" target="_blank">' + title + '</a>' +
               '</div>' +
               '<div class="douban-card--stars-rating">' +
                 '<span class="douban-card--logo-dou">豆</span>' +
                 '<span class="douban-card--logo-rating">豆瓣评分</span>' +
                 '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
-                '<span class="douban-card--rating">' + data.rating.average + '</span>' +
+                '<span class="douban-card--rating">' + rating + '</span>' +
               '</div>' +
               '<div class="douban-card--tags">' + tags.join(' | ') + '</div>' +
-              '<div class="douban-card--summary">' + data.summary + '</div>' +
+              '<div class="douban-card--summary">' + summary + '</div>' +
             '</div>' +
             '<div class="douban-card--right">' +
               '<img src="' + img_url + '" referrerPolicy="no-referrer" />' +
@@ -48,7 +51,7 @@ $(document).ready(function() {
           );
         }
       });
-    };
+    }
 
     function douban_movie_card(movid_id) {
       var url = 'https://api.douban.com/v2/movie/subject/' + movid_id + '?apikey=' + douban_api_key;
@@ -71,22 +74,25 @@ $(document).ready(function() {
           var pubdates_str = data.pubdates[0].substring(0, 4);
           tags.push(pubdates_str);
 
+          var title = data.title;
           var stars = Math.round(data.rating.average);
+          var rating = data.rating.average;
           var img_url = data.images.small;
+          var summary = data.summary.replace(/[\n|\r]/g, '');
 
           $('#douban-card-movie-' + movid_id).html(
             '<div class="douban-card--middle">' +
               '<div class="douban-card--title">' +
-                '<a href="https://movie.douban.com/subject/' + movid_id + '/" target="_blank">' + data.title + '</a>' +
+                '<a href="https://movie.douban.com/subject/' + movid_id + '/" target="_blank">' + title + '</a>' +
               '</div>' +
               '<div class="douban-card--stars-rating">' +
                 '<span class="douban-card--logo-dou">豆</span>' +
                 '<span class="douban-card--logo-rating">豆瓣评分</span>' +
                 '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
-                '<span class="douban-card--rating">' + data.rating.average + '</span>' +
+                '<span class="douban-card--rating">' + rating + '</span>' +
               '</div>' +
               '<div class="douban-card--tags">' + tags.join(' | ') + '</div>' +
-              '<div class="douban-card--summary">' + data.summary + '</div>' +
+              '<div class="douban-card--summary">' + summary + '</div>' +
             '</div>' +
             '<div class="douban-card--right">' +
               '<img src="' + img_url + '" referrerPolicy="no-referrer" />' +
@@ -94,7 +100,7 @@ $(document).ready(function() {
           );
         }
       });
-    };
+    }
 
     $('.douban-card').each(function() {
       var douban_id = $(this).attr('douban-id');
