@@ -45,7 +45,7 @@ disable_adsense: true
 
 ## 项目经历
 
-### 智能农业
+### 智慧农业
 
 _2019.07 ~ 至今 产品经理_
 
@@ -97,7 +97,8 @@ _2013.11 ~ 2014.02 算法设计和开发_
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- Java: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- HTML / CSS / JS: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 框架
 
