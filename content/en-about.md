@@ -2,7 +2,7 @@
 title: About
 author: Leo Van
 date: '2017-12-04'
-lastmod: '2019-06-25'
+lastmod: '2019-07-22'
 slug: en/about
 disable_author_date: true
 disable_comments: true
@@ -12,6 +12,8 @@ disable_adsense: true
 # Who am I?
 
 I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](../resume/) page. This page will let you know my lifestyle.
+
+![Leo Van](/images/me.jpg)
 
 # What do I like?
 
