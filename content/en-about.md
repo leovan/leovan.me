@@ -13,7 +13,14 @@ disable_adsense: true
 
 I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](../resume/) page. This page will let you know my lifestyle.
 
-![Leo Van](/images/me.jpg)
+<picture>
+  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me-large.webp">
+  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me-medium.webp">
+  <source type="image/webp" srcset="/images/me-small.webp">
+  <source media="(min-width: 1200px)" srcset="/images/me-large.jpg">
+  <source media="(min-width: 800px)" srcset="/images/me-medium.jpg">
+  <img src="/images/me-small.jpg" alt="Leo Van">
+</picture>
 
 # What do I like?
 

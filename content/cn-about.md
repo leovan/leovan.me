@@ -13,7 +13,14 @@ disable_adsense: true
 
 我是 **范叶亮**，可以叫我 **Leo**。如果想更多的了解我的工作和研究，请参见我的 [简历](../resume) 页面，当前页面可以让你了解生活中的我。
 
-![范叶亮](/images/me.jpg)
+<picture>
+  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me-large.webp">
+  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me-medium.webp">
+  <source type="image/webp" srcset="/images/me-small.webp">
+  <source media="(min-width: 1200px)" srcset="/images/me-large.jpg">
+  <source media="(min-width: 800px)" srcset="/images/me-medium.jpg">
+  <img src="/images/me-small.jpg" alt="范叶亮">
+</picture>
 
 # 喜欢啥？
 
