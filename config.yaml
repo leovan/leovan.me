@@ -126,6 +126,12 @@ params:
   
   materialComponentsWebVersion: "latest"
   materialComponentsWebCDN: "//unpkg.com"
+  
+  APlayerVersion: "1.10.1"
+  APlayerCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
+  MetingJSVersion: "latest"
+  MetingJSCDN: "//unpkg.com"
 
   logo:
     img: "/images/avatar.svg"

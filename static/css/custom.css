@@ -292,3 +292,7 @@ footer .adsbygoogle {
 .book-table tbody tr td:nth-child(6) { width: 5.8em; }
 .book-table tbody tr td:nth-child(7) { width: 3em; }
 .book-table tbody tr td:nth-child(8) { width: 3em; }
+
+.aplayer {
+  margin: 1em auto !important;
+}

@@ -1,0 +1,32 @@
+{{ if not ($.Page.Scratch.Get "meting-js-aplayer-loaded") }}
+  {{ $.Page.Scratch.Set "meting-js-aplayer-loaded" 1 }}
+  <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.css">
+  <script src="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.js"></script>
+  <script src="{{ $.Site.Params.MetingJSCDN }}/meting@{{ $.Site.Params.MetingJSVersion }}/dist/Meting.min.js"></script>
+{{ end }}
+
+<meting-js
+  {{ with .Get "id" }}id="{{ . }}"{{ end }}
+  {{ with .Get "server" }}server="{{ . }}"{{ end }}
+  {{ with .Get "type" }}type="{{ . }}"{{ end }}
+  {{ with .Get "auto" }}auto="{{ . }}"{{ end }}
+  {{ with .Get "name" }}name="{{ . }}"{{ end }}
+  {{ with .Get "artist" }}artist="{{ . }}"{{ end }}
+  {{ with .Get "url" }}url="{{ . }}"{{ end }}
+  {{ with .Get "conver" }}conver="{{ . }}"{{ end }}
+  {{ with .Get "lrc" }}lrc="{{ . }}"{{ end }}
+  {{ with .Get "fixed" }}fixed="{{ . }}"{{ end }}
+  {{ with .Get "mini" }}mini="{{ . }}"{{ end }}
+  {{ with .Get "autoplay" }}autoplay="{{ . }}"{{ end }}
+  {{ with .Get "theme" }}theme="{{ . }}"{{ end }}
+  {{ with .Get "loop" }}loop="{{ . }}"{{ end }}
+  {{ with .Get "order" }}order="{{ . }}"{{ end }}
+  {{ with .Get "preload" }}preload="{{ . }}"{{ end }}
+  {{ with .Get "volume" }}volume="{{ . }}"{{ end }}
+  {{ with .Get "mutex" }}mutex="{{ . }}"{{ end }}
+  {{ with .Get "lrc-type" }}lrc-type="{{ . }}"{{ end }}
+  {{ with .Get "list-folded" }}list-folded="{{ . }}"{{ end }}
+  {{ with .Get "list-max-height" }}list-max-height="{{ . }}"{{ end }}
+  {{ with .Get "storage-name" }}storage-name="{{ . }}"{{ end }}>
+  {{ with .Get "lrc-text" }}<pre hidden>{{ . }}</pre>{{ end }}
+</meting-js>
