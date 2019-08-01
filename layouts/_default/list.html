@@ -9,7 +9,7 @@
   {{ range .Pages }}
   <p>
     <span>{{ .Date.Format "2006-01-02" }}</span>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}{{ with .Params.subtitle }} - {{ . }}{{ end }}</a>
   </p>
   {{ end }}
   {{ end }}

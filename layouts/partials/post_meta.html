@@ -1,6 +1,6 @@
 {{ if not .IsHome }}
 <h1>{{ .Title }}</h1>
-{{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h2>{{ end }}
+{{ with .Params.subtitle }}<h2><span class="subtitle">{{ . }}</span></h2>{{ end }}
 
 {{ if .IsPage }}
 {{ if not .Params.disable_author_date }}

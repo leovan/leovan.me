@@ -50,6 +50,10 @@
   line-height: 1em;
 }
 
+.subtitle {
+  font-size: 24px;
+}
+
 iframe, twitterwidget, video {
   max-width: 100%;
   display: block;
