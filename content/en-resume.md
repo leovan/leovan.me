@@ -39,7 +39,7 @@ disable_adsense: true
 
 ### Full Time
 
-1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer / Product Manager
+1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer / Senior Product Manager
 
 ### Intern
 
@@ -49,7 +49,7 @@ disable_adsense: true
 
 ### Intelligent Agriculture
 
-_2019.07 ~ Present, Product Manager_
+_2019.07 ~ Present, Senior Product Manager_
 
 ### Daat (Complex Network & Knowledge Graph)
 
