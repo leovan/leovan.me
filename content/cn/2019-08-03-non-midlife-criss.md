@@ -21,6 +21,7 @@ tags:
 images:
   - /images/cn/2019-08-03-non-midlife-criss/logo-circle.png
   - /images/cn/2019-08-03-non-midlife-criss/r-on-android.png
+  - /images/cn/2019-08-03-non-midlife-criss/from-algorithm-engineer-to-product-mananger.png
   - /images/cn/2019-08-03-non-midlife-criss/tomatoes-grown-by-myself.jpg
 ---
 
@@ -50,7 +51,7 @@ images:
 
 朋友的反馈喜忧参半，真的很感谢这些朋友，能够帮我分析考虑这么多。最终还是过去了自己心里的这个坎，选择了去尝试一个新的角色，也完全换到了一个新的业务场景「智慧农业」。这段空档期了解了很多产品经理的技术栈，但感觉对于自己更重要的是考虑事情方式的转变，不能再以一个程序员的思维去考虑问题。虽然说算法和技术是自己作为产品经理的优势，但是产品经理应该更多关注的是业务流程，产品功能和用户体验，如果你还非要给个什么技术解决方案的话，不仅研发同学会很烦，自己也会失掉对整个产品的把控。这些说着挺容易的，但做起来还是挺有难度的，尤其是做一个优秀的产品经理。对于我这样一个半路出家的产品经理（感觉之前算法也算半路出家吧，毕竟学了七年管理呢），能有一个新的业务场景允许自己从 0 到 1 做起，感觉又一次被幸运眷顾了。就这样，一只新鲜出炉的产品~~小哥哥~~，不，是小叔叔，就诞生了。
 
-<!-- ![From Algorithm Engineer To Product Mananger](/images/cn/2019-08-03-non-midlife-criss/from-algorithm-engineer-to-product-mananger.png) -->
+![From Algorithm Engineer To Product Mananger](/images/cn/2019-08-03-non-midlife-criss/from-algorithm-engineer-to-product-mananger.png)
 
 现在脑中充满了未来产品经理工作的憧憬，说实话没有充足的把握一定会做的很好，但这并不妨碍我朝着乔布斯这样的目标去努力。希望自己能够完成从码农到菜农的蜕变吧，实验大棚里自己种的西红柿已经坐果啦 :tomato: ！
 
