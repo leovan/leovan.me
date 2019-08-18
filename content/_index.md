@@ -12,7 +12,7 @@ lastmod: '2019-07-01'
 
 I'm Leo (Fan Yeliang). I got my Master degree of Management in 2012.
 My current research pursuit is Deep Learning & Reinforcement Learning with
-focus on applictions in Intelligent Agriculture.
+focus on applications in Intelligent Agriculture.
 Previously, I've also worked on NLP, Complex Network & Knowledge Graph.
 I like reading, thinking, music, movie, cooking, photography and fitness.
 Since all these things make me feel be loved by this world.
