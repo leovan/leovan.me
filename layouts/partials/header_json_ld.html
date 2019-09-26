@@ -17,7 +17,7 @@
         "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
         "wordCount": "{{ .WordCount }}",
         "keywords": [
-            {{ if .Keywords }}{{ range $i, $e := .Keywords }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}{{ else if .Params.tags }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}"{{ $e }}"{{ end }}{{ end }}
+            {{ if .Keywords }}{{ range $i, $e := .Keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ else if .Params.tags }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ end }}
         ],
         "image": [
             {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL | jsonify | safeJS }}{{ end }}
