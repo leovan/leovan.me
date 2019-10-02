@@ -42,8 +42,8 @@
     { 
         "@context": "http://schema.org",
         "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
-        "name": {{ .Title | jsonify | safeJS }} - {{ .Site.Title | jsonify | safeJS }},
-        "description": {{ .Site.Params.description | jsonify | safeJS }},
+        "name": {{ printf "%s - %s" .Title .Site.Title | jsonify | safeJS }},
+        "description": {{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }},
         "author": {
             "@type": "Person",
             "name": "{{ delimit .Site.Params.author " " }}"
