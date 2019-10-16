@@ -90,7 +90,7 @@ book_list_manual_update <- book_list %>%
 
 book_list_auto_update <- book_list_auto_update %>%
     mutate(douban_info = map(douban_id, crawl_book_douban_info)) %>%
-    unnest(douban_info)
+    unnest_wider(douban_info)
 
 book_list_auto_update %>%
     mutate(updated_date = Sys.Date(),

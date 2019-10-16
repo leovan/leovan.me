@@ -115,7 +115,7 @@ movie_list_manual_update <- movie_list %>%
 movie_list_auto_update <- movie_list_auto_update %>%
     mutate(imdb_rating = get_movie_imdb_rating(imdb_id)) %>%
     mutate(douban_info = map(douban_id, crawl_movie_douban_info)) %>%
-    unnest(douban_info)
+    unnest_wider(douban_info)
 
 movie_list_auto_update %>%
     mutate(updated_date = Sys.Date(),
