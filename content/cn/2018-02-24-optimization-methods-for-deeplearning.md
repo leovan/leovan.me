@@ -1,5 +1,5 @@
 ---
-title: 深度学习优化算法
+title: 深度学习优化算法 (Optimization Methods for Deeplearning)
 author: 范叶亮
 date: '2018-02-24'
 slug: optimization-methods-for-deeplearning

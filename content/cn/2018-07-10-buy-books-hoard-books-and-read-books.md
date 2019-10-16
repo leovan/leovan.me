@@ -1,5 +1,5 @@
 ---
-title: 买书，囤书，看书
+title: 买书，囤书，看书 (Buy Books, Hoard Books and Read Books)
 author: 范叶亮
 date: '2018-07-10'
 slug: buy-books-hoard-books-and-read-books

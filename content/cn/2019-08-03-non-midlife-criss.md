@@ -1,5 +1,5 @@
 ---
-title: 「非」中年危机
+title: 「非」中年危机 (Non-midlife Criss)
 subtitle: 从码农到菜农
 author: 范叶亮
 date: '2019-08-03'

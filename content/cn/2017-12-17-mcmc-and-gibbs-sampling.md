@@ -1,5 +1,5 @@
 ---
-title: 马尔科夫链蒙特卡洛方法 (MCMC) 和吉布斯采样 (Gibbs Sampling)
+title: 马尔科夫链蒙特卡洛方法和吉布斯采样 (MCMC and Gibbs Sampling)
 author: 范叶亮
 date: '2017-12-17'
 slug: mcmc-and-gibbs-sampling

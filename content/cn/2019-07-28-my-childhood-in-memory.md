@@ -1,5 +1,5 @@
 ---
-title: 记忆中的儿时
+title: 记忆中的儿时 (My Childhood in Memory)
 author: 范叶亮
 date: '2019-07-28'
 slug: my-childhood-in-memory
