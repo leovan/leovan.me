@@ -42,7 +42,7 @@ $(document).ready(function() {
                 '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
                 '<span class="douban-card--rating">' + rating + '</span>' +
               '</div>' +
-              '<div class="douban-card--tags">' + tags.join(' | ') + '</div>' +
+              '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
               '<div class="douban-card--summary">' + summary + '</div>' +
             '</div>' +
             '<div class="douban-card--right">' +
@@ -91,7 +91,7 @@ $(document).ready(function() {
                 '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
                 '<span class="douban-card--rating">' + rating + '</span>' +
               '</div>' +
-              '<div class="douban-card--tags">' + tags.join(' | ') + '</div>' +
+              '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
               '<div class="douban-card--summary">' + summary + '</div>' +
             '</div>' +
             '<div class="douban-card--right">' +
