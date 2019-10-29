@@ -21,6 +21,13 @@ tags:
   - Kubiqi Desert
   - 新裤子乐队
   - 生活因你而火热
+images:
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-01.jpg
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-02.jpg
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-03.jpg
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-04.jpg
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/award-ceremony.jpg
+  - /images/cn/2019-10-28-jdd-hipo-learning-journey/prize.jpg
 ---
 
 今年有幸参加了京东数科的 HIPO 培训课程，整个学习之旅可谓收货满满。由于出差没能参加 8 月份的开营仪式，看到小伙伴们各种拓展，还能自己做饭，感觉错过了展示范小厨的大好机会。同样也错过了报名的「领导力」的课程，最终换到了「情商」和「沟通」两门课程学习。
