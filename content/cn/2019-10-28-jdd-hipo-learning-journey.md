@@ -100,7 +100,7 @@ C 类特质的人有严谨的优势，但这个优势也需要根据不同的场
 
 最后放一下京东数科的 MV 吧，我有出境 6 秒哦 (02:27 - 02:32)，没错，打哈欠和撸猫的就是我，相信我，养猫一定比养猪容易，还有种菜 :smiley:。
 
-{{< video mp4="//dpv.videocc.net/c8f53742da/4/c8f53742dac09ea5574adfd949095164_3.mp4" poster="/images/cn/2019-10-28-jdd-hipo-learning-journey/生活因你而火热.png" width="620" >}}
+{{< video mp4="//dpv.videocc.net/c8f53742da/4/c8f53742dac09ea5574adfd949095164_3.mp4" poster="/images/cn/2019-10-28-jdd-hipo-learning-journey/生活因你而火热.png" >}}
 
 [^six-seconds]: https://cn.6seconds.org/about
 
