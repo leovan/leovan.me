@@ -49,7 +49,7 @@ disable_adsense: true
 
 ### Intelligent Agriculture
 
-_2019.07 ~ Present, Senior Product Manager_
+_2019.07 ~ Present, Senior Research Engineer_
 
 ### Daat (Complex Network & Knowledge Graph)
 
