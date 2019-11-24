@@ -1,0 +1,221 @@
+.donate {
+  margin: 16px auto 16px;
+  text-align: center;
+}
+
+.donate-button {
+  color: #fff;
+  background: #f36;
+  width: 80px;
+  height: 34px;
+  border-radius: 4px;
+  margin: 12px auto 12px auto;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.donate-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.donate-modal-wrapper-show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.donate-modal {
+  width: 360px;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 0 5px 20px rgba(26,26,26,.1);
+  box-shadow: 0 5px 20px rgba(26,26,26,.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.donate-box {
+  overflow: auto;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.donate-box-content {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  padding: 24px;
+  line-height: 1em;
+}
+
+.donate-box-content-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.donate-box-close-button {
+  position: absolute;
+  top: 8px;
+  right: -60px;
+  padding: 12px;
+  height: auto;
+  line-height: inherit;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.donate-box-close-button-icon {
+  vertical-align: top;
+}
+
+.donate-box-header {
+  height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 2em;
+  background: #f6f6f6;
+  border-radius: 4px;
+  color: #444;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.donate-box-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.donate-box-money, .donate-box-footer {
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+
+.donate-box-money-button {
+  border-color: #f1403c;
+  color: #f1403c;
+  width: 29%;
+  margin: 0 0 24px;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: 1px solid;
+  border-radius: 3px;
+  outline: none;
+}
+
+.donate-box-money-button-unchecked:hover {
+  background-color: rgba(255, 51, 102, .06);
+}
+
+.donate-box-money-button-checked {
+  background: #f1403c;
+  color: #fff;
+}
+
+.donate-box-pay {
+  text-align: center;
+  margin-bottom: 24px;
+  display: none;
+}
+
+.donate-pay-qrcode {
+  max-height: 200px;
+  vertical-align: middle;
+}
+
+.donate-pay-method {
+  width: 46%;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #eee;
+  cursor: pointer;
+}
+
+.donate-pay-method-checked {
+  border-color: #f1403c;
+}
+
+.donate-pay-method-image {
+  max-height: 40px;
+  vertical-align: middle;
+}

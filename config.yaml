@@ -157,6 +157,9 @@ params:
     wordcount:
       cn: "字数"
       en: "Word Count"
+    donate:
+      cn: "赞 赏"
+      en: "Donate"
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
