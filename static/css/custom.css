@@ -1,119 +1,3 @@
-@media screen and (min-width: 960px) {
-  html {
-    background: #fafafa;
-  }
-  
-  body {
-    background: #fff;
-  }
-
-  .masthead {
-    position: fixed;
-    top: 2em;
-  }
-}
-
-.menu li:not([class]) a, a:hover, .copyright a {
-  border-bottom: none;
-}
-
-.main {
-  hyphens: auto;
-}
-
-.main, .masthead {
-  padding: 1em 40px;
-}
-
-.masthead h1 {
-  margin-bottom: 0;
-}
-
-.masthead img {
-  max-width: 100px;
-}
-  
-.masthead .menu .menu-separator {
-  list-style-type: none;
-}
-
-.en .main header ~ p:first-of-type::first-line {
-  font-variant: small-caps;
-  letter-spacing: .05em;
-  font-size: 1.1em;
-}
-
-.en .main header ~ p:first-of-type::first-letter {
-  font-size: 3em;
-  padding: .1em .1em 0 0;
-  float: left;
-  line-height: 1em;
-}
-
-.subtitle {
-  font-size: 24px;
-}
-
-iframe, twitterwidget, video {
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
-#TableOfContents {
-  background-color: #f8f8f8;
-  padding: .5em;
-}
-
-table {
-  min-width: 50%;
-  max-width: 100%;
-  margin: auto;
-}
-
-pre code {
-  font-size: .9em;
-  display: block;
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
-  overflow-x: auto;
-  background: #f9f9f9 !important;
-}
-
-code[class*="language-"] {
-  padding: 1em;
-  line-height: 1.75;
-}
-
-pre[class*="language-"] {
-  padding: 0;
-  position: relative;
-  overflow: inherit;
-}
-
-code[class*="language-"], pre[class*="language-"] {
-  font-size: .9em;
-}
-
-pre[class*="language-"] > code[data-language]:before {
-  content: attr(data-language);
-  color: black;
-  background-color: #CFCFCF;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.9em;
-  border-radius: 0 0 0 5px;
-  padding: 0 0.5em;
-  text-shadow: none;
-}
-
-.home hr {
-  margin: 2em auto 1em;
-}
-
 @media screen and (max-width: 960px) {
   html {
     background: #fafafa;
@@ -135,9 +19,10 @@ pre[class*="language-"] > code[data-language]:before {
   .main .title h1 {
     margin: 1em auto 0 auto;
   }
-  
-  .title hr {
-    margin: 2em auto;
+
+  .masthead {
+    position: fixed;
+    top: 2em;
   }
   
   .masthead .menu {
@@ -197,6 +82,119 @@ pre[class*="language-"] > code[data-language]:before {
   }
 }
 
+#TableOfContents {
+  background-color: #f8f8f8;
+  padding: .5em;
+}
+
+h4, h5, h6 {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+}
+
+hr {
+  margin: 2em auto;
+}
+
+figure {
+  margin: 16px auto 16px;
+  text-align: center;
+}
+
+iframe, twitterwidget, video {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+table {
+  min-width: 50%;
+  max-width: 100%;
+  margin: auto;
+}
+
+pre code {
+  font-size: .9em;
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  background: #f9f9f9 !important;
+}
+
+code[class*="language-"] {
+  padding: 1em;
+  line-height: 1.75;
+}
+
+pre[class*="language-"] {
+  padding: 0;
+  position: relative;
+  overflow: inherit;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: .9em;
+}
+
+pre[class*="language-"] > code[data-language]:before {
+  content: attr(data-language);
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none;
+}
+
+.menu li:not([class]) a, a:hover, .copyright a {
+  border-bottom: none;
+}
+
+.main {
+  hyphens: auto;
+}
+
+.main, .masthead {
+  padding: 1em 40px;
+}
+
+.masthead h1 {
+  margin-bottom: 0;
+}
+
+.masthead img {
+  max-width: 100px;
+}
+  
+.masthead .menu .menu-separator {
+  list-style-type: none;
+}
+
+.en .main header ~ p:first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: .05em;
+  font-size: 1.1em;
+}
+
+.en .main header ~ p:first-of-type::first-letter {
+  font-size: 3em;
+  padding: .1em .1em 0 0;
+  float: left;
+  line-height: 1em;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
 .tagline {
   font-weight: bold;
 }
@@ -213,11 +211,9 @@ pre[class*="language-"] > code[data-language]:before {
   border-bottom: 0;
 }
 
-h4, h5, h6 {
-  font-size: 16px;
-  font-weight: bold;
-  font-style: italic;
-  text-align: left;
+.figcaption {
+  margin: 1em auto 1em;
+  text-align: center;
 }
 
 .pseudocode {
@@ -256,6 +252,7 @@ img[alt="github-stars"] {
 .blockquote {
   display: block;
   padding: 1em;
+  margin: 1em auto 1em;
   background: #eee;
 }
 
