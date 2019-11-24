@@ -1,3 +1,18 @@
+@media screen and (min-width: 960px) {
+  html {
+    background: #fafafa;
+  }
+  
+  body {
+    background: #fff;
+  }
+
+  .masthead {
+    position: fixed;
+    top: 2em;
+  }
+}
+
 @media screen and (max-width: 960px) {
   html {
     background: #fafafa;
@@ -18,11 +33,6 @@
   
   .main .title h1 {
     margin: 1em auto 0 auto;
-  }
-
-  .masthead {
-    position: fixed;
-    top: 2em;
   }
   
   .masthead .menu {
