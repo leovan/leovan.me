@@ -6,6 +6,7 @@ lastmod: '`r Sys.Date()`'
 slug: cn/movies
 description: '共鸣，情愫，观念，认知，体验，情怀'
 disable_author_date: true
+disable_donate: true
 disable_comments: true
 disable_adsense: true
 ---

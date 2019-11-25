@@ -5,6 +5,7 @@ date: '2017-12-04'
 lastmod: '2019-07-22'
 slug: en/about
 disable_author_date: true
+disable_donate: true
 disable_comments: true
 disable_adsense: true
 ---

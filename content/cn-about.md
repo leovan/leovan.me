@@ -7,6 +7,7 @@ slug: cn/about
 disable_author_date: true
 disable_comments: true
 disable_adsense: true
+disable_donate: true
 ---
 
 # 我是谁？

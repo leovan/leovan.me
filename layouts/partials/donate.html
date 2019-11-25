@@ -1,3 +1,4 @@
+{{ if (not .Params.disable_donate) }}
 <link rel="stylesheet" href="/css/donate.css" />
 {{ $section := default .Section ($.Scratch.Get "section") }}
 <div class="donate">
@@ -41,3 +42,4 @@
 </div>
 
 <script type="text/javascript" src="/js/donate.js"></script>
+{{ end }}

@@ -6,6 +6,7 @@ lastmod: '`r Sys.Date()`'
 slug: cn/books
 description: '读书，不是非做不可的事，而是想要去做的事。'
 disable_author_date: true
+disable_donate: true
 disable_comments: true
 disable_adsense: true
 ---
