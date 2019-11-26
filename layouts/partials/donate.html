@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="/css/donate.css" />
 {{ $section := default .Section ($.Scratch.Get "section") }}
 <div class="donate">
-  <div class="donate-title"></div>
+  <div class="donate-header"></div>
+  <div class="donate-slug" id="donate-slug">{{ .Slug }}</div>
   <button class="donate-button">{{ default "Donate" (index $.Site.Params.lang.donate $section) }}</button>
+  <div class="donate-footer">「真诚赞赏，手留余香」</div>
 </div>
 <div class="donate-modal-wrapper">
   <div class="donate-modal">
@@ -21,15 +23,15 @@
               <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="custom" data-unchecked="任意金额" data-checked="任意金额">任意金额</button>
             </div>
             <div class="donate-box-pay">
-              <img class="donate-pay-qrcode" src="/images/donate/wechat-pay-2.png"/>
+              <img class="donate-box-pay-qrcode" src="/images/donate/wechat-pay-2.png"/>
             </div>
           </div>
           <div class="donate-box-footer">
-            <div class="donate-pay-method donate-pay-method-checked" data-v="wechat-pay">
-              <img class="donate-pay-method-image" src="/images/donate/wechat-pay-logo.png"/>
+            <div class="donate-box-pay-method donate-box-pay-method-checked" data-v="wechat-pay">
+              <img class="donate-box-pay-method-image" src="/images/donate/wechat-pay-logo.png"/>
             </div>
-            <div class="donate-pay-method" data-v="alipay">
-              <img class="donate-pay-method-image" src="/images/donate/alipay-logo.png"/>
+            <div class="donate-box-pay-method" data-v="alipay">
+              <img class="donate-box-pay-method-image" src="/images/donate/alipay-logo.png"/>
             </div>
           </div>
         </div>
@@ -42,4 +44,5 @@
 </div>
 
 <script type="text/javascript" src="/js/donate.js"></script>
+</script>
 {{ end }}

@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+.donate-slug {
+  display: none;
+}
+
+.donate, .donate-button {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
 .donate-button {
   color: #fff;
   background: #f36;
@@ -12,8 +21,6 @@
   margin: 12px auto 12px auto;
   padding: 0;
   cursor: pointer;
-  font-size: 0.9em;
-  font-weight: bold;
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -197,12 +204,12 @@
   display: none;
 }
 
-.donate-pay-qrcode {
+.donate-box-pay-qrcode {
   max-height: 200px;
   vertical-align: middle;
 }
 
-.donate-pay-method {
+.donate-box-pay-method {
   width: 46%;
   padding: 10px 20px;
   border: 1px solid;
@@ -211,11 +218,11 @@
   cursor: pointer;
 }
 
-.donate-pay-method-checked {
+.donate-box-pay-method-checked {
   border-color: #f1403c;
 }
 
-.donate-pay-method-image {
+.donate-box-pay-method-image {
   max-height: 40px;
   vertical-align: middle;
 }
