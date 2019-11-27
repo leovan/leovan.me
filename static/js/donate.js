@@ -32,8 +32,8 @@ $(document).ready(function() {
   }
   
   function gtagDonateButton() {
-    gtag('event', 'donate', {
-      'event_category': 'donate-button',
+    gtag('event', 'blog-donation', {
+      'event_category': 'donation',
       'event_label': donateSlug
     });
   }
@@ -82,9 +82,9 @@ $(document).ready(function() {
   }
   
   function gtagDonatePay(currentDonatePayMethod, currentDonateMoney) {
-    var eventCategory = currentDonatePayMethod + '-' + currentDonateMoney;
-    gtag('event', 'donate', {
-      'event_category': eventCategory,
+    var eventCategory = 'blog-donation-' + currentDonatePayMethod + '-' + currentDonateMoney;
+    gtag('event', eventCategory, {
+      'event_category': 'donation',
       'event_label': donateSlug
     });
   }
