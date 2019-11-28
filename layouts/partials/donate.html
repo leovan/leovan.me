@@ -4,23 +4,23 @@
 <div class="donate">
   <div class="donate-header"></div>
   <div class="donate-slug" id="donate-slug">{{ .Slug }}</div>
-  <button class="donate-button">{{ default "Donate" (index $.Site.Params.lang.donate $section) }}</button>
-  <div class="donate-footer">「真诚赞赏，手留余香」</div>
+  <button class="donate-button">{{ index $.Site.Params.lang.donate $section }}</button>
+  <div class="donate-footer">{{ index $.Site.Params.lang.donate_slogan $section }}</div>
 </div>
 <div class="donate-modal-wrapper">
   <div class="donate-modal">
     <div class="donate-box">
       <div class="donate-box-content">
         <div class="donate-box-content-inner">
-          <div class="donate-box-header">「真诚赞赏，手留余香」</div>
+          <div class="donate-box-header">{{ index $.Site.Params.lang.donate_slogan $section }}</div>
           <div class="donate-box-body">
             <div class="donate-box-money">
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="2" data-unchecked="￥ 2" data-checked="2 元">￥ 2</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="5" data-unchecked="￥ 5" data-checked="5 元">￥ 5</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="10" data-unchecked="￥ 10" data-checked="10 元">￥ 10</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="50" data-unchecked="￥ 50" data-checked="50 元">￥ 50</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="100" data-unchecked="￥ 100" data-checked="100 元">￥ 100</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="custom" data-unchecked="任意金额" data-checked="任意金额">任意金额</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="2" data-unchecked="￥ 2" data-checked="{{ index $.Site.Params.lang.donate_2_cny $section }}">￥ 2</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="5" data-unchecked="￥ 5" data-checked="{{ index $.Site.Params.lang.donate_5_cny $section }}">￥ 5</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="10" data-unchecked="￥ 10" data-checked="{{ index $.Site.Params.lang.donate_10_cny $section }}">￥ 10</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="50" data-unchecked="￥ 50" data-checked="{{ index $.Site.Params.lang.donate_50_cny $section }}">￥ 50</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="100" data-unchecked="￥ 100" data-checked="{{ index $.Site.Params.lang.donate_100_cny $section }}">￥ 100</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $section }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $section }}">{{ index $.Site.Params.lang.donate_custom_cny $section }}</button>
             </div>
             <div class="donate-box-pay">
               <img class="donate-box-pay-qrcode" src="/images/donate/wechat-pay-2.png"/>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <button aria-label="关闭" type="button" class="donate-box-close-button">
+    <button type="button" class="donate-box-close-button">
       <svg class="donate-box-close-button-icon" fill="#fff" viewBox="0 0 24 24" width="24" height="24"><path d="M13.486 12l5.208-5.207a1.048 1.048 0 0 0-.006-1.483 1.046 1.046 0 0 0-1.482-.005L12 10.514 6.793 5.305a1.048 1.048 0 0 0-1.483.005 1.046 1.046 0 0 0-.005 1.483L10.514 12l-5.208 5.207a1.048 1.048 0 0 0 .006 1.483 1.046 1.046 0 0 0 1.482.005L12 13.486l5.207 5.208a1.048 1.048 0 0 0 1.483-.006 1.046 1.046 0 0 0 .005-1.482L13.486 12z" fill-rule="evenodd"></path></svg>
     </button>
   </div>

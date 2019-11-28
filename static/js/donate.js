@@ -82,8 +82,8 @@ $(document).ready(function() {
   }
   
   function gtagDonatePay(currentDonatePayMethod, currentDonateMoney) {
-    var eventCategory = 'blog-donation-' + currentDonatePayMethod + '-' + currentDonateMoney;
-    gtag('event', eventCategory, {
+    var eventAction = 'blog-donation-' + currentDonatePayMethod + '-' + currentDonateMoney;
+    gtag('event', eventAction, {
       'event_category': 'donation',
       'event_label': donateSlug
     });

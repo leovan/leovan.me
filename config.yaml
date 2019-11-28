@@ -159,7 +159,28 @@ params:
       en: "Word Count"
     donate:
       cn: "赞 赏"
-      en: "Donate"
+      en: "DONATE"
+    donate_slogan:
+      cn: "「真诚赞赏，手留余香」"
+      en: "「Donation Given, Fragrance in Hand」"
+    donate_2_cny:
+      cn: "2 元"
+      en: "2 CNY"
+    donate_5_cny:
+      cn: "5 元"
+      en: "5 CNY"
+    donate_10_cny:
+      cn: "10 元"
+      en: "10 CNY"
+    donate_50_cny:
+      cn: "50 元"
+      en: "50 CNY"
+    donate_100_cny:
+      cn: "100 元"
+      en: "100 CNY"
+    donate_custom_cny:
+      cn: "任意金额"
+      en: "CUSTOM"
 
 blackfriday:
     extensionsmask: ["noIntraEmphasis"]
