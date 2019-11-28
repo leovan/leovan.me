@@ -40,7 +40,7 @@ disable_adsense: true
 
 ### Full Time
 
-1. 2015.03 ~ Present, **JD Finance**, Algorithm Engineer / Senior Product Manager
+1. 2015.03 ~ Present, **JD Finance**, Senior Research Engineer
 
 ### Intern
 
