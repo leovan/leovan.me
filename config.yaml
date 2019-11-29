@@ -186,3 +186,8 @@ blackfriday:
     extensionsmask: ["noIntraEmphasis"]
     fractions: false
     hrefTargetBlank: true
+    
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
