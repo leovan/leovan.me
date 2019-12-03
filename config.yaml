@@ -9,7 +9,6 @@ ignoreFiles: ["\\.Rmd$", "_files$", "_cache$",
               "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
 hasCJKLanguage: true
 enableEmoji: true
-footnotereturnlinkcontents: "↩"
 rssLimit: 30
 
 permalinks:
@@ -183,13 +182,13 @@ params:
     donate_custom_cny:
       cn: "任意金额"
       en: "CUSTOM"
-
-blackfriday:
-  extensionsmask: ["noIntraEmphasis"]
-  fractions: false
-  hrefTargetBlank: true
     
 markup:
+  defaultMarkdownHandler: blackfriday
+  blackfriday:
+    extensionsmask: ["noIntraEmphasis"]
+    hrefTargetBlank: true
+    footnotereturnlinkcontents: "↩"
   goldmark:
     renderer:
       unsafe: true
