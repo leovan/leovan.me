@@ -146,8 +146,10 @@ params:
   lang:
     license:
       cn: "版权"
+      en: "License"
     subscribe:
       cn: "订阅"
+      en: "Subscribe"
     categories:
       cn: "分类"
       en: "Categories"
@@ -183,11 +185,11 @@ params:
       en: "CUSTOM"
 
 blackfriday:
-    extensionsmask: ["noIntraEmphasis"]
-    fractions: false
-    hrefTargetBlank: true
+  extensionsmask: ["noIntraEmphasis"]
+  fractions: false
+  hrefTargetBlank: true
     
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
+  goldmark:
+    renderer:
+      unsafe: true
