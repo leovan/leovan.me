@@ -230,11 +230,11 @@ pre[class*="language-"] > code[data-language]:before {
   display: none;
 }
 
-.footnote-ref a:before {
+.footnote-ref:before {
   content: "[";
 }
 
-.footnote-ref a:after {
+.footnote-ref:after {
   content: "]";
 }
 
