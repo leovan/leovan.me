@@ -1,0 +1,22 @@
+{
+  "short_name": "Leo Van | 范叶亮",
+  "name": "Leo Van's Personal Website | 范叶亮的个人网站",
+  "description": "Leo Van's Personal Website | 范叶亮的个人网站",
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}
