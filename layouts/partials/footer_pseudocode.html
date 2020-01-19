@@ -1,4 +1,5 @@
 {{ if $.Page.Scratch.Get "pseudocode-loaded" }}
+<script src='{{ $.Site.Params.katexCDN }}/KaTeX/{{ $.Site.Params.katexVersion }}/katex.min.js'></script>
 <script src="{{ $.Site.Params.pseudocodeCDN }}/pseudocode/{{ $.Site.Params.pseudocodeVersion }}/pseudocode.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {

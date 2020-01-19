@@ -1,11 +1,12 @@
 {{ if and (not .Params.disable_mathjax) (not .IsHome) }}
 <script>
-MathJax = {
-  tex: {
-    tags: "all",
-    inlineMath: [['$', '$'], , ['\\(', '\\)']]
+MathJax.Hub.Config({
+  TeX: {
+    equationNumbers: {
+      autoNumber: "all"
+    }
   }
-};
+});
 </script>
-<script async src="{{ $.Site.Params.mathjaxCDN }}/mathjax@{{ $.Site.Params.mathjaxVersion }}/es5/tex-mml-chtml.js"></script>
+<script async src="{{ $.Site.Params.mathjaxCDN }}/mathjax/{{ $.Site.Params.mathjaxVersion }}/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {{ end }}
