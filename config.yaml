@@ -90,7 +90,6 @@ params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
   footer: "&copy; [Leo Van](/) 2017 - 2020 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "https://leovan.me"
-  customJS: ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/fix-footnote.js", "js/math-code.js"]
   googleAdsense: "ca-pub-2608165017777396"
   
   prismjsVersion: "1.17.1"
@@ -101,9 +100,6 @@ params:
   
   mathjaxVersion: "3.0.0"
   mathjaxCDN: "//unpkg.com"
-  
-  katexVersion: "0.11.1"
-  katexCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.leovan.me/libraries"
