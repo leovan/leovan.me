@@ -8,11 +8,49 @@ ua <- 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Geck
 
 #' 年份 转 年份可读文本
 #' 
-#' @param year 年份数值
+#' @param y 年份数值
 #' @return 年份可读文本
-gen_which_year <- function(year) {
-    ifelse(is.na(year), '忘了是哪年', glue('{year} 年'))
+gen_which_year <- function(y) {
+    y = tryCatch({
+        year(y)
+    }, error = function(err) {
+        y
+    })
+    
+    if (is.na(y)) {
+        y = '忘了是哪年'
+    } else if (is.numeric(y)) {
+        y = glue('{y} 年')
+    }
+    
+    y
 }
+gen_which_year = Vectorize(gen_which_year)
+
+#' 年份 转 年份排序
+#' 
+#' @param y 年份数值
+#' @return 年份排序
+gen_which_year_order <- function(y) {
+    y = tryCatch({
+        year(y)
+    }, error = function(err) {
+        y
+    })
+    
+    if (is.numeric(y)) {
+        y = y
+    } else if (y == '高中') {
+        y = 2004
+    } else if (y == '大学') {
+        y = 2007
+    } else {
+        y = NA
+    }
+    
+    y
+}
+gen_which_year_order <- Vectorize(gen_which_year_order)
 
 #' 日期 格式化为 月-日
 #' 

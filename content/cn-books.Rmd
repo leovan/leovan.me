@@ -37,11 +37,10 @@ output_col_names <- c(
 
 book_list <- read_tsv(
     '../data/cn/book-list.tsv',
-    col_types = 'ccccccccccDDDddiiD')
+    col_types = 'cccccccccccccddiiD')
 
 book_table <- function(books) {
-    which_year <- books[1, ]$purchasing_year
-    which_year <- gen_which_year(which_year)
+    which_year <- gen_which_year(books[1, ]$purchasing_date)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- books %>%
         arrange(desc(purchasing_date), author, title_zh) %>%
@@ -59,13 +58,13 @@ book_table <- function(books) {
 book_list %>%
     filter(show == 1) %>%
     mutate(
+        purchasing_year_order = gen_which_year_order(purchasing_date),
         douban_id_html = gen_douban_id_html(douban_id),
         title_zh_html = gen_linked_text_html(title_zh, blog_link),
-        purchasing_year = year(purchasing_date),
         douban_rating_html = gen_book_douban_rating_link_html(
             douban_rating, douban_id)) %>%
-    ddply(.(purchasing_year), book_table) %>%
-    arrange(desc(purchasing_year)) %>%
+    ddply(.(purchasing_year_order), book_table) %>%
+    arrange(desc(purchasing_year_order)) %>%
     select(table_) %>%
     unlist %>%
     cat
