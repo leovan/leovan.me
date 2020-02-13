@@ -139,7 +139,8 @@ _2013.11 ~ 2014.02 算法设计和开发_
 
 ### 开源项目
 
-1. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
-2. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+1. [Python 数据科学导论](https://github.com/leovan/data-science-introduction-with-python)，一份以 Python 为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
+2. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons">get_app</i></a></h2>
