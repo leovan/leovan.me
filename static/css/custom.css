@@ -77,7 +77,7 @@
 }
 
 @media print {
-  del, footer, .masthead {
+  del, footer, .masthead, .donate {
     display: none;
   }
 
