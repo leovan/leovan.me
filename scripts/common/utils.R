@@ -4,7 +4,7 @@ library(httr)
 library(jsonlite)
 library(rvest)
 
-ua <- 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
 
 #' 年份 转 年份可读文本
 #' 

@@ -107,11 +107,11 @@ auto_update_colunms <- c(
 
 movie_list_auto_update <- movie_list %>%
     filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
-    select(-auto_update_colunms)
+    select(-all_of(auto_update_colunms))
 
 movie_list_manual_update <- movie_list %>%
     filter(auto_update == 0 | (Sys.Date() - updated_date <= 30)) %>%
-    select(movie_list_columns)
+    select(all_of(movie_list_columns))
 
 movie_list_auto_update <- movie_list_auto_update %>%
     mutate(imdb_rating = get_movie_imdb_rating(imdb_id)) %>%
@@ -123,7 +123,7 @@ movie_list_auto_update %>%
            imdb_rating = as.numeric(imdb_rating),
            douban_rating = as.numeric(douban_rating)) %>%
     union_all(movie_list_manual_update) %>%
-    select(movie_list_columns) %>%
+    select(all_of(movie_list_columns)) %>%
     arrange(desc(release_date)) %>%
     write_tsv('../data/cn/movie-list.tsv')
 ```

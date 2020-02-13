@@ -82,11 +82,11 @@ auto_update_colunms <- c(
 
 book_list_auto_update <- book_list %>%
     filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
-    select(-auto_update_colunms)
+    select(-all_of(auto_update_colunms))
 
 book_list_manual_update <- book_list %>%
     filter(auto_update == 0 | (Sys.Date() - updated_date <= 30)) %>%
-    select(book_list_columns)
+    select(all_of(book_list_columns))
 
 book_list_auto_update <- book_list_auto_update %>%
     mutate(douban_info = map(douban_id, crawl_book_douban_info)) %>%
@@ -96,7 +96,7 @@ book_list_auto_update %>%
     mutate(updated_date = Sys.Date(),
            douban_rating = as.numeric(douban_rating)) %>%
     union_all(book_list_manual_update) %>%
-    select(book_list_columns) %>%
+    select(all_of(book_list_columns)) %>%
     arrange(desc(purchasing_date)) %>%
     write_tsv('../data/cn/book-list.tsv')
 ```
