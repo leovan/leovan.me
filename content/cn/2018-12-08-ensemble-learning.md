@@ -669,7 +669,7 @@ $$`
 `$$
 H \left(\mathbf{x}\right) = \begin{cases}
 c_j, & \displaystyle\sum_{i=1}^{M}{h_i^j \left(\mathbf{x}\right) > 0.5 \displaystyle\sum_{k=1}^{N}{\displaystyle\sum_{i=1}^{M}{h_i^k \left(\mathbf{x}\right)}}} \\
-\text{拒绝}, & \text{其他情况}
+\text{refuse}, & \text{other wise}
 \end{cases}
 $$`
 

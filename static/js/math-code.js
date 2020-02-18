@@ -13,7 +13,7 @@
           /^\\\[(.|\s)+\\\]$/.test(text) ||
           /^\$(.|\s)+\$$/.test(text) ||
           /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
+        code.outerHTML = '<span>' + code.innerHTML + '</span>';
         continue;
       }
     }
