@@ -197,7 +197,7 @@ AdaBoost 算法过程如下所示：
     \STATE $h_m \gets L\left(T_{sub}\right)$
     \STATE $\epsilon_m\gets Error\left(h_m\right)$
     \IF{$\epsilon_m > 0.5$}
-        \STATE \BREAK
+        \BREAK
     \ENDIF
     \STATE $\alpha_m \gets \dfrac{1}{2} \ln \dfrac{1 - \epsilon_m}{\epsilon_m}$
     \STATE $D_{m+1} \gets \dfrac{D_m \exp \left(-\alpha_m y h_m\left(x\right)\right)}{Z_m}$
@@ -412,14 +412,14 @@ GOSS 的做法是保留具有较大梯度的样本，并从具有较小梯度的
 \STATE $\text{searchOrder} \gets G.\text{sortByDegree}()$
 \STATE $\text{bundles} \gets \varnothing$
 \STATE $\text{bundlesConflict} \gets \varnothing$
-\FOR{$i$ \IN searchOrder}
+\FOR{$i$ $\in$ searchOrder}
     \STATE $\text{needNew} \gets$ \TRUE
     \FOR{$j = 1$ \TO len(bundles)}
         \STATE $\text{cnt} \gets$ ConflictCnt(bundles[$j$],F[$i$])
         \IF{cnt $+$ bundlesConflict[$i$] $\leq K$}
             \STATE bundles[$j$].add($F[i]$)
             \STATE $\text{needNew} \gets$ \FALSE
-            \STATE \BREAK
+            \BREAK
         \ENDIF
     \ENDFOR
     \IF{needNew}
@@ -449,7 +449,7 @@ GOSS 的做法是保留具有较大梯度的样本，并从具有较小梯度的
 \FUNCTION{MergeExclusiveFeatures}{$numData, F$}
 \STATE $\text{binRages} \gets \left\{0\right\}$
 \STATE $\text{totalBin} \gets 0$
-\FOR{$f$ \IN $F$}
+\FOR{$f$ $\in$ $F$}
     \STATE $\text{totalBin} \gets \text{totalBin} + \text{f.numBin}$
     \STATE $\text{binRanges} \gets \text{binRanges} \cup \text{totalBin}$
 \ENDFOR
