@@ -14,20 +14,12 @@ disable_adsense: true
 
 ## 研究兴趣
 
-### 当下
-
 - 深度学习 (Deep Learning)
 - 强化学习 (Reinforcement Learning)
-- 因果推断和推理 (Causal Inference & Reasoning)
-- 计算视觉 (Computer Vision)
-- 物联网 (Internet of Things, IoT, AIoT)
-- 智慧农业 (Intelligent Agriculture, Agritech)
-
-### 之前
-
 - 自然语言处理 (Natural Language Processing)
 - 复杂网络 (Complex Network)
 - 知识图谱 (Knowledge Graph)
+- 因果推断和推理 (Causal Inference & Reasoning)
 
 ## 教育背景
 
@@ -36,13 +28,7 @@ disable_adsense: true
 
 ## 工作经历
 
-### 全职
-
 1. 2015.03 ~ 至今 **京东数字科技 (京东金融)** 高级研究员
-
-### 实习
-
-1. 2013.11 ~ 2014.02 **方正国际软件有限公司** 算法工程师
 
 ## 项目经历
 
@@ -50,14 +36,18 @@ disable_adsense: true
 
 _2019.07 ~ 至今 高级研究员_
 
+- **智能种植和智能禽类解决方案**：主导构思和设计智能种植和智能禽类商业模式和智能技术解决方案。带领算法和产品团队设计和构建了整个解决方案中的相关数据和算法模型，SaaS 和 APP 原型设计，**从 0 到 1** 地实现了整体解决方案从 MVP 到真实生产环境的落地。
+- **智能环控**：设计和构建了基于时间序列分析，深度学习和强化学习的智能环控算法和解决方案。将智能环控算法拆解为环境模型和控制模型两部分，实现了同一作物和家畜在不同环境下种养殖模型的复用。通过专家知识引擎和机器学习算法实现了在保持现有能耗不变的前提下各项环境指标控制误差相比于人工降低了 **50%+**。参加 2019 年国际智慧温室种植挑战赛，在 24 小时 Hackathon 模拟挑战赛中，获得人工智能策略方法 **4/21** 名，虚拟西红柿种植净利润 **9/21** 名。
+- **智能集蛋**：设计和构建了一套基于计算机视觉和传感器智能集蛋装置和算法。在笼养模式下集蛋过程中，利用摄像头和传感器采集的数据实现了鸡蛋计数和所属笼体识别，准确率 **99%+**。通过鸡蛋所述笼体识别可能精准分析不同笼体内的料蛋比，为淘汰鸡提供强有力的数据支持，同时也为蛋品的溯源提供了更细维度的数据源。
+
 ### Daat (复杂网络和知识图谱)
 
 _2018.04 ~ 2019.06 项目负责人_
 
 - **数据知识工程和知识问答系统**：设计和构建数据仓库，数据集市和数据工具领域的知识本体，并据此进行知识抽取和知识库构建。设计和构建数据知识问答系统，包括：用户问题意图识别，槽填充，查询改写，结果排序以及基于深度语义模型 (DSSM) 的问题匹配。问答系统主要用于辅助数据使用者对于仓库和集市数据的查询使用，以及相关概念、流程、工具等方面问题的解答。
-- **自动化敏感信息识别**：对于入库到数据仓库中的数据进行自动敏感信息识别，辅助数据加密策略实施。根据数据的元信息 (例如：表名，表注释，字段名，字段注释等) 和值信息 (即字段存储的数据值)，利用 Wide & Deep 网络构建识别模型。提取传统特征构建 Wide 网络，针对文本特征，利用 Char Embedding + CNN 构建 Deep 网络，模型测试数据的 **F1-Score 为 95%+**。
-- **大规模异构网络嵌入**：实现针对**千万级别**顶点和**亿级别**边的异构网络嵌入算法。通过 Alias 方法进行高效地加权节点采样，实现了基于具有丰富业务含义元路径 (Meta-Path) 和其他算法的网络节点嵌入。利用异构网络节点嵌入结果作为节点特征 (例如：用户) 为其他业务模型和系统提供服务。
-- **基于用户网络和用户行为的推荐和营销**：通过用户的历史购买记录构建包含用户，商品 (实物，理财等) 等多类型节点和边的异构网络，并利用异构网络嵌入算法构建不同类型节点的向量表示。结合用户传统特征和用户在线行为，构建推荐候选结果生成和营销人群生成模型，结合最终业务模型，平均辅助**提升效果 20%+**。
+- **自动化敏感信息识别**：对于入库到数据仓库中的数据进行自动敏感信息识别，辅助数据加密策略实施。根据数据的元信息 (例如：表名，表注释，字段名，字段注释等) 和值信息 (即字段存储的数据值)，利用 Wide & Deep 网络构建识别模型。提取传统特征构建 Wide 网络，针对文本特征，利用 Char Embedding + CNN 构建 Deep 网络，模型测试数据的 F1-Score 为 **0.95+**。
+- **大规模异构网络嵌入**：实现针对**千万级别顶点**和**亿级别边**的异构网络嵌入算法。通过 Alias 方法进行高效地加权节点采样，实现了基于具有丰富业务含义元路径 (Meta-Path) 和其他算法的网络节点嵌入。利用异构网络节点嵌入结果作为节点特征 (例如：用户) 为其他业务模型和系统提供服务。
+- **基于用户网络和用户行为的推荐和营销**：通过用户的历史购买记录构建包含用户，商品 (实物，理财等) 等多类型节点和边的异构网络，并利用异构网络嵌入算法构建不同类型节点的向量表示。结合用户传统特征和用户在线行为，构建推荐候选结果生成和营销人群生成模型，结合最终业务模型，平均辅助提升效果 **20%+**。
 
 ### 全视之眼 (中文地址分析)
 
@@ -83,28 +73,20 @@ _2015.03 ~ 2015.10 算法设计和开发_
 - 设计开发一种基于 Bass 扩散模型，优化的时间序列相似度和聚类的混合产品生命周期识别模型，尾货识别**准确率 95%+**，辅助贷款方商品质押准入决策和质押率的制定。
 - 设计开发不同数据源的商品信息融合模型，相同商品识别**准确率 90%+**，配合 ElasticSearch 开发商品模糊匹配查询服务，为商品质押提供精准的价格等相关信息。
 
-### 智慧公安 (山海易绘 EzMap)
-
-_2013.11 ~ 2014.02 算法设计和开发_
-
-- 设计开发基于 EMD 和 SVR 的时间序列预测算法，用于犯罪分析和智慧城市中的时序预测。
-- 设计开发基于 k-Prototypes 的串并案算法设计，用于犯罪分析中的串并案分析。
-- 开发公安元数据导入工具和基于 XML 的警用地理信息系统数据库升级工具。
-
 ## 专业技能
 
 ### 开发语言
 
-- R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- HTML / CSS / JS: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- HTML / CSS / JavaScript: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 框架
 
 - Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- React: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### 工具
@@ -129,7 +111,7 @@ _2013.11 ~ 2014.02 算法设计和开发_
 ### 专利
 
 1. 一种中文地址分词方法及系统 (发明，[CN 105159949](http://epub.cnipa.gov.cn/patent/CN105159949B)，授权，第一发明人，2015)
-2. 一种产品库存预测方法及装置 (发明，[CN 106056239](http://epub.cnipa.gov.cn/patent/CN106056239A)，实审，第一发明人，2016)
+2. 一种产品库存预测方法及装置 (发明，[CN 106056239](http://epub.cnipa.gov.cn/patent/CN106056239A)，授权，第一发明人，2016)
 3. 一种产品生命周期的识别方法和装置 (发明，[CN 106408217](http://epub.cnipa.gov.cn/patent/CN106408217A)，实审，第一发明人，2017)
 4. 一种计算地址相似度的方法和装置 (发明，[CN 107239442](http://epub.cnipa.gov.cn/patent/CN107239442A)，实审，第一发明人，2017)
 5. 数据仓库信息处理方法、装置、系统、介质 (发明，[CN 109388637](http://epub.cnipa.gov.cn/patent/CN109388637A)，实审，第一发明人，2018)

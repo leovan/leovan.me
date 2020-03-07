@@ -16,41 +16,31 @@ disable_adsense: true
 
 ## Research Interest
 
-### Current
-
 - Deep Learning
 - Reinforcement Learning
-- Causal Inference & Reasoning
-- Computer Vision
-- Internet of Things, IoT, AIoT
-- Intelligent Agriculture, Agritech
-
-### Previously
-
 - Natural Language Processing
 - Complex Network
 - Knowledge Graph
+- Causal Inference & Reasoning
 
 ## Education
 
-- 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Business Management
-- 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Information Management
+- 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
+- 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Management
 
 ## Work Experiences
 
-### Full Time
-
-1. 2015.03 ~ Present, **JD Finance**, Senior Research Engineer
-
-### Intern
-
-1. 2013.11 ~ 2014.02, **Founder International Co., Ltd.**, Algorithm Engineer
+1. 2015.03 ~ Present, **JD Digits (JD Finance)**, Senior Research Engineer
 
 ## Project Experiences
 
 ### Intelligent Agriculture
 
 _2019.07 ~ Present, Senior Research Engineer_
+
+- **Intelligent Farming and Intelligent Poultry Solutions**: Lead the conception and design of intelligent farming and intelligent poultry business models and technology solutions. Led algorithm and product team members to build the relevant data and algorithm models, and design the prototype of SaaS and APP **from zero to one**, which achieves the implementation of the overall solution from MVP to the real production environment.
+- **Intelligent Environmental Control**: Design and development of intelligent environmental control algorithms and solutions based on time series analysis, deep learning and reinforcement learning. The intelligent environmental control algorithm consists two parts: environment models and control models. It realizes the reuse of models for same crop and livestock in different environments. With the expert knowledge engine and machine learning algorithms, the control error of various environmental indicators has been reduced by **50%+** compared with the manual while maintaining the existing energy consumption. Participate in the 2019 International Autonomous Greenhouse Challenge, in the 24-hour Hackathon simulation challenge, we achieved **4/21** of artificial intelligence strategy methods and **9/21** of net profit in virtual tomato planting.
+- **Intelligent Eggs Collection**: Design and development of an intelligent eggs collection device and algorithm based on computer vision and sensors. During the eggs collection process in cage raising mode, with the data collected by cameras and sensors, it achieves the eggs counting and the belonged cages identification with accuracy of **99%+**. Through the belonged cages identification, it is possible to analyze egg-feed ratio accurately, providing strong data support for hens elimination and a more detailed data source for eggs traceability.
 
 ### Daat (Complex Network & Knowledge Graph)
 
@@ -85,14 +75,6 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-### Smart Public Security (EzMap)
-
-_2013.11 ~ 2014.02, Algorithms Engineer_
-
-- Development of a series prediction algorithm based on EMD and SVR for crime analysis and time series prediction in smart city project.
-- Development of a serial crime cases identification algorithm based on k-Prototypes.
-- Development of public security metadata import tools and XML based police GIS database upgrade tools.
-
 ## Skills
 
 ### Programing Languages
@@ -100,13 +82,13 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 - R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
 - SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- HTML / CSS / JS: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Lisp: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- HTML / CSS / JavaScript: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### Frameworks
 
 - Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- React: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 - Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
 
 ### Tools
@@ -125,13 +107,13 @@ _2013.11 ~ 2014.02, Algorithms Engineer_
 
 ### Patents
 
-1. A kind of Chinese address segmenting method and system ([CN 105159949](https://patents.google.com/patent/CN105159949B/en), Issued, 2015)
-2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239A/en), Under Examination, 2016)
-3. Product life cycle identification method and device ([CN 106408217](https://patents.google.com/patent/CN106408217A/en), Under Examination, 2017)
-4. Address similarity calculation method and apparatus ([CN 107239442](https://patents.google.com/patent/CN107239442A/en), Under Examination, 2017)
-5. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637A/en), Under Examination, 2018)
-6. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), Under Examination, 2019)
-7. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), Under Examination, 2019)
+1. A kind of Chinese address segmenting method and system ([CN 105159949](https://patents.google.com/patent/CN105159949B/en), 2015)
+2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239A/en), 2016)
+3. Product life cycle identification method and device ([CN 106408217](https://patents.google.com/patent/CN106408217A/en), 2017)
+4. Address similarity calculation method and apparatus ([CN 107239442](https://patents.google.com/patent/CN107239442A/en), 2017)
+5. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637A/en), 2018)
+6. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), 2019)
+7. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), 2019)
 
 ### Open Source Projects
 
