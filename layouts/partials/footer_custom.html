@@ -32,8 +32,8 @@ document.addEventListener('keyup', function(e) {
 <script async src="/js/fix-footnote.js"></script>
 <script src="/js/math-code.js"></script>
 
-{{ partial "footer_pseudocode.html" . }}
 {{ partial "footer_mathjax.html" . }}
+{{ partial "footer_pseudocode.html" . }}
 
 {{ if $.Page.Scratch.Get "mdc" }}
 <script src="{{ $.Site.Params.materialComponentsWebCDN }}/material-components-web@{{ $.Site.Params.materialComponentsWebVersion }}/dist/material-components-web.min.js"></script>

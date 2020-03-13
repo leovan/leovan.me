@@ -40,6 +40,7 @@
             'dos': 'DOS', 'qml': 'QML', 'json': 'JSON', 'bash': 'Bash',
             'text': 'Text', 'txt': 'Text'
         };
+        
         Prism.hooks.add('before-highlight', function(env) {
         	var language = Languages[env.language] || env.language;
         	env.element.setAttribute('data-language', language);
