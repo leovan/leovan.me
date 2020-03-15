@@ -5,7 +5,6 @@ date: '2019-09-21'
 slug: international-autonomous-greenhouse-challenge
 categories:
   - 智慧农业
-  - Intelligent Agriculture
 tags:
   - 农业
   - Agriculture
