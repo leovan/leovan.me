@@ -115,11 +115,11 @@ params:
   videojsVersion: "7.7.4"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  materialDesignIconsVersion: "3.0.1"
-  materialDesignIconsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
   materialDesignWebFontVersion: "5.0.45"
   materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
+  materialComponentsWebVersion: "latest"	
+  materialComponentsWebCDN: "//unpkg.com"
   
   panguVersion: "4.0.7"
   panguCDN: "//cdnjs.cloudflare.com/ajax/libs"
