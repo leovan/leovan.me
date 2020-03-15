@@ -1,0 +1,321 @@
+:root {
+  --html-background-color-dark: #232323;
+  --body-background-color-dark: #2f2f2f;
+  --body-background-color-alpha-dark: rgba(47, 47, 47, 0.6);
+  --body-fore-color: #000;
+  --body-fore-color-dark: #e6e6e6;
+  --body-block-border-color: #444;
+  --body-block-border-color-dark: #e6e6e6;
+  --body-block-background-color-dark: #232323;
+  --body-code-fore-color-dark: #ccc;
+  --body-code-border-color-dark: #ddd;
+  --body-code-background-color-dark: #232323;
+  --body-code-background-color-alpha-dark: rgba(35, 35, 35, 0.6);
+}
+
+html {
+  background: var(--html-background-color-dark) !important;
+}
+
+body {
+  background: var(--body-background-color-dark) !important;
+  background: var(--body-background-color-alpha-dark) !important;
+}
+
+body, a, p {
+  color: var(--body-fore-color-dark);
+}
+
+.logo {
+  background-image: url(/images/avatar-light.svg);
+  background-repeat: no-repeat;
+}
+
+.main {
+  border-left: 3px solid var(--body-fore-color-dark);
+}
+
+blockquote {
+  border-left: 3px solid var(--body-block-border-color-dark);
+}
+
+#TableOfContents {
+  background-color: var(--body-block-background-color-dark);
+}
+
+table {
+  border-top: 1px solid var(--body-block-border-color-dark);
+  border-bottom: 1px solid var(--body-block-border-color-dark);
+}
+
+table thead th {
+  border-bottom: 1px solid var(--body-block-border-color-dark);
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: var(--body-block-background-color-dark);
+}
+
+.blockquote {
+  background: var(--body-block-background-color-dark);
+}
+
+.ps-root .ps-algorithm {
+  border-top: 1px solid var(--body-block-border-color-dark) !important;
+  border-bottom: 1px solid var(--body-block-border-color-dark) !important;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line:first-child {
+  border-bottom: 1px solid var(--body-block-border-color-dark) !important;
+}
+
+.douban-card {
+  background: var(--body-block-background-color-dark) !important;
+}
+
+code {
+  background: var(--body-code-background-color-dark) !important;
+  background: var(--body-code-background-color-alpha-dark) !important;
+}
+
+pre code {
+  border-top: 1px solid var(--body-code-border-color-dark) !important;
+  border-bottom: 1px solid var(--body-code-border-color-dark) !important;
+  background: var(--body-code-background-color-dark) !important;
+  background: var(--body-code-background-color-alpha-dark) !important;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  background: var(--body-code-background-color-dark) !important;
+  background: var(--body-code-background-color-alpha-dark) !important;
+  color: var(--body-code-fore-color-dark) !important;
+}
+
+pre[class*="language-"] > code[data-language]:before {
+  background: var(--body-code-border-color-dark) !important;
+  color: var(--body-code-background-color-dark) !important;
+}
+
+.token.comment {
+  color: #6272a4;
+}
+
+.token.prolog {
+  color: #cfcfc2;
+}
+
+.token.tag {
+  color: #dc68aa;
+}
+
+.token.entity {
+  color: #8be9fd;
+}
+
+.token.atrule {
+  color: #62ef75;
+}
+
+.token.url {
+  color: #66d9ef;
+}
+
+.token.selector {
+  color: #cfcfc2;
+}
+
+.token.string {
+  color: #f1fa8c;
+}
+
+.token.property {
+  color: #ffb86c;
+}
+
+.token.important {
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+.token.punctuation {
+  color: #ffffff;
+}
+
+.token.number {
+  color: #bd93f9;
+}
+
+.token.function {
+  color: #50fa7b;
+}
+
+.token.class-name {
+  color: #ffb86c;
+}
+
+.token.keyword {
+  color: #ff79c6;
+}
+
+.token.boolean {
+  color: #ffb86c;
+}
+
+.token.operator {
+  color: #8be9fd;
+}
+
+.token.char {
+  color: #ff879d;
+}
+
+.token.regex {
+  color: #50fa7b;
+}
+
+.token.variable {
+  color: #50fa7b;
+}
+
+.token.constant {
+  color: #ffb86c;
+}
+
+.token.symbol {
+  color: #ffb86c;
+}
+
+.token.builtin {
+  color: #ff79c6;
+}
+
+.token.attr-value {
+  color: #7ec699;
+}
+
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.namespace {
+  color: #e2777a;
+}
+
+.token {
+  color: #ff79c6;
+}
+
+.language-cpp .token.string {
+  color: #8be9fd;
+}
+
+.language-c .token.string {
+  color: #8be9fd;
+}
+
+.language-css .token.selector {
+  color: #50fa7b;
+}
+
+.language-css .token.property {
+  color: #ffb86c;
+}
+
+.language-java span.token.class-name {
+  color: #8be9fd;
+}
+
+.language-java .token.class-name {
+  color: #8be9fd;
+}
+
+.language-markup .token.attr-value {
+  color: #66d9ef;
+}
+
+.language-markup .token.tag {
+  color: #50fa7b;
+}
+
+.language-objectivec .token.property {
+  color: #66d9ef;
+}
+
+.language-objectivec .token.string {
+  color: #50fa7b;
+}
+
+.language-php .token.boolean {
+  color: #8be9fd;
+}
+
+.language-php .token.function {
+  color: #ff79c6;
+}
+
+.language-php .token.keyword {
+  color: #66d9ef;
+}
+
+.language-ruby .token.symbol {
+  color: #8be9fd;
+}
+
+.language-ruby .token.class-name {
+  color: #cfcfc2;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (min-width: 960px) {
+  html::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background: url(/images/little-bear-dark.png) no-repeat 50% 50%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    background: var(--html-background-color-dark);
+  }
+
+  body {
+    background: var(--body-background-color-dark);
+  }
+
+  .masthead {
+    border-bottom: 3px solid var(--body-block-border-color-dark);
+  }
+
+  .masthead .menu a {
+    color: var(--body-block-border-color-dark);
+    background: var(--body-block-border-color);
+  }
+
+  .masthead .menu .active a {
+    border: 1px solid var(--body-block-border-color-dark);
+    color: var(--body-fore-color-dark);
+  }
+}

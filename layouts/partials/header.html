@@ -2,7 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     {{ partial "header_meta.html" . }}
     {{ partial "header_json_ld.html" . }}
@@ -11,18 +11,15 @@
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
-    
     {{ partial "header_custom.html" . }}
-    
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}">
   </head>
 
   {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     <header class="masthead">
-      {{ partial "tagline.html" . }}
+      {{ partial "logo.html" . }}
       {{ partial "menu.html" . }}
+      <script src="/js/toggle-theme.js"></script>
     </header>
 
     <article class="main">

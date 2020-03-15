@@ -1,0 +1,221 @@
+:root {
+  --html-background-color: #fafafa;
+  --body-background-color: #fff;
+  --body-background-color-alpha: rgba(255, 255, 255, 0.6);
+  --body-fore-color: #000;
+  --body-fore-color-dark: #e6e6e6;
+  --body-block-border-color: #444;
+  --body-block-border-color-dark: #e6e6e6;
+  --body-block-background-color: #eee;
+  --body-code-fore-color: #4f424c;
+  --body-code-border-color: #ddd;
+  --body-code-background-color: #f9f9f9;
+  --body-code-background-color-alpha: rgba(249, 249, 249, 0.6);
+}
+
+html {
+  background: var(--html-background-color) !important;
+}
+
+body {
+  background: var(--body-background-color) !important;
+  background: var(--body-background-color-alpha) !important;
+}
+
+body, a, p {
+  color: var(--body-fore-color);
+}
+
+.logo {
+  background-image: url(/images/avatar-dark.svg);
+  background-repeat: no-repeat;
+}
+
+.main {
+  border-left: 3px solid var(--body-fore-color);
+}
+
+blockquote {
+  border-left: 3px solid var(--body-block-border-color);
+}
+
+#TableOfContents {
+  background-color: var(--body-block-background-color);
+}
+
+table {
+  border-top: 1px solid var(--body-block-border-color);
+  border-bottom: 1px solid var(--body-block-border-color);
+}
+
+table thead th {
+  border-bottom: 1px solid var(--body-block-border-color);
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: var(--body-block-background-color);
+}
+
+.blockquote {
+  background: var(--body-block-background-color);
+}
+
+.ps-root .ps-algorithm {
+  border-top: 1px solid var(--body-block-border-color) !important;
+  border-bottom: 1px solid var(--body-block-border-color) !important;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line:first-child {
+  border-bottom: 1px solid var(--body-block-border-color) !important;
+}
+
+.douban-card {
+  background: var(--body-block-background-color) !important;
+}
+
+code {
+  background: var(--body-code-background-color) !important;
+  background: var(--body-code-background-color-alpha) !important;
+}
+
+pre code {
+  border-top: 1px solid var(--body-code-border-color) !important;
+  border-bottom: 1px solid var(--body-code-border-color) !important;
+  background: var(--body-code-background-color) !important;
+  background: var(--body-code-background-color-alpha) !important;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  background: var(--body-code-background-color) !important;
+  background: var(--body-code-background-color-alpha) !important;
+  color: var(--body-code-fore-color) !important;
+}
+
+pre[class*="language-"] > code[data-language]:before {
+  background: var(--body-code-border-color) !important;
+  color: var(--body-code-fore-color) !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #a39e9b;
+}
+
+.token.punctuation {
+  color: #4f424c;
+}
+
+.token.null,
+.token.operator,
+.token.boolean,
+.token.number {
+  color: #f99b15;
+}
+
+.token.property {
+  color: #fec418;
+}
+
+.token.tag {
+  color: #06b6ef;
+}
+
+.token.string {
+  color: #5bc4bf;
+}
+
+.token.selector {
+  color: #815ba4;
+}
+
+.token.attr-name {
+  color: #f99b15;
+}
+
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #5bc4bf;
+}
+
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #48b685;
+}
+
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #5bc4bf;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #06b6ef;
+}
+
+.token.important {
+  color: #ef6155;
+  font-weight: bold;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (min-width: 960px) {
+  html::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background: url(/images/little-bear-light.png) no-repeat 50% 50%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    background: var(--html-background-color);
+  }
+
+  body {
+    background: var(--body-background-color);
+  }
+
+  .masthead {
+    border-bottom: 3px solid var(--body-fore-color);
+  }
+
+  .masthead .menu a {
+    color: var(--body-background-color);
+    background: var(--body-block-border-color);
+  }
+
+  .masthead .menu .active a {
+    border: 1px solid var(--body-block-border-color);
+    color: var(--body-fore-color);
+  }
+}

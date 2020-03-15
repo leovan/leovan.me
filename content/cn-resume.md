@@ -12,7 +12,7 @@ disable_adsense: true
 
 ## 范叶亮
 
-## 研究兴趣
+## <span class="mdi mdi-bullseye-arrow"></span> 研究兴趣
 
 - 深度学习 (Deep Learning)
 - 强化学习 (Reinforcement Learning)
@@ -21,16 +21,16 @@ disable_adsense: true
 - 知识图谱 (Knowledge Graph)
 - 因果推断和推理 (Causal Inference & Reasoning)
 
-## 教育背景
+## <span class="mdi mdi-school-outline"></span> 教育背景
 
 - 2012.09 ~ 2015.03 **河北工业大学** 信息管理 硕士
 - 2008.09 ~ 2012.07 **河北工业大学** 工商管理 学士
 
-## 工作经历
+## <span class="mdi mdi-account-group-outline"></span> 工作经历
 
 1. 2015.03 ~ 至今 **京东数字科技 (京东金融)** 高级研究员
 
-## 项目经历
+## <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
 
 ### 智慧农业
 
@@ -73,34 +73,34 @@ _2015.03 ~ 2015.10 算法设计和开发_
 - 设计开发一种基于 Bass 扩散模型，优化的时间序列相似度和聚类的混合产品生命周期识别模型，尾货识别**准确率 95%+**，辅助贷款方商品质押准入决策和质押率的制定。
 - 设计开发不同数据源的商品信息融合模型，相同商品识别**准确率 90%+**，配合 ElasticSearch 开发商品模糊匹配查询服务，为商品质押提供精准的价格等相关信息。
 
-## 专业技能
+## <span class="mdi mdi-cog-outline"></span> 专业技能
 
 ### 开发语言
 
-- Python: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- R: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- SQL: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- HTML / CSS / JavaScript: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### 框架
 
-- Tensorflow: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- PyTorch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- React: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
-- Qt: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i><i class="material-icons">star\_border</i>
+- Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### 工具
 
-- Axure: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- Sketch: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
-- Omnigraffle: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star\_border</i>
+- Axure: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- Sketch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- Omnigraffle: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 
 ### 外语能力
 
 - 英语: CET6，能说，会写，菜单就都不懂了...
 - 韩语: 为了更好的看懂优秀的韩国电影努力学习中...
 
-## 研究成果
+## <span class="mdi mdi-seal-variant"></span> 研究成果
 
 ### 论文
 
@@ -125,4 +125,4 @@ _2015.03 ~ 2015.10 算法设计和开发_
 2. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)，Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
 
-<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-icons">get_app</i></a></h2>
+<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>

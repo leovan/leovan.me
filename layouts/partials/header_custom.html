@@ -1,12 +1,15 @@
 <script async src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js'></script>
+<script src='{{ $.Site.Params.jsCookieCDN }}/js-cookie/{{ $.Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
 
-{{ if not .IsHome }}
-<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.materialDesignIconsCDN }}/material-design-icons/{{ $.Site.Params.materialDesignIconsVersion }}/iconfont/material-icons.min.css">
-{{ end }}
+<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.materialDesignWebFontCDN }}/MaterialDesign-Webfont/{{ $.Site.Params.materialDesignWebFontVersion }}/css/materialdesignicons.css">
 
 {{ partial "header_prismjs.html" . }}
 {{ partial "google_analytics.html" . }}
 {{ partial "google_adsense.html" . }}
 
+<link rel="stylesheet" type="text/css" href="{{ "/css/fonts.css" | relURL }}" />
 <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/light.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/dark.css" | relURL }}" id="dark-mode-style" disabled="disabled">
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">

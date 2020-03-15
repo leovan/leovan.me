@@ -16,17 +16,17 @@ permalinks:
 
 menu:
   main:
-    - name: "关于"
-      url: "/cn/about/"
-      weight: 1
     - name: "博客"
       url: "/cn/"
+      weight: 1
+    - name: "关于"
+      url: "/cn/about/"
       weight: 2
-    - name: "About"
-      url: "/en/about/"
-      weight: 3
     - name: "Blog"
       url: "/en/"
+      weight: 3
+    - name: "About"
+      url: "/en/about/"
       weight: 4
   en:
     - name: "Home"
@@ -91,6 +91,9 @@ params:
   disqusURL: "https://leovan.me"
   googleAdsense: "ca-pub-2608165017777396"
   
+  jsCookieVersion: "2.2.1"
+  jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
   prismjsVersion: "1.19.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsLang: ["r", "python", "markup", "yaml", "latex", "bash", "powershell", "javascript"]
@@ -115,11 +118,11 @@ params:
   materialDesignIconsVersion: "3.0.1"
   materialDesignIconsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
+  materialDesignWebFontVersion: "5.0.45"
+  materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
   panguVersion: "4.0.7"
   panguCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
-  materialComponentsWebVersion: "latest"
-  materialComponentsWebCDN: "//unpkg.com"
   
   APlayerVersion: "1.10.1"
   APlayerCDN: "//cdnjs.cloudflare.com/ajax/libs"
@@ -127,11 +130,7 @@ params:
   MetingJSVersion: "latest"
   MetingJSCDN: "//unpkg.com"
 
-  logo:
-    img: "/images/avatar.svg"
-    url: "/"
-    alt: "Mr. Black"
-    tag: "Soldier to Solider"
+  slogan: "Soldier to Solider"
 
   author:
     en: "Leo Van"
@@ -180,6 +179,8 @@ params:
     
 markup:
   defaultMarkdownHandler: blackfriday
+  highlight:
+    codeFences: false
   blackfriday:
     extensionsmask: ["noIntraEmphasis"]
     hrefTargetBlank: true

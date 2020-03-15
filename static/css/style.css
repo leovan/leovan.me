@@ -3,7 +3,6 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   box-sizing: border-box;
-  background: #fafafa;
 }
 
 *, *:before, *:after {
@@ -13,8 +12,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.6);
 }
 
 button, input, select, textarea, label {
@@ -60,7 +57,6 @@ h3, h4, h5, h6 {
 blockquote {
   margin: 1em 0;
   padding: 0 2em;
-  border-left: 3px solid #ddd;
 }
 
 h4, h5, h6 {
@@ -85,23 +81,13 @@ iframe, twitterwidget, video {
   margin: auto;
 }
 
-table {
-  min-width: 50%;
-  max-width: 100%;
-  margin: auto;
-}
-
 /* Code */
 
 code {
   font-size: 0.9em;
-  background: #f9f9f9 !important;
 }
 
 pre code {
-  border-top: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
-  background: #f9f9f9 !important;
   text-shadow: none;
 }
 
@@ -130,8 +116,6 @@ code[class*="language-"], pre[class*="language-"] {
 
 pre[class*="language-"] > code[data-language]:before {
   content: attr(data-language);
-  color: black;
-  background-color: #cfcfcf;
   display: inline-block;
   position: absolute;
   top: 0;
@@ -162,8 +146,6 @@ code[class*="language-"], pre[class*="language-"] {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  color: #000;
-  background: #e7e9db;
 }
 
 pre[class*="language-"] {
@@ -195,7 +177,6 @@ li {
 /* Links */
 
 a {
-  color: black;
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid;
@@ -262,7 +243,6 @@ body {
   width: 700px;
   padding: 32px 10px 20px 50px;
   margin-left: 260px;
-  border-left: 3px solid black;
   min-height: calc(100vh - 60px);
 }
 
@@ -281,7 +261,7 @@ body {
   border-bottom: none;
 }
 
-.masthead .tagline {
+.masthead .slogan {
   font-style: italic;
   text-align: right;
 }
@@ -305,14 +285,6 @@ body {
   content: "•\00a\000a0\00a0"
 }
 
-#menu-check {
-  display: none;
-}
-
-#menu-label {
-  display: none;
-}
-
 /* Main */
 
 .main .title h1 {
@@ -327,7 +299,6 @@ body {
 
 .subtitle {
   font-size: .9em;
-  color: #666;
 }
 
 /* Footnotes */
@@ -339,21 +310,14 @@ body {
 /* Tables */
 
 table {
+  min-width: 50%;
+  max-width: 100%;
   margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-
-table thead th {
-  border-bottom: 1px solid #666;
+  border-collapse: collapse;
 }
 
 th, td {
   padding: 5px;
-}
-
-thead, tfoot, tr:nth-child(even) {
-  background: #f8f8f8;
 }
 
 /* Utility Styles */
@@ -365,265 +329,25 @@ thead, tfoot, tr:nth-child(even) {
   user-select: none;
 }
 
-@-ms-viewport {
-  width: device-width;
+.logo {
+  height: 140px;
+  background-position: right;
 }
 
-@viewport {
-  width: device-width;
+.slogan {
+  font-weight: bold;
 }
 
-/* Different size screens */
-
-@media screen and (min-width: 960px) {
-  html {
-    background-image: url(/images/little-bear-light.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }
-
-  .masthead {
-    position: fixed;
-    top: 2em;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  html {
-    background: #fafafa;
-  }
-
-  body {
-    width: auto;
-    max-width: 700px;
-    background: #fff;
-    padding: 10px 0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: 2em auto 1.5em auto;
-  }
-
-  .title h2, .title h3 {
-    margin: 1.5em auto;
-  }
-
-  .main .title h1 {
-    margin: 1em auto 0 auto;
-  }
-
-  .masthead {
-    width: auto;
-    float: none;
-    padding: 20px 0 60px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-bottom: 3px solid black;
-  }
-
-  .main {
-    width: auto;
-    padding: 40px 10px;
-    margin-left: 0;
-    border-left: none;
-    min-height: auto;
-  }
-
-  .masthead h1 {
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .masthead .tagline {
-    text-align: center;
-    display: none;
-  }
-
-  .masthead .menu {
-    direction: ltr;
-    max-width: 300px;
-    max-width: inherit;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .masthead .menu ul {
-    text-align: left;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu ul ul {
-    margin: 0;
-  }
-
-  .masthead .menu li {
-    border-bottom: 1px solid;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu li:first-child {
-    border-top: 1px solid;
-  }
-
-  .masthead .menu li li:last-child {
-    border-bottom: none;
-  }
-
-  .masthead .menu a {
-    display: block;
-    padding: 15px 20px;
-    border-bottom: none;
-    display: inline-block;
-    padding: 5px 10px;
-    background: #444;
-    color: #fff;
-    border-radius: 5px;
-  }
-
-  .masthead .menu .active a {
-    background: none;
-    border: 1px solid #444;
-    color: #000;
-  }
-
-  .masthead .menu li li a {
-    padding-left: 30px;
-  }
-
-  .masthead .menu li li::before {
-    content: none;
-  }
-
-  .masthead .menu li li a::before {
-    content: "•\00a0\00a0\00a0";
-  }
-
-  .masthead .menu li, .masthead .menu li:first-child {
-    border: none;
-    display: inline-block;
-    margin-top: 5px;
-  }
-
-  .masthead .menu .menu-separator {
-    display: none;
-  }
-
-  #menu-label {
-    display: inline-block;
-    padding: 0 20px;
-    height: 50px;
-    border: 1px solid;
-    cursor: pointer;
-    line-height: 50px;
-    color: #333;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  #menu-label:hover, #menu-label:focus {
-    border: 1px solid #888;
-  }
-
-  #menu-label .icon {
-    padding-right: 8px;
-    width: 30px;
-  }
-
-  #menu-check ~ label .close-icon {
-    display: none;
-  }
-
-  #menu-check ~ label .open-icon {
-    display: inline-block;
-  }
-
-  #menu-check:checked ~ label .close-icon {
-    display: inline-block;
-  }
-
-  #menu-check:checked ~ label .open-icon {
-    display: none;
-  }
-
-  #menu-check ~ ul {
-    display: none;
-  }
-
-  #menu-check:checked ~ ul {
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 0;
-  }
-}
-
-/* Landscape phone screens and smaller */
-
-@media screen and (max-width: 720px) {
-}
-
-/* Portrait phone screens */
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  h3, h4, h5, h6 {
-    font-size: 16px;
-  }
-
-  pre, code {
-    font-size: 12px;
-  }
-
-  .masthead {
-    padding-top: 0;
-  }
-}
-
-@media print {
-  del, footer, .masthead, .donate {
-    display: none;
-  }
-
-  body {
-    color: black;
-    max-width: 700px;
-  }
-
-  .main {
-    margin-left: 0;
-    border-left: none;
-    padding-left: 10px;
-  }
-}
-
-#TableOfContents {
-  background-color: #f8f8f8;
-  padding: .5em;
-}
-
-.ps-root .ps-algorithm {
-  border-top: 2px solid !important;
-}
-
-.menu li:not([class]) a, a:hover, .copyright a {
+.menu li:not([class]) a, a:hover, .no-border-bottom a {
   border-bottom: none;
+}
+
+.light-dark-mode {
+  list-style-type: none;
+}
+
+.light-dark-mode a {
+  cursor: pointer;
 }
 
 .main {
@@ -636,10 +360,6 @@ thead, tfoot, tr:nth-child(even) {
 
 .masthead h1 {
   margin-bottom: 0;
-}
-
-.masthead img {
-  max-width: 100px;
 }
 
 .masthead .menu .menu-separator {
@@ -663,10 +383,6 @@ thead, tfoot, tr:nth-child(even) {
   font-size: 24px;
 }
 
-.tagline {
-  font-weight: bold;
-}
-
 .post-meta {
   font-size: 0.9em;
   line-height: 1.8em;
@@ -679,6 +395,10 @@ thead, tfoot, tr:nth-child(even) {
   border-bottom: 0;
 }
 
+#TableOfContents {
+  padding: .5em;
+}
+
 .figcaption {
   margin: 1em auto 1em;
   text-align: center;
@@ -686,6 +406,14 @@ thead, tfoot, tr:nth-child(even) {
 
 .pseudocode {
   display: none;
+}
+
+.ps-root .ps-algorithm {
+  border-top: 1px solid !important;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line:first-child {
+  border-bottom: 1px solid !important;
 }
 
 .footnote-ref:before {
@@ -721,7 +449,6 @@ img[alt="github-stars"] {
   display: block;
   padding: 1em;
   margin: 1em auto 1em;
-  background: #eee;
 }
 
 footer .adsbygoogle {
@@ -764,4 +491,183 @@ footer .adsbygoogle {
 
 .aplayer {
   margin: 1em auto !important;
+}
+
+.terms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.term {
+  flex: 1 1 auto;
+  margin: 0.6em;
+}
+
+/* Different size screens */
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+@media screen and (min-width: 960px) {
+  .masthead {
+    position: fixed;
+    top: 2em;
+  }
+
+  .light-dark-mode {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    width: auto;
+    max-width: 700px;
+    padding: 10px 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 2em auto 1.5em auto;
+  }
+
+  .logo {
+    background-position: center;
+  }
+
+  .title h2, .title h3 {
+    margin: 1.5em auto;
+  }
+
+  .main .title h1 {
+    margin: 1em auto 0 auto;
+  }
+
+  .masthead {
+    width: auto;
+    float: none;
+    padding: 1em 40px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main {
+    width: auto;
+    padding: 0 20px;
+    margin-left: 0;
+    border-left: none !important;
+    min-height: auto;
+  }
+
+  .masthead h1 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .masthead .slogan {
+    text-align: center;
+    display: none;
+  }
+
+  .masthead .menu {
+    direction: ltr;
+    max-width: 300px;
+    max-width: inherit;
+    margin-top: 10px;
+  }
+
+  .masthead .menu ul {
+    text-align: left;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .masthead .menu ul ul {
+    margin: 0;
+  }
+
+  .masthead .menu li {
+    border-bottom: 1px solid;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .masthead .menu li:first-child {
+    border-top: 1px solid;
+  }
+
+  .masthead .menu li li:last-child {
+    border-bottom: none;
+  }
+
+  .masthead .menu a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .masthead .menu .active a {
+    background: none;
+  }
+
+  .masthead .menu li li a {
+    padding-left: 30px;
+  }
+
+  .masthead .menu li li::before {
+    content: none;
+  }
+
+  .masthead .menu li li a::before {
+    content: "•\00a0\00a0\00a0";
+  }
+
+  .masthead .menu li, .masthead .menu li:first-child {
+    border: none;
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .masthead .menu .menu-separator {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3, h4, h5, h6 {
+    font-size: 16px;
+  }
+
+  pre, code {
+    font-size: 12px;
+  }
+
+  .masthead {
+    padding-top: 0;
+  }
 }

@@ -5,5 +5,6 @@
   <li{{ if eq .URL $currentPage.RelPermalink }} class="active"{{ else if eq .URL "#menu-separator" }} class="menu-separator"{{ end }}>{{ if ne .URL "#menu-separator" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ else }}<span>&nbsp;</span>{{ end }}</li>
   {{ end }}
   {{ partial "menu_extra.html" . }}
+  <li class="light-dark-mode no-border-bottom"><a id="light-dark-mode-action"><span id="light-dark-mode-icon" class="mdi mdi-weather-night"></span></a></li>
   </ul>
 </nav>

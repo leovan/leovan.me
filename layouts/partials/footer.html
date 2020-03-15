@@ -2,7 +2,7 @@
   {{ partial "footer_custom.html" . }}
   {{ with .Site.Params.footer }}
   <hr>
-  <div class="copyright">{{ . | markdownify }}</div>
+  <div class="copyright no-border-bottom">{{ . | markdownify }}</div>
   {{ end }}
   </footer>
   </article>
