@@ -4,7 +4,7 @@ library(httr)
 library(jsonlite)
 library(rvest)
 
-ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
 
 #' 年份 转 年份可读文本
 #' 
@@ -65,7 +65,7 @@ format_month_day <- function(date) {
 #'
 #' @param imdb_id IMDB ID
 #' @return 电影 IMDB 评分
-get_movie_imdb_rating <- function(imdb_id) {
+get_video_imdb_rating <- function(imdb_id) {
     rating <- NA
     
     if (!is.na(imdb_id)) {
@@ -90,13 +90,13 @@ get_movie_imdb_rating <- function(imdb_id) {
     
     rating
 }
-get_movie_imdb_rating <- Vectorize(get_movie_imdb_rating)
+get_video_imdb_rating <- Vectorize(get_video_imdb_rating)
 
 #' 根据豆瓣 ID 爬取豆瓣电影信息
 #'
 #' @param douban_id 豆瓣 ID
 #' @return 豆瓣电影信息
-crawl_movie_douban_info <- function(douban_id) {
+crawl_video_douban_info <- function(douban_id) {
     info <- tibble(
         name_zh = NA, name = NA, directors = NA, casts = NA, countries = NA,
         genres = NA, release_date = NA, douban_rating = NA)
@@ -255,7 +255,7 @@ gen_imdb_id_html <- function(imdb_id) {
 #' @param imdb_rating IMDB RATING
 #' @param douban_id IMDB ID
 #' @return IMDB RATING 的 HTML 代码
-gen_movie_imdb_rating_link_html <- function(imdb_rating, imdb_id) {
+gen_video_imdb_rating_link_html <- function(imdb_rating, imdb_id) {
     if (is.na(imdb_rating) || is.na(imdb_id)) {
         imdb_rating
     } else {
@@ -263,7 +263,7 @@ gen_movie_imdb_rating_link_html <- function(imdb_rating, imdb_id) {
         gen_linked_text_html(imdb_rating, link)
     }
 }
-gen_movie_imdb_rating_link_html <- Vectorize(gen_movie_imdb_rating_link_html)
+gen_video_imdb_rating_link_html <- Vectorize(gen_video_imdb_rating_link_html)
 
 #' 获取豆瓣 ID 的 HTML 代码
 #' 
@@ -278,15 +278,15 @@ gen_douban_id_html <- function(douban_id) {
 #' @param douban_rating 豆瓣 RATING
 #' @param douban_id 豆瓣 ID
 #' @return 豆瓣电影 LINKG 的 HTML 代码
-gen_movie_douban_rating_link_html <- function(douban_rating, douban_id) {
+gen_video_douban_rating_link_html <- function(douban_rating, douban_id) {
     if (is.na(douban_rating) || is.na(douban_id)) {
         douban_rating
     } else {
-        link <- glue('https://movie.douban.com/subject/{douban_id}')
+        link <- glue('https://video.douban.com/subject/{douban_id}')
         gen_linked_text_html(douban_rating, link)
     }
 }
-gen_movie_douban_rating_link_html <- Vectorize(gen_movie_douban_rating_link_html)
+gen_video_douban_rating_link_html <- Vectorize(gen_video_douban_rating_link_html)
 
 #' 获取豆瓣书籍 LINK 的 HTML 代码
 #' 

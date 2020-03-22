@@ -3,7 +3,7 @@ title: 影视
 author: 范叶亮
 date: '2017-12-04'
 lastmod: '`r Sys.Date()`'
-slug: cn/movies
+slug: cn/videos
 description: '共鸣，情愫，观念，认知，体验，情怀'
 disable_author_date: true
 disable_donate: true
@@ -35,21 +35,21 @@ output_col_names <- c(
     '打个分'
 )
 
-movie_list <- read_tsv(
-    '../data/cn/movie-list.tsv',
+video_list <- read_tsv(
+    '../data/cn/video-list.tsv',
     col_types = 'cccccccccDDdddiD')
 
-movie_table <- function(movies) {
-    which_year <- movies[1, ]$release_year
+video_table <- function(videos) {
+    which_year <- videos[1, ]$release_year
     which_year <- gen_which_year(which_year)
     header_ <- paste0('<h2>', which_year, '</h2>')
-    table_ <- movies %>%
+    table_ <- videos %>%
         arrange(desc(release_date), directors, name_zh) %>%
         select(c('imdb_id_html', 'douban_id_html',
                  'name_zh_html', 'directors', 'casts',
                  'imdb_rating_html', 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
-        kable("html", escape = F, table.attr = 'class="movie-table"') %>%
+        kable("html", escape = F, table.attr = 'class="video-table"') %>%
         clean_html_table()
     footer_ <- '<br/>'
     
@@ -76,7 +76,7 @@ split_top_n_concat <- function(string, pattern, n) {
 }
 split_top_n_concat <- Vectorize(split_top_n_concat)
 
-movie_list %>%
+video_list %>%
     mutate(
         directors = directors %>% split_top_n_concat(',', 1),
         casts = casts %>% split_top_n_concat(',', 3),
@@ -84,19 +84,19 @@ movie_list %>%
         imdb_id_html = gen_imdb_id_html(imdb_id),
         douban_id_html = gen_douban_id_html(douban_id),
         name_zh_html = gen_linked_text_html(name_zh, blog_link),
-        imdb_rating_html = gen_movie_imdb_rating_link_html(
+        imdb_rating_html = gen_video_imdb_rating_link_html(
             imdb_rating, imdb_id),
-        douban_rating_html = gen_movie_douban_rating_link_html(
+        douban_rating_html = gen_video_douban_rating_link_html(
             douban_rating, douban_id)) %>%
-    ddply(.(release_year), movie_table) %>%
+    ddply(.(release_year), video_table) %>%
     arrange(desc(release_year)) %>%
     select(table_) %>%
     unlist %>%
     cat
 ```
 
-```{r update_movie_info, eval=F, include=F}
-movie_list_columns <- c(
+```{r update_video_info, eval=F, include=F}
+video_list_columns <- c(
     'imdb_id', 'douban_id', 'blog_link', 'name_zh', 'name',
     'directors', 'casts', 'countries', 'genres',
     'release_date', 'watch_date', 'imdb_rating', 'douban_rating', 'rating',
@@ -105,25 +105,25 @@ auto_update_colunms <- c(
     'name_zh', 'name', 'directors', 'casts', 'countries', 'genres',
     'release_date', 'imdb_rating', 'douban_rating')
 
-movie_list_auto_update <- movie_list %>%
+video_list_auto_update <- video_list %>%
     filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
     select(-all_of(auto_update_colunms))
 
-movie_list_manual_update <- movie_list %>%
+video_list_manual_update <- video_list %>%
     filter(auto_update == 0 | (Sys.Date() - updated_date <= 30)) %>%
-    select(all_of(movie_list_columns))
+    select(all_of(video_list_columns))
 
-movie_list_auto_update <- movie_list_auto_update %>%
-    mutate(imdb_rating = get_movie_imdb_rating(imdb_id)) %>%
-    mutate(douban_info = map(douban_id, crawl_movie_douban_info)) %>%
+video_list_auto_update <- video_list_auto_update %>%
+    mutate(imdb_rating = get_video_imdb_rating(imdb_id)) %>%
+    mutate(douban_info = map(douban_id, crawl_video_douban_info)) %>%
     unnest_wider(douban_info)
 
-movie_list_auto_update %>%
+video_list_auto_update %>%
     mutate(updated_date = Sys.Date(),
            imdb_rating = as.numeric(imdb_rating),
            douban_rating = as.numeric(douban_rating)) %>%
-    union_all(movie_list_manual_update) %>%
-    select(all_of(movie_list_columns)) %>%
+    union_all(video_list_manual_update) %>%
+    select(all_of(video_list_columns)) %>%
     arrange(desc(release_date)) %>%
-    write_tsv('../data/cn/movie-list.tsv')
+    write_tsv('../data/cn/video-list.tsv')
 ```
