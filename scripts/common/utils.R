@@ -282,7 +282,7 @@ gen_video_douban_rating_link_html <- function(douban_rating, douban_id) {
     if (is.na(douban_rating) || is.na(douban_id)) {
         douban_rating
     } else {
-        link <- glue('https://video.douban.com/subject/{douban_id}')
+        link <- glue('https://movie.douban.com/subject/{douban_id}')
         gen_linked_text_html(douban_rating, link)
     }
 }
