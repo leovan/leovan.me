@@ -6,11 +6,12 @@
   --body-fore-color-dark: #e6e6e6;
   --body-block-border-color: #444;
   --body-block-border-color-dark: #e6e6e6;
-  --body-block-background-color-dark: #232323;
+  --body-block-background-color-dark: #383838;
   --body-code-fore-color-dark: #ccc;
   --body-code-border-color-dark: #ddd;
-  --body-code-background-color-dark: #232323;
-  --body-code-background-color-alpha-dark: rgba(35, 35, 35, 0.6);
+  --body-code-background-color-dark: #383838;
+  --body-code-background-color-alpha-dark: rgba(56, 56, 56, 0.6);
+  --body-box-shadow: rgba(0, 0, 0, .25);
 }
 
 html {
@@ -27,7 +28,7 @@ body, a, p {
 }
 
 .logo {
-  background-image: url(/images/avatar-light.svg);
+  background-image: url(/images/avatar-light-theme.svg);
   background-repeat: no-repeat;
 }
 
@@ -71,6 +72,40 @@ thead, tfoot, tr:nth-child(even) {
 
 .douban-card {
   background: var(--body-block-background-color-dark) !important;
+  box-shadow: 0 2px 4px var(--body-box-shadow), 0 0 2px var(--body-box-shadow);
+}
+
+.douban-card--rating {
+  color: var(--body-fore-color-dark);
+}
+
+.aplayer {
+  background: var(--body-block-background-color-dark) !important;
+}
+
+.aplayer .aplayer-info .aplayer-music .aplayer-author {
+  color: #D3D3D3 !important;
+}
+
+.aplayer .aplayer-lrc:before {
+  display: none !important;
+}
+
+.aplayer .aplayer-lrc:after {
+  background: linear-gradient(to bottom, rgba(56, 56, 56, 0) 0%, rgba(56, 56, 56, 0.8) 100%) !important;
+}
+
+.aplayer .aplayer-lrc p {
+  color: #D3D3D3 !important;
+}
+
+.donate-box {
+  background: var(--body-background-color-dark) !important;
+}
+
+.donate-box-header {
+  background: var(--body-code-background-color-dark) !important;
+  color: var(--body-fore-color-dark) !important;
 }
 
 code {

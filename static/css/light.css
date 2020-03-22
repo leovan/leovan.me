@@ -11,6 +11,7 @@
   --body-code-border-color: #ddd;
   --body-code-background-color: #f9f9f9;
   --body-code-background-color-alpha: rgba(249, 249, 249, 0.6);
+  --body-box-shadow: rgba(0, 0, 0, .25);
 }
 
 html {
@@ -27,7 +28,7 @@ body, a, p {
 }
 
 .logo {
-  background-image: url(/images/avatar-dark.svg);
+  background-image: url(/images/avatar-dark-theme.svg);
   background-repeat: no-repeat;
 }
 
@@ -71,6 +72,11 @@ thead, tfoot, tr:nth-child(even) {
 
 .douban-card {
   background: var(--body-block-background-color) !important;
+  box-shadow: 0 2px 4px var(--body-box-shadow), 0 0 2px var(--body-box-shadow);
+}
+
+.donate-button {
+  color: var(--body-fore-color-dark);
 }
 
 code {

@@ -15,23 +15,48 @@
           <div class="donate-box-header">{{ index $.Site.Params.lang.donate_slogan $section }}</div>
           <div class="donate-box-body">
             <div class="donate-box-money">
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="2" data-unchecked="￥ 2" data-checked="{{ index $.Site.Params.lang.donate_2_cny $section }}">￥ 2</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="5" data-unchecked="￥ 5" data-checked="{{ index $.Site.Params.lang.donate_5_cny $section }}">￥ 5</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="10" data-unchecked="￥ 10" data-checked="{{ index $.Site.Params.lang.donate_10_cny $section }}">￥ 10</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="50" data-unchecked="￥ 50" data-checked="{{ index $.Site.Params.lang.donate_50_cny $section }}">￥ 50</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="100" data-unchecked="￥ 100" data-checked="{{ index $.Site.Params.lang.donate_100_cny $section }}">￥ 100</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $section }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $section }}">{{ index $.Site.Params.lang.donate_custom_cny $section }}</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-2" data-v="2" data-unchecked="￥ 2" data-checked="{{ index $.Site.Params.lang.donate_2_cny $section }}">￥ 2</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-5" data-v="5" data-unchecked="￥ 5" data-checked="{{ index $.Site.Params.lang.donate_5_cny $section }}">￥ 5</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-10" data-v="10" data-unchecked="￥ 10" data-checked="{{ index $.Site.Params.lang.donate_10_cny $section }}">￥ 10</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-50" data-v="50" data-unchecked="￥ 50" data-checked="{{ index $.Site.Params.lang.donate_50_cny $section }}">￥ 50</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-100" data-v="100" data-unchecked="￥ 100" data-checked="{{ index $.Site.Params.lang.donate_100_cny $section }}">￥ 100</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-custom" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $section }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $section }}">{{ index $.Site.Params.lang.donate_custom_cny $section }}</button>
             </div>
             <div class="donate-box-pay">
-              <img class="donate-box-pay-qrcode" src="/images/donate/wechat-pay-2.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-2" src="/images/donate/wechat-pay-2.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-5" src="/images/donate/wechat-pay-5.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-10" src="/images/donate/wechat-pay-10.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-50" src="/images/donate/wechat-pay-50.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-100" src="/images/donate/wechat-pay-100.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-custom" src="/images/donate/wechat-pay-custom.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-2" src="/images/donate/wechat-pay-2-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-5" src="/images/donate/wechat-pay-5-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-10" src="/images/donate/wechat-pay-10-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-50" src="/images/donate/wechat-pay-50-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-100" src="/images/donate/wechat-pay-100-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-custom" src="/images/donate/wechat-pay-custom-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-2" src="/images/donate/alipay-2.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-5" src="/images/donate/alipay-5.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-10" src="/images/donate/alipay-10.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-50" src="/images/donate/alipay-50.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-100" src="/images/donate/alipay-100.png"/>
+              <img class="donate-box-pay-qrcode donate-light-theme alipay-custom" src="/images/donate/alipay-custom.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-2" src="/images/donate/alipay-2-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-5" src="/images/donate/alipay-5-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-10" src="/images/donate/alipay-10-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-50" src="/images/donate/alipay-50-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-100" src="/images/donate/alipay-100-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode donate-dark-theme alipay-custom" src="/images/donate/alipay-custom-dark-theme.png"/>
             </div>
           </div>
           <div class="donate-box-footer">
             <div class="donate-box-pay-method donate-box-pay-method-checked" data-v="wechat-pay">
-              <img class="donate-box-pay-method-image" src="/images/donate/wechat-pay-logo.png"/>
+              <img class="donate-box-pay-method-image donate-light-theme" src="/images/donate/wechat-pay-logo.png"/>
+              <img class="donate-box-pay-method-image donate-dark-theme" src="/images/donate/wechat-pay-logo-dark-theme.png"/>
             </div>
             <div class="donate-box-pay-method" data-v="alipay">
-              <img class="donate-box-pay-method-image" src="/images/donate/alipay-logo.png"/>
+              <img class="donate-box-pay-method-image donate-light-theme" src="/images/donate/alipay-logo.png"/>
+              <img class="donate-box-pay-method-image donate-dark-theme" src="/images/donate/alipay-logo-dark-theme.png"/>
             </div>
           </div>
         </div>
