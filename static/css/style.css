@@ -494,6 +494,10 @@ footer .adsbygoogle {
   border-radius: 6px !important;
 }
 
+.aplayer .aplayer-lrc:before {
+  display: none !important;
+}
+
 .terms {
   display: flex;
   flex-direction: row;

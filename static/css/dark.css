@@ -87,12 +87,8 @@ thead, tfoot, tr:nth-child(even) {
   color: #D3D3D3 !important;
 }
 
-.aplayer .aplayer-lrc:before {
-  display: none !important;
-}
-
 .aplayer .aplayer-lrc:after {
-  background: linear-gradient(to bottom, rgba(56, 56, 56, 0) 0%, rgba(56, 56, 56, 0.8) 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--body-code-background-color-dark) 100%) !important;
 }
 
 .aplayer .aplayer-lrc p {

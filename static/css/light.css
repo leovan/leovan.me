@@ -79,6 +79,14 @@ thead, tfoot, tr:nth-child(even) {
   color: var(--body-fore-color-dark);
 }
 
+.aplayer {
+  background: var(--body-block-background-color) !important;
+}
+
+.aplayer .aplayer-lrc:after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--body-block-background-color) 100%) !important;
+}
+
 code {
   background: var(--body-code-background-color) !important;
   background: var(--body-code-background-color-alpha) !important;
