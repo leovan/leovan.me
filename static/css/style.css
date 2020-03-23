@@ -554,7 +554,7 @@ footer .adsbygoogle {
   .masthead {
     width: auto;
     float: none;
-    padding: 1em 40px;
+    padding: 1em auto;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -582,7 +582,7 @@ footer .adsbygoogle {
     direction: ltr;
     max-width: 300px;
     max-width: inherit;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
   }
 
   .masthead .menu ul {

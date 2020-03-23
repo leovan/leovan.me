@@ -1,9 +1,20 @@
   <footer>
   {{ partial "footer_custom.html" . }}
-  {{ with .Site.Params.footer }}
   <hr>
-  <div class="copyright no-border-bottom">{{ . | markdownify }}</div>
-  {{ end }}
+  <div class="copyright no-border-bottom">
+    <div class="copyright-author-year">
+      <span>&copy; </span>
+      <a href="/">Leo Van</a>
+      <span> 2017 - 2020</span>
+    </div>
+    <div class="copyright-links">
+      <a href="https://github.com/leovan" rel="noreferrer" target="_blank">Github</a>
+      <span> | </span>
+      <a href="https://orcid.org/0000-0002-9556-7821" rel="noreferrer" target="_blank">ORCID</a>
+      <span> | </span>
+      <span>I am Mr. Black.</span>
+    </div>
+  </div>
   </footer>
   </article>
   </body>

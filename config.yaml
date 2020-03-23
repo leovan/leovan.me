@@ -87,7 +87,6 @@ menu:
 
 params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
-  footer: "&copy; [Leo Van](/) 2017 - 2020 | [Github](https://github.com/leovan) | [ORCID](https://orcid.org/0000-0002-9556-7821) | I am Mr. Black"
   disqusURL: "https://leovan.me"
   googleAdsense: "ca-pub-2608165017777396"
   
