@@ -1,7 +1,7 @@
 :root {
   --html-background-color-dark: #232323;
   --body-background-color-dark: #2f2f2f;
-  --body-background-color-alpha-dark: rgba(47, 47, 47, 0.6);
+  --body-background-color-alpha-dark: rgba(47, 47, 47, 0.66);
   --body-fore-color: #000;
   --body-fore-color-dark: #e6e6e6;
   --body-block-border-color: #444;
@@ -23,7 +23,7 @@ body {
   background: var(--body-background-color-alpha-dark) !important;
 }
 
-body, a, p {
+body, a {
   color: var(--body-fore-color-dark);
 }
 
