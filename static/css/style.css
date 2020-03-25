@@ -558,10 +558,9 @@ footer .adsbygoogle {
   .masthead {
     width: auto;
     float: none;
-    padding: 1em auto;
+    padding: 1em 10px;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto 30px;
   }
 
   .main {
