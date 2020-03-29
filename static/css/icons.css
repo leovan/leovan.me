@@ -13,10 +13,11 @@
   background-size: auto 1em;
   background-repeat: no-repeat;
   display: inline-block;
-  width: 1em; 
+  width: 1em;
   height: 1em;
+  line-height: 1em;
   content: "";
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 .icon-tensorflow:before {
@@ -37,4 +38,9 @@
 
 .icon-mxnet:before {
   background-image: url("../images/icons/mxnet.png");
+}
+
+.icon-paddlepaddle:before {
+  width: 1.85em;
+  background-image: url("../images/icons/paddlepaddle.png");
 }

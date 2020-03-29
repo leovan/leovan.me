@@ -424,6 +424,10 @@ th, td {
   content: "]";
 }
 
+nav sup, nav a[href^=\#fn\:] {
+  display: none;
+}
+
 .MathJax_ref:before {
   content: "(";
 }
@@ -432,8 +436,8 @@ th, td {
   content: ")";
 }
 
-.mjx-math a {
-  border-bottom: none;
+mjx-container {
+  font-size: 100% !important;
 }
 
 .material-icons {

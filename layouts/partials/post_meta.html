@@ -18,7 +18,7 @@
 {{ end }}
 {{ if and (.Params.categories) (.Params.tags) }}
 {{ if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
-|
+/
 {{ end }}
 {{ end }}
 {{ if .Params.tags }}
@@ -29,7 +29,7 @@
 {{ end }}
 {{ if or (.Params.categories) (.Params.tags) }}
 {{ if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
-|
+/
 {{ end }}
 {{ end }}
 <strong>{{ default "Word Count" (index $.Site.Params.lang.wordcount .Section) }}: </strong>
