@@ -2,10 +2,10 @@
 https://leovan.netlify.com/* https://leovan.me/:splat 301!
 
 # Custom
-/index.xml    /cn/index.xml
-/feed/        /cn/index.xml
-/rss/         /cn/index.xml
-/cn/feed/     /cn/index.xml
-/cn/rss/      /cn/index.xml
-/en/feed/     /en/index.xml
-/en/rss/      /en/index.xml
+/index.xml    /cn/index.xml 301!
+/feed/        /cn/index.xml 301!
+/rss/         /cn/index.xml 301!
+/cn/feed/     /cn/index.xml 301!
+/cn/rss/      /cn/index.xml 301!
+/en/feed/     /en/index.xml 301!
+/en/rss/      /en/index.xml 301!
