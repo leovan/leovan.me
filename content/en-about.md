@@ -47,8 +47,8 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
 
 ## Books
 
-Find more on [Books](/cn/books) page (in Chinese).
+Find more on [Books](/cn/books/) page (in Chinese).
 
 ## Movies
 
-Find more on [Movies](/cn/movies) page (in Chinese).
+Find more on [Movies](/cn/videos/) page (in Chinese).
