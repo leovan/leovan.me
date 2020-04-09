@@ -29,14 +29,12 @@ $(document).ready(function() {
 
   function donateModalToggle() {
     theme = getTheme();
-
-    if (theme == "dark") {
-      $('.donate-box-pay-method-image.donate-light-theme').css('display', 'none');
-      $('.donate-box-pay-method-image.donate-dark-theme').css('display', '');
-    } else {
-      $('.donate-box-pay-method-image.donate-dark-theme').css('display', 'none');
-      $('.donate-box-pay-method-image.donate-light-theme').css('display', '');
-    }
+    wechatPayLogo = '/images/donate/wechat-pay-logo-' + theme + '-theme.png';
+    alipayLogo = '/images/donate/alipay-logo-' + theme + '-theme.png';
+    qrcode = '/images/donate/' + donatePayMethod + '-' + donateMoney + '-' + theme + '-theme.png';
+    $('#donate-box-pay-method-image-wechat-pay').attr('src', wechatPayLogo);
+    $('#donate-box-pay-method-image-alipay').attr('src', alipayLogo);
+    $('#donate-box-pay-qrcode').attr('src', qrcode);
 
     donateModelWrapper.toggleClass('donate-modal-wrapper-show');
 
@@ -84,11 +82,9 @@ $(document).ready(function() {
   }
 
   function donateBoxShowPayQRCode(currentDonatePayMethod, currentDonateMoney) {
-    $('.donate-box-pay-qrcode').css('display', 'none');
-
     theme = getTheme();
-    donateBoxPayQRCodeClass = '.donate-' + theme + '-theme.' + currentDonatePayMethod + '-' + currentDonateMoney;
-    $(donateBoxPayQRCodeClass).css('display', '');
+    qrcode = '/images/donate/' + currentDonatePayMethod + '-' + currentDonateMoney + '-' + theme + '-theme.png';
+    $('#donate-box-pay-qrcode').attr('src', qrcode);
 
     donateBoxPay.show();
 

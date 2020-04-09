@@ -23,40 +23,15 @@
               <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-custom" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $section }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $section }}">{{ index $.Site.Params.lang.donate_custom_cny $section }}</button>
             </div>
             <div class="donate-box-pay">
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-2" src="/images/donate/wechat-pay-2.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-5" src="/images/donate/wechat-pay-5.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-10" src="/images/donate/wechat-pay-10.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-50" src="/images/donate/wechat-pay-50.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-100" src="/images/donate/wechat-pay-100.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme wechat-pay-custom" src="/images/donate/wechat-pay-custom.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-2" src="/images/donate/wechat-pay-2-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-5" src="/images/donate/wechat-pay-5-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-10" src="/images/donate/wechat-pay-10-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-50" src="/images/donate/wechat-pay-50-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-100" src="/images/donate/wechat-pay-100-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme wechat-pay-custom" src="/images/donate/wechat-pay-custom-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-2" src="/images/donate/alipay-2.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-5" src="/images/donate/alipay-5.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-10" src="/images/donate/alipay-10.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-50" src="/images/donate/alipay-50.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-100" src="/images/donate/alipay-100.png"/>
-              <img class="donate-box-pay-qrcode donate-light-theme alipay-custom" src="/images/donate/alipay-custom.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-2" src="/images/donate/alipay-2-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-5" src="/images/donate/alipay-5-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-10" src="/images/donate/alipay-10-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-50" src="/images/donate/alipay-50-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-100" src="/images/donate/alipay-100-dark-theme.png"/>
-              <img class="donate-box-pay-qrcode donate-dark-theme alipay-custom" src="/images/donate/alipay-custom-dark-theme.png"/>
+              <img class="donate-box-pay-qrcode" id="donate-box-pay-qrcode" src=""/>
             </div>
           </div>
           <div class="donate-box-footer">
             <div class="donate-box-pay-method donate-box-pay-method-checked" data-v="wechat-pay">
-              <img class="donate-box-pay-method-image donate-light-theme" src="/images/donate/wechat-pay-logo.png"/>
-              <img class="donate-box-pay-method-image donate-dark-theme" src="/images/donate/wechat-pay-logo-dark-theme.png"/>
+              <img class="donate-box-pay-method-image" id="donate-box-pay-method-image-wechat-pay" src=""/>
             </div>
             <div class="donate-box-pay-method" data-v="alipay">
-              <img class="donate-box-pay-method-image donate-light-theme" src="/images/donate/alipay-logo.png"/>
-              <img class="donate-box-pay-method-image donate-dark-theme" src="/images/donate/alipay-logo-dark-theme.png"/>
+              <img class="donate-box-pay-method-image"  id="donate-box-pay-method-image-alipay" src=""/>
             </div>
           </div>
         </div>
