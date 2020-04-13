@@ -1,4 +1,4 @@
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
   <img data-src="{{ .Get "src" }}" class="lazyload"/>
-  {{ with .Get "title" }}<figcaption><p class="figcaption">{{ . }}</p></figcaption>{{ end }}
+  {{ with .Get "title" }}<figcaption><p class="figcaption">{{ . | markdownify }}</p></figcaption>{{ end }}
 </figure>
