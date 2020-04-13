@@ -7,6 +7,7 @@ show_toc: true
 toc_depth: 2
 categories:
   - 深度学习
+  - 表示学习
 tags:
   - 预训练
   - Pre-trained
