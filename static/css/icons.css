@@ -44,3 +44,7 @@
   width: 1.85em;
   background-image: url("../images/icons/paddlepaddle.png");
 }
+
+.icon-sonnet:before {
+  background-image: url("../images/icons/sonnet.png");
+}
