@@ -3,9 +3,9 @@ languageCode: "en-us"
 title: "Leo Van | 范叶亮"
 googleAnalytics: "UA-48667916-2"
 disqusShortname: "leovan"
-ignoreFiles: ["\\.Rmd$", "_files$", "_cache$", 
-              "\\.txt$", "\\.csv$", "\\.tsv$",
-              "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
+ignoreFiles: [
+  "\\.Rmd$", "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$", "\\.tgz$",
+  "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
 hasCJKLanguage: true
 enableEmoji: true
 rssLimit: 30
@@ -93,25 +93,25 @@ params:
   jsCookieVersion: "2.2.1"
   jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  prismjsVersion: "1.19.0"
+  prismjsVersion: "1.20.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsLang: ["r", "python", "markup", "yaml", "latex", "bash", "powershell", "javascript"]
   prismjsTheme: ""
   prismjsPlugin: ["show-language"]
   
-  mathjaxVersion: "3.0.1"
+  mathjaxVersion: "3.0.5"
   mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.leovan.me/libraries"
   
-  jQueryVersion: "3.4.1"
+  jQueryVersion: "3.5.0"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
-  videojsVersion: "7.7.4"
+  videojsVersion: "7.8.0"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   materialDesignWebFontVersion: "5.0.45"
