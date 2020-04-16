@@ -445,7 +445,7 @@ mjx-container {
   vertical-align: text-bottom;
 }
 
-img[alt="github-stars"] {
+img[alt="github-stars"], img[alt="github-followers"] {
   vertical-align: text-bottom;
 }
 
