@@ -17,7 +17,8 @@
   height: 1em;
   line-height: 1em;
   content: "";
-  vertical-align: text-top;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 
 .icon-tensorflow:before {
@@ -47,4 +48,42 @@
 
 .icon-sonnet:before {
   background-image: url("../images/icons/sonnet.png");
+}
+
+.icon-c:before {
+  background-image: url("../images/icons/c.svg");
+}
+
+.icon-cpp:before {
+  background-image: url("../images/icons/cpp.svg");
+}
+
+.icon-go:before {
+  width: 2.2em;
+  background-size: auto 0.8em;
+  background-image: url("../images/icons/go.svg");
+}
+
+.icon-java:before {
+  background-image: url("../images/icons/java.svg");
+}
+
+.icon-python:before {
+  background-image: url("../images/icons/python.svg");
+}
+
+.icon-r:before {
+  width: 1.1em;
+  background-size: auto 0.8em;
+  background-image: url("../images/icons/r.svg");
+}
+
+.icon-ruby:before {
+  width: 0.8em;
+  background-size: auto 0.8em;
+  background-image: url("../images/icons/ruby.svg");
+}
+
+.icon-swift:before {
+  background-image: url("../images/icons/swift.svg");
 }
