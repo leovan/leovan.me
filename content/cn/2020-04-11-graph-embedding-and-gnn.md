@@ -615,18 +615,18 @@ GAT 中的注意力架构有如下几个特点：
 
 | 项目                                                         | 框架                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [rusty1s/pytorch_geometric](https://github.com/rusty1s/pytorch_geometric) | <i class="icon icon-pytorch"></i> PyTorch                    |
-| [dmlc/dgl](https://github.com/dmlc/dgl)                      | <i class="icon icon-pytorch"></i> PyTorch, <i class="icon icon-tensorflow"></i> TF & <i class="icon icon-mxnet"></i> MXNet |
-| [alibaba/euler](https://github.com/alibaba/euler)            | <i class="icon icon-tensorflow"></i> TF                      |
-| [alibaba/graph-learn](https://github.com/alibaba/graph-learn) | <i class="icon icon-tensorflow"></i> TF                      |
-| [deepmind/graph_nets](https://github.com/deepmind/graph_nets) | <i class="icon icon-tensorflow"></i> TF & <i class="icon icon-sonnet"></i> Sonnet |
-| [facebookresearch/PyTorch-BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph) | <i class="icon icon-pytorch"></i> PyTorch                    |
+| [rusty1s/pytorch_geometric](https://github.com/rusty1s/pytorch_geometric) | <i class="icon icon-pytorch">PyTorch</i>                    |
+| [dmlc/dgl](https://github.com/dmlc/dgl)                      | <i class="icon icon-pytorch">PyTorch</i>, <i class="icon icon-tensorflow">TF</i> & <i class="icon icon-mxnet">MXNet</i> |
+| [alibaba/euler](https://github.com/alibaba/euler)            | <i class="icon icon-tensorflow">TF</i>                      |
+| [alibaba/graph-learn](https://github.com/alibaba/graph-learn) | <i class="icon icon-tensorflow">TF</i>                      |
+| [deepmind/graph_nets](https://github.com/deepmind/graph_nets) | <i class="icon icon-tensorflow">TF</i> & <i class="icon icon-sonnet">Sonnet</i> |
+| [facebookresearch/PyTorch-BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph) | <i class="icon icon-pytorch">PyTorch</i>                    |
 | [tencent/plato](https://github.com/tencent/plato)            |                                                              |
 | [PaddlePaddle/PGL](https://github.com/PaddlePaddle/PGL)      | <i class="icon icon-paddlepaddle"></i> PaddlePaddle          |
-| [Accenture/AmpliGraph](https://github.com/Accenture/AmpliGraph) | <i class="icon icon-tensorflow"></i> TF                      |
-| [danielegrattarola/spektral](https://github.com/danielegrattarola/spektral) | <i class="icon icon-tensorflow"></i> TF                      |
-| [THUDM/cogdl](https://github.com/THUDM/cogdl/)               | <i class="icon icon-pytorch"></i> PyTorch                    |
-| [DeepGraphLearning/graphvite](https://github.com/DeepGraphLearning/graphvite) | <i class="icon icon-pytorch"></i> PyTorch                    |
+| [Accenture/AmpliGraph](https://github.com/Accenture/AmpliGraph) | <i class="icon icon-tensorflow">TF</i>                      |
+| [danielegrattarola/spektral](https://github.com/danielegrattarola/spektral) | <i class="icon icon-tensorflow">TF</i>                      |
+| [THUDM/cogdl](https://github.com/THUDM/cogdl/)               | <i class="icon icon-pytorch">PyTorch</i>                    |
+| [DeepGraphLearning/graphvite](https://github.com/DeepGraphLearning/graphvite) | <i class="icon icon-pytorch">PyTorch</i>                    |
 
 ### 论文列表和评测
 

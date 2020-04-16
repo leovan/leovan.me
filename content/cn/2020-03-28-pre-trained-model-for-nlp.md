@@ -224,20 +224,20 @@ $$`
 | [word2vec](https://github.com/tmikolov/word2vec)             | -                                                            | CBOW, Skip-Gram                       |
 | [GloVe](https://nlp.stanford.edu/projects/glove)             | -                                                            | Pre-trained word vectors              |
 | [FastText](https://github.com/facebookresearch/fastText)     | -                                                            | Pre-trained word vectors              |
-| [Transformers](https://github.com/huggingface/transformers)  | <i class="icon icon-pytorch"></i> PyTorch & <i class="icon icon-tensorflow"></i> TF | BERT, GPT-2, RoBERTa, XLNet, etc.     |
-| [Fairseq](https://github.com/pytorch/fairseq)                | <i class="icon icon-pytorch"></i> PyTorch                    | English LM, German LM, RoBERTa, etc.  |
-| [Flair](https://github.com/ﬂairNLP/ﬂair)                     | <i class="icon icon-pytorch"></i> PyTorch                    | BERT, ELMo, GPT, RoBERTa, XLNet, etc. |
-| [AllenNLP](https://github.com/allenai/allennlp)              | <i class="icon icon-pytorch"></i> PyTorch                    | ELMo, BERT, GPT-2, etc.               |
-| [FastNLP](https://github.com/fastnlp/fastNLP)                | <i class="icon icon-pytorch"></i> PyTorch                    | BERT, RoBERTa, GPT, etc.              |
+| [Transformers](https://github.com/huggingface/transformers)  | <i class="icon icon-pytorch">PyTorch</i> & <i class="icon icon-tensorflow">TF</i> | BERT, GPT-2, RoBERTa, XLNet, etc.     |
+| [Fairseq](https://github.com/pytorch/fairseq)                | <i class="icon icon-pytorch">PyTorch</i>                    | English LM, German LM, RoBERTa, etc.  |
+| [Flair](https://github.com/ﬂairNLP/ﬂair)                     | <i class="icon icon-pytorch">PyTorch</i>                    | BERT, ELMo, GPT, RoBERTa, XLNet, etc. |
+| [AllenNLP](https://github.com/allenai/allennlp)              | <i class="icon icon-pytorch">PyTorch</i>                    | ELMo, BERT, GPT-2, etc.               |
+| [FastNLP](https://github.com/fastnlp/fastNLP)                | <i class="icon icon-pytorch">PyTorch</i>                    | BERT, RoBERTa, GPT, etc.              |
 | [Chinese-BERT](https://github.com/ymcui/Chinese-BERT-wwm)    | -                                                            | BERT, RoBERTa, etc. (for Chinese)     |
-| [BERT](https://github.com/google-research/bert)              | <i class="icon icon-tensorflow"></i> TF                      | BERT, BERT-wwm                        |
-| [RoBERTa](https://github.com/pytorch/fairseq/tree/master/examples/roberta) | <i class="icon icon-pytorch"></i> PyTorch                    |                                       |
-| [XLNet](https://github.com/zihangdai/xlnet)                  | <i class="icon icon-tensorflow"></i> TF                      |                                       |
-| [ALBERT](https://github.com/google-research/ALBERT)          | <i class="icon icon-tensorflow"></i> TF                      |                                       |
-| [T5](https://github.com/google-research/text-to-text-transfer-transformer) | <i class="icon icon-tensorflow"></i> TF                      |                                       |
-| [ERNIE(THU)](https://github.com/thunlp/ERNIE)                | <i class="icon icon-pytorch"></i> PyTorch                    |                                       |
+| [BERT](https://github.com/google-research/bert)              | <i class="icon icon-tensorflow">TF</i>                      | BERT, BERT-wwm                        |
+| [RoBERTa](https://github.com/pytorch/fairseq/tree/master/examples/roberta) | <i class="icon icon-pytorch">PyTorch</i>                    |                                       |
+| [XLNet](https://github.com/zihangdai/xlnet)                  | <i class="icon icon-tensorflow">TF</i>                      |                                       |
+| [ALBERT](https://github.com/google-research/ALBERT)          | <i class="icon icon-tensorflow">TF</i>                      |                                       |
+| [T5](https://github.com/google-research/text-to-text-transfer-transformer) | <i class="icon icon-tensorflow">TF</i>                      |                                       |
+| [ERNIE(THU)](https://github.com/thunlp/ERNIE)                | <i class="icon icon-pytorch">PyTorch</i>                    |                                       |
 | [ERNIE(Baidu)](https://github.com/PaddlePaddle/ERNIE)        | <i class="icon icon-paddlepaddle"></i> PaddlePaddle          |                                       |
-| [Hugging Face](https://github.com/huggingface/transformers)  | <i class="icon icon-pytorch"></i> PyTorch & <i class="icon icon-tensorflow"></i> TF | 很多...                               |
+| [Hugging Face](https://github.com/huggingface/transformers)  | <i class="icon icon-pytorch">PyTorch</i> & <i class="icon icon-tensorflow">TF</i> | 很多...                               |
 
 ### 论文列表和 PTMs 相关资源：
 
