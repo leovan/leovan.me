@@ -26,7 +26,7 @@ disable_adsense: true
 ## <span class="mdi mdi-school-outline"></span> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
-- 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Management
+- 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
@@ -82,14 +82,14 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 - R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### Frameworks
 
 - Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### Tools
 
@@ -101,9 +101,9 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 
 ### Paper
 
-1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In 2018 _International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
-2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013, December). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
-3. Research on Dynamic Pricing Strategies of Digital Products based on Network Externality. _Master Thesis, 2014._
+1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. (2018). A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _2018 International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
+2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
+3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://cdn.leovan.me/documents/publications/IEAF.pdf). _Unpublished_.
 
 ### Patents
 
@@ -116,6 +116,8 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 7. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), 2019)
 
 ### Open Source Projects
+
+- Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
 1. [Data Science Introduction With Python](https://github.com/leovan/data-science-introduction-with-python), a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 2. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
