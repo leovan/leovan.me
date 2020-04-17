@@ -1,2 +1,0 @@
-*.xmind filter=lfs diff=lfs merge=lfs -text
-*.graffle filter=lfs diff=lfs merge=lfs -text
