@@ -1,3 +1,40 @@
+var wechatPayLogos = {
+  'light': '/images/donate/wechat-pay-logo-light-theme.png',
+  'dark': '/images/donate/wechat-pay-logo-dark-theme.png'
+};
+
+var alipayLogos = {
+  'light': '/images/donate/alipay-logo-light-theme.png',
+  'dark': '/images/donate/alipay-logo-dark-theme.png'
+};
+
+var qrcodes = {
+  'wechat-pay-2-light': '/images/donate/wechat-pay-2-light-theme.png',
+  'wechat-pay-2-dark': '/images/donate/wechat-pay-2-dark-theme.png',
+  'wechat-pay-5-light': '/images/donate/wechat-pay-5-light-theme.png',
+  'wechat-pay-5-dark': '/images/donate/wechat-pay-5-dark-theme.png',
+  'wechat-pay-10-light': '/images/donate/wechat-pay-10-light-theme.png',
+  'wechat-pay-10-dark': '/images/donate/wechat-pay-10-dark-theme.png',
+  'wechat-pay-50-light': '/images/donate/wechat-pay-50-light-theme.png',
+  'wechat-pay-50-dark': '/images/donate/wechat-pay-50-dark-theme.png',
+  'wechat-pay-100-light': '/images/donate/wechat-pay-100-light-theme.png',
+  'wechat-pay-100-dark': '/images/donate/wechat-pay-100-dark-theme.png',
+  'wechat-pay-custom-light': '/images/donate/wechat-pay-custom-light-theme.png',
+  'wechat-pay-custom-dark': '/images/donate/wechat-pay-custom-dark-theme.png',
+  'alipay-2-light': '/images/donate/alipay-2-light-theme.png',
+  'alipay-2-dark': '/images/donate/alipay-2-dark-theme.png',
+  'alipay-5-light': '/images/donate/alipay-5-light-theme.png',
+  'alipay-5-dark': '/images/donate/alipay-5-dark-theme.png',
+  'alipay-10-light': '/images/donate/alipay-10-light-theme.png',
+  'alipay-10-dark': '/images/donate/alipay-10-dark-theme.png',
+  'alipay-50-light': '/images/donate/alipay-50-light-theme.png',
+  'alipay-50-dark': '/images/donate/alipay-50-dark-theme.png',
+  'alipay-100-light': '/images/donate/alipay-100-light-theme.png',
+  'alipay-100-dark': '/images/donate/alipay-100-dark-theme.png',
+  'alipay-custom-light': '/images/donate/alipay-custom-light-theme.png',
+  'alipay-custom-dark': '/images/donate/alipay-custom-dark-theme.png'
+};
+
 $(document).ready(function() {
   if ($('.footnotes')) {
     $('.footnotes').before($('.donate'));
@@ -29,12 +66,10 @@ $(document).ready(function() {
 
   function donateModalToggle() {
     theme = getTheme();
-    wechatPayLogo = '/images/donate/wechat-pay-logo-' + theme + '-theme.png';
-    alipayLogo = '/images/donate/alipay-logo-' + theme + '-theme.png';
-    qrcode = '/images/donate/' + donatePayMethod + '-' + donateMoney + '-' + theme + '-theme.png';
-    $('#donate-box-pay-method-image-wechat-pay').attr('src', wechatPayLogo);
-    $('#donate-box-pay-method-image-alipay').attr('src', alipayLogo);
-    $('#donate-box-pay-qrcode').attr('src', qrcode);
+    var qrcodeKey = currentDonatePayMethod + '-' + currentDonateMoney + '-' + theme;
+    $('#donate-box-pay-method-image-wechat-pay').attr('src', wechatPayLogos[theme]);
+    $('#donate-box-pay-method-image-alipay').attr('src', alipayLogos[theme]);
+    $('#donate-box-pay-qrcode').attr('src', qrcodes[qrcodeKey]);
 
     donateModelWrapper.toggleClass('donate-modal-wrapper-show');
 
@@ -82,9 +117,8 @@ $(document).ready(function() {
   }
 
   function donateBoxShowPayQRCode(currentDonatePayMethod, currentDonateMoney) {
-    theme = getTheme();
-    qrcode = '/images/donate/' + currentDonatePayMethod + '-' + currentDonateMoney + '-' + theme + '-theme.png';
-    $('#donate-box-pay-qrcode').attr('src', qrcode);
+    var qrcodeKey = currentDonatePayMethod + '-' + currentDonateMoney + '-' + getTheme();
+    $('#donate-box-pay-qrcode').attr('src', qrcodes[qrcodeKey]);
 
     donateBoxPay.show();
 
