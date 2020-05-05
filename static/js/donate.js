@@ -66,7 +66,7 @@ $(document).ready(function() {
 
   function donateModalToggle() {
     theme = getTheme();
-    var qrcodeKey = currentDonatePayMethod + '-' + currentDonateMoney + '-' + theme;
+    var qrcodeKey = donatePayMethod + '-' + donateMoney + '-' + theme;
     $('#donate-box-pay-method-image-wechat-pay').attr('src', wechatPayLogos[theme]);
     $('#donate-box-pay-method-image-alipay').attr('src', alipayLogos[theme]);
     $('#donate-box-pay-qrcode').attr('src', qrcodes[qrcodeKey]);
