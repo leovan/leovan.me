@@ -8,6 +8,7 @@ toc_depth: 2
 categories:
   - 深度学习
   - 表示学习
+  - 自然语言处理
 tags:
   - 预训练
   - Pre-trained
@@ -625,6 +626,7 @@ NLP 任务的 State-of-Art 模型详见：
 - [SuperGLUE Leaderboard](https://super.gluebenchmark.com/leaderboard)
 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/)
 - [NLP-progress](https://nlpprogress.com/)
+- [中文任务基准测评](https://www.cluebenchmarks.com/)
 
 {{< load-photoswipe >}}
 

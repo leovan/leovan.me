@@ -4,9 +4,7 @@ author: 范叶亮
 date: '2019-07-28'
 slug: my-childhood-in-memory
 categories:
-  - 人生
   - 生活
-  - 态度
 tags:
   - 童年
   - 儿时

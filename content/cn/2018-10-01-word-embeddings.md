@@ -6,6 +6,7 @@ slug: word-embeddings
 categories:
   - 深度学习
   - 表示学习
+  - 自然语言处理
 tags:
   - 词向量
   - 维数灾难

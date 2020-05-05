@@ -5,6 +5,8 @@ date: '2018-10-12'
 slug: seq2seq-and-attention-machanism
 categories:
   - 深度学习
+  - 表示学习
+  - 自然语言处理
 tags:
   - 序列
   - seq2seq
