@@ -9,8 +9,7 @@
   --body-block-background-color: #eee;
   --body-code-fore-color: #4f424c;
   --body-code-border-color: #ddd;
-  --body-code-background-color: #f9f9f9;
-  --body-code-background-color-alpha: rgba(249, 249, 249, 0.6);
+  --body-code-background-color: #eee;
   --body-box-shadow: rgba(0, 0, 0, .25);
 }
 
@@ -89,19 +88,16 @@ thead, tfoot, tr:nth-child(even) {
 
 code {
   background: var(--body-code-background-color) !important;
-  background: var(--body-code-background-color-alpha) !important;
 }
 
 pre code {
   border-top: 1px solid var(--body-code-border-color) !important;
   border-bottom: 1px solid var(--body-code-border-color) !important;
   background: var(--body-code-background-color) !important;
-  background: var(--body-code-background-color-alpha) !important;
 }
 
 code[class*="language-"], pre[class*="language-"] {
   background: var(--body-code-background-color) !important;
-  background: var(--body-code-background-color-alpha) !important;
   color: var(--body-code-fore-color) !important;
 }
 

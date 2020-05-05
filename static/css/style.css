@@ -85,10 +85,8 @@ iframe, twitterwidget, video {
 
 code {
   font-size: 0.9em;
-}
-
-pre code {
-  text-shadow: none;
+  padding: 0.2em 0.3em;
+  border-radius: 0.3em;
 }
 
 pre code {
@@ -97,6 +95,8 @@ pre code {
   overflow-x: auto;
   line-height: 1.75;
   background: none;
+  text-shadow: none;
+  border-radius: 0;
 }
 
 code[class*="language-"] {
@@ -318,6 +318,11 @@ table {
 
 th, td {
   padding: 5px;
+}
+
+td code {
+  background: none !important;
+  padding: 0;
 }
 
 /* Utility Styles */

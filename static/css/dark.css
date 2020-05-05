@@ -10,7 +10,6 @@
   --body-code-fore-color-dark: #ccc;
   --body-code-border-color-dark: #ddd;
   --body-code-background-color-dark: #383838;
-  --body-code-background-color-alpha-dark: rgba(56, 56, 56, 0.6);
   --body-box-shadow: rgba(0, 0, 0, .25);
 }
 
@@ -106,19 +105,16 @@ thead, tfoot, tr:nth-child(even) {
 
 code {
   background: var(--body-code-background-color-dark) !important;
-  background: var(--body-code-background-color-alpha-dark) !important;
 }
 
 pre code {
   border-top: 1px solid var(--body-code-border-color-dark) !important;
   border-bottom: 1px solid var(--body-code-border-color-dark) !important;
   background: var(--body-code-background-color-dark) !important;
-  background: var(--body-code-background-color-alpha-dark) !important;
 }
 
 code[class*="language-"], pre[class*="language-"] {
   background: var(--body-code-background-color-dark) !important;
-  background: var(--body-code-background-color-alpha-dark) !important;
   color: var(--body-code-fore-color-dark) !important;
 }
 
