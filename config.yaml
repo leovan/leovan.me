@@ -89,46 +89,46 @@ params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
   disqusURL: "https://leovan.me"
   googleAdsense: "ca-pub-2608165017777396"
-  
+
   jsCookieVersion: "2.2.1"
   jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
+
   prismjsVersion: "1.20.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsLang: ["r", "python", "markup", "yaml", "latex", "bash", "powershell", "javascript"]
   prismjsTheme: ""
   prismjsPlugin: ["show-language"]
-  
+
   mathjaxVersion: "3.0.5"
   mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
+
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.leovan.me/libraries"
-  
+
   jQueryVersion: "3.5.0"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
+
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
-  videojsVersion: "7.8.0"
+
+  videojsVersion: "7.8.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
-  materialDesignWebFontVersion: "5.0.45"
+
+  materialDesignWebFontVersion: "5.1.45"
   materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
-  materialComponentsWebVersion: "latest"	
+
+  materialComponentsWebVersion: "latest"
   materialComponentsWebCDN: "//unpkg.com"
-  
+
   panguVersion: "4.0.7"
   panguCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
+
   APlayerVersion: "1.10.1"
   APlayerCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  
+
   MetingJSVersion: "latest"
   MetingJSCDN: "//unpkg.com"
-  
+
   lazysizesVersion: "5.2.0"
   lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
@@ -178,7 +178,7 @@ params:
     donate_custom_cny:
       cn: "任意金额"
       en: "CUSTOM"
-    
+
 markup:
   defaultMarkdownHandler: blackfriday
   highlight:
