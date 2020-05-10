@@ -18,4 +18,8 @@
     border-left: none !important;
     padding-left: 10px;
   }
+  
+  #back-to-top {
+    display: none;
+  }
 }

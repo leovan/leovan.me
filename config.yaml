@@ -131,8 +131,11 @@ params:
 
   lazysizesVersion: "5.2.0"
   lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  
+  vanillaBackToTopVersion: "7.2.1"
+  vanillaBackToTopCDN: "//unpkg.com"
 
-  slogan: "Soldier to Solider"
+  slogan: "手中有刀，心里有佛"
 
   author:
     en: "Leo Van"

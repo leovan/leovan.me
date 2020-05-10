@@ -262,8 +262,9 @@ body {
 }
 
 .masthead .slogan {
-  font-style: italic;
   text-align: right;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
 }
 
 .masthead .menu {

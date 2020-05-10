@@ -11,6 +11,7 @@
   --body-code-border-color: #ddd;
   --body-code-background-color: #eee;
   --body-box-shadow: rgba(0, 0, 0, .25);
+  --body-box-shadow-dark: rgba(230, 230, 230, .25);
 }
 
 html {
@@ -189,6 +190,12 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.entity {
   cursor: help;
+}
+
+#back-to-top {
+  background: var(--body-fore-color) !important;
+  color: var(--body-fore-color-dark) !important;
+  box-shadow: 0 2px 5px 0 var(--body-box-shadow) !important;
 }
 
 @media screen and (min-width: 960px) {
