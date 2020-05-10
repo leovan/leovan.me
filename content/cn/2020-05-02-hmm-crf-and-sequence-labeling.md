@@ -1,5 +1,5 @@
 ---
-title: 隐马尔科夫 (Hidden Markov Model, HMM)，条件随机场 (Conditional Random Fields, CRF) 和序列标注 (Sequence Labeling)
+title: 隐马尔可夫 (Hidden Markov Model, HMM)，条件随机场 (Conditional Random Fields, CRF) 和序列标注 (Sequence Labeling)
 author: 范叶亮
 date: '2020-05-02'
 slug: hmm-crf-and-sequence-labeling
@@ -8,7 +8,7 @@ categories:
   - 深度学习
   - 自然语言处理
 tags:
-  - 隐马尔科夫
+  - 隐马尔可夫
   - Hidden Markov Model
   - HMM
   - 条件随机场
@@ -35,15 +35,15 @@ images:
   - /images/cn/2020-05-02-hmm-and-crf/relationship-between-nb-lr-hmm-lcrf-gdm-gcrf.png
 ---
 
-## 隐马尔科夫
+## 隐马尔可夫
 
-隐马尔科夫模型（Hidden Markov Model，HMM）是一个描述包含隐含未知参数的马尔科夫过程的统计模型。马尔可夫过程（Markov Process）是因俄国数学家安德雷·安德耶维齐·马尔可夫（Андрей Андреевич Марков）而得名一个随机过程，在该随机过程中，给定当前状态和过去所有状态的条件下，其下一个状态的条件概率分布仅依赖于当前状态，通常具备离散状态的马尔科夫过程称之为马尔科夫链（Markov Chain）。因此，马尔科夫链可以理解为一个有限状态机，给定了当前状态为 `$S_i$` 时，下一时刻状态为 `$S_j$` 的概率，不同状态之间变换的概率称之为转移概率。下图描述了 3 个状态 `$S_a, S_b, S_c$` 之间转换状态的马尔科夫链。
+隐马尔可夫模型（Hidden Markov Model，HMM）是一个描述包含隐含未知参数的马尔可夫过程的统计模型。马尔可夫过程（Markov Process）是因俄国数学家安德雷·安德耶维齐·马尔可夫（Андрей Андреевич Марков）而得名一个随机过程，在该随机过程中，给定当前状态和过去所有状态的条件下，其下一个状态的条件概率分布仅依赖于当前状态，通常具备离散状态的马尔可夫过程称之为马尔可夫链（Markov Chain）。因此，马尔可夫链可以理解为一个有限状态机，给定了当前状态为 `$S_i$` 时，下一时刻状态为 `$S_j$` 的概率，不同状态之间变换的概率称之为转移概率。下图描述了 3 个状态 `$S_a, S_b, S_c$` 之间转换状态的马尔可夫链。
 
 {{< figure src="/images/cn/2020-05-02-hmm-and-crf/hmm-markov-chain-example.png" >}}
 
-隐马尔科夫模型中包含两种序列：随机生成的状态构成的序列称之为状态序列（state sequence），状态序列是不可被观测到的；每个状态对应的观测值组成的序列称之为观测序列（observation sequence）。令 `$I = \left(i_1, i_2, \cdots, i_T\right)$` 为状态序列，其中 `$i_t$` 为第 `$t$` 时刻系统的状态值，对应的有 `$O = \left(o_1, o_2, \cdots, o_T\right)$` 为观测序列，其中 `$o_t$` 为第 `$t$` 时刻系统的观测值，系统的所有可能的状态集合为 `$Q = \{q_1, q_2, \cdots, q_N\}$`，所有可能的观测集合为 `$V= \{v_1, v_2, \cdots, v_M\}$`。
+隐马尔可夫模型中包含两种序列：随机生成的状态构成的序列称之为状态序列（state sequence），状态序列是不可被观测到的；每个状态对应的观测值组成的序列称之为观测序列（observation sequence）。令 `$I = \left(i_1, i_2, \cdots, i_T\right)$` 为状态序列，其中 `$i_t$` 为第 `$t$` 时刻系统的状态值，对应的有 `$O = \left(o_1, o_2, \cdots, o_T\right)$` 为观测序列，其中 `$o_t$` 为第 `$t$` 时刻系统的观测值，系统的所有可能的状态集合为 `$Q = \{q_1, q_2, \cdots, q_N\}$`，所有可能的观测集合为 `$V= \{v_1, v_2, \cdots, v_M\}$`。
 
-隐马尔科夫模型主要由三组参数构成：
+隐马尔可夫模型主要由三组参数构成：
 
 1. 状态转移矩阵：
   `$$
@@ -73,13 +73,13 @@ images:
   $$`
   表示 `$t = 1$` 时刻，系统处于状态 `$q_i$` 的概率。
 
-初始状态概率向量 `$\pi$` 和状态转移矩阵 `$A$` 决定了状态序列，观测概率矩阵 `$B$ ` 决定了状态序列对应的观测序列，因此马尔科夫模型可以表示为：
+初始状态概率向量 `$\pi$` 和状态转移矩阵 `$A$` 决定了状态序列，观测概率矩阵 `$B$ ` 决定了状态序列对应的观测序列，因此马尔可夫模型可以表示为：
 
 `$$
 \lambda = \left(A, B, \pi\right)
 $$`
 
-对于马尔科夫模型 `$\lambda = \left(A, B, \pi\right)$`，通过如下步骤生成观测序列 `$\{o_1, o_2, \cdots, o_T\}$`：
+对于马尔可夫模型 `$\lambda = \left(A, B, \pi\right)$`，通过如下步骤生成观测序列 `$\{o_1, o_2, \cdots, o_T\}$`：
 
 1. 按照初始状态分布 `$\pi$` 产生状态 `$i_1$`.
 2. 令 `$t = 1$`。
@@ -87,7 +87,7 @@ $$`
 4. 按照状态 `$i_t$` 的状态转移概率分布 `$\left\{a_{i_t i_{t+1}}\right\}$` 产生状态 `$i_{t+1}$`，`$i_{t+1} = 1, 2, \cdots, N$`。
 5. 令 `$t = t + 1$`，如果 `$t < T$`，转步骤 3；否则，终止。
 
-马尔科夫模型在应用过程中有 3 个基本问题 [^li2019tongji]：
+马尔可夫模型在应用过程中有 3 个基本问题 [^li2019tongji]：
 
 1. 概率计算问题。给定模型 `$\lambda = \left(A, B, \pi\right)$` 和观测序列 `$O = \{o_1, o_2, \cdots, o_T\}$`，计算在模型 `$\lambda$` 下观测序列 `$O$` 出现的概率 `$P\left(O | \lambda \right)$`。
 2. 学习问题。已知观测序列 `$O = \{o_1, o_2, \cdots, o_T\}$`，估计模型 `$\lambda = \left(A, B, \pi\right)$` 参数，使得在该模型下观测序列概率 `$P\left(X | \lambda \right)$` 最大。即用极大似然估计的方法估计参数。
@@ -133,7 +133,7 @@ $$`
 
 #### 前向算法
 
-**前向概率**：给定马尔科夫模型 `$\lambda$`，给定到时刻 `$t$` 部分观测序列为 `$o_1, o_2, \cdots, o_t$` 且状态为 `$q_i$` 的概率为前向概率，记作：
+**前向概率**：给定马尔可夫模型 `$\lambda$`，给定到时刻 `$t$` 部分观测序列为 `$o_1, o_2, \cdots, o_t$` 且状态为 `$q_i$` 的概率为前向概率，记作：
 
 `$$
 \alpha_t \left(i\right) = P \left(o_1, o_2, \cdots, o_t, i_t = q_i | \lambda\right)
@@ -199,7 +199,7 @@ $$`
 
 #### 无监督学习算法
 
-假设给定训练数据值包含 `$S$` 个长度为 `$T$` 的观测序列 `$\left\{O_1, O_2, \cdots, O_S\right\}$` 而没有对应的状态序例，目标是学习隐马尔可夫模型 `$\lambda = \left(A, B, \pi\right)$` 的参数。我们将观测序列数据看做观测数据 `$O$`，状态序列数据看作不可观测的隐数据 `$I$`，那么马尔科夫模型事实上是一个含有隐变量的概率模型：
+假设给定训练数据值包含 `$S$` 个长度为 `$T$` 的观测序列 `$\left\{O_1, O_2, \cdots, O_S\right\}$` 而没有对应的状态序例，目标是学习隐马尔可夫模型 `$\lambda = \left(A, B, \pi\right)$` 的参数。我们将观测序列数据看做观测数据 `$O$`，状态序列数据看作不可观测的隐数据 `$I$`，那么马尔可夫模型事实上是一个含有隐变量的概率模型：
 
 `$$
 P(O | \lambda)=\sum_{I} P(O | I, \lambda) P(I | \lambda)
@@ -302,9 +302,9 @@ $$`
 
 ## 条件随机场
 
-概率无向图模型（Probabilistic Undirected Graphical Model）又称为马尔科夫随机场（Markov Random Field），是一个可以由无向图表示的联合概率分布。概率图模型（Probabilistic Graphical Model）是由图表示的概率分布，设有联合概率分布 `$P \left(Y\right), Y \in \mathcal{Y}$` 是一组随机变量。由无向图 `$G = \left(V, E\right)$` 表示概率分布 `$P \left(Y\right)$`，即在图 `$G$` 中，结点 `$v \in V$` 表示一个随机变量 `$Y_v, Y = \left(Y_v\right)_{v \in V}$`，边 `$e \in E$` 表示随机变量之间的概率依赖关系。
+概率无向图模型（Probabilistic Undirected Graphical Model）又称为马尔可夫随机场（Markov Random Field），是一个可以由无向图表示的联合概率分布。概率图模型（Probabilistic Graphical Model）是由图表示的概率分布，设有联合概率分布 `$P \left(Y\right), Y \in \mathcal{Y}$` 是一组随机变量。由无向图 `$G = \left(V, E\right)$` 表示概率分布 `$P \left(Y\right)$`，即在图 `$G$` 中，结点 `$v \in V$` 表示一个随机变量 `$Y_v, Y = \left(Y_v\right)_{v \in V}$`，边 `$e \in E$` 表示随机变量之间的概率依赖关系。
 
-**成对马尔科夫性**：设 `$u$` 和 `$v$` 是无向图 `$G$` 中任意两个没有边连接的结点，结点 `$u$` 和 `$v$` 分别对应随机变量 `$Y_u$` 和 `$Y_v$`。其他所有结点为 `$O$`，对应的随机变量组是 `$Y_O$`。成对马尔可夫是指给定随机变量组 `$Y_O$` 的条件下随机变量 `$Y_u$` 和 `$Y_v$` 是条件独立的，即：
+**成对马尔可夫性**：设 `$u$` 和 `$v$` 是无向图 `$G$` 中任意两个没有边连接的结点，结点 `$u$` 和 `$v$` 分别对应随机变量 `$Y_u$` 和 `$Y_v$`。其他所有结点为 `$O$`，对应的随机变量组是 `$Y_O$`。成对马尔可夫是指给定随机变量组 `$Y_O$` 的条件下随机变量 `$Y_u$` 和 `$Y_v$` 是条件独立的，即：
 
 `$$
 P\left(Y_{u}, Y_{v} | Y_{O}\right)=P\left(Y_{u} | Y_{O}\right) P\left(Y_{v} | Y_{O}\right)
@@ -362,7 +362,7 @@ $$`
 
 概率无向图模型的因子分解由这个 Hammersley-Clifford 定理来保证。
 
-**条件随机场**（Conditional Random Field）是给定随机变量 `$X$` 条件下，随机变量 `$Y$` 的马尔科夫随机场。设 `$X$` 与 `$Y$` 是随机变量，`$P \left(Y | X\right)$` 是给定 `$X$` 的条件下 `$Y$` 的条件概率分布。若随机变量 `$Y$` 构成一个有无向图 `$G = \left(V, E\right)$` 表示的马尔可夫随机场，即：
+**条件随机场**（Conditional Random Field）是给定随机变量 `$X$` 条件下，随机变量 `$Y$` 的马尔可夫随机场。设 `$X$` 与 `$Y$` 是随机变量，`$P \left(Y | X\right)$` 是给定 `$X$` 的条件下 `$Y$` 的条件概率分布。若随机变量 `$Y$` 构成一个有无向图 `$G = \left(V, E\right)$` 表示的马尔可夫随机场，即：
 
 `$$
 P\left(Y_{v} | X, Y_{w}, w \neq v\right)=P\left(Y_{v} | X, Y_{w}, w \sim v\right)
