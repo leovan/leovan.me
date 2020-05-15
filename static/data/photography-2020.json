@@ -1,0 +1,18 @@
+{
+  "itemsBaseURL": "/images/photography/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "center",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "items": [
+    { "src": "2020-03-10-night-moon.jpg", "srct": "2020-03-10-night-moon-thumbnail.jpg", "title": "夜·月" }
+  ]
+}
