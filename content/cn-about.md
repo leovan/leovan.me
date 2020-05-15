@@ -15,12 +15,12 @@ disable_adsense: true
 我是 **范叶亮**，可以叫我 **小黑** 或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的 [简历](../resume/) 页面，当前页面可以让你了解生活中的我。
 
 <picture>
-  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me-large.webp">
-  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me-medium.webp">
-  <source type="image/webp" srcset="/images/me-small.webp">
-  <source media="(min-width: 1200px)" srcset="/images/me-large.jpg">
-  <source media="(min-width: 800px)" srcset="/images/me-medium.jpg">
-  <img src="/images/me-small.jpg" alt="范叶亮">
+  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">
+  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me/about-medium.webp">
+  <source type="image/webp" srcset="/images/me/about-small.webp">
+  <source media="(min-width: 1200px)" srcset="/images/me/about-large.jpg">
+  <source media="(min-width: 800px)" srcset="/images/me/about-medium.jpg">
+  <img src="/images/me/about-small.jpg" alt="范叶亮">
 </picture>
 
 # 喜欢啥？
@@ -65,10 +65,10 @@ disable_adsense: true
 
 > 书中自有千钟粟，书中自有黄金屋，书中车马多如簇，书中自有颜如玉。
 
-好读书，多为闲书，一些书单和书评请参见 [书籍](/cn/books/) 页面。读书，不是非做不可的事，而是想要去做的事。人燥的时候就多做些通灵的事情，无需如鼓琴，对画，临帖一般高雅，一书，一茶，足矣，静下来，腐朽之气全无。
+好读书，多为闲书，一些书单和书评请参见 [书籍](/books/) 页面。读书，不是非做不可的事，而是想要去做的事。人燥的时候就多做些通灵的事情，无需如鼓琴，对画，临帖一般高雅，一书，一茶，足矣，静下来，腐朽之气全无。
 
 ## 影视
 
 > 看电影会笑，也会哭
 
-书籍给我们更多的是想象空间，影视作品则通过一些细致入微的表现力来感染我们，一些推荐列表和影评请参见 [影视](/cn/videos/) 页面。
+书籍给我们更多的是想象空间，影视作品则通过一些细致入微的表现力来感染我们，一些推荐列表和影评请参见 [影视](/videos/) 页面。

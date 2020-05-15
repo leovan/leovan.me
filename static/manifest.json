@@ -4,12 +4,12 @@
   "description": "Leo Van's Personal Website | 范叶亮的个人网站",
   "icons": [
     {
-      "src": "/images/icon-192x192.png",
+      "src": "/images/web/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icon-512x512.png",
+      "src": "/images/web/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 
 <div class="terms">
-  {{ range $key, $value := .Data.Terms }}
+  {{ range $key, $value := .Data.Terms.ByCount }}
   <span class="term">
-    <a href="{{ (print "/" $.Data.Plural "/" $key | urlize) | relURL }}">
-      {{ $key }}
+    <a href="{{ (print "/" $.Data.Plural "/" $value.Name | urlize) | relURL }}">
+      {{ $value.Name }}
     </a>
-    ({{ len $value }})
+    ({{ $value.Count }})
   </span>
   {{ end }}
 </div>

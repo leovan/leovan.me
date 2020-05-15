@@ -521,6 +521,67 @@ footer .adsbygoogle {
   margin: 0.6em;
 }
 
+/* nanogallery2 */
+
+.nGY2GThumbnailLabel {
+  line-height: 1;
+}
+
+.photography-tags {
+  direction: ltr;
+  max-width: inherit;
+  margin-bottom: 30px;
+}
+
+.photography-tags ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.photography-tags li {
+  border-bottom: 1px solid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photography-tags a {
+  display: block;
+  padding: 15px 20px;
+  border-bottom: none;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.photography-tags .active a {
+  background: none;
+}
+
+.photography-tags li li a {
+  padding-left: 30px;
+}
+
+.photography-tags li li::before {
+  content: none;
+}
+
+.photography-tags li li a::before {
+  content: "•\00a0\00a0\00a0";
+}
+
+.photography-tags li, .photography-tags li:first-child {
+  border: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Different size screens */
 
 @-ms-viewport {
@@ -593,13 +654,11 @@ footer .adsbygoogle {
 
   .masthead .menu {
     direction: ltr;
-    max-width: 300px;
     max-width: inherit;
     margin: 10px auto 0 auto;
   }
 
   .masthead .menu ul {
-    text-align: left;
     text-align: center;
     margin: 0;
     padding: 0;

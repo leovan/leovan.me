@@ -15,12 +15,12 @@ disable_adsense: true
 I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](../resume/) page. This page will let you know my lifestyle.
 
 <picture>
-  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me-large.webp">
-  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me-medium.webp">
-  <source type="image/webp" srcset="/images/me-small.webp">
-  <source media="(min-width: 1200px)" srcset="/images/me-large.jpg">
-  <source media="(min-width: 800px)" srcset="/images/me-medium.jpg">
-  <img src="/images/me-small.jpg" alt="Leo Van">
+  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">
+  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me/about-medium.webp">
+  <source type="image/webp" srcset="/images/me/about-small.webp">
+  <source media="(min-width: 1200px)" srcset="/images/me/about-large.jpg">
+  <source media="(min-width: 800px)" srcset="/images/me/about-medium.jpg">
+  <img src="/images/me/about-small.jpg" alt="Leo Van">
 </picture>
 
 # What do I like?
@@ -47,8 +47,8 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
 
 ## Books
 
-Find more on [Books](/cn/books/) page (in Chinese).
+Find more on [Books](/books/) page (in Chinese).
 
 ## Movies
 
-Find more on [Movies](/cn/videos/) page (in Chinese).
+Find more on [Movies](/videos/) page (in Chinese).

@@ -31,7 +31,7 @@
             "name": "{{ .Params.author }}",
             "logo": {
                 "@type": "ImageObject",
-                "url": {{ "/images/publisher-logo.png" | absURL | jsonify | safeJS }}
+                "url": {{ "/images/web/publisher-logo.png" | absURL | jsonify | safeJS }}
             }
         },
         "url": {{ .Permalink | absURL | jsonify | safeJS }}

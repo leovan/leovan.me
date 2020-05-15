@@ -55,11 +55,11 @@ $(document).ready(function() {
 </script>
 {{ end }}
 
+<script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+
 <script src="{{ $.Site.Params.vanillaBackToTopCDN }}/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
 addBackToTop({
   diameter: 48
 })
 </script>
-
-<script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>

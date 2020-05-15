@@ -28,7 +28,7 @@ body, a {
 }
 
 .logo {
-  background-image: url(/images/avatar-dark-theme.svg);
+  background-image: url(/images/web/avatar-dark-theme.svg);
   background-repeat: no-repeat;
 }
 
@@ -198,6 +198,16 @@ pre[class*="language-"] > code[data-language]:before {
   box-shadow: 0 2px 5px 0 var(--body-box-shadow) !important;
 }
 
+.photography-tags a {
+  color: var(--body-background-color);
+  background: var(--body-block-border-color);
+}
+
+.photography-tags .active a {
+  border: 1px solid var(--body-block-border-color);
+  color: var(--body-fore-color);
+}
+
 @media screen and (min-width: 960px) {
   html::after {
     content: "";
@@ -208,7 +218,7 @@ pre[class*="language-"] > code[data-language]:before {
     bottom: 0;
     z-index: -1;
     display: block;
-    background: url(/images/little-bear-light.png) no-repeat 50% 50%;
+    background: url(/images/web/little-bear-light.png) no-repeat 50% 50%;
     background-size: cover;
   }
 }
