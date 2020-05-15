@@ -1,0 +1,53 @@
+<link rel="stylesheet" href='{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/css/nanogallery2.min.css'/>
+<script src="{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/jquery.nanogallery2.min.js"></script>
+
+{{ if .Get "tags" }}
+{{ $tags := split (.Get "tags") "," }}
+<div class="photography-tags">
+  <ul>
+    {{ range $tag := $tags}}
+    <li tag="{{ $tag }}"><a>{{ $tag }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+<div class="nanogallery2" id="nanogallery2"></div>
+
+<script>
+$(document).ready(function() {
+  function createGallery(tag) {
+    var dataURL = {{ .Get "data-base-url" | absURL }};
+
+    if (tag != undefined && tag != null) {
+      dataURL = dataURL + '-' + tag + '.json';
+    } else {
+      dataURL = dataURL + '.json';
+    }
+
+    $.getJSON(dataURL, function(data) {
+      $("#nanogallery2").nanogallery2("destroy");
+      $("#nanogallery2").nanogallery2(data);
+    });
+  }
+
+  function activateTag(tag) {
+    $(".photography-tags ul li").removeClass("active");
+    $(".photography-tags ul li[tag=" + tag +"]").addClass("active");
+  }
+
+  var tag = $(".photography-tags ul li").first().attr("tag");
+  activateTag(tag);
+  createGallery(tag);
+
+  $(".photography-tags ul li a").click(function() {
+    var tag = $(this).html();
+    var activeTag = $(".photography-tags ul li[class~='active']").first().attr("tag");
+    
+    if (tag != activeTag) {
+      activateTag(tag);
+      createGallery(tag);
+    }
+  });
+});
+</script>
