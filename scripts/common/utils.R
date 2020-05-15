@@ -4,7 +4,7 @@ library(httr)
 library(jsonlite)
 library(rvest)
 
-ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36'
+ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
 
 #' 年份 转 年份可读文本
 #' 
@@ -172,7 +172,7 @@ crawl_video_douban_info <- function(douban_id) {
 #' @return 豆瓣书籍信息
 crawl_book_douban_info <- function(douban_id) {
     info <- tibble(
-        title_zh = NA, title = NA, author = NA, publisher = NA, 
+        title_zh = NA, title = NA, author = NA, publisher = NA,
         published_date = NA, pages = NA, douban_rating = NA)
     
     if (!is.na(douban_id)) {
@@ -193,7 +193,7 @@ crawl_book_douban_info <- function(douban_id) {
                 html_node('#info') %>%
                 html_text(trim=T) %>%
                 str_replace_all('\n', '') %>%
-                str_replace_all('\\s+', ' ') %>% 
+                str_replace_all('\\s+', ' ') %>%
                 str_replace_all('【', '[') %>%
                 str_replace_all('】', ']') %>%
                 str_replace_all('•', '·')

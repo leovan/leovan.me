@@ -3,7 +3,7 @@ title: 影视
 author: 范叶亮
 date: '2017-12-04'
 lastmod: '`r Sys.Date()`'
-slug: cn/videos
+slug: videos
 description: '共鸣，情愫，观念，认知，体验，情怀'
 disable_author_date: true
 disable_donate: true
@@ -11,7 +11,7 @@ disable_comments: true
 disable_adsense: true
 ---
 
-## 共鸣，情愫，观念，认知，体验，情怀
+## 「共鸣，情愫，观念，认知，体验，情怀」
 
 ```{r setup, include=F}
 library(plyr)
@@ -36,7 +36,7 @@ output_col_names <- c(
 )
 
 video_list <- read_tsv(
-    '../data/cn/video-list.tsv',
+    '../static/data/videos.tsv',
     col_types = 'cccccccccDDdddiD')
 
 video_table <- function(videos) {
@@ -125,5 +125,5 @@ video_list_auto_update %>%
     union_all(video_list_manual_update) %>%
     select(all_of(video_list_columns)) %>%
     arrange(desc(release_date)) %>%
-    write_tsv('../data/cn/video-list.tsv')
+    write_tsv('../static/data/videos.tsv')
 ```

@@ -15,7 +15,7 @@ permalinks:
   en: "/en/:year/:month/:slug/"
 
 menu:
-  main:
+  home:
     - name: "博客"
       url: "/cn/"
       weight: 1
@@ -28,22 +28,38 @@ menu:
     - name: "About"
       url: "/en/about/"
       weight: 4
-  en:
-    - name: "Home"
+  main:
+    - name: "首页"
       url: "/"
       weight: 1
+    - name: "博客"
+      url: "/cn/"
+      weight: 2
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 3
+    - name: "Home"
+      url: "/"
+      weight: 4
     - name: "Blog"
       url: "/en/"
-      weight: 2
+      weight: 5
+    - name: "About"
+      url: "/en/about/"
+      weight: 6
+  en:
+    - name: "Blog"
+      url: "/en/"
+      weight: 1
     - name: "Categories"
       url: "/categories/"
-      weight: 3
+      weight: 2
     - name: "Tags"
       url: "/tags/"
-      weight: 4
+      weight: 3
     - identifier: "en-menu-separator-1"
       url: "#menu-separator"
-      weight: 5
+      weight: 4
     - name: "About"
       url: "/en/about/"
       weight: 6
@@ -134,6 +150,9 @@ params:
   
   vanillaBackToTopVersion: "7.2.1"
   vanillaBackToTopCDN: "//unpkg.com"
+  
+  nanogallery2Version: "2.4.2"
+  nanogallery2CDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   slogan: "手中有刀，心里有佛"
 
