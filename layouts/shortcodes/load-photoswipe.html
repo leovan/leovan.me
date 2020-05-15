@@ -1,8 +1,3 @@
-<!--
-Put this file in /layouts/shortcodes/load-photoswipe.html
-Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
--->
-
 <!-- prevent this shortcode from being loaded more than once per page -->
 {{ if not ($.Page.Scratch.Get "photoswipe-loaded") }}
   {{ $.Page.Scratch.Set "photoswipe-loaded" 1 }}
@@ -11,9 +6,6 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 *** jQuery must be loaded before load-photoswipe.js ***
 - If your template already loads jQuery in the header then you don't need to load it again here.
 - If your template already loads jQuery in the footer, then you could load load-photoswipe.js from the footer instead
--->
-<!--
-<script src='{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js'></script>
 -->
 <script src="/js/load-photoswipe.js"></script>
 
