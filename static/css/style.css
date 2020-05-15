@@ -523,8 +523,12 @@ footer .adsbygoogle {
 
 /* nanogallery2 */
 
-.nGY2GThumbnailLabel {
-  line-height: 1;
+.nGY2 .nGY2GThumbnailLabel {
+  line-height: 1.2em !important;
+}
+
+.nGY2 .nGY2GThumbnailAlbumTitle, .nGY2 .nGY2GThumbnailImageTitle {
+  text-shadow: none !important;
 }
 
 .photography-tags {
