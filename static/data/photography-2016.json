@@ -14,6 +14,7 @@
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
   "items": [
     { "src": "2016-11-05-autumn-01.jpg", "srct": "2016-11-05-autumn-01-thumbnail.jpg", "title": "好个秋" },
-    { "src": "2016-11-05-autumn-02.jpg", "srct": "2016-11-05-autumn-02-thumbnail.jpg", "title": "好个秋" }
+    { "src": "2016-11-05-autumn-02.jpg", "srct": "2016-11-05-autumn-02-thumbnail.jpg", "title": "好个秋" },
+    { "src": "2016-11-05-autumn-03.jpg", "srct": "2016-11-05-autumn-03-thumbnail.jpg", "title": "好个秋" }
   ]
 }
