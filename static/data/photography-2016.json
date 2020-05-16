@@ -1,0 +1,19 @@
+{
+  "itemsBaseURL": "/images/photography/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "center",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "items": [
+    { "src": "2016-11-05-autumn-01.jpg", "srct": "2016-11-05-autumn-01-thumbnail.jpg", "title": "好个秋" },
+    { "src": "2016-11-05-autumn-02.jpg", "srct": "2016-11-05-autumn-02-thumbnail.jpg", "title": "好个秋" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "itemsBaseURL": "/images/photography/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "center",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "items": [
+    { "src": "2017-07-14-mountains.jpg", "srct": "2017-07-14-mountains.jpg", "title": "山" },
+    { "src": "2017-07-14-stream.jpg", "srct": "2017-07-14-stream-thumbnail.jpg", "title": "涧" },
+    { "src": "2017-08-25-bay.jpg", "srct": "2017-08-25-bay-thumbnail.jpg", "title": "湾" },
+    { "src": "2017-08-11-light.jpg", "srct": "2017-08-11-light-thumbnail.jpg", "title": "光" }
+  ]
+}
