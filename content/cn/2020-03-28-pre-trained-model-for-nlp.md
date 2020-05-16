@@ -93,7 +93,7 @@ $$`
 
 1. **基于卷积的模型**：基于卷积的模型通过卷积操作从一个词的邻居中聚合局部信息来捕获这个词的含义 [^kim2014convolutional]。
   {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/convolutional-model.png" title="Convolutional model" >}}
-2. **基于序列的模型**：基于序例的模型采用 RNNs（LSTM [^hochreiter1997long] 和 GRU [^chung2014empirical]） 来捕获词的上下文信息。实际中，我们采用双向的 RNNs 从词的两端收集信息，不过整体效果容易收到长期依赖问题的影响。
+2. **基于序列的模型**：基于序列的模型采用 RNNs（LSTM [^hochreiter1997long] 和 GRU [^chung2014empirical]） 来捕获词的上下文信息。实际中，我们采用双向的 RNNs 从词的两端收集信息，不过整体效果容易收到长期依赖问题的影响。
   {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/sequential-model.png" title="Sequential model" >}}
 3. **基于图的模型**：基于图的模型将字作为图中的一个节点来学习上下文表示，这个图通常是一个词之间预定义的语言结构，例如：语法结构 [^socher2013recursive] [^tai2015improved] 或语义关系 [^marcheggiani2018exploiting]。尽管基于语言学的图结构能提供有用的信息，但如何构建一个好的图结构则成为了难题。除此之外，基于语言学的图结构需要依赖专家知识和外部工具，例如：依存句法分析等。事实上，我们会采用一个更直接的方式去学习任意两个词之间的关系，通常连接的权重可以通过自注意力机制自动计算得出。Transformer [^vaswani2017attention] 是一个采用了全链接自注意力架构的实现，同时也采用了位置嵌入（positional embedding），层标准化（layer normalization）和残差连接（residual connections）等网络设计理念。
   {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/fully-connected-graph-based-model.png" title="Fully-connected graph-based model" >}}
@@ -122,7 +122,7 @@ NLP 中最常见的非监督任务为概率语言建模，这是一个经典的�
 p \left(x_{1:T}\right) = \prod_{t=1}^{y}{p \left(x_t \mid x_{0:t-1}\right)}
 $$`
 
-其中 `$x_0$` 为序例开始的特殊标记。条件概率 `$p \left(x_t \mid x_{0:t-1}\right)$` 可以通过给定的语言上下文 `$x_{0:t-1}$` 词的概率分布进行建模估计。上下文 `$x_{0:t-1}$` 可以通过神经编码器 `$f_{\text{enc}} \left(\cdot\right)$` 进行建模，则条件概率可以表示为：
+其中 `$x_0$` 为序列开始的特殊标记。条件概率 `$p \left(x_t \mid x_{0:t-1}\right)$` 可以通过给定的语言上下文 `$x_{0:t-1}$` 词的概率分布进行建模估计。上下文 `$x_{0:t-1}$` 可以通过神经编码器 `$f_{\text{enc}} \left(\cdot\right)$` 进行建模，则条件概率可以表示为：
 
 `$$
 p \left(x_t | x_{0:t-1}\right) = g_{\text{LM}} \left(f_{\text{enc}} \left(x_{0:t-1}\right)\right)
@@ -144,7 +144,7 @@ MLM 通常以一个分类问题进行求解，我们将遮挡后的序列输入�
 
 ### 排列语言模型（Permuted Language Modeling，PLM）
 
-在 MLM 中一些特殊字符（例如：`[MASK]`）在下游任务中是无用的，为了解决这个问题，XLNet [^yang2019xlnet] 提出了一种排列语言模型（Permuted Language Modeling，PLM）用于替代 MLM。简言之，PLM 是对输入序列的排列进行语言建模。给定一个序列，从所有可能的排列中随机抽样得到一个排列，将排列后的序例中的一些字符作为模型的预测目标，利用其他部分和目标的自然位置进行训练。需要注意的是这种排列并不会影响序例的自然位置，其仅用于定义字符预测的顺序。
+在 MLM 中一些特殊字符（例如：`[MASK]`）在下游任务中是无用的，为了解决这个问题，XLNet [^yang2019xlnet] 提出了一种排列语言模型（Permuted Language Modeling，PLM）用于替代 MLM。简言之，PLM 是对输入序列的排列进行语言建模。给定一个序列，从所有可能的排列中随机抽样得到一个排列，将排列后的序列中的一些字符作为模型的预测目标，利用其他部分和目标的自然位置进行训练。需要注意的是这种排列并不会影响序列的自然位置，其仅用于定义字符预测的顺序。
 
 ### 去噪自编码（Denoising Autoencoder，DAE）
 
@@ -378,7 +378,7 @@ BERT 采用了一中基于 Vaswani [^vaswani2017attention] 所提出模型的多
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/bert-gpt-elmo-model-architectures.png" >}}
 
-BERT 的输入表示既可以表示一个单独的文本序列，也可以表示一对文本序例（例如：问题和答案）。对于一个给定的词条，其输入表示由对应的词条嵌入，分割嵌入和位置嵌入三部分加和构成，如下图所示：
+BERT 的输入表示既可以表示一个单独的文本序列，也可以表示一对文本序列（例如：问题和答案）。对于一个给定的词条，其输入表示由对应的词条嵌入，分割嵌入和位置嵌入三部分加和构成，如下图所示：
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/bert-input-representation.png" >}}
 
@@ -452,7 +452,7 @@ $$`
 
 其中，`$\text{SG} \left(\cdot\right)$` 表示停止梯度，`$\left[\mathbf{h}_u \circ \mathbf{h}_v\right]$` 表示将两个隐含序列按照长度维度进行拼接，`$\mathbf{W}$` 为模型的参数。与一般的 Transformer 相比，最大的不同在于 `$\mathbf{k}^n_{\tau + 1}$` 和 `$\mathbf{v}^n_{\tau + 1}$` 不仅依赖于 `$\tilde{\mathbf{h}}^{n-1}_{\tau - 1}$` 还依赖于之前分割段落的 `$\mathbf{h}^{n-1}_{\tau}$` 缓存。
 
-在标准的 Transformer 中，序例的顺序信息通过位置嵌入 `$\mathbf{U} \in \mathbb{R}^{L_{\max} \times d}$` 提供，其中第 `$i$` 行 `$\mathbf{U}_i$` 对应一个分割文本内部的第 `$i$` 个**绝对**位置，`$L_{\max}$` 为最大可能长度。在 Transformer-XL 中则是通过一种**相对**位置信息对其进行编码，构建一个相对位置嵌入 `$\mathbf{R} \in \mathbb{R} ^{L_{\max} \times d}$`，其中第 `$i$` 行 `$\mathbf{R}_i$` 表示两个位置之间相对距离为 `$i$` 的嵌入表示。
+在标准的 Transformer 中，序列的顺序信息通过位置嵌入 `$\mathbf{U} \in \mathbb{R}^{L_{\max} \times d}$` 提供，其中第 `$i$` 行 `$\mathbf{U}_i$` 对应一个分割文本内部的第 `$i$` 个**绝对**位置，`$L_{\max}$` 为最大可能长度。在 Transformer-XL 中则是通过一种**相对**位置信息对其进行编码，构建一个相对位置嵌入 `$\mathbf{R} \in \mathbb{R} ^{L_{\max} \times d}$`，其中第 `$i$` 行 `$\mathbf{R}_i$` 表示两个位置之间相对距离为 `$i$` 的嵌入表示。
 
 对于一般的 Transformer，一个分割段落内部的 `$q_i$` 和 `$k_j$` 之间的注意力分数可以分解为：
 
@@ -557,7 +557,7 @@ L(\theta ; \mathcal{X}) &=\frac{1}{|\mathcal{X}|} \Sigma_{x \in \mathcal{X}} \lo
 \end{aligned}
 $$`
 
-对于一个具有 8 个词条的序例，`$x_3 x_4 x_5 x_6$` 被遮挡的示例如下：
+对于一个具有 8 个词条的序列，`$x_3 x_4 x_5 x_6$` 被遮挡的示例如下：
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/mass.png" >}}
 
