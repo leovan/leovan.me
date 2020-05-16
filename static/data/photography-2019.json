@@ -13,7 +13,7 @@
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
   "items": [
-    { "src": "2019-07-14-great-wall.jpg", "srct": "2019-07-14-great-wall.jpg", "title": "司马台长城" },
+    { "src": "2019-07-14-great-wall.jpg", "srct": "2019-07-14-great-wall-thumbnail.jpg", "title": "司马台长城" },
     { "src": "2019-10-25-kubuqi-hiking.jpg", "srct": "2019-10-25-kubuqi-hiking-thumbnail.jpg", "title": "库布其沙漠挑战赛" },
     { "src": "2019-10-05-xihu-1.jpg", "srct": "2019-10-05-xihu-1-thumbnail.jpg", "title": "西湖" },
     { "src": "2019-10-05-xihu-2.jpg", "srct": "2019-10-05-xihu-2-thumbnail.jpg", "title": "西湖" },
