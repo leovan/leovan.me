@@ -3,10 +3,14 @@
 
 {{ if .Get "tags" }}
 {{ $tags := split (.Get "tags") "," }}
+{{ $tagNames := $tags }}
+{{ if .Get "tag-names"}}
+{{ $tagNames := split (.Get "tag-names") "," }}
+{{ end }}
 <div class="photography-tags">
   <ul>
-    {{ range $tag := $tags}}
-    <li tag="{{ $tag }}"><a>{{ $tag }}</a></li>
+    {{ range $idx, $num := (seq (len $tags)) }}
+    <li tag="{{ index $tags $idx }}"><a>{{ index $tagNames $idx }}</a></li>
     {{ end }}
   </ul>
 </div>
@@ -17,7 +21,7 @@
 <script>
 $(document).ready(function() {
   function createGallery(tag) {
-    var dataURL = {{ .Get "data-base-url" | absURL }};
+    var dataURL = {{ .Get "data-base-url" }};
 
     if (tag != undefined && tag != null) {
       dataURL = dataURL + '-' + tag + '.json';
@@ -43,7 +47,7 @@ $(document).ready(function() {
   $(".photography-tags ul li a").click(function() {
     var tag = $(this).html();
     var activeTag = $(".photography-tags ul li[class~='active']").first().attr("tag");
-    
+
     if (tag != activeTag) {
       activateTag(tag);
       createGallery(tag);
