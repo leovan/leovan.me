@@ -12,7 +12,7 @@ disable_adsense: true
 
 # Who am I?
 
-I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](../resume/) page. This page will let you know my lifestyle.
+I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](/en/resume/) page. This page will let you know my lifestyle.
 
 <picture>
   <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">

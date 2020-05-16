@@ -12,7 +12,7 @@ disable_adsense: true
 
 # 我是谁？
 
-我是 **范叶亮**，可以叫我 **小黑** 或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的 [简历](../resume/) 页面，当前页面可以让你了解生活中的我。
+我是 **范叶亮**，可以叫我 **小黑** 或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的 [简历](/cn/resume/) 页面，当前页面可以让你了解生活中的我。
 
 <picture>
   <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">
