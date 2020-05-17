@@ -21,6 +21,7 @@ tags:
 
 ## 多臂赌博机问题
 
+> 本文为[《强化学习系列》](/categories/强化学习/)文章  
 > 本文内容主要参考自《强化学习》[^sutton2018reinforcement]
 
 一个赌徒，要去摇老虎机，走进赌场一看，一排老虎机，外表一模一样，但是每个老虎机吐钱的概率可不一样，他不知道每个老虎机吐钱的概率分布是什么，那么每次该选择哪个老虎机可以做到最大化收益呢？这就是**多臂赌博机问题 (Multi-armed bandit problem, K- or N-armed bandit problem, MAB)** [^mab-problem]。
