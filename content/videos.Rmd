@@ -19,7 +19,7 @@ library(lubridate)
 library(knitr)
 options(knitr.kable.NA = '')
 
-source('../scripts/common/utils.R')
+source('../scripts/share/utils.R')
 ```
 
 ```{r moive_list, echo=F, message=F, warning=F, results = 'asis'}
