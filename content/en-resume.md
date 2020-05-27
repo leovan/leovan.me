@@ -84,6 +84,9 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
+{{< load-mdc >}}
+{{< readfile file="/scripts/share/programming-languages-timeline.html" >}}
+
 ### Frameworks
 
 - Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
