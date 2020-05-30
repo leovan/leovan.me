@@ -48,18 +48,21 @@ menu:
       url: "/en/about/"
       weight: 6
   en:
+    - name: "Home"
+      url: "/"
+      weight: 1
     - name: "Blog"
       url: "/en/"
-      weight: 1
+      weight: 2
     - name: "Categories"
       url: "/categories/"
-      weight: 2
+      weight: 3
     - name: "Tags"
       url: "/tags/"
-      weight: 3
+      weight: 4
     - identifier: "en-menu-separator-1"
       url: "#menu-separator"
-      weight: 4
+      weight: 5
     - name: "About"
       url: "/en/about/"
       weight: 6
@@ -121,16 +124,16 @@ params:
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.leovan.me/libraries"
 
-  jQueryVersion: "3.5.0"
+  jQueryVersion: "3.5.1"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "7.8.1"
+  videojsVersion: "7.8.3"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  materialDesignWebFontVersion: "5.1.45"
+  materialDesignWebFontVersion: "5.3.45"
   materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   materialComponentsWebVersion: "latest"
@@ -145,7 +148,7 @@ params:
   MetingJSVersion: "latest"
   MetingJSCDN: "//unpkg.com"
 
-  lazysizesVersion: "5.2.0"
+  lazysizesVersion: "5.2.2"
   lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
   
   vanillaBackToTopVersion: "7.2.1"
