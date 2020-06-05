@@ -1,0 +1,36 @@
+{{ if not ($.Page.Scratch.Get "figure-slider") }}
+  {{ $.Page.Scratch.Set "figure-slider" 1 }}
+  <link rel="stylesheet" href="/css/figure-slider.css"/>
+{{ end }}
+
+<div class="figure-slider">
+  <div class="figure-slider-parameters">
+    <span class="base-url">{{ .Get "base-url" }}</span>
+    <span class="image-filename-prefix">{{ .Get "image-filename-prefix" }}</span>
+    <span class="image-format">{{ .Get "image-format" | default "png" }}</span>
+    <span class="milliseconds">{{ .Get "milliseconds" | default 300 }}</span>
+  </div>
+  <div class="figure-slider-image-container">
+    <img class="figure-slider-image" src='{{ printf "%s%s%d.%s" (.Get "base-url") (.Get "image-filename-prefix") (.Get "image-min-index" | default 0) (.Get "image-format" | default "png") }}'>
+  </div>
+  <div class="figure-slider-controls">
+    <div class="figure-slider-buttons">
+      <button class="figure-slider-button-previous">
+        <span class="mdi mdi-skip-previous"></span>
+      </button>
+    </div>
+    <div class="figure-slider-scroll-bar-container">
+      <input class="figure-slider-scroll-bar" type="range" min='{{ .Get "image-min-index" | default 0 }}' max='{{ .Get "image-max-index"}}' value='{{ .Get "image-min-index" | default 0 }}'>
+    </div>
+    <div class="figure-slider-buttons">
+      <button class="figure-slider-button-next">
+        <span class="mdi mdi-skip-next"></span>
+      </button>
+    </div>
+    <div class="figure-slider-buttons">
+      <button class="figure-slider-button-play-pause figure-slider-button-play">
+        <span class="mdi mdi-play"></span>
+      </button>
+    </div>
+  </div>
+</div>

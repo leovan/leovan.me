@@ -1,0 +1,96 @@
+.figure-slider {
+  position: relative;
+}
+
+.figure-slider-parameters {
+  display: none;
+}
+
+.figure-slider-image-container img {
+  width: 100%;
+}
+
+.figure-slider-controls {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.figure-slider-buttons button {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  margin: 3px;
+}
+
+.figure-slider-buttons button:focus {
+  outline: 0;
+}
+
+.figure-slider-buttons button span {
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+}
+
+.figure-slider-scroll-bar-container {
+  display: flex;
+  flex: 1;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.figure-slider-scroll-bar {
+  background: #d3d3d3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: grabbing;
+  flex: 1;
+  height: 30px;
+  margin: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 6px;
+  outline: none;
+  opacity: 0.6;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+
+.figure-slider-scroll-bar:hover {
+  opacity: 1;
+}
+
+.figure-slider-scroll-bar:focus {
+  outline: 0;
+}
+
+.figure-slider-scroll-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: black;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.figure-slider-scroll-bar::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: black;
+  cursor: pointer;
+  vertical-align: middle;
+}
