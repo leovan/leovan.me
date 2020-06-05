@@ -46,13 +46,6 @@ document.addEventListener('keyup', function(e) {
 
 {{ if or .IsHome (len (findRE "^/cn/" .RelPermalink)) }}
 <script async src="/js/load-typekit.js"></script>
-<script src="{{ $.Site.Params.panguCDN }}/pangu/{{ $.Site.Params.panguVersion }}/pangu.min.js"></script>
-<script>
-$(document).ready(function() {
-    pangu.ignoreTags = /^(script|code|pre|textarea|a)$/i;
-    pangu.spacingPage();
-});
-</script>
 {{ end }}
 
 <script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
@@ -63,3 +56,7 @@ addBackToTop({
   diameter: 48
 })
 </script>
+
+{{ if $.Page.Scratch.Get "figure-slider" }}
+<script src="/js/figure-slider.js"></script>
+{{ end }}

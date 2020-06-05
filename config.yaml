@@ -139,9 +139,6 @@ params:
   materialComponentsWebVersion: "latest"
   materialComponentsWebCDN: "//unpkg.com"
 
-  panguVersion: "4.0.7"
-  panguCDN: "//cdnjs.cloudflare.com/ajax/libs"
-
   APlayerVersion: "1.10.1"
   APlayerCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
