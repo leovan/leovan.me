@@ -17,6 +17,9 @@ tags:
   - Upper Confidence Bound
   - UCB
   - Gradient Bandit
+images:
+  - /images/cn/2020-05-16-multi-armed-bandit/compulsive-gambling.png
+  - /images/cn/2020-05-16-multi-armed-bandit/different-methods-performance.png
 ---
 
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  

@@ -29,6 +29,10 @@ tags:
   - 部分可观测马尔可夫决策过程
   - Partially Observable Markov Decision Process
   - POMDP
+images:
+  - /images/cn/2020-05-23-markov-decision-process/student-markov-chain.png
+  - /images/cn/2020-05-23-markov-decision-process/student-mrp.png
+  - /images/cn/2020-05-23-markov-decision-process/student-mdp.png
 ---
 
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  
@@ -271,4 +275,3 @@ $$`
 [^sutton2018reinforcement]: Sutton, R. S., & Barto, A. G. (2018). _Reinforcement learning: An introduction_. MIT press.
 
 [^ucl-course-on-rl]: UCL Course on RL https://www.davidsilver.uk/teaching
-
