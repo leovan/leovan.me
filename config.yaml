@@ -8,7 +8,7 @@ ignoreFiles: [
   "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
 hasCJKLanguage: true
 enableEmoji: true
-rssLimit: 30
+rssLimit: 100
 
 permalinks:
   cn: "/cn/:year/:month/:slug/"
@@ -57,24 +57,21 @@ menu:
     - name: "Categories"
       url: "/categories/"
       weight: 3
-    - name: "Tags"
-      url: "/tags/"
-      weight: 4
     - identifier: "en-menu-separator-1"
       url: "#menu-separator"
-      weight: 5
+      weight: 4
     - name: "About"
       url: "/en/about/"
-      weight: 6
+      weight: 5
     - name: "Resume"
       url: "/en/resume/"
-      weight: 7
+      weight: 6
     - identifier: "en-menu-separator-2"
       url: "#menu-separator"
-      weight: 8
+      weight: 7
     - name: "中文"
       url: "/cn/"
-      weight: 9
+      weight: 8
   cn:
     - name: "首页"
       url: "/"
@@ -85,24 +82,24 @@ menu:
     - name: "分类"
       url: "/categories/"
       weight: 3
-    - name: "标签"
-      url: "/tags/"
-      weight: 4
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
-      weight: 5
+      weight: 4
     - name: "关于"
       url: "/cn/about/"
-      weight: 6
+      weight: 5
     - name: "简历"
       url: "/cn/resume/"
-      weight: 7
+      weight: 6
     - identifier: "cn-menu-separator-2"
       url: "#menu-separator"
-      weight: 8
+      weight: 7
     - name: "English"
       url: "/en/"
-      weight: 9
+      weight: 8
+
+taxonomies:
+  category: categories
 
 params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"

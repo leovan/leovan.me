@@ -24,7 +24,7 @@
 {{ if .Params.tags }}
 {{ if gt (len .Params.tags) 0 }}
 <strong>{{ default "Tags" (index $.Site.Params.lang.tags .Section) }}: </strong>
-{{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+{{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<span>{{ . }}</span>{{ end }}
 {{ end }}
 {{ end }}
 {{ if or (.Params.categories) (.Params.tags) }}
