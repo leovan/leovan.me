@@ -6,7 +6,6 @@ date: '2020-05-23'
 slug: markov-decision-process
 categories:
   - 机器学习
-  - 深度学习
   - 强化学习
 tags:
   - 强化学习

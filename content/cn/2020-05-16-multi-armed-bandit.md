@@ -6,7 +6,6 @@ date: '2020-05-16'
 slug: multi-armed-bandit
 categories:
   - 机器学习
-  - 深度学习
   - 强化学习
 tags:
   - 强化学习
