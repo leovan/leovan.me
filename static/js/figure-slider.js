@@ -70,6 +70,16 @@ $(document).ready(function() {
     }
   }
 
+  function figureSliderPreloadImages(baseURL, imageFilenamePrefix, imageFormat, scrollBar) {
+    var imageMinIndex = parseInt(scrollBar.attr("min"));
+    var imageMaxIndex = parseInt(scrollBar.attr("max"));
+
+    for (var imageIndex = imageMinIndex; imageIndex <= imageMaxIndex; imageIndex++) {
+      var imageSrc = figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat);
+      (new Image()).src = imageSrc;
+    }
+  }
+
   $(".figure-slider").each(function() {
     var baseURL = $(this).find(".base-url").first().html();
     var imageFilenamePrefix = $(this).find(".image-filename-prefix").first().html();
@@ -83,6 +93,8 @@ $(document).ready(function() {
     var figureSliderIndex = figureSliderIntervalIDS.length;
 
     figureSliderIntervalIDS.push(false);
+
+    figureSliderPreloadImages(baseURL, imageFilenamePrefix, imageFormat, scrollBar);
 
     buttonPlayPause.click(function () {
       figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat);
