@@ -148,7 +148,7 @@ params:
   vanillaBackToTopVersion: "7.2.1"
   vanillaBackToTopCDN: "//unpkg.com"
   
-  nanogallery2Version: "2.4.2"
+  nanogallery2Version: "3.0.0"
   nanogallery2CDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   slogan: "手中有刀，心里有佛"
