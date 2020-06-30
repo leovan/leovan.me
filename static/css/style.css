@@ -582,8 +582,19 @@ footer .adsbygoogle {
   margin-top: 5px;
 }
 
+/* Others */
+
 .hidden {
   display: none;
+}
+
+p.list-page {
+  text-indent: -5em;
+  padding-left: 5em;
+}
+
+p.list-page span {
+  margin-right: 0.3em;
 }
 
 /* Different size screens */
@@ -640,7 +651,7 @@ footer .adsbygoogle {
 
   .main {
     width: auto;
-    padding: 0 40px;
+    padding: 0 30px;
     margin-left: 0;
     border-left: none !important;
     min-height: auto;
@@ -733,7 +744,7 @@ footer .adsbygoogle {
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   h3, h4, h5, h6 {
