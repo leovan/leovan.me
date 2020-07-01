@@ -26,6 +26,10 @@ tags:
   - Asynchronous Dynamic Programming
   - 广义策略迭代
   - Generalised Policy Interation
+images:
+  - /images/cn/2020-06-13-planning-by-dynamic-programming/car-rental-policy-history.png
+  - /images/cn/2020-06-13-planning-by-dynamic-programming/generalized-policy-iteration.png
+  - /images/cn/2020-06-13-planning-by-dynamic-programming/policy-improvement.png
 ---
 
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  
