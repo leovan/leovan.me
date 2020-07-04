@@ -35,8 +35,8 @@ images:
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  
 > 本文内容主要参考自：  
 > 1.《强化学习》[^sutton2018reinforcement]  
-> 2. Reinforcement Learning [^stanford-cs234]  
-> 3. Markov Decision Processes [^ucl-course-on-rl]
+> 2. CS234: Reinforcement Learning [^stanford-cs234]  
+> 3. UCL Course on RL [^ucl-course-on-rl]
 
 ## 动态规划
 

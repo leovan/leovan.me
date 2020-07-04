@@ -29,8 +29,8 @@ images:
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  
 > 本文内容主要参考自：  
 > 1.《强化学习》[^sutton2018reinforcement]  
-> 2. Reinforcement Learning [^stanford-cs234]  
-> 3. Markov Decision Processes [^ucl-course-on-rl]
+> 2. CS234: Reinforcement Learning [^stanford-cs234]  
+> 3. UCL Course on RL [^ucl-course-on-rl]
 
 蒙特卡洛算法仅需要**经验**，即从真实或者模拟的环境交互中采样得到的状态、动作、收益的序例。从**真实**经验中学习不需要关于环境动态变化规律的先验知识，却依然能够达到最优的行为；从**模拟**经验中学习尽管需要一个模型，但这个模型只需要能够生成状态转移的一些样本，而不需要像动态规划那样生成所有可能的转移概率分布。
 
