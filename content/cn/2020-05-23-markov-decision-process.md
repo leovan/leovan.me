@@ -35,7 +35,10 @@ images:
 ---
 
 > 本文为[《强化学习系列》](/categories/强化学习/)文章  
-> 本文内容主要参考自《强化学习》[^sutton2018reinforcement] 和 Markov Decision Processes [^ucl-course-on-rl]
+> 本文内容主要参考自：  
+> 1.《强化学习》[^sutton2018reinforcement]  
+> 2. Reinforcement Learning [^stanford-cs234]  
+> 3. Markov Decision Processes [^ucl-course-on-rl]
 
 ## 马尔可夫模型
 
@@ -272,5 +275,7 @@ $$`
 尤其是假设 2 很难满足，现实问题中状态的数量一般很大，即使利用最快的计算机也需要花费难以接受的时间才能求解完成。
 
 [^sutton2018reinforcement]: Sutton, R. S., & Barto, A. G. (2018). _Reinforcement learning: An introduction_. MIT press.
+
+[^stanford-cs234]: CS234: Reinforcement Learning http://web.stanford.edu/class/cs234/index.html
 
 [^ucl-course-on-rl]: UCL Course on RL https://www.davidsilver.uk/teaching
