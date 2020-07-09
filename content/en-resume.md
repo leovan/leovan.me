@@ -114,7 +114,7 @@ _2015.03 ~ 2015.10, Algorithms Engineer_
 2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239B/en), 2016)
 3. Product life cycle identification method and device ([CN 106408217](https://patents.google.com/patent/CN106408217A/en), 2017)
 4. Address similarity calculation method and apparatus ([CN 107239442](https://patents.google.com/patent/CN107239442A/en), 2017)
-5. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637A/en), 2018)
+5. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637B/en), 2018)
 6. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), 2019)
 7. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), 2019)
 
