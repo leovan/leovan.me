@@ -87,3 +87,12 @@
 .icon-swift:before {
   background-image: url("../images/icons/swift.svg");
 }
+
+.icon-nodejs:before {
+  width: 1.6em;
+  background-image: url("../images/icons/nodejs.svg");
+}
+
+.icon-restful:before {
+  background-image: url("../images/icons/restful.png");
+}
