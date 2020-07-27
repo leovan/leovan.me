@@ -10,6 +10,6 @@ disable_comments: true
 disable_adsense: true
 ---
 
-## 「唯有美食与爱，不可辜负。」
+## 「唯有爱与美食，不可辜负。」
 
 {{< nanogallery2-gallery data-base-url="/data/cooking" >}}
