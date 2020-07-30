@@ -30,13 +30,13 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
-1. 2015.03 ~ Present, **JD Digits (JD Finance)**, Senior Algorithm Engineer
+1. 2015.04 ~ Present, **JD Digits (JD Finance)**, Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 
 ### Intelligent Agriculture
 
-_2019.07 ~ Present, Senior Algorithm Engineer_
+_2019.07 ~ Present, Algorithm & Product Leader_
 
 - **Intelligent Farming and Intelligent Poultry Solutions**: Lead the conception and design of intelligent farming and intelligent poultry business models and technology solutions. Led algorithm and product team members to build the data and algorithm models, and design the prototype of SaaS and APP **from 0 to 1**, which achieves the full solution from MVP to the real production environment.
 - **Intelligent Environmental Control**: Design and development of intelligent environmental control algorithms and solutions based on time series analysis, deep learning and reinforcement learning. The intelligent environmental control algorithm consists two parts: environment models and control models. It realizes the reuse of models for same crop and livestock in different environments. With the expert knowledge engine and machine learning algorithms, the control error of various environmental indicators has been reduced by **50%+** compared with the farmers while keep the regular yield of vegatable, and total average cost (including water, electricity, fertilizer and etc.) is reduced by **20%+**. In the 24-hour Hackathon simulation challenge of the 2019 International Autonomous Greenhouse Challenge, we achieved **4/21** of artificial intelligence strategy methods and **9/21** of net profit in virtual tomato planting.
@@ -53,7 +53,7 @@ _2018.04 ~ 2019.06, Project Leader_
 
 ### All Seeing Eyes (Chinese Address Analytics)
 
-_2015.03 ~ 2018.04, Project Leader_
+_2015.04 ~ 2018.04, Project Leader_
 
 - Development of **Chinese address analytics algorithms**, including: segmentation, classification, integrity, POI identification and similarity **(accuracy 90%+)**.
 - Development of **Address Profile System** based on the basic algorithm engine. It increased the conversion rate of users by **30%+** in the offline payment service.
@@ -70,7 +70,7 @@ _2017.10 ~ 2017.12, Algorithms Engineer_
 
 ### Mortgage Loan
 
-_2015.03 ~ 2015.10, Algorithms Engineer_
+_2015.04 ~ 2015.10, Algorithms Engineer_
 
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
