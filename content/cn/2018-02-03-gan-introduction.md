@@ -148,7 +148,7 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 
 - 生成器
 
-```{python}
+```python
 def build_generator(self):
     model = Sequential()
 
@@ -178,7 +178,7 @@ def build_generator(self):
 
 - 判别器
 
-```{python}
+```python
 def build_discriminator(self):
     model = Sequential()
 
@@ -202,7 +202,7 @@ def build_discriminator(self):
 
 - 对抗网络
 
-```{python}
+```python
 class ImageBasicGAN():
     def __init__(self, width, height, channels,
                  a_optimizer=Adam(1e-4, beta_1=0.5),
@@ -255,7 +255,7 @@ class ImageBasicGAN():
 
 - 训练过程
 
-```{python}
+```python
 def train(self, x_train, output_dir, iters,
           batch_size=32, k=1, save_interval=200):
     ''' 训练模型
