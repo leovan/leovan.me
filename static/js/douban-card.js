@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var douban_api_keys = [
+      '054022eaeae0b00e0fc068c0c0a2102a',
       '0b2bdeda43b5688921839c8ecb20399b',
       '0df993c66c0c636e29ecbb5344252a4a',
       '0dad551ec0f84ed02907ff5c42e8ec70',

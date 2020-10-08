@@ -235,7 +235,7 @@ hr {
 
 body {
   width: 960px;
-  margin: 0 auto;
+  margin: 0 auto !important;
   padding: 30px 0;
 }
 

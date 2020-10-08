@@ -1,6 +1,6 @@
 {{ if not ($.Page.Scratch.Get "pseudocode-loaded") }}
 {{ $.Page.Scratch.Set "pseudocode-loaded" 1 }}
-<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.pseudocodeCDN }}/pseudocode/{{ $.Site.Params.pseudocodeVersion }}/pseudocode.min.css">
+<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.pseudocodeCDN }}/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.css">
 {{ end }}
 
 <div><pre class="pseudocode">{{ .Inner }}</pre></div>
