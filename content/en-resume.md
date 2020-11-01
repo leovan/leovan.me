@@ -30,7 +30,7 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
-1. 2020.08 ~ Present, **Meituan Dianping**, Risk Data Mining Expert
+1. 2020.08 ~ Present, **Meituan**, Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD Digits (JD Finance)**, Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
@@ -123,7 +123,7 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 
 ### Open Source Projects
 
-- Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
+Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
 1. [Data Science Introduction With Python](https://github.com/leovan/data-science-introduction-with-python), a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 2. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r), a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)

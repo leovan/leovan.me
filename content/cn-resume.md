@@ -28,7 +28,7 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> 工作经历
 
-1. 2020.08 ~ 至今 **美团点评** 风险数据挖掘专家
+1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
 2. 2015.04 ~ 2020.08 **京东数字科技 (京东金融)** 高级算法工程师
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
@@ -127,7 +127,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 ### 开源项目
 
-- Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
+Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
 1. [Python 数据科学导论](https://github.com/leovan/data-science-introduction-with-python)，一份以 Python 为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 2. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)，一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
