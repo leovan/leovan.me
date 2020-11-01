@@ -25,8 +25,11 @@ public
 *.tgz
 *.gz
 *.tar
+*.pkl
 data/*.jpg
 data/*.png
+scripts/**/*.txt
+scripts/**/*.json
 
 # Outputs
 outputs
