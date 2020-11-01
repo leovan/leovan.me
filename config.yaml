@@ -4,8 +4,9 @@ title: "Leo Van | 范叶亮"
 googleAnalytics: "UA-48667916-2"
 disqusShortname: "leovan"
 ignoreFiles: [
-  "\\.Rmd$", "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$", "\\.tgz$",
-  "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
+  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
+  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
+  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
 hasCJKLanguage: true
 enableEmoji: true
 rssLimit: 100
