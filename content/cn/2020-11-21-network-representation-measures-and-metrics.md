@@ -150,6 +150,9 @@ tags:
   - Core Structure
   - 边缘结构
   - Periphery Structure
+images:
+  - /images/cn/2020-11-21-network-representation-measures-and-metrics/graph.png
+  - /images/cn/2020-11-21-network-representation-measures-and-metrics/centrality-measures.png
 ---
 
 > 本文为[《复杂网络系列》](/categories/复杂网络/)文章  
