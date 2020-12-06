@@ -4,5 +4,5 @@
 {{ with .Section }}
 <li><a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml" title="RSS feed">{{ default "Subscribe" (index $.Site.Params.lang.subscribe $section) }}</a></li>
 {{ end }}
-<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International">{{ default "License" (index $.Site.Params.lang.license $section) }}</a></li>
+<li><a href="{{ .Site.Params.licenseURL }}" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International">{{ default "License" (index $.Site.Params.lang.license $section) }}</a></li>
 {{ end }}

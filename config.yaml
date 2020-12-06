@@ -105,6 +105,7 @@ taxonomies:
 params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
   disqusURL: "https://leovan.me"
+  licenseURL: "https://github.com/leovan/leovan.me/blob/master/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
 
   jsCookieVersion: "2.2.1"
