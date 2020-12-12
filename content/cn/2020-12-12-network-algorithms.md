@@ -58,7 +58,6 @@ tags:
   - 标签传播算法
   - Label Propagation Algorithm
   - LPA
-  - Infomap
 images:
   - /images/cn/2020-12-12-network-algorithms/bfs.png
   - /images/cn/2020-12-12-network-algorithms/augmenting-path-algorithm.png

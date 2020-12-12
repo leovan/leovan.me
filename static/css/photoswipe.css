@@ -24,11 +24,11 @@ Grid Layout Styles
     /* Small desktop / ipad view: 3 tiles */
     .gallery .box {
         width: 33.3%;
-        padding-bottom: 33.3%; /*  */
+        padding-bottom: 33.3%;
     }
 }
 @media only screen and (min-width : 9999px) {
-   /* Medium desktop: 4 tiles */
+    /* Medium desktop: 4 tiles */
     .box {
         width: 25%;
         padding-bottom: 25%;
@@ -47,7 +47,7 @@ Grid Layout Styles
 Transition styles
 */
 .gallery.hover-transition figure,
-.gallery.hover-effect-zoom .img, 
+.gallery.hover-effect-zoom .img,
 .gallery:not(.caption-effect-appear) figcaption,
 .fancy-figure:not(.caption-effect-appear) figcaption {
     -webkit-transition: all 0.3s ease-in-out;
@@ -88,7 +88,6 @@ figure {
 /*
 img / a styles
 */
-
 .gallery .img {
     position: absolute;
     left: 0;
