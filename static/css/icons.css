@@ -78,6 +78,11 @@
   background-image: url("../images/icons/r.svg");
 }
 
+.icon-julia:before {
+  width: 1.6em;
+  background-image: url("../images/icons/julia.svg");
+}
+
 .icon-ruby:before {
   width: 0.8em;
   background-size: auto 0.8em;
@@ -95,4 +100,16 @@
 
 .icon-restful:before {
   background-image: url("../images/icons/restful.png");
+}
+
+.icon-macos:before {
+  background-image: url("../images/icons/macos.svg");
+}
+
+.icon-linux:before {
+  background-image: url("../images/icons/linux.svg");
+}
+
+.icon-windows:before {
+  background-image: url("../images/icons/windows.svg");
 }

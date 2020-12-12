@@ -11,7 +11,7 @@ Grid Layout Styles
     position: relative;
     /* Default: 1 tile wide */
     width: 100%;
-    padding-bottom: 100%; 
+    padding-bottom: 100%;
 }
 @media only screen and (min-width : 365px) {
     /* Tablet view: 2 tiles */
@@ -29,10 +29,10 @@ Grid Layout Styles
 }
 @media only screen and (min-width : 9999px) {
    /* Medium desktop: 4 tiles */
-   .box {
-      width: 25%;
-      padding-bottom: 25%;
-   }
+    .box {
+        width: 25%;
+        padding-bottom: 25%;
+    }
 }
 .tiles-2 .box {
     width: 50%;
