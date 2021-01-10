@@ -1,5 +1,6 @@
 # Netlify
 https://leovan.netlify.com/* https://leovan.me/:splat 301!
+https://leovan.netlify.app/* https://leovan.me/:splat 301!
 
 # Custom
 /index.xml    /cn/index.xml 301!
