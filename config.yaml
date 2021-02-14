@@ -1,7 +1,7 @@
 baseURL: "https://leovan.me/"
 languageCode: "en-us"
 title: "Leo Van | 范叶亮"
-googleAnalytics: "UA-48667916-2"
+googleAnalytics: "G-RJC7CCKE67"
 disqusShortname: "leovan"
 ignoreFiles: [
   "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
