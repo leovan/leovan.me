@@ -4,7 +4,7 @@ library(httr)
 library(jsonlite)
 library(rvest)
 
-ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36'
 
 #' 年份 转 年份可读文本
 #' 
@@ -156,7 +156,7 @@ crawl_video_douban_info <- function(douban_id) {
                 html_text()
             info$douban_rating <- douban_rating
         }, error = function(e) {
-            print(douban_id)
+            print(glue('{douban_id}: {e}'))
         })
     }
     
@@ -223,7 +223,7 @@ crawl_book_douban_info <- function(douban_id) {
             info$pages <- ifelse('页数:' %in% info_text_keys,
                                  info_text_values[which(info_text_keys=='页数:')], NA)
         }, error = function(e) {
-            print(glue('[{douban_id}] ERROR: {e}'))
+            print(glue('{douban_id}: {e}'))
         })
     }
     
