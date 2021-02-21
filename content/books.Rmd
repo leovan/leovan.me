@@ -91,9 +91,17 @@ book_list_auto_update <- book_list_auto_update %>%
     mutate(douban_info = map(douban_id, crawl_book_douban_info)) %>%
     unnest_wider(douban_info)
 
-book_list_auto_update %>%
+book_list_auto_update_succeed <- book_list_auto_update %>%
+    filter(!is.na(douban_rating))
+
+book_list_auto_update_failed <- book_list %>%
+    filter(douban_id %in% book_list_auto_update$douban_id) %>%
+    filter(!douban_id %in% book_list_auto_update_succeed$douban_id)
+
+book_list_auto_update_succeed %>%
     mutate(updated_date = Sys.Date(),
            douban_rating = as.numeric(douban_rating)) %>%
+    union_all(book_list_auto_update_failed) %>%
     union_all(book_list_manual_update) %>%
     select(all_of(book_list_columns)) %>%
     arrange(desc(purchasing_date)) %>%

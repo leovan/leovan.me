@@ -117,10 +117,18 @@ video_list_auto_update <- video_list_auto_update %>%
     mutate(douban_info = map(douban_id, crawl_video_douban_info)) %>%
     unnest_wider(douban_info)
 
-video_list_auto_update %>%
+video_list_auto_update_succeed <- video_list_auto_update %>%
+    filter(!is.na(douban_rating))
+
+video_list_auto_update_failed <- video_list %>%
+    filter(douban_id %in% video_list_auto_update$douban_id) %>%
+    filter(!douban_id %in% video_list_auto_update_succeed$douban_id)
+
+video_list_auto_update_succeed %>%
     mutate(updated_date = Sys.Date(),
            imdb_rating = as.numeric(imdb_rating),
            douban_rating = as.numeric(douban_rating)) %>%
+    union_all(video_list_auto_update_failed) %>%
     union_all(video_list_manual_update) %>%
     select(all_of(video_list_columns)) %>%
     arrange(desc(release_date)) %>%
