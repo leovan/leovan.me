@@ -120,6 +120,7 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 3. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637B/en), 2018)
 4. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), 2019)
 5. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), 2019)
+6. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
 
 ### Open Source Projects
 
