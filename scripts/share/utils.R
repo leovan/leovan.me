@@ -4,7 +4,7 @@ library(httr)
 library(jsonlite)
 library(rvest)
 
-ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36'
+ua <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'
 
 #' 年份 转 年份可读文本
 #' 
@@ -105,7 +105,7 @@ crawl_video_douban_info <- function(douban_id) {
         url <- glue('https://movie.douban.com/subject/{douban_id}')
         
         tryCatch({
-            session <- html_session(url, user_agent(ua))
+            session <- session(url, user_agent(ua))
             
             name_all <- session %>%
                 html_nodes("#content h1 span") %>%
@@ -179,7 +179,7 @@ crawl_book_douban_info <- function(douban_id) {
         url <- glue('https://book.douban.com/subject/{douban_id}')
         
         tryCatch({
-            session <- html_session(url, user_agent(ua))
+            session <- session(url, user_agent(ua))
             
             info$title_zh <- session %>%
                 html_node('span[property="v:itemreviewed"]') %>%
