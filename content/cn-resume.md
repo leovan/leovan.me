@@ -2,7 +2,7 @@
 title: 简历
 author: 范叶亮
 date: '2017-12-04'
-lastmod: '2019-06-25'
+lastmod: '2021-03-21'
 slug: cn/resume
 disable_author_date: true
 disable_donate: true
@@ -135,3 +135,5 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 4. [Cytoscape 用户手册](https://github.com/leovan/cytoscape-manual)，Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
+
+<p class="kai" style="text-align: right;">更新于：2021-03-21</p>

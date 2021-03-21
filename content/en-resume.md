@@ -2,7 +2,7 @@
 title: Resume
 author: Leo Van
 date: '2017-12-04'
-lastmod: '2019-06-25'
+lastmod: '2021-03-21'
 slug: en/resume
 disable_author_date: true
 disable_donate: true
@@ -132,3 +132,5 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 4. [Cytoscape Manual](https://github.com/leovan/cytoscape-manual), Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
+
+<p style="text-align: right;">Updated on: 2021-03-21</p>
