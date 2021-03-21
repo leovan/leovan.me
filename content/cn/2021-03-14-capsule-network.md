@@ -20,6 +20,14 @@ tags:
   - 胶囊
   - Capsule
   - 仿射变换
+images:
+  - /images/cn/2021-03-14-capsule-network/it-is-a-face.png
+  - /images/cn/2021-03-14-capsule-network/statue-of-liberty-different-poses.jpg
+  - /images/cn/2021-03-14-capsule-network/capsule-vs-traditional-neuron-capsule.png
+  - /images/cn/2021-03-14-capsule-network/capsule-vs-traditional-neuron-traditional-neuron.png
+  - /images/cn/2021-03-14-capsule-network/capsule-network-encoder.png
+  - /images/cn/2021-03-14-capsule-network/two-layer-capsnet.png
+  - /images/cn/2021-03-14-capsule-network/capsule-network-decoder.png
 ---
 
 ## CNN 的缺陷

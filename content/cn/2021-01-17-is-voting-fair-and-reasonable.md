@@ -50,6 +50,11 @@ tags:
   - IIA
   - 阿罗悖论
   - Arrow Paradox
+images:
+  - /images/cn/2021-01-17-is-voting-fair-and-reasonable/agma-ostrakon-aristide.png
+  - /images/cn/2021-01-17-is-voting-fair-and-reasonable/usa-electoral-college-2020-with-results.png
+  - /images/cn/2021-01-17-is-voting-fair-and-reasonable/barbecue-or-hot-pot.png
+  - /images/cn/2021-01-17-is-voting-fair-and-reasonable/facemash.png
 ---
 
 > 只有道德上的相对民主，没有制度上的绝对公平，求同存异才能长治久安。
