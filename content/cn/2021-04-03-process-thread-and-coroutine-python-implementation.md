@@ -49,7 +49,7 @@ images:
   - /images/cn/2021-04-03-process-thread-and-coroutine-python-implementation/iterators-and-generators.png
 ---
 
-> 理论篇请参见：[进程，线程和协程 (Process, Thread and Coroutine) - 理论篇](/cn/2002/04/process-thread-and-coroutine-theory)
+> 理论篇请参见：[进程，线程和协程 (Process, Thread and Coroutine) - 理论篇](/cn/2021/04/process-thread-and-coroutine-theory)
 
 本文将介绍进程，线程和协程在 Python 中的实现，代码详见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2021-04-03-process-thread-and-coroutine-python-implementation)，部分参考自「Python 并发编程」 [^iswbm-blog]:。
 

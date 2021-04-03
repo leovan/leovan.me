@@ -62,7 +62,7 @@ images:
   - /images/cn/2021-04-01-process-thread-and-coroutine-theory/subroutine-vs-coroutine.png
 ---
 
-> Python 实现篇请参见：[进程，线程和协程 (Process, Thread and Coroutine) - 实现篇](/cn/2002/04/process-thread-and-coroutine-python-implementation)
+> Python 实现篇请参见：[进程，线程和协程 (Process, Thread and Coroutine) - 实现篇](/cn/2021/04/process-thread-and-coroutine-python-implementation)
 
 ## 进程，线程和协程
 
