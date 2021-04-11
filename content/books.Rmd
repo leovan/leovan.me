@@ -19,7 +19,8 @@ library(lubridate)
 library(knitr)
 options(knitr.kable.NA = '')
 
-source('../scripts/share/utils.R')
+source('../scripts/share/douban-utils.R')
+source('../scripts/share/render-utils.R')
 ```
 
 ```{r book_list, echo=F, message=F, warning=F, results = 'asis'}
@@ -36,14 +37,14 @@ output_col_names <- c(
 
 book_list <- read_tsv(
     '../static/data/books.tsv',
-    col_types = 'cccccccccccccddiiD')
+    col_types = 'ccccccccccccddiiD')
 
 book_table <- function(books) {
     which_year <- gen_which_year(books[1, ]$purchasing_date)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- books %>%
-        arrange(desc(purchasing_date), author, title_zh) %>%
-        select(c('douban_id_html', 'isbn', 'title_zh_html', 'author',
+        arrange(desc(purchasing_date), author, title) %>%
+        select(c('douban_id_html', 'isbn', 'title_html', 'author',
                  'begin_reading_date', 'finish_reading_date',
                  'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
@@ -59,7 +60,7 @@ book_list %>%
     mutate(
         purchasing_year_order = gen_which_year_order(purchasing_date),
         douban_id_html = gen_douban_id_html(douban_id),
-        title_zh_html = gen_linked_text_html(title_zh, blog_link),
+        title_html = gen_linked_text_html(title, blog_link),
         douban_rating_html = gen_book_douban_rating_link_html(
             douban_rating, douban_id)) %>%
     ddply(.(purchasing_year_order), book_table) %>%
@@ -71,12 +72,12 @@ book_list %>%
 
 ```{r update_book_info, eval=F, include=F}
 book_list_columns <- c(
-    'isbn', 'douban_id', 'blog_link', 'title_zh', 'subtitle_zh', 'title',
-    'author', 'publisher', 'published_date', 'pages', 'purchasing_date',
+    'isbn', 'douban_id', 'blog_link', 'title', 'subtitle',
+    'author', 'press', 'published_date', 'pages', 'purchasing_date',
     'begin_reading_date', 'finish_reading_date', 'douban_rating', 'rating',
     'auto_update', 'show', 'updated_date')
 auto_update_colunms <- c(
-    'title_zh', 'subtitle_zh', 'title', 'author', 'publisher',
+    'title', 'subtitle', 'author', 'press',
     'published_date', 'pages', 'douban_rating')
 
 book_list_auto_update <- book_list %>%
@@ -88,22 +89,23 @@ book_list_manual_update <- book_list %>%
     select(all_of(book_list_columns))
 
 book_list_auto_update <- book_list_auto_update %>%
-    mutate(douban_info = map(douban_id, crawl_book_douban_info)) %>%
+    mutate(douban_info = map(douban_id, get_book_douban_info)) %>%
     unnest_wider(douban_info)
 
 book_list_auto_update_succeed <- book_list_auto_update %>%
-    filter(!is.na(douban_rating))
+    filter(!is.na(douban_rating)) %>%
+    select(all_of(book_list_columns))
 
 book_list_auto_update_failed <- book_list %>%
     filter(douban_id %in% book_list_auto_update$douban_id) %>%
-    filter(!douban_id %in% book_list_auto_update_succeed$douban_id)
+    filter(!douban_id %in% book_list_auto_update_succeed$douban_id) %>%
+    select(all_of(book_list_columns))
 
 book_list_auto_update_succeed %>%
     mutate(updated_date = Sys.Date(),
            douban_rating = as.numeric(douban_rating)) %>%
     union_all(book_list_auto_update_failed) %>%
     union_all(book_list_manual_update) %>%
-    select(all_of(book_list_columns)) %>%
     arrange(desc(purchasing_date)) %>%
     write_tsv('../static/data/books.tsv')
 ```

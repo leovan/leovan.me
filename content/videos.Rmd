@@ -19,7 +19,9 @@ library(lubridate)
 library(knitr)
 options(knitr.kable.NA = '')
 
-source('../scripts/share/utils.R')
+source('../scripts/share/douban-utils.R')
+source('../scripts/share/imdb-utils.R')
+source('../scripts/share/render-utils.R')
 ```
 
 ```{r moive_list, echo=F, message=F, warning=F, results = 'asis'}
@@ -36,16 +38,16 @@ output_col_names <- c(
 
 video_list <- read_tsv(
     '../static/data/videos.tsv',
-    col_types = 'cccccccccDDdddiD')
+    col_types = 'ccccccccDDldddiD')
 
 video_table <- function(videos) {
     which_year <- videos[1, ]$release_year
     which_year <- gen_which_year(which_year)
     header_ <- paste0('<h2>', which_year, '</h2>')
     table_ <- videos %>%
-        arrange(desc(release_date), directors, name_zh) %>%
+        arrange(desc(release_date), directors, title) %>%
         select(c('imdb_id_html', 'douban_id_html',
-                 'name_zh_html', 'directors', 'casts',
+                 'title_html', 'directors', 'actors',
                  'imdb_rating_html', 'douban_rating_html', 'rating')) %>%
         setNames(output_col_names) %>%
         kable("html", escape = F, table.attr = 'class="video-table"') %>%
@@ -77,12 +79,12 @@ split_top_n_concat <- Vectorize(split_top_n_concat)
 
 video_list %>%
     mutate(
-        directors = directors %>% split_top_n_concat(',', 1),
-        casts = casts %>% split_top_n_concat(',', 3),
+        directors = directors %>% split_top_n_concat(', ', 1),
+        actors = actors %>% split_top_n_concat(', ', 3),
         release_year = year(release_date),
         imdb_id_html = gen_imdb_id_html(imdb_id),
         douban_id_html = gen_douban_id_html(douban_id),
-        name_zh_html = gen_linked_text_html(name_zh, blog_link),
+        title_html = gen_linked_text_html(title, blog_link),
         imdb_rating_html = gen_video_imdb_rating_link_html(
             imdb_rating, imdb_id),
         douban_rating_html = gen_video_douban_rating_link_html(
@@ -96,13 +98,12 @@ video_list %>%
 
 ```{r update_video_info, eval=F, include=F}
 video_list_columns <- c(
-    'imdb_id', 'douban_id', 'blog_link', 'name_zh', 'name',
-    'directors', 'casts', 'countries', 'genres',
-    'release_date', 'watch_date', 'imdb_rating', 'douban_rating', 'rating',
-    'auto_update', 'updated_date')
+    'imdb_id', 'douban_id', 'blog_link', 'title', 'directors', 'actors',
+    'countries', 'genres', 'release_date', 'watch_date', 'is_tv',
+    'imdb_rating', 'douban_rating', 'rating', 'auto_update', 'updated_date')
 auto_update_colunms <- c(
-    'name_zh', 'name', 'directors', 'casts', 'countries', 'genres',
-    'release_date', 'imdb_rating', 'douban_rating')
+    'title', 'directors', 'actors', 'countries', 'genres',
+    'release_date', 'is_tv', 'imdb_rating', 'douban_rating')
 
 video_list_auto_update <- video_list %>%
     filter(auto_update == 1 & (Sys.Date() - updated_date > 30)) %>%
@@ -114,15 +115,17 @@ video_list_manual_update <- video_list %>%
 
 video_list_auto_update <- video_list_auto_update %>%
     mutate(imdb_rating = get_video_imdb_rating(imdb_id)) %>%
-    mutate(douban_info = map(douban_id, crawl_video_douban_info)) %>%
+    mutate(douban_info = map(douban_id, get_video_douban_info)) %>%
     unnest_wider(douban_info)
 
 video_list_auto_update_succeed <- video_list_auto_update %>%
-    filter(!is.na(douban_rating))
+    filter(!is.na(douban_rating)) %>%
+    select(all_of(video_list_columns))
 
 video_list_auto_update_failed <- video_list %>%
     filter(douban_id %in% video_list_auto_update$douban_id) %>%
-    filter(!douban_id %in% video_list_auto_update_succeed$douban_id)
+    filter(!douban_id %in% video_list_auto_update_succeed$douban_id) %>%
+    select(all_of(video_list_columns))
 
 video_list_auto_update_succeed %>%
     mutate(updated_date = Sys.Date(),
@@ -130,7 +133,6 @@ video_list_auto_update_succeed %>%
            douban_rating = as.numeric(douban_rating)) %>%
     union_all(video_list_auto_update_failed) %>%
     union_all(video_list_manual_update) %>%
-    select(all_of(video_list_columns)) %>%
     arrange(desc(release_date)) %>%
     write_tsv('../static/data/videos.tsv')
 ```
