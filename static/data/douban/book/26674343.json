@@ -1,0 +1,145 @@
+{
+    "rating": {
+        "count": 3438,
+        "max": 10,
+        "star_count": 4.5,
+        "value": 8.6
+    },
+    "vendor_count": 5,
+    "subtitle": [],
+    "controversy_reason": "",
+    "pubdate": [
+        "2015-10-1"
+    ],
+    "pic": {
+        "large": "https://img1.doubanio.com/view/subject/l/public/s28350437.jpg",
+        "normal": "https://img1.doubanio.com/view/subject/m/public/s28350437.jpg"
+    },
+    "body_bg_color": "f4f7f9",
+    "intro": "《容忍与自由》是一部杂文选集，收录了18篇胡适先生的经典杂文，行文流畅，说理深致，对于我们今天的生活仍有启发。",
+    "author_intro": "胡适（1891——1962），安徽绩溪人。民国时期著名学者，于文学、哲学、史学、考据学、教育学、伦理学、红学等诸多领域有深入研究和贡献。一生坚持民主自由理想而不辍，作为新文化运动领袖及五四运动核心人物，推动了中国近代文明进程。历任北京大学校长、中华民国驻美大使、台湾中央研究院院长等职。",
+    "card_subtitle": "胡适 / 2015 / 云南人民出版社",
+    "id": "26674343",
+    "gallery_topic_count": 0,
+    "debut_url": "",
+    "can_interact": true,
+    "review_count": 33,
+    "buylinks_url": "https://www.douban.com/doubanapp//h5/book/26674343/buylinks",
+    "author": [
+        "胡适"
+    ],
+    "comment_count": 1429,
+    "forum_topic_count": 1,
+    "is_released": true,
+    "ugc_tabs": [
+        {
+            "source": "reviews",
+            "type": "review",
+            "title": "书评"
+        },
+        {
+            "source": "forum_topics",
+            "type": "forum",
+            "title": "讨论"
+        },
+        {
+            "source": "annotations",
+            "type": "annotation",
+            "title": "读书笔记"
+        }
+    ],
+    "interest": null,
+    "header_bg_color": "767a7f",
+    "color_scheme": {
+        "is_dark": true,
+        "primary_color_light": "999fa5",
+        "_base_color": [
+            0.5882352941176471,
+            0.07234042553191489,
+            0.9215686274509803
+        ],
+        "secondary_color": "f4f7f9",
+        "_avg_color": [
+            0.587719298245614,
+            0.08482142857142852,
+            0.8784313725490196
+        ],
+        "primary_color_dark": "767a7f"
+    },
+    "ebooks": [
+        {
+            "reader_uri": "https://read.douban.com/reader/ebook/18213158/",
+            "reader_url": "https://read.douban.com/reader/ebook/18213158/",
+            "url": "https://read.douban.com/ebook/18213158/",
+            "source_uri": "https://read.douban.com/ebook/18213158/",
+            "free": false,
+            "source": {
+                "literal": "doubanread",
+                "pic": "https://img2.doubanio.com/img/files/file-1433733653.png",
+                "name": "豆瓣阅读",
+                "val": 0
+            }
+        }
+    ],
+    "type": "book",
+    "annotation_count": 268,
+    "book_series": null,
+    "tags": [
+        {
+            "name": "随笔",
+            "uri": "douban://douban.com/book/tag?q=%E9%9A%8F%E7%AC%94"
+        },
+        {
+            "name": "民国",
+            "uri": "douban://douban.com/book/tag?q=%E6%B0%91%E5%9B%BD"
+        },
+        {
+            "name": "中国",
+            "uri": "douban://douban.com/book/tag?q=%E4%B8%AD%E5%9B%BD"
+        },
+        {
+            "name": "文学",
+            "uri": "douban://douban.com/book/tag?q=%E6%96%87%E5%AD%A6"
+        },
+        {
+            "name": "哲学",
+            "uri": "douban://douban.com/book/tag?q=%E5%93%B2%E5%AD%A6"
+        },
+        {
+            "name": "经典",
+            "uri": "douban://douban.com/book/tag?q=%E7%BB%8F%E5%85%B8"
+        },
+        {
+            "name": "社会",
+            "uri": "douban://douban.com/book/tag?q=%E7%A4%BE%E4%BC%9A"
+        }
+    ],
+    "price": [
+        "25.00"
+    ],
+    "cover_url": "https://img1.doubanio.com/view/subject/l/public/s28350437.jpg",
+    "translator": [],
+    "catalog": "容忍与自由\n差不多先生传\n归国杂感\n多研究些问题，少谈些“主义”\n我的儿子\n保寿的意义\n论女子为强暴所污\n新生活\n非个人主义的新生活\n大宇宙中谈博爱\n不朽\n我们对于西洋近代文明的态度\n信心与反省\n为什么读书\n大学的生活",
+    "press": [
+        "云南人民出版社"
+    ],
+    "honor_infos": [],
+    "pages": [
+        "216"
+    ],
+    "other_version": null,
+    "sharing_url": "https://book.douban.com/subject/26674343/",
+    "subject_collections": [],
+    "wechat_timeline_share": "screenshot",
+    "url": "https://book.douban.com/subject/26674343/",
+    "title": "容忍与自由",
+    "uri": "douban://douban.com/book/26674343",
+    "mini_program_page": "pages/subject/subject?type=book&id=26674343",
+    "subtype": "book",
+    "is_show": false,
+    "info_url": "https://www.douban.com/doubanapp//h5/book/26674343/desc",
+    "in_blacklist": false,
+    "mini_program_name": "gh_c9bfaa84f27b",
+    "has_ebook": true,
+    "null_rating_reason": ""
+}
