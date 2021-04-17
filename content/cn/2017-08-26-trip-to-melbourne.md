@@ -29,7 +29,7 @@ images:
   - /images/cn/2017-08-26-trip-to-melbourne/shrine-of-remembrance.jpg
 ---
 
-从下了飞机到酒店，一路上体验到了我国互联网对世界各地的影响，机场巴士可以用微信和支付宝，下了巴士发现这里也有共享单车，不过人家还配了头盔，想想这要是在我天朝，[敏感用语，此处忽略若干字...]
+从下了飞机到酒店，一路上体验到了我国互联网对世界各地的影响，机场巴士可以用微信和支付宝，下了巴士发现这里也有共享单车，人家还配了头盔。
 
 {{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="2" >}}
 {{< photoswipe-figure link="/images/cn/2017-08-26-trip-to-melbourne/airport-bus-chinese-online-payment.jpg" caption="我天朝的移动支付" >}}
@@ -70,11 +70,11 @@ images:
 {{< photoswipe-figure link="/images/cn/2017-08-26-trip-to-melbourne/city-hall.jpg" caption="市政大厅" >}}
 {{< /photoswipe-gallery >}}
 
-作为不折不扣的伪军迷，自然也要了解一下这个城市的军事历史，说到这就不得不提大洋路[^the-great-ocean-road]。大洋路是位于澳洲东海岸维多利亚州南部的一条行车公路，全长约 276 公里，建于悬崖峭壁中间，起点自托尔坎 (Torquay)，终点于亚伦斯福特 (Allansford)。大洋路始建于1920年，在1932年竣工，澳洲政府借此纪念第一次世界大战中牺牲的人。
+作为不折不扣的伪军迷，自然也要了解一下这个城市的军事历史，说到这就不得不提大洋路 [^the-great-ocean-road]。大洋路是位于澳洲东海岸维多利亚州南部的一条行车公路，全长约 276 公里，建于悬崖峭壁中间，起点自托尔坎 (Torquay)，终点于亚伦斯福特 (Allansford)。大洋路始建于 1920 年，在 1932 年竣工，澳洲政府借此纪念第一次世界大战中牺牲的人。
 
 {{< photoswipe-figure link="/images/cn/2017-08-26-trip-to-melbourne/the-great-ocean-road-beach.jpg" caption="大洋路上的海滩" caption-position="bottom" caption-effect="fade" >}}
 
-一路上有十二门徒石[^the-twelve-apostles]和阿德湖峡[^loch-ard-gorge]等自然景点。
+一路上有十二门徒石 [^the-twelve-apostles] 和阿德湖峡 [^loch-ard-gorge] 等自然景点。
 
 {{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="2" >}}
 {{< photoswipe-figure link="/images/cn/2017-08-26-trip-to-melbourne/loch-ard-gorge.jpg" caption="阿德湖峡" >}}
@@ -88,7 +88,7 @@ images:
 {{< photoswipe-figure link="/images/cn/2017-08-26-trip-to-melbourne/shrine-of-remembrance.jpg" caption="战争纪念馆" >}}
 {{< /photoswipe-gallery >}}
 
-最近恰巧看了二十二[^twenty-two]和三十二两部纪录片，战争受难最多的终究还是百姓，不过越来越多的历史开始慢慢淡出人们的视野，但也有着那么一群人再帮着我们更好的铭记。其实，我们铭记不是说为了让我们去记恨一些人，去记恨一个民族，我们所需要让人们铭记的是战争本身的残酷，愿天下之安宁，以活民命。
+最近恰巧看了二十二 [^twenty-two] 和三十二两部纪录片，战争受难最多的终究还是百姓，不过越来越多的历史开始慢慢淡出人们的视野，但也有着那么一群人再帮着我们更好的铭记。其实，我们铭记不是说为了让我们去记恨一些人，去记恨一个民族，我们所需要让人们铭记的是战争本身的残酷，愿天下之安宁，以活民命。
 
 [^the-great-ocean-road]: https://zh.wikipedia.org/zh-hans/大洋路
 

@@ -25,7 +25,7 @@ images:
   - /images/cn/2018-02-24-optimization-methods-for-deeplearning/saddle-point-evaluation-optimizers.gif
 ---
 
-在构建神经网络模型的时候，除了网络结构设计以外，选取合适的优化算法也对网络起着至关重要的作用，本文将对神经网络中常用的优化算法进行简单的介绍和对比，本文部分参考了 Ruder 的关于梯度下降优化算法一文[^ruder2016overview]。首先，我们对下文中使用的符号进行同意说明：网络中的参数同一表示为 `$\theta$`，网络的假设函数为 `$h_{\boldsymbol{\theta}}\left(\boldsymbol{x}\right)$`，网络的损失函数为 `$J\left(\boldsymbol{\theta}\right)$`，学习率为 `$\alpha$`，假设训练数据中共包含 `$m$` 个样本，网络参数个数为 `$n$`。
+在构建神经网络模型的时候，除了网络结构设计以外，选取合适的优化算法也对网络起着至关重要的作用，本文将对神经网络中常用的优化算法进行简单的介绍和对比，本文部分参考了 Ruder 的关于梯度下降优化算法一文 [^ruder2016overview]。首先，我们对下文中使用的符号进行同意说明：网络中的参数同一表示为 `$\theta$`，网络的假设函数为 `$h_{\boldsymbol{\theta}}\left(\boldsymbol{x}\right)$`，网络的损失函数为 `$J\left(\boldsymbol{\theta}\right)$`，学习率为 `$\alpha$`，假设训练数据中共包含 `$m$` 个样本，网络参数个数为 `$n$`。
 
 # 梯度下降
 
@@ -126,7 +126,7 @@ $$`
 
 # Momentum
 
-当梯度沿着一个方向要明显比其他方向陡峭，我们可以形象的称之为峡谷形梯度，这种情况多位于局部最优点附近。在这种情况下，SGD 通常会摇摆着通过峡谷的斜坡，这就导致了其到达局部最优值的速度过慢。因此，针对这种情况，Momentum[^qian1999momentum] 方法提供了一种解决方案。针对原始的 SGD 算法，参数每 `$t$` 步的变化量可以表示为
+当梯度沿着一个方向要明显比其他方向陡峭，我们可以形象的称之为峡谷形梯度，这种情况多位于局部最优点附近。在这种情况下，SGD 通常会摇摆着通过峡谷的斜坡，这就导致了其到达局部最优值的速度过慢。因此，针对这种情况，Momentum [^qian1999momentum] 方法提供了一种解决方案。针对原始的 SGD 算法，参数每 `$t$` 步的变化量可以表示为
 
 `$$
 \boldsymbol{v}_t = - \alpha \nabla_{\boldsymbol{\theta}} J \left(\boldsymbol{\theta}_t\right)
@@ -149,7 +149,7 @@ $$`
 
 # NAG
 
-NAG (Nesterov Accelerated Gradient)[^nesterov1983method] 是一种 Momentum 算法的变种，其核心思想会利用“下一步的梯度”确定“这一步的梯度”，当然这里“下一步的梯度”并非真正的下一步的梯度，而是指仅根据动量项更新后位置的梯度。Sutskever[^sutskever2013training] 给出了一种更新参数的方法：
+NAG (Nesterov Accelerated Gradient) [^nesterov1983method] 是一种 Momentum 算法的变种，其核心思想会利用“下一步的梯度”确定“这一步的梯度”，当然这里“下一步的梯度”并非真正的下一步的梯度，而是指仅根据动量项更新后位置的梯度。Sutskever [^sutskever2013training] 给出了一种更新参数的方法：
 
 `$$
 \begin{equation}
@@ -166,7 +166,7 @@ $$`
 
 # AdaGrad
 
-AdaGrad[^duchi2011adaptive] 是一种具有自适应学习率的的方法，其对于低频特征的参数选择更大的更新量，对于高频特征的参数选择更小的更新量。因此，AdaGrad算法更加适用于处理稀疏数据。Pennington 等则利用该方法训练 GloVe[^pennington2014glove] 词向量，因为对于出现次数较少的词应当获得更大的参数更新。
+AdaGrad [^duchi2011adaptive] 是一种具有自适应学习率的的方法，其对于低频特征的参数选择更大的更新量，对于高频特征的参数选择更小的更新量。因此，AdaGrad算法更加适用于处理稀疏数据。Pennington 等则利用该方法训练 GloVe [^pennington2014glove] 词向量，因为对于出现次数较少的词应当获得更大的参数更新。
 
 因为每个参数的学习速率不再一样，则在 `$t$` 时刻第 `$i$` 个参数的变化为
 
@@ -184,7 +184,7 @@ $$`
 
 # Adadelta
 
-上文中 AdaGrad 算法存在一个缺点，即其用于调节学习率的分母中包含的是一个梯度的平方累加项，随着训练的不断进行，这个值将会越来越大，也就是说学习率将会越来越小，最终导致模型不会再学习到任何知识。Adadelta[^zeiler2012adadelta] 方法针对 AdaGrad 的这个问题，做出了进一步改进，其不再计算历史所以梯度的平方和，而是使用一个固定长度 `$w$` 的滑动窗口内的梯度。
+上文中 AdaGrad 算法存在一个缺点，即其用于调节学习率的分母中包含的是一个梯度的平方累加项，随着训练的不断进行，这个值将会越来越大，也就是说学习率将会越来越小，最终导致模型不会再学习到任何知识。Adadelta [^zeiler2012adadelta] 方法针对 AdaGrad 的这个问题，做出了进一步改进，其不再计算历史所以梯度的平方和，而是使用一个固定长度 `$w$` 的滑动窗口内的梯度。
 
 因为存储 `$w$` 的梯度平方并不高效，Adadelta 采用了一种递归的方式进行计算，定义 `$t$` 时刻梯度平方的均值为
 
@@ -230,7 +230,7 @@ $$`
 
 # RMSprop
 
-RMSprop[^hinton2012rmsprop] 是由 Hinton 提出的一种针对 AdaGrad 的改进算法。参数的更新量为
+RMSprop [^hinton2012rmsprop] 是由 Hinton 提出的一种针对 AdaGrad 的改进算法。参数的更新量为
 
 `$$
 \Delta \theta_t = - \dfrac{\alpha}{\text{RMS} \left[g\right]_t} g_t
@@ -238,7 +238,7 @@ $$`
 
 # Adam
 
-Adam (Adaptive Moment Estimation)[^kingma2014adam] 是另一种类型的自适应学习率方法，类似 Adadelta，Adam 对于每个参数都计算各自的学习率。Adam 方法中包含一个一阶梯度衰减项 `$m_t$` 和一个二阶梯度衰减项 `$v_t$`
+Adam (Adaptive Moment Estimation) [^kingma2014adam] 是另一种类型的自适应学习率方法，类似 Adadelta，Adam 对于每个参数都计算各自的学习率。Adam 方法中包含一个一阶梯度衰减项 `$m_t$` 和一个二阶梯度衰减项 `$v_t$`
 
 `$$
 \begin{equation}
@@ -306,7 +306,7 @@ $$`
 
 # Nadam
 
-Adam 算法可以看做是对 RMSprop 和 Momentum 的结合：历史平方梯度的衰减项 `$v_t$` (RMSprop) 和 历史梯度的衰减项 `$m_t$` (Momentum)。Nadam (Nesterov-accelerated Adaptive Moment Estimation)[^dozat2016incorporating] 则是将 Adam 同 NAG 进行了进一步结合。我们利用 Adam 中的符号重新回顾一下 NAG 算法
+Adam 算法可以看做是对 RMSprop 和 Momentum 的结合：历史平方梯度的衰减项 `$v_t$` (RMSprop) 和 历史梯度的衰减项 `$m_t$` (Momentum)。Nadam (Nesterov-accelerated Adaptive Moment Estimation) [^dozat2016incorporating] 则是将 Adam 同 NAG 进行了进一步结合。我们利用 Adam 中的符号重新回顾一下 NAG 算法
 
 `$$
 \begin{equation}
@@ -355,7 +355,7 @@ $$`
 
 # AMSGrad
 
-对于前面提到的 Adadelta，RMSprop，Adam 和 Nadam 方法，他们均采用了平方梯度的指数平滑平均值迭代产生新的梯度，但根据观察，在一些情况下这些算法并不能收敛到最优解。Reddi 等提出了一种新的 Adam 变体算法 AMSGrad[^reddi2018convergence]，在文中作者解释了为什么 RMSprop 和 Adam 算法无法收敛到一个最优解的问题。通过分析表明，为了保证得到一个收敛的最优解需要保留过去梯度的“长期记忆”，因此在 AMSGrad 算法中使用了历史平方梯度的最大值而非滑动平均进行更新参数，即
+对于前面提到的 Adadelta，RMSprop，Adam 和 Nadam 方法，他们均采用了平方梯度的指数平滑平均值迭代产生新的梯度，但根据观察，在一些情况下这些算法并不能收敛到最优解。Reddi 等提出了一种新的 Adam 变体算法 AMSGrad [^reddi2018convergence]，在文中作者解释了为什么 RMSprop 和 Adam 算法无法收敛到一个最优解的问题。通过分析表明，为了保证得到一个收敛的最优解需要保留过去梯度的“长期记忆”，因此在 AMSGrad 算法中使用了历史平方梯度的最大值而非滑动平均进行更新参数，即
 
 `$$
 \begin{equation}

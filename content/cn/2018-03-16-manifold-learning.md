@@ -32,15 +32,15 @@ images:
 
 在之前的 [博客](/cn/2017/12/evd-svd-and-pca) 中，我们曾经介绍过 PCA 方法及其降维的作用。在原始数据中各个特征之间存在着一定的信息冗余，随着特征的不断增加就容易出现“维数灾难”的问题，因此降维的目的就是在尽可能多的保留原始信息的同时减少数据的维度。一般情况下我们将降维方法分为：**线性降维方法**和**非线性降维方法**，线性降维方法的典型算法有：
 
-- 主成份分析 (PCA, Principal Component Analysis)[^jolliffe1986principal]
-- 线性判别分写 (LDA, Linear Discriminant Analysis)[^balakrishnama1998linear]
-- 多尺度变换 (MDS, Multi-Dimensional Scaling)[^cox2000multidimensional]
+- 主成份分析 (PCA, Principal Component Analysis) [^jolliffe1986principal]
+- 线性判别分写 (LDA, Linear Discriminant Analysis) [^balakrishnama1998linear]
+- 多尺度变换 (MDS, Multi-Dimensional Scaling) [^cox2000multidimensional]
 
 非线性降维方法中在此我们仅列举一些基于流行学习的算法：
 
-- 保距特征映射 (ISOMAP)[^tenenbaum2000global]
-- 局部线性嵌入 (LLE, Locally Linear Embedding)[^roweis2000nonlinear]
-- 拉普拉斯特征映射 (LE, Laplacian Eigenmap)[^belkin2003laplacian]
+- 保距特征映射 (ISOMAP) [^tenenbaum2000global]
+- 局部线性嵌入 (LLE, Locally Linear Embedding) [^roweis2000nonlinear]
+- 拉普拉斯特征映射 (LE, Laplacian Eigenmap) [^belkin2003laplacian]
 
 在现实数据中，很多情况数据是无法通过线性的方法进行降维表示的，因此就需要非线性的降维算法出马了。
 
@@ -48,7 +48,7 @@ images:
 
 在调研流形相关概念时，发现要想深一步的理解这些概念还是需要详细的了解微分几何相关的内容，鉴于本文的目的主要是介绍流形学习 (主要是降维角度) 的相关内容，因此我们对流形仅做一些粗略的介绍。
 
-“**流形**”是英文单词 **Manifold** 的中文译名，它源于德文术语 Mannigfaltigkeit，最早出现在 Riemann 1851 年的博士论文中，用来表示某种属性所能取到的所有值[^meijiaqiang]。为了更好的理解流形，我们先引入几个概念：
+“**流形**”是英文单词 **Manifold** 的中文译名，它源于德文术语 Mannigfaltigkeit，最早出现在 Riemann 1851 年的博士论文中，用来表示某种属性所能取到的所有值 [^meijiaqiang]。为了更好的理解流形，我们先引入几个概念：
 
 **拓扑结构 (拓扑)** 任意给定集合 `$X$` 上的一个**拓扑结构 (拓扑)** 是 `$X$` 的某些特定子集组成的集合 `$\tau \subset 2^X$`，其中那些特定子集称为 `$\tau$` 所声明的**开集**，同时满足如下性质：
 
@@ -68,11 +68,11 @@ images:
 2. `$f$` 是连续的
 3. 反函数 `$f^{−1}$` 也是连续的 (`$f$` 是开映射)
 
-如果拓扑空间是一个几何物体，同胚就是把物体连续延展和弯曲，使其成为一个新的物体。因此，正方形和圆是同胚的，但球面和环面就不是。用一幅图形象的理解同胚，例如下图所示的**咖啡杯**和**甜甜圈**[^wikipedia-manifold]：
+如果拓扑空间是一个几何物体，同胚就是把物体连续延展和弯曲，使其成为一个新的物体。因此，正方形和圆是同胚的，但球面和环面就不是。用一幅图形象的理解同胚，例如下图所示的**咖啡杯**和**甜甜圈** [^wikipedia-manifold]：
 
 ![](/images/cn/2018-03-16-manifold-learning/mug-and-torus-morph.gif)
 
-最后我们回过头来解释到底什么是**流形**？流形并不是一个“形状”，而是一个“空间”[^pluskid]。最容易定义的流形是**拓扑流形**，它局部看起来象一些“普通”的欧几里得空间 `$\mathbb{R}^n$`，一个拓扑流形是一个局部同胚于一个欧几里得空间的拓扑空间。根据 Whitney 嵌入理论[^wikipedia-whitney]，任何一个流形都可以嵌入到高维的欧氏空间中。例如，地球的表面可以理解为一个嵌入 3 维空间的 2 维流形，其局部同胚于 2 维的欧式空间，对于一个球体的表面，用极坐标的形式可以表示为
+最后我们回过头来解释到底什么是**流形**？流形并不是一个“形状”，而是一个“空间” [^pluskid]。最容易定义的流形是**拓扑流形**，它局部看起来象一些“普通”的欧几里得空间 `$\mathbb{R}^n$`，一个拓扑流形是一个局部同胚于一个欧几里得空间的拓扑空间。根据 Whitney 嵌入理论 [^wikipedia-whitney]，任何一个流形都可以嵌入到高维的欧氏空间中。例如，地球的表面可以理解为一个嵌入 3 维空间的 2 维流形，其局部同胚于 2 维的欧式空间，对于一个球体的表面，用极坐标的形式可以表示为
 
 `$$
 \begin{equation}
@@ -88,7 +88,7 @@ $$`
 
 # 流形学习
 
-假设 `$Y$` 为一个欧式空间 `$\mathbb{R}^d$` 的一个 `$d$` 维流形，`$f: Y \to \mathbb{R}^D$` 为一个光滑嵌入，对于 `$D > d$`，流形学习的目的就是根据空间 `$\mathbb{R}^D$` 中的观测数据 `$\{x_i\}$` 重构 `$Y$` 和 `$f$` 的过程。隐含数据 `$\{y_i\}$` 由 `$Y$` 随机生成，通过光滑嵌入 `$f$` 生成观测数据，即 `$\{x_i = f\left(y_i\right)\}$`，所以我们可以将流形学习的问题看做是对于一个给定的观测数据一个生成模型的反向过程[^silva2003global]。
+假设 `$Y$` 为一个欧式空间 `$\mathbb{R}^d$` 的一个 `$d$` 维流形，`$f: Y \to \mathbb{R}^D$` 为一个光滑嵌入，对于 `$D > d$`，流形学习的目的就是根据空间 `$\mathbb{R}^D$` 中的观测数据 `$\{x_i\}$` 重构 `$Y$` 和 `$f$` 的过程。隐含数据 `$\{y_i\}$` 由 `$Y$` 随机生成，通过光滑嵌入 `$f$` 生成观测数据，即 `$\{x_i = f\left(y_i\right)\}$`，所以我们可以将流形学习的问题看做是对于一个给定的观测数据一个生成模型的反向过程 [^silva2003global]。
 
 在介绍具体的流形学习算法前，我们先引入几个 3 维数据用于解释后续的具体算法
 
@@ -98,7 +98,7 @@ $$`
 
 ## MDS
 
-多尺度变换 (MDS, Multi-Dimensional Scaling)[^cox2000multidimensional] 是一种通过保留样本在高维空间中的不相似性 (Dissimilarity) 降低数据维度的方法，在这里不相似性可以理解为样本之间的距离。因此，根据距离的度量方式不同可以将其分为度量型 (metric) MDS 和 非度量型 (non-metric) MDS。度量型 MDS 通过计算不同样本之间距离的度量值进行降维，而非度量型则仅考虑距离的排序信息，在此我们仅对度量型 MDS 做简单介绍。
+多尺度变换 (MDS, Multi-Dimensional Scaling) [^cox2000multidimensional] 是一种通过保留样本在高维空间中的不相似性 (Dissimilarity) 降低数据维度的方法，在这里不相似性可以理解为样本之间的距离。因此，根据距离的度量方式不同可以将其分为度量型 (metric) MDS 和 非度量型 (non-metric) MDS。度量型 MDS 通过计算不同样本之间距离的度量值进行降维，而非度量型则仅考虑距离的排序信息，在此我们仅对度量型 MDS 做简单介绍。
 
 MDS 的目标是保留样本在高维空间中的不相似性，假设 `$x \in \mathbb{R}^D, x' \in \mathbb{R}^d, D > d$`，则 MDS 的目标函数可以写为
 
@@ -136,7 +136,7 @@ $$`
 
 ## LLE
 
-局部线性嵌入 (LLE, Locally Linear Embedding)[^roweis2000nonlinear]，从这个名称上我们不难看出其不同与 ISOMAP 那种通过都建邻接图保留全局结构的，而是从局部结构出发对数据进行降维。在 LLE 方法中，主要有如下的基本假设：
+局部线性嵌入 (LLE, Locally Linear Embedding) [^roweis2000nonlinear]，从这个名称上我们不难看出其不同与 ISOMAP 那种通过都建邻接图保留全局结构的，而是从局部结构出发对数据进行降维。在 LLE 方法中，主要有如下的基本假设：
 
 - 一个流形的局部可以近似于一个欧式空间
 - 每个样本均可以利用其邻居进行线性重构
@@ -155,13 +155,13 @@ $$`
 
 具体上述问题的优化求解过程在此就不在详细描述。针对 LLE 算法，后续很多人从不同方面对其进行了改进：
 
-1. Hessian LLE[^donoho2003hessian] 在局部中不再考虑局部的线性关系，而是保持局部的 Hessian 矩阵的二次型的关系。
-2. Modified LLE[^zhang2007mlle] 则是修改了寻找最临近的 `$k$` 个样本的方案，其在寻找 `$k$` 近邻时希望找到的近邻尽量分布在样本的各个方向，而不是集中在一侧。
-3. LTSA (Local Tangent Space Alignment)[^zhang2004principal] 则是除了保留了局部的几何性质，同时使用的一个从局部几何到整体性质过渡的 alignment 方法，因此可以理解为是一个局部和整体的组合。
+1. Hessian LLE [^donoho2003hessian] 在局部中不再考虑局部的线性关系，而是保持局部的 Hessian 矩阵的二次型的关系。
+2. Modified LLE [^zhang2007mlle] 则是修改了寻找最临近的 `$k$` 个样本的方案，其在寻找 `$k$` 近邻时希望找到的近邻尽量分布在样本的各个方向，而不是集中在一侧。
+3. LTSA (Local Tangent Space Alignment) [^zhang2004principal] 则是除了保留了局部的几何性质，同时使用的一个从局部几何到整体性质过渡的 alignment 方法，因此可以理解为是一个局部和整体的组合。
 
 ## LE
 
-LE (Laplacian Eigenmap)[^belkin2003laplacian] 的基本思想是认为在高维空间中距离近的点映射到低维空间中后其位置也相距很近。LE 从这个思想出发，最终将问题转化为求解图拉普拉斯算子的广义特征值问题，具体的一些证明不在这里详细展开说明，具体请参见原文，下面仅给出 LE 算法的流程：
+LE (Laplacian Eigenmap) [^belkin2003laplacian] 的基本思想是认为在高维空间中距离近的点映射到低维空间中后其位置也相距很近。LE 从这个思想出发，最终将问题转化为求解图拉普拉斯算子的广义特征值问题，具体的一些证明不在这里详细展开说明，具体请参见原文，下面仅给出 LE 算法的流程：
 
 1. 构建邻接图。
 2. 构建邻接矩阵 `$W$`，构建邻接矩阵有两种方法：对于点 `$i$` 和点 `$j$` 相连，如果利用 Hear Kernel (参数 `$t \in \mathbb{R}$`)，则令 `$W_{ij} = \exp \left(\dfrac{- \left\lVert x_i - x_j \right\rVert ^ 2}{t}\right)$`；如果使用简介方案，则令 `$W_{ij} = 1$`，对于不相连的点，则令 `$W_{ij} = 0$`。
@@ -175,7 +175,7 @@ $$`
 
 ### SNE
 
-SNE (Stochastic Neighbor Embedding)[^hinton2003stochastic] 是由 Hinton 等人提出的一种降维算法，其方法的基本假设如下：
+SNE (Stochastic Neighbor Embedding) [^hinton2003stochastic] 是由 Hinton 等人提出的一种降维算法，其方法的基本假设如下：
 
 1. 对象之间的相似度可以用概率进行表示，即：相似的对象有更高的概率被同时选择，不相似的对象有较低的概率被同时选择。
 2. 在高维空间中构建的这种概率分布应该尽可能的同低维空间中的概率分布相似。
@@ -223,7 +223,7 @@ SNE 为我们提供了一种很好的降维方法，但是其本身也存在一�
 - **不对称问题**：损失函数中的 KL 散度具有不对称性，导致 SNE 更加关注局部结构，相比忽略了全局结构。
 - **拥挤问题**：从高维空间映射到低维空间后，不同类别的簇容易挤在一起，无法较好地区分开。
 
-针对这两个问题，Maaten 等人又提出了 t-SNE 算法对其进行优化[^maaten2008visualizing]。
+针对这两个问题，Maaten 等人又提出了 t-SNE 算法对其进行优化 [^maaten2008visualizing]。
 
 针对不对称问题，Maaten 采用的方法是用联合概率分布来替代条件概率分布。高维控件中的联合概率分布为 `$P$`，低维空间中的联合概率分布为 `$Q$`，则对于任意的 `$i, j$`，有 `$p_{ij} = p_{ji}, q_{ij} = q_{ji}$`，联合概率定义为：
 
@@ -283,7 +283,7 @@ LLE    | 1. 可以学习任意维的局部线性的低维流形 <br/> 2. 归结�
 LE     | 1. 是局部非线性方法，与谱图理论有很紧密的联系 <br/> 2. 通过求解稀疏矩阵的特征值问题解析地求出整体最优解，效率非常高 <br/> 3. 使原空间中离得很近的点在低维空间也离得很近，可以用于聚类 | 1. 对算法参数和数据采样密度较敏感 <br/> 2. 不能有效保持流形的全局几何结构
 SNE, t-SNE  | 1. 非线性降维效果相较上述方法较好 | 1. 大规模高维数据时，效率显著降低 <br/> 2. 参数对不同数据集较为敏感
 
-对于**瑞士卷 (Swiss Roll)**，**S 形曲线 (S Curve)** 和**切断的球面 (Severed Sphere)**，我们利用不同的流形算法对其进行降维，可视化的对比结果如下面 3 张图所示，图中同时标注了算法的运行时间，实现主要参照了 scikit-learn 关于流形学习算法的比较[^sklearn-manifold]。
+对于**瑞士卷 (Swiss Roll)**，**S 形曲线 (S Curve)** 和**切断的球面 (Severed Sphere)**，我们利用不同的流形算法对其进行降维，可视化的对比结果如下面 3 张图所示，图中同时标注了算法的运行时间，实现主要参照了 scikit-learn 关于流形学习算法的比较 [^sklearn-manifold]。
 
 ![](/images/cn/2018-03-16-manifold-learning/s-curve.png)
 
@@ -291,7 +291,7 @@ SNE, t-SNE  | 1. 非线性降维效果相较上述方法较好 | 1. 大规模高
 
 ![](/images/cn/2018-03-16-manifold-learning/severed-sphere.png)
 
-文中相关图片绘制实现详见[代码](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-03-16-manifold-learning)，本文部分内容参考了**流形学习专题介绍**[^wangruiping]， **流形学习**[^hexiaofei]，**Chrispher**[^chrispher] 的博客和 **bingo**[^bindog] 的博客。
+文中相关图片绘制实现详见[代码](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-03-16-manifold-learning)，本文部分内容参考了**流形学习专题介绍** [^wangruiping]， **流形学习** [^hexiaofei]，**Chrispher** [^chrispher] 的博客和 **bingo** [^bindog] 的博客。
 
 [^jolliffe1986principal]: Jolliffe, Ian T. "Principal component analysis and factor analysis." _Principal component analysis._ Springer, New York, NY, 1986. 115-128.
 

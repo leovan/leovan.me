@@ -28,9 +28,9 @@ images:
 
 ## Ising 模型
 
-[Ising 模型](https://zh.wikipedia.org/zh/易辛模型)最早是由物理学家威廉·冷次在 1920 年发明的，他把该模型当成是一个给他学生恩斯特·易辛的问题。易辛在他一篇 1924 年的论文[^ising1924contribution]中求得了一维易辛模型的解析解，并且证明它不会产生相变。 二维方晶格易辛模型相对于一维的难出许多，因此其解析的描述在一段时间之后才在 1943 年由拉斯·昂萨格给出[^onsager1944a]。
+[Ising 模型](https://zh.wikipedia.org/zh/易辛模型)最早是由物理学家威廉·冷次在 1920 年发明的，他把该模型当成是一个给他学生恩斯特·易辛的问题。易辛在他一篇 1924 年的论文 [^ising1924contribution] 中求得了一维易辛模型的解析解，并且证明它不会产生相变。 二维方晶格易辛模型相对于一维的难出许多，因此其解析的描述在一段时间之后才在 1943 年由拉斯·昂萨格给出 [^onsager1944a]。
 
-Ising 模型假设铁磁物质是由一堆规则排列的小磁针构成，每个磁针只有上下两个方向。相邻的小磁针之间通过能量约束发生相互作用，同时受到环境热噪声的干扰而发生磁性的随机转变。涨落的大小由关键的温度参数决定，温度越高，随机涨落干扰越强，小磁针越容易发生无序而剧烈地状态转变，从而让上下两个方向的磁性相互抵消，整个系统消失磁性，如果温度很低，则小磁针相对宁静，系统处于能量约束高的状态，大量的小磁针方向一致，铁磁系统展现出磁性。而当系统处于临界温度 `$T_C$` 时，Ising 模型表现出一系列幂律行为和自相似现象[^ising-model]。
+Ising 模型假设铁磁物质是由一堆规则排列的小磁针构成，每个磁针只有上下两个方向。相邻的小磁针之间通过能量约束发生相互作用，同时受到环境热噪声的干扰而发生磁性的随机转变。涨落的大小由关键的温度参数决定，温度越高，随机涨落干扰越强，小磁针越容易发生无序而剧烈地状态转变，从而让上下两个方向的磁性相互抵消，整个系统消失磁性，如果温度很低，则小磁针相对宁静，系统处于能量约束高的状态，大量的小磁针方向一致，铁磁系统展现出磁性。而当系统处于临界温度 `$T_C$` 时，Ising 模型表现出一系列幂律行为和自相似现象 [^ising-model]。
 
 由于 Ising 模型的高度抽象，可以很容易地将它应用到其他领域之中。例如，将每个小磁针比喻为某个村落中的村民，而将小磁针上下的两种状态比喻成个体所具备的两种政治观点，相邻小磁针之间的相互作用比喻成村民之间观点的影响，环境的温度比喻成每个村民对自己意见不坚持的程度，这样 Ising 模型就可以建模该村落中不同政治见解的动态演化。在社会科学中，人们已经将 Ising 模型应用于股票市场、种族隔离、政治选择等不同的问题。另一方面，如果将小磁针比喻成神经元细胞，向上向下的状态比喻成神经元的激活与抑制，小磁针的相互作用比喻成神经元之间的信号传导，那么，Ising 模型的变种还可以用来建模神经网络系统，从而搭建可适应环境、不断学习的机器，例如 Hopfield 网络或 Boltzmann 机。
 
@@ -163,7 +163,7 @@ diff_t_matrix <- lapply(ising_config_t, function(t) {
 
 ## Hopfield 神经网络
 
-Hopfield 神经网络[^hopfield1987neural]是一种基于能量的反馈人工神经网络。Hopfield 神经网络分为离散型 (Discrete Hopfield Neural Network, DHNN) 和 连续性 (Continues Hopfield Neural Network, CHNN)。
+Hopfield 神经网络 [^hopfield1987neural] 是一种基于能量的反馈人工神经网络。Hopfield 神经网络分为离散型 (Discrete Hopfield Neural Network, DHNN) 和 连续性 (Continues Hopfield Neural Network, CHNN)。
 
 ### 离散型 Hopfield 神经网络
 
@@ -417,7 +417,7 @@ $$`
 
 #### TSP 问题求解
 
-旅行推销员问题 (Travelling salesman problem, TSP) 是指给定一系列城市和每对城市之间的距离，求解访问每一座城市一次并回到起始城市的最短路径[^tsp]。TSP 问题是一个 NP-hard 问题[^np-hard]。
+旅行推销员问题 (Travelling salesman problem, TSP) 是指给定一系列城市和每对城市之间的距离，求解访问每一座城市一次并回到起始城市的最短路径 [^tsp]。TSP 问题是一个 NP-hard 问题 [^np-hard]。
 
 对于 TSP 问题，我们给定一个城市指之间的距离矩阵
 
@@ -747,7 +747,7 @@ print(best_tsp_solution_path_p)
 
 ### 网络结构及其概率表示
 
-**受限的玻尔兹曼机** (Restricted Boltzmann Machine, RBM) 或**簧风琴** (harmonium) 是由 Smolensky 与 1986年在**玻尔兹曼机** (Boltzmann Machine, BM) 基础上提出的一种随机神经网络 (Stochastic Neural Networks)[^smolensky1986information]。受限的玻尔兹曼机对于原始的玻尔兹曼机做了相应的限制，在其网络结构中包含**可见节点**和**隐藏节点**，并且**可见节点**和**隐藏节点**内部不允许存在连接，更加形象的可以将其理解为一个二分图。
+**受限的玻尔兹曼机** (Restricted Boltzmann Machine, RBM) 或**簧风琴** (harmonium) 是由 Smolensky 与 1986年在**玻尔兹曼机** (Boltzmann Machine, BM) 基础上提出的一种随机神经网络 (Stochastic Neural Networks) [^smolensky1986information]。受限的玻尔兹曼机对于原始的玻尔兹曼机做了相应的限制，在其网络结构中包含**可见节点**和**隐藏节点**，并且**可见节点**和**隐藏节点**内部不允许存在连接，更加形象的可以将其理解为一个二分图。
 
 ![](/images/cn/2018-01-17-ising-hopfield-and-rbm/rbm-network.svg)
 
@@ -855,7 +855,7 @@ P\left(\boldsymbol{v} | \boldsymbol{h}\right) &= \prod_{i=1}^{n_v}{P\left(v_i | 
 \end{equation}
 $$`
 
-### 模型训练[^itplus-rbm]
+### 模型训练 [^itplus-rbm]
 
 对于 RBM 模型的训练，假设训练样本集合为 `$S = \left\lbrace{\boldsymbol{v^1}, \boldsymbol{v^2}, ..., \boldsymbol{v^{n_s}}}\right\rbrace$`，其中 `$\boldsymbol{v^i} = \left(v_{1}^{i}, v_{2}^{i}, ..., v_{n_v}^{i}\right), i = 1, 2, ..., n_s$`。则训练 RBM 的目标可以定义为最大化如下似然：
 
@@ -981,7 +981,7 @@ $$`
 
 针对如上方法，我们需要计算 `$\sum_{\boldsymbol{v}}$` 相关项，如上文所述，其计算复杂度为 `$O\left(2^{n_v + n_h}\right)$`，因为其条件概率计算比较容易，因此我们可以用 Gibbs 采样的方法进行估计，但由于 Gibbs 采样方法存在 burn-in period，因此需要足够次数的状态转移后才能够收敛到目标分布，因此这就增大了利用这种方法训练 RBM 模型的时间。
 
-针对这个问题，Hinton 于 2002 年提出了对比散度 (Contrastive Divergence, CD) 算法[^hinton2002training]，基本思想为将训练样本作为采样的初始值，因为目标就是让 RBM 去拟合这些样本的分布，因此这样则可以通过更少的状态转移就收敛到平稳分布。`$k$` 步 CD 算法大致步骤为：
+针对这个问题，Hinton 于 2002 年提出了对比散度 (Contrastive Divergence, CD) 算法 [^hinton2002training]，基本思想为将训练样本作为采样的初始值，因为目标就是让 RBM 去拟合这些样本的分布，因此这样则可以通过更少的状态转移就收敛到平稳分布。`$k$` 步 CD 算法大致步骤为：
 
 1. 对 `$\forall \boldsymbol{v} \in \boldsymbol{S}$`，初始化 `$\boldsymbol{v}^{\left(0\right)} = \boldsymbol{v}$`。
 2. 执行 `$k$` 步 Gibbs 采样，对于第 `$t$` 步，分别利用 `$P\left(\boldsymbol{h} | \boldsymbol{v}^{\left(t-1\right)}\right)$` 和 `$P\left(\boldsymbol{v} | \boldsymbol{h}^{\left(t-1\right)}\right)$` 采样出 `$\boldsymbol{h}^{\left(t-1\right)}$` 和 `$\boldsymbol{v}^{\left(t\right)}$`。
@@ -1023,8 +1023,8 @@ $$`
     \FORALL{$\boldsymbol{v \in S}$}
         \STATE $\boldsymbol{v}^{\left(0\right)} \gets \boldsymbol{v}$
         \FOR{$t = 0, 1, ..., k-1$}
-            \STATE $\boldsymbol{h}^{\left(t\right)} \gets \text{sample\_h\_given\_v} \left(\boldsymbol{v}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
-            \STATE $\boldsymbol{v}^{\left(t+1\right)} \gets \text{sample\_v\_given\_h} \left(\boldsymbol{h}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
+            \STATE $\boldsymbol{h}^{\left(t\right)} \gets \text{sample_h_given_v} \left(\boldsymbol{v}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
+            \STATE $\boldsymbol{v}^{\left(t+1\right)} \gets \text{sample_v_given_h} \left(\boldsymbol{h}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
         \ENDFOR
         \FOR{$i = 1, 2, ..., n_h; j = 1, 2, ..., n_v$}
             \STATE $\Delta w_{i, j} \gets \Delta w_{i, j} + \left[P\left(h_i=1|\boldsymbol{v}^{\left(0\right)}\right) v_j^{\left(0\right)} - P\left(h_i=1|\boldsymbol{v}^{\left(k\right)}\right) v_j^{\left(k\right)}\right]$
@@ -1095,7 +1095,7 @@ $$`
 
 ### MNIST 示例
 
-我们利用经典的 MNIST 数据作为示例，我们利用基于 tensorflow 的扩展包 tfrbm [^tfrbm]。tfrbm 实现了 Bernoulli-Bernoulli RBM 和 Gaussian-Bernoulli RBM 两种不同的 RBM，两者的比较详见[^hinton2010practical] [^yamashita2014bernoulli]。
+我们利用经典的 MNIST 数据作为示例，我们利用基于 tensorflow 的扩展包 tfrbm [^tfrbm]。tfrbm 实现了 Bernoulli-Bernoulli RBM 和 Gaussian-Bernoulli RBM 两种不同的 RBM，两者的比较详见 [^hinton2010practical] [^yamashita2014bernoulli]。
 
 ```{python}
 import numpy as np

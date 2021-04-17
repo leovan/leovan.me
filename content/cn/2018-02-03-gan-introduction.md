@@ -19,13 +19,13 @@ images:
 
 # Generative Adversarial Networks (GAN)
 
-**生成对抗网络** (**Generative Adversarial Network, GAN**) 是由 Goodfellow[^goodfellow2014generative] 于 2014 年提出的一种对抗网络。这个网络框架包含两个部分，一个生成模型 (generative model) 和一个判别模型 (discriminative model)。其中，生成模型可以理解为一个伪造者，试图通过构造假的数据骗过判别模型的甄别；判别模型可以理解为一个警察，尽可能甄别数据是来自于真实样本还是伪造者构造的假数据。两个模型都通过不断的学习提高自己的能力，即生成模型希望生成更真的假数据骗过判别模型，而判别模型希望能学习如何更准确的识别生成模型的假数据。
+**生成对抗网络** (**Generative Adversarial Network, GAN**) 是由 Goodfellow [^goodfellow2014generative] 于 2014 年提出的一种对抗网络。这个网络框架包含两个部分，一个生成模型 (generative model) 和一个判别模型 (discriminative model)。其中，生成模型可以理解为一个伪造者，试图通过构造假的数据骗过判别模型的甄别；判别模型可以理解为一个警察，尽可能甄别数据是来自于真实样本还是伪造者构造的假数据。两个模型都通过不断的学习提高自己的能力，即生成模型希望生成更真的假数据骗过判别模型，而判别模型希望能学习如何更准确的识别生成模型的假数据。
 
 ![](/images/cn/2018-02-03-gan-introduction/zhoubotong.png)
 
 ## 网络框架
 
-GAN 由两部分构成，一个**生成器** (**Generator**) 和一个**判别器** (**Discriminator**)。对于生成器，我们需要学习关于数据 `$\boldsymbol{x}$` 的一个分布 `$p_g$`，首先定义一个输入数据的先验分布 `$p_{\boldsymbol{z}} \left(\boldsymbol{z}\right)$`，其次定义一个映射 `$G \left(\boldsymbol{z}; \theta_g\right): \boldsymbol{z} \to \boldsymbol{x}$`。对于判别器，我们则需要定义一个映射 `$D \left(\boldsymbol{x}; \theta_d\right)$` 用于表示数据 `$\boldsymbol{x}$` 是来自于真实数据，还是来自于 `$p_g$`。GAN 的网络框架如下图所示[^goodfellow2016nips]：
+GAN 由两部分构成，一个**生成器** (**Generator**) 和一个**判别器** (**Discriminator**)。对于生成器，我们需要学习关于数据 `$\boldsymbol{x}$` 的一个分布 `$p_g$`，首先定义一个输入数据的先验分布 `$p_{\boldsymbol{z}} \left(\boldsymbol{z}\right)$`，其次定义一个映射 `$G \left(\boldsymbol{z}; \theta_g\right): \boldsymbol{z} \to \boldsymbol{x}$`。对于判别器，我们则需要定义一个映射 `$D \left(\boldsymbol{x}; \theta_d\right)$` 用于表示数据 `$\boldsymbol{x}$` 是来自于真实数据，还是来自于 `$p_g$`。GAN 的网络框架如下图所示 [^goodfellow2016nips]：
 
 ![](/images/cn/2018-02-03-gan-introduction/gan-framework.svg)
 
@@ -75,7 +75,7 @@ $$`
 \end{equation}
 $$`
 
-其中 `$KL$` 表示 KL 散度[^kl-divergence]，`$JS$` 表示 JS 散度[^jsd-divergence]，因此在全局最优情况下 `$p_g = p_{data}$`。
+其中 `$KL$` 表示 KL 散度 [^kl-divergence]，`$JS$` 表示 JS 散度 [^jsd-divergence]，因此在全局最优情况下 `$p_g = p_{data}$`。
 
 整个 GAN 的训练过程如下所示：
 
@@ -102,15 +102,15 @@ $$`
 
 ## 存在的问题
 
-针对 GAN，包括 Goodfellow 自己在内也提出了其中包含的很多问题[^goodfellow2016nips]，因此后人也提出了大量的改进，衍生出了大量的 GAN 变种。本章节仅对原始的 GAN 中存在的问题进行简略介绍，相关的改进请参见后续的具体改进算法。
+针对 GAN，包括 Goodfellow 自己在内也提出了其中包含的很多问题 [^goodfellow2016nips]，因此后人也提出了大量的改进，衍生出了大量的 GAN 变种。本章节仅对原始的 GAN 中存在的问题进行简略介绍，相关的改进请参见后续的具体改进算法。
 
 ### JS 散度问题
 
-我们在训练判别器的时候，其目标是最大化 JS 散度，但 JS 散度真的能够很好的帮助我们训练判别器吗？ Wasserstein GAN 一文[^arjovsky2017wasserstein]给出了不同生成器情况下 JS 散度的变化情况。
+我们在训练判别器的时候，其目标是最大化 JS 散度，但 JS 散度真的能够很好的帮助我们训练判别器吗？ Wasserstein GAN 一文 [^arjovsky2017wasserstein]给出了不同生成器情况下 JS 散度的变化情况。
 
 ![](/images/cn/2018-02-03-gan-introduction/different-generator-jsd.png)
 
-上图中，左边为一个基于 MLP 的生成器，右边为一个 DCGAN[^radford2015unsupervised] 生成器，两者均有一个 DCGAN 的判别器。根据上文我们可以知道判别器的目标是最大化
+上图中，左边为一个基于 MLP 的生成器，右边为一个 DCGAN [^radford2015unsupervised] 生成器，两者均有一个 DCGAN 的判别器。根据上文我们可以知道判别器的目标是最大化
 
 `$$
 \begin{equation}
@@ -125,11 +125,11 @@ $$`
 
 ### 多样性问题 Mode Collapse
 
-Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数据，导致的结果就是生成的数据缺乏多样性，如下图所示[^mlds-gan-basic-idea]:
+Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数据，导致的结果就是生成的数据缺乏多样性，如下图所示 [^mlds-gan-basic-idea]:
 
 ![](/images/cn/2018-02-03-gan-introduction/mode-collapse-demo.png)
 
-不难看出，其中红色方框圈出来的图像十分相似，这样的问题我们就称之为 Mode Collapse。Goolfellow 曾经从不同的 KL 散度的角度解释引起 Mode Collapse 的问题，但最后发现其并非由散度的不同所导致。对于 KL 散度，其并未是对称的，即 `$D_{KL} \left(p_{data} \Vert p_{model}\right)$` 与 `$D_{KL} \left(p_{model} \Vert p_{data}\right)$` 是不同的。在最大化似然估计的时候使用的是前者，而在最小化 JS 散度的时候使用的更类似于后者。如下图所示
+不难看出，其中红色方框圈出来的图像十分相似，这样的问题我们就称之为 Mode Collapse。Goolfellow 曾经从不同的 KL 散度的角度解释引起 Mode Collapse 的问题，但最后发现其并非由散度的不同所导致。对于 KL 散度，其并非是对称的，即 `$D_{KL} \left(p_{data} \Vert p_{model}\right)$` 与 `$D_{KL} \left(p_{model} \Vert p_{data}\right)$` 是不同的。在最大化似然估计的时候使用的是前者，而在最小化 JS 散度的时候使用的更类似于后者。如下图所示
 
 ![](/images/cn/2018-02-03-gan-introduction/difference-of-kl-distributation.svg)
 
@@ -137,10 +137,10 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 
 针对 Mode Collapse 的问题，出现了大量不同角度的优化
 
-- 基于正则化的优化[^che2016mode]
-- 基于 Minibatch 的优化[^salimans2016improved]
-- 基于 Unrolled Optimization 的优化[^metz2016unrolled]
-- 基于集成算法的优化[^tolstikhin2017adagan]
+- 基于正则化的优化 [^che2016mode]
+- 基于 Minibatch 的优化 [^salimans2016improved]
+- 基于 Unrolled Optimization 的优化 [^metz2016unrolled]
+- 基于集成算法的优化 [^tolstikhin2017adagan]
 
 ## MNIST 示例
 
@@ -148,152 +148,152 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 
 - 生成器
 
-```python
-def build_generator(self):
-    model = Sequential()
-
-    model.add(Dense(int(self._hidden_dim / 4),
-                        input_shape=self._noise_shape))
-    model.add(LeakyReLU(alpha=0.2))
-    model.add(BatchNormalization(momentum=0.8))
-    model.add(Dense(int(self._hidden_dim / 2)))
-    model.add(LeakyReLU(alpha=0.2))
-    model.add(BatchNormalization(momentum=0.8))
-    model.add(Dense(self._hidden_dim))
-    model.add(LeakyReLU(alpha=0.2))
-    model.add(BatchNormalization(momentum=0.8))
-    model.add(Dense(np.prod(self._input_shape), activation='tanh'))
-    model.add(Reshape(self._input_shape))
-
-    print('Generator Summary: ')
-    model.summary()
-
-    noise = Input(shape=self._noise_shape)
-    image = model(noise)
-    
-    return Model(noise, image)
-```
+  ```python
+  def build_generator(self):
+      model = Sequential()
+  
+      model.add(Dense(int(self._hidden_dim / 4),
+                          input_shape=self._noise_shape))
+      model.add(LeakyReLU(alpha=0.2))
+      model.add(BatchNormalization(momentum=0.8))
+      model.add(Dense(int(self._hidden_dim / 2)))
+      model.add(LeakyReLU(alpha=0.2))
+      model.add(BatchNormalization(momentum=0.8))
+      model.add(Dense(self._hidden_dim))
+      model.add(LeakyReLU(alpha=0.2))
+      model.add(BatchNormalization(momentum=0.8))
+      model.add(Dense(np.prod(self._input_shape), activation='tanh'))
+      model.add(Reshape(self._input_shape))
+  
+      print('Generator Summary: ')
+      model.summary()
+  
+      noise = Input(shape=self._noise_shape)
+      image = model(noise)
+      
+      return Model(noise, image)
+  ```
 
 在生成器中，我们使用了一个包含3个隐含层的全链接网络，其中 `self._hidden_dim` 是我们定义的隐含节点最多一层的节点数；`self._noise_shape` 为用于生成器的噪音数据的形状；`self._input_shape` 为输入数据形状，即图片数据的形状，中间层次采用的激活函数为 `LeakyReLU`，最后一层采用的激活函数为 `tanh`。
 
 - 判别器
 
-```python
-def build_discriminator(self):
-    model = Sequential()
-
-    model.add(Flatten(input_shape=self._input_shape))
-    model.add(Dense(int(self._hidden_dim / 2)))
-    model.add(LeakyReLU(alpha=0.2))
-    model.add(Dense(int(self._hidden_dim / 4)))
-    model.add(LeakyReLU(alpha=0.2))
-    model.add(Dense(1, activation='sigmoid'))
-
-    print('Discriminator Summary: ')
-    model.summary()
-
-    image = Input(shape=self._input_shape)
-    label = model(image)
-    
-    return Model(image, label)
-```
+  ```python
+  def build_discriminator(self):
+      model = Sequential()
+  
+      model.add(Flatten(input_shape=self._input_shape))
+      model.add(Dense(int(self._hidden_dim / 2)))
+      model.add(LeakyReLU(alpha=0.2))
+      model.add(Dense(int(self._hidden_dim / 4)))
+      model.add(LeakyReLU(alpha=0.2))
+      model.add(Dense(1, activation='sigmoid'))
+  
+      print('Discriminator Summary: ')
+      model.summary()
+  
+      image = Input(shape=self._input_shape)
+      label = model(image)
+      
+      return Model(image, label)
+  ```
 
 在判别器中，我们使用了一个包含2个隐含层的全链接网络，中间层次采用的激活函数为 `LeakyReLU`，最后一层采用的激活函数为 `sigmoid`。
 
 - 对抗网络
 
-```python
-class ImageBasicGAN():
-    def __init__(self, width, height, channels,
-                 a_optimizer=Adam(1e-4, beta_1=0.5),
-                 g_optimizer=Adam(1e-4, beta_1=0.5),
-                 d_optimizer=Adam(1e-4, beta_1=0.5),
-                 noise_dim=100, hidden_dim=1024):
-        '''
-
-        Args:
-            width: 图像宽度
-            height: 图像高度
-            channels: 图像颜色通道数
-            a_optimizer: 对抗网络优化器
-            g_optimizer: 生成器优化器
-            d_optimizer: 判别器优化器
-            noise_dim: 噪音数据维度
-            hidden_dim: 隐含层最大维度
-        '''
-        
-        # 省略一大坨代码
-
-        # 构建和编译判别器
-        self._discriminator = self.build_discriminator()
-        self._discriminator.compile(loss='binary_crossentropy',
-                                    optimizer=d_optimizer,
-                                    metrics=['accuracy'])
-
-        # 构建和编译生成器
-        self._generator = self.build_generator()
-        self._generator.compile(loss='binary_crossentropy',
-                                optimizer=g_optimizer)
-
-        # 生成器利用噪声数据作为输入
-        noise = Input(shape=self._noise_shape)
-        generated_image = self._generator(noise)
-
-        # 当训练整个对抗网络时，仅训练生成器
-        self._discriminator.trainable = False
-
-        # 判别器将生成的图像作为输入
-        label = self._discriminator(generated_image)
-
-        # 构建和编译整个对抗网络
-        self._adversarial = Model(noise, label)
-        self._adversarial.compile(loss='binary_crossentropy',
-                                  optimizer=a_optimizer)
-```
+  ```python
+  class ImageBasicGAN():
+      def __init__(self, width, height, channels,
+                   a_optimizer=Adam(1e-4, beta_1=0.5),
+                   g_optimizer=Adam(1e-4, beta_1=0.5),
+                   d_optimizer=Adam(1e-4, beta_1=0.5),
+                   noise_dim=100, hidden_dim=1024):
+          '''
+  
+          Args:
+              width: 图像宽度
+              height: 图像高度
+              channels: 图像颜色通道数
+              a_optimizer: 对抗网络优化器
+              g_optimizer: 生成器优化器
+              d_optimizer: 判别器优化器
+              noise_dim: 噪音数据维度
+              hidden_dim: 隐含层最大维度
+          '''
+          
+          # 省略一大坨代码
+  
+          # 构建和编译判别器
+          self._discriminator = self.build_discriminator()
+          self._discriminator.compile(loss='binary_crossentropy',
+                                      optimizer=d_optimizer,
+                                      metrics=['accuracy'])
+  
+          # 构建和编译生成器
+          self._generator = self.build_generator()
+          self._generator.compile(loss='binary_crossentropy',
+                                  optimizer=g_optimizer)
+  
+          # 生成器利用噪声数据作为输入
+          noise = Input(shape=self._noise_shape)
+          generated_image = self._generator(noise)
+  
+          # 当训练整个对抗网络时，仅训练生成器
+          self._discriminator.trainable = False
+  
+          # 判别器将生成的图像作为输入
+          label = self._discriminator(generated_image)
+  
+          # 构建和编译整个对抗网络
+          self._adversarial = Model(noise, label)
+          self._adversarial.compile(loss='binary_crossentropy',
+                                    optimizer=a_optimizer)
+  ```
 
 在构造整个对抗网络的时候，需要注意我们训练完判别器后，通过训练整个对抗网络进而训练生成器的时候是固定住训练好的判别器的，因此在训练整个对抗网络的时候我们应该将判别器置为无需训练的状态。
 
 - 训练过程
 
-```python
-def train(self, x_train, output_dir, iters,
-          batch_size=32, k=1, save_interval=200):
-    ''' 训练模型
-
-    Args:
-        x_train: 训练数据
-        output_dir: 相关输出路径
-        iters: 迭代次数
-        batch_size: 批大小
-        k: K
-        save_interval: 结果保存间隔
-    '''
-    
-    # 省略一大坨代码
-
-    for iter in range(iters):
-        # 训练判别器
-        for _ in range(k):
-            train_indices = np.random.randint(0, x_train.shape[0],
-                                              batch_size)
-            train_images = x_train[train_indices]
-
-            noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
-            generated_images = self._generator.predict(noises)
-
-            self._discriminator.train_on_batch(train_images,
-                                               np.ones((batch_size, 1)))
-            self._discriminator.train_on_batch(generated_images,
-                                               np.zeros((batch_size, 1)))
-            
-        # 训练生成器
-        noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
-        labels = np.ones(batch_size)
-
-        self._adversarial.train_on_batch(noises, labels)
-
-    # 再省略一大坨代码
-```
+  ```python
+  def train(self, x_train, output_dir, iters,
+            batch_size=32, k=1, save_interval=200):
+      ''' 训练模型
+  
+      Args:
+          x_train: 训练数据
+          output_dir: 相关输出路径
+          iters: 迭代次数
+          batch_size: 批大小
+          k: K
+          save_interval: 结果保存间隔
+      '''
+      
+      # 省略一大坨代码
+  
+      for iter in range(iters):
+          # 训练判别器
+          for _ in range(k):
+              train_indices = np.random.randint(0, x_train.shape[0],
+                                                batch_size)
+              train_images = x_train[train_indices]
+  
+              noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
+              generated_images = self._generator.predict(noises)
+  
+              self._discriminator.train_on_batch(train_images,
+                                                 np.ones((batch_size, 1)))
+              self._discriminator.train_on_batch(generated_images,
+                                                 np.zeros((batch_size, 1)))
+              
+          # 训练生成器
+          noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
+          labels = np.ones(batch_size)
+  
+          self._adversarial.train_on_batch(noises, labels)
+  
+      # 再省略一大坨代码
+  ```
 
 在训练整个对抗网络的时候，我们对于一个给定的生成器，我们将生成器生成的数据作为负样本，将从真实数据中采样的数据作为正样本训练判别器。Goodfellow 在描述 GAN 训练的过程中，对于给定的生成器，训练判别器 `$k$` 次，不过通常取 `$k = 1$`。训练好判别器后，再随机生成噪音数据用于训练生成器，周而复始直至达到最大迭代次数。
 
@@ -309,7 +309,7 @@ def train(self, x_train, output_dir, iters,
 
 # Deep Convolutional GAN
 
-DCGAN (Deep Convolutional GAN) 是由 Radford[^radford2015unsupervised] 等人提出的一种对原始 GAN 的变种，其基本的思想就是将原始 GAN 中的全链接层用卷积神经网络代替。在文中，Radford 等人给出构建一个稳定的 DCGAN 的建议，如下：
+DCGAN (Deep Convolutional GAN) 是由 Radford [^radford2015unsupervised] 等人提出的一种对原始 GAN 的变种，其基本的思想就是将原始 GAN 中的全链接层用卷积神经网络代替。在文中，Radford 等人给出构建一个稳定的 DCGAN 的建议，如下：
 
 - 在网络中不使用 pooling 层，而是使用多步长的卷积层 (判别器) 和多步长的反卷积层 (生成器)。
 - 在生成器和判别器中均使用批标准化。
