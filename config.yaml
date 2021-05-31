@@ -39,15 +39,18 @@ menu:
     - name: "关于"
       url: "/cn/about/"
       weight: 3
+    - identifier: "menu-separator-1"
+      url: "#menu-separator"
+      weight: 4
     - name: "Home"
       url: "/"
-      weight: 4
+      weight: 5
     - name: "Blog"
       url: "/en/"
-      weight: 5
+      weight: 6
     - name: "About"
       url: "/en/about/"
-      weight: 6
+      weight: 7
   en:
     - name: "Home"
       url: "/"
@@ -86,18 +89,27 @@ menu:
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
       weight: 4
+    - name: "摄影"
+      url: "/photography/"
+      weight: 5
+    - name: "烹饪"
+      url: "/cooking/"
+      weight: 6
+    - name: "摩托"
+      url: "/motorcycle/"
+      weight: 7
     - name: "关于"
       url: "/cn/about/"
-      weight: 5
+      weight: 8
     - name: "简历"
       url: "/cn/resume/"
-      weight: 6
+      weight: 9
     - identifier: "cn-menu-separator-2"
       url: "#menu-separator"
-      weight: 7
+      weight: 10
     - name: "English"
       url: "/en/"
-      weight: 8
+      weight: 11
 
 taxonomies:
   category: categories
