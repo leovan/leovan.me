@@ -1,0 +1,21 @@
+{
+  "itemsBaseURL": "/images/motorcycle/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "center",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "items": [
+    { "src": "2021-05-03-my-first-motorcycle-leoncino-800.jpg", "srct": "2021-05-03-my-first-motorcycle-leoncino-800-thumbnail.jpg", "title": "第一辆摩托·幼狮800" },
+    { "src": "2021-05-30-say-goodbye-after-supper.jpg", "srct": "2021-05-30-say-goodbye-after-supper-thumbnail.jpg", "title": "和摩友一起晚餐" },
+    { "src": "2021-05-30-on-my-little-motorcycle.jpg", "srct": "2021-05-30-on-my-little-motorcycle-thumbnail.jpg", "title": "骑上我心爱的“小”摩托" },
+    { "src": "https://cdn.leovan.me/videos/blog/motorcycle/2021-05-30-on-training.mp4", "srct": "2021-05-30-on-training-thumbnail.jpg", "title": "训练中..." }
+  ]
+}
