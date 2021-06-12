@@ -199,13 +199,13 @@ params:
   nanogallery2Version: "3.0.5"
   nanogallery2CDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  slogan: "手中有刀，心里有佛"
-
-  author:
-    en: "Leo Van"
-    cn: "范叶亮"
-
   lang:
+    slogan:
+      en: "Soldier to Soldier"
+      cn: "手中有刀，心里有佛"
+    author:
+      en: "Leo Van"
+      cn: "范叶亮"
     license:
       cn: "版权"
       en: "License"
@@ -215,47 +215,36 @@ params:
     categories:
       cn: "分类"
       en: "Categories"
-      tech101: "分类"
     tags:
       cn: "标签"
       en: "Tags"
-      tech101: "标签"
     wordcount:
       cn: "字数"
       en: "Word Count"
-      tech101: "字数"
     donate:
       cn: "赞 赏"
       en: "DONATE"
-      tech101: "赞 赏"
     donate_slogan:
       cn: "「真诚赞赏，手留余香」"
       en: "「Donation Given, Fragrance in Hand」"
-      tech101: "「真诚赞赏，手留余香」"
     donate_2_cny:
       cn: "2 元"
       en: "2 CNY"
-      tech101: "2 元"
     donate_5_cny:
       cn: "5 元"
       en: "5 CNY"
-      tech101: "5 元"
     donate_10_cny:
       cn: "10 元"
       en: "10 CNY"
-      tech101: "10 元"
     donate_50_cny:
       cn: "50 元"
       en: "50 CNY"
-      tech101: "50 元"
     donate_100_cny:
       cn: "100 元"
       en: "100 CNY"
-      tech101: "100 元"
     donate_custom_cny:
       cn: "任意金额"
       en: "CUSTOM"
-      tech101: "任意金额"
 
 markup:
   defaultMarkdownHandler: blackfriday

@@ -1,3 +1,6 @@
-{{ $section := $.Scratch.Get "section" }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
 <div class="logo"></div>
-<p class="slogan">{{ .Site.Params.slogan }}</p>
+<p class="slogan">{{ index $.Site.Params.lang.slogan $lang }}</p>

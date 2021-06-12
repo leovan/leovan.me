@@ -1,4 +1,10 @@
+    {{ $lang := "cn" }}
+    {{ if (eq .Section "en") }}
+    {{ $lang = "en" }}
+    {{ end }}
+
     {{ if .IsPage }}
+    
     <script type="application/ld+json">
     { 
         "@context": "http://schema.org",
@@ -24,11 +30,11 @@
         ],
         "author": {
             "@type": "Person",
-            "name": "{{ .Params.author }}"
+            "name": "{{ (or .Params.author (index $.Site.Params.lang.author $lang)) }}"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "{{ .Params.author }}",
+            "name": "{{ (or .Params.author (index $.Site.Params.lang.author $lang)) }}",
             "logo": {
                 "@type": "ImageObject",
                 "url": {{ "/images/web/publisher-logo.png" | absURL | jsonify | safeJS }}
@@ -46,7 +52,7 @@
         "description": {{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }},
         "author": {
             "@type": "Person",
-            "name": "{{ delimit .Site.Params.author " " }}"
+            "name": "{{ delimit (or .Params.author (index $.Site.Params.lang.author $lang)) " " }}"
         },
         "url": {{ .Permalink | absURL | jsonify | safeJS }}
     }

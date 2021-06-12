@@ -1,8 +1,11 @@
 {{ if and (not .IsHome) .Content }}
-{{ $section := default .Section ($.Scratch.Get "section") }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
 <li class="menu-separator"><span>&nbsp;</span></li>
 {{ with .Section }}
-<li><a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml" title="RSS feed">{{ default "订阅" (index $.Site.Params.lang.subscribe $section) }}</a></li>
+<li><a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml" title="RSS feed">{{ index $.Site.Params.lang.subscribe $lang }}</a></li>
 {{ end }}
-<li><a href="{{ .Site.Params.licenseURL }}" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International">{{ default "版权" (index $.Site.Params.lang.license $section) }}</a></li>
+<li><a href="{{ .Site.Params.licenseURL }}" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International">{{ index $.Site.Params.lang.license $lang }}</a></li>
 {{ end }}

@@ -44,9 +44,7 @@ document.addEventListener('keyup', function(e) {
 <script src="/js/douban-card.js"></script>
 {{ end }}
 
-{{ if or .IsHome (len (findRE "^/cn/" .RelPermalink)) }}
 <script async src="/js/load-typekit.js"></script>
-{{ end }}
 
 <script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 

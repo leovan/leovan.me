@@ -2,9 +2,14 @@
 <h1>{{ .Title }}</h1>
 {{ with .Params.subtitle }}<h2><span class="subtitle">{{ . }}</span></h2>{{ end }}
 
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
+
 {{ if .IsPage }}
 {{ if not .Params.disable_author_date }}
-<h3>{{ with or (or .Params.author (index .Site.Params.author .Section)) "" }}{{  print . " / " }}{{ end }}
+<h3>{{ with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}{{  print . " / " }}{{ end }}
 {{ if .Lastmod }}{{ if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{ end }}{{ else if .Date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h3>
 {{ end }}
 
@@ -12,7 +17,7 @@
 <h3 class="post-meta">
 {{ if .Params.categories }}
 {{ if gt (len .Params.categories) 0 }}
-<strong>{{ default "Categories" (index $.Site.Params.lang.categories .Section) }}: </strong>
+<strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>
 {{ range $index, $categories := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
 {{ end }}
 {{ end }}
@@ -23,7 +28,7 @@
 {{ end }}
 {{ if .Params.tags }}
 {{ if gt (len .Params.tags) 0 }}
-<strong>{{ default "Tags" (index $.Site.Params.lang.tags .Section) }}: </strong>
+<strong>{{ index $.Site.Params.lang.tags $lang }}: </strong>
 {{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<span>{{ . }}</span>{{ end }}
 {{ end }}
 {{ end }}
@@ -32,7 +37,7 @@
 /
 {{ end }}
 {{ end }}
-<strong>{{ default "Word Count" (index $.Site.Params.lang.wordcount .Section) }}: </strong>
+<strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
 {{ .WordCount }}
 </h3>
 {{ end }}

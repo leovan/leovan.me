@@ -7,8 +7,13 @@
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:url" content="{{ .Permalink }}">
+
+    {{ $lang := "cn" }}
+    {{ if (eq .Section "en") }}
+    {{ $lang = "en" }}
+    {{ end }}
     
-    {{ with or .Params.author (index .Site.Params.author .Section) }}
+    {{ with or .Params.author (index $.Site.Params.lang.author $lang) }}
     <meta name="author" property="article:author" content="{{ . }}">
     {{ end }}
     

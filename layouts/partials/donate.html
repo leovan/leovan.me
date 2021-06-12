@@ -1,26 +1,29 @@
 {{ if (not .Params.disable_donate) }}
 <link rel="stylesheet" href="/css/donate.css" />
-{{ $section := default .Section ($.Scratch.Get "section") }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
 <div class="donate">
   <div class="donate-header"></div>
   <div class="donate-slug" id="donate-slug">{{ .Slug }}</div>
-  <button class="donate-button">{{ index $.Site.Params.lang.donate $section }}</button>
-  <div class="donate-footer">{{ index $.Site.Params.lang.donate_slogan $section }}</div>
+  <button class="donate-button">{{ index $.Site.Params.lang.donate $lang }}</button>
+  <div class="donate-footer">{{ index $.Site.Params.lang.donate_slogan $lang }}</div>
 </div>
 <div class="donate-modal-wrapper">
   <div class="donate-modal">
     <div class="donate-box">
       <div class="donate-box-content">
         <div class="donate-box-content-inner">
-          <div class="donate-box-header">{{ index $.Site.Params.lang.donate_slogan $section }}</div>
+          <div class="donate-box-header">{{ index $.Site.Params.lang.donate_slogan $lang }}</div>
           <div class="donate-box-body">
             <div class="donate-box-money">
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-2" data-v="2" data-unchecked="￥ 2" data-checked="{{ index $.Site.Params.lang.donate_2_cny $section }}">￥ 2</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-5" data-v="5" data-unchecked="￥ 5" data-checked="{{ index $.Site.Params.lang.donate_5_cny $section }}">￥ 5</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-10" data-v="10" data-unchecked="￥ 10" data-checked="{{ index $.Site.Params.lang.donate_10_cny $section }}">￥ 10</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-50" data-v="50" data-unchecked="￥ 50" data-checked="{{ index $.Site.Params.lang.donate_50_cny $section }}">￥ 50</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-100" data-v="100" data-unchecked="￥ 100" data-checked="{{ index $.Site.Params.lang.donate_100_cny $section }}">￥ 100</button>
-              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-custom" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $section }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $section }}">{{ index $.Site.Params.lang.donate_custom_cny $section }}</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-2" data-v="2" data-unchecked="￥ 2" data-checked="{{ index $.Site.Params.lang.donate_2_cny $lang }}">￥ 2</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-5" data-v="5" data-unchecked="￥ 5" data-checked="{{ index $.Site.Params.lang.donate_5_cny $lang }}">￥ 5</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-10" data-v="10" data-unchecked="￥ 10" data-checked="{{ index $.Site.Params.lang.donate_10_cny $lang }}">￥ 10</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-50" data-v="50" data-unchecked="￥ 50" data-checked="{{ index $.Site.Params.lang.donate_50_cny $lang }}">￥ 50</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-100" data-v="100" data-unchecked="￥ 100" data-checked="{{ index $.Site.Params.lang.donate_100_cny $lang }}">￥ 100</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-custom" data-v="custom" data-unchecked="{{ index $.Site.Params.lang.donate_custom_cny $lang }}" data-checked="{{ index $.Site.Params.lang.donate_custom_cny $lang }}">{{ index $.Site.Params.lang.donate_custom_cny $lang }}</button>
             </div>
             <div class="donate-box-pay">
               <img class="donate-box-pay-qrcode" id="donate-box-pay-qrcode" src=""/>
