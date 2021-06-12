@@ -71,9 +71,6 @@ menu:
     - name: "Resume"
       url: "/en/resume/"
       weight: 6
-    - identifier: "en-menu-separator-2"
-      url: "#menu-separator"
-      weight: 7
   cn:
     - name: "首页"
       url: "/"
@@ -105,9 +102,6 @@ menu:
     - name: "简历"
       url: "/cn/resume/"
       weight: 10
-    - identifier: "cn-menu-separator-2"
-      url: "#menu-separator"
-      weight: 11
   tech101:
     - name: "首页"
       url: "/"
