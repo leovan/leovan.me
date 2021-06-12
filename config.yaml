@@ -14,6 +14,7 @@ rssLimit: 100
 permalinks:
   cn: "/cn/:year/:month/:slug/"
   en: "/en/:year/:month/:slug/"
+  tech101: "/tech101/:year/:month/:slug/"
 
 menu:
   home:

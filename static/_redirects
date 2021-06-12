@@ -1,12 +1,13 @@
-# Netlify
-https://leovan.netlify.com/* https://leovan.me/:splat 301!
-https://leovan.netlify.app/* https://leovan.me/:splat 301!
+# Cloudflare
+https://leovan.pages.dev/* https://leovan.me/:splat 301!
 
 # Custom
-/index.xml    /cn/index.xml 301!
-/feed/        /cn/index.xml 301!
-/rss/         /cn/index.xml 301!
-/cn/feed/     /cn/index.xml 301!
-/cn/rss/      /cn/index.xml 301!
-/en/feed/     /en/index.xml 301!
-/en/rss/      /en/index.xml 301!
+/index.xml         /cn/index.xml 301!
+/feed/             /cn/index.xml 301!
+/rss/              /cn/index.xml 301!
+/cn/feed/          /cn/index.xml 301!
+/cn/rss/           /cn/index.xml 301!
+/en/feed/          /en/index.xml 301!
+/en/rss/           /en/index.xml 301!
+/tech101/feed/     /tech101/index.xml 301!
+/tech101/rss/      /tech101/index.xml 301!
