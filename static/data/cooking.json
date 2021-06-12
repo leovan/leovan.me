@@ -4,7 +4,7 @@
   "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "center",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -12,6 +12,11 @@
   },
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
   "items": [
     { "src": "2020-05-03-tofu-soup-with-pickles.jpg", "srct": "2020-05-03-tofu-soup-with-pickles-thumbnail.jpg", "title": "泡菜豆腐汤，吃饱了才有力气减肥" },
     { "src": "2020-02-09-stay-in-home-during-covid-19.jpg", "srct": "2020-02-09-stay-in-home-during-covid-19-thumbnail.jpg", "title": "疫情期间就是这么胖的" },

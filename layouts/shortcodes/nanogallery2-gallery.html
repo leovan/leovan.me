@@ -1,5 +1,8 @@
+{{ if not ($.Page.Scratch.Get "nanogallery2-loaded") }}
+  {{ $.Page.Scratch.Set "nanogallery2-loaded" 1 }}
 <link rel="stylesheet" href='{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/css/nanogallery2.min.css'/>
 <script src="{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/jquery.nanogallery2.min.js"></script>
+{{ end }}
 
 {{ if .Get "tags" }}
 {{ $tags := split (.Get "tags") "," }}

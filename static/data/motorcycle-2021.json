@@ -4,7 +4,7 @@
   "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "center",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -12,6 +12,11 @@
   },
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
   "items": [
     { "src": "2021-05-03-my-first-motorcycle-leoncino-800.jpg", "srct": "2021-05-03-my-first-motorcycle-leoncino-800-thumbnail.jpg", "title": "第一辆摩托·幼狮800" },
     { "src": "2021-05-30-say-goodbye-after-supper.jpg", "srct": "2021-05-30-say-goodbye-after-supper-thumbnail.jpg", "title": "和摩友一起晚餐" },

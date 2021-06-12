@@ -4,7 +4,7 @@
   "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "center",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -12,6 +12,11 @@
   },
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
   "items": [
     { "src": "2016-11-05-autumn-01.jpg", "srct": "2016-11-05-autumn-01-thumbnail.jpg", "title": "好个秋" },
     { "src": "2016-11-05-autumn-02.jpg", "srct": "2016-11-05-autumn-02-thumbnail.jpg", "title": "好个秋" },

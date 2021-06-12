@@ -4,7 +4,7 @@
   "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "center",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -12,6 +12,11 @@
   },
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
   "items": [
     { "src": "2019-07-14-great-wall.jpg", "srct": "2019-07-14-great-wall-thumbnail.jpg", "title": "司马台长城" },
     { "src": "2019-10-25-kubuqi-hiking.jpg", "srct": "2019-10-25-kubuqi-hiking-thumbnail.jpg", "title": "库布其沙漠挑战赛" },

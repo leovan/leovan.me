@@ -4,7 +4,7 @@
   "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "center",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -12,6 +12,11 @@
   },
   "allowHTMLinData": true,
   "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
   "items": [
     { "src": "2017-07-14-mountains.jpg", "srct": "2017-07-14-mountains-thumbnail.jpg", "title": "山" },
     { "src": "2017-07-14-stream.jpg", "srct": "2017-07-14-stream-thumbnail.jpg", "title": "涧" },
