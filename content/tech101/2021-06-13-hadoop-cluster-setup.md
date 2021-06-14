@@ -28,7 +28,7 @@ images:
 2. Zookeeper：3.7.0，[下载地址](https://zookeeper.apache.org/releases.html)。
 3. Hadoop：3.2.2，[下载地址](https://hadoop.apache.org/releases.html)。
 
-按照[虚拟环境准备 (Virtual Environment Preparation)](/tech101/2021/06/virtual-env-preparation/)准备虚拟机列表如下：
+按照[虚拟环境准备 (Virtual Environment Preparation)](/tech101/2021/06/virtual-env-preparation/) 准备虚拟机列表如下：
 
 | 主机名 | IP             | 角色                                                         |
 | ------ | -------------- | ------------------------------------------------------------ |
@@ -56,7 +56,8 @@ sudo chown -R leo:leo /data
 将 JDK 安装包解压缩到 `/opt` 目录并创建软链接：
 
 ```shell
-tar -zxvf /opt/jdk-8u291-linux-x64.tar.gz /opt
+cd /opt
+tar -zxvf jdk-8u291-linux-x64.tar.gz
 ln -s /opt/jdk1.8.0_291 /opt/jdk
 ```
 
@@ -80,7 +81,8 @@ rsync -auvp /opt/jdk1.8.0_291 leo@vm-03:/opt
 将 Zookeeper 安装包解压到 `/opt` 目录并创建软链接：
 
 ```shell
-tar -zxvf /opt/apache-zookeeper-3.7.0-bin.tar.gz /opt
+cd /opt
+tar -zxvf apache-zookeeper-3.7.0-bin.tar.gz
 ln -s /opt/apache-zookeeper-3.7.0-bin /opt/zookeeper
 ```
 
@@ -139,7 +141,8 @@ rsync -auvp /opt/apache-zookeeper-3.7.0-bin leo@vm-03:/opt
 将 Hadoop 安装包解压到 `/opt` 目录并创建软链接：
 
 ```shell
-tar -zxvf /opt/hadoop-3.2.2.tar.gz /opt
+cd /opt
+tar -zxvf /hadoop-3.2.2.tar.gz
 ln -s /opt/hadoop-3.2.2 /opt/hadoop
 ```
 
