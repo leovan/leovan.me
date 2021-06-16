@@ -151,7 +151,7 @@ ln -s /opt/hadoop-3.2.2 /opt/hadoop
 ```txt
 # Hadoop
 export HADOOP_HOME=/opt/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export PATH=$PATH:$HADOOP_HOME/bin
 ```
 
 在 `/data` 目录下创建如下文件夹：
@@ -508,7 +508,7 @@ hdfs --daemon stop journalnode
 在 vm-01 启动 DFS：
 
 ```shell
-start-dfs.sh
+/opt/hadoop/sbin/start-dfs.sh
 ```
 
 会得到如下输出：
@@ -523,7 +523,7 @@ Starting ZK Failover Controllers on NN hosts [vm-01 vm-02 vm-03]
 在 vm-01 启动 YARN：
 
 ```shell
-start-yarn.sh
+/opt/hadoop/sbin/start-yarn.sh
 ```
 
 会得到如下输出：

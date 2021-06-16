@@ -273,4 +273,3 @@ Hive Session ID = 3331472a-a171-47be-843a-378611233f18
 Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
 hive>
 ```
-
