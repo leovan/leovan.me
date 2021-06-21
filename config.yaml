@@ -82,7 +82,7 @@ menu:
       url: "/categories/"
       weight: 3
     - name: "Tech 101"
-      url: "/tech101"
+      url: "/tech101/"
       weight: 4
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
@@ -113,7 +113,7 @@ menu:
       url: "/categories/"
       weight: 3
     - name: "Tech 101"
-      url: "/tech101"
+      url: "/tech101/"
       weight: 4
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
