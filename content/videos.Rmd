@@ -116,7 +116,7 @@ video_list_manual_update <- video_list %>%
 video_list_auto_update <- video_list_auto_update %>%
     mutate(imdb_rating = get_video_imdb_rating(imdb_id)) %>%
     mutate(douban_info = map(douban_id, get_video_douban_info)) %>%
-    unnest_wider(douban_info)
+    unnest_wider(douban_info, names_repair = 'universal')
 
 video_list_auto_update_succeed <- video_list_auto_update %>%
     filter(!is.na(douban_rating)) %>%

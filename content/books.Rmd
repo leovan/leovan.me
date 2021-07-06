@@ -90,7 +90,7 @@ book_list_manual_update <- book_list %>%
 
 book_list_auto_update <- book_list_auto_update %>%
     mutate(douban_info = map(douban_id, get_book_douban_info)) %>%
-    unnest_wider(douban_info)
+    unnest_wider(douban_info, names_repair = 'universal')
 
 book_list_auto_update_succeed <- book_list_auto_update %>%
     filter(!is.na(douban_rating)) %>%
