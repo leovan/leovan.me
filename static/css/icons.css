@@ -113,3 +113,62 @@
 .icon-windows:before {
   background-image: url("../images/icons/windows.svg");
 }
+
+.icon-adobe:before {
+  width: 1.2em;
+  background-image: url("../images/icons/adobe.svg");
+}
+
+.icon-airbnb:before {
+  background-image: url("../images/icons/airbnb.svg");
+}
+
+.icon-apple:before {
+  background-image: url("../images/icons/apple.svg");
+}
+
+.icon-facebook:before {
+  background-image: url("../images/icons/facebook.svg");
+}
+
+.icon-firefox:before {
+  background-image: url("../images/icons/firefox.svg");
+}
+
+.icon-google:before {
+  background-image: url("../images/icons/google.svg");
+}
+
+.icon-ibm:before {
+  width: 2.4em;
+  background-image: url("../images/icons/ibm.svg");
+}
+
+.icon-microsoft:before {
+  background-image: url("../images/icons/microsoft.svg");
+}
+
+.icon-salesforce:before {
+  width: 1.5em;
+  background-image: url("../images/icons/salesforce.svg");
+}
+
+.icon-wechat:before {
+  width: 1.2em;
+  background-image: url("../images/icons/wechat.svg");
+}
+
+.icon-alibaba:before {
+  width: 1.8em;
+  background-image: url("../images/icons/alibaba.png");
+}
+
+.icon-ant-group:before {
+  width: 0.8em;
+  background-image: url("../images/icons/ant-group.png");
+}
+
+.icon-qq:before {
+  width: 0.8em;
+  background-image: url("../images/icons/qq.png");
+}
