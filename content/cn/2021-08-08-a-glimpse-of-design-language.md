@@ -387,6 +387,8 @@ Alibaba Fusion Design 希望构建一套提升设计与开发之间 UI 构建效
 
 [^design-language-uisdc]: https://www.uisdc.com/design-language
 
+[^ant-design-values]: https://ant.design/docs/spec/values-cn
+
 [^ant-design-principle]: https://ant.design/docs/spec/overview-cn
 
 [^fusion-design-values]: https://fusion.design/pc/doc/design/设计概览/12
