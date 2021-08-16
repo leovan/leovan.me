@@ -31,7 +31,7 @@ disable_adsense: true
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan**, Risk Data Mining Expert
-2. 2015.04 ~ 2020.08, **JD Digits (JD Finance)**, Senior Algorithm Engineer
+2. 2015.04 ~ 2020.08, **JD**, Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 

@@ -29,7 +29,7 @@ disable_adsense: true
 ## <span class="mdi mdi-account-group-outline"></span> 工作经历
 
 1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
-2. 2015.04 ~ 2020.08 **京东数字科技 (京东金融)** 高级算法工程师
+2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
 
