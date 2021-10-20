@@ -151,11 +151,6 @@ params:
 
   prismjsVersion: "1.25.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  prismjsLang: [
-    "r", "python", "markup", "yaml", "latex", "bash", "powershell",
-    "javascript", "sql", "sparql", "cypher", "qml", "json", "groovy",
-    "apacheconf"]
-  prismjsTheme: ""
   prismjsPlugin: ["show-language"]
 
   mathjaxVersion: "3.2.0"
@@ -242,8 +237,6 @@ params:
       en: "CUSTOM"
 
 markup:
-  highlight:
-    codeFences: false
   goldmark:
     renderer:
       unsafe: true

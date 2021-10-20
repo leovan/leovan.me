@@ -3,9 +3,7 @@
 {{ $prismjsCDN := .Site.Params.prismjsCDN }}
 {{ if (not (eq $prismjsVersion "")) }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
-{{ range $.Site.Params.prismjsLang }}
-<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/components/prism-{{ . }}.min.js"></script>
-{{ end }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/autoloader/prism-autoloader.min.js"></script>
 {{ range $.Site.Params.prismjsPlugin }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
 {{ end }}
@@ -14,10 +12,10 @@
         if (!self.Prism) {
             return;
         }
-        
+
         Prism.languages.dos = Prism.languages.powershell;
         Prism.languages.gremlin = Prism.languages.groovy;
-        
+
         var Languages = {
             'r': 'R', 'python': 'Python', 'xml': 'XML', 'html': 'HTML',
             'yaml': 'YAML', 'latex': 'LaTeX', 'tex': 'TeX',
@@ -27,7 +25,7 @@
             'gremlin': 'Gremlin', 'cypher': 'Cypher', 'ngql': 'nGQL',
             'shell': 'Shell', 'sql': 'SQL', 'apacheconf': 'Apache Configuration'
         };
-        
+
         Prism.hooks.add('before-highlight', function(env) {
         	var language = Languages[env.language] || env.language;
         	env.element.setAttribute('data-language', language);
