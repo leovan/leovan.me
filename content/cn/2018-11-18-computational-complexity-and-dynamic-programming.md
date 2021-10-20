@@ -313,16 +313,16 @@ Floyd-Warshall 算法的求解伪代码如下所示：
 
 > 文章部分内容参考了 Thomas H. Cormen 等人的《算法导论》
 
-[^wikipedia-computational-complexity-theory]: https://zh.wikipedia.org/zh/计算复杂性理论
+[^wikipedia-computational-complexity-theory]: <https://zh.wikipedia.org/zh/计算复杂性理论>
 
-[^wikipedia-dynamic-programming]: https://zh.wikipedia.org/zh/动态规划
+[^wikipedia-dynamic-programming]: <https://zh.wikipedia.org/zh/动态规划>
 
-[^wikipedia-suffix-tree]: https://zh.wikipedia.org/zh/后缀树
+[^wikipedia-suffix-tree]: <https://zh.wikipedia.org/zh/后缀树>
 
-[^wikipedia-longest-common-substring-problem]: https://zh.wikipedia.org/zh/最长公共子串
+[^wikipedia-longest-common-substring-problem]: <https://zh.wikipedia.org/zh/最长公共子串>
 
-[^wikipedia-shortes-path-problem]: https://zh.wikipedia.org/zh/最短路问题
+[^wikipedia-shortes-path-problem]: <https://zh.wikipedia.org/zh/最短路问题>
 
-[^wikipedia-dijkstra-algorithm]: https://zh.wikipedia.org/zh/戴克斯特拉算法
+[^wikipedia-dijkstra-algorithm]: <https://zh.wikipedia.org/zh/戴克斯特拉算法>
 
-[^wikipedia-floyd-warshall-algorithm]: https://zh.wikipedia.org/zh/Floyd-Warshall算法
+[^wikipedia-floyd-warshall-algorithm]: <https://zh.wikipedia.org/zh/Floyd-Warshall算法>

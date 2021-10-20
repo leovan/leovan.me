@@ -169,8 +169,8 @@ ls -l | less
 
 同上文。
 
-[^process-wiki]: https://zh.wikipedia.org/wiki/进程
+[^process-wiki]: <https://zh.wikipedia.org/wiki/进程>
 
-[^thread-wiki]: https://zh.wikipedia.org/wiki/线程
+[^thread-wiki]: <https://zh.wikipedia.org/wiki/线程>
 
 [^process-thread-analogy]: https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html

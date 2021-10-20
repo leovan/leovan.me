@@ -431,9 +431,9 @@ $$`
 
 [^pavlopoulos2017empirical]: Pavlopoulos, G. A., Paez-Espino, D., Kyrpides, N. C., & Iliopoulos, I. (2017). Empirical comparison of visualization tools for larger-scale network analysis. _Advances in bioinformatics_, 2017.
 
-[^dijkstra-wikipedia]: https://zh.wikipedia.org/wiki/戴克斯特拉算法
+[^dijkstra-wikipedia]: <https://zh.wikipedia.org/wiki/戴克斯特拉算法>
 
-[^floyd-warshall-wikipedia]: https://zh.wikipedia.org/zh-hans/Floyd-Warshall算法
+[^floyd-warshall-wikipedia]: <https://zh.wikipedia.org/zh-hans/Floyd-Warshall算法>
 
 [^kernighan1970efficient]: Kernighan, B. W., & Lin, S. (1970). An efficient heuristic procedure for partitioning graphs. _The Bell system technical journal_, 49(2), 291-307.
 

@@ -284,7 +284,7 @@ A = \left\lgroup
 \right\rgroup
 $$`
 
-```{r}
+```r
 A <- matrix(c(3, -2, -0.9, 0,
               -2, 4, 1, 0,
               0, 0, -1, 0,
@@ -307,7 +307,7 @@ print(A_eig)
 
 则利用特征值和特征向量，可以还原原矩阵
 
-```{r}
+```r
 A_re <- A_eig$vectors %*%
     diag(A_eig$values) %*%
     solve(A_eig$vectors)
@@ -392,7 +392,7 @@ $$`
 
 降至一维
 
-```{r}
+```r
 x <- matrix(c(-1, -1, 0, 0, 2,
               -2, 0, 0, 1, 1),
             5, 2, byrow = F)

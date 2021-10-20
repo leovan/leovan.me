@@ -766,7 +766,7 @@ $$`
 
 [^mikolov2013efficient]: Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. _arXiv preprint arXiv:1301.3781_
 
-[^huffman-coding]: https://zh.wikipedia.org/zh/霍夫曼编码
+[^huffman-coding]: <https://zh.wikipedia.org/zh/霍夫曼编码>
 
 [^word2vec-c-code]: https://code.google.com/archive/p/word2vec/
 

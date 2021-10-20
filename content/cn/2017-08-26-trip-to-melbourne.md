@@ -90,12 +90,12 @@ images:
 
 最近恰巧看了二十二 [^twenty-two] 和三十二两部纪录片，战争受难最多的终究还是百姓，不过越来越多的历史开始慢慢淡出人们的视野，但也有着那么一群人再帮着我们更好的铭记。其实，我们铭记不是说为了让我们去记恨一些人，去记恨一个民族，我们所需要让人们铭记的是战争本身的残酷，愿天下之安宁，以活民命。
 
-[^the-great-ocean-road]: https://zh.wikipedia.org/zh-hans/大洋路
+[^the-great-ocean-road]: <https://zh.wikipedia.org/zh-hans/大洋路>
 
-[^the-twelve-apostles]: https://zh.wikipedia.org/zh-hans/十二使徒岩
+[^the-twelve-apostles]: <https://zh.wikipedia.org/zh-hans/十二使徒岩>
 
-[^loch-ard-gorge]: https://zh.wikipedia.org/zh-hans/阿德湖峡
+[^loch-ard-gorge]: <https://zh.wikipedia.org/zh-hans/阿德湖峡>
 
-[^twenty-two]: https://zh.wikipedia.org/zh-hans/二十二_(2017年电影)
+[^twenty-two]: <https://zh.wikipedia.org/zh-hans/二十二_(2017年电影)>
 
 {{< load-photoswipe >}}

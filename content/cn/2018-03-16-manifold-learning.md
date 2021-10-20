@@ -309,7 +309,7 @@ SNE, t-SNE  | 1. 非线性降维效果相较上述方法较好 | 1. 大规模高
 
 [^pluskid]: pluskid. [浅谈流形学习](http://blog.pluskid.org/?p=533)
 
-[^wikipedia-manifold]: https://zh.wikipedia.org/zh-hans/流形
+[^wikipedia-manifold]: <https://zh.wikipedia.org/zh-hans/流形>
 
 [^wikipedia-whitney]: https://en.wikipedia.org/wiki/Whitney_embedding_theorem
 

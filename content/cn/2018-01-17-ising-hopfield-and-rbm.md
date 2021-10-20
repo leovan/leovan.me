@@ -68,7 +68,7 @@ $$`
 
 其中 `$\mu = \min\left\lbrace\dfrac{e^{E\left(s_i^{\left(t\right)}\right) - E\left(s'_i\right)}}{kT}, 1\right\rbrace$` 表示接受转移的概率；`$k \approx 1.38 \times 10^{23}$` 为玻尔兹曼常数。我们利用蒙特卡罗方法对其进行模拟 `$T = 4J/k$`的情况，我们分别保留第 `$0, 1, 5, 50, 500, 5000$` 步的模拟结果
 
-```{r}
+```r
 # 每一轮状态转移
 each_round <- function(current_matrix, ising_config) {
     n_row <- nrow(current_matrix)
@@ -149,7 +149,7 @@ $$`
 
 我们模拟不同温度下，系统在运行 `$50$` 步时的状态
 
-```{r}
+```r
 ising_config_t <- c(1, 2, 2.27, 2.5, 3, 6)
 diff_t_matrix <- lapply(ising_config_t, function(t) {
     ising_config <- list(j = 1, k = 1, t = t)
@@ -269,7 +269,7 @@ $$`
 
 首先我们载入每张图片的数据
 
-```{r}
+```r
 library(EBImage)
 
 # 载入数据
@@ -287,7 +287,7 @@ digits_patterns <- lapply(digits, function(digit) {
 
 接下来利用这 10 个模式训练一个 Hopfield 网络
 
-```{r}
+```r
 #' 训练 Hopfield 网络
 #' 
 #' @param n 网络节点个数
@@ -312,7 +312,7 @@ digits_hopfield_network <- train_hopfield(16*16, digits_patterns)
 
 为了测试 Hopfiled 网络的记忆能力，我们利用 10 个模式生成一些测试数据，我们分别去掉图像的右边或下边的 5 个像素，生成新的 20 张测试图片
 
-```{r}
+```r
 # 构造测试数据
 digits_test_remove_right <- lapply(0:9, function(num) {
     digit_test <- digits[[num+1]]
@@ -338,7 +338,7 @@ digits_test_patterns <- lapply(digits_test, function(digit) {
 
 我们利用训练好的 Hopfield 网络运行测试数据，我们迭代 300 次并保存最后的网络输出
 
-```{r}
+```r
 #' 运行 Hopfiled 网络
 #' @param hopfield_network 训练好的 Hopfield 网络
 #' @param pattern 输入的模式
@@ -558,7 +558,7 @@ $$`
 
 已知的最优路线为 `$A \to D \to E \to F \to G \to H \to I \to J \to B \to C \to A$`，最优路线的路径长度为 `$2.6907$`。我们使用如下参数求解 TSP 问题，初始化 `$u_{init} = -\dfrac{\gamma}{2} \ln\left(n - 1\right)$`，`$\gamma = 0.02$`，学习率 `$\alpha = 0.0001$`，神经元激活阈值 `$\theta = 0.7$`，`$\tau = 1$`，能量分量权重参数 `$A = 500, B = 500, C = 1000, D = 500$`，单次迭代最大次数为 1000，共模拟 100 次。
 
-```{r}
+```r
 # 城市座标
 cities <- data.frame(
     l = LETTERS[1:10],
@@ -1097,7 +1097,7 @@ $$`
 
 我们利用经典的 MNIST 数据作为示例，我们利用基于 tensorflow 的扩展包 tfrbm [^tfrbm]。tfrbm 实现了 Bernoulli-Bernoulli RBM 和 Gaussian-Bernoulli RBM 两种不同的 RBM，两者的比较详见 [^hinton2010practical] [^yamashita2014bernoulli]。
 
-```{python}
+```python
 import numpy as np
 from matplotlib import pyplot as plt, gridspec
 from tfrbm import BBRBM, GBRBM
@@ -1112,7 +1112,7 @@ mnist_test_labels = mnist.test.labels
 
 MNIST 数据集中，训练集共包含 55000 个样本，每个样本的维度为 784，我们构建 Bernoulli-Bernoulli RBM，设置隐含节点个数为 64，学习率为 0.01，epoches 为 30，batch size 为 10。
 
-```{python}
+```python
 bbrbm = BBRBM(n_visible=784,
               n_hidden=64,
               learning_rate=0.01,
@@ -1131,7 +1131,7 @@ bbrbm_errs = bbrbm.fit(mnist_train_images, n_epoches=30, batch_size=10)
 
 训练误差变化如下
 
-```{python}
+```python
 plt.style.use('ggplot')
 plt.plot(bbrbm_errs)
 ```
@@ -1140,7 +1140,7 @@ plt.plot(bbrbm_errs)
 
 我们从 MNIST 的测试集中针对每个数字选取 10 个样本，共 100 个样本作为测试数据，利用训练好的 RBM 模型重构这 100 个样本
 
-```{python}
+```python
 mnist_test_images_samples = np.zeros([10 * 10, 784])
 mnist_test_images_samples_rec = np.zeros([10 * 10, 784])
 mnist_test_images_samples_plt = np.zeros([10 * 10 * 2, 784])
@@ -1175,7 +1175,7 @@ for idx in range(mnist_test_images.shape[0]):
 
 对比测试输入数据和重构结果，奇数列为输入数据，偶数列为重构数据
 
-```{python}
+```python
 def plot_mnist(mnist_images, nrows, ncols, cmap='gray'):
     fig = plt.figure(figsize=(ncols, nrows))
     gs = gridspec.GridSpec(nrows, ncols)
@@ -1198,7 +1198,7 @@ plot_mnist(mnist_test_images_samples_plt, 10, 20)
 
 测试集上的重构误差为
 
-```{python}
+```python
 gbrbm.get_err(mnist_test_images_samples)
 
 # 0.035245348
@@ -1208,7 +1208,7 @@ gbrbm.get_err(mnist_test_images_samples)
 
 [^onsager1944a]: Onsager, L. "A two-dimensional model with an order–disorder transition (crystal statistics I)." _Phys. Rev_ 65 (1944): 117-49.
 
-[^ising-model]: http://wiki.swarma.net/index.php?title=ISING模型
+[^ising-model]: <http://wiki.swarma.net/index.php?title=ISING模型>
 
 [^hopfield1987neural]: Hopfield, John J. "Neural networks and physical systems with emergent collective computational abilities." _Spin Glass Theory and Beyond: An Introduction to the Replica Method and Its Applications._ 1987. 411-415.
 
@@ -1216,9 +1216,9 @@ gbrbm.get_err(mnist_test_images_samples)
 
 [^han-nn]: 韩力群. 人工神经网络理论、设计及应用
 
-[^tsp]: https://zh.wikipedia.org/zh-hans/旅行推销员问题
+[^tsp]: <https://zh.wikipedia.org/zh-hans/旅行推销员问题>
 
-[^np-hard]: https://zh.wikipedia.org/zh-hans/NP困难
+[^np-hard]: <https://zh.wikipedia.org/zh-hans/NP困难>
 
 [^smolensky1986information]: Smolensky, Paul. _Information processing in dynamical systems: Foundations of harmony theory._ No. CU-CS-321-86. COLORADO UNIV AT BOULDER DEPT OF COMPUTER SCIENCE, 1986.
 

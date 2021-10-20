@@ -116,6 +116,6 @@ $$`
 
 最后推荐一个网站 [The Bezier Game](https://bezier.method.ac)，可以帮助更好的理解和掌握基于贝塞尔曲线的钢笔工具使用。
 
-[^bezier-curve-wikipedia]: https://zh.wikipedia.org/wiki/贝塞尔曲线
+[^bezier-curve-wikipedia]: <https://zh.wikipedia.org/wiki/贝塞尔曲线>
 
 [^so-whats-the-big-deal-with-horizontal-vertical-bezier-handles-anyway]: [So What’s the Big Deal with Horizontal & Vertical Bezier Handles Anyway?](http://theagsc.com/blog/tutorials/so-whats-the-big-deal-with-horizontal-vertical-bezier-handles-anyway/)

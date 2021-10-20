@@ -531,7 +531,7 @@ td.hamming(s1, s2)
 
 长文本同长文本的比较多见于文档的匹配和去重，对于这类问题常见的解决方式是利用关键词提取获取长文本的特征向量，然后利用特征向量之间的相似度衡量对应文本的相似程度。在针对海量文本的去重，还以应用 [SimHash](/cn/2020/08/nearest-neighbor-search/) 等技术对文本生成一个指纹，从而实现快速去重。
 
-[^topic-model-wiki]: https://zh.wikipedia.org/wiki/主题模型
+[^topic-model-wiki]: <https://zh.wikipedia.org/wiki/主题模型>
 
 [^mihalcea2004textrank]: Mihalcea, R., & Tarau, P. (2004, July). Textrank: Bringing order into text. In _Proceedings of the 2004 conference on empirical methods in natural language processing_ (pp. 404-411).
 

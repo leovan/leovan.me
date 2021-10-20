@@ -75,7 +75,7 @@ Qt 和 PyQt 均采用比较新的版本，版本号需大于 5.10。Qt 直接从
 
 本文以 [Sci-Hub EVA](https://github.com/leovan/SciHubEVA) 作为示例介绍 PyQt 的跨平台 GUI 程序开发。Sci-Hub EVA 是一个利用 Sci-Hub API 下载论文的界面化小工具，功能相对简单。首先介绍一下工程的目录：
 
-```{txt}
+```txt
 docs\
 images\
 translations\
@@ -110,7 +110,7 @@ version_updater.py
 
 首先，对于每一个界面 (QML 文件)，我们都有一个与之对应 Python 文件 (除非该页面没有具体的业务逻辑，例如：`ui\SciHubEVAAbout.qml` 为关于页面，`ui\SciHubEVAMenuBar.qml` 为菜单栏)，以主页面 (`ui\SciHubEVA.qml` 和 `scihub_eva.py`) 为例，我们为每个界面创建一个类，同时该类集成自 Qt 的一个基类：
 
-```{python}
+```python
 class SciHubEVA(QObject):
     pass
 ```
@@ -121,7 +121,7 @@ Python 代码同界面交互的核心是通过 Qt 的 [**信号与槽**](http://
 
 Qt 对于多语言支持比较完善，在 QML 中对于需要翻译的地方利用 `qsTr()` 函数处理待翻译的文本即可，例如：
 
-```{qml}
+```qml
 Label {
     id: labelQuery
     text: qsTr("Query: ")
@@ -130,13 +130,13 @@ Label {
 
 在 Python 代码中，对于继承自 `QObject` 的类，可以利用基类中的 `tr()` 函数处理待翻译的文本即可，例如：
 
-```{python}
+```python
 self.tr('Saved PDF as: ')
 ```
 
 同时将具有待翻译文本的文件加入到 `SciHubEVA.pro` 的主工程文件中，用于后续翻译处理：
 
-```{text}
+```text
 lupdate_only {
 SOURCES += \
     ui/SciHubEVA.qml \
@@ -153,14 +153,14 @@ TRANSLATIONS += \
 
 因为 Python 代码中也有需要翻译的文件，因此我们需要运行如下命令生成翻译的源文件：
 
-```{bash}
+```bash
 lupdate SciHubEVA.pro
 pylupdate5 SciHubEVA.pro
 ```
 
 这样在 `translations` 目录即可生成待翻译的源文件 (ts 文件)，利用 Qt 自带的 Liguist 可以对其进行编辑，翻译并保存后，利用如下命令生成翻译的结果文件：
 
-```{bash}
+```bash}
 lrelease SciHubEVA.pro
 ```
 
@@ -170,7 +170,7 @@ lrelease SciHubEVA.pro
 
 在 GUI 编程中，我们不可避免的会使用到各种各样的资源，例如：图片，音频，字体等等。Qt 中提供了一种[资源管理方案](http://doc.qt.io/qt-5/resources.html)，可以在不同场景下使用 (Python 和 QML 中均可)。`SciHubEVA.qrc` 定义了所有使用到的资源：
 
-```{xml}
+```xml
 <RCC>
     <qresource prefix="/">
         <file>ui/SciHubEVA.qml</file>
@@ -185,7 +185,7 @@ lrelease SciHubEVA.pro
 
 在 QML 中使用示例如下：
 
-```{qml}
+```qml}
 Image {
     id: imageAboutLogo
     source: "qrc:/images/about.png"
@@ -194,7 +194,7 @@ Image {
 
 在 Python 中使用示例如下：
 
-```{python}
+```python
 self._engine = QQmlApplicationEngine()
 self._engine.load('qrc:/ui/SciHubEVA.qml')
 ```
@@ -205,7 +205,7 @@ self._engine.load('qrc:/ui/SciHubEVA.qml')
 
 写 GUI 应用的一个重要问题就是界面线程的分离，需要把耗时的业务逻辑摘出来，单独作为一个线程运行，这样才不会造成界面的“假死”情况。`scihub_api.py` 中的 `SciHubAPI` 作为下载文章的主类，下载过程相对耗时。因为其既需要 Qt 中的 `tr()` 函数，也需要线程，通过 Python 的多继承，`SciHubAPI` 类构造如下：
 
-```{python}
+```python
 class SciHubAPI(QObject, threading.Thread):
     pass
 ```
@@ -218,7 +218,7 @@ PyInstaller 是一个用于打包 Python 代码到一个本地化可执行程序
 
 macOS 下的编译打包命令如下：
 
-```{bash}
+```bash
 # 清理相关目录和文件
 rm -rf build
 rm -rf dist
@@ -247,7 +247,7 @@ cp Info.plist dist/SciHubEVA.app/Contents
 
 打包好的程序 `SciEvaHub.app` 会保存在 `dist` 目录中。由于目前无论是 macOS 还是 Windows 系统，高分辨率已经比较常见，为了适应高分辨率，我们需要在代码中添加相应的支持，在入口 Python 文件中，我们需要在头部添加如下信息：
 
-```{python}
+```python
 if hasattr(Qt, 'AA_EnableHighDpiScaling'):
     QGuiApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
@@ -256,7 +256,7 @@ if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
 
 同时针对 macOS 系统，我们需要在 `Info.plist` 中添加如下信息以支持高分辨率：
 
-```{xml}
+```xml
 <key>NSHighResolutionCapable</key>
 <string>True</string>
 <key>NSSupportsAutomaticGraphicsSwitching</key>
@@ -269,7 +269,7 @@ if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
 
 Windows 下的编译打包命令如下：
 
-```{dos}
+```dos
 rem 清理相关目录和文件
 rd /s /Q build
 rd /s /Q dist
@@ -302,7 +302,7 @@ pyinstaller -w scihub_eva.py ^
 
 macOS 下我们使用 appdmg 工具将编译打包好的程序制作成 DMG 镜像文件。DMG 镜像文件可以对原始的程序进行压缩，便于分发。appdmg 通过一个 JSON 文件控制 DMG 镜像的制作，详细的 JSON 格式和相关参数请参见 [官方文档](https://github.com/LinusU/node-appdmg)，Sci-Hub EVA 的 DMG 制作 JSON 文件如下：
 
-```{json}
+```json
 {
     "title": "Sci-Hub EVA",
     "icon": "images/SciHubEVA.icns",
