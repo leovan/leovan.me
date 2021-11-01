@@ -237,6 +237,8 @@ params:
       en: "CUSTOM"
 
 markup:
+  highlight:
+    codeFences: false
   goldmark:
     renderer:
       unsafe: true

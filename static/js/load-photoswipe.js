@@ -1,18 +1,18 @@
 /*
 Put this file in /static/js/load-photoswipe.js
-Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
+Documentation and license at https://github.com/liwenyip/hugo-easy-gallery/
 */
 
 /* Show an alert if this js file has been loaded twice */
 if (window.loadphotoswipejs) {
 	window.alert("You've loaded load-photoswipe.js twice. See https://github.com/liwenyip/hugo-easy-gallery/issues/6")
-} 
+}
 var loadphotoswipejs = 1
 
 /* TODO: Make the share function work */
 $( document ).ready(function() {
 	/*
-	Initialise Photoswipe
+	Initialize Photoswipe
 	*/
 	var items = []; // array of slide objects that will be passed to PhotoSwipe()
 	// for every figure element on the page:
@@ -48,7 +48,7 @@ $( document ).ready(function() {
 			console.log("Using default dimensions for " + $src);
 			// load the image to check its dimensions
 			// update the item as soon as w and h are known (check every 30ms)
-			var img = new Image(); 
+			var img = new Image();
 			img.src = $src;
 			var wait = setInterval(function() {
 				var w = img.naturalWidth,
@@ -60,21 +60,21 @@ $( document ).ready(function() {
 					console.log("Got actual dimensions for " + img.src);
 				}
 			}, 30);
-	   	}
+    }
 		// Save the index of this image then add it to the array
 		var index = items.length;
 		items.push(item);
 		// Event handler for click on a figure
 		$figure.on('click', function(event) {
 			event.preventDefault(); // prevent the normal behaviour i.e. load the <a> hyperlink
-			// Get the PSWP element and initialise it with the desired options
+			// Get the PSWP element and initialize it with the desired options
 			var $pswp = $('.pswp')[0];
 			var options = {
-				index: index, 
+				index: index,
 				bgOpacity: 0.8,
 				showHideOpacity: true
 			}
 			new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options).init();
-		});	
+		});
 	});
 });
