@@ -61,9 +61,9 @@ images:
 - 第一代 PTM 旨在学习词嵌入。由于下游任务不在需要这些模型，因此为了计算效率，这些模型往往采用浅层模型，例如 Skip-Gram [^mikolov2013distributed]，GloVe [^pennington2014glove] 等。尽管这些模型可以捕获词的语义，但由于未基于上下文环境，因此不能够捕捉到更深层次的概念，例如：句法结构，语义角色，指代等等。
 - 第二代 PTM 专注于学习基于上下文的词嵌入，例如 CoVe [^mccann2017learned]，ELMo [^peters2018deep]，OpenAI GPT [^radford2018improving] 和 BERT [^devlin2018bert] 等。这些学习到的编码器在下游任务中仍会用于词在上下文中的语义表示。
 
-# 预训练原理
+## 预训练原理
 
-## 语言表示学习
+### 语言表示学习
 
 分布式表示的核心思想为用一个低维的实值向量表示一段文本，向量单独每个维度不具有任何实质含义，但整个向量表示了一个具体的概念。下图展示了一个 NLP 任务的一般神经网络架构：
 
@@ -87,7 +87,7 @@ $$`
 
 其中，`$f_{\text{enc}} \left(\cdot\right)$` 为神经编码器，`$\mathbf{h}_t$` 为标记 `$x_t$` 的**基于上下文的嵌入**或**动态嵌入**。
 
-## 神经上下文编码器
+### 神经上下文编码器
 
 神经上下文编码器大致可以分为 3 类：
 
@@ -98,7 +98,7 @@ $$`
 3. **基于图的模型**：基于图的模型将字作为图中的一个节点来学习上下文表示，这个图通常是一个词之间预定义的语言结构，例如：语法结构 [^socher2013recursive] [^tai2015improved] 或语义关系 [^marcheggiani2018exploiting]。尽管基于语言学的图结构能提供有用的信息，但如何构建一个好的图结构则成为了难题。除此之外，基于语言学的图结构需要依赖专家知识和外部工具，例如：依存句法分析等。事实上，我们会采用一个更直接的方式去学习任意两个词之间的关系，通常连接的权重可以通过自注意力机制自动计算得出。Transformer [^vaswani2017attention] 是一个采用了全链接自注意力架构的实现，同时也采用了位置嵌入（positional embedding），层标准化（layer normalization）和残差连接（residual connections）等网络设计理念。
   {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/fully-connected-graph-based-model.png" title="Fully-connected graph-based model" >}}
 
-## 为什么预训练
+### 为什么预训练
 
 对于大多数的 NLP 任务，构建一个大规模的有标签的数据集是一项很大的挑战。相反，大规模的无标签语料是相对容易构建的，为了充分利用这些无标签数据，我们可以先利用它们获取一个好的语言表示，再将这些表示用于其他任务。预训练的好处如下：
 
@@ -106,7 +106,7 @@ $$`
 2. 预训练提供了更优的模型初始化方法，有助于提高模型的泛化能力和加速模型收敛。
 3. 预训练可以当作是在小数据集上一种避免过拟合的正则化方法。
 
-## 预训练任务
+### 预训练任务
 
 预训练任务对于学习语言的通用表示来说至关重要。通常情况下，预训练任务具有挑战性，同时需要大量训练数据。我们将预训练任务划分为 3 类：
 
@@ -114,7 +114,7 @@ $$`
 2. **非监督学习**，即从无标签数据获取一些固有的知识，例如：聚类，密度，潜在表征等。
 3. **自监督学习**，是监督学习和非监督学习的混合体，核心思想是对于输入的一部分利用其他部分进行预测。
 
-### 语言模型（Language Modeling，LM）
+#### 语言模型（Language Modeling，LM）
 
 NLP 中最常见的非监督任务为概率语言建模，这是一个经典的概率密度估计问题。给定一个文本序列 `$x_{1:T} = \left[x_1, x_2, \dotsc, x_T\right]$`，他的联合概率 `$p \left(x_{1:T}\right)$` 可以分解为：
 
@@ -130,23 +130,23 @@ $$`
 
 其中，`$g_{\text{LM}}$` 为预测层。
 
-### 遮罩语言模型（Masked Language Modeling，MLM）
+#### 遮罩语言模型（Masked Language Modeling，MLM）
 
 大致上来说，MLM 首先将输入句子的一些词条进行遮挡处理，其次再训练模型利用剩余的部分预测遮挡的部分。这种预训练方法会导致在预训练（pre-training）阶段和微调（fine-tuning）阶段的不一致，因为在微调阶段遮挡标记并未出现，BERT [^devlin2019bert] 通过一个特殊的符号 `[MASK]` 对其进行处理。
 
-#### Sequence-to-Sequence MLM (Seq2Seq MLM)
+##### Sequence-to-Sequence MLM (Seq2Seq MLM)
 
 MLM 通常以一个分类问题进行求解，我们将遮挡后的序列输入到一个神经编码器，再将输出向量传给一个 Softmax 分类器来预测遮挡的字符。我们可以采用 Encoder-Decoder（Seq2Seq）网络结构，将遮挡的序列输入到 Encoder，Decoder 则会循序的产生被遮挡的字符。MASS [^song2019mass] 和 T5 [^raffel2019exploring] 均采用了这种序列到序列的 MLM 结构，这种结构对 Seq2Seq 风格的下游任务很有帮助，例如：问答，摘要和机器翻译。
 
-#### Enhanced Masked Language Modeling (E-MLM)
+##### Enhanced Masked Language Modeling (E-MLM)
 
 同时，大量研究对于 BERT 所使用的遮罩处理进行了改进。RoBERTa [^liu2019roberta] 采用了一种动态的遮罩处理。UniLM 将遮罩任务拓展到 3 种不同的类型：单向的，双向的和 Seq2Seq 类型的。
 
-### 排列语言模型（Permuted Language Modeling，PLM）
+#### 排列语言模型（Permuted Language Modeling，PLM）
 
 在 MLM 中一些特殊字符（例如：`[MASK]`）在下游任务中是无用的，为了解决这个问题，XLNet [^yang2019xlnet] 提出了一种排列语言模型（Permuted Language Modeling，PLM）用于替代 MLM。简言之，PLM 是对输入序列的排列进行语言建模。给定一个序列，从所有可能的排列中随机抽样得到一个排列，将排列后的序列中的一些字符作为模型的预测目标，利用其他部分和目标的自然位置进行训练。需要注意的是这种排列并不会影响序列的自然位置，其仅用于定义字符预测的顺序。
 
-### 去噪自编码（Denoising Autoencoder，DAE）
+#### 去噪自编码（Denoising Autoencoder，DAE）
 
 DAE 旨在利用部分有损的输入恢复原始无损的输入。对于语言模型，例如 Seq2Seq 模型，可以采用标准的 Transformer 来重构原始文本。有多种方式可以对文本进行破坏 [^lewis2019bart]：
 
@@ -156,7 +156,7 @@ DAE 旨在利用部分有损的输入恢复原始无损的输入。对于语言�
 4. 句子重排：将文档以终止标点进行分割，再进行随机排序。
 5. 文档旋转：随机均匀地选择一个字符，对文档进行旋转使得这个字符作为文档的起始字符，模型需要确定文档真实的起始位置。
 
-### 对比学习（Contrastive Learning，CTL）
+#### 对比学习（Contrastive Learning，CTL）
 
 对比学习 [^saunshi2019theoretical] 假设一些观测到的文本对比随机采样的文本具有更相似的语义。对于文本对 `$\left(x, y\right)$` 通过最小化如下目标函数来学习评分函数 `$s \left(x, y\right)$`：
 
@@ -170,11 +170,11 @@ $$`
 
 {{< photoswipe-figure link="/images/cn/2020-03-28-pre-trained-model-for-nlp/ptms.png" caption="预训练模型分类及代表性模型" caption-position="bottom" caption-effect="fade" >}}
 
-## 应用于下游任务
+### 应用于下游任务
 
-### 如何迁移
+#### 如何迁移
 
-#### 选择合适的预训练任务，模型架构和语料
+##### 选择合适的预训练任务，模型架构和语料
 
 不同的 PTMs 在相同的下游任务上有着不同的效果，这是因为 PTMs 有着不同的预训练任务，模型架构和语料。
 
@@ -182,7 +182,7 @@ $$`
 2. PTM 的网络架构对下游任务也至关重要。例如：尽管 BERT 可以处理大多数自然语言理解任务，对其很难生成语言。
 3. 下游任务的数据分布应该和 PTM 训练所用语料相似。目前，大量现成的 PTM 仅可以快速地用于特定领域或特定语言的下游任务上。
 
-#### 选择合适的网络层
+##### 选择合适的网络层
 
 给定一个预训练的模型，不同的网络层捕获了不同的信息，例如：词性标记（POS tagging），语法（parsing），长期依赖（long-term dependencies），语义角色（semantic roles），指代（coreference）等。Tenney [^tenney2019bert] 等人发现 BERT 表示方式类似传统的 NLP 流程：基础的句法信息出现在浅层的网络中，高级的语义信息出现在更高的层级中。
 
@@ -196,29 +196,29 @@ $$`
   $$`
   其中 `$\alpha_l$` 是层 `$l$` 的 softmax 归一的权重，`$\gamma$` 是用于缩放预训练模型输出向量的一个标量值，再将不同层的混合输出输入到后续模型中 `$g \left(\mathbf{r}_t\right)$`。
 
-#### 是否微调
+##### 是否微调
 
 目前，主要有两种方式进行模型迁移：特征提取（预训练模型的参数是固定的）和模型微调（预训练模型的参数是经过微调的）。当采用特征提取时，预训练模型可以被看作是一个特征提取器。除此之外，我们应该采用内部层作为特征，因为他们通常是最适合迁移的特征。尽管两种不同方式都能对大多数 NLP 任务效果有显著提升，但以特征提取的方式需要更复杂的特定任务的架构。因此，微调是一种更加通用和方便的处理下游任务的方式。
 
-### 微调策略
+#### 微调策略
 
 随着 PTMs 网络层数的加深，其捕获的表示使得下游任务变得越来越简单，因此整个模型中用于特定任务的网络层一般比较简单，微调已经成为了采用 PTMs 的主要方式。但是微调的过程通常是比较不好预估的，即使采用相同的超参数，不同的随机数种子也可能导致差异较大的结果。除了标准的微调外，如下为一些有用的微调策略：
 
-#### 两步骤微调
+##### 两步骤微调
 
 一种方式是两阶段的迁移，在预训练和微调之间引入了一个中间阶段。在第一个阶段，PTM 通过一个中间任务或语料转换为一个微调后的模型，在第二个阶段，再利用目标任务进行微调。
 
-#### 多任务微调
+##### 多任务微调
 
 在多任务学习框架下对其进行微调。
 
-#### 利用额外模块进行微调
+##### 利用额外模块进行微调
 
 微调的主要缺点就是其参数的低效性。每个下游模型都有其自己微调好的参数，因此一个更好的解决方案是将一些微调好的适配模块注入到 PTMs 中，同时固定原始参数。
 
-## 开放资源
+### 开放资源
 
-### PTMs 开源实现：
+#### PTMs 开源实现：
 
 | 项目                                                         | 框架                                                         | PTMs                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------- |
@@ -240,7 +240,7 @@ $$`
 | [ERNIE(Baidu)](https://github.com/PaddlePaddle/ERNIE)        | <i class="icon icon-paddlepaddle"></i> PaddlePaddle          |                                       |
 | [Hugging Face](https://github.com/huggingface/transformers)  | <i class="icon icon-pytorch">PyTorch</i> & <i class="icon icon-tensorflow">TF</i> | 很多...                               |
 
-### 论文列表和 PTMs 相关资源：
+#### 论文列表和 PTMs 相关资源：
 
 | 资源             | URL                                                    |
 | ---------------- | ------------------------------------------------------ |
@@ -250,9 +250,9 @@ $$`
 | Bert Lang Street | https://bertlang.unibocconi.it                         |
 | BertViz          | https://github.com/jessevig/bertviz                    |
 
-# 预训练模型
+## 预训练模型
 
-## CoVe (2017) [^mccann2017learned]
+### CoVe (2017) [^mccann2017learned]
 
 首先，给定一个源语言序列 `$w^x = \left[w^x_1, \dotsc, w^x_n\right]$` 和一个翻译目标语言序列 `$w^z = \left[w^z_1, \dotsc, w^z_n\right]$`。令 `$\text{GloVe} \left(w^x\right)$` 为词 `$w^x$` 对应的 GloVe 向量，`$z$` 为 `$w^z$` 中的词随机初始化的词向量。将 `$\text{GloVe} \left(w^x\right)$` 输入到一个标准的两层 biLSTM 网络中，称之为 MT-LSTM，MT-LSTM 用于计算序列的隐含状态如下：
 
@@ -300,7 +300,7 @@ CoVe 网络架构示意图如下：
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/cove.png" >}}
 
-## ELMo (2018) [^peters2018deep]
+### ELMo (2018) [^peters2018deep]
 
 在 ELMo 模型中，对于每个词条 `$t_k$`，一个 `$L$` 层的 biLM 可以计算得到 `$2L + 1$` 个表示：
 
@@ -325,7 +325,7 @@ ELMo 网络架构示意图如下 [^elmo]：
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/elmo.png" >}}
 
-## GPT (2018) [^radford2018improving]
+### GPT (2018) [^radford2018improving]
 
 给定一个语料 `$\mathcal{U} = \left\{u_1, \dotsc, u_n\right\}$`，使用标准的语言建模目标来最大化如下似然：
 
@@ -367,7 +367,7 @@ GPT 网络架构示意图如下：
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/gpt.png" >}}
 
-## BERT (2018) [^devlin2018bert]
+### BERT (2018) [^devlin2018bert]
 
 BERT 采用了一中基于 Vaswani [^vaswani2017attention] 所提出模型的多层双向 Transformer 编码器。在 BERT 中，令 `$L$` 为 Transformer Block 的层数，`$H$` 为隐层大小，`$A$` 为自注意力头的数量。在所有情况中，设置前馈层的大小为 `$4H$`，BERT 提供了两种不同大小的预训练模型：
 
@@ -401,7 +401,7 @@ BERT 的输入表示既可以表示一个单独的文本序列，也可以表示
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/bert-task-specific-models.png" >}}
 
-## UniLM (2019) [^dong2019unified]
+### UniLM (2019) [^dong2019unified]
 
 给定一个输入序列 `$x = x_1 \cdots x_{|x|}$`，UniLM 通过下图的方式获取每个词条的基于上下文的向量表示。整个预训练过程利用单向的语言建模（unidirectional LM），双向的语言建模（bidirectional LM）和 Seq2Seq 语言建模（sequence-to-sequence LM）优化共享的 Transformer 网络。
 
@@ -425,7 +425,7 @@ $$`
 
 其中，上一层的输出 `$\mathbf{H}^{l-1} \in \mathbb{R}^{|x| \times d_h}$` 通过参数矩阵 `$\mathbf{W}^Q_l, \mathbf{W}^K_l, \mathbf{W}^V_l \in \mathbb{R}^{d_h \times d_k}$` 线性地映射为相应的 Query，Key 和 Value，遮罩矩阵 `$\mathbf{M} \in \mathbb{R}^{|x| \times |x|}$` 用于确定一对词条是否可以被相互连接。
 
-## Transformer-XL (2019) [^dai2019transformer]
+### Transformer-XL (2019) [^dai2019transformer]
 
 将 Transformer 或注意力机制应用到语言建模中的核心问题是如何训练 Transformer 使其有效地将一个任意长文本编码为一个固定长度的表示。Transformer-XL 将整个语料拆分为较短的段落，仅利用每段进行训练并忽略之前段落的上下文信息。这种方式称之为 Vanilla Model [^airfou2019character]，如下图所示：
 
@@ -492,7 +492,7 @@ $$`
 \end{aligned}
 $$`
 
-## XLNet (2019) [^yang2019xlnet]
+### XLNet (2019) [^yang2019xlnet]
 
 给定一个序列 `$\mathbf{X} = \left[x_1, \dotsc, x_T\right]$`，AR 语言模型通过最大化如下似然进行预训练：
 
@@ -546,7 +546,7 @@ $$`
 
 虽然排列语言模型有很多优点，但是由于计算量很大，模型很难进行优化，因此我们通过仅预测一个句子后面的一些词条解决这个问题。将 `$\mathbf{z}$` 分为两部分：非目标子序列 `$\mathbf{z}_{\leq c}$` 和目标子序列 `$\mathbf{z}_{>c}$`，其中 `$c$` 为切分点。同时会设置一个超参数 `$K$`，表示仅 `$1 / K$` 的词条会被预测，有 `$|\mathbf{z}| /(|\mathbf{z}|-c) \approx K$`。对于未被选择的词条，其查询隐状态无需被计算，从而节省计算时间和资源。
 
-## MASS (2019) [^song2019mass]
+### MASS (2019) [^song2019mass]
 
 MASS 是一个专门针对序列到序列的自然语言任务设计的预训练方法，对于一个给定的原始句子 `$x \in \mathcal{X}$`，令 `$x^{\setminus u:v}$` 表示将 `$x$` 从 `$u$` 到 `$v$` 位置进行遮挡处理，`$k = v - u + 1$` 为被遮挡词条的个数，`$x^{u:v}$` 为从 `$u$` 到 `$v$` 位置被遮挡的部分。MASS 利用被遮挡的序列 `$x^{\setminus u:v}$` 预测被遮挡的部分 `$x^{u:v}$`，目标函数的对数似然如下：
 
@@ -575,7 +575,7 @@ $$`
 
 当 `$k = 0.5 m$` 时，MASS 可以很好地平衡编码器和解码器的预训练。过度地偏向编码器（`$k=1$`，masked LM in BERT）和过度地偏向解码器（`$k=m$`，masked LM in GPT）均不能在下游的自然语言生成任务中取得很好的效果。
 
-## RoBERTa (2019) [^liu2019roberta]
+### RoBERTa (2019) [^liu2019roberta]
 
 RoBERTa 主要围绕 BERT 进行了如下改进：
 
@@ -584,7 +584,7 @@ RoBERTa 主要围绕 BERT 进行了如下改进：
 3. 模型采用了更大的训练数据和更大的 Batch 大小。
 4. 原始 BERT 采用一个 30K 的 BPE 词表，RoBERTa 采用了一个更大的 50K 的词表 [^radford2019language]。
 
-## BART (2019) [^lewis2019bart]
+### BART (2019) [^lewis2019bart]
 
 BART 采用了一个标准的 Seq2Seq Transformer 结构，类似 GPT 将 ReLU 激活函数替换为 GeLUs。对于基线模型，采用了一个 6 层的编码和解码器，对于更大模型采用了 12 层的结构。相比于 BERT 的架构主要有以下两点不同：
 
@@ -595,7 +595,7 @@ BART 采用了最小化破坏后的文档和原始文档之间的重构误差的
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/bart-transformations.png" >}}
 
-## T5 (2019) [^raffel2019exploring]
+### T5 (2019) [^raffel2019exploring]
 
 T5（Text-to-Text Transfer Transformer） 提出了一种 text-to-text 的框架，旨在利用相同的模型，损失函数和超参数等对机器翻译，文档摘要，问答和分类（例如：情感分析）等任务进行统一建模。我们甚至可以利用 T5 通过预测一个数字的文本表示而不是数字本身来建模一个回归任务。模型及其输入输出如下图所示：
 
@@ -603,7 +603,7 @@ T5（Text-to-Text Transfer Transformer） 提出了一种 text-to-text 的框架
 
 Google 的这项研究并不是提出一种新的方法，而是从全面的视角来概述当前 NLP 领域迁移学习的发展现状。T5 还公开了一个名为 C4（Colossal Clean Crawled Corpus）的数据集，该数据集是一个比 Wikipedia 大两个数量级的 Common Crawl 的清洗后版本的数据。更多模型的细节请参见源论文和 Google 的 [官方博客](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)。
 
-## ERNIE (Baidu, 2019) [^sun2019ernie] [^sun2019ernie2]
+### ERNIE (Baidu, 2019) [^sun2019ernie] [^sun2019ernie2]
 
 ERNIE 1.0 [^sun2019ernie] 通过建模海量数据中的词、实体及实体关系，学习真实世界的语义知识。相较于 BERT 学习原始语言信号，ERNIE 直接对先验语义知识单元进行建模，增强了模型语义表示能力。例如：
 
@@ -618,7 +618,7 @@ ERNIE 2.0 [^sun2019ernie2] 是基于持续学习的语义理解预训练框架�
 
 {{< figure src="/images/cn/2020-03-28-pre-trained-model-for-nlp/ernie-2-framework.png" >}}
 
-## State-of-Art
+### State-of-Art
 
 NLP 任务的 State-of-Art 模型详见：
 

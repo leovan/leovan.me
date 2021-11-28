@@ -4,9 +4,9 @@
     {{ end }}
 
     {{ if .IsPage }}
-    
+
     <script type="application/ld+json">
-    { 
+    {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage": {
@@ -45,14 +45,14 @@
     </script>
     {{ else }}
     <script type="application/ld+json">
-    { 
+    {
         "@context": "http://schema.org",
         "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
         "name": {{ printf "%s - %s" .Title .Site.Title | jsonify | safeJS }},
         "description": {{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }},
         "author": {
             "@type": "Person",
-            "name": "{{ delimit (or .Params.author (index $.Site.Params.lang.author $lang)) " " }}"
+            "name": "{{ (or .Params.author (index $.Site.Params.lang.author $lang)) }}"
         },
         "url": {{ .Permalink | absURL | jsonify | safeJS }}
     }

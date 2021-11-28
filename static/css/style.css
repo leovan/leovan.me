@@ -180,6 +180,11 @@ li {
   padding: 0;
 }
 
+li[role=doc-endnote] p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 /* Links */
 
 a {
