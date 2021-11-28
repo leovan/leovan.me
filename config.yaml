@@ -165,10 +165,10 @@ params:
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "7.16.0"
+  videojsVersion: "7.17.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  materialDesignWebFontVersion: "6.2.95"
+  materialDesignWebFontVersion: "6.5.95"
   materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   materialComponentsWebVersion: "latest"
