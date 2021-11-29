@@ -237,6 +237,12 @@ params:
       en: "CUSTOM"
 
 markup:
+  defaultMarkdownHandler: blackfriday
+  blackfriday:
+    extensionsmask: ["noIntraEmphasis"]
+    hrefTargetBlank: true
+    noreferrerLinks: true
+    footnotereturnlinkcontents: "↩"
   highlight:
     codeFences: false
   goldmark:
