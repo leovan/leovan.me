@@ -365,7 +365,7 @@ $$`
 x_{t+1} = \arg\max_x \Phi \left(\dfrac{\mu_t \left(x\right) - f \left(x^{+}\right) - \epsilon}{\sigma_t \left(x\right)}\right)
 $$`
 
-其中，`$\Phi \left(\cdot\right)$` 表示累积分布函数。PI 利用 `$\epsilon$` 来权衡探索和开发，增加 `$\epsilon$` 的值会更加倾向进行探索。
+其中，`$\Phi \left(\cdot\right)$` 表示标准正态分布累积分布函数。PI 利用 `$\epsilon$` 来权衡探索和开发，增加 `$\epsilon$` 的值会更加倾向进行探索。
 
 - Expected Improvement (EI)
 
@@ -395,7 +395,7 @@ Z &= \frac{\mu_{t}(x)-f\left(x^{+}\right)-\epsilon}{\sigma_{t}(x)}
 \end{aligned}
 $$`
 
-其中 `$\Phi \left(\cdot\right)$` 表示累积密度函数，`$\phi \left(\cdot\right)$` 表示概率密度函数。类似 PI，EI 也可以利用 `$\epsilon$` 来权衡探索和开发，增加 `$\epsilon$` 的值会更加倾向进行探索。
+其中 `$\Phi \left(\cdot\right)$` 表示标准正态分布累积分布函数，`$\phi \left(\cdot\right)$` 表示标准正态分布概率密度函数。类似 PI，EI 也可以利用 `$\epsilon$` 来权衡探索和开发，增加 `$\epsilon$` 的值会更加倾向进行探索。
 
 - 对比和其他采集函数
 
