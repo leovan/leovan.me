@@ -1,6 +1,7 @@
 # R Blogdown
 blogdown
 public
+.hugo_build.lock
 
 # R Common
 .Rhistory
