@@ -28,14 +28,14 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> 工作经历
 
-1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
+1. 2020.08 ~ 至今 **美团** 情报分析专家
 2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
 
-### 安全事务
+### 安全和情报分析
 
-_2020.08 ~ 至今 风险数据挖掘专家_
+_2020.08 ~ 至今 情报分析专家_
 
 ### 智慧农业
 
@@ -121,8 +121,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 1. 一种中文地址分词方法及系统 (发明，[CN 105159949](http://epub.cnipa.gov.cn/patent/CN105159949B)，**授权**，第一发明人，2015)
 2. 一种产品库存预测方法及装置 (发明，[CN 106056239](http://epub.cnipa.gov.cn/patent/CN106056239B)，**授权**，第一发明人，2016)
 3. 数据仓库信息处理方法、装置、系统、介质 (发明，[CN 109388637](http://epub.cnipa.gov.cn/patent/CN109388637B)，**授权**，第一发明人，2018)
-4. 确定表字段的类型的方法和装置 (发明，[CN 109784407](http://epub.cnipa.gov.cn/patent/CN109784407A)，实审，第一发明人，2018)
-5. 一种数据处理方法、装置、设备及介质 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN110309235A)，实审，第一发明人，2019)
+4. 一种数据处理方法、装置、设备及介质 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN110309235B)，**授权**，第一发明人，2019)
 6. 用于生成信息的方法和装置 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN112395490A)，实审，第一发明人，2019)
 
 ### 开源项目
@@ -137,4 +136,4 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2021-04-17</p>
+<p class="kai" style="text-align: right;">更新于：2022-01-13</p>

@@ -30,14 +30,14 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
-1. 2020.08 ~ Present, **Meituan**, Risk Data Mining Expert
+1. 2020.08 ~ Present, **Meituan**, Intelligence Analysis Expert
 2. 2015.04 ~ 2020.08, **JD**, Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 
-### Security Affairs
+### Security & Intelligence Analysis
 
-_2020.08 ~ Present, Risk Data Mining Expert_
+_2020.08 ~ Present, Intelligence Analysis Expert_
 
 ### Intelligent Agriculture
 
@@ -118,9 +118,8 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 1. A kind of Chinese address segmenting method and system ([CN 105159949](https://patents.google.com/patent/CN105159949B/en), 2015)
 2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239B/en), 2016)
 3. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637B/en), 2018)
-4. The method and apparatus for determining the type of literary name section ([CN 109784407](https://patents.google.com/patent/CN109784407A/en), 2019)
-5. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235A/en), 2019)
-6. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
+4. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235B/en), 2019)
+5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
 
 ### Open Source Projects
 
@@ -134,4 +133,4 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2021-04-17</p>
+<p style="text-align: right;">Updated on: 2022-01-13</p>
