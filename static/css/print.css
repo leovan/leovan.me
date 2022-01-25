@@ -1,25 +1,32 @@
-@import "light.css" print;
-
 @media print {
-  html, body {
-    background: none;
+  html {
+    background: none !important;
   }
 
   del, footer, .masthead, .donate, .douban-card, meting-js {
-    display: none;
+    display: none !important;
   }
 
   body {
-    max-width: 700px;
+    max-width: 700px !important;
+    background: none !important;
+  }
+
+  body::after {
+    display: none !important;
   }
 
   .main {
-    margin-left: 0;
+    margin-left: 0 !important;
     border-left: none !important;
-    padding-left: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    background: none !important;
   }
-  
+
   #back-to-top {
-    display: none;
+    display: none !important;
   }
 }
+
+@import "light.css" print;

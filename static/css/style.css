@@ -677,6 +677,16 @@ p.list-page span {
   width: device-width;
 }
 
+@media screen and (min-width: 1920px) {
+  body {
+    width: 1260px;
+  }
+
+  .main {
+    width: 1000px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .masthead {
     position: fixed;
