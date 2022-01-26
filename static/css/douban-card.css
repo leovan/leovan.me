@@ -13,7 +13,7 @@
 }
 
 .douban-card--middle {
-  width: 75%;
+  width: auto;
   padding: 1.5em;
 }
 
@@ -44,7 +44,8 @@
 }
 
 .douban-card--right {
-  width: 25%;
+  min-width: 160px;
+  max-width: 160px;
   float: right;
 }
 
@@ -60,18 +61,19 @@
   .douban-card {
     max-height: 11.2em;
   }
-  .douban-card--middle {
-    width: 60%;
-  }
+
   .douban-card--right {
-    width: 40%;
+    min-width: 0;
   }
+
   .douban-card--stars {
     display: none !important;
   }
+
   .douban-card--tags {
     max-height: 5.4em;
   }
+
   .douban-card--summary {
     display: none;
   }
