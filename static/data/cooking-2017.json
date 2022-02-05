@@ -1,0 +1,24 @@
+{
+  "itemsBaseURL": "/images/cooking/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "2017-06-24-fitness-diet.jpg", "srct": "2017-06-24-fitness-diet-thumbnail.jpg", "title": "假装能吃瘦" },
+    { "src": "2017-02-25-special-egg-tart.jpg", "srct": "2017-02-25-special-egg-tart-thumbnail.jpg", "title": "酱肘子和桑葚蛋挞，了解一下！" }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "itemsBaseURL": "/images/cooking/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "2019-11-24-haw-sauce.jpg", "srct": "2019-11-24-haw-sauce-thumbnail.jpg", "title": "果酱不错，再来点儿山楂的" },
+    { "src": "2019-11-02-apple-jam.jpg", "srct": "2019-11-02-apple-jam-thumbnail.jpg", "title": "苹果吃不了，熬成酱" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cooking/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "2022-02-04-baking-cookies.jpg", "srct": "2022-02-04-baking-cookies-thumbnail.jpg", "title": "曲奇烘烤中..." },
+    { "src": "2022-02-04-chocolate-cookies.jpg", "srct": "2022-02-04-chocolate-cookies-thumbnail.jpg", "title": "巧克力味，请忽略左上角条状物" },
+    { "src": "2022-02-04-cranberry-cookies.jpg", "srct": "2022-02-04-cranberry-cookies-thumbnail.jpg", "title": "蔓越莓味" },
+    { "src": "2022-02-04-matcha-cookies.jpg", "srct": "2022-02-04-matcha-cookies-thumbnail.jpg", "title": "抹茶味" },
+    { "src": "2022-02-04-three-flavor-cookies.jpg", "srct": "2022-02-04-three-flavor-cookies-thumbnail.jpg", "title": "成品上盘，表示只有盛菜的盘子了" }
+  ]
+}
