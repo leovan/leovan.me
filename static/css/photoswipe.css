@@ -4,7 +4,6 @@ Grid Layout Styles
 .gallery {
     overflow: hidden;
     margin: 10px 0 10px 0;
-    max-width: 768px;
 }
 .gallery .box {
     float: left;
