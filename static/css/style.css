@@ -76,6 +76,10 @@ hr {
   margin: 2em auto;
 }
 
+footer hr {
+  margin: 2em auto 1em;
+}
+
 figure {
   margin: 16px auto 16px;
   text-align: center;
@@ -208,7 +212,6 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid;
-  margin: 50px auto;
   padding: 0;
   max-width: 300px;
 }

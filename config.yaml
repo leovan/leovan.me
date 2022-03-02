@@ -142,6 +142,7 @@ taxonomies:
 
 params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
+  footer: "Copyright &copy; 2017-2022 [Leo Van](/)"
   disqusURL: "https://leovan.me"
   licenseURL: "https://github.com/leovan/leovan.me/blob/master/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
@@ -149,7 +150,7 @@ params:
   jsCookieVersion: "3.0.0"
   jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  prismjsVersion: "1.26.0"
+  prismjsVersion: "1.27.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsPlugin: ["show-language"]
 
@@ -165,7 +166,7 @@ params:
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "7.18.0"
+  videojsVersion: "7.18.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   materialDesignWebFontVersion: "6.5.95"
