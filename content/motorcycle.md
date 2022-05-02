@@ -12,4 +12,4 @@ disable_adsense: true
 
 ## 「我为你翻山越岭，却无心看风景」
 
-{{< nanogallery2-gallery data-base-url="/data/motorcycle" tags="2021" >}}
+{{< nanogallery2-gallery data-base-url="/data/motorcycle" tags="2022,2021" >}}

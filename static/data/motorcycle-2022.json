@@ -1,0 +1,24 @@
+{
+  "itemsBaseURL": "/images/motorcycle/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "2022-01-01-tanzhei-temple.jpg", "srct": "2022-01-01-tanzhei-temple-thumbnail.jpg", "title": "潭柘寺" },
+    { "src": "https://dpv.videocc.net/c8f53742da/6/c8f53742dae8f355dbba9bd1f1f01226_3.mp4", "srct": "2022-04-30-yanqing-thumbnail.jpg", "title": "你好五月，你好夏天！" }
+  ]
+}
