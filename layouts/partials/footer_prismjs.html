@@ -3,7 +3,6 @@
 {{ $prismjsCDN := .Site.Params.prismjsCDN }}
 {{ if (not (eq $prismjsVersion "")) }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
-<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/autoloader/prism-autoloader.min.js"></script>
 {{ range $.Site.Params.prismjsPlugin }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
 {{ end }}
@@ -27,8 +26,8 @@
         };
 
         Prism.hooks.add('before-highlight', function(env) {
-        	var language = Languages[env.language] || env.language;
-        	env.element.setAttribute('data-language', language);
+            var language = Languages[env.language] || env.language;
+            env.element.setAttribute('data-language', language);
         });
     })();
 </script>
