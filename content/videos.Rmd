@@ -119,7 +119,7 @@ video_list_auto_update <- video_list_auto_update %>%
     unnest_wider(douban_info, names_repair = 'universal')
 
 video_list_auto_update_succeed <- video_list_auto_update %>%
-    filter(!is.na(douban_rating)) %>%
+    filter(!is.na(title)) %>%
     select(all_of(video_list_columns))
 
 video_list_auto_update_failed <- video_list %>%
@@ -128,9 +128,10 @@ video_list_auto_update_failed <- video_list %>%
     select(all_of(video_list_columns))
 
 video_list_auto_update_succeed %>%
-    mutate(updated_date = Sys.Date(),
-           imdb_rating = as.numeric(imdb_rating),
-           douban_rating = as.numeric(douban_rating)) %>%
+    mutate(
+        updated_date = Sys.Date(),
+        imdb_rating = as.numeric(imdb_rating),
+        douban_rating = as.numeric(douban_rating)) %>%
     union_all(video_list_auto_update_failed) %>%
     union_all(video_list_manual_update) %>%
     arrange(desc(release_date)) %>%
