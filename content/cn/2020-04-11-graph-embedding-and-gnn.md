@@ -211,9 +211,9 @@ $$`
 
 ### Meta Paths
 
-#### matapath2vec
+#### metapath2vec
 
-matapath2vec [^dong2017metapath2vec] 提出了一种基于元路径的异构网络表示学习方法。在此我们引入 3 个定义：
+metapath2vec [^dong2017metapath2vec] 提出了一种基于元路径的异构网络表示学习方法。在此我们引入 3 个定义：
 
 1. **异构网络（(Heterogeneous information network，HIN）**可以定义为一个有向图 `$G = \left(V, E\right)$`，一个节点类型映射 `$\tau: V \to A$` 和一个边类型映射 `$\phi: E \to R$`，其中对于 `$v \in V$` 有 `$\tau \left(v\right) \in A$`，`$e \in E$` 有 `$\phi \left(e\right) \in R$`，且 `$|A| + |R| > 1$`。
 2. **网络模式（Network schema）**定义为 `$T_G = \left(A, R\right)$`，为一个包含节点类型映射 `$\tau \left(v\right) \in A$` 和边映射 `$\phi \left(e\right) \in R$` 异构网络的 `$G = \left(V, E\right)$` 的元模板。
