@@ -92,8 +92,8 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 ### 框架
 
-- Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
@@ -105,8 +105,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 ### 外语能力
 
-- 英语: CET6，能说，会写，菜单就都不懂了...
-- 韩语: 为了更好的看懂优秀的韩国电影努力学习中...
+- 英语: CET6，能说，会写，看菜单略费劲...
 
 ## <span class="mdi mdi-seal-variant"></span> 研究成果
 
