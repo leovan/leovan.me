@@ -75,7 +75,7 @@ tags:
   - 词性
   - 命名实体
   - NER
-  - Named Entity 
+  - Named Entity
   - 句法
   - Syntax
   - 依存句法分析
