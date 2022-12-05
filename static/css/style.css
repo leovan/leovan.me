@@ -128,10 +128,10 @@ pre[class*="language-"] > code[data-language]:before {
   content: attr(data-language);
   display: inline-block;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   font-size: 0.9em;
-  border-radius: 0 0 0 5px;
+  border-radius: 6px 0 0 0;
   padding: 0 0.5em;
   text-shadow: none;
 }
@@ -171,6 +171,11 @@ pre[class*="language-"] {
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
   background: none;
+}
+
+div.code-toolbar > .toolbar {
+  top: 0 !important;
+  right: 0.3em !important;
 }
 
 /* Lists */

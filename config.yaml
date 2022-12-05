@@ -142,34 +142,38 @@ taxonomies:
 
 params:
   description: "Leo Van's Personal Website | 范叶亮的个人网站"
-  footer: "Copyright &copy; 2017-2022 [Leo Van](/)"
+  footer: "Copyright &copy; 2017-{Year} [Leo Van](/)"
   disqusURL: "https://leovan.me"
-  licenseURL: "https://github.com/leovan/leovan.me/blob/master/LICENSE"
+  licenseURL: "https://github.com/leovan/leovan.me/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
 
   jsCookieVersion: "3.0.0"
   jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  prismjsVersion: "1.28.0"
-  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  prismjsPlugin: ["autoloader", "show-language"]
+  clipboardjsVersion: "2.0.11"
+  clipboardjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  mathjaxVersion: "3.2.0"
+  prismjsVersion: "1.29.0"
+  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  prismjsPluginJS: ["autoloader", "show-language", "toolbar"]
+  prismjsPluginCSS: ["toolbar"]
+
+  mathjaxVersion: "3.2.2"
   mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.jsdelivr.net/npm"
 
-  jQueryVersion: "3.6.0"
+  jQueryVersion: "3.6.1"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   photoswipeVersion: "4.1.3"
   photoswipeCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "7.19.2"
+  videojsVersion: "8.0.2"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  materialDesignWebFontVersion: "6.6.96"
+  materialDesignWebFontVersion: "7.0.96"
   materialDesignWebFontCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   materialComponentsWebVersion: "latest"
@@ -212,6 +216,15 @@ params:
     wordcount:
       cn: "字数"
       en: "Word Count"
+    prismjs_copy:
+      cn: "复制"
+      en: "Copy"
+    prismjs_copy_success:
+      cn: "已复制"
+      en: "Copied"
+    prismjs_copy_error:
+      cn: "按 Ctrl+C 复制"
+      en: "Press Ctrl+C to copy"
     donate:
       cn: "赞 赏"
       en: "DONATE"
@@ -243,5 +256,7 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
   tableOfContents:
     startLevel: 1

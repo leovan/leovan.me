@@ -1,9 +1,15 @@
 {{ if and (and (not .Params.disable_highlight) (in (string .Content) "</pre>")) (not .IsHome) }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
+{{ $clipboardjsVersion := .Site.Params.clipboardjsVersion }}
+{{ $clipboardjsCDN := .Site.Params.clipboardjsCDN }}
 {{ $prismjsVersion := .Site.Params.prismjsVersion }}
 {{ $prismjsCDN := .Site.Params.prismjsCDN }}
-{{ if (not (eq $prismjsVersion "")) }}
+<script src="{{ $clipboardjsCDN }}/clipboard.js/{{ $clipboardjsVersion }}/clipboard.min.js"></script>
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
-{{ range $.Site.Params.prismjsPlugin }}
+{{ range $.Site.Params.prismjsPluginJS }}
 <script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
 {{ end }}
 <script>
@@ -12,6 +18,7 @@
             return;
         }
 
+        // 显示语言
         Prism.languages.dos = Prism.languages.powershell;
         Prism.languages.gremlin = Prism.languages.groovy;
 
@@ -29,7 +36,41 @@
             var language = Languages[env.language] || env.language;
             env.element.setAttribute('data-language', language);
         });
+
+        // 复制代码
+        var ClipboardJS = window.ClipboardJS || undefined;
+
+        Prism.plugins.toolbar.registerButton('copy-to-clipboard', function(env) {
+            var linkCopy = document.createElement('button');
+            linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy $lang }}';
+
+            registerClipboard();
+
+            return linkCopy;
+
+            function registerClipboard() {
+                var clip = new ClipboardJS(linkCopy, {
+                    'text': function () {
+                        return env.code;
+                    }
+                });
+
+                clip.on('success', function() {
+                    linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy_success $lang }}';
+                    resetText();
+                });
+                clip.on('error', function () {
+                    linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy_error $lang }}';
+                    resetText();
+                });
+            }
+
+            function resetText() {
+                setTimeout(function () {
+                    linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy $lang }}';
+                }, 3000);
+            }
+        });
     })();
 </script>
-{{ end }}
 {{ end }}

@@ -9,7 +9,7 @@
   --body-block-background-color: #eee;
   --body-code-fore-color: #4f424c;
   --body-code-border-color: #ddd;
-  --body-code-background-color: #eee;
+  --body-code-background-color: rgb(246, 246, 246);
   --body-box-shadow: rgba(0, 0, 0, .25);
   --body-box-shadow-dark: rgba(230, 230, 230, .25);
 }
