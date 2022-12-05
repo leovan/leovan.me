@@ -20,6 +20,9 @@
       <description>
         {{ `<![CDATA[` | safeHTML }}
         {{ replaceRE "\v" "" .Content | safeHTML }}
+        {{ if eq .Section "en" }}
+        {{ (printf "<script>location.href='%s';</script>" .Permalink) | safeHTML }}
+        {{ end }}
         {{ `]]>` | safeHTML }}
       </description>
     </item>
