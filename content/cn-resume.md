@@ -28,14 +28,14 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> 工作经历
 
-1. 2020.08 ~ 至今 **美团** 情报分析专家
+1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
 2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
 
-### 安全和情报分析
+### 安全和风险
 
-_2020.08 ~ 至今 情报分析专家_
+_2020.08 ~ 至今 风险数据挖掘专家_
 
 ### 智慧农业
 
@@ -135,4 +135,4 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2022-01-13</p>
+<p class="kai" style="text-align: right;">更新于：2022-12-05</p>

@@ -30,14 +30,14 @@ disable_adsense: true
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
-1. 2020.08 ~ Present, **Meituan**, Intelligence Analysis Expert
+1. 2020.08 ~ Present, **Meituan**, Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD**, Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 
-### Security & Intelligence Analysis
+### Security & Risk
 
-_2020.08 ~ Present, Intelligence Analysis Expert_
+_2020.08 ~ Present, Risk Data Mining Expert_
 
 ### Intelligent Agriculture
 
@@ -133,4 +133,4 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2022-01-13</p>
+<p style="text-align: right;">Updated on: 2022-12-05</p>
