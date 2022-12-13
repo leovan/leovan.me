@@ -1,11 +1,41 @@
 {{ partial "header.html" . }}
 
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ with $.Site.Params.googleAdsense }}
+<ins
+  class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="{{ . }}"
+  data-ad-slot="1261604535"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{ end }}
+{{ end }}
+
 {{ if .Params.show_toc }}
-<div{{ with .Params.toc_depth }} class="toc-depth-{{ . }}" {{ end }}>{{ .TableOfContents }}</div> 
+<div{{ with .Params.toc_depth }} class="toc-depth-{{ . }}" {{ end }}>{{ .TableOfContents }}</div>
 {{ end }}
 
 {{ .Content }}
 
 {{ partial "donate.html" . }}
+
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ with $.Site.Params.googleAdsense }}
+<ins
+  class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="{{ . }}"
+  data-ad-slot="8302038603"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{ end }}
+{{ end }}
 
 {{ partial "footer.html" . }}
