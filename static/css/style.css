@@ -345,6 +345,11 @@ td code {
   padding: 0;
 }
 
+/* Google Adsense */
+.adsbygoogle {
+  margin: 16px auto 16px auto !important;
+}
+
 /* Utility Styles */
 
 .unselectable {

@@ -21,6 +21,21 @@ document.addEventListener('keyup', function(e) {
 </script>
 {{ end }}
 
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ with $.Site.Params.googleAdsense }}
+<ins
+  class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="{{ . }}"
+  data-ad-slot="8302038603"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{ end }}
+{{ end }}
+
 {{ partial "disqus.html" . }}
 {{ partial "footer_prismjs.html" . }}
 
