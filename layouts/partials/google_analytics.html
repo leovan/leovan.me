@@ -1,7 +1,7 @@
 {{ with .Site.GoogleAnalytics }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
-if (window.location.hostname != "127.0.0.1" && window.location.hostname != "localhost") {
+if (window.location.hostname == "leovan.me") {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
