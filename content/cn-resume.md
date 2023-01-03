@@ -132,7 +132,8 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)：Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
 4. [Hive 函数](https://github.com/leovan/hive-functions)：实用自定义 Hive 函数集。 ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
 5. [Cytoscape 用户手册](https://github.com/leovan/cytoscape-manual)：Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+6. [Rasa 文档](https://github.com/leovan/rasa-doc)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2022-12-05</p>
+<p class="kai" style="text-align: right;">更新于：2023-01-03</p>

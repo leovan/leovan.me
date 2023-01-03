@@ -130,7 +130,8 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
 4. [Hive Functions](https://github.com/leovan/hive-functions): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
 5. [Cytoscape Manual](https://github.com/leovan/cytoscape-manual): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+6. [Rasa Doc](https://github.com/leovan/cytoscape-manual): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2022-12-05</p>
+<p style="text-align: right;">Updated on: 2023-01-03</p>
