@@ -5,7 +5,7 @@
   font-variant: normal;
   text-rendering: auto;
   vertical-align: middle;
-  line-height: inherit;
+  line-height: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -18,7 +18,7 @@
   font-size: inherit;
   width: 1em;
   height: 1em;
-  line-height: inherit;
+  line-height: 1em;
   content: '';
 }
 
@@ -126,6 +126,8 @@
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  vertical-align: middle;
+  line-height: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -134,12 +136,12 @@
   display: inline-block;
   background-size: auto 1em;
   background-repeat: no-repeat;
+  background-position: center center;
   width: 1em;
   height: 1em;
-  line-height: inherit;
+  line-height: 1em;
   content: '';
   margin-right: 4px;
-  vertical-align: middle;
 }
 
 .icon-tensorflow::before {

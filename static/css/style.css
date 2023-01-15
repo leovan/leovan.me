@@ -584,10 +584,6 @@ pre[class*="language-"] {
   border-radius: .3em;
 }
 
-.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
-  background: none;
-}
-
 div.code-toolbar > .toolbar {
   top: 0 !important;
   right: 0.3em !important;
@@ -1233,7 +1229,7 @@ p.list-page span {
   }
 
   .dark #theme-toggle-icon::before {
-    background-image: url('../images/icons/material-design/light/weather-night.svg');
+    background-image: url('../images/icons/material-design/light/white-balance-sunny.svg');
   }
 }
 
