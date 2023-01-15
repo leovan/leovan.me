@@ -25,6 +25,7 @@
   height: 30px;
   border-radius: 6px;
   margin: 3px;
+  background: var(--code-bg);
 }
 
 .figure-slider-buttons button:focus {
@@ -46,7 +47,7 @@
 }
 
 .figure-slider-scroll-bar {
-  background: #d3d3d3;
+  background: var(--code-border);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -78,7 +79,7 @@
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background: black;
+  background: var(--code-bg);
   cursor: pointer;
   vertical-align: middle;
 }
@@ -90,7 +91,7 @@
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background: black;
+  background: var(--code-bg);
   cursor: pointer;
   vertical-align: middle;
 }

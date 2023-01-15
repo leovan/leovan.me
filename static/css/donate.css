@@ -13,7 +13,7 @@
 }
 
 .donate-button {
-  color: #fff;
+  color: #ffffff;
   background: #f36;
   width: 80px;
   height: 34px;
@@ -81,7 +81,7 @@
 
 .donate-box {
   overflow: auto;
-  background: #fff;
+  background: var(--body-bg);
   border-radius: 2px;
 }
 
@@ -133,9 +133,9 @@
   font-size: 1em;
   font-weight: bold;
   line-height: 2em;
-  background: #f6f6f6;
+  background: var(--code-bg);
   border-radius: 4px;
-  color: #444;
+  color: var(--block-border);
   margin-bottom: 20px;
   position: relative;
   text-align: center;

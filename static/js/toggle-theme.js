@@ -14,13 +14,13 @@ function setTheme(theme) {
   Cookies.set("theme", theme, {path: "/"});
 
   if (theme == "dark") {
-    document.getElementById("dark-mode-style").removeAttribute("disabled");
-    document.getElementById("light-dark-mode-icon").classList.remove("mdi-weather-night");
-    document.getElementById("light-dark-mode-icon").classList.add("mdi-white-balance-sunny");
+    document.documentElement.className = 'dark';
+    document.getElementById("theme-toggle-icon").classList.remove("mdi-weather-night");
+    document.getElementById("theme-toggle-icon").classList.add("mdi-white-balance-sunny");
   } else {
-    document.getElementById("dark-mode-style").setAttribute("disabled", "disabled");
-    document.getElementById("light-dark-mode-icon").classList.remove("mdi-white-balance-sunny");
-    document.getElementById("light-dark-mode-icon").classList.add("mdi-weather-night");
+    document.documentElement.className = '';
+    document.getElementById("theme-toggle-icon").classList.remove("mdi-white-balance-sunny");
+    document.getElementById("theme-toggle-icon").classList.add("mdi-weather-night");
   }
 }
 
@@ -34,5 +34,5 @@ function toggleTheme() {
   }
 }
 
-document.getElementById("light-dark-mode-action").addEventListener("click", toggleTheme);
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
 setTheme(getTheme());

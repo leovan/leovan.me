@@ -50,11 +50,6 @@ document.addEventListener('keyup', function(e) {
 
 {{ partial "footer_pseudocode.html" . }}
 
-{{ if $.Page.Scratch.Get "mdc" }}
-<script src="{{ $.Site.Params.materialComponentsWebCDN }}/material-components-web@{{ $.Site.Params.materialComponentsWebVersion }}/dist/material-components-web.min.js"></script>
-<script>window.mdc.autoInit()</script>
-{{ end }}
-
 {{ if $.Page.Scratch.Get "douban-card" }}
 <script src="/js/douban-card.js"></script>
 {{ end }}
