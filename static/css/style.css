@@ -87,7 +87,7 @@ img {
   --code-border: #dddddd;
   --code-bg: #383838;
   --code-lang-fg: #383838;
-  --box-shadow: rgba(230, 230, 230, .25);
+  --box-shadow: rgba(0, 0, 0, .25);
 
   --code: #ff79c6;
   --code-atrule: #62ef75;
@@ -384,8 +384,8 @@ pre[class*="language-"] > code[data-language]:before {
 }
 
 #back-to-top {
-  background: var(--body-fg) !important;
-  color: var(--body-fg-dark) !important;
+  background: var(--block-bg) !important;
+  color: var(--body-fg) !important;
   box-shadow: 0 2px 5px 0 var(--box-shadow) !important;
 }
 
