@@ -8,6 +8,8 @@ disable_author_date: true
 disable_donate: true
 disable_comments: true
 disable_adsense: true
+disable_mathjax: true
+disable_prismjs: true
 ---
 
 ## 「读书，不是非做不可的事，而是想要去做的事。」
@@ -102,8 +104,9 @@ book_list_auto_update_failed <- book_list %>%
     select(all_of(book_list_columns))
 
 book_list_auto_update_succeed %>%
-    mutate(updated_date = Sys.Date(),
-           douban_rating = as.numeric(douban_rating)) %>%
+    mutate(
+        updated_date = Sys.Date(),
+        douban_rating = as.numeric(douban_rating)) %>%
     union_all(book_list_auto_update_failed) %>%
     union_all(book_list_manual_update) %>%
     arrange(desc(purchasing_date)) %>%

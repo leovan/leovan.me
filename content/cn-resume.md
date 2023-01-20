@@ -8,6 +8,8 @@ disable_author_date: true
 disable_donate: true
 disable_comments: true
 disable_adsense: true
+disable_mathjax: true
+disable_prismjs: true
 ---
 
 ## 范叶亮
