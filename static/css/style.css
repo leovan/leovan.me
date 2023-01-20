@@ -509,7 +509,6 @@ iframe, twitterwidget, video {
 
 /* code */
 code {
-  font-size: 0.9em;
   padding: 0.2em 0.3em;
   border-radius: 0.3em;
 }
@@ -535,24 +534,18 @@ pre[class*="language-"] {
   overflow: inherit;
 }
 
-code[class*="language-"], pre[class*="language-"] {
-  font-size: .9em;
-}
-
 pre[class*="language-"] > code[data-language]:before {
   content: attr(data-language);
   display: inline-block;
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 0.9em;
   border-radius: 6px 0 0 0;
   padding: 0 0.5em;
   text-shadow: none;
 }
 
 code[class*="language-"], pre[class*="language-"] {
-  font-size: 14px;
   line-height: 1.375;
   direction: ltr;
   text-align: left;
