@@ -49,9 +49,6 @@ Transition styles
 .gallery.hover-effect-zoom .img,
 .gallery:not(.caption-effect-appear) figcaption,
 .fancy-figure:not(.caption-effect-appear) figcaption {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 /*
@@ -163,4 +160,3 @@ figcaption styles
 figcaption p {
     margin: auto; /* override style in theme */
 }
-

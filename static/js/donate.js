@@ -133,4 +133,6 @@ $(document).ready(function() {
       'event_label': donateSlug
     });
   }
+
+  donateModelWrapper.css('display', 'flex');
 });

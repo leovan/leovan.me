@@ -133,9 +133,6 @@ menu:
     - name: "简历"
       url: "/cn/resume/"
       weight: 10
-    - identifier: "cn-menu-separator-2"
-      url: "#menu-separator"
-      weight: 11
 
 taxonomies:
   category: categories

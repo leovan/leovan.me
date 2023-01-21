@@ -54,13 +54,15 @@ document.addEventListener('keyup', function(e) {
 <script src="/js/douban-card.js"></script>
 {{ end }}
 
+{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
 <script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+{{ end }}
 
 <script src="{{ $.Site.Params.vanillaBackToTopCDN }}/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
 addBackToTop({
   diameter: 48
-})
+});
 </script>
 
 {{ if $.Page.Scratch.Get "figure-slider" }}

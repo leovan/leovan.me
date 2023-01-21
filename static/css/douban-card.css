@@ -38,9 +38,6 @@
   max-height: 5.4em;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .douban-card--right {
@@ -114,10 +111,6 @@
   width: 75px;
   height: 15px !important;
   background-image: url(/images/douban/douban-stars.png);
-  background-image: -webkit-image-set(url(/images/douban/douban-stars.png) 1x, url(/images/douban/douban-stars@2x.png) 2x);
-  background-image: -moz-image-set(url(/images/douban/douban-stars.png) 1x, url(/images/douban/douban-stars@2x.png) 2x);
-  background-image: -o-image-set(url(/images/douban/douban-stars.png) 1x, url(/images/douban/douban-stars@2x.png) 2x);
-  background-image: -ms-image-set(url(/images/douban/douban-stars.png) 1x, url(/images/douban/douban-stars@2x.png) 2x);
   overflow: hidden;
   margin-left: .6em;
   vertical-align: text-top;

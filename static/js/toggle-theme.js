@@ -15,12 +15,12 @@ function setTheme(theme) {
 
   if (theme == "dark") {
     document.documentElement.className = "dark";
-    document.getElementById("theme-toggle").classList.remove("mdi-weather-night");
-    document.getElementById("theme-toggle").classList.add("mdi-white-balance-sunny");
+    document.getElementById("theme-toggle-icon").classList.remove("mdi-weather-night");
+    document.getElementById("theme-toggle-icon").classList.add("mdi-white-balance-sunny");
   } else {
     document.documentElement.className = "";
-    document.getElementById("theme-toggle").classList.remove("mdi-white-balance-sunny");
-    document.getElementById("theme-toggle").classList.add("mdi-weather-night");
+    document.getElementById("theme-toggle-icon").classList.remove("mdi-white-balance-sunny");
+    document.getElementById("theme-toggle-icon").classList.add("mdi-weather-night");
   }
 }
 
@@ -34,5 +34,5 @@ function toggleTheme() {
   }
 }
 
-document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+document.getElementById("theme-toggle-icon").onclick = toggleTheme;
 setTheme(getTheme());

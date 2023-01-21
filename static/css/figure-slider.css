@@ -48,8 +48,6 @@
 
 .figure-slider-scroll-bar {
   background: var(--code-border);
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: grabbing;
   flex: 1;
@@ -70,28 +68,4 @@
 
 .figure-slider-scroll-bar:focus {
   outline: 0;
-}
-
-.figure-slider-scroll-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: var(--code-bg);
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.figure-slider-scroll-bar::-moz-range-thumb {
-  -moz-appearance: none;
-  appearance: none;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: var(--code-bg);
-  cursor: pointer;
-  vertical-align: middle;
 }

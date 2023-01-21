@@ -6,8 +6,6 @@
   text-rendering: auto;
   vertical-align: middle;
   line-height: 1em;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 .mdi::before {
@@ -128,8 +126,6 @@
   text-rendering: auto;
   vertical-align: middle;
   line-height: 1em;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 .icon::before {

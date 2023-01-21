@@ -1,8 +1,8 @@
-{{ if and (not .IsHome) .Content }}
 {{ $lang := "cn" }}
-{{ if (eq .Section "en") }}
+{{ if (hasPrefix .RelPermalink "/en/") }}
 {{ $lang = "en" }}
 {{ end }}
+{{ if and (not .IsHome) .Content }}
 <li class="menu-separator"><span>&nbsp;</span></li>
 {{ with .Section }}
 <li><a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml" title="RSS feed">{{ index $.Site.Params.lang.subscribe $lang }}</a></li>

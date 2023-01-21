@@ -1,8 +1,6 @@
 /* reset */
 html {
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   box-sizing: border-box;
 }
 
@@ -431,7 +429,7 @@ pre[class*="language-"] > code[data-language]:before {
     border-bottom: 3px solid var(--body-fg);
   }
 
-  .masthead .menu a {
+  .masthead .menu a, .masthead .menu span {
     color: var(--body-bg);
     background: var(--block-border);
   }
@@ -551,14 +549,7 @@ code[class*="language-"], pre[class*="language-"] {
   text-align: left;
   text-shadow: none;
   word-spacing: normal;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
   tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
   white-space: pre;
   white-space: pre-wrap;
@@ -748,9 +739,6 @@ td code {
 
 /* utility styles */
 .unselectable {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -771,7 +759,7 @@ td code {
   list-style-type: none;
 }
 
-.theme-toggle a {
+.theme-toggle span {
   cursor: pointer;
 }
 
@@ -1024,11 +1012,6 @@ kbd {
 
 
   /* Prevent selection */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1073,10 +1056,6 @@ p.list-page span {
 }
 
 /* different size screens */
-@-ms-viewport {
-  width: device-width;
-}
-
 @viewport {
   width: device-width;
 }
@@ -1182,20 +1161,30 @@ p.list-page span {
     border-bottom: none;
   }
 
-  .masthead .menu a {
+  .masthead .menu a, .masthead .menu span {
     display: block;
     padding: 15px 20px;
     border-bottom: none;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
+    line-height: 1.75em;
+  }
+
+  .masthead .menu span {
+    display: block;
+  }
+
+  .masthead .menu span::before {
+    background-size: auto 1.2em;
+    vertical-align: text-top;
   }
 
   .masthead .menu .active a {
     background: none;
   }
 
-  .masthead .menu li li a {
+  .masthead .menu li li a, .masthead .menu li li span {
     padding-left: 30px;
   }
 

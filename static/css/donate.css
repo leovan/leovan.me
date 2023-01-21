@@ -23,7 +23,6 @@
   cursor: pointer;
   border: none;
   outline: none;
-  -webkit-appearance: none;
 }
 
 .donate-modal-wrapper {
@@ -33,15 +32,8 @@
   bottom: 0;
   left: 0;
   z-index: 999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  display: none;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
@@ -63,19 +55,12 @@
   width: 360px;
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   max-height: calc(100vh - 48px);
   margin-right: auto;
   margin-left: auto;
-  -webkit-box-shadow: 0 5px 20px rgba(26,26,26,.1);
   box-shadow: 0 5px 20px rgba(26,26,26,.1);
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -86,27 +71,15 @@
 }
 
 .donate-box-content {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  -ms-flex: 1 1;
   flex: 1 1;
   padding: 24px;
   line-height: 1em;
 }
 
 .donate-box-content-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
@@ -142,33 +115,17 @@
 }
 
 .donate-box-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
 .donate-box-money, .donate-box-footer {
-  -webkit-box-orient: horizontal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-direction: normal;
 }
 
 .donate-box-money-button {
