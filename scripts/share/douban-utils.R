@@ -13,7 +13,7 @@ DOUBAN_MOVIE_API <- "/api/v2/movie/{}";
 DOUBAN_TV_API <- "/api/v2/tv/{}";
 DOUBAN_BOOK_API <- "/api/v2/book/{}";
 
-USER_AGENT <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'
+USER_AGENT <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
 
 #' 根据豆瓣 API 时间戳
 #'
