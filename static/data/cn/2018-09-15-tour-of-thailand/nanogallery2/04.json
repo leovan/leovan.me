@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cn/2018-09-15-tour-of-thailand/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 350,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "fruit.jpg", "srct": "fruit.jpg", "title": "好多好多水果" },
+    { "src": "seafood.jpg", "srct": "seafood.jpg", "title": "好多好多海鲜" }
+  ]
+}

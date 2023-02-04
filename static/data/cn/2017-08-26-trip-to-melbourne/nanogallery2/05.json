@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cn/2017-08-26-trip-to-melbourne/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 360,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "road-show-singer-1.jpg", "srct": "road-show-singer-1.jpg", "title": "路演女孩" },
+    { "src": "road-show-singer-2.jpg", "srct": "road-show-singer-2.jpg", "title": "路演大哥" }
+  ]
+}

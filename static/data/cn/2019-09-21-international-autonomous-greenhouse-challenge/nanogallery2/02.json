@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 290,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "greenhouse-1.jpg", "srct": "greenhouse-1.jpg", "title": "温室" },
+    { "src": "greenhouse-2.jpg", "srct": "greenhouse-2.jpg", "title": "温室" },
+    { "src": "greenhouse-3.jpg", "srct": "greenhouse-3.jpg", "title": "温室" }
+  ]
+}

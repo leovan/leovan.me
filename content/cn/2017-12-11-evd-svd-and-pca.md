@@ -25,13 +25,11 @@ images:
   - /images/cn/2017-12-11-evd-svd-and-pca/lena-reconstruction.png
 ---
 
-`$\renewcommand{\diag}{\operatorname{diag}}\renewcommand{\cov}{\operatorname{cov}}$`
-
 ## 准备知识
 
 ### 向量与基
 
-首先，定义 `$\boldsymbol{\alpha}$` 为列向量，则维度相同的两个向量 `$\boldsymbol{\alpha}, \boldsymbol{\beta}$` 的内积可以表示为：
+`$\renewcommand{\diag}{\operatorname{diag}}\renewcommand{\cov}{\operatorname{cov}}$`首先，定义 `$\boldsymbol{\alpha}$` 为列向量，则维度相同的两个向量 `$\boldsymbol{\alpha}, \boldsymbol{\beta}$` 的内积可以表示为：
 
 `$$\boldsymbol{\alpha} \cdot \boldsymbol{\beta} = \boldsymbol{\alpha}^T \boldsymbol{\beta} = \sum_{i=1}^{n}{\alpha_i b_i}$$`
 

@@ -387,12 +387,12 @@ pre[class*="language-"] > code[data-language]:before {
   box-shadow: 0 2px 5px 0 var(--box-shadow) !important;
 }
 
-.photography-tags a {
+.nanogallery2-tags a {
   color: var(--body-bg);
   background: var(--block-border);
 }
 
-.photography-tags .active a {
+.nanogallery2-tags .active a {
   border: 1px solid var(--block-border);
   color: var(--body-fg);
 }
@@ -937,26 +937,26 @@ footer .adsbygoogle {
   text-shadow: none !important;
 }
 
-.photography-tags {
+.nanogallery2-tags {
   direction: ltr;
   max-width: inherit;
   margin-bottom: 30px;
 }
 
-.photography-tags ul {
+.nanogallery2-tags ul {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.photography-tags li {
+.nanogallery2-tags li {
   border-bottom: 1px solid;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.photography-tags a {
+.nanogallery2-tags a {
   display: block;
   padding: 15px 20px;
   border-bottom: none;
@@ -966,23 +966,23 @@ footer .adsbygoogle {
   cursor: pointer;
 }
 
-.photography-tags .active a {
+.nanogallery2-tags .active a {
   background: none;
 }
 
-.photography-tags li li a {
+.nanogallery2-tags li li a {
   padding-left: 30px;
 }
 
-.photography-tags li li::before {
+.nanogallery2-tags li li::before {
   content: none;
 }
 
-.photography-tags li li a::before {
+.nanogallery2-tags li li a::before {
   content: "•\00a0\00a0\00a0";
 }
 
-.photography-tags li, .photography-tags li:first-child {
+.nanogallery2-tags li, .nanogallery2-tags li:first-child {
   border: none;
   display: inline-block;
   margin-top: 5px;

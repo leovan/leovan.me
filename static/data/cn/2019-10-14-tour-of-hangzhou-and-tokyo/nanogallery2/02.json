@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 330,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "sensoji-temple-1.jpg", "srct": "sensoji-temple-1.jpg", "title": "浅草寺" },
+    { "src": "sensoji-temple-2.jpg", "srct": "sensoji-temple-2.jpg", "title": "浅草寺" }
+  ]
+}

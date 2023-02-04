@@ -1,8 +1,8 @@
-{{ if not ($.Page.Scratch.Get "meting-js-aplayer-loaded") }}
-  {{ $.Page.Scratch.Set "meting-js-aplayer-loaded" 1 }}
-  <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.css">
-  <script src="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.js"></script>
-  <script src="{{ $.Site.Params.MetingJSCDN }}/meting@{{ $.Site.Params.MetingJSVersion }}/dist/Meting.min.js"></script>
+{{ if not ($.Page.Scratch.Get "aplayer") }}
+  {{ $.Page.Scratch.Set "aplayer" 1 }}
+{{ end }}
+{{ if not ($.Page.Scratch.Get "metingjs") }}
+  {{ $.Page.Scratch.Set "metingjs" 1 }}
 {{ end }}
 
 <meting-js

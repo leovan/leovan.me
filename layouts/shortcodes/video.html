@@ -1,17 +1,16 @@
-{{ if not ($.Page.Scratch.Get "videojs-loaded") }}
-  {{ $.Page.Scratch.Set "videojs-loaded" 1 }}
-<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video-js.min.css">
-<script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
+{{ if not ($.Page.Scratch.Get "videojs") }}
+  {{ $.Page.Scratch.Set "videojs" 1 }}
 {{ end }}
 
-<video class="video-js vjs-big-play-centered vjs-fluid"
-       data-setup='{
-         "controls": {{ .Get "controls" | default true }},
-         {{ with .Get "poster" }}"poster": "{{ . }}", {{ end }}
-         "autoplay": {{ .Get "autoplay" | default false }},
-         "preload": "auto",
-         "loop": {{ .Get "loop" | default false }}
-       }'>
+<video
+  class="video-js vjs-big-play-centered vjs-fluid"
+  data-setup='{
+    "controls": {{ .Get "controls" | default true }},
+    {{ with .Get "poster" }}"poster": "{{ . }}", {{ end }}
+    "autoplay": {{ .Get "autoplay" | default false }},
+    "preload": "auto",
+    "loop": {{ .Get "loop" | default false }}
+  }'>
   <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
   {{ with .Get "webm" }} <source src="{{ . }}" type="video/webm"></source> {{ end }}
   {{ with .Get "ogv" }} <source src="{{ . }}" type="video/ogv"></source> {{ end }}

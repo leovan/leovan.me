@@ -1,60 +1,14 @@
-{{ if not ($.Page.Scratch.Get "nanogallery2-loaded") }}
-  {{ $.Page.Scratch.Set "nanogallery2-loaded" 1 }}
-<link rel="stylesheet" href='{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/css/nanogallery2.min.css'/>
-<script src="{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/jquery.nanogallery2.min.js"></script>
+{{ if not ($.Page.Scratch.Get "nanogallery2-gallery") }}
+  {{ $.Page.Scratch.Set "nanogallery2-gallery" 1 }}
 {{ end }}
 
-{{ if .Get "tags" }}
-{{ $tags := split (.Get "tags") "," }}
-{{ $tagNames := $tags }}
-{{ if .Get "tag-names"}}
-{{ $tagNames := split (.Get "tag-names") "," }}
-{{ end }}
-<div class="photography-tags">
-  <ul>
-    {{ range $idx, $num := (seq (len $tags)) }}
-    <li tag="{{ index $tags $idx }}"><a>{{ index $tagNames $idx }}</a></li>
-    {{ end }}
-  </ul>
-</div>
+{{ if not ($.Page.Scratch.Get "nanogallery2-gallery-index") }}
+  {{ $.Page.Scratch.Set "nanogallery2-gallery-index" 1 }}
+{{ else }}
+  {{ $.Page.Scratch.Set "nanogallery2-gallery-index" (add ($.Page.Scratch.Get "nanogallery2-gallery-index") 1) }}
 {{ end }}
 
-<div class="nanogallery2" id="nanogallery2"></div>
+{{ $nanogallery2_gallery_index := $.Page.Scratch.Get "nanogallery2-gallery-index" }}
+{{ $data := .Get "data" }}
 
-<script>
-$(document).ready(function() {
-  function createGallery(tag) {
-    var dataURL = {{ .Get "data-base-url" }};
-
-    if (tag != undefined && tag != null) {
-      dataURL = dataURL + '-' + tag + '.json';
-    } else {
-      dataURL = dataURL + '.json';
-    }
-
-    $.getJSON(dataURL, function(data) {
-      $("#nanogallery2").nanogallery2("destroy");
-      $("#nanogallery2").nanogallery2(data);
-    });
-  }
-
-  function activateTag(tag) {
-    $(".photography-tags ul li").removeClass("active");
-    $(".photography-tags ul li[tag=" + tag +"]").addClass("active");
-  }
-
-  var tag = $(".photography-tags ul li").first().attr("tag");
-  activateTag(tag);
-  createGallery(tag);
-
-  $(".photography-tags ul li a").click(function() {
-    var tag = $(this).html();
-    var activeTag = $(".photography-tags ul li[class~='active']").first().attr("tag");
-
-    if (tag != activeTag) {
-      activateTag(tag);
-      createGallery(tag);
-    }
-  });
-});
-</script>
+<div class="nanogallery2-gallery" shortcode="nanogallery2-gallery" id="nanogallery2-gallery-{{ $nanogallery2_gallery_index }}" data="{{ $data }}"></div>

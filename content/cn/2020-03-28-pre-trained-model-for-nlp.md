@@ -168,7 +168,7 @@ $$`
 
 下图展示了预训练模型的分类和部分代表模型：
 
-{{< photoswipe-figure link="/images/cn/2020-03-28-pre-trained-model-for-nlp/ptms.png" caption="预训练模型分类及代表性模型" caption-position="bottom" caption-effect="fade" >}}
+![预训练模型分类及代表性模型](/images/cn/2020-03-28-pre-trained-model-for-nlp/ptms.png)
 
 ### 应用于下游任务
 
@@ -627,8 +627,6 @@ NLP 任务的 State-of-Art 模型详见：
 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/)
 - [NLP-progress](https://nlpprogress.com/)
 - [中文任务基准测评](https://www.cluebenchmarks.com/)
-
-{{< load-photoswipe >}}
 
 [^qiu2020pre]: Qiu, X., Sun, T., Xu, Y., Shao, Y., Dai, N., & Huang, X. (2020). Pre-trained Models for Natural Language Processing: A Survey. _ArXiv:2003.08271 [Cs]_. http://arxiv.org/abs/2003.08271
 

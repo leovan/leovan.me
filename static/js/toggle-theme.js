@@ -34,5 +34,7 @@ function toggleTheme() {
   }
 }
 
-document.getElementById("theme-toggle-icon").onclick = toggleTheme;
-setTheme(getTheme());
+(function() {
+  document.getElementById("theme-toggle-icon").onclick = toggleTheme;
+  setTheme(getTheme());
+})();

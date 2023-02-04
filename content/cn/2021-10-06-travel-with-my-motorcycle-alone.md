@@ -54,28 +54,17 @@ images:
 
 早起退房碰见一对儿摩旅的，男生骑了一辆 ADV，小姐姐骑了一辆 Ninja 400。一清早晴空万里，阳光明媚，昨日的不开心一下子全都消散了。虽然秋天已经来了好一阵儿了，不过路两旁的风景还是很漂亮的。
 
-{{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="3" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/grassland-in-autumn.jpg" caption="秋日草原" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-01.jpg" caption="路两旁的树" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-02.jpg" caption="小行星即视感" >}}
-{{< /photoswipe-gallery >}}
+{{< nanogallery2-gallery data="/data/cn/2021-10-06-travel-with-my-motorcycle-alone/nanogallery2/01.json" >}}
 
 骑进乌兰布统，越往后走人越少，路上碰见了好多次牛马拦路。从乌兰布统去到多伦的路上风景很好，选择下道骑行是明智的，一路上草原、小河、树林，遇到太多美景。
 
-{{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="3" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/tree.jpg" caption="树" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/road.jpg" caption="路" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/river.jpg" caption="河" >}}
-{{< /photoswipe-gallery >}}
+{{< nanogallery2-gallery data="/data/cn/2021-10-06-travel-with-my-motorcycle-alone/nanogallery2/02.json" >}}
 
 赶着中午骑到了多伦湖，简单吃过饭后就开始了环湖之旅，一路上走走停停。到了一处小高峰，把摩托骑了上去，太适合给我的小摩托来一张照片了。刚拍上就碰到了俩大哥，帮我和我的小摩托来了本次摩旅的第一张合照，聊了会儿道谢之后就开始往回返。
 
 回到环湖起点时间还早，简单搜了下发现往北一点儿就是「滦河」源，小时候家乡人口中的滦河（唐山话：láng hé）原来是从这里流下去的。往滦河源的路不是很好走，骑到一半发现一条土路，骑过去是一个小平台，望向四周很美。后面跟过来好多越野车，也纷纷下来拍照，发现我骑了摩托过来就一个个站在旁边拍起了照片。我过去车上拿我的相机，说道慢慢拍不着急，小姐姐问我可不可以坐上去，我说没问题。后来我也拜托他们帮我和我的小摩托拍了第二张合照，我也成了几个阿姨的摄影师。
 
-{{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="2" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/motorcycle-and-me.jpg" caption="小摩托和我" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/my-back.jpg" caption="背影" >}}
-{{< /photoswipe-gallery >}}
+{{< nanogallery2-gallery data="/data/cn/2021-10-06-travel-with-my-motorcycle-alone/nanogallery2/03.json" >}}
 
 快乐是什么？一路上美丽的风景，一路上美丽的人，还有多少能带给他人快乐的我和我的小摩托。果然不敢路的一天是轻松的，从滦河源下来之后就早早赶到多伦的酒店休息了。
 
@@ -85,10 +74,7 @@ images:
 
 中午微信群里有哥们说北京下大雨了，我心底还在暗暗窃喜这几天出行的天气都还不错，然而这 Flag 还是立早了......下午在去往张北的路上碰见了一波从北京来的摩旅队伍，什么车都有，有 ADV，有踏板，可见是真友谊，ADV 还能带着小踏板一起愉快的玩耍。前半程的风景很不错，路两旁的树叶开始泛黄飘落，一条直路望不见头。
 
-{{< photoswipe-gallery caption-position="bottom" caption-effect="fade" tiles="2" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/zhangbei-01.jpg" caption="敌方视角" >}}
-{{< photoswipe-figure link="/images/cn/2021-10-06-travel-with-my-motorcycle-alone/zhangbei-02.jpg" caption="我方视角" >}}
-{{< /photoswipe-gallery >}}
+{{< nanogallery2-gallery data="/data/cn/2021-10-06-travel-with-my-motorcycle-alone/nanogallery2/04.json" >}}
 
 天气渐渐阴沉了下来，肉眼可见前方有积雨云，但还是朝着前方骑了下去。突然天空飘起了小雨，但很快又没了，停在一个加油站打开雷达云图，发现云应该已经从要走的路上飘过去了，简单休息了一下又继续往前走。
 
@@ -119,5 +105,3 @@ images:
 真的要感谢我靠谱的小摩托，一直不离不弃，也要感谢这一路上遇到的陌生人的祝福和帮助。服务区遇到的摩托情侣，问我衣服是不是穿得太少，我没好意思说烫坏了，就只说带少了。餐厅拼桌吃饭的一家，男主人在深圳上班，自己不玩摩托，但工作的地方挨着交管局，见到太多扣查的摩托（深圳全市禁摩），分别时一个握手，一句平安。高速路上，三车道，我在最右侧，中间车道的一辆大车超我时特意变到左侧，掀起的水花完全没溅到我，这一定是个可爱的司机大叔吧。
 
 旅行的意义在哪里？形形色色的人，真实且普通，慢下来，你能看到自己的更多面，也能看到陌生人的一面，或好或坏，无所谓，世界不就是这样吗。
-
-{{< load-photoswipe >}}

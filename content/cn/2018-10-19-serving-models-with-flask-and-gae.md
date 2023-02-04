@@ -341,10 +341,7 @@ RESTful API 是一种符合 REST(Representational State Transfer，表现层状�
 
 ### AJAX 调用
 
-对于动态网页，我们可以很容易的在后端服务中发起 POST 请求调用模型服务，然后将结果在前端进行渲染。对于静态网页，我们可以利用 AJAX 进行相关操作。首先我们需要一个交互界面，如下为利用 [Google Material Design](https://material.io/design/) 风格的 [Material Design Components Web](https://github.com/material-components/material-components-web) 组件设计一个交互界面，实现细节请参见 [示例代码](https://github.com/leovan/model-serving-demo/tree/master/client/xxx-model-ajax-client.html)。
-
-{{< load-mdc >}}
-{{< readfile file="/scripts/cn/2018-10-19-serving-models-with-flask-and-gae/xxx-model-ajax-client.html" >}}
+对于动态网页，我们可以很容易的在后端服务中发起 POST 请求调用模型服务，然后将结果在前端进行渲染。对于静态网页，我们可以利用 AJAX 进行相关操作，实现细节请参见 [示例代码](https://github.com/leovan/model-serving-demo/tree/master/client/xxx-model-ajax-client.html)。
 
 AJAX 服务请求代码的核心部分如下：
 

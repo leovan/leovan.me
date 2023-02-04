@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2018-09-15-tour-of-thailand/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 210,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "fillWidth",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "grand-palace.jpg", "srct": "grand-palace.jpg", "title": "大皇宫" },
+    { "src": "wat-arun.jpg", "srct": "wat-arun.jpg", "title": "夜晚的黎明寺" },
+    { "src": "tanker-in-night.jpg", "srct": "tanker-in-night.jpg", "title": "油轮之上" }
+  ]
+}

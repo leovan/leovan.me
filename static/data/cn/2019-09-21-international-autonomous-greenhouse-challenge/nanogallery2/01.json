@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 200,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "cucumber.jpg", "srct": "cucumber.jpg", "title": "黄瓜" },
+    { "src": "greenhouse.png", "srct": "greenhouse.png", "title": "温室" },
+    { "src": "tomato.jpg", "srct": "tomato.jpg", "title": "西红柿" }
+  ]
+}

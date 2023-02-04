@@ -3,22 +3,6 @@
   <span class="nav-prev">{{ with .PrevInSection }}&larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span>
   <span class="nav-next">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;{{ end }}</span>
 </nav>
-<script type="text/javascript">
-document.addEventListener('keyup', function(e) {
-  if (e.target.nodeName.toUpperCase() != 'BODY') return;
-  var url = false;
-  if (e.which == 37) {  // Left arrow
-    {{ if .PrevInSection }}
-    url = '{{ .PrevInSection.RelPermalink }}';
-    {{ end }}
-  } else if (e.which == 39) {  // Right arrow
-    {{ if .NextInSection }}
-    url = '{{ .NextInSection.RelPermalink }}';
-    {{ end }}
-  }
-  if (url) window.location = url;
-});
-</script>
 {{ end }}
 
 {{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
@@ -36,23 +20,39 @@ document.addEventListener('keyup', function(e) {
 {{ end }}
 {{ end }}
 
+<script src='{{ $.Site.Params.jsCookieCDN }}/js-cookie/{{ $.Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
+<script src="/js/toggle-theme.js"></script>
+
+{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
 <script src="/js/no-highlight.js"></script>
+<script src="/js/math-code.js"></script>
+{{ end }}
 
 {{ partial "disqus.html" . }}
 {{ partial "footer_prismjs.html" . }}
+{{ partial "footer_pseudocode.html" . }}
+{{ partial "footer_nanogallery2_gallery.html" . }}
 
+{{ if $.Page.Scratch.Get "douban-card" }}
+<script src="/js/douban-card.js"></script>
+{{ end }}
+
+{{ if $.Page.Scratch.Get "figure-slider" }}
+<script src="/js/figure-slider.js"></script>
+{{ end }}
+
+{{ if $.Page.Scratch.Get "videojs" }}
+<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video-js.min.css">
+<script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
+{{ end }}
+
+{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
 <script async src="/js/fix-toc.js"></script>
 <script async src="/js/center-img.js"></script>
 <script async src="/js/right-quote.js"></script>
 <script async src="/js/fix-footnote.js"></script>
 <script async src="/js/external-link.js"></script>
 <script async src="/js/alt-title.js"></script>
-<script src="/js/math-code.js"></script>
-
-{{ partial "footer_pseudocode.html" . }}
-
-{{ if $.Page.Scratch.Get "douban-card" }}
-<script src="/js/douban-card.js"></script>
 {{ end }}
 
 {{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
@@ -65,7 +65,3 @@ addBackToTop({
   diameter: 48
 });
 </script>
-
-{{ if $.Page.Scratch.Get "figure-slider" }}
-<script src="/js/figure-slider.js"></script>
-{{ end }}

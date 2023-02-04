@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 190,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "grassland-in-autumn.jpg", "srct": "grassland-in-autumn.jpg", "title": "秋日草原" },
+    { "src": "saihanba-01.jpg", "srct": "saihanba-01.jpg", "title": "路两旁的树" },
+    { "src": "saihanba-02.jpg", "srct": "saihanba-02.jpg", "title": "小行星即视感" }
+  ]
+}

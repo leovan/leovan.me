@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 225,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "hacking.jpg", "srct": "hacking.jpg", "title": "Hacking" },
+    { "src": "me.jpg", "srct": "me.jpg", "title": "我" },
+    { "src": "lunch.jpg", "srct": "lunch.jpg", "title": "午餐" }
+  ]
+}

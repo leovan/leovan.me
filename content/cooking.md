@@ -14,4 +14,4 @@ disable_prismjs: true
 
 ## 「唯有爱与美食，不可辜负。」
 
-{{< nanogallery2-gallery data-base-url="/data/cooking" tags="2022,2020,2019,2017,2015" >}}
+{{< nanogallery2-tags-gallery data-base-url="/data/cooking" tags="2022,2020,2019,2017,2015" >}}

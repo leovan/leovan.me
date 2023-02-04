@@ -1,113 +1,114 @@
-$(document).ready(function() {
-  var figureSliderIntervalIDS = [];
 
-  function figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat) {
-    var imageMinIndex = parseInt(scrollBar.attr("min"));
-    var imageMaxIndex = parseInt(scrollBar.attr("max"));
-    var imageCurrentIndex = parseInt(scrollBar.val());
+let figureSliderIntervalIDS = [];
 
-    if (imageCurrentIndex == imageMaxIndex) {
-      imageCurrentIndex = imageMinIndex;
-    } else {
-      imageCurrentIndex += 1;
-    }
+function figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat) {
+  let imageMinIndex = parseInt(scrollBar.getAttribute('min'));
+  let imageMaxIndex = parseInt(scrollBar.getAttribute('max'));
+  let imageCurrentIndex = parseInt(scrollBar.value);
 
-    scrollBar.val(imageCurrentIndex);
-    figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageCurrentIndex, imageFormat);
+  if (imageCurrentIndex == imageMaxIndex) {
+    imageCurrentIndex = imageMinIndex;
+  } else {
+    imageCurrentIndex += 1;
   }
 
-  function figureSliderPrevious(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat) {
-    var imageMinIndex = parseInt(scrollBar.attr("min"));
-    var imageMaxIndex = parseInt(scrollBar.attr("max"));
-    var imageCurrentIndex = parseInt(scrollBar.val());
+  scrollBar.value = imageCurrentIndex;
+  figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageCurrentIndex, imageFormat);
+}
 
-    if (imageCurrentIndex == imageMinIndex) {
-      imageCurrentIndex = imageMaxIndex;
-    } else {
-      imageCurrentIndex -= 1;
-    }
+function figureSliderPrevious(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat) {
+  let imageMinIndex = parseInt(scrollBar.getAttribute('min'));
+  let imageMaxIndex = parseInt(scrollBar.getAttribute('max'));
+  let imageCurrentIndex = parseInt(scrollBar.value);
 
-    scrollBar.val(imageCurrentIndex);
-    figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageCurrentIndex, imageFormat);
+  if (imageCurrentIndex == imageMinIndex) {
+    imageCurrentIndex = imageMaxIndex;
+  } else {
+    imageCurrentIndex -= 1;
   }
 
-  function figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat) {
-    return baseURL + imageFilenamePrefix + imageIndex + "." + imageFormat;
+  scrollBar.value = imageCurrentIndex;
+  figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageCurrentIndex, imageFormat);
+}
+
+function figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat) {
+  return baseURL + imageFilenamePrefix + imageIndex + '.' + imageFormat;
+}
+
+function figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageIndex, imageFormat) {
+  let imageURL = figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat);
+  image.setAttribute('src', imageURL);
+}
+
+function figureSliderPlay(buttonPlayPause) {
+  buttonPlayPause.classList.remove('figure-slider-button-play');
+  buttonPlayPause.classList.add('figure-slider-button-pause');
+  let buttonPlayPauseIcon = buttonPlayPause.querySelector('span');
+  buttonPlayPauseIcon.classList.remove('mdi-play');
+  buttonPlayPauseIcon.classList.add('mdi-pause');
+}
+
+function figureSliderPause(buttonPlayPause) {
+  buttonPlayPause.classList.remove('figure-slider-button-pause');
+  buttonPlayPause.classList.add('figure-slider-button-play');
+  let buttonPlayPauseIcon = buttonPlayPause.querySelector('span');
+  buttonPlayPauseIcon.classList.remove('mdi-pause');
+  buttonPlayPauseIcon.classList.add('mdi-play');
+}
+
+function figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat) {
+  function playNext() {
+    figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat);
   }
 
-  function figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageIndex, imageFormat) {
-    var imageURL = figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat);
-    image.attr("src", imageURL);
+  if (buttonPlayPause.classList.contains('figure-slider-button-play')) {
+    figureSliderPlay(buttonPlayPause);
+    figureSliderIntervalIDS[figureSliderIndex] = setInterval(playNext, milliseconds);
+  } else {
+    figureSliderPause(buttonPlayPause);
+    clearInterval(figureSliderIntervalIDS[figureSliderIndex]);
   }
+}
 
-  function figureSliderPlay(buttonPlayPause) {
-    buttonPlayPause.removeClass("figure-slider-button-play");
-    buttonPlayPause.addClass("figure-slider-button-pause");
-    var buttonPlayPauseIcon = buttonPlayPause.find("span").first();
-    buttonPlayPauseIcon.removeClass("mdi-play");
-    buttonPlayPauseIcon.addClass("mdi-pause");
+function figureSliderPreloadImages(baseURL, imageFilenamePrefix, imageFormat, scrollBar) {
+  let imageMinIndex = parseInt(scrollBar.getAttribute('min'));
+  let imageMaxIndex = parseInt(scrollBar.getAttribute('max'));
+
+  for (let imageIndex = imageMinIndex; imageIndex <= imageMaxIndex; imageIndex++) {
+    let imageSrc = figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat);
+    (new Image()).src = imageSrc;
   }
+}
 
-  function figureSliderPause(buttonPlayPause) {
-    buttonPlayPause.removeClass("figure-slider-button-pause");
-    buttonPlayPause.addClass("figure-slider-button-play");
-    var buttonPlayPauseIcon = buttonPlayPause.find("span").first();
-    buttonPlayPauseIcon.removeClass("mdi-pause");
-    buttonPlayPauseIcon.addClass("mdi-play");
-  }
-
-  function figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat) {
-    function playNext() {
-      figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat);
-    }
-
-    if (buttonPlayPause.hasClass("figure-slider-button-play")) {
-      figureSliderPlay(buttonPlayPause);
-      figureSliderIntervalIDS[figureSliderIndex] = setInterval(playNext, milliseconds);
-    } else {
-      figureSliderPause(buttonPlayPause);
-      clearInterval(figureSliderIntervalIDS[figureSliderIndex]);
-    }
-  }
-
-  function figureSliderPreloadImages(baseURL, imageFilenamePrefix, imageFormat, scrollBar) {
-    var imageMinIndex = parseInt(scrollBar.attr("min"));
-    var imageMaxIndex = parseInt(scrollBar.attr("max"));
-
-    for (var imageIndex = imageMinIndex; imageIndex <= imageMaxIndex; imageIndex++) {
-      var imageSrc = figureURL(baseURL, imageFilenamePrefix, imageIndex, imageFormat);
-      (new Image()).src = imageSrc;
-    }
-  }
-
-  $(".figure-slider").each(function() {
-    var baseURL = $(this).find(".base-url").first().html();
-    var imageFilenamePrefix = $(this).find(".image-filename-prefix").first().html();
-    var imageFormat = $(this).find(".image-format").first().html();
-    var milliseconds = $(this).find(".milliseconds").first().html();
-    var image = $(this).find(".figure-slider-image").first();
-    var scrollBar = $(this).find(".figure-slider-scroll-bar").first();
-    var buttonPrevious = $(this).find(".figure-slider-button-previous").first();
-    var buttonNext = $(this).find(".figure-slider-button-next").first();
-    var buttonPlayPause = $(this).find(".figure-slider-button-play-pause").first();
-    var figureSliderIndex = figureSliderIntervalIDS.length;
+(function(d) {
+  d.querySelectorAll('.figure-slider').forEach(slider => {
+    let baseURL = slider.querySelector('.base-url').innerHTML;
+    let imageFilenamePrefix = slider.querySelector('.image-filename-prefix').innerHTML;
+    let imageFormat = slider.querySelector('.image-format').innerHTML;
+    let milliseconds = slider.querySelector('.milliseconds').innerHTML;
+    let image = slider.querySelector('.figure-slider-image');
+    let scrollBar = slider.querySelector('.figure-slider-scroll-bar');
+    let buttonPrevious = slider.querySelector('.figure-slider-button-previous');
+    let buttonNext = slider.querySelector('.figure-slider-button-next');
+    let buttonPlayPause = slider.querySelector('.figure-slider-button-play-pause');
+    let figureSliderIndex = figureSliderIntervalIDS.length;
 
     figureSliderIntervalIDS.push(false);
 
     figureSliderPreloadImages(baseURL, imageFilenamePrefix, imageFormat, scrollBar);
 
-    buttonPlayPause.click(function () {
-      figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat);
+    buttonPlayPause.addEventListener('click', function() {
+      figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat)
     });
-    buttonPrevious.click(function () {
-      figureSliderPrevious(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat);
+    buttonPrevious.addEventListener('click', function() {
+      figureSliderPrevious(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat)
     });
-    buttonNext.click(function () {
-      figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat);
+    buttonNext.addEventListener('click', function() {
+      figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat)
     });
-    scrollBar.on("input", function () {
-      var imageCurrentIndex = scrollBar.val();
+    scrollBar.addEventListener('input', function() {
+      let imageCurrentIndex = scrollBar.value;
       figureSliderShowImage(image, baseURL, imageFilenamePrefix, imageCurrentIndex, imageFormat);
     });
   });
-});
+})(document);

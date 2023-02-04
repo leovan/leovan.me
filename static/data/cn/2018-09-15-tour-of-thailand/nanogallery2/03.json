@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cn/2018-09-15-tour-of-thailand/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 350,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "pattaya-floating-market.jpg", "srct": "pattaya-floating-market.jpg", "title": "水上市场" },
+    { "src": "beach-sunset.jpg", "srct": "beach-sunset.jpg", "title": "海边日落" }
+  ]
+}

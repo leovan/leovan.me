@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2017-08-26-trip-to-melbourne/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 290,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "ijcai-opening.jpg", "srct": "ijcai-opening.jpg", "title": "Welcome to IJCAI" },
+    { "src": "ijcai-jd-me.jpg", "srct": "ijcai-jd-me.jpg", "title": "我司的展台" },
+    { "src": "ijcai-closing.jpg", "srct": "ijcai-closing.jpg", "title": "Bye, IJCAI" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "itemsBaseURL": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": 1000,
+  "thumbnailHeight": "auto",
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "fillWidth",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "agc-2019-teams.png", "srct": "agc-2019-teams.png", "title": "Autonomous Greenhouse Challenge 2019" }
+  ]
+}

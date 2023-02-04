@@ -1,107 +1,99 @@
 function doubanBookCard(bookID) {
-  var url = '/data/douban/book/' + bookID + '.json';
+  let url = '/data/douban/book/' + bookID + '.json';
 
-  $.ajax({
-    url: url,
-    type: 'GET',
-    dataType: 'JSON',
-    success: function(data) {
-      var tags = [];
+  fetch(url, {method: 'get'}).then(response => {
+    return response.json();
+  }).then(data => {
+    let tags = [];
 
-      var author = data.author[0];
-      tags.push(author);
+    let author = data.author[0];
+    tags.push(author);
 
-      var press = data.press[0];
-      tags.push(press);
+    let press = data.press[0];
+    tags.push(press);
 
-      var pubdate = data.pubdate[0].substring(0, 4);
-      tags.push(pubdate);
+    let pubdate = data.pubdate[0].substring(0, 4);
+    tags.push(pubdate);
 
-      var title = data.title;
-      var rating = data.rating.value;
-      var stars = Math.round(rating);
-      var image = data.pic.normal;
-      var intro = data.intro.replace(/[\n|\r]/g, '');
+    let title = data.title;
+    let rating = data.rating.value;
+    let stars = Math.round(rating);
+    let image = data.pic.normal;
+    let intro = data.intro.replace(/[\n|\r]/g, '');
 
-      $('#douban-card-book-' + bookID).html(
-        '<div class="douban-card--middle">' +
-          '<div class="douban-card--title">' +
-            '<a href="https://book.douban.com/subject/' + bookID + '/" target="_blank">' + title + '</a>' +
-          '</div>' +
-          '<div class="douban-card--stars-rating">' +
-            '<span class="douban-card--logo-dou">豆</span>' +
-            '<span class="douban-card--logo-rating">豆瓣评分</span>' +
-            '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
-            '<span class="douban-card--rating">' + rating + '</span>' +
-          '</div>' +
-          '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
-          '<div class="douban-card--summary">' + intro + '</div>' +
+    document.querySelector('#douban-card-book-' + bookID).innerHTML = '<div class="douban-card--middle">' +
+        '<div class="douban-card--title">' +
+          '<a href="https://book.douban.com/subject/' + bookID + '/" target="_blank">' + title + '</a>' +
         '</div>' +
-        '<div class="douban-card--right">' +
-          '<img src="' + image + '" referrerPolicy="no-referrer" />' +
-        '</div>'
-      );
-    }
+        '<div class="douban-card--stars-rating">' +
+          '<span class="douban-card--logo-dou">豆</span>' +
+          '<span class="douban-card--logo-rating">豆瓣评分</span>' +
+          '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
+          '<span class="douban-card--rating">' + rating + '</span>' +
+        '</div>' +
+        '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
+        '<div class="douban-card--summary">' + intro + '</div>' +
+      '</div>' +
+      '<div class="douban-card--right">' +
+        '<img src="' + image + '" referrerPolicy="no-referrer" />' +
+      '</div>';
+  }).catch(error => {
+    console.log(error);
   });
 }
 
 function doubanMovieCard(movidID) {
-  var url = '/data/douban/movie/' + movidID + '.json';
+  let url = '/data/douban/movie/' + movidID + '.json';
 
-  $.ajax({
-    url: url,
-    method: 'GET',
-    dataType: 'JSON',
-    success: function(data) {
-      var tags = [];
+  fetch(url, {method: 'get'}).then(response => {
+    return response.json();
+  }).then(data => {
+    let tags = [];
 
-      var country = data.countries[0]
-      tags.push(country);
+    let country = data.countries[0]
+    tags.push(country);
 
-      var pubdate = data.pubdate[0].substring(0, 4);
-      tags.push(pubdate);
+    let pubdate = data.pubdate[0].substring(0, 4);
+    tags.push(pubdate);
 
-      var director = '导演: ' + data.directors[0].name;
-      tags.push(director);
+    let director = '导演: ' + data.directors[0].name;
+    tags.push(director);
 
-      var actors = '主演: ' + data.actors.map(function(actor) { return actor.name }).join(' ');
-      tags.push(actors);
+    let actors = '主演: ' + data.actors.map(function(actor) { return actor.name }).join(' ');
+    tags.push(actors);
 
-      var title = data.title;
-      var rating = data.rating.value;
-      var stars = Math.round(rating);
-      var image = data.pic.normal;
-      var intro = data.intro.replace(/[\n|\r]/g, '');
+    let title = data.title;
+    let rating = data.rating.value;
+    let stars = Math.round(rating);
+    let image = data.pic.normal;
+    let intro = data.intro.replace(/[\n|\r]/g, '');
 
-      $('#douban-card-movie-' + movidID).html(
-        '<div class="douban-card--middle">' +
-          '<div class="douban-card--title">' +
-            '<a href="https://movie.douban.com/subject/' + movidID + '/" target="_blank">' + title + '</a>' +
-          '</div>' +
-          '<div class="douban-card--stars-rating">' +
-            '<span class="douban-card--logo-dou">豆</span>' +
-            '<span class="douban-card--logo-rating">豆瓣评分</span>' +
-            '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
-            '<span class="douban-card--rating">' + rating + '</span>' +
-          '</div>' +
-          '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
-          '<div class="douban-card--summary">' + intro + '</div>' +
+    document.querySelector('#douban-card-movie-' + movidID).innerHTML = '<div class="douban-card--middle">' +
+        '<div class="douban-card--title">' +
+          '<a href="https://movie.douban.com/subject/' + movidID + '/" target="_blank">' + title + '</a>' +
         '</div>' +
-        '<div class="douban-card--right">' +
-          '<img src="' + image + '" referrerPolicy="no-referrer" />' +
-        '</div>'
-      );
-    }
+        '<div class="douban-card--stars-rating">' +
+          '<span class="douban-card--logo-dou">豆</span>' +
+          '<span class="douban-card--logo-rating">豆瓣评分</span>' +
+          '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
+          '<span class="douban-card--rating">' + rating + '</span>' +
+        '</div>' +
+        '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
+        '<div class="douban-card--summary">' + intro + '</div>' +
+      '</div>' +
+      '<div class="douban-card--right">' +
+        '<img src="' + image + '" referrerPolicy="no-referrer" />' +
+      '</div>';
   });
 }
 
-$(document).ready(function() {
-    $('.douban-card').each(function() {
-      var doubanID = $(this).attr('douban-id');
-      if ($(this).hasClass('douban-card-book')) {
+(function(d) {
+    d.querySelectorAll('.douban-card').forEach(card => {
+      let doubanID = card.getAttribute('douban-id');
+      if (card.classList.contains('douban-card-book')) {
         doubanBookCard(doubanID);
-      } else if ($(this).hasClass('douban-card-movie')) {
+      } else if (card.classList.contains('douban-card-movie')) {
         doubanMovieCard(doubanID);
       }
     });
-});
+})(document);

@@ -5,7 +5,7 @@
   {{ if .IsHome }}
     {{ $menu = "home" }}
   {{ else }}
-    {{ $menu = $.Scratch.Get "section" }}
+    {{ $menu = $.Page.Scratch.Get "section" }}
   {{ end }}
   {{ range (default .Site.Menus.main (index .Site.Menus $menu)) }}
     <li{{ if eq .URL $currentPage.RelPermalink }} class="active"{{ else if eq .URL "#menu-separator" }} class="menu-separator"{{ end }}>{{ if ne .URL "#menu-separator" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ else }}<span>&nbsp;</span>{{ end }}</li>

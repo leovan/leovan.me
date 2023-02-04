@@ -1,0 +1,27 @@
+{
+  "itemsBaseURL": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": 500,
+  "thumbnailHeight": "auto",
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "fillWidth",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "zhangbei-01.jpg", "srct": "zhangbei-01.jpg", "title": "敌方视角" },
+    { "src": "zhangbei-02.jpg", "srct": "zhangbei-02.jpg", "title": "我方视角" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/",
+  "galleryDisplayMode": "rows",
+  "galleryMaxRows": 1,
+  "galleryLastRowFull": true,
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 275,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+  },
+  "items": [
+    { "src": "samurai-museum-1.jpg", "srct": "samurai-museum-1.jpg", "title": "武士博物馆" },
+    { "src": "samurai-uniform.jpg", "srct": "samurai-uniform.jpg", "title": "武士服" },
+    { "src": "samurai-museum-2.jpg", "srct": "samurai-museum-2.jpg", "title": "武士博物馆" }
+  ]
+}
