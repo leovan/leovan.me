@@ -25,7 +25,7 @@
     <header class="title">
     {{ partial "post_meta.html" . }}
 
-    {{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+    {{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
     {{ with $.Site.Params.googleAdsense }}
     <ins
     class="adsbygoogle"

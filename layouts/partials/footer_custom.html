@@ -5,7 +5,7 @@
 </nav>
 {{ end }}
 
-{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
 {{ with $.Site.Params.googleAdsense }}
 <ins
   class="adsbygoogle"
@@ -23,7 +23,7 @@
 <script src='{{ $.Site.Params.jsCookieCDN }}/js-cookie/{{ $.Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
 <script src="/js/toggle-theme.js"></script>
 
-{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
+{{ if and (not .IsHome) .Content }}
 <script src="/js/no-highlight.js"></script>
 <script src="/js/math-code.js"></script>
 {{ end }}
@@ -55,7 +55,7 @@
 <script async src="/js/alt-title.js"></script>
 {{ end }}
 
-{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
+{{ if and (not .IsHome) .Content }}
 <script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 {{ end }}
 

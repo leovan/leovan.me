@@ -1,14 +1,14 @@
 {{ partial "google_analytics.html" . }}
 
-{{ if and (not .Params.disable_mathjax) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (not .Params.disable_mathjax) (and (not .IsHome) .Content) }}
 {{ partial "header_mathjax.html" . }}
 {{ end }}
 
-{{ if and (not .Params.disable_prismjs) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (not .Params.disable_prismjs) (and (not .IsHome) .Content) }}
 {{ partial "header_prismjs.html" . }}
 {{ end }}
 
-{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
 {{ partial "google_adsense.html" . }}
 {{ end }}
 
