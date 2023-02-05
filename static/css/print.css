@@ -3,7 +3,7 @@
     background: none !important;
   }
 
-  del, footer, .masthead, .donate, .douban-card, meting-js, .adsbygoogle {
+  del, footer, .masthead, .donate, .douban-card, meting-js, .adsbygoogle, .comments {
     display: none !important;
   }
 

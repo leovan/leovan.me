@@ -1019,6 +1019,7 @@ kbd:hover, kbd:hover * {
   color: black;
   /* box-shadow: 1px 1px 1px #333; */
 }
+
 kbd:active, kbd:active * {
   color: black;
   box-shadow: 1px 1px 0px #ddd inset;
@@ -1039,6 +1040,11 @@ kbd kbd:hover {
 kbd:active kbd {
   box-shadow: 0px 0px 0px black;
   background: none;
+}
+
+/* comments */
+.comments {
+  margin-top: 20px;
 }
 
 /* others */
