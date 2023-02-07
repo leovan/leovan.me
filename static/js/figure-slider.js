@@ -1,4 +1,3 @@
-
 let figureSliderIntervalIDS = [];
 
 function figureSliderNext(image, scrollBar, baseURL, imageFilenamePrefix, imageFormat) {
