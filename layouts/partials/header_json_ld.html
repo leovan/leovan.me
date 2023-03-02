@@ -48,8 +48,8 @@
   {
     "@context": "http://schema.org",
     "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
-    "name": {{ printf "%s - %s" .Title .Site.Title | jsonify | safeJS }},
-    "description": {{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }},
+    "name": {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s - %s" .Title .Site.Title | jsonify | safeJS }}{{ end }},
+    "description": {{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }}{{ end }},
     "author": {
       "@type": "Person",
       "name": "{{ (or .Params.author (index $.Site.Params.lang.author $lang)) }}"

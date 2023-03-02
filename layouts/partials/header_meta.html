@@ -1,11 +1,11 @@
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s - %s" .Title .Site.Title | safeHTML }}{{ end }}</title>
 
   <meta name="referrer" content="no-referrer">
 
-  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s - %s" .Title .Site.Title | safeHTML }}{{ end }}">
   <meta name="description" property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:site_name" content="{{ .Site.Params.description | safeHTML }}">
   <meta property="og:url" content="{{ .Permalink }}">
 
   {{ $lang := "cn" }}
