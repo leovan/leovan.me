@@ -16,12 +16,8 @@ disable_prismjs: true
 
 ## <span class="mdi mdi-bullseye-arrow"></span> 研究兴趣
 
-- 深度学习 (Deep Learning)
-- 强化学习 (Reinforcement Learning)
-- 自然语言处理 (Natural Language Processing)
-- 复杂网络 (Complex Network)
-- 知识图谱 (Knowledge Graph)
-- 因果推断和推理 (Causal Inference & Reasoning)
+- 现从事数据科学在安全风险领域的技术应用和产品设计。
+- 对数据科学在农业和工业领域的应用充满兴趣。
 
 ## <span class="mdi mdi-school-outline"></span> 教育背景
 
@@ -87,7 +83,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 - R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- JavaScript & TypeScript & CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### 框架
 
@@ -126,13 +122,14 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
-1. [Python 数据科学导论](https://github.com/leovan/data-science-introduction-with-python)：一份以 Python 为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
-2. [R 语言数据科学导论](https://github.com/leovan/data-science-introduction-with-r)：一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+1. [R 语言数据科学导论](https://ds-r.leovan.tech)：一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Python 数据科学导论](https://ds-python.leovan.tech)：一份以 Python 为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)：Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
-4. [Hive 函数](https://github.com/leovan/hive-functions)：实用自定义 Hive 函数集。 ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
-5. [Cytoscape 用户手册](https://github.com/leovan/cytoscape-manual)：Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
-6. [Rasa 文档](https://github.com/leovan/rasa-doc)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
+4. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 格式输出中渲染伪代码的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+5. [Hive 函数](https://hive-functions.leovan.tech)：实用自定义 Hive 函数集。 ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+6. [Cytoscape 中文用户手册](https://cytoscape.leovan.tech)：Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+7. [Rasa 中文文档](https://rasa.leovan.tech)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2023-01-03</p>
+<p class="kai" style="text-align: right;">更新于：2023-03-02</p>

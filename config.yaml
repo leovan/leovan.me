@@ -1,6 +1,6 @@
 baseURL: "https://leovan.me/"
 languageCode: "en-us"
-title: "Leo Van | 范叶亮"
+title: "范叶亮 | Leo Van"
 googleAnalytics: "G-RJC7CCKE67"
 ignoreFiles: [
   "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
@@ -84,7 +84,7 @@ taxonomies:
   category: categories
 
 params:
-  description: "Leo Van's Personal Website | 范叶亮的个人网站"
+  description: "范叶亮的个人网站 | Leo Van's Personal Website"
   footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](/)"
   licenseURL: "https://github.com/leovan/leovan.me/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
@@ -109,7 +109,7 @@ params:
   jQueryVersion: "3.6.3"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "8.0.4"
+  videojsVersion: "8.1.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   APlayerVersion: "1.10.1"

@@ -18,12 +18,8 @@ disable_prismjs: true
 
 ## <span class="mdi mdi-bullseye-arrow"></span> Research Interest
 
-- Deep Learning
-- Reinforcement Learning
-- Natural Language Processing
-- Complex Network
-- Knowledge Graph
-- Causal Inference & Reasoning
+- I am working on application of data science in security and risk.
+- Also I am saturated with application of data science in agriculture and industry.
 
 ## <span class="mdi mdi-school-outline"></span> Education
 
@@ -89,7 +85,7 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- JavaScript & TypeScript & CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### Frameworks
 
@@ -124,13 +120,14 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 
 Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
-1. [Data Science Introduction With Python](https://github.com/leovan/data-science-introduction-with-python): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
-2. [Data Science Introduction With R](https://github.com/leovan/data-science-introduction-with-r): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
-4. [Hive Functions](https://github.com/leovan/hive-functions): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
-5. [Cytoscape Manual](https://github.com/leovan/cytoscape-manual): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
-6. [Rasa Doc](https://github.com/leovan/cytoscape-manual): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
+4. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` format output. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+5. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+6. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+7. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2023-01-03</p>
+<p style="text-align: right;">Updated on: 2023-03-02</p>
