@@ -1,5 +1,5 @@
 (function() {
-  var i, cls, code, codes = document.getElementsByTagName('pre');
+  let i, cls, code, codes = document.getElementsByTagName('pre');
   for (i = 0; i < codes.length; i++) {
     code = codes[i];
     if (code.children.length !== 1) continue;
