@@ -11,7 +11,6 @@
 /en/feed/ /en/index.xml 301
 /en/rss /en/index.xml 301
 /en/rss/ /en/index.xml 301
-/tech101/feed /tech101/index.xml 301
-/tech101/feed/ /tech101/index.xml 301
-/tech101/rss /tech101/index.xml 301
-/tech101/rss/ /tech101/index.xml 301
+/tech101 /categories/tech101/ 301
+/tech101/ /categories/tech101/ 301
+/tech101/* /cn/:splat 301

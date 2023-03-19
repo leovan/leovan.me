@@ -39,27 +39,24 @@ menu:
     - name: "分类"
       url: "/categories/"
       weight: 3
-    - name: "Tech 101"
-      url: "/tech101/"
-      weight: 4
     - identifier: "cn-menu-separator-1"
       url: "#menu-separator"
-      weight: 5
+      weight: 4
     - name: "摄影"
       url: "/photography/"
-      weight: 6
+      weight: 5
     - name: "烹饪"
       url: "/cooking/"
-      weight: 7
+      weight: 6
     - name: "摩托"
       url: "/motorcycle/"
-      weight: 8
+      weight: 7
     - name: "关于"
       url: "/cn/about/"
-      weight: 9
+      weight: 8
     - name: "简历"
       url: "/cn/resume/"
-      weight: 10
+      weight: 9
   en:
     - name: "Home"
       url: "/"
@@ -106,10 +103,10 @@ params:
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.jsdelivr.net/npm"
 
-  jQueryVersion: "3.6.3"
+  jQueryVersion: "3.6.4"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "8.1.1"
+  videojsVersion: "8.2.1"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   APlayerVersion: "1.10.1"
