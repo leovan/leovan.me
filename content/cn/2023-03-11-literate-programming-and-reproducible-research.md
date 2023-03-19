@@ -5,7 +5,6 @@ date: '2023-03-11'
 slug: literate-programming-and-reproducible-research
 categories:
   - 编程
-  - 数据
 tags:
   - 文学编程
   - Literate Programming
