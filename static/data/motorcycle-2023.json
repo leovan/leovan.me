@@ -1,13 +1,10 @@
 {
-  "itemsBaseURL": "/images/cn/2019-10-28-jdd-hipo-learning-journey/",
-  "galleryDisplayMode": "rows",
-  "galleryMaxRows": 1,
-  "galleryLastRowFull": true,
-  "thumbnailWidth": 500,
-  "thumbnailHeight": "auto",
+  "itemsBaseURL": "/images/motorcycle/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
   "thumbnailBorderVertical": 0,
   "thumbnailBorderHorizontal": 0,
-  "thumbnailAlignment": "fillWidth",
+  "thumbnailAlignment": "justified",
   "thumbnailGutterWidth": 6,
   "thumbnailGutterHeight": 6,
   "thumbnailLabel": {
@@ -21,7 +18,6 @@
     "minimized":  "minimizeButton, label, downloadButton, infoButton"
   },
   "items": [
-    { "src": "kubuqi-01.jpg", "srct": "kubuqi-01.jpg", "title": "库布其沙漠" },
-    { "src": "kubuqi-02.jpg", "srct": "kubuqi-02.jpg", "title": "库布其沙漠" }
+    { "src": "2023-04-01-shanghei-road.jpg", "srct": "2023-04-01-shanghei-road-thumbnail.jpg", "title": "山花，枯树，火车，小路。" }
   ]
 }

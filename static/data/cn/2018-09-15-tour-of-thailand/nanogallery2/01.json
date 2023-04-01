@@ -14,7 +14,7 @@
     "titleMultiLine": true
   },
   "allowHTMLinData": true,
-  "thumbnailHoverEffect2": "imageScaleIn80|labelAppear75",
+  "thumbnailHoverEffect2": "labelAppear75",
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
