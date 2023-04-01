@@ -2,7 +2,7 @@
 title: Resume
 author: Leo Van
 date: '2017-12-04'
-lastmod: '2021-04-17'
+lastmod: '2023-04-01'
 slug: en/resume
 disable_author_date: true
 disable_donate: true
@@ -18,8 +18,8 @@ disable_prismjs: true
 
 ## <span class="mdi mdi-bullseye-arrow"></span> Research Interest
 
-- I am working on application of data science in security and risk.
-- Also I am saturated with application of data science in agriculture and industry.
+- I am working on application of **data science** in **security and risk**.
+- Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
 ## <span class="mdi mdi-school-outline"></span> Education
 
@@ -28,8 +28,8 @@ disable_prismjs: true
 
 ## <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
-1. 2020.08 ~ Present, **Meituan**, Risk Data Mining Expert
-2. 2015.04 ~ 2020.08, **JD**, Senior Algorithm Engineer
+1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
+2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
 ## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 
@@ -85,20 +85,18 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- JavaScript & TypeScript & CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- JavaScript/TypeScript/CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
 ### Frameworks
 
 - PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Tensorflow: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- Spark: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
-### Tools
+### Foreign Languages
 
-- Axure: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- Sketch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- Omnigraffle: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
+- English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
 ## <span class="mdi mdi-seal-variant"></span> Research Achievements
 
@@ -116,9 +114,10 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 4. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235B/en), 2019)
 5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
 
-### Open Source Projects
+### Technical Projects
 
-Github: https://github.com/leovan ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
+- **Technical Website**: [https://leovan.tech](https://leovan.tech)
+- **Github**: [https://github.com/leovan](https://github.com/leovan) ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
 1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
@@ -130,4 +129,4 @@ Github: https://github.com/leovan ![github-followers](https://img.shields.io/git
 
 <h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2023-03-02</p>
+<p style="text-align: right;">Updated on: 2023-04-01</p>
