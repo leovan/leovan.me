@@ -21,8 +21,8 @@ library(lubridate)
 library(knitr)
 options(knitr.kable.NA = '')
 
-source('../scripts/share/douban-utils.R')
-source('../scripts/share/render-utils.R')
+source('../scripts/douban-utils.R')
+source('../scripts/render-utils.R')
 ```
 
 ```{r book_list, echo=F, message=F, warning=F, results = 'asis'}

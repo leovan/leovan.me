@@ -278,7 +278,7 @@ $$`
 \end{algorithm}
 {{< /pseudocode >}}
 
-本文示例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/master/scripts/cn/2020-07-01-model-free-policy-prediction-and-control-monte-carlo-learning/blackjack.py)。
+本文示例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2020-07-01-model-free-policy-prediction-and-control-monte-carlo-learning/blackjack.py)。
 
 [^sutton2018reinforcement]: Sutton, R. S., & Barto, A. G. (2018). _Reinforcement learning: An introduction_. MIT press.
 

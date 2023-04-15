@@ -193,7 +193,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-13-planning-by-dynamic-programming/car-rental-policy-history.png" >}}
 
-上例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/master/scripts/cn/2020-06-13-planning-by-dynamic-programming/car_rental.py)。
+上例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2020-06-13-planning-by-dynamic-programming/car_rental.py)。
 
 ## 价值迭代
 
@@ -241,7 +241,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-13-planning-by-dynamic-programming/gamblers-problem-optimal-policy.png" >}}
 
-上例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/master/scripts/cn/2020-06-13-planning-by-dynamic-programming/gamblers_problem.py)。
+上例代码实现请参见[这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2020-06-13-planning-by-dynamic-programming/gamblers_problem.py)。
 
 ## 异步动态规划
 

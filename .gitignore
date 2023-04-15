@@ -29,8 +29,8 @@ public
 *.pkl
 data/*.jpg
 data/*.png
-scripts/**/*.txt
-scripts/**/*.json
+static/codes/**/*.txt
+static/codes/**/*.json
 
 # Outputs
 outputs

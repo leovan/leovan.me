@@ -326,7 +326,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-06-bayesian-optimization/prior-posterior-convariance.png" >}}
 
-本小结代码请参见[这里](https://github.com/leovan/leovan.me/blob/master/scripts/cn/2020-06-06-bayesian-optimization/gaussian-process-regression.py)。
+本小结代码请参见[这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2020-06-06-bayesian-optimization/gaussian-process-regression.py)。
 
 ## 贝叶斯优化
 

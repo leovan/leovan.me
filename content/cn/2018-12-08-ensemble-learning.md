@@ -738,7 +738,7 @@ Stacking 算法过程如下：
 
 次级学习器的训练集是有初级学习器产生的，如果直接利用初级学习器的训练集生成次级学习器的训练集，过拟合风险会比较大 [^zhouzhihua2016machine]。因此，一般利用在训练初级学习器中未使用过的样本来生成次级学习器的训练样本。以 `$k$` 折交叉检验为例：初始的训练集 `$T$` 被随机划分为 `$k$` 个大小相近的集合 `$T_1, T_2, ..., T_k$`。令 `$T_j$` 和 `$\overline{T}_j = T \setminus T_j$` 表示第 `$j$` 折的测试集和训练集。则对于 `$M$` 个初级学习算法，学习器 `$h_m^{\left(j\right)}$` 是根据训练集 `$\overline{T}_j$` 生成的，对于测试集 `$T_j$` 中的每个样本 `$\mathbf{x}_i$`，得到 `$z_{im} = h_m^{\left(j\right)} \left(\mathbf{x}_i\right)$`。则根据 `$\mathbf{x}_i$` 所产生的次级学习器的训练样本为 `$\mathbf{z}_i = \left(\left(z_{i1}, z_{i2}, ..., z_{iM}\right), y_i\right)$`。最终利用 `$M$` 个初级学习器产生的训练集 `$T' = \{\left(\mathbf{z}_i, y_i\right)\}_{i=1}^N$` 训练次级学习器。
 
-下图展示了一些基础分类器以及 Soft Voting 和 Stacking 两种融合策略的模型在 Iris 数据集分类任务上的决策区域。数据选取 Iris 数据集中的 Sepal Length 和 Petal Length 两个特征，Stacking 中的次级学习器选择 Logistic Regression，详细实现请参见 [这里](https://github.com/leovan/leovan.me/blob/master/scripts/cn/2018-12-08-ensemble-learning/clfs-decision-regions.py)。
+下图展示了一些基础分类器以及 Soft Voting 和 Stacking 两种融合策略的模型在 Iris 数据集分类任务上的决策区域。数据选取 Iris 数据集中的 Sepal Length 和 Petal Length 两个特征，Stacking 中的次级学习器选择 Logistic Regression，详细实现请参见 [这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2018-12-08-ensemble-learning/clfs-decision-regions.py)。
 
 ![Classifiers-Decision-Regions](/images/cn/2018-12-08-ensemble-learning/clfs-decision-regions.png)
 
