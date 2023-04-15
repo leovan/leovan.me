@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow: auto !important;
 }
 
 button, input, select, textarea, label {
@@ -311,6 +312,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.operator {
   color: var(--code-operator);
+  background: none;
 }
 
 .token.placeholder {
@@ -359,6 +361,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.url {
   color: var(--code-url);
+  background: none;
 }
 
 .token.variable {
@@ -810,11 +813,6 @@ td code {
 
 #TableOfContents {
   padding: .5em;
-}
-
-.figcaption {
-  margin: 1em auto 1em;
-  text-align: center;
 }
 
 .pseudocode {

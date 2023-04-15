@@ -1,0 +1,15 @@
+{{ if not ($.Page.Scratch.Get "details-summary") }}
+<link rel="stylesheet" href="/css/details-summary.css" />
+{{ .Page.Scratch.Add "details-summary" 1 }}
+{{ end }}
+<details {{ if (eq (.Get "default") "open")}}open{{end}}>
+  <summary>
+    <span class="summary-title kai">{{ .Get "summary" }}</span>
+    <div class="summary-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </summary>
+  <div class="detail-content">
+    {{ .Inner }}
+  </div>
+</details>

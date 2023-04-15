@@ -1,0 +1,53 @@
+details summary {
+  width: 100%;
+  padding: 0.5em 0;
+  border-top: 1px solid var(--block-border);
+  border-bottom: 1px solid var(--block-border);
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+details[open] summary {
+  border-bottom: 1px dashed var(--block-border);
+}
+
+details[open] {
+  border-bottom: 1px solid var(--block-border);
+}
+
+details .detail-content {
+  opacity: 0;
+}
+
+details[open] .detail-content {
+  transition: opacity 600ms;
+  opacity: 1;
+}
+
+details summary .summary-title {
+  user-select: none;
+}
+
+details summary .summary-icon {
+  pointer-events: none;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 0.6em;
+}
+
+details[open] summary .summary-icon {
+  transform: rotate(180deg);
+  top: 0;
+}
+
+details .detail-content .code-toolbar pre {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+details .detail-content .code-toolbar pre code {
+  border: none !important
+}

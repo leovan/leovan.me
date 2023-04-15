@@ -22,7 +22,7 @@
     Prism.languages.dos = Prism.languages.powershell;
     Prism.languages.gremlin = Prism.languages.groovy;
 
-    let Languages = {
+    let languages = {
       'r': 'R', 'python': 'Python', 'xml': 'XML', 'html': 'HTML',
       'yaml': 'YAML', 'latex': 'LaTeX', 'tex': 'TeX',
       'powershell': 'PowerShell', 'javascript': 'JavaScript',
@@ -34,7 +34,7 @@
 
     Prism.hooks.add('before-highlight', function(env) {
       if (env.language !== 'plain') {
-        let language = Languages[env.language] || env.language;
+        let language = languages[env.language] || env.language;
         env.element.setAttribute('data-language', language);
       }
     });

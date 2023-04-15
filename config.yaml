@@ -94,7 +94,7 @@ params:
 
   prismjsVersion: "1.29.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
-  prismjsPluginJS: ["autoloader", "show-language", "toolbar"]
+  prismjsPluginJS: ["autoloader", "toolbar"]
   prismjsPluginCSS: ["toolbar"]
 
   mathjaxVersion: "3.2.2"
@@ -123,6 +123,9 @@ params:
 
   nanogallery2Version: "3.0.5"
   nanogallery2CDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  imageCompareViewerVersion: "latest"
+  imageCompareViewerCDN: "//cdn.jsdelivr.net/npm"
 
   lang:
     slogan:

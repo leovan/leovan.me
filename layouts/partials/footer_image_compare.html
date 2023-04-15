@@ -1,0 +1,28 @@
+{{ if $.Page.Scratch.Get "image-compare" }}
+<script src="{{ $.Site.Params.imageCompareViewerCDN }}/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.js"></script>
+<script type="text/javascript">
+(function(d) {
+  d.querySelectorAll(".image-compare").forEach(function(elem) {
+    let options = {
+      controlColor: elem.dataset.controlColor || "#FFFFFF",
+      controlShadow: elem.dataset.controlColor || true,
+      addCircle: elem.dataset.addCircle || false,
+      addCircleBlur: elem.dataset.addCircleBlur || true,
+      showLabels: elem.dataset.showLabels || false,
+      labelOptions: {
+        before: elem.dataset.labelBefore || "Before",
+        after: elem.dataset.labelAfter || "After",
+        onHover: elem.dataset.labelOnHover || false
+      },
+      smoothing: elem.dataset.smoothing || true,
+      smoothingAmount: elem.dataset.smoothingAmount || 100,
+      hoverStart: elem.dataset.hoverStart || false,
+      verticalMode: elem.dataset.verticalMode || false,
+      startingPoint: elem.dataset.startingPoint || 50,
+      fluidMode: elem.dataset.fluidMode || false
+    };
+    const viewer = new ImageCompare(elem, options).mount();
+  });
+})(document);
+</script>
+{{ end }}
