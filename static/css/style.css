@@ -512,6 +512,7 @@ iframe, twitterwidget, video {
 code {
   padding: 0.2em 0.3em;
   border-radius: 0.3em;
+  font-size: 0.95em !important;
 }
 
 pre code {
@@ -1236,11 +1237,11 @@ p.list-page span {
     font-size: 16px;
   }
 
-  pre, code {
-    font-size: 12px;
-  }
-
   .masthead {
     padding-top: 0;
+  }
+
+  .flex {
+    display: block !important;
   }
 }

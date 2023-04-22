@@ -1,0 +1,11 @@
+<div class="flex" style="
+  display: flex;
+  flex-direction: {{ .Get "flex-direction" | default "row" }};
+  flex-wrap: {{ .Get "flex-wrap" | default "nowrap" }};
+  justify-content: {{ .Get "justify-content" | default "space-between" }};
+  align-items: {{ .Get "align-items" | default "center" }};
+  align-content: {{ .Get "align-items" | default "center" }};
+  row-gap: {{ .Get "row-gap" | default "10px" }};
+  column-gap: {{ .Get "column-gap" | default "10px" }};">
+  {{ .Inner }}
+</div>
