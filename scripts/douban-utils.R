@@ -4,101 +4,113 @@ library(httr)
 library(rvest)
 library(jsonlite)
 
-DOUBAN_APIKEY <- "0dad551ec0f84ed02907ff5c42e8ec70";
-DOUBAN_USER_AGENT <- "api-client/1 com.douban.frodo/7.0.1(204)";
-DOUBAN_HOST <- "frodo.douban.com";
-DOUBAN_API_HOST <- "https://frodo.douban.com";
+API_KEY <- "0dad551ec0f84ed02907ff5c42e8ec70"
+API_SECRET <- "bf7dddc7c9cfe6f7"
+USER_AGENTS <- c(
+    "api-client/1 com.douban.frodo/7.22.0.beta9(231) Android/23 product/Mate 40 vendor/HUAWEI model/Mate 40 brand/HUAWEI  rom/android  network/wifi  platform/AndroidPad",
+    "api-client/1 com.douban.frodo/7.18.0(230) Android/22 product/MI 9 vendor/Xiaomi model/MI 9 brand/Android  rom/miui6  network/wifi  platform/mobile nd/1",
+    "api-client/1 com.douban.frodo/7.1.0(205) Android/29 product/perseus vendor/Xiaomi model/Mi MIX 3  rom/miui6  network/wifi  platform/mobile nd/1",
+    "api-client/1 com.douban.frodo/7.3.0(207) Android/22 product/MI 9 vendor/Xiaomi model/MI 9 brand/Android  rom/miui6  network/wifi platform/mobile nd/1"
+)
+BASE_URL <- "https://frodo.douban.com/api/v2"
 
-DOUBAN_MOVIE_API <- "/api/v2/movie/{}";
-DOUBAN_TV_API <- "/api/v2/tv/{}";
-DOUBAN_BOOK_API <- "/api/v2/book/{}";
-
-USER_AGENT <- 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
-
-#' 根据豆瓣 API 时间戳
+#' 豆瓣 API 签名
 #'
-#' @return 豆瓣 API 时间戳
-douban_timestamp <- function() {
-    return(as.character(as.integer(as.numeric(Sys.time()))))
+#' @param url API URL
+#' @param ts 时间戳
+#' @return 豆瓣 API 签名
+douban_sign <- function(url, ts, method="GET") {
+    url_path <- paste0("/", httr::parse_url(url)$path)
+    raw_sign <- paste(
+        str_to_upper(method),
+        URLencode(url_path, reserved=T),
+        as.character(ts),
+        sep = "&")
+    return(hmac_sha1(API_SECRET, raw_sign))
 }
 
-#' 根据豆瓣 API 签名
+#' 豆瓣 API 结果
 #'
-#' @param data 豆瓣 ID
-#' @param timestamp 时间戳
-#' @return 豆瓣 API 签名
-douban_signature <- function(data, timestamp) {
-    key <- "bf7dddc7c9cfe6f7"
-    sig_str <- paste0(
-        "GET&", encodeURIComponent(data), "&", as.character(timestamp))
-    b64_sig <- str_replace_all(hmac_sha1(key, sig_str), "[=]+$", "")
-    return(encodeURIComponent(b64_sig))
+#' @param url API URL
+#' @return 豆瓣 API 结果
+douban_api <- function(url, ...) {
+    req_url <- paste0(BASE_URL, url)
+
+    params <- list()
+    params <- c(params, list(...))
+
+    ts <- format(Sys.time(), "%Y%m%d")
+    sig <- douban_sign(req_url, ts)
+
+    params$apiKey = API_KEY
+    params$os_rom <- "android"
+    params$`_ts` <- ts
+    params$`_sig` <- sig
+
+    req_url <- parse_url(req_url)
+    req_url$query <- params
+    req_url <- build_url(req_url)
+
+    res_json <- list()
+
+    tryCatch({
+        res <- GET(req_url, user_agent(sample(USER_AGENTS, 1)))
+        res_json <- fromJSON(content(res, as = "text"))
+    }, error = function(e) {
+        print(glue("{url}: {e}"))
+    })
+
+    return(res_json)
 }
 
 #' 根据豆瓣 ID 利用 API 获取豆瓣电影信息
 #'
 #' @param douban_id 豆瓣 ID
 #' @return 豆瓣电影信息
-get_video_douban_info <- function(douban_id) {
-    timestamp <- douban_timestamp()
-
-    movie_sig <- douban_signature(DOUBAN_MOVIE_API, timestamp)
-    movie_url <- paste0(
-        DOUBAN_API_HOST,
-        str_replace(DOUBAN_MOVIE_API, "\\{\\}", as.character(douban_id)),
-        "?apikey=", DOUBAN_APIKEY,
-        "&channel=Douban",
-        "&_ts=", timestamp,
-        "&_sig=", movie_sig
-    )
-
-    tv_sig <- douban_signature(DOUBAN_TV_API, timestamp)
-    tv_url <- paste0(
-        DOUBAN_API_HOST,
-        str_replace(DOUBAN_TV_API, "\\{\\}", as.character(douban_id)),
-        "?apikey=", DOUBAN_APIKEY,
-        "&channel=Douban",
-        "&_ts=", timestamp,
-        "&_sig=", tv_sig
-    )
-
-    info <- tibble(
-        title = NA, directors = NA, actors = NA, countries = NA,
-        genres = NA, release_date = NA, is_tv = NA, douban_rating = NA)
-
-    if (is.na(douban_id)) {
-        return(info)
+get_video_douban_info <- function(douban_id, is_tv) {
+    if (is_tv) {
+        res_json <- douban_api(paste0("/tv/", douban_id))
+    } else {
+        res_json <- douban_api(paste0("/movie/", douban_id))
     }
-
-    tryCatch({
-        res <- POST(movie_url, user_agent(DOUBAN_USER_AGENT))
-        res_json <- fromJSON(content(res, as = "text"))
-
-        if (!is.null(res_json$code)) {
-            res <- POST(tv_url, user_agent(DOUBAN_USER_AGENT))
-            res_json <- fromJSON(content(res, as = "text"))
-        }
-
-        info$title <- res_json$title
-        info$directors <- paste(res_json$directors$name, collapse = ", ")
-        info$actors <- paste(res_json$actors$name, collapse = ", ")
-        info$countries <- paste(res_json$countries, collapse = ", ")
-        info$genres <- paste(res_json$genres, collapse = ", ")
-        info$release_date <- res_json$pubdate %>%
-            str_replace_all("\\(.+\\)", "") %>%
-            min() %>%
-            as.Date(format = "%Y-%m-%d")
-        info$is_tv <- res_json$is_tv
-        info$douban_rating <- res_json$rating$value
-    }, error = function(e) {
-        print(glue("{douban_id}: {e}"))
-    })
-
-    # 防止被反爬
-    Sys.sleep(runif(1, 1, 2))
-
-    return(info)
+    movie_info <- list()
+    
+    movie_info$title <- res_json$title
+    movie_info$directors <- paste(res_json$directors$name, collapse = ", ")
+    movie_info$actors <- paste(res_json$actors$name, collapse = ", ")
+    movie_info$countries <- paste(res_json$countries, collapse = ", ")
+    movie_info$genres <- paste(res_json$genres, collapse = ", ")
+    movie_info$release_date <- res_json$pubdate |>
+        str_replace_all("\\(.+\\)", "") |>
+        min() |>
+        as.Date(format = "%Y-%m-%d")
+    movie_info$douban_rating <- res_json$rating$value
+    
+    return(movie_info)
 }
+get_video_douban_info <- Vectorize(get_video_douban_info)
+
+#' 根据豆瓣 ID 利用 API 获取豆瓣书籍信息
+#'
+#' @param douban_id 豆瓣 ID
+#' @return 豆瓣书籍信息
+get_book_douban_info <- function(douban_id) {
+    res_json <- douban_api(paste0("/book/", douban_id))
+    book_info <- list()
+    
+    book_info$title <- res_json$title
+    book_info$subtitle <- paste(res_json$subtitle, collapse = ", ")
+    book_info$author <- paste(res_json$author, collapse = ", ")
+    book_info$press <- paste(res_json$press, collapse = ", ")
+    book_info$pages <- as.character(res_json$pages)[1]
+    book_info$published_date <- res_json$pubdate |>
+        str_replace_all("\\(.+\\)", "") |>
+        min()
+    book_info$douban_rating <- res_json$rating$value
+    
+    return(book_info)
+}
+get_book_douban_info <- Vectorize(get_book_douban_info)
 
 #' 根据豆瓣 ID 爬取豆瓣电影信息
 #'
@@ -113,104 +125,56 @@ crawl_video_douban_info <- function(douban_id) {
         url <- glue("https://movie.douban.com/subject/{douban_id}")
 
         tryCatch({
-            session <- session(url, user_agent(USER_AGENT))
+            session <- session(url, user_agent(sample(USER_AGENTS, 1)))
 
-            title <- session %>%
-                html_nodes("title") %>%
-                first %>%
-                html_text() %>%
+            title <- session |>
+                html_nodes("title") |>
+                first() |>
+                html_text() |>
                 str_replace_all(" ", "")
             title <- str_split(title, "(豆瓣)")[1]
             title <- str_replace_all(title, " ", "")
             info$title <- title
 
-            directors <- session %>%
-                html_nodes('a[rel="v:directedBy"]') %>%
+            directors <- session |>
+                html_nodes("a[rel=\"v:directedBy\"]") |>
                 html_text()
             info$directors <- paste(directors, collapse = ", ")
 
-            actors <- session %>%
-                html_nodes('a[rel="v:starring"]') %>%
+            actors <- session |>
+                html_nodes("a[rel=\"v:starring\"]") |>
                 html_text()
             info$actors <- paste(actors, collapse = ", ")
 
-            countries <- session %>%
-                html_nodes("#info") %>%
-                html_text() %>%
-                str_replace_all("\n", "") %>%
-                str_replace(".+制片国家/地区: ", "") %>%
-                str_replace("语言: .+", "") %>%
+            countries <- session |>
+                html_nodes("#info") |>
+                html_text() |>
+                str_replace_all("\n", "") |>
+                str_replace(".+制片国家/地区: ", "") |>
+                str_replace("语言: .+", "") |>
                 str_split(" / ", simplify = T)
             info$countries <- paste(countries, collapse = ", ")
 
-            genres <- session %>%
-                html_nodes('span[property="v:genre"]') %>%
+            genres <- session |>
+                html_nodes("span[property=\"v:genre\"]") |>
                 html_text()
             info$genres <- paste(genres, collapse = ", ")
 
-            release_date <- session %>%
-                html_nodes('span[property="v:initialReleaseDate"]') %>%
-                html_text() %>%
-                str_replace_all("\\(.+\\)", "") %>%
+            release_date <- session |>
+                html_nodes("span[property=\"v:initialReleaseDate\"]") |>
+                html_text() |>
+                str_replace_all("\\(.+\\)", "") |>
                 min()
             info$release_date <- as.Date(release_date, format = "%Y-%m-%d")
 
-            douban_rating <- session %>%
-                html_nodes('strong[property="v:average"]') %>%
+            douban_rating <- session |>
+                html_nodes("strong[property=\"v:average\"]") |>
                 html_text()
             info$douban_rating <- douban_rating
         }, error = function(e) {
             print(glue("{douban_id}: {e}"))
         })
     }
-
-    # 防止被反爬
-    Sys.sleep(runif(1, 1, 2))
-
-    return(info)
-}
-
-#' 根据豆瓣 ID 利用 API 获取豆瓣书籍信息
-#'
-#' @param douban_id 豆瓣 ID
-#' @return 豆瓣书籍信息
-get_book_douban_info <- function(douban_id) {
-    timestamp <- douban_timestamp()
-    sig <- douban_signature(DOUBAN_BOOK_API, timestamp)
-
-    url <- paste0(
-        DOUBAN_API_HOST,
-        str_replace(DOUBAN_BOOK_API, "\\{\\}", as.character(douban_id)),
-        "?apikey=", DOUBAN_APIKEY,
-        "&channel=Douban",
-        "&_ts=", timestamp,
-        "&_sig=", sig
-    )
-
-    info <- tibble(
-        title = NA, subtitle = NA, author = NA, press = NA,
-        published_date = NA, pages = NA, douban_rating = NA)
-
-    if (is.na(douban_id)) {
-        return(info)
-    }
-
-    tryCatch({
-        res <- POST(url, user_agent(DOUBAN_USER_AGENT))
-        res_json <- fromJSON(content(res, as = "text"))
-
-        info$title <- res_json$title
-        info$subtitle <- paste(res_json$subtitle, collapse = ", ")
-        info$author <- paste(res_json$author, collapse = ", ")
-        info$press <- paste(res_json$press, collapse = ", ")
-        info$pages <- as.character(res_json$pages)[1]
-        info$published_date <- res_json$pubdate %>%
-            str_replace_all("\\(.+\\)", "") %>%
-            min()
-        info$douban_rating <- res_json$rating$value
-    }, error = function(e) {
-        print(glue("{douban_id}: {e}"))
-    })
 
     # 防止被反爬
     Sys.sleep(runif(1, 1, 2))
@@ -231,30 +195,30 @@ crawl_book_douban_info <- function(douban_id) {
         url <- glue("https://book.douban.com/subject/{douban_id}")
 
         tryCatch({
-            session <- session(url, user_agent(USER_AGENT))
+            session <- session(url, user_agent(sample(USER_AGENTS, 1)))
 
-            info$title <- session %>%
-                html_node('span[property="v:itemreviewed"]') %>%
+            info$title <- session |>
+                html_node("span[property=\"v:itemreviewed\"]") |>
                 html_text()
 
-            info$douban_rating <- session %>%
-                html_node('strong[property="v:average"]') %>%
+            info$douban_rating <- session |>
+                html_node("strong[property=\"v:average\"]") |>
                 html_text(trim = T)
 
-            info_text <- session %>%
-                html_node("#info") %>%
-                html_text(trim = T) %>%
-                str_replace_all("\n", "") %>%
-                str_replace_all("\\s+", " ") %>%
-                str_replace_all("【", "[") %>%
-                str_replace_all("】", "]") %>%
+            info_text <- session |>
+                html_node("#info") |>
+                html_text(trim = T) |>
+                str_replace_all("\n", "") |>
+                str_replace_all("\\s+", " ") |>
+                str_replace_all("【", "[") |>
+                str_replace_all("】", "]") |>
                 str_replace_all("•", "·")
-            info_text_v <- session %>%
-                html_node("#info") %>%
-                html_children() %>%
-                html_text(trim = T) %>%
-                str_replace_all("\n", "") %>%
-                str_replace_all("\\s", "") %>%
+            info_text_v <- session |>
+                html_node("#info") |>
+                html_children() |>
+                html_text(trim = T) |>
+                str_replace_all("\n", "") |>
+                str_replace_all("\\s", "") |>
                 str_replace_all(":.+", ":")
 
             info_text_keys <- info_text_v[str_detect(info_text_v, ".+:")]

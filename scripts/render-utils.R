@@ -62,7 +62,7 @@ format_month_day <- function(date) {
 #' @param span_value SPAN 值
 #' @return SPAN HTML
 gen_span_html <- function(span_class, span_value) {
-    glue('<span class="{span_class}">{span_value}</span>')
+    glue("<span class=\"{span_class}\">{span_value}</span>")
 }
 
 #' 获取 IMDB ID 的 HTML 代码
@@ -135,7 +135,7 @@ gen_linked_text_html <- function(text, link, target="_black") {
     if (is.na(link)) {
         text
     } else {
-        glue('<a href="{link}" target="{target}">{text}</a>')
+        glue("<a href=\"{link}\" target=\"{target}\">{text}</a>")
     }
 }
 gen_linked_text_html <- Vectorize(gen_linked_text_html)
@@ -146,7 +146,7 @@ gen_linked_text_html <- Vectorize(gen_linked_text_html)
 #' @param anchor 锚点 ID
 #' @return 带有锚点的 HTML
 add_anchor <- function(html, anchor) {
-    glue('<span id="{anchor}">{html}</span>')
+    glue("<span id=\"{anchor}\">{html}</span>")
 }
 
 #' 清理 HTML 表格
@@ -154,5 +154,5 @@ add_anchor <- function(html, anchor) {
 #' @param html HTML
 #' @return 清理后 HTML 表格
 clean_html_table <- function(html) {
-    str_replace_all(html, '\\s+style="text-align:[a-zA-Z]+;"', "")
+    str_replace_all(html, "\\s+style=\"text-align:[a-zA-Z]+;\"", "")
 }

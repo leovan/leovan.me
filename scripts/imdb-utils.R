@@ -11,16 +11,16 @@ get_video_imdb_rating <- function(imdb_id) {
     rating <- NA
 
     if (!is.na(imdb_id)) {
-        url <- glue('https://www.omdbapi.com/?apikey=31ee42cc&i={imdb_id}')
+        url <- glue("https://www.omdbapi.com/?apikey=31ee42cc&i={imdb_id}")
 
         tryCatch({
             res <- GET(url)
-            res_json <- fromJSON(content(res, as = 'text'))
+            res_json <- fromJSON(content(res, as = "text"))
 
-            if (res_json$Response == 'True') {
+            if (res_json$Response == "True") {
                 rating <- res_json$imdbRating
 
-                if (rating == 'N/A') {
+                if (rating == "N/A") {
                     rating <- NA
                 }
             }
