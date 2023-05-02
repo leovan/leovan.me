@@ -27,4 +27,8 @@
   #back-to-top {
     display: none !important;
   }
-}ß
+
+  .anchor {
+    display: none !important;
+  }
+}

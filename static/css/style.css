@@ -1046,6 +1046,24 @@ kbd:active kbd {
   margin-top: 20px;
 }
 
+/* anchor */
+.anchor {
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.anchor a {
+  border-bottom: none;
+}
+
+.anchor a svg {
+  opacity: 0.4;
+}
+
+.anchor a:hover svg {
+  opacity: 1;
+}
+
 /* others */
 .hidden {
   display: none;
