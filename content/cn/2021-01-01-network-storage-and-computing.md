@@ -57,9 +57,9 @@ images:
 
 > 本文为[《复杂网络系列》](/categories/复杂网络/)文章
 
-## 图存储
+# 图存储
 
-### 语义网络与 RDF 存储
+## 语义网络与 RDF 存储
 
 1968 年 Ross Quillian 在其博士论文中最先提出**语义网络**（Semantic Web），把它作为人类联想记忆的一个显式心理学模型，并在他设计的可教式语言理解器 TLC（Teachable Language Comprehenden）中用作知识表示方法。
 
@@ -149,7 +149,7 @@ WHERE {
 | 1    | gods:pluto   |
 | 2    | gods:neptune |
 
-### 图数据库
+## 图数据库
 
 **图数据库**是一个使用图结构进行语义查询的数据库，它使用节点、边和属性来表示和存储数据。不同于关系型数据库，图数据库为 NoSQL（Not Only SQL）的一种，属于联机事务处理（OLTP）的范畴，可以解决现有关系数据库的局限性。
 
@@ -172,23 +172,23 @@ WHERE {
 3. [图分析系统基准测试报告](https://www.tigergraph.com.cn/wp-content/uploads/2018/10/TigerGraph-Benchmark-Report-2018-1.pdf)
 4. [图数据平台产品测试报告](https://fma-ai.cn/pdf/FMA_benchmark.pdf)
 
-### 查询语言
+## 查询语言
 
 **图查询语言**（Graph Query Language，GQL）是一种用于图数据库的查询语言，类比于关系型数据库的查询语言 SQL。2019 年 9 月，GQL 被提议为一种新的数据库查询语言（[ISO/IEC WD 39075](https://www.iso.org/standard/76120.html)），目前仍处于开发当中，因此市面上还没有统一的图查询语言标准。
 
-#### Gremlin
+### Gremlin
 
 [Gremlin](https://tinkerpop.apache.org/gremlin.html) 是 [Apache TinkerPop](https://tinkerpop.apache.org/) 框架下的图遍历语言。Gremlin 适用于基于 OLTP 的图数据库以及基于 OLAP 的图分析引擎，支持命令式和声明式查询。支持 Gremlin 的图数据库有：Neo4j、JanusGraph 等。
 
-#### Cypher
+### Cypher
 
 [Cypher](http://www.opencypher.org/) 是一种声明式图查询语言，这使得在不必编写遍历逻辑的情况下可以实现高效的查询。支持 Cypher 的图数据库有：Neo4j、RedisGraph、Nebula Graph 等。
 
-#### nGQL
+### nGQL
 
 [nGQL](https://docs.nebula-graph.com.cn/manual-CN/1.overview/1.concepts/2.nGQL-overview/) 是一种声明式的图查询语言，支持图遍历、模式匹配、聚合运算和图计算等特性。支持 nGQL 的图数据库有：Nebula Graph。
 
-#### 比较
+### 比较
 
 针对 3 种不同的查询语言，对于图中相关概念的表示也略有不同，如下表所示：
 
@@ -209,15 +209,15 @@ WHERE {
 1. [一文了解各大图数据库查询语言 | 操作入门篇](https://nebula-graph.com.cn/posts/graph-query-language-comparison-cypher-gremlin-ngql/)
 2. [文档解读 ｜ SQL vs. nGQL](https://nebula-graph.com.cn/posts/sql-vs-ngql-comparison/)
 
-## 图计算
+# 图计算
 
-### 图计算框架
+## 图计算框架
 
-#### GraphX
+### GraphX
 
 [GraphX](https://spark.apache.org/graphx/) 是一个基于 [Spark](https://spark.apache.org/) 大规模图计算框架。GraphX 通过引入一个包含带有属性的顶点和变的有向图对 Spark 的 RDD 进行了扩展。通过 subgraph、joinVertices 和 aggregateMessages 等算子实现了 PageRank、连通子图、LPA 等图算法。
 
-#### Plato
+### Plato
 
 [Plato](https://github.com/Tencent/plato) 是由腾讯开源的高性能图计算框架。Plato 主要提供两方面的能力：离线图计算和图表示学习，目前支持的图算法如下：
 
@@ -235,7 +235,7 @@ WHERE {
 
 ![Plato & Spark GraphX Benchmark](/images/cn/2021-01-01-network-storage-and-computing/plaot-spark-graphx-benchmark.png)
 
-#### GraphScope
+### GraphScope
 
 [GraphScope](https://github.com/alibaba/GraphScope) 由有阿里巴巴开源的一个统一的分布式图计算平台。GraphScope 提供了一个一站式环境，可以通过用户友好的 Python 接口在集群内对图进行操作。GraphScope 利用一系列开源技术使得集群上的大规模图数据的多阶段处理变得简单，这些技术包括：用于分析的 [GRAPE](https://github.com/alibaba/libgrape-lite)、用于查询的 [MaxGraph](https://github.com/alibaba/GraphScope/blob/master/interactive_engine) 、用于图神经网络计算的 [Graph-Learn](https://github.com/alibaba/graph-learn) 和用于提供高效内存数据交换的 [vineyard](https://github.com/alibaba/libvineyard)。GraphScope 的整体架构如下图所示：
 
@@ -253,11 +253,11 @@ GraphScope Learning Engine（GLE）是一个用于开发和训练大规模图神
 
 ![GLE](/images/cn/2021-01-01-network-storage-and-computing/gle.png)
 
-#### Galileo
+### Galileo
 
 Galileo 是由京东零售研发的图计算平台，提供离线和在线图计算和图数据服务能力。目前 Galileo 暂未开源，待开源后补充相关信息。
 
-### 图神经网络
+## 图神经网络
 
 关于图神经网络内容，请参见之前的博客 [图嵌入 (Graph Embedding) 和图神经网络 (Graph Neural Network)](/cn/2020/04/graph-embedding-and-gnn/)。
 

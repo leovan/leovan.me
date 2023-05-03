@@ -36,7 +36,7 @@ images:
   - /images/cn/2018-10-12-seq2seq-and-attention-machanism/multi-step-attention.png
 ---
 
-## Encoder-Decoder & Seq2Seq
+# Encoder-Decoder & Seq2Seq
 
 Encoder-Decoder 是一种包含两个神经网络的模型，两个网络分别扮演编码器和解码器的角色。Cho 等人 [^cho2014learning] 提出了一个基于 RNN 的 Encoder-Decoder 神经网络用于机器翻译。网络结构如下图所示：
 
@@ -111,7 +111,7 @@ $$`
 
 这里需要注意的是不同于之前的 Encoder-Decoder 模型，此处每一个输出词 `$y_i$` 的条件概率均依赖于一个单独的上下文向量 `$c_i$`。该部分的改进即结合了注意力机制，有关注意力机制的详细内容将在下个小节中展开说明。
 
-## 注意力机制 (Attention Mechanism)
+# 注意力机制 (Attention Mechanism)
 
 Bahdanau 等人在文中 [^bahdanau2014neural] 提出传统的 Encoder-Decoder 模型将输入序列压缩成一个固定长度的向量 `$c$`，但当输入的序例很长时，尤其是当比训练集中的语料还长时，模型的的效果会显著下降。针对这个问题，如上文所述，上下文向量 `$c_i$` 依赖于 `$\left(h_1, \dotsc, h_T\right)$`。其中，每个 `$h_i$` 都包含了整个序列的信息，同时又会更多地关注第 `$i$` 个词附近的信息。对于 `$c_i$`，计算方式如下：
 
@@ -133,7 +133,7 @@ $$`
 
 其中，`$W_a \in \mathbb{R}^{n \times n}, U_a \in \mathbb{R}^{n \times 2n}，v_a \in \mathbb{R}^n$` 为网络的参数。
 
-### Hard & Soft Attention
+## Hard & Soft Attention
 
 Xu 等人 [^xu2015show] 在图像标题生成 (Image Caption Generation) 任务中引入了注意力机制。在文中作者提出了 Hard Attenttion 和 Soft Attention 两种不同的注意力机制。
 
@@ -162,7 +162,7 @@ $$`
 
 ![Image-Caption-Generation-Visual-Attention](/images/cn/2018-10-12-seq2seq-and-attention-machanism/image-caption-generation-visual-attention.png)
 
-### Global & Local Attention
+## Global & Local Attention
 
 Luong 等人 [^luong2015effective] 提出了 Global Attention 和 Local Attention 两种不同的注意力机制用于机器翻译。Global Attention 的思想是在计算上下文向量 `$c_t$` 时将编码器的所有隐状态均考虑在内。对于对齐向量 `$\boldsymbol{a}_t$`，通过比较当前目标的隐状态 `$\boldsymbol{h}_t$` 与每一个输入的隐状态 `$\bar{\boldsymbol{h}}_s$` 得到，即：
 
@@ -215,19 +215,19 @@ Local Attention 模型的网络结构如下所示：
 
 ![Local-Attention](/images/cn/2018-10-12-seq2seq-and-attention-machanism/local-attention.png)
 
-### Self Attention
+## Self Attention
 
 Vaswani 等人 [^vaswani2017attention] 提出了一种新的网络结构，称之为 Transformer，其中采用了自注意力 (Self-attention) 机制。自注意力是一种将同一个序列的不同位置进行自我关联从而计算一个句子表示的机制。Transformer 利用堆叠的 Self Attention 和全链接网络构建编码器 (下图左) 和解码器 (下图右)，整个网络架构如下图所示：
 
 ![Self-Attention](/images/cn/2018-10-12-seq2seq-and-attention-machanism/self-attention.png)
 
-#### 编码器和解码器
+### 编码器和解码器
 
 **编码器** 是由 `$N = 6$` 个相同的网络层构成，每层中包含两个子层。第一层为一个 Multi-Head Self-Attention 层，第二层为一个 Position-Wise 全链接的前馈神经网络。每一层再应用一个残差连接 (Residual Connection) [^he2016deep] 和一个层标准化 (Layer Normalization) [^ba2016layer]。则每一层的输出为 `$\text{LayerNorm} \left(x + \text{Sublayer} \left(x\right)\right)$`，其中 `$\text{Sublayer} \left(x\right)$` 为子层本身的函数实现。为了实现残差连接，模型中所有的子层包括 Embedding 层的输出维度均为 `$d_{\text{model}} = 512$`。
 
 **解码器** 也是由 `$N = 6$` 个相同的网络层构成，但每层中包含三个子层，增加的第三层用于处理编码器的输出。同编码器一样，每一层应用一个残差连接和一个层标准化。除此之外，解码器对 Self-Attention 层进行了修改，确保对于位置 `$i$` 的预测仅依赖于位置在 `$i$` 之前的输出。
 
-#### Scaled Dot-Product & Multi-Head Attention
+### Scaled Dot-Product & Multi-Head Attention
 
 一个 Attention 函数可以理解为从一个序列 (Query) 和一个键值对集合 (Key-Value Pairs Set) 到一个输出的映射。文中提出了一种名为 **Scaled Dot-Product Attention** (如下图所示)，其中输入包括 queries，维度为 `$d_k$` 的 keys 和维度为 `$d_v$` 的 values。通过计算 queries 和所有 keys 的点积，除以 `$\sqrt{d_k}$`，再应用一个 softmax 函数获取 values 的权重。
 
@@ -264,7 +264,7 @@ $$`
 2. Encoder Self-Attention Layers，其中 queries，keys 和 values 均来自之前的 Encoder 层的输出，同时 Encoder 层中的每个位置都能够从之前层的所有位置获取到信息。
 3. Decoder Self-Attention Layers，其中 queries，keys 和 values 均来自之前的 Decoder 层的输出，但 Decoder 层中的每个位置仅可以从之前网络层的包含当前位置之前的位置获取信息。
 
-#### Position-wise Feed-Forward Networks
+### Position-wise Feed-Forward Networks
 
 在 Encoder 和 Decoder 中的每一层均包含一个全链接的前馈神经网络，其使用两层线性变换和一个 ReLU 激活函数实现：
 
@@ -274,7 +274,7 @@ $$`
 
 全链接层的输入和输出的维度 `$d_{\text{model}} = 512$`，内层的维度 `$d_{ff} = 2048$`。
 
-#### Positional Encoding
+### Positional Encoding
 
 Transformer 模型由于未使用任何循环和卷积组件，因此为了利用序列的位置信息则在模型的 Embedding 输入中添加了 **Position Encoding**。Position Encoding 的维度同 Embedding 的维度相同，从而可以与 Embedding 进行加和，文中使用了如下两种形式：
 
@@ -298,7 +298,7 @@ $$`
 \end{equation}
 $$`
 
-#### Why Self-Attention
+### Why Self-Attention
 
 相比于循环和卷积层，Transformer 模型利用 Self-Attention 层用于一个序列 `$\left(x_1, \dotsc, x_n\right)$` 到另一个等长序例 `$\left(z_1, \dotsc, z_n\right)$` 的映射，其中 `$x_i, z_i \in \mathbb{R}^d$`。Self-Attention 与循环和卷积的对比如下表所示：
 
@@ -313,7 +313,7 @@ $$`
 2. Recurrent 层的最小序列操作数为 `$O \left(n\right)$`，其他情况为 `$O \left(1\right)$`，这使得 Recurrent 的并行能力较差，即上表中的 Self-Attention (restricted)。
 3. 学习到长距离依赖是很多序列任务的关键，影响该能力的一个重要因素就是前向和后向信号穿越整个网络的路径长度，这个路径长度越短，越容易学习到长距离依赖。
 
-#### Attention Visualizations
+### Attention Visualizations
 
 第一张图展示了 Self-Attention 学到的句子内部的一个长距离依赖 **“making ... more diffcult”**，图中不同的颜色表示不同 Head 的 Attention，颜色越深表示 Attention 的值越大。
 
@@ -323,13 +323,13 @@ $$`
 
 ![Self-Attention-Long-Anaphora-Resolution](/images/cn/2018-10-12-seq2seq-and-attention-machanism/self-attention-anaphora-resolution.png)
 
-### Hierarchical Attention
+## Hierarchical Attention
 
 Yang 等人 [^yang2016hierarchical] 提出了一种层级的注意力 (Hierarchical Attention) 网络用于文档分类。Hierarchical Attention 共包含 4 层：一个词编码器 (Word Encoder)，一个词级别的注意力层 (Word Attention)，一个句子编码器 (Sentence Encoder) 和一个句子级别的注意力层 (Sentence Attention)。网络架构如下图所示：
 
 ![Hierarchical-Attention](/images/cn/2018-10-12-seq2seq-and-attention-machanism/hierarchical-attention.png)
 
-#### Word Encoder
+### Word Encoder
 
 对于一个给定的句子 `$w_{it}, t \in \left[0, T\right]$`，通过一个 Embedding 矩阵 `$W_e$` 得到每个词的向量表示，再应用一个双向的 GRU，即：
 
@@ -345,7 +345,7 @@ $$`
 
 最后将前向的隐状态 `$\overrightarrow{h}_{it}$` 和后向的隐状态 `$\overleftarrow{h}_{it}$` 进行拼接，得到 `$h_{ij} = \left[\overrightarrow{h}_{it}, \overleftarrow{h}_{it}\right]$` 为整个句子在词 `$w_{ij}$` 附近的汇总信息。
 
-#### Word Attention
+### Word Attention
 
 Word Attention 同一般的 Attention 机制类似，计算方式如下：
 
@@ -359,7 +359,7 @@ s_i &= \sum_{t}{a_{it} h_{it}}
 \end{equation}
 $$`
 
-#### Sentence Encoder
+### Sentence Encoder
 
 在 Word Attention 之后，我们得到了一个句子的表示 `$s_i$`，类似的我们利用一个双向的 GRU 编码文档中的 `$L$` 个句子：
 
@@ -374,7 +374,7 @@ $$`
 
 最后将前向的隐状态 `$\overrightarrow{h}_i$` 和后向的隐状态 `$\overleftarrow{h}_i$` 进行拼接，得到 `$h_i = \left[\overrightarrow{h}_i, \overleftarrow{h}_i\right]$` 为整个文档关于句子 `$s_i$` 的注意力汇总信息。
 
-#### Sentence Attention
+### Sentence Attention
 
 同理可得 Sentence Attention 的计算方式如下：
 
@@ -390,7 +390,7 @@ $$`
 
 最终得到整个文档的向量表示 `$v$`。
 
-### Attention-over-Attention
+## Attention-over-Attention
 
 Cui 等人 [^cui2017attention] 提出了 Attention-over-Attention 的模型用于阅读理解 (Reading Comprehension)。网络结构如下图所示：
 
@@ -422,17 +422,17 @@ $$`
 $$`
 6. 最终利用 `$\alpha$` 和 `$\beta$` 的点积 `$s = \alpha^{\top} \beta \in \mathbb{R}^{\lvert \mathcal{D} \rvert}$` 得到 attended document-level attention (即 **_attention-over-attention_**)。
 
-### Multi-step Attention
+## Multi-step Attention
 
 Gehring 等人 [^gehring2017convolutional] 提出了基于 CNN 和 Multi-step Attention 的模型用于机器翻译。网络结构如下图所示：
 
 ![Multi-step-Attention](/images/cn/2018-10-12-seq2seq-and-attention-machanism/multi-step-attention.png)
 
-#### Position Embeddings
+### Position Embeddings
 
 模型首先得到序列 `$\mathbf{x} = \left(x_1, \dotsc, x_m\right)$` 的 Embedding `$\mathbf{w} = \left(w_1, \dotsc , w_m\right), w_j \in \mathbb{R}^f$`。除此之外还将输入序列的位置信息映射为 `$\mathbf{p} = \left(p_1, \dotsc, p_m\right), p_j \in \mathbb{R}^f$`，最终将两者进行合并得到最终的输入 `$\mathbf{e} = \left(w_1 + p_1, \dotsc, w_m + p_m\right)$`。同时在解码器部分也采用类似的操作，将其与解码器网络的输出表示合并之后再喂入解码器网络 `$\mathbf{g} = \left(g_1, \dotsc, g_n\right)$` 中。
 
-#### Convolutional Block Structure
+### Convolutional Block Structure
 
 编码器和解码器均由多个 Convolutional Block 构成，每个 Block 包含一个卷积计算和一个非线性计算。令 `$\mathbf{h}^l = \left(h_1^l, \dotsc, h_n^l\right)$` 表示解码器第 `$l$` 个 Block 的输出，`$\mathbf{z}^l = \left(z_1^l, \dotsc, z_m^l\right)$` 表示编码器第 `$l$` 个 Block 的输出。对于一个大小 `$k = 5$` 的卷积核，其结果的隐状态包含了这 5 个输入，则对于一个 6 层的堆叠结构，结果的隐状态则包含了输入中的 25 个元素。
 
@@ -456,7 +456,7 @@ $$`
 p \left(y_{i+1} | y_1, \dotsc, y_i, \mathbf{x}\right) = \text{softmax} \left(W_o h_i^L + b_o\right) \in \mathbb{R}^T
 $$`
 
-#### Multi-step Attention
+### Multi-step Attention
 
 模型的解码器网络中引入了一个分离的注意力机制，在计算 Attention 时，将解码器当前的隐状态 `$h_i^l$` 同之前输出元素的 Embedding 进行合并：
 

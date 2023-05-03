@@ -15,12 +15,4 @@
     a.innerHTML = a2.innerHTML;
     a2.remove();
   });
-  // Blackfriday may generate a TOC that has an empty bullet when all headings
-  // are h2 and there is no h1: https://github.com/gohugoio/hugo/issues/1778#issuecomment-420036687
-  let li, ul = toc.querySelector('ul');
-  if (ul.childElementCount !== 1) return;
-  li = ul.firstElementChild;
-  if (li.tagName !== 'LI') return;
-  // remove <ul><li></li></ul> where <ul> only contains one <li>
-  ul.outerHTML = li.innerHTML;
 })();

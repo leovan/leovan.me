@@ -40,9 +40,9 @@ images:
 > 3. [Gaussian Process Regression](https://www.aidanscannell.com/post/gaussian-process-regression/)  
 > 4. [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/)
 
-## 高斯分布
+# 高斯分布
 
-### 一元高斯分布
+## 一元高斯分布
 
 若随机变量 `$X$` 服从一个均值为 `$\mu$`，方差为 `$\sigma^2$` 的高斯分布，则记为：
 
@@ -58,7 +58,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-06-bayesian-optimization/univariate-gaussian-distribution.png" title="图片来源：https://zh.wikipedia.org/wiki/正态分布" >}}
 
-### 二元高斯分布
+## 二元高斯分布
 
 若随机变量 `$X, Y$` 服从均值为 `$\mu = \left(\mu_X, \mu_Y\right)^{\top}$`，方差为 `$\mu = \left(\sigma_X, \sigma_Y\right)^{\top}$` 的高斯分布，则记为：
 
@@ -76,7 +76,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-06-bayesian-optimization/bivariate-gaussian-distribution.png" title="图片来源：Bayesian tracking of multiple point targets using expectation maximization" >}}
 
-### 多元高斯分布
+## 多元高斯分布
 
 若 `$K$` 维随机向量 `$X = \left[X_1, \cdots, X_K\right]^{\top}$` 服从多元高斯分布，则必须满足如下三个等价条件：
 
@@ -92,7 +92,7 @@ $$`
 
 其中 `$\lvert\Sigma\rvert$` 表示协方差矩阵的行列式。
 
-### 边缘化和条件化
+## 边缘化和条件化
 
 高斯分布具有一个优秀的代数性质，即在边缘化和条件化下是闭合的，也就是说从这些操作中获取的结果分布也是高斯的。**边缘化（Marginalization）**和**条件化（Conditioning）**都作用于原始分布的子集上：
 
@@ -141,7 +141,7 @@ $$`
 
 {{< figure src="/images/cn/2020-06-06-bayesian-optimization/marginalization-and-conditioning.png" >}}
 
-## 高斯过程
+# 高斯过程
 
 **高斯过程（Gaussian Process）**是观测值出现在一个连续域（例如时间或空间）的随机过程。在高斯过程中，连续输入空间中每个点都是与一个正态分布的随机变量相关联。此外，这些随机变量的每个有限集合都有一个多元正态分布，换句话说它们的任意有限线性组合是一个正态分布。高斯过程的分布是所有那些（无限多个）随机变量的联合分布，正因如此，它是连续域（例如时间或空间）上函数的分布。
 
@@ -171,7 +171,7 @@ $$`
 - 周期：`$K_{\mathrm{P}}\left(x, x^{\prime}\right)=\exp \left(-\dfrac{2 \sin ^{2}\left(\dfrac{d}{2}\right)}{\ell^{2}}\right)$`
 - 有理平方：`$K_{\mathrm{RQ}}\left(x, x^{\prime}\right)=\left(1+|d|^{2}\right)^{-\alpha}, \quad \alpha \geq 0$`
 
-## 高斯过程回归
+# 高斯过程回归
 
 回归任务的目标是给定一个输入变量 `$x \in \mathbb{R}^D$` 预测一个或多个连续目标变量 `$y$` 的值。更确切的说，给定一个包含 `$N$` 个观测值的训练集 `$\mathbf{X} = \left\{x_n\right\}^N_1$` 和对应的目标值 `$\mathbf{Y} = \left\{y_n\right\}^N_1$`，回归的目标是对于一个新的 `$x$` 预测对应的 `$y$`。目标值和观测值之间通过一个映射进行关联：
 
@@ -328,9 +328,9 @@ $$`
 
 本小结代码请参见[这里](https://github.com/leovan/leovan.me/blob/main/static/scripts/cn/2020-06-06-bayesian-optimization/gaussian-process-regression.py)。
 
-## 贝叶斯优化
+# 贝叶斯优化
 
-### 主动学习
+## 主动学习
 
 在很多机器学习问题中，数据标注往往需要耗费很大成本。**主动学习（Active Learning）**在最大化模型准确率时最小化标注成本，例如对不确定性最高的数据进行标注。由于我们仅知道少量数据点，因此我们需要一个代理模型（Surrogate Model）来建模真正的模型。高斯过程因其灵活性和具有估计不确定性估计的特性不失为一个常用的代理模型。
 
@@ -338,7 +338,7 @@ $$`
 
 {{< figure-slider base-url="/images/cn/2020-06-06-bayesian-optimization/" image-filename-prefix="active-gp-" image-max-index="9" >}}
 
-### 贝叶斯优化问题
+## 贝叶斯优化问题
 
 贝叶斯优化的核心问题是：基于现有的已知情况，如果选择下一步评估的数据点？在主动学习中我们选择不确定性最大的点，但在贝叶斯优化中我们需要在探索不确定性区域（探索）和关注已知具有较优目标值的区域之间进行权衡（开发）。这种评价的依据称之为**采集函数（Acquisition Functions）**，采集函数通过当前模型启发式的评估是否选择一个数据点。
 
@@ -349,7 +349,7 @@ $$`
 3. 利用采集函数 `$\alpha \left(x\right)$` 确性下一个采样点 `$x_t = \arg\max_x \alpha \left(x\right)$`。
 4. 将采样的点加入观测集合，重复步骤 2 直至收敛或达到停止条件。
 
-### 采集函数
+## 采集函数
 
 - Probability of Improvement (PI)
 
@@ -405,7 +405,7 @@ $$`
 
 其他采集函数还有 Thompson Sampling [^thompson1993likelihood]，Upper Confidence Bound (UCB)，Gaussian Process Upper Confidence Bound (GP-UCB) [^auer2002using]，Entropy Search [^hennig2012entropy]，Predictive Entropy Search [^hernández2014predictive] 等，细节请参见原始论文或 A Tutorial on Bayesian Optimization [^frazier2018tutorial]。
 
-## 开放资源
+# 开放资源
 
 - [scikit-optimize/scikit-optimize](https://github.com/scikit-optimize/scikit-optimize)
 - [hyperopt/hyperopt](https://github.com/hyperopt/hyperopt)

@@ -23,7 +23,7 @@ tags:
 
 > 本文以 Windows 11 22H2 版本为例，不确保在其他版本系统下完全适用。
 
-## 终端
+# 终端
 
 工欲善其事必先利其器，开发离不开那个黑框框，所以我们需要把这个黑框框变得更好看更好用些。Windows 终端是一个新的支持 PowerShell 和 WSL bash 的应用，通过[应用商店](https://aka.ms/terminal) 直接进行安装。
 
@@ -31,7 +31,7 @@ tags:
 
 为了更好的在终端中显示中英文和图标，推荐使用 [Sarasa Term SC Nerd](https://github.com/laishulu/Sarasa-Term-SC-Nerd) 作为终端显示字体。
 
-## WSL
+# WSL
 
 以管理员模式打开 PowerShell 或 Windows 命令提示符，输入如下命令，并重启计算机：
 
@@ -63,9 +63,9 @@ sudo apt install zsh
 
 安装 [Oh My Zsh](https://ohmyz.sh/) 来提升 zsh 的易用性。
 
-## 显卡
+# 显卡
 
-### 驱动
+## 驱动
 
 从 Nvidia 官网（<https://www.nvidia.cn/geforce/drivers>）下载适用于 Windows 的最新驱动并安装。进入 Windows 命令行，输入 `nvidia-smi` 命令查看显卡状态：
 
@@ -77,7 +77,7 @@ Ubuntu 中不再需要额外安装显卡驱动，进入 Ubuntu 命令行，输�
 
 不难看出，出了 `nvidia-smi` 工具版本不同外，显卡驱动和 CUDA 版本均是相同的。
 
-### CUDA
+## CUDA
 
 从 Nvidia 官网（<https://developer.nvidia.com/cuda-toolkit-archive>）下载适用于 WSL Ubuntu 的 CUDA，在此选择的版本为 `11.8.0`（具体请参考例如 Tensorflow 等所需工具的依赖版本），相关平台选项如下：
 
@@ -114,7 +114,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 ![](/images/cn/2023-03-19-gpu-machine-learning-environment-configuration-under-windows-with-wsl2-and-ubuntu/nvcc-version.png)
 
-### cuDNN
+## cuDNN
 
 从 Nvidia 官网（<https://developer.nvidia.com/rdp/cudnn-archive>）下载适用于 Linux 和上述安装 CUDA 版本的 cuDNN，在此选择的版本为 `v8.8.0 for CUDA 11.x`，安装包格式为 `Local Installer for Linux x86_64 (Tar)`。
 
@@ -134,9 +134,9 @@ sudo mv -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ```
 
-## 机器学习环境
+# 机器学习环境
 
-### Python
+## Python
 
 Ubuntu 22.04 系统已经安装了 Python 3.10 版本，Python 3.10 在常用机器学习库上具有较好的兼容性。因此，以 Python 3.10 版本为例，使用 `venv` 创建机器学习虚拟环境。在系统层面安装 `venv` 并创建虚拟环境：
 
@@ -147,7 +147,7 @@ python3.10 -m venv ~/sdk/python310
 source ~/sdk/python310/bin/activate
 ```
 
-### PyTorch
+## PyTorch
 
 PyTorch 的 2.0 版本支持的最高 CUDA 即为 11.8，输入如下命令安装 PyTorch：
 
@@ -177,7 +177,7 @@ torch.cuda.get_device_name(0)
 # NVIDIA GeForce RTX 3070 Ti
 ```
 
-### Tensorflow
+## Tensorflow
 
 输入如下命令安装 Tensorflow：
 

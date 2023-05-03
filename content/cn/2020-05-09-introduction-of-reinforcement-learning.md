@@ -21,7 +21,7 @@ images:
 
 > 本文为[《强化学习系列》](/categories/强化学习/)文章
 
-## 强化学习简介
+# 强化学习简介
 
 **强化学习（Reinforcement Learning，RL）**是机器学习中的一个领域，是学习“做什么（即如何把当前的情景映射成动作）才能使得数值化的收益信号最大化”。学习者不会被告知应该采取什么动作，而是必须自己通过尝试去发现哪些动作会产生最丰厚的收益。
 
@@ -49,7 +49,7 @@ images:
 
 价值与价值函数是强化学习方法的重要特征，价值函数对于策略空间的有效搜索来说十分重要。相比于进化方法以对完整策略的反复评估为引导对策略空间进行直接搜索，使用价值函数是强化学习方法与进化方法的不同之处。
 
-## 示例和应用
+# 示例和应用
 
 以经典的 Flappy Bird 游戏为例，智能体就是游戏中我们操作的小鸟，整个游戏中的天空和遮挡管道即为环境，动作为玩家单击屏幕使小鸟飞起的行为，如下图所示：
 
@@ -57,7 +57,7 @@ images:
 
 目前，强化学习在包括**游戏**，**广告和推荐**，**对话系统**，**机器人**等多个领域均展开了广泛的应用。
 
-### 游戏
+## 游戏
 
 **AlphaGo** [^alphago] 是于 2014 年开始由英国伦敦 Google DeepMind 开发的人工智能围棋软件。AlphaGo 使用蒙特卡洛树搜索（Monte Carlo tree search），借助估值网络（value network）与走棋网络（policy network）这两种深度神经网络，通过估值网络来评估大量选点，并通过走棋网络选择落点。
 
@@ -79,28 +79,28 @@ AlphaStar 还使用了一种新的多智能体学习算法。该神经网路最�
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/facebook-pluribus.jpg" >}}
 
-### 广告和推荐
+## 广告和推荐
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/recommendation.png" title="图片来源：A Reinforcement Learning Framework for Explainable Recommendation" >}}
 
-### 对话系统
+## 对话系统
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/dialogue-system.png" title="图片来源：End-to-End Task-Completion Neural Dialogue Systems" >}}
 
-### 机器人
+## 机器人
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/robot.png" title="图片来源：Learning Synergies between Pushing and Grasping with Self-supervised Deep Reinforcement Learning" >}}
 
-## 开放资源
+# 开放资源
 
-### 开源实验平台
+## 开源实验平台
 
 - [openai/gym](https://github.com/openai/gym)
 - [MuJoCo](http://mujoco.org/)
 - [openai/mujoco-py](https://github.com/openai/mujoco-py)
 - [deepmind/lab](https://github.com/deepmind/lab)
 
-### 开源框架
+## 开源框架
 
 - [deepmind/trfl/](https://github.com/deepmind/trfl/) <i class="icon icon-tensorflow"></i>
 - [deepmind/open_spiel](https://github.com/deepmind/open_spiel) <i class="icon icon-tensorflow"></i>
@@ -114,12 +114,12 @@ AlphaStar 还使用了一种新的多智能体学习算法。该神经网路最�
 - [NervanaSystems/coach](https://github.com/NervanaSystems/coach) <i class="icon icon-tensorflow"></i>
 - [PaddlePaddle/PARL](https://github.com/PaddlePaddle/PARL) <i class="icon icon-paddlepaddle"></i>
 
-### 开源模型
+## 开源模型
 
 - [dennybritz/reinforcement-learning](https://github.com/dennybritz/reinforcement-learning) <i class="icon icon-tensorflow"></i>
 - [openai/baselines](https://github.com/openai/baselines) <i class="icon icon-tensorflow"></i>
 
-### 其他资源
+## 其他资源
 
 - [ShangtongZhang/reinforcement-learning-an-introduction](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction)
 - [aikorea/awesome-rl](https://github.com/aikorea/awesome-rl)

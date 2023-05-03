@@ -1,6 +1,6 @@
 {{ if not .IsHome }}
-<h1>{{ .Title }}</h1>
-{{ with .Params.subtitle }}<h2><span class="subtitle">{{ . }}</span></h2>{{ end }}
+<h1 class="title">{{ .Title }}</h1>
+{{ with .Params.subtitle }}<h2 class="subtitle">{{ . }}</h2>{{ end }}
 
 {{ $lang := "cn" }}
 {{ if (eq .Section "en") }}
@@ -9,8 +9,8 @@
 
 {{ if .IsPage }}
 {{ if not .Params.disable_author_date }}
-<h3>{{ with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}{{  print . " / " }}{{ end }}
-{{ if .Lastmod }}{{ if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{ end }}{{ else if .Date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h3>
+<h2 class="author-date">{{ with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}{{  print . " / " }}{{ end }}
+{{ if .Lastmod }}{{ if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{ end }}{{ else if .Date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h2>
 {{ end }}
 
 {{ if or (.Params.categories) (.Params.tags) }}

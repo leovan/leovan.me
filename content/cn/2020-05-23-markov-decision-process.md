@@ -40,7 +40,7 @@ images:
 > 2. CS234: Reinforcement Learning [^stanford-cs234]  
 > 3. UCL Course on RL [^ucl-course-on-rl]
 
-## 马尔可夫模型
+# 马尔可夫模型
 
 马尔可夫模型是一种用于序列数据建模的随机模型，其假设未来的状态仅取决于当前的状态，即：
 
@@ -57,7 +57,7 @@ $$`
 
 马尔可夫链（Markov Chain，MC）为从一个状态到另一个状态转换的随机过程，当马尔可夫链的状态只能部分被观测到时，即为[隐马尔可夫模型（Hidden Markov Model，HMM）](/cn/2020/05/hmm-crf-and-sequence-labeling/)，也就是说观测值与系统状态有关，但通常不足以精确地确定状态。马尔可夫决策过程（Markov Decision Process，MDP）也是马尔可夫链，但其状态转移取决于当前状态和采取的动作，通常一个马尔可夫决策过程用于计算依据期望回报最大化某些效用的行动策略。部分可观测马尔可夫决策过程（Partially Observable Markov Decision Process，POMDP）即为系统状态仅部分可见情况下的马尔可夫决策过程。
 
-## 马尔可夫过程
+# 马尔可夫过程
 
 对于一个马尔可夫状态 `$s$` 和一个后继状态 `$s'$`，状态转移概率定义为：
 
@@ -125,7 +125,7 @@ $$`
 
 价值函数可以分解为两部分：即时收益 `$R_{t+1}$` 和后继状态的折扣价值 `$\gamma v \left(S_{t+1}\right)$`。上式我们称之为**贝尔曼方程（Bellman Equation）**，其衡量了状态价值和后继状态价值之间的关系。
 
-## 马尔可夫决策过程
+# 马尔可夫决策过程
 
 一个**马尔可夫决策过程（Markov Decision Process，MDP）**定义为包含决策的马尔可夫奖励过程 `$\langle\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma\rangle$`，在这个环境中所有的状态均具有马尔可夫性。其中，`$\mathcal{S}$` 为有限的状态集合，`$\mathcal{A}$` 为有限的动作集合，`$\mathcal{P}$` 为状态转移概率矩阵，`$\mathcal{P}_{s s^{\prime}}^{a}=\mathbb{P}\left[S_{t+1}=s^{\prime} | S_{t}=s, A_{t}=a\right]$`，`$\mathcal{R}$` 为奖励函数，`$\mathcal{R}_{s}^{a}=\mathbb{E}\left[R_{t+1} | S_{t}=s, A_{t}=a\right]$`，`$\gamma \in \left[0, 1\right]$` 为折扣率。上例中的马尔可夫决策过程如下图所示：
 

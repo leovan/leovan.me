@@ -25,9 +25,9 @@ images:
   - /images/cn/2017-12-11-evd-svd-and-pca/lena-reconstruction.png
 ---
 
-## 准备知识
+# 准备知识
 
-### 向量与基
+## 向量与基
 
 `$\renewcommand{\diag}{\operatorname{diag}}\renewcommand{\cov}{\operatorname{cov}}$`首先，定义 `$\boldsymbol{\alpha}$` 为列向量，则维度相同的两个向量 `$\boldsymbol{\alpha}, \boldsymbol{\beta}$` 的内积可以表示为：
 
@@ -59,7 +59,7 @@ images:
 
 ![](/images/cn/2017-12-11-evd-svd-and-pca/vector-change-of-bases.png)
 
-### 线性变换
+## 线性变换
 
 以二维空间为例，定义一个如下矩阵
 
@@ -244,7 +244,7 @@ $$`
 
 ![](/images/cn/2017-12-11-evd-svd-and-pca/vector-linear-transformation-5.png)
 
-## 特征值分解
+# 特征值分解
 
 设 `$A$` 是线性空间 `$V$` 上的一个线性变换，对于一个非零向量 `$\boldsymbol{\alpha} = \left(x_1, x_2, ..., x_n\right)^T$` 使得
 
@@ -318,7 +318,7 @@ print(A_re)
 # [4,] -0.5 -0.5  0.1    1
 ```
 
-## 奇异值分解
+# 奇异值分解
 
 特征值分解针对的是方阵，对于一个 `$m*n$` 的矩阵是无法进行特征值分解的，这时我们就需要使用奇异值分解来解决这个问题。对于 `$m*n$` 的矩阵 `$A$`，可得 `$A A^T$` 是一个 `$m*m$` 的方阵，则针对 `$A A^T$`，通过 `$\left(A A^T\right) \boldsymbol{\alpha} = \lambda \boldsymbol{\alpha}$`，即可求解这个方阵的特征值和特征向量。针对矩阵 `$A$`，奇异值分解是将原矩阵分解为三个部分
 
@@ -338,7 +338,7 @@ $$`
 
 从图中可以看出，我们仅用了 200 个左奇异向量和 200 个右奇异向量重构图像与原始灰度图像已经基本看不出任何区别。因此，我们利用 SVD 可以通过仅保留较大的奇异值实现数据的压缩。
 
-## 主成份分析
+# 主成份分析
 
 主成份分析[^wold1987principal]可以通俗的理解为一种降维方法。其目标可以理解为将一个 `$m$` 维的数据转换称一个 `$k$` 维的数据，其中 `$k < m$`。对于具有 `$n$` 个样本的数据集，设 `$\boldsymbol{x_i}$` 表示 `$m$` 维的列向量，则
 

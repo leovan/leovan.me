@@ -27,7 +27,7 @@ tags:
 
 本文以 Spark on YARN 模式介绍 Spark 集群的搭建。
 
-## Scala 配置
+# Scala 配置
 
 将 Scala 安装包解压缩到 `/opt` 目录并创建软链接：
 
@@ -52,7 +52,7 @@ rsync -auvp /opt/scala-2.12.14 leo@vm-02:/opt
 rsync -auvp /opt/scala-2.12.14 leo@vm-03:/opt
 ```
 
-## Spark 配置
+# Spark 配置
 
 将 Spark 安装包解压缩到 `/opt` 目录并创建软链接：
 
@@ -138,7 +138,7 @@ rsync -auvp /opt/spark-3.1.2-bin-hadoop3.2 leo@vm-02:/opt
 rsync -auvp /opt/spark-3.1.2-bin-hadoop3.2 leo@vm-03:/opt
 ```
 
-## 启动 Spark
+# 启动 Spark
 
 在 vm-01，vm-02 和 vm-03 上启动 Zookeeper：
 
@@ -210,7 +210,7 @@ Pi is roughly 3.1424791424791425
 
 ![](/images/tech101/2021-06-19-spark-cluster-setup/spark-history-server-web.png)
 
-## NFS 配置
+# NFS 配置
 
 安装 NFS 相关软件：
 
@@ -252,7 +252,7 @@ sudo mount vm-01:/nfs /nfs
 vm-01:/nfs /nfs nfs rw
 ```
 
-## Python 配置
+# Python 配置
 
 安装 Miniconda3 到 `/nfs/miniconda3` 目录：
 
@@ -330,7 +330,7 @@ unset __conda_setup
 conda activate spark
 ```
 
-## PySpark 测试
+# PySpark 测试
 
 输入 `pyspark` 进入 PySaprk Shell：
 

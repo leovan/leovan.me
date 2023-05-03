@@ -18,11 +18,11 @@ images:
   - /images/cn/2018-10-19-serving-models-with-flask-and-gae/model-serving.png
 ---
 
-{{% blockquote %}}
+{{% admonition %}}
 本文的配套代码请参见 [这里](https://github.com/leovan/model-serving-demo)，建议配合代码阅读本文。
-{{% /blockquote %}}
+{{% /admonition %}}
 
-## 模型部署和服务调用
+# 模型部署和服务调用
 
 对于做算法的同学，大家或多或少的更关心模型的性能指标多些，对于一些工程性问题考虑的较少。模型的部署是这些工程性问题中重要的一个，它直接关系到模型在生产系统的使用。一些成熟的机器学习框架会提供自己的解决方案，例如 [Tensorflow](https://www.tensorflow.org) 提供的 [Serving](https://www.tensorflow.org/serving/) 服务等。但很多情况下我们构建的工程可能不只使用了一种框架，因此一个框架自身的部署工具可能就很难满足我们的需求了。
 
@@ -38,9 +38,9 @@ images:
 2. 利用 [Gunicorn](https://gunicorn.org/) 提供的高性能 Python WSGI HTTP UNIX Server，方便在服务端运行 Flask 应用。
 3. 客户端和服务端之间采用 [RESTful API](https://zh.wikipedia.org/zh/表现层状态转换) 调用方式，尽管在性能上可能不及其他一些方案 (例如：基于 RPC 的解决方案等)，但其较好地解决了跨语言交互的问题，不同语言之间交互仅需使用 HTTP 协议和 JSON 数据格式即可。
 
-## Flask 服务和 AJAX 调用
+# Flask 服务和 AJAX 调用
 
-### Flask 服务封装
+## Flask 服务封装
 
 为了将模型代码和 Flask 服务进行整合，首先假设你已经对模型部分代码做了完美的封装 :sunglasses:，整个工程先叫做 `model-serving-demo` 吧。整理一下代码的目录结构，给一个我中意的 Python 目录结构风格：
 
@@ -322,7 +322,7 @@ kill -TERM `echo ${pid_file_path}`
 
 gunicorn 的详细参数配置和使用教程请参见 [官方文档](https://docs.gunicorn.org/en/stable/)。
 
-### RESTful API 设计
+## RESTful API 设计
 
 RESTful API 是一种符合 REST(Representational State Transfer，表现层状态转换) 原则的框架，该框架是由 Fielding 在其博士论文 [^fielding2000architectural] 中提出。相关的核心概念如下：
 
@@ -339,7 +339,7 @@ RESTful API 是一种符合 REST(Representational State Transfer，表现层状�
 5. 为请求响应设置合理的状态码，例如：200 OK 表示正常返回，400 INVALID REQUEST 表示无法处理客户端的错误请求等。
 6. 对于错误码为 4xx 的情况，建议在返回中添加键名为 `message` 的错误信息。
 
-### AJAX 调用
+## AJAX 调用
 
 对于动态网页，我们可以很容易的在后端服务中发起 POST 请求调用模型服务，然后将结果在前端进行渲染。对于静态网页，我们可以利用 AJAX 进行相关操作，实现细节请参见 [示例代码](https://github.com/leovan/model-serving-demo/tree/master/client/xxx-model-ajax-client.html)。
 
@@ -368,11 +368,11 @@ $(document).ready(function() {
 
 代码使用了 [jQuery](https://jquery.com/) 的相关函数。`JSON.stringify({"name": $("#name").val()})` 获取 ID 为 `name` 的元素的值，并将其转换成符合服务端要求的 JSON 格式。通过 AJAX 向远程发出请求后，如果请求成功则将返回数据 `data` 中对应的结果 `result` 填充到 ID 为 `result` 的元素中，否则填入返回的错误信息。
 
-## Google App Engine 部署
+# Google App Engine 部署
 
 上文中已经介绍了如何在本地利用 Flask 部署模型服务和相关调用方法，但如果希望在自己的网站中调用时，则利用 SaaS 来部署符合会是一个不二之选。国内外多个厂商均提供了相应的 SaaS 产品，例如 [Google](https://cloud.google.com/appengine/)，[Amazon](https://aws.amazon.com/partners/saas-on-aws/)，[Microsoft](https://azure.microsoft.com/en-us/solutions/saas/) 等。Google App Engine (GAE) 提供了一个 [始终免费](https://cloud.google.com/free/docs/always-free-usage-limits) 方案，虽然部署阶段会受到 GFW 的影响，但调用阶段测试影响并不是很大 (不同地区和服务提供商会有差异)。综合考虑，本文选择 GAE 作为 SaaS 平台部署服务，各位看官请自备梯子。
 
-### 环境准备
+## 环境准备
 
 首先，在 [Google Cloud Platform Console](https://console.cloud.google.com/projectcreate) 中建立一个新的 Project，假设项目名为 `YOUR_PROJECT_ID`。
 
@@ -386,7 +386,7 @@ core 2018.10.12
 gsutil 4.34
 ```
 
-### 构建 GAE 工程
+## 构建 GAE 工程
 
 模型服务仅作为后端应用，因此本节不介绍前端页面开发的相关部分，有兴趣的同学请参见 [官方文档](https://cloud.google.com/appengine/docs/standard/python3/quickstart)。GAE 部署 Python Web 应用采用了 [WSGI 标准](https://wsgi.readthedocs.io/en/latest/)，我们构建的本地部署版本完全满足这个要求，因此仅需为项目在根目录添加一个 GAE 配置文件 `app.yaml` 即可，内容如下：
 
@@ -411,7 +411,7 @@ skip_files:
 
 其中，`runtime` 指定了服务运行的环境，`handlers` 指定了不同的 URL 对应的处理程序，在此所有的 URL 均由 `main.py` 中的 `app` 进行处理，`skip_files` 用于过滤不需要上传的文件。更多关于 `app.yaml` 的设置信息，请参见 [官方文档](https://cloud.google.com/appengine/docs/standard/python3/config/appref)。
 
-### 部署 GAE 工程
+## 部署 GAE 工程
 
 在部署 GAE 工程之前我们可以利用本地的开发环境对其进行测试，测试无误后，即可运行如下命令将其部署到 GAE 上：
 
@@ -423,8 +423,8 @@ gcloud app deploy --project [YOUR_PROJECT_ID]
 
 部署后的 GAE 服务使用了其自带的域名 `appspot.com`。如果你拥有自己的域名，可以根据官方文档 [设置自己的域名](https://cloud.google.com/appengine/docs/standard/python3/mapping-custom-domains) 并 [开启 SSL](https://cloud.google.com/appengine/docs/standard/python3/secURLng-custom-domains-with-ssl)。
 
-{{% blockquote %}}
+{{% admonition %}}
 本文部分内容参考了 Genthial 的博客 [Serving a model with Flask](https://guillaumegenthial.github.io/serving.html) 和阮一峰的博客 [理解RESTful架构](https://www.ruanyifeng.com/blog/2011/09/restful.html) 和 [RESTful API 设计指南](https://www.ruanyifeng.com/blog/2014/05/restful_api.html)。
-{{% /blockquote %}}
+{{% /admonition %}}
 
 [^fielding2000architectural]: Fielding, Roy T., and Richard N. Taylor. _Architectural styles and the design of network-based software architectures._ Vol. 7. Doctoral dissertation: University of California, Irvine, 2000.

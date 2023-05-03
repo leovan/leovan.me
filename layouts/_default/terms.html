@@ -4,9 +4,8 @@
   {{ range $key, $value := .Data.Terms.ByCount }}
   <span class="term">
     <a href="{{ (print "/" $.Data.Plural "/" $value.Name | urlize) | relURL }}">
-      {{ $value.Name }}
+      {{ $value.Name }} ({{ $value.Count }})
     </a>
-    ({{ $value.Count }})
   </span>
   {{ end }}
 </div>

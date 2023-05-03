@@ -22,7 +22,7 @@
   </header>
 
   <article class="main">
-    <header class="title">
+    <header class="content-title">
     {{ partial "post_meta.html" . }}
 
     {{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}

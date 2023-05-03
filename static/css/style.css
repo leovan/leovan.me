@@ -171,10 +171,6 @@ thead, tfoot, tr:nth-child(even) {
   background: var(--block-bg);
 }
 
-.blockquote {
-  background: var(--block-bg);
-}
-
 .ps-root .ps-algorithm {
   border-top: 1px solid var(--block-border) !important;
   border-bottom: 1px solid var(--block-border) !important;
@@ -206,8 +202,6 @@ code {
 }
 
 pre code {
-  border-top: 1px solid var(--code-border) !important;
-  border-bottom: 1px solid var(--code-border) !important;
   background: var(--code-bg) !important;
 }
 
@@ -448,32 +442,32 @@ body {
   line-height: 1.75;
 }
 
-h1, h2, h3 {
+h1{
   padding: 0;
-  margin: 60px 0 30px;
+  margin: 32px auto;
   line-height: 1.25;
-  text-align: center;
 }
 
-h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   padding: 0;
-  margin: 30px 0 30px;
+  margin: 32px 0;
   line-height: 1.25;
-  text-align: center;
 }
 
 h1 {
-  font-size: 32px;
-  font-weight: normal;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
+  text-align: left;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: bold;
   text-align: left;
 }
@@ -489,6 +483,10 @@ blockquote {
   padding: 0 2em;
 }
 
+blockquote p {
+  line-height: 1.6rem;
+}
+
 hr {
   margin: 2em auto;
 }
@@ -502,6 +500,10 @@ figure {
   text-align: center;
 }
 
+figure img {
+  max-width: attr(data-large-max-width);
+}
+
 iframe, twitterwidget, video {
   max-width: 100%;
   display: block;
@@ -511,7 +513,7 @@ iframe, twitterwidget, video {
 /* code */
 code {
   padding: 0.2em 0.3em;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   font-size: 0.95em !important;
 }
 
@@ -522,7 +524,6 @@ pre code {
   line-height: 1.75;
   background: none;
   text-shadow: none;
-  border-radius: 0;
 }
 
 code[class*="language-"] {
@@ -534,6 +535,7 @@ pre[class*="language-"] {
   padding: 0;
   position: relative;
   overflow: inherit;
+  border-radius: 0.3rem;
 }
 
 pre[class*="language-"] > code[data-language]:before {
@@ -542,7 +544,7 @@ pre[class*="language-"] > code[data-language]:before {
   position: absolute;
   bottom: 0;
   right: 0;
-  border-radius: 6px 0 0 0;
+  border-top-left-radius: 0.3rem;
   padding: 0 0.5em;
   text-shadow: none;
 }
@@ -555,7 +557,6 @@ code[class*="language-"], pre[class*="language-"] {
   word-spacing: normal;
   tab-size: 4;
   hyphens: none;
-  white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
@@ -574,7 +575,7 @@ pre[class*="language-"] {
 
 div.code-toolbar > .toolbar {
   top: 0 !important;
-  right: 0.3em !important;
+  right: 0.4em !important;
 }
 
 /* lists */
@@ -700,18 +701,28 @@ body {
 }
 
 /* main */
-.main .title h1 {
+.title {
   margin-top: 0;
-  margin-bottom: 40px;
 }
 
-.title h3 {
+.subtitle, .author-date {
+  text-align: center;
+}
+
+.post-meta {
+  font-size: 0.9em;
+  line-height: 1.8em;
   font-weight: normal;
   text-align: center;
 }
 
-.subtitle {
-  font-size: .9em;
+.post-meta a {
+  text-decoration: none;
+  border: none;
+}
+
+#TableOfContents {
+  padding: .5em;
 }
 
 /* footnotes */
@@ -796,36 +807,12 @@ td code {
   line-height: 1em;
 }
 
-.subtitle {
-  font-size: 24px;
-}
-
-.post-meta {
-  font-size: 0.9em;
-  line-height: 1.8em;
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.post-meta a {
-  text-decoration: none;
-  border-bottom: 0;
-}
-
-#TableOfContents {
-  padding: .5em;
-}
-
 .pseudocode {
   display: none;
 }
 
-.ps-root .ps-algorithm {
-  border-top: 1px solid !important;
-}
-
-.ps-root .ps-algorithm.with-caption > .ps-line:first-child {
-  border-bottom: 1px solid !important;
+.ps-root .ps-line {
+  line-height: 1.4rem !important;
 }
 
 .footnote-ref:before {
@@ -859,12 +846,6 @@ mjx-container {
 
 img[alt="github-stars"], img[alt="github-followers"] {
   vertical-align: text-bottom;
-}
-
-.blockquote {
-  display: block;
-  padding: 1em;
-  margin: 1em auto 1em;
 }
 
 footer .adsbygoogle {
@@ -1119,11 +1100,11 @@ p.list-page span {
     background-position: center;
   }
 
-  .title h2, .title h3 {
+  .content-head h2, .content-head h3 {
     margin: 1.5em auto;
   }
 
-  .main .title h1 {
+  .content-head h1 {
     margin: 1em auto 0 auto;
   }
 

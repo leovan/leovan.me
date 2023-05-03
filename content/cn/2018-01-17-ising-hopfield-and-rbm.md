@@ -24,7 +24,7 @@ images:
   - /images/cn/2018-01-17-ising-hopfield-and-rbm/bbrbm-mnist.png
 ---
 
-## Ising 模型
+# Ising 模型
 
 `$\renewcommand{\sign}{\operatorname{sign}}$`[Ising 模型](https://zh.wikipedia.org/zh/易辛模型)最早是由物理学家威廉·冷次在 1920 年发明的，他把该模型当成是一个给他学生恩斯特·易辛的问题。易辛在他一篇 1924 年的论文 [^ising1924contribution] 中求得了一维易辛模型的解析解，并且证明它不会产生相变。 二维方晶格易辛模型相对于一维的难出许多，因此其解析的描述在一段时间之后才在 1943 年由拉斯·昂萨格给出 [^onsager1944a]。
 
@@ -159,13 +159,13 @@ diff_t_matrix <- lapply(ising_config_t, function(t) {
 
 ![](/images/cn/2018-01-17-ising-hopfield-and-rbm/ising-different-t.png)
 
-## Hopfield 神经网络
+# Hopfield 神经网络
 
 Hopfield 神经网络 [^hopfield1987neural] 是一种基于能量的反馈人工神经网络。Hopfield 神经网络分为离散型 (Discrete Hopfield Neural Network, DHNN) 和 连续性 (Continues Hopfield Neural Network, CHNN)。
 
-### 离散型 Hopfield 神经网络
+## 离散型 Hopfield 神经网络
 
-#### 网络结构
+### 网络结构
 
 对于离散型 Hopfield 神经网络，其网络结果如下
 
@@ -209,7 +209,7 @@ $$`
 x_i^{\left(t+1\right)} = \sign\left(net_i^{\left(t\right)}\right)
 $$`
 
-#### 网络稳定性
+### 网络稳定性
 
 我们可以将反馈网络看做一个非线性动力学系统，因此这个系统最后可能会收敛到一个稳态，或在有限状态之间振荡，亦或是状态为无穷多个即混沌现象。对于 DHNN 因为其网络状态是有限的，因此不会出现混沌的现象。若一个反馈网络达到一个稳态状态 `$\boldsymbol{X}$` 时，即 `$\boldsymbol{X}^{\left(t+1\right)} = \boldsymbol{X}^{\left(t\right)}$` ，则称这个状态为一个吸引子。在 Hopfield 网络结构和权重确定的情况下，其具有 `$M$` 个吸引子，因此我们可以认为这个网络具有存储 `$M$` 个记忆的能力。
 
@@ -259,7 +259,7 @@ $$`
 
 则对于给定的样本 `$\boldsymbol{X}$` 确定为网络的吸引子，但对于有些非给定的样本也可能是网络的吸引子，这些吸引子称之为伪吸引子。以上权重的计算是基于两两正交的样本得到的，但真实情况下很难保证样本两两正交，对于非正交的模式，网络的存储能力则会大大下降。根据 Abu-Mostafa[^abu1985information] 的研究表明，当模式的数量 `$p$` 大于 `$0.15 n$` 时，网络的推断就很可能出错，也就是结果会收敛到伪吸引子上。
 
-#### 示例
+### 示例
 
 我们通过一个手写数字识别的例子介绍一些 Hopfield 网络的功能，我们存在如下 10 个数字的图片，每张为像素 16*16 的二值化图片，其中背景色为白色，前景色为黑色 (每个图片的名称为 `num.png`，图片位于 `/images/cn/2018-01-17-ising-hopfield-and-rbm` 目录)。
 
@@ -392,9 +392,9 @@ digits_test_results <- lapply(digits_test_results_patterns,
 
 从结果中可以看出，部分测试图片还是得到了比较好的恢复，但如上文所说，由于我们给定的模式之间并不是两两正交的，因此，网络的推断就很可能出错 (例如：数字 5 恢复的结果更像 9 多一些)，甚至结果会收敛到伪吸引子上。
 
-### 连续型 Hopfield 神经网络
+## 连续型 Hopfield 神经网络
 
-#### 网络结构
+### 网络结构
 
 连续型 Hopfield 网络相比于离散型 Hopfield 网络的主要差别在于：
 
@@ -413,7 +413,7 @@ $$`
 
 可以得出，随着网络的演变，网络的总能量是降低的，随着网络中节点的不断变化，网络最终收敛到一个稳定的状态。
 
-#### TSP 问题求解
+### TSP 问题求解
 
 旅行推销员问题 (Travelling salesman problem, TSP) 是指给定一系列城市和每对城市之间的距离，求解访问每一座城市一次并回到起始城市的最短路径 [^tsp]。TSP 问题是一个 NP-hard 问题 [^np-hard]。
 
@@ -741,9 +741,9 @@ print(best_tsp_solution_path_p)
 
 ![](/images/cn/2018-01-17-ising-hopfield-and-rbm/tsp-best-solution-path.png)
 
-## 受限的玻尔兹曼机 (RBM)
+# 受限的玻尔兹曼机 (RBM)
 
-### 网络结构及其概率表示
+## 网络结构及其概率表示
 
 **受限的玻尔兹曼机** (Restricted Boltzmann Machine, RBM) 或**簧风琴** (harmonium) 是由 Smolensky 与 1986年在**玻尔兹曼机** (Boltzmann Machine, BM) 基础上提出的一种随机神经网络 (Stochastic Neural Networks) [^smolensky1986information]。受限的玻尔兹曼机对于原始的玻尔兹曼机做了相应的限制，在其网络结构中包含**可见节点**和**隐藏节点**，并且**可见节点**和**隐藏节点**内部不允许存在连接，更加形象的可以将其理解为一个二分图。
 
@@ -853,7 +853,7 @@ P\left(\boldsymbol{v} | \boldsymbol{h}\right) &= \prod_{i=1}^{n_v}{P\left(v_i | 
 \end{equation}
 $$`
 
-### 模型训练 [^itplus-rbm]
+## 模型训练 [^itplus-rbm]
 
 对于 RBM 模型的训练，假设训练样本集合为 `$S = \left\lbrace{\boldsymbol{v^1}, \boldsymbol{v^2}, ..., \boldsymbol{v^{n_s}}}\right\rbrace$`，其中 `$\boldsymbol{v^i} = \left(v_{1}^{i}, v_{2}^{i}, ..., v_{n_v}^{i}\right), i = 1, 2, ..., n_s$`。则训练 RBM 的目标可以定义为最大化如下似然：
 
@@ -1091,7 +1091,7 @@ $$`
 
 对于模型的评估，最简单的是利用 RBM 模型的似然或对数似然，但由于涉及到归一化因子 `$Z$` 的计算，其复杂度太高。更常用的方式是利用**重构误差** (reconstruction error)，即输入数据和利用 RBM 模型计算得到隐含节点再重构回可见节点之间的误差。
 
-### MNIST 示例
+## MNIST 示例
 
 我们利用经典的 MNIST 数据作为示例，我们利用基于 tensorflow 的扩展包 tfrbm [^tfrbm]。tfrbm 实现了 Bernoulli-Bernoulli RBM 和 Gaussian-Bernoulli RBM 两种不同的 RBM，两者的比较详见 [^hinton2010practical] [^yamashita2014bernoulli]。
 

@@ -27,7 +27,7 @@ images:
   - /images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/jellyfin-movie-info.png
 ---
 
-## 历史尝试
+# 历史尝试
 
 入手 NAS 已经近 5 年的时间了，最初只是用来挂 PT 下载，然后在各种设备上通过 SMB 共享播放上面的视频。后面也尝试在利用 Plex 搭建家庭影音中心，但由于 Plex 的高级功能需要付费也就作罢。今年搬家后整体对各种硬件做了升级，换了软路由，做了基于 AC+AP 的全屋 WiFi，NAS 换了更大的硬盘，客厅和卧室各安装了一个投影机，入了 Apple TV 4K 和 Chromecast with Google TV 4K 两个盒子。购买 Apple TV 时买了有 Infuse 的套餐，果然没有花钱的不是，Infuse 无论是从 UI 还是体验上都算优秀，但由于仅限于苹果生态，且可玩性较差，最终也只是沦为了 Apple TV 上的本地播放器。
 
@@ -35,9 +35,9 @@ images:
 
 在做 Jellyfin 选型时，其吸引我的最大优点就是开源，同时各个平台的客户端也都在官方应用商店有上架，这极大的简化了客户端的安装流程。付费解决方案，例如：Plex，Emby（在 3.5.3 之后闭源），由于有更多资金的支持，肯定在一些方面会优于 Jellyfin。其他的免费解决方案，例如：NAS 自带的 Video Station，Kodi（大学时代就曾在电脑上安装过）等在不同方面也各有差异。关于不同解决方案的一些差异在此就不再做深入探究，有兴趣的同学可以自行 Google，不过也要注意很多文章时间会比较久了，与当下的实际情况会有部分出入。
 
-## 硬件设备
+# 硬件设备
 
-### 服务端设备
+## 服务端设备
 
 | 设备   | 系统    | CPU                                                   | 内存 | 用途                                     | 网络连接   | 位置   |
 | :----- | :------ | :---------------------------------------------------- | :--- | :--------------------------------------- | :--------- | :----- |
@@ -48,7 +48,7 @@ NAS 通过有线网络与主路由直连，虽然主路由网口为 2.5G，但�
 
 NAS 自带的内存为 2G，后面加了一条 4G 的内存扩容到 6G，最初也是计划用 NAS 玩一玩 Docker 的。但碍于 J3355 这颗 CPU 性能一般，运行太多东西给 NAS 的基本功能会带来不小压力，我想这也是群辉官方并没有给 DS418play 这款 NAS 提供 Docker 应用的主要原因吧。软路由当时买了非裸机的丐版，但由于并没有用其做太多事情，空闲内存基本上还有 3.5G 左右，因此为了充分利用 N5105 这颗 CPU，最终决定将需要视频解码这类耗 CPU 的任务交给软路由了。不过买的这款软路由是被动散热，正常待机就干到 60 摄氏度左右了，CPU 占用上来了估计有望突破 100 摄氏度😂。
 
-### 客户端设备
+## 客户端设备
 
 | 设备                         | 系统             | 用途       | 网络/视频连接            | 位置 |
 | :--------------------------- | :--------------- | :--------- | :----------------------- | ---- |
@@ -66,7 +66,7 @@ NAS 自带的内存为 2G，后面加了一条 4G 的内存扩容到 6G，最初
 
 客户端设备几乎覆盖了所有常用的系统，Jellyfin 在各个系统上均提供了客户端，而且可以在官方商店直接安装，这也是最终确认选择 Jellyfin 的关键一点。毕竟服务端搞得再好，客户端安装费劲的不行也是很痛苦的，尤其是在苹果生态中，官方商店的支持会让你泪大喜奔的。
 
-## NAS 准备
+# NAS 准备
 
 由于 Jellyfin 安装在软路由上，因此需要将 NAS 上的媒体文件夹通过 NFS 映射到软路由上，首先需要在 NAS 上配置客户端。进入 NAS，打开 `控制面板`，进入 `文件服务`，确保 `启用 NFS 服务`，最大 NFS 协议选择 `NFSv4.1`：
 
@@ -78,15 +78,15 @@ NAS 自带的内存为 2G，后面加了一条 4G 的内存扩容到 6G，最初
 
 单击 `编辑` 进入共享文件夹设置：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/nas-shared-folder-nfs.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/nas-shared-folder-nfs.png" large-max-width="60%" middle-max-width="80%" >}}
 
 在 `NFS 权限` 标签页单击 `新增` 添加新客户端：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/nas-shared-folder-nfs-new-client.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/nas-shared-folder-nfs-new-client.png" large-max-width="60%" middle-max-width="80%" >}}
 
 相关配置如图所示，其中 `服务器名称或 IP 地址` 为客户端 IP 地址（即软路由 IP 地址）。依次为所有需要共享的文件夹进行相同配置。
 
-## OpenWrt 准备
+# OpenWrt 准备
 
 软路由自带了 128G 的 NVME 固态硬盘，系统采用了 eSir 编译的高大全版本。为了后续安装扩展包和 Docker，对硬盘重新进行分区。
 
@@ -159,11 +159,11 @@ cp -R /overlay/* /mnt/nvme0n1p3/
 
 以上完成后，进入 OpenWrt 管理后台，在 `系统 > 挂载点` 菜单的 `挂载点` 处，单击 `添加` 按钮添加挂载点，将 `/dev/nvme0n1p3` 挂载为 `/overlay`，将 `/dev/nvme0n1p4` 挂载为 `/opt`，将 `/dev/nvme0n1p5` 挂载为 `/data`：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-overlay.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-overlay.png" large-max-width="60%" middle-max-width="80%" >}}
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-docker.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-docker.png" large-max-width="60%" middle-max-width="80%" >}}
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-data.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/mount-data.png" large-max-width="60%" middle-max-width="80%" >}}
 
 单击 `保存&应用` 后重启路由器，重启完毕后在命令行输入 `df -h` 可以看出所有分区均成功挂载：
 
@@ -210,13 +210,13 @@ mount.nfs -w 192.168.5.10:/volume4/Disk4 /data/docker/jellyfin/media/nas/disk4 -
 
 为了保证每次启动软路由时能够自动挂载，请将上述内容添加至 `系统 > 启动项` 菜单下的 `本地启动脚本` 文本框的 `exit 0` 之前：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/startup-script.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/startup-script.png" large-max-width="60%" middle-max-width="80%" >}}
 
-## Jellyfin 部署
+# Jellyfin 部署
 
 在 OpenWrt 上安装 Jellyfin 需要使用 Docker 进行部署。首先在 `Docker > 镜像` 菜单的 `拉取镜像` 处填写 `jellyfin/jellyfin:latest`，然后单击 `拉取`：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-pull.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-pull.png" large-max-width="60%" middle-max-width="80%" >}}
 
 拉取完毕后即可在 `镜像概览` 处查看已下载的镜像：
 
@@ -282,7 +282,7 @@ docker run -d \
 
 在控制台中输入如下命令安装中文字体：
 
-![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-cmd.png)
+{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-cmd.png" large-max-width="60%" middle-max-width="80%" >}}
 
 ```bash
 apt update
@@ -291,7 +291,7 @@ apt install fonts-noto-cjk-extra
 
 以防止在 Jellyfin 中出现中文无法正常显示的问题。
 
-## Jellyfin 配置
+# Jellyfin 配置
 
 通过 `http://192.168.5.1:8096` 进入 Jellyfin，`首选显示语言` 选择 `汉语（简化字）`：
 
@@ -338,13 +338,13 @@ apt install fonts-noto-cjk-extra
 
 ![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/jellyfin-hardware-acceleration.png)
 
-{{% blockquote type="caution" %}}
+{{% admonition type="tip" title="" %}}
 根据[官方文档](https://jellyfin.org/docs/general/administration/hardware-acceleration/#intel-gen9-and-gen11-igpus)说明，针对部分 CPU（例如：N5105）需要勾选 `启用低电压模式的 Intel H.264 硬件编码器`以确保硬件加速正常工作。
-{{% /blockquote %}}
+{{% /admonition %}}
 
 在 `服务器 > 播放` 菜单中，勾选 `启用备用字体`，将 `备用字体文件路径` 设置为 `/config/fonts`。在 `/config/fonts` 目录中放置相关字体以确保 ASS/SSA 字幕可以正常渲染。
 
-## TMM 刮削
+# TMM 刮削
 
 tinyMediaManager 是一个用 Java/Swing 编写的媒体管理工具，它可以为多种媒体服务器提供元数据。TMM 提供了多个平台的客户端，但为了多客户端刮削时数据共享，本例也使用 Docker 进行安装。
 
@@ -399,15 +399,15 @@ docker run -d \
 
 根据向导进行配置，设置中文界面后需要重启容器生效。
 
-{{% blockquote type="caution" %}}
+{{% admonition type="warning" title="" %}}
 PT 用户注意，**不要**开启任何自动重命名，**不要**将 NFO 保存为与媒体文件相同的文件名，避免覆盖原始内容从而导致做种错误。
-{{% /blockquote %}}
+{{% /admonition %}}
 
 根据个人喜好配置好 TMM 后即可对媒体文件进行刮削了，在此不再详细展开刮削过程。由于原始文件的命名可能导致自动获取的信息有误，因此建议对每一个媒体文件刮削结果进行人工复核。
 
-{{% blockquote %}}
+{{% admonition type="tip" title="" %}}
 Docker 版本 TMM 不支持输入中文，在通过 `Clipboard` 内外传输剪切板时中文也会出现乱码，且目前暂时无法修复。
-{{% /blockquote %}}
+{{% /admonition %}}
 
 4.0 之后版本的 TMM 免费版不再支持自动下载字幕，由于 TMM 采用 [Open Subtitles](https://www.opensubtitles.org/)，对于有需要双语字幕和特效字幕的同学并不友好。建议还是自行手动下载字幕并放置在媒体文件中，在此提供几个不错的字幕下载网站：
 
@@ -415,7 +415,7 @@ Docker 版本 TMM 不支持输入中文，在通过 `Clipboard` 内外传输剪�
 - SubHD：[https://subhd.tv/sub/new](https://subhd.tv/sub/new)
 - 字幕组（需注册）：[https://www.yysub.net/subtitle](https://www.yysub.net/subtitle)
 
-## 测试
+# 测试
 
 经过 TMM 刮削后，Jellyfin 即可自动识别元数据，示例电影的详细信息如下如所示：
 

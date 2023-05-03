@@ -70,7 +70,7 @@
 
     donateModelWrapper.classList.toggle('donate-modal-wrapper-show');
 
-    donateBoxMoneyButtonID = '#donate-box-money-button-' + donateMoney;
+    let donateBoxMoneyButtonID = '#donate-box-money-button-' + donateMoney;
     d.querySelector(donateBoxMoneyButtonID).click();
   }
 

@@ -28,11 +28,11 @@ images:
   - /images/cn/2018-11-18-computational-complexity-and-dynamic-programming/shortest-path.png
 ---
 
-## 计算复杂性
+# 计算复杂性
 
 **计算复杂性 (Computational Complexity)** 是用于对一个问题求解所需的资源 (通常为 **空间** 和 **时间**) 的度量。在评估一个算法的时候，除了算法本身的准确性以外，同时需要关注算法运行的时间以及占用的内存，从而根据实际情况选择合适的算法。
 
-### 函数的增长
+## 函数的增长
 
 计算复杂性中的空间和时间的评估方法类似，在此我们更多的以时间复杂度为例。算法的运行时间刻画了算法的效率，对于一个输入规模为 `$n$` 的问题，定义一个算法求解该问题 **最坏情况** 下的运行时间为 `$T \left(n\right)$`，我们可以使用一些 **渐进记号** 更加方便地对其进行描述。
 
@@ -66,9 +66,9 @@ $$`
 
 根据上面的三个渐进记号，不难证明如下定理：
 
-{{% blockquote %}}
-**定理 1** 对于任意两个函数 `$f \left(n\right)$` 和 `$g \left(n\right)$`，有 `$f \left(n\right) = \Theta \left(g \left(n\right)\right)$`，当且仅当 `$f \left(n\right) = O \left(g \left(n\right)\right)$` 且 `$f \left(n\right) = \Omega \left(g \left(n\right)\right)$`。
-{{% /blockquote %}}
+{{% admonition title="**定理 1**" no-icon=true %}}
+对于任意两个函数 `$f \left(n\right)$` 和 `$g \left(n\right)$`，有 `$f \left(n\right) = \Theta \left(g \left(n\right)\right)$`，当且仅当 `$f \left(n\right) = O \left(g \left(n\right)\right)$` 且 `$f \left(n\right) = \Omega \left(g \left(n\right)\right)$`。
+{{% /admonition %}}
 
 - **`$o$` 记号**
 
@@ -86,7 +86,7 @@ $$`
 \omega \left(g \left(n\right)\right) = \left\{f \left(n\right): \forall c > 0, \exists n_0 > 0, s.t. \forall n \geq n_0, 0 \leq c g \left(n\right) < f \left(n\right)\right\}
 $$`
 
-### NP 完全性
+## NP 完全性
 
 计算问题可以按照在不同计算模型下所需资源的不同予以分类，从而得到一个对算法问题“难度”的类别，这就是复杂性理论中复杂性类概念的来源 [^wikipedia-computational-complexity-theory]。对于输入规模为 `$n$` 的问题，一个算法在最坏情况下的运行时间为 `$O \left(n^k\right)$`，其中 `$k$` 为一个确定的常数，我们称这类算法为 **多项式时间的算法**。
 
@@ -117,7 +117,7 @@ NPH 类问题定义为所有的 NP 类问题都可以通过多项式时间归约
 
 ![](/images/cn/2018-11-18-computational-complexity-and-dynamic-programming/p-np-np-complete-np-hard.svg)
 
-## 动态规划
+# 动态规划
 
 **动态规划 (Dynamic Programming, DP)** 算法通常基于一个递归公式和一个或多个初始状态，并且当前子问题的解可以通过之前的子问题构造出来。动态规划算法求解问题的时间复杂度仅为多项式复杂度，相比其他解法，例如：回溯法，暴利破解法所需的时间要少。动态规划中的 “Programming” 并非表示利用计算机编程，而是一种表格法。动态规划对于每个子问题只求解一次，将解保存在一个表格中，从而避免不必要的重复计算。
 
@@ -136,7 +136,7 @@ NPH 类问题定义为所有的 NP 类问题都可以通过多项式时间归约
 
 两种方法具有相同的渐进运行时间，在某些特殊的情况下，自顶向下的方法并未真正递归地考虑所有可能的子问题；自底向上的方法由于没有频繁的递归调用，时间复杂性函数通常具有更小的系数。
 
-### 背包问题
+## 背包问题
 
 **背包问题 (Knapsack problem)** 是一种组合优化的 NPC 类问题。问题可以描述为：给定一组物品，每种物品都有自己的重量和价值，在限定的总重量内，合理地选择物品使得总价值最高。
 
@@ -174,7 +174,7 @@ $$`
 
 其中，NA 表示未选取任何物品，单元格上部括号中的为选取物品的编号，单元格下部分别为选取物品的总重量和总价值。
 
-### 最长公共子序列与最长公共子串
+## 最长公共子序列与最长公共子串
 
 给定一个序列 `$X = \left\{x_1, x_2, \dotsc, x_m\right\}$`，另一个序列 `$Z = \left\{z_1, z_2, \dotsc, z_k\right\}$` 在满足如下条件时称其为 `$X$` 的一个 **子序例 (Subsequence)**，即存在一个严格递增的 `$X$` 的下标序列 `$\left\{i_1, i_2, \dotsc, i_k\right\}$`，对于所有的 `$j = 1, 2, \dotsc, k$`，满足 `$x_{i_j} = z_j$`。给定两个序例 `$X$` 和 `$Y$`，如果 `$Z$` 既是 `$X$` 的子序列，也是 `$Y$` 的子序列，则称它为 `$X$` 和 `$Y$` 的 **公共子序列 (Common Subsequence)**。**最长公共子序列 (Longest Common Subsequence)** 问题为给定两个序列 `$X = \left\{x_1, x_2, \dotsc, x_m\right\}$` 和 `$Y = \left\{y_1, y_2, \dotsc, y_n\right\}$`，求 `$X$` 和 `$Y$` 最长的公共子序列。
 
@@ -223,7 +223,7 @@ $$`
 
 利用动态规划可以在 `$\Theta \left(nm\right)$` 的时间复杂度内求解，利用广义后缀树 [^wikipedia-suffix-tree] 可以进一步降低问题求解的时间复杂度 [^wikipedia-longest-common-substring-problem]。
 
-### Floyd-Warshall 算法
+## Floyd-Warshall 算法
 
 **Floyd-Warshall 算法** 是一种求解任意两点之间 **最短路** 的算法，相比 **Dijkstra 算法** [^wikipedia-dijkstra-algorithm]，Floyd-Warshall 算法可以处理有向图或负权图 (但不可以存在负权回路) 的情况 [^wikipedia-floyd-warshall-algorithm]。
 
@@ -311,7 +311,9 @@ Floyd-Warshall 算法的求解伪代码如下所示：
 \end{algorithm}
 {{< /pseudocode >}}
 
-> 文章部分内容参考了 Thomas H. Cormen 等人的《算法导论》
+{{% admonition %}}
+文章部分内容参考了 Thomas H. Cormen 等人的《算法导论》
+{{% /admonition %}}
 
 [^wikipedia-computational-complexity-theory]: <https://zh.wikipedia.org/zh/计算复杂性理论>
 
