@@ -1,0 +1,31 @@
+{{ if not ($.Page.Scratch.Get "admonition") }}
+<link rel="stylesheet" href="/css/admonition.css" />
+{{ .Page.Scratch.Add "admonition" 1 }}
+{{ end }}
+
+{{ $lang := "cn" }}
+{{ if (eq $.Page.Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
+{{ $type := .Get "type" | default "note" }}
+{{ $noIcon := .Get "no-icon" | default false }}
+{{ $foldable := .Get "foldable" | default false }}
+{{ $close := .Get "close" | default false }}
+{{ $hasTitle := and (ne .Params nil) (isset .Params "title") }}
+{{ $title := .Get "title" | default (index (index $.Site.Params.lang.admonition $type) $lang ) }}
+
+{{ if (eq $foldable true) }}
+<details
+  class="admonition admonition-{{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai"
+  {{ if (ne $close true) }}open="open"{{ end }}>
+  <summary>{{ $title | markdownify }}</summary>
+  <div class="admonition-content">{{ .Inner | markdownify }}</div>
+</details>
+{{ else }}
+<div class="admonition admonition-{{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai">
+  {{ if $hasTitle }}
+  <p class="admonition-title">{{ $title | markdownify }}</p>
+  {{ end }}
+  <div class="admonition-content">{{ .Inner | markdownify }}</div>
+</div>
+{{ end }}

@@ -1,5 +1,5 @@
 baseURL: "https://leovan.me/"
-languageCode: "en-us"
+languageCode: "zh-cn"
 title: "范叶亮 | Leo Van"
 googleAnalytics: "G-RJC7CCKE67"
 ignoreFiles: [
@@ -86,7 +86,7 @@ params:
   licenseURL: "https://github.com/leovan/leovan.me/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
 
-  jsCookieVersion: "3.0.0"
+  jsCookieVersion: "3.0.5"
   jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   clipboardjsVersion: "2.0.11"
@@ -106,7 +106,7 @@ params:
   jQueryVersion: "3.6.4"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
-  videojsVersion: "8.2.1"
+  videojsVersion: "8.3.0"
   videojsCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   APlayerVersion: "1.10.1"
@@ -149,6 +149,43 @@ params:
     wordcount:
       cn: "字数"
       en: "Word Count"
+    admonition:
+      note:
+        cn: "注意"
+        en: "Note"
+      abstract:
+        cn: "摘要"
+        en: "Abstract"
+      info:
+        cn: "信息"
+        en: "Info"
+      tip:
+        cn: "提示"
+        en: "Tip"
+      success:
+        cn: "成功"
+        en: "Success"
+      question:
+        cn: "问题"
+        en: "Question"
+      warning:
+        cn: "警告"
+        en: "Warning"
+      failure:
+        cn: "失败"
+        en: "Failure"
+      danger:
+        cn: "危险"
+        en: "Danger"
+      bug:
+        cn: "错误"
+        en: "Bug"
+      example:
+        cn: "示例"
+        en: "Example"
+      quote:
+        cn: "引用"
+        en: "Quote"
     prismjs_copy:
       cn: "复制"
       en: "Copy"
@@ -193,3 +230,4 @@ markup:
       autoHeadingIDType: blackfriday
   tableOfContents:
     startLevel: 1
+    endLevel: 4
