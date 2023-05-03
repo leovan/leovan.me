@@ -1,12 +1,44 @@
+:root {
+  --details-summary-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42Z"/></svg>');
+}
+
 details summary {
-  width: 100%;
-  padding: 0.5em 0;
+  padding: 0.5em 1.6em 0.5em 0;
   border-top: 1px solid var(--block-border);
   border-bottom: 1px solid var(--block-border);
   position: relative;
   cursor: pointer;
   font-weight: bold;
   list-style: none;
+}
+
+details summary::marker, details summary::-webkit-details-marker {
+  display: none
+}
+
+details summary::after {
+  content: "";
+  color: var(--body-fg);
+  background-color: var(--body-fg);
+  -webkit-mask-image: var(--details-summary-icon);
+  mask-image: var(--details-summary-icon);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  transform: rotate(0deg);
+  transition: transform .25s;
+}
+
+details[open] summary::after {
+  transform: rotate(90deg)
 }
 
 details[open] summary {
@@ -26,26 +58,10 @@ details[open] .detail-content {
   opacity: 1;
 }
 
-details summary .summary-title {
-  user-select: none;
-}
-
-details summary .summary-icon {
-  pointer-events: none;
-  position: absolute;
-  margin: auto;
-  right: 0;
-  top: 0.6em;
-}
-
-details[open] summary .summary-icon {
-  transform: rotate(180deg);
-  top: 0;
-}
-
 details .detail-content .code-toolbar pre {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  border-radius: 0;
 }
 
 details .detail-content .code-toolbar pre code {
