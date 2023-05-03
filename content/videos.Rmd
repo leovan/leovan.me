@@ -12,7 +12,7 @@ disable_mathjax: true
 disable_prismjs: true
 ---
 
-## 「共鸣，情愫，观念，认知，体验，情怀」
+<h2 class="center no-anchor">「共鸣，情愫，观念，认知，体验，情怀」</h2>
 
 ```{r setup, include=F}
 library(plyr)
@@ -44,7 +44,7 @@ video_list <- read_tsv(
 
 video_table <- function(videos) {
     which_year <- gen_which_year(videos[1, ]$release_date)
-    header_ <- paste0("<h2>", which_year, "</h2>")
+    header_ <- paste0('<h2 class="center no-anchor">', which_year, "</h2>")
     table_ <- videos |>
         arrange(desc(release_date), directors, title) |>
         select(c("imdb_id_html", "douban_id_html",
@@ -54,26 +54,26 @@ video_table <- function(videos) {
         kable("html", escape = F, table.attr = "class=\"video-table\"") |>
         clean_html_table()
     footer_ <- "<br/>"
-    
+
     tibble(table_ = paste0(header_, table_, footer_))
 }
 
 split_top_n_concat <- function(string, pattern, n) {
     res <- NA
-    
+
     if (!is.na(string)) {
         res <- string |>
             str_split(pattern, simplify = T) |>
             as.character() |>
             head(n)
-        
+
         if (n != length(str_split(string, pattern, simplify = T))) {
             res <- c(res, " ...")
         }
-        
+
         res <- paste(res, collapse = pattern)
     }
-    
+
     res
 }
 split_top_n_concat <- Vectorize(split_top_n_concat)

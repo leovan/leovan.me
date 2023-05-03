@@ -12,6 +12,6 @@ disable_mathjax: true
 disable_prismjs: true
 ---
 
-## 「人生定格」
+<h2 class="center no-anchor"> 「人生定格」</h2>
 
 {{< nanogallery2-tags-gallery data-base-url="/data/photography" tags="2023,2022,2021,2020,2019,2018,2017,2016" >}}

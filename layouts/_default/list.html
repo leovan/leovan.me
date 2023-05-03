@@ -5,7 +5,7 @@
 {{ else }}
 <div class="archive">
   {{ range .Pages.GroupByDate "2006" }}
-  <h2 class="archive-title">{{ .Key }}</h2>
+  <h1 class="archive-title">{{ .Key }}</h1>
   {{ range .Pages }}
   <p class="list-page">
     <span>{{ .Date.Format "2006-01-02" }}</span>

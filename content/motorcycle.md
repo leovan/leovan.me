@@ -12,6 +12,6 @@ disable_mathjax: true
 disable_prismjs: true
 ---
 
-## 「我为你翻山越岭，却无心看风景」
+<h2 class="center no-anchor"> 「我为你翻山越岭，却无心看风景」</h2>
 
 {{< nanogallery2-tags-gallery data-base-url="/data/motorcycle" tags="2023,2022,2021" >}}

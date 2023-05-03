@@ -12,6 +12,6 @@ disable_mathjax: true
 disable_prismjs: true
 ---
 
-## 「唯有爱与美食，不可辜负。」
+<h2 class="center no-anchor">  「唯有爱与美食，不可辜负。」</h2>
 
 {{< nanogallery2-tags-gallery data-base-url="/data/cooking" tags="2022,2020,2019,2017,2015" >}}

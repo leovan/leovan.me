@@ -339,6 +339,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.string {
   color: var(--code-string);
+  background: none !important;
 }
 
 .token.symbol {
@@ -355,7 +356,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.url {
   color: var(--code-url);
-  background: none;
+  background: none !important;
 }
 
 .token.variable {
@@ -456,25 +457,21 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 28px;
-  font-weight: bold;
   text-align: center;
 }
 
 h2 {
   font-size: 24px;
-  font-weight: bold;
   text-align: left;
 }
 
 h3 {
   font-size: 20px;
-  font-weight: bold;
   text-align: left;
 }
 
 h4, h5, h6 {
   font-size: 16px;
-  font-weight: bold;
   text-align: left;
 }
 
@@ -703,6 +700,7 @@ body {
 /* main */
 .title {
   margin-top: 0;
+  font-size: 32px;
 }
 
 .subtitle, .author-date {
@@ -1030,7 +1028,6 @@ kbd:active kbd {
 /* anchor */
 .anchor {
   margin-left: 4px;
-  vertical-align: middle;
 }
 
 .anchor a {
@@ -1039,6 +1036,7 @@ kbd:active kbd {
 
 .anchor a svg {
   opacity: 0.4;
+  vertical-align: middle;
 }
 
 .anchor a:hover svg {
@@ -1048,6 +1046,10 @@ kbd:active kbd {
 /* others */
 .hidden {
   display: none;
+}
+
+.center {
+  text-align: center;
 }
 
 p.list-page {
@@ -1093,19 +1095,11 @@ p.list-page span {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 2em auto 1.5em auto;
+    margin: 32px auto;
   }
 
   .logo {
     background-position: center;
-  }
-
-  .content-head h2, .content-head h3 {
-    margin: 1.5em auto;
-  }
-
-  .content-head h1 {
-    margin: 1em auto 0 auto;
   }
 
   .masthead {
@@ -1208,6 +1202,10 @@ p.list-page span {
 
   .masthead .menu .menu-separator {
     display: none;
+  }
+
+  .title {
+    margin-top: 32px;
   }
 
   #theme-toggle-icon::before {

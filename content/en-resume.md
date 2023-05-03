@@ -14,30 +14,30 @@ disable_prismjs: true
 
 <p><!-- disable capitalize the first letter --></p>
 
-## Fan Yeliang (Leo Van)
+# Fan Yeliang (Leo Van)
 
-## <span class="mdi mdi-bullseye-arrow"></span> Research Interest
+# <span class="mdi mdi-bullseye-arrow"></span> Research Interest
 
 - I am working on application of **data science** in **security and risk**.
 - Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
-## <span class="mdi mdi-school-outline"></span> Education
+# <span class="mdi mdi-school-outline"></span> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
 - 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
-## <span class="mdi mdi-account-group-outline"></span> Work Experiences
+# <span class="mdi mdi-account-group-outline"></span> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
-## <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
+# <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
 
-### Security & Risk
+## Security & Risk
 
 _2020.08 ~ Present, Risk Data Mining Expert_
 
-### Intelligent Agriculture
+## Intelligent Agriculture
 
 _2019.07 ~ 2020.08, Algorithm & Product Leader_
 
@@ -45,7 +45,7 @@ _2019.07 ~ 2020.08, Algorithm & Product Leader_
 - **Intelligent Environmental Control**: Design and development of intelligent environmental control algorithms and solutions based on time series analysis, deep learning and reinforcement learning. The intelligent environmental control algorithm consists two parts: environment models and control models. It realizes the reuse of models for same crop and livestock in different environments. With the expert knowledge engine and machine learning algorithms, the control error of various environmental indicators has been reduced by **50%+** compared with the farmers while keep the regular yield of vegatable, and total average cost (including water, electricity, fertilizer and etc.) is reduced by **20%+**. In the 24-hour Hackathon simulation challenge of the 2019 International Autonomous Greenhouse Challenge, we achieved **4/21** of artificial intelligence strategy methods and **9/21** of net profit in virtual tomato planting.
 - **Intelligent Eggs Collection**: Design and development of an intelligent eggs collection device and algorithm based on computer vision and sensors. During the eggs collection process in cage raising mode, with the data collected by cameras and sensors, it achieves the eggs counting and the belonged cages identification with accuracy of **99%+**. Through the belonged cages identification, it is possible to analyze egg-feed ratio accurately, providing strong data support for hens elimination and a more detailed data source for eggs traceability.
 
-### Daat (Complex Network & Knowledge Graph)
+## Daat (Complex Network & Knowledge Graph)
 
 _2018.04 ~ 2019.06, Project Leader_
 
@@ -54,7 +54,7 @@ _2018.04 ~ 2019.06, Project Leader_
 - **Large Scale Heterogeneous Network Embedding**: Development of large scale (**ten millions of vertexes and hundred millions of edges**) heterogeneous network embedding algorithm. We implement the algorithm based on meta-path with rich business meanings, and provide the embedding results as features for other business models, including risk management, marketing and recommendation.
 - **Recommendation and Marketing based on User Network and User Behavior**: Leveraging historical orders, we build a large heterogeneous network of users which contains users, address, goods, and etc. With the embedding results of this network, we develop an algorithm for candidates generation of recommendation, which achieves **20%+ improvement** compared with traditional methods.
 
-### All Seeing Eyes (Chinese Address Analytics)
+## All Seeing Eyes (Chinese Address Analytics)
 
 _2015.04 ~ 2018.04, Project Leader_
 
@@ -65,48 +65,48 @@ _2015.04 ~ 2018.04, Project Leader_
 - Development of **Enterprise Address Profile System** based on the basic algorithm engine which serves for internal and external users with offline data and realtime query service on [**JD Enterprise Credit**](https://icredit.jd.com/).
 - Development of **Rural Finance Service Station Location Selection Models** based on the Address Profile System and rural finance business. It provides decision support for offline rural finance service station selection.
 
-### User Behavior Analytics
+## User Behavior Analytics
 
 _2017.10 ~ 2017.12, Algorithms Engineer_
 
 - Development of a user behavior representation method named on Behavior2Vec. Based on hierarchical clustering and depth search, a hybrid model for identifying user abnormal behavior is proposed. Compared with Bag of Words and N-GRAM methods, the number of abnormal users identified is **3+ times** of traditional methods.
 
-### Mortgage Loan
+## Mortgage Loan
 
 _2015.04 ~ 2015.10, Algorithms Engineer_
 
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-## <span class="mdi mdi-cog-outline"></span> Skills
+# <span class="mdi mdi-cog-outline"></span> Skills
 
-### Programing Languages
+## Programing Languages
 
 - R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
 - JavaScript/TypeScript/CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
-### Frameworks
+## Frameworks
 
 - PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - Spark: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 - React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
 
-### Foreign Languages
+## Foreign Languages
 
 - English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
-## <span class="mdi mdi-seal-variant"></span> Research Achievements
+# <span class="mdi mdi-seal-variant"></span> Research Achievements
 
-### Papers
+## Papers
 
 1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. (2018). A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _2018 International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
 2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
 3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://cdn.leovan.me/documents/publications/IEAF.pdf). _Unpublished_.
 
-### Patents
+## Patents
 
 1. A kind of Chinese address segmenting method and system ([CN 105159949](https://patents.google.com/patent/CN105159949B/en), 2015)
 2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239B/en), 2016)
@@ -114,7 +114,7 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 4. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235B/en), 2019)
 5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
 
-### Technical Projects
+## Technical Projects
 
 - **Technical Website**: [https://leovan.tech](https://leovan.tech)
 - **Github**: [https://github.com/leovan](https://github.com/leovan) ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
@@ -127,6 +127,6 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 6. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 7. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
-<h2><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
+<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
 <p style="text-align: right;">Updated on: 2023-04-01</p>

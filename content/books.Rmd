@@ -12,7 +12,7 @@ disable_mathjax: true
 disable_prismjs: true
 ---
 
-## 「读书，不是非做不可的事，而是想要去做的事。」
+<h2 class="center no-anchor"> 「读书，不是非做不可的事，而是想要去做的事。」</h2>
 
 ```{r setup, include=F}
 library(plyr)
@@ -43,7 +43,7 @@ book_list <- read_tsv(
 
 book_table <- function(books) {
     which_year <- gen_which_year(books[1, ]$purchasing_date)
-    header_ <- paste0("<h2>", which_year, "</h2>")
+    header_ <- paste0('<h2 class="center no-anchor">', which_year, "</h2>")
     table_ <- books |>
         arrange(desc(purchasing_date), author, title) |>
         select(c("douban_id_html", "isbn", "title_html", "author",
@@ -53,7 +53,7 @@ book_table <- function(books) {
         kable("html", escape = F, table.attr = "class=\"book-table\"") |>
         clean_html_table()
     footer_ <- "<br/>"
-    
+
     tibble(table_ = paste0(header_, table_, footer_))
 }
 
