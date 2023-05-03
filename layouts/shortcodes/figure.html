@@ -1,4 +1,12 @@
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-  <img data-src="{{ or (.Get "src") (.Get "image") }}" class="lazyload"/>
-  {{ with or (.Get "title") (.Get "caption") }}<figcaption class="kai">{{ . | markdownify }}</figcaption>{{ end }}
+  <img
+    class="lazyload"
+    data-src="{{ or (.Get "src") (.Get "image") }}"
+    data-large-max-width="{{ or (.Get "large-max-width") (.Get "middle-max-width") | default "100%" }}"
+    data-middle-max-width="{{ .Get "middle-max-width" | default "100%" }}"
+    data-small-max-width="{{ .Get "small-max-width" | default "100%" }}"
+  />
+  {{ with or (.Get "title") (.Get "caption") }}
+  <figcaption class="kai">{{ . | markdownify }}</figcaption>
+  {{ end }}
 </figure>
