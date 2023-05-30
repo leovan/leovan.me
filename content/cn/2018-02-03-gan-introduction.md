@@ -144,7 +144,7 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 
 ## MNIST 示例
 
-我们利用 MNIST 数据集测试原始的 GAN 模型的效果，代码主要参考了 [`Keras-GAN`](https://github.com/eriklindernoren/Keras-GAN)，最终实现代码详见 [`image_gan_keras.py`](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-02-03-gan-introduction/image_gan_keras.py)，我们简单对其核心部分进行说明。
+我们利用 MNIST 数据集测试原始的 GAN 模型的效果，代码主要参考了 [`Keras-GAN`](https://github.com/eriklindernoren/Keras-GAN)，最终实现代码详见 [`image_gan_keras.py`](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-02-03-gan-introduction/image_gan_keras.py)，我们简单对其核心部分进行说明。
 
 - 生成器
 
@@ -317,7 +317,7 @@ DCGAN (Deep Convolutional GAN) 是由 Radford [^radford2015unsupervised] 等人�
 - 在生成器中使用 ReLU 激活函数，最后一层使用 Tanh 激活函数。
 - 在判别器中使用 LeakyReLU 激活函数。
 
-我们利用 MNIST 数据集测试 DCGAN 模型的效果，最终实现代码详见 [`image_dcgan_keras.py`](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-02-03-gan-introduction/image_dcgan_keras.py)。训练过程中判别器和生成器的损失的变化，以及判别器的准确率的变化，如下图所示：
+我们利用 MNIST 数据集测试 DCGAN 模型的效果，最终实现代码详见 [`image_dcgan_keras.py`](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-02-03-gan-introduction/image_dcgan_keras.py)。训练过程中判别器和生成器的损失的变化，以及判别器的准确率的变化，如下图所示：
 
 ![](/images/cn/2018-02-03-gan-introduction/mnist-dcgan-keras-train-history.png)
 

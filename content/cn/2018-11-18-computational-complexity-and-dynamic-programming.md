@@ -162,7 +162,7 @@ d_{i - 1, w}, & w < w_i \\
 \end{cases}
 $$`
 
-一个 0-1 背包问题的具体示例如下：背包承受的最大重量 `$W = 10$`，共有 `$n = 5$` 种物品，编号分别为 `$A, B, C, D, E$`，重量分别为 `$2, 2, 6, 5, 4$`，价值分别为 `$6, 3, 5, 4, 6$`，利用 BP 求解该问题，不同 `$i, w$` 情况下的状态如下表所示 (计算过程详见 [这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-11-18-computational-complexity-and-dynamic-programming/0-1-knapsack-dp.py))：
+一个 0-1 背包问题的具体示例如下：背包承受的最大重量 `$W = 10$`，共有 `$n = 5$` 种物品，编号分别为 `$A, B, C, D, E$`，重量分别为 `$2, 2, 6, 5, 4$`，价值分别为 `$6, 3, 5, 4, 6$`，利用 BP 求解该问题，不同 `$i, w$` 情况下的状态如下表所示 (计算过程详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-11-18-computational-complexity-and-dynamic-programming/0-1-knapsack-dp.py))：
 
 | i \\ w | 1    | 2               | 3               | 4                  | 5                  | 6                   | 7                   | 8                      | 9                      | 10                      |
 | :----: | :--: | :-------------: | :-------------: | :----------------: | :----------------: | :-----------------: | :-----------------: | :--------------------: | :--------------------: | :---------------------: |
@@ -194,7 +194,7 @@ c_{i - 1, j - 1} + i, & x_i = y_j \\
 \end{cases}
 $$`
 
-例如：给定序列 `$X = \left\{A, B, C, B, D, A, B\right\}$` 和序列 `$Y = \left\{B, D, C, A, B, A\right\}$`，不同状态下最长公共子序列如下表所示 (计算过程详见 [这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-11-18-computational-complexity-and-dynamic-programming/longest-common-subsequence-dp.py))：
+例如：给定序列 `$X = \left\{A, B, C, B, D, A, B\right\}$` 和序列 `$Y = \left\{B, D, C, A, B, A\right\}$`，不同状态下最长公共子序列如下表所示 (计算过程详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-11-18-computational-complexity-and-dynamic-programming/longest-common-subsequence-dp.py))：
 
 |       | `$j$`   |   0     |   1       |   2       |   3       |   4       |   5       |   6       |
 | :---: | :-----: | :-----: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: |

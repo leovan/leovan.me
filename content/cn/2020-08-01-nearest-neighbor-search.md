@@ -206,7 +206,7 @@ Multi-probe LSH [^lv2007multiprobe] 引入了一种新的策略解决召回的�
 
 {{< figure src="/images/cn/2020-08-01-nearest-neighbor-search/lena-vq.png" >}}
 
-当 `$k = 100$` 时，压缩后的图像和原始图像已经非常接近了，相关代码请参见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2020-08-01-nearest-neighbor-search/vector-quantization.py)。
+当 `$k = 100$` 时，压缩后的图像和原始图像已经非常接近了，相关代码请参见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2020-08-01-nearest-neighbor-search/vector-quantization.py)。
 
 矢量量化以乘积量化（Product Quantization，PQ）最为典型，乘积量化的核心思想还是聚类，乘积量化生成码本和量化过程如下图所示：
 

@@ -243,7 +243,7 @@ Taxi-v3 的成绩排行榜可参见 [这里](https://github.com/openai/gym/wiki/
 
 {{< figure src="/images/cn/2020-07-11-model-free-policy-prediction-and-control-temporal-difference-learning/taxi-v3-evaluation.gif" >}}
 
-本文示例代码实现请参见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2020-07-11-model-free-policy-prediction-and-control-temporal-difference-learning/)。
+本文示例代码实现请参见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2020-07-11-model-free-policy-prediction-and-control-temporal-difference-learning/)。
 
 [^sutton2018reinforcement]: Sutton, R. S., & Barto, A. G. (2018). _Reinforcement learning: An introduction_. MIT press.
 

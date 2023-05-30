@@ -291,7 +291,7 @@ SNE, t-SNE  | 1. 非线性降维效果相较上述方法较好 | 1. 大规模高
 
 ![](/images/cn/2018-03-16-manifold-learning/severed-sphere.png)
 
-文中相关图片绘制实现详见[代码](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-03-16-manifold-learning)，本文部分内容参考了**流形学习专题介绍** [^wangruiping]， **流形学习** [^hexiaofei]，**Chrispher** [^chrispher] 的博客和 **bingo** [^bindog] 的博客。
+文中相关图片绘制实现详见[代码](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-03-16-manifold-learning)，本文部分内容参考了**流形学习专题介绍** [^wangruiping]， **流形学习** [^hexiaofei]，**Chrispher** [^chrispher] 的博客和 **bingo** [^bindog] 的博客。
 
 [^jolliffe1986principal]: Jolliffe, Ian T. "Principal component analysis and factor analysis." _Principal component analysis._ Springer, New York, NY, 1986. 115-128.
 

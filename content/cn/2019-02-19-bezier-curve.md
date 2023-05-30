@@ -96,7 +96,7 @@ $$`
 
 其中，`$Q_0 = \left(1 - t\right) P_0 + t P_1$`，`$R_0 = \left(1 - t\right) Q_0 + t Q_1$`，`$S_0 = \left(1 - t\right) R_0 + t R_1$`，`$B = \left(1 - t\right) S_0 + t S_1$` 为构成贝塞尔曲线的点。
 
-上述图形和动画的绘制代码请参见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2019-02-19-bezier-curve/bezier-curve-images.py)。
+上述图形和动画的绘制代码请参见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2019-02-19-bezier-curve/bezier-curve-images.py)。
 
 # 应用技巧
 

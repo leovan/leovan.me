@@ -130,7 +130,7 @@ $$`
 d \left(x, y\right) = \sqrt{\left(x - y\right)^{\top} {\sum}^{-1} \left(x - y\right)}
 $$`
 
-马氏距离的最大优势就是其不受不同维度之间量纲的影响，同时引入的问题便是扩大了变化量较小的变量的影响。以下图为例 (源码详见 [这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.R))：
+马氏距离的最大优势就是其不受不同维度之间量纲的影响，同时引入的问题便是扩大了变化量较小的变量的影响。以下图为例 (源码详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.R))：
 
 ![Mahalanobis Distance](/images/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.png)
 

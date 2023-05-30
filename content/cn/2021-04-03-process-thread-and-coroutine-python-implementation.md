@@ -51,7 +51,7 @@ images:
 
 > 理论篇请参见：[进程，线程和协程 (Process, Thread and Coroutine) - 理论篇](/cn/2021/04/process-thread-and-coroutine-theory)
 
-本文将介绍进程，线程和协程在 Python 中的实现，代码详见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2021-04-03-process-thread-and-coroutine-python-implementation)，部分参考自「Python 并发编程」 [^iswbm-blog]:。
+本文将介绍进程，线程和协程在 Python 中的实现，代码详见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2021-04-03-process-thread-and-coroutine-python-implementation)，部分参考自「Python 并发编程」 [^iswbm-blog]:。
 
 # 进程和线程
 

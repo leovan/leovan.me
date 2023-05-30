@@ -363,7 +363,7 @@ LSA，PLSA，LDA 和 HDP 之间的演化关系如下图所示：
 
 ![](/images/cn/2020-10-31-text-similarity/lsa-plsa-lda-hdp.png)
 
-> 本节相关代码详见 [这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2020-10-31-text-similarity/topic-model.py)。
+> 本节相关代码详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2020-10-31-text-similarity/topic-model.py)。
 
 ### 距离度量
 

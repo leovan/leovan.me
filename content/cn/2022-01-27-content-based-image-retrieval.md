@@ -229,7 +229,7 @@ Harris 角点检测方法具备如下性质：
 
 ![](/images/cn/2022-01-27-content-based-image-retrieval/harris-corner-detector-scale-variant.png)
 
-利用 Harris 方法检测角点的效果如下图所示（代码详见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2022-01-27-content-based-image-retrieval/harris-corner-detector.py)）：
+利用 Harris 方法检测角点的效果如下图所示（代码详见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2022-01-27-content-based-image-retrieval/harris-corner-detector.py)）：
 
 ![](/images/cn/2022-01-27-content-based-image-retrieval/blox-raw-and-harris-corner.png)
 
@@ -459,7 +459,7 @@ $$`
 
 得到 128 维特征向量后，为了去除光照变化的影响，需要对向量进行归一化处理。非线性光照变化仍可能导致梯度幅值的较大变化，但对梯度方向影响较小。因此对于超过阈值 0.2 的梯度幅值设为 0.2 ，然后再进行一次归一化。最后将特征向量按照对应高斯金字塔的尺度大小排序。至此，SIFT 特征描述符形成。
 
-利用 SIFT 方法检测关键点的效果如下图所示（代码详见[这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2022-01-27-content-based-image-retrieval/sift-key-points.py)）：
+利用 SIFT 方法检测关键点的效果如下图所示（代码详见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2022-01-27-content-based-image-retrieval/sift-key-points.py)）：
 
 ![](/images/cn/2022-01-27-content-based-image-retrieval/home-raw-and-sift-key-points.png)
 

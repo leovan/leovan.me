@@ -381,7 +381,7 @@ $$`
 
 右图为包含鞍点的一个三维图像，图像函数为 `$z = x^2 - y^2$`，从图中可以看出 AdaGrad，Adadelta 和 RMSprop 算法能够相对很快的逃离鞍点，而 Momentum，NAG 和 SGD 则相对比较困难逃离鞍点。
 
-很不幸没能找到 Alec Radford 绘图的原始代码，不过 Louis Tiao 在 [博客](http://louistiao.me/notes/visualizing-and-animating-optimization-algorithms-with-matplotlib/) 中给出了绘制类似动图的方法。因此，本文参考该博客和 `Keras` 源码中对不同优化算法的实现重新绘制了 2 张类似图像，详细过程参见 [源代码](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2018-02-24-optimization-methods-for-deeplearning)，动图如下所示：
+很不幸没能找到 Alec Radford 绘图的原始代码，不过 Louis Tiao 在 [博客](http://louistiao.me/notes/visualizing-and-animating-optimization-algorithms-with-matplotlib/) 中给出了绘制类似动图的方法。因此，本文参考该博客和 `Keras` 源码中对不同优化算法的实现重新绘制了 2 张类似图像，详细过程参见 [源代码](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-02-24-optimization-methods-for-deeplearning)，动图如下所示：
 
 <img src="/images/cn/2018-02-24-optimization-methods-for-deeplearning/beales-2d-anim.gif" style="float: left; clear: both; width: 50%;" />
 <img src="/images/cn/2018-02-24-optimization-methods-for-deeplearning/saddle-3d-anim.gif" style="clear: both; width: 50%;" />

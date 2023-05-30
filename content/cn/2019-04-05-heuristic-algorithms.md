@@ -324,7 +324,7 @@ $$`
 
 其中，`$m = 50, \omega = 0.8, c_1 = 0.5, c_2 = 0.3$`，迭代次数为 200。
 
-本节相关示例代码详见 [这里](https://github.com/leovan/leovan.me/tree/master/scripts/cn/2019-04-05-heuristic-algorithms/)。
+本节相关示例代码详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2019-04-05-heuristic-algorithms/)。
 
 # 超启发式算法 (Hyper-Heuristic Algorithms)
 
