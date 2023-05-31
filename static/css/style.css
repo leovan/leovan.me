@@ -898,12 +898,35 @@ footer .adsbygoogle {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 .term {
   flex: 1 1 auto;
-  margin: 0.6em;
+  margin: auto 0.6rem 0.6rem 0.6rem;
+  text-align: center;
+}
+
+.term a {
+  --size: 1;
+  font-size: calc(var(--size) * 0.2rem + 0.8rem);
+}
+
+
+.term a[data-weight="1"] { --size: 1; }
+.term a[data-weight="2"] { --size: 2; }
+.term a[data-weight="3"] { --size: 3; }
+.term a[data-weight="4"] { --size: 4; }
+.term a[data-weight="5"] { --size: 5; }
+.term a[data-weight="6"] { --size: 6; }
+.term a[data-weight="7"] { --size: 7; }
+.term a[data-weight="8"] { --size: 8; }
+.term a[data-weight="9"] { --size: 9; }
+
+
+.term a::after {
+  content: " (" attr(data-count) ")";
+  font-size: 1rem;
 }
 
 /* nanogallery2 */

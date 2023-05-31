@@ -1,13 +1,18 @@
 {{ partial "header.html" . }}
 
+
 <div class="terms">
-  {{ range $key, $value := .Data.Terms.ByCount }}
+{{ range $key, $value := .Data.Terms.Alphabetical }}
+  {{ $name := $value.Name }}
+  {{ $count := $value.Count }}
+  {{ $weight := (math.Round (add (mul (div (math.Log (math.Min $count 100)) (math.Log 100)) 8) 1)) }}
   <span class="term">
-    <a href="{{ (print "/" $.Data.Plural "/" $value.Name | urlize) | relURL }}">
-      {{ $value.Name }} ({{ $value.Count }})
+    <a data-weight="{{ $weight }}" data-count="{{$count }}" href="{{ (print "/" $.Data.Plural "/" $name | urlize) | relURL }}">
+      {{ $name }}
     </a>
   </span>
-  {{ end }}
+{{ end }}
 </div>
+
 
 {{ partial "footer.html" . }}

@@ -103,7 +103,7 @@ params:
   pseudocodeVersion: "latest"
   pseudocodeCDN: "//cdn.jsdelivr.net/npm"
 
-  jQueryVersion: "3.6.4"
+  jQueryVersion: "3.7.0"
   jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
 
   videojsVersion: "8.3.0"
