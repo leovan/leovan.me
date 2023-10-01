@@ -44,7 +44,7 @@
 
     Prism.plugins.toolbar.registerButton('copy-to-clipboard', function(env) {
       let linkCopy = document.createElement('button');
-      linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy $lang }}';
+      linkCopy.classList.add('prism-button-copy');
 
       registerClipboard();
 
@@ -58,19 +58,20 @@
         });
 
         clip.on('success', function() {
-          linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy_success $lang }}';
+          linkCopy.classList.add('prism-button-copy-success');
           resetText();
         });
         clip.on('error', function () {
-          linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy_error $lang }}';
+          linkCopy.classList.add('prism-button-copy-error');
           resetText();
         });
       }
 
       function resetText() {
         setTimeout(function () {
-          linkCopy.textContent = '{{ index $.Site.Params.lang.prismjs_copy $lang }}';
-        }, 3000);
+          linkCopy.classList.remove('prism-button-copy-success');
+          linkCopy.classList.remove('prism-button-copy-error');
+        }, 1600);
       }
     });
   })();

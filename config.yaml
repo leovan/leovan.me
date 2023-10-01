@@ -95,7 +95,7 @@ params:
   prismjsVersion: "1.29.0"
   prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
   prismjsPluginJS: ["autoloader", "toolbar"]
-  prismjsPluginCSS: ["toolbar"]
+  prismjsPluginCSS: []
 
   mathjaxVersion: "3.2.2"
   mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
@@ -186,15 +186,6 @@ params:
       quote:
         cn: "引用"
         en: "Quote"
-    prismjs_copy:
-      cn: "复制"
-      en: "Copy"
-    prismjs_copy_success:
-      cn: "已复制"
-      en: "Copied"
-    prismjs_copy_error:
-      cn: "按 Ctrl+C 复制"
-      en: "Press Ctrl+C to copy"
     donate:
       cn: "赞 赏"
       en: "DONATE"
