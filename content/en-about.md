@@ -40,7 +40,7 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
 
 ### Pop
 
-- Chinese: [Richie Ren 任贤齐](https://en.wikipedia.org/wiki/Richie_Jen), [Leehom Wang 王力宏](https://en.wikipedia.org/wiki/Wang_Leehom), [Jay Chou 周杰伦](https://en.wikipedia.org/wiki/Jay_Chou), [Karen Mok 莫文蔚](https://en.wikipedia.org/wiki/Karen_Mok), [Csun-Yuk Chang 张震岳](https://en.wikipedia.org/wiki/Chang_Chen-yue), [Csun-Yuk Chang Eason Chan 陈奕迅](https://en.wikipedia.org/wiki/Eason_Chan)
+- Chinese: [Richie Ren 任贤齐](https://en.wikipedia.org/wiki/Richie_Jen), [Leehom Wang 王力宏](https://en.wikipedia.org/wiki/Wang_Leehom), [Jay Chou 周杰伦](https://en.wikipedia.org/wiki/Jay_Chou), [Karen Mok 莫文蔚](https://en.wikipedia.org/wiki/Karen_Mok), [Csun-Yuk Chang 张震岳](https://en.wikipedia.org/wiki/Chang_Chen-yue), [Eason Chan 陈奕迅](https://en.wikipedia.org/wiki/Eason_Chan)
 - English: [Westlife](https://en.wikipedia.org/wiki/Westlife)
 
 ### Something Special
@@ -49,8 +49,8 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
 
 ## Books
 
-Find more on [Books](/books/) page (in Chinese).
+Reading is not something you have to do, but something you want to do.
 
 ## Movies
 
-Find more on [Movies](/videos/) page (in Chinese).
+A peace loving person likes any military-related movies.
