@@ -3,15 +3,10 @@
 {{ if (eq .Section "en") }}
 {{ $lang = "en" }}
 {{ end }}
-{{ $clipboardjsVersion := .Site.Params.clipboardjsVersion }}
-{{ $clipboardjsCDN := .Site.Params.clipboardjsCDN }}
-{{ $prismjsVersion := .Site.Params.prismjsVersion }}
-{{ $prismjsCDN := .Site.Params.prismjsCDN }}
-<script src="{{ $clipboardjsCDN }}/clipboard.js/{{ $clipboardjsVersion }}/clipboard.min.js"></script>
-<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
-{{ range $.Site.Params.prismjsPluginJS }}
-<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
-{{ end }}
+<script src="//cdn.jsdelivr.net/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/prism.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/plugins/toolbar/prism-toolbar.min.js"></script>
 <script>
   (function() {
     if (!self.Prism) {

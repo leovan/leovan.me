@@ -20,7 +20,7 @@
 {{ end }}
 {{ end }}
 
-<script src='{{ $.Site.Params.jsCookieCDN }}/js-cookie/{{ $.Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
+<script src='//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js'></script>
 <script src="/js/toggle-theme.js"></script>
 
 {{ if and (not .IsHome) .Content }}
@@ -44,8 +44,8 @@
 {{ end }}
 
 {{ if $.Page.Scratch.Get "videojs" }}
-<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video-js.min.css">
-<script src="{{ $.Site.Params.videojsCDN }}/video.js/{{ $.Site.Params.videojsVersion }}/video.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css">
+<script src="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
 {{ end }}
 
 {{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
@@ -58,10 +58,10 @@
 {{ end }}
 
 {{ if and (not .IsHome) .Content }}
-<script src="{{ $.Site.Params.lazysizesCDN }}/lazysizes/{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 {{ end }}
 
-<script src="{{ $.Site.Params.vanillaBackToTopCDN }}/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
 addBackToTop({
   diameter: 48

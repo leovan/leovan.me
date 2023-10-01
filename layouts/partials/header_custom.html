@@ -18,10 +18,10 @@
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
 
 {{ if $.Page.Scratch.Get "aplayer" }}
-<link rel="stylesheet" type="text/css" href="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.css">
-<script src="{{ $.Site.Params.APlayerCDN }}/aplayer/{{ $.Site.Params.APlayerVersion }}/APlayer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
+<script src="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
 {{ end }}
 
 {{ if $.Page.Scratch.Get "metingjs" }}
-<script src="{{ $.Site.Params.MetingJSCDN }}/meting@{{ $.Site.Params.MetingJSVersion }}/dist/Meting.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@xizeyoupan/meting@{{ $.Site.Params.meetingjsVersion }}/dist/Meting.min.js"></script>
 {{ end }}

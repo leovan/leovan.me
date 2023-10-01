@@ -1,6 +1,6 @@
-<script src="{{ $.Site.Params.jQueryCDN }}/jquery/{{ $.Site.Params.jQueryVersion }}/jquery.min.js"></script>
-<link rel="stylesheet" href="{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/css/nanogallery2.min.css"/>
-<script src="{{ $.Site.Params.nanogallery2CDN }}/nanogallery2/{{ $.Site.Params.nanogallery2Version }}/jquery.nanogallery2.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery@{{ $.Site.Params.jQueryVersion }}/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nanogallery2@{{ $.Site.Params.nanogallery2Version }}/dist/css/nanogallery2.min.css"/>
+<script src="//cdn.jsdelivr.net/npm/nanogallery2@{{ $.Site.Params.nanogallery2Version }}/dist/jquery.nanogallery2.min.js"></script>
 
 {{ if .Get "tags" }}
 {{ $tags := split (.Get "tags") "," }}
