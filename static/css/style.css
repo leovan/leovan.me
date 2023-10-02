@@ -33,6 +33,7 @@ img {
   --body-fg: #000000;
   --block-border: #444444;
   --block-bg: #eeeeee;
+  --code-border: #dddddd;
   --code-fg: #4f424c;
   --code-bg: #f6f6f6;
   --code-lang-bg: #dddddd;
@@ -89,6 +90,7 @@ img {
   --body-fg: #e6e6e6;
   --block-border: #e6e6e6;
   --block-bg: #383838;
+  --code-border: #dddddd;
   --code-fg: #cccccc;
   --code-bg: #383838;
   --code-lang-bg: #cccccc;

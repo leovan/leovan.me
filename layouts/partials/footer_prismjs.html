@@ -1,8 +1,4 @@
 {{ if and (and (not .Params.disable_highlight) (in (string .Content) "</pre>")) (not .IsHome) }}
-{{ $lang := "cn" }}
-{{ if (eq .Section "en") }}
-{{ $lang = "en" }}
-{{ end }}
 <script src="//cdn.jsdelivr.net/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/prism.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/plugins/autoloader/prism-autoloader.min.js"></script>
