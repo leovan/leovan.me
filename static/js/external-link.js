@@ -5,9 +5,5 @@
     if (r.test(a.getAttribute('href'))) {
       a.target = '_blank';
     }
-    // shorten bare links
-    if (a.childElementCount === 0) {
-      a.innerText = a.innerText.replace(r, '').replace(/#.*$/, '');
-    }
   })
 })(document);
