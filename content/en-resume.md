@@ -122,10 +122,11 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
-4. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` format output. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
-5. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
-6. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
-7. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
+4. [Duckling Chinese](https://github.com/leovan/duckling-chinese)：Duckling Chinese is Python wrapper of [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) based on Jpype1, which provides parsing service in Chinese of time, data, numeral, etc. ![github-stars](https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars)
+5. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` format output. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+6. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+7. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+8. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
 <h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
 
