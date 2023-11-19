@@ -18,6 +18,7 @@
     "minimized":  "minimizeButton, label, downloadButton, infoButton"
   },
   "items": [
-    { "src": "2023-04-01-shanghei-road.jpg", "srct": "2023-04-01-shanghei-road-thumbnail.jpg", "title": "山花，枯树，火车，小路。" }
+    { "src": "2023-04-01-shanghei-road.jpg", "srct": "2023-04-01-shanghei-road-thumbnail.jpg", "title": "山花，枯树，火车，小路。" },
+    { "src": "https://dpv.videocc.net/c8f53742da/4/c8f53742da76aec508d591c8ca2ffc74_3.mp4", "srct": "2023-11-18-fangshan-thumbnail.jpg", "title": "年轻人不能总躺着，得溜达溜达！" }
   ]
 }
