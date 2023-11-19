@@ -15,12 +15,12 @@ function setTheme(theme) {
 
   if (theme == "dark") {
     document.documentElement.className = "dark";
-    document.getElementById("theme-toggle-icon").classList.remove("mdi-weather-night");
-    document.getElementById("theme-toggle-icon").classList.add("mdi-white-balance-sunny");
+    document.getElementById("theme-toggle-icon").classList.remove("material-symbols-dark-mode-outline");
+    document.getElementById("theme-toggle-icon").classList.add("material-symbols-light-mode-outline");
   } else {
     document.documentElement.className = "";
-    document.getElementById("theme-toggle-icon").classList.remove("mdi-white-balance-sunny");
-    document.getElementById("theme-toggle-icon").classList.add("mdi-weather-night");
+    document.getElementById("theme-toggle-icon").classList.remove("material-symbols-light-mode-outline");
+    document.getElementById("theme-toggle-icon").classList.add("material-symbols-dark-mode-outline");
   }
 }
 

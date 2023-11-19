@@ -14,22 +14,22 @@ disable_prismjs: true
 
 # 范叶亮
 
-# <span class="mdi mdi-bullseye-arrow"></span> 研究兴趣
+# <span class="material-symbols material-symbols-target-outline"></span> 研究兴趣
 
 - 现从事**数据科学**在**安全风险**领域的**技术应用**和**产品设计**。
 - 对**数据科学**在**农业**和**工业**领域的应用充满兴趣。
 
-# <span class="mdi mdi-school-outline"></span> 教育背景
+# <span class="material-symbols material-symbols-school-outline"></span> 教育背景
 
 - 2012.09 ~ 2015.03 **河北工业大学** 信息管理 硕士
 - 2008.09 ~ 2012.07 **河北工业大学** 工商管理 学士
 
-# <span class="mdi mdi-account-group-outline"></span> 工作经历
+# <span class="material-symbols material-symbols-groups-outline"></span> 工作经历
 
 1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
 2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
-# <span class="mdi mdi-clipboard-list-outline"></span> 项目经历
+# <span class="material-symbols material-symbols-list-alt-outline"></span> 项目经历
 
 ## 安全和风险
 
@@ -76,27 +76,27 @@ _2015.04 ~ 2015.10 算法设计和开发_
 - 设计开发一种基于 Bass 扩散模型，优化的时间序列相似度和聚类算法的混合产品生命周期识别模型，尾货识别**准确率 95%+**，辅助贷款方商品质押准入决策和质押率的制定。
 - 设计开发不同数据源的商品信息融合模型，相同商品识别**准确率 90%+**，配合 ElasticSearch 开发商品模糊匹配查询服务，为商品质押提供精准的价格等相关信息。
 
-# <span class="mdi mdi-cog-outline"></span> 专业技能
+# <span class="material-symbols material-symbols-settings-outline"></span> 专业技能
 
 ## 开发语言
 
-- R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- JavaScript/TypeScript/CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- R: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Python: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- SQL: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- JavaScript/TypeScript/CSS: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 
 ## 平台框架
 
-- PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Spark: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- PyTorch: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Spark: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Qt: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- React: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 
 ## 外语能力
 
 - 英语: CET6 518，能说，会写，看菜单略费劲...
 
-# <span class="mdi mdi-seal-variant"></span> 研究成果
+# <span class="material-symbols material-symbols-award-star-outline"></span> 研究成果
 
 ## 论文
 
@@ -110,7 +110,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 2. 一种产品库存预测方法及装置 (发明，[CN 106056239](http://epub.cnipa.gov.cn/patent/CN106056239B)，**授权**，第一发明人，2016)
 3. 数据仓库信息处理方法、装置、系统、介质 (发明，[CN 109388637](http://epub.cnipa.gov.cn/patent/CN109388637B)，**授权**，第一发明人，2018)
 4. 一种数据处理方法、装置、设备及介质 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN110309235B)，**授权**，第一发明人，2019)
-6. 用于生成信息的方法和装置 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN112395490A)，实审，第一发明人，2019)
+6. 用于生成信息的方法和装置 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN112395490A)，**授权**，第一发明人，2019)
 
 ## 技术项目
 
@@ -126,6 +126,6 @@ _2015.04 ~ 2015.10 算法设计和开发_
 7. [Cytoscape 中文用户手册](https://cytoscape.leovan.tech)：Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 8. [Rasa 中文文档](https://rasa.leovan.tech)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="mdi mdi-download"></span></a></h2>
+<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="material-symbols material-symbols-download-outline"></span></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2023-04-01</p>
+<p class="kai" style="text-align: right;">更新于：2023-11-19</p>

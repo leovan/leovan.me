@@ -1,5 +1,4 @@
-/* material design icons */
-.mdi {
+.material-symbols {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -8,7 +7,7 @@
   line-height: 1em;
 }
 
-.mdi::before {
+.material-symbols::before {
   display: inline-block;
   background-size: auto 1em;
   background-repeat: no-repeat;
@@ -20,109 +19,109 @@
   content: '';
 }
 
-.mdi-account-group-outline::before {
-  background-image: url('../images/icons/material-design/light/account-group-outline.svg');
+.material-symbols-groups-outline::before {
+  background-image: url('../images/icons/material-symbols/light/groups-outline.svg');
 }
-.dark .mdi-account-group-outline::before {
-  background-image: url('../images/icons/material-design/dark/account-group-outline.svg');
-}
-
-.mdi-bullseye-arrow::before {
-  background-image: url('../images/icons/material-design/light/bullseye-arrow.svg');
-}
-.dark .mdi-bullseye-arrow::before {
-  background-image: url('../images/icons/material-design/dark/bullseye-arrow.svg');
+.dark .material-symbols-groups-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/groups-outline.svg');
 }
 
-.mdi-clipboard-list-outline::before {
-  background-image: url('../images/icons/material-design/light/clipboard-list-outline.svg');
+.material-symbols-target-outline::before {
+  background-image: url('../images/icons/material-symbols/light/target-outline.svg');
 }
-.dark .mdi-clipboard-list-outline::before {
-  background-image: url('../images/icons/material-design/dark/clipboard-list-outline.svg');
-}
-
-.mdi-cog-outline::before {
-  background-image: url('../images/icons/material-design/light/cog-outline.svg');
-}
-.dark .mdi-cog-outline::before {
-  background-image: url('../images/icons/material-design/dark/cog-outline.svg');
+.dark .material-symbols-target-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/target-outline.svg');
 }
 
-.mdi-download::before {
-  background-image: url('../images/icons/material-design/light/download.svg');
+.material-symbols-list-alt-outline::before {
+  background-image: url('../images/icons/material-symbols/light/list-alt-outline.svg');
 }
-.dark .mdi-download::before {
-  background-image: url('../images/icons/material-design/dark/download.svg');
-}
-
-.mdi-play::before {
-  background-image: url('../images/icons/material-design/light/play.svg');
-}
-.dark .mdi-play::before {
-  background-image: url('../images/icons/material-design/dark/play.svg');
+.dark .material-symbols-list-alt-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/list-alt-outline.svg');
 }
 
-.mdi-pause::before {
-  background-image: url('../images/icons/material-design/light/pause.svg');
+.material-symbols-settings-outline::before {
+  background-image: url('../images/icons/material-symbols/light/settings-outline.svg');
 }
-.dark .mdi-pause::before {
-  background-image: url('../images/icons/material-design/dark/pause.svg');
-}
-
-.mdi-school-outline::before {
-  background-image: url('../images/icons/material-design/light/school-outline.svg');
-}
-.dark .mdi-school-outline::before {
-  background-image: url('../images/icons/material-design/dark/school-outline.svg');
+.dark .material-symbols-settings-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/settings-outline.svg');
 }
 
-.mdi-seal-variant::before {
-  background-image: url('../images/icons/material-design/light/seal-variant.svg');
+.material-symbols-download-outline::before {
+  background-image: url('../images/icons/material-symbols/light/download-outline.svg');
 }
-.dark .mdi-seal-variant::before {
-  background-image: url('../images/icons/material-design/dark/seal-variant.svg');
-}
-
-.mdi-skip-next::before {
-  background-image: url('../images/icons/material-design/light/skip-next.svg');
-}
-.dark .mdi-skip-next::before {
-  background-image: url('../images/icons/material-design/dark/skip-next.svg');
+.dark .material-symbols-download-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/download-outline.svg');
 }
 
-.mdi-skip-previous::before {
-  background-image: url('../images/icons/material-design/light/skip-previous.svg');
+.material-symbols-play-outline::before {
+  background-image: url('../images/icons/material-symbols/light/play-outline.svg');
 }
-.dark .mdi-skip-previous::before {
-  background-image: url('../images/icons/material-design/dark/skip-previous.svg');
-}
-
-.mdi-star-outline::before {
-  background-image: url('../images/icons/material-design/light/star-outline.svg');
-}
-.dark .mdi-star-outline::before {
-  background-image: url('../images/icons/material-design/dark/star-outline.svg');
+.dark .material-symbols-play-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/play-outline.svg');
 }
 
-.mdi-star::before {
-  background-image: url('../images/icons/material-design/light/star.svg');
+.material-symbols-pause-outline::before {
+  background-image: url('../images/icons/material-symbols/light/pause-outline.svg');
 }
-.dark .mdi-star::before {
-  background-image: url('../images/icons/material-design/dark/star.svg');
-}
-
-.mdi-weather-night::before {
-  background-image: url('../images/icons/material-design/light/weather-night.svg');
-}
-.dark .mdi-weather-night::before {
-  background-image: url('../images/icons/material-design/dark/weather-night.svg');
+.dark .material-symbols-pause-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/pause-outline.svg');
 }
 
-.mdi-white-balance-sunny::before {
-  background-image: url('../images/icons/material-design/light/white-balance-sunny.svg');
+.material-symbols-school-outline::before {
+  background-image: url('../images/icons/material-symbols/light/school-outline.svg');
 }
-.dark .mdi-white-balance-sunny::before {
-  background-image: url('../images/icons/material-design/dark/white-balance-sunny.svg');
+.dark .material-symbols-school-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/school-outline.svg');
+}
+
+.material-symbols-award-star-outline::before {
+  background-image: url('../images/icons/material-symbols/light/award-star-outline.svg');
+}
+.dark .material-symbols-award-star-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/award-star-outline.svg');
+}
+
+.material-symbols-skip-next-outline::before {
+  background-image: url('../images/icons/material-symbols/light/skip-next-outline.svg');
+}
+.dark .material-symbols-skip-next-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/skip-next-outline.svg');
+}
+
+.material-symbols-skip-previous-outline::before {
+  background-image: url('../images/icons/material-symbols/light/skip-previous-outline.svg');
+}
+.dark .material-symbols-skip-previous-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/skip-previous-outline.svg');
+}
+
+.material-symbols-star-outline::before {
+  background-image: url('../images/icons/material-symbols/light/star-outline.svg');
+}
+.dark .material-symbols-star-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/star-outline.svg');
+}
+
+.material-symbols-star-fill::before {
+  background-image: url('../images/icons/material-symbols/light/star-fill.svg');
+}
+.dark .material-symbols-star-fill::before {
+  background-image: url('../images/icons/material-symbols/dark/star-fill.svg');
+}
+
+.material-symbols-dark-mode-outline::before {
+  background-image: url('../images/icons/material-symbols/light/dark-mode-outline.svg');
+}
+.dark .material-symbols-dark-mode-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/dark-mode-outline.svg');
+}
+
+.material-symbols-light-mode-outline::before {
+  background-image: url('../images/icons/material-symbols/light/light-mode-outline.svg');
+}
+.dark .material-symbols-light-mode-outline::before {
+  background-image: url('../images/icons/material-symbols/dark/light-mode-outline.svg');
 }
 
 /* custom icons */

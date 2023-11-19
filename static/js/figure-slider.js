@@ -43,16 +43,16 @@ function figureSliderPlay(buttonPlayPause) {
   buttonPlayPause.classList.remove('figure-slider-button-play');
   buttonPlayPause.classList.add('figure-slider-button-pause');
   let buttonPlayPauseIcon = buttonPlayPause.querySelector('span');
-  buttonPlayPauseIcon.classList.remove('mdi-play');
-  buttonPlayPauseIcon.classList.add('mdi-pause');
+  buttonPlayPauseIcon.classList.remove('material-symbols-play-outline');
+  buttonPlayPauseIcon.classList.add('material-symbols-pause-outline');
 }
 
 function figureSliderPause(buttonPlayPause) {
   buttonPlayPause.classList.remove('figure-slider-button-pause');
   buttonPlayPause.classList.add('figure-slider-button-play');
   let buttonPlayPauseIcon = buttonPlayPause.querySelector('span');
-  buttonPlayPauseIcon.classList.remove('mdi-pause');
-  buttonPlayPauseIcon.classList.add('mdi-play');
+  buttonPlayPauseIcon.classList.remove('material-symbols-pause-outline');
+  buttonPlayPauseIcon.classList.add('material-symbols-play-outline');
 }
 
 function figureSliderTogglePlayPause(image, buttonPlayPause, scrollBar, figureSliderIndex, milliseconds, baseURL, imageFilenamePrefix, imageFormat) {

@@ -16,22 +16,22 @@ disable_prismjs: true
 
 # Fan Yeliang (Leo Van)
 
-# <span class="mdi mdi-bullseye-arrow"></span> Research Interest
+# <span class="material-symbols material-symbols-target-outline"></span> Research Interest
 
 - I am working on application of **data science** in **security and risk**.
 - Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
-# <span class="mdi mdi-school-outline"></span> Education
+# <span class="material-symbols material-symbols-school-outline"></span> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
 - 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
-# <span class="mdi mdi-account-group-outline"></span> Work Experiences
+# <span class="material-symbols material-symbols-groups-outline"></span> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
-# <span class="mdi mdi-clipboard-list-outline"></span> Project Experiences
+# <span class="material-symbols material-symbols-list-alt-outline"></span> Project Experiences
 
 ## Security & Risk
 
@@ -78,27 +78,27 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-# <span class="mdi mdi-cog-outline"></span> Skills
+# <span class="material-symbols material-symbols-settings-outline"></span> Skills
 
 ## Programing Languages
 
-- R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span>
-- JavaScript/TypeScript/CSS: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- R: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Python: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- SQL: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
+- JavaScript/TypeScript/CSS: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 
 ## Frameworks
 
-- PyTorch: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Spark: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- Qt: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
-- React: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span>
+- PyTorch: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Spark: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- Qt: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- React: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 
 ## Foreign Languages
 
 - English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
-# <span class="mdi mdi-seal-variant"></span> Research Achievements
+# <span class="material-symbols material-symbols-award-star-outline"></span> Research Achievements
 
 ## Papers
 
@@ -128,6 +128,6 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 7. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 8. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="mdi mdi-download"></span></a></h2>
+<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="material-symbols material-symbols-download-outline"></span></a></h2>
 
 <p style="text-align: right;">Updated on: 2023-04-01</p>
