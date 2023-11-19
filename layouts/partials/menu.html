@@ -11,6 +11,6 @@
     <li{{ if eq .URL $currentPage.RelPermalink }} class="active"{{ else if eq .URL "#menu-separator" }} class="menu-separator"{{ end }}>{{ if ne .URL "#menu-separator" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ else }}<span>&nbsp;</span>{{ end }}</li>
   {{ end }}
   {{ partial "menu_extra.html" . }}
-  <li class="theme-toggle no-border-bottom"><span id="theme-toggle-icon" class="material-symbols material-dark-mode-outline"></span></li>
+  <li class="theme-toggle no-border-bottom"><span id="theme-toggle-icon" class="material-symbols"></span></li>
   </ul>
 </nav>
