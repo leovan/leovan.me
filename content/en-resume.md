@@ -112,7 +112,7 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 2. Product inventory predicting method and product inventory predicting device ([CN 106056239](https://patents.google.com/patent/CN106056239B/en), 2016)
 3. Data warehouse information processing method, device, system, medium ([CN 109388637](https://patents.google.com/patent/CN109388637B/en), 2018)
 4. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235B/en), 2019)
-5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490A/en), 2019)
+5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490B/en), 2019)
 
 ## Technical Projects
 
