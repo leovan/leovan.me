@@ -12,10 +12,14 @@
 {{ partial "google_adsense.html" . }}
 {{ end }}
 
-<link rel="stylesheet" type="text/css" href="{{ "/css/fonts.css" | relURL }}" />
+<link rel="stylesheet" type="text/css" href="{{ "/css/fonts.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
+
+{{ if (and .IsPage (not .Params.disable_donate)) }}
+<link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
+{{ end }}
 
 {{ if $.Page.Scratch.Get "aplayer" }}
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
