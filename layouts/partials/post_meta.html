@@ -1,6 +1,6 @@
 {{ if not .IsHome }}
-<h1 class="title">{{ .Title }}</h1>
-{{ with .Params.subtitle }}<h2 class="subtitle">{{ . }}</h2>{{ end }}
+<h1 class="title">{{ .Title | markdownify }}</h1>
+{{ with .Params.subtitle }}<h2 class="subtitle">{{ . | markdownify }}</h2>{{ end }}
 
 {{ $lang := "cn" }}
 {{ if (eq .Section "en") }}
