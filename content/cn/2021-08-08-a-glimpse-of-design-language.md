@@ -379,7 +379,7 @@ Alibaba Fusion Design 希望构建一套提升设计与开发之间 UI 构建效
 | <i class="icon icon-airbnb">Airbnb</i>     | [Lottie](https://airbnb.design/lottie/)                      |
 | <i class="icon icon-salesforce">Salesforce</i> | [Lightning Design System](https://www.lightningdesignsystem.com/) |
 | <i class="icon icon-ant-group">蚂蚁金服</i>   | [Ant Design](https://ant.design/)                            |
-| <i class="icon icon-alibaba">阿里巴巴</i>   | [Fusion Design](https://alibaba.fusion.design/)              |
+| <i class="icon icon-alibaba">阿里巴巴</i>   | [Fusion Design](https://fusion.design/)                     |
 | <i class="icon icon-wechat">腾讯</i>       | [WeUI](https://weui.io/)                                     |
 | <i class="icon icon-qq">腾讯</i>       | [Q Design](https://qq.design/)                               |
 
