@@ -146,99 +146,6 @@
   vertical-align: bottom;
 }
 
-.icon-tensorflow::before {
-  background-image: url('../images/icons/custom/tensorflow.png');
-}
-
-.icon-keras::before {
-  background-image: url('../images/icons/custom/keras.png');
-}
-
-.icon-pytorch::before {
-  background-image: url('../images/icons/custom/pytorch.png');
-}
-
-.icon-caffe2::before {
-  background-image: url('../images/icons/custom/caffe2.png');
-}
-
-.icon-mxnet::before {
-  background-image: url('../images/icons/custom/mxnet.png');
-}
-
-.icon-paddlepaddle::before {
-  width: 1.85em;
-  background-image: url('../images/icons/custom/paddlepaddle.png');
-}
-
-.icon-sonnet::before {
-  background-image: url('../images/icons/custom/sonnet.png');
-}
-
-.icon-c::before {
-  background-image: url('../images/icons/custom/c.svg');
-}
-
-.icon-cpp::before {
-  background-image: url('../images/icons/custom/cpp.svg');
-}
-
-.icon-go::before {
-  width: 2.2em;
-  background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/go.svg');
-}
-
-.icon-java::before {
-  background-image: url('../images/icons/custom/java.svg');
-}
-
-.icon-python::before {
-  background-image: url('../images/icons/custom/python.svg');
-}
-
-.icon-r::before {
-  width: 1.1em;
-  background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/r.svg');
-}
-
-.icon-julia::before {
-  width: 1.6em;
-  background-image: url('../images/icons/custom/julia.svg');
-}
-
-.icon-ruby::before {
-  width: 0.8em;
-  background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/ruby.svg');
-}
-
-.icon-swift::before {
-  background-image: url('../images/icons/custom/swift.svg');
-}
-
-.icon-nodejs::before {
-  width: 1.6em;
-  background-image: url('../images/icons/custom/nodejs.svg');
-}
-
-.icon-restful::before {
-  background-image: url('../images/icons/custom/restful.png');
-}
-
-.icon-macos::before {
-  background-image: url('../images/icons/custom/macos.svg');
-}
-
-.icon-linux::before {
-  background-image: url('../images/icons/custom/linux.svg');
-}
-
-.icon-windows::before {
-  background-image: url('../images/icons/custom/windows.svg');
-}
-
 .icon-adobe::before {
   width: 1.2em;
   background-image: url('../images/icons/custom/adobe.svg');
@@ -248,8 +155,30 @@
   background-image: url('../images/icons/custom/airbnb.svg');
 }
 
+.icon-alibaba::before {
+  width: 2em;
+  background-image: url('../images/icons/custom/alibaba.svg');
+}
+
+.icon-ant-group::before {
+  width: 0.8em;
+  background-image: url('../images/icons/custom/ant-group.svg');
+}
+
 .icon-apple::before {
   background-image: url('../images/icons/custom/apple.svg');
+}
+
+.icon-c::before {
+  background-image: url('../images/icons/custom/c.svg');
+}
+
+.icon-caffe2::before {
+  background-image: url('../images/icons/custom/caffe2.svg');
+}
+
+.icon-cpp::before {
+  background-image: url('../images/icons/custom/cpp.svg');
 }
 
 .icon-facebook::before {
@@ -258,6 +187,12 @@
 
 .icon-firefox::before {
   background-image: url('../images/icons/custom/firefox.svg');
+}
+
+.icon-go::before {
+  width: 2.2em;
+  background-size: auto 0.8em;
+  background-image: url('../images/icons/custom/go.svg');
 }
 
 .icon-google::before {
@@ -269,8 +204,92 @@
   background-image: url('../images/icons/custom/ibm.svg');
 }
 
+.icon-java::before {
+  background-image: url('../images/icons/custom/java.svg');
+}
+
+.icon-javascript::before {
+  background-image: url('../images/icons/custom/javascript.svg');
+}
+
+.icon-julia::before {
+  width: 1.6em;
+  background-image: url('../images/icons/custom/julia.svg');
+}
+
+.icon-keras::before {
+  background-image: url('../images/icons/custom/keras.svg');
+}
+
+.icon-linux::before {
+  background-image: url('../images/icons/custom/linux.svg');
+}
+
+.icon-macos::before {
+  background-image: url('../images/icons/custom/macos.svg');
+}
+
 .icon-microsoft::before {
   background-image: url('../images/icons/custom/microsoft.svg');
+}
+
+.icon-mxnet::before {
+  background-image: url('../images/icons/custom/mxnet.png');
+}
+
+.icon-nodejs::before {
+  width: 1.6em;
+  background-image: url('../images/icons/custom/nodejs.svg');
+}
+
+.icon-paddlepaddle::before {
+  width: 1.85em;
+  background-image: url('../images/icons/custom/paddlepaddle.png');
+}
+
+.icon-python::before {
+  background-image: url('../images/icons/custom/python.svg');
+}
+
+.icon-pytorch::before {
+  background-image: url('../images/icons/custom/pytorch.svg');
+}
+
+.icon-qq::before {
+  width: 0.8em;
+  background-image: url('../images/icons/custom/qq.svg');
+}
+
+.icon-qt::before {
+  width: 1.2em;
+  background-size: auto 0.8em;
+  background-image: url('../images/icons/custom/qt.svg');
+}
+
+.icon-r::before {
+  width: 1.1em;
+  background-size: auto 0.8em;
+  background-image: url('../images/icons/custom/r.svg');
+}
+
+.icon-react::before {
+  width: 1.2em;
+  background-size: auto 0.9em;
+  background-image: url('../images/icons/custom/react.svg');
+}
+
+.icon-restful::before {
+  background-image: url('../images/icons/custom/restful.png');
+}
+
+.icon-ruby::before {
+  width: 0.8em;
+  background-size: auto 0.8em;
+  background-image: url('../images/icons/custom/ruby.svg');
+}
+
+.icon-rust::before {
+  background-image: url('../images/icons/custom/rust.svg');
 }
 
 .icon-salesforce::before {
@@ -278,22 +297,31 @@
   background-image: url('../images/icons/custom/salesforce.svg');
 }
 
+.icon-spark::before {
+  background-image: url('../images/icons/custom/spark.svg');
+}
+
+.icon-sonnet::before {
+  background-image: url('../images/icons/custom/sonnet.png');
+}
+
+.icon-swift::before {
+  background-image: url('../images/icons/custom/swift.svg');
+}
+
+.icon-tensorflow::before {
+  background-image: url('../images/icons/custom/tensorflow.svg');
+}
+
+.icon-typescript::before {
+  background-image: url('../images/icons/custom/typescript.svg');
+}
+
 .icon-wechat::before {
   width: 1.2em;
   background-image: url('../images/icons/custom/wechat.svg');
 }
 
-.icon-alibaba::before {
-  width: 2em;
-  background-image: url('../images/icons/custom/alibaba.png');
-}
-
-.icon-ant-group::before {
-  width: 0.8em;
-  background-image: url('../images/icons/custom/ant-group.png');
-}
-
-.icon-qq::before {
-  width: 0.8em;
-  background-image: url('../images/icons/custom/qq.png');
+.icon-windows::before {
+  background-image: url('../images/icons/custom/windows.svg');
 }
