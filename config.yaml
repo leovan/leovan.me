@@ -85,6 +85,7 @@ params:
   footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](/)"
   licenseURL: "https://github.com/leovan/leovan.me/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
+  categories: "分类 | Categories"
 
   aplayerVersion: "1.10.1"
   clipboardjsVersion: "2.0.11"

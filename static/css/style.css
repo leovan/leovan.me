@@ -1147,12 +1147,12 @@ h6:hover .anchor {
 }
 
 p.list-page {
-  text-indent: -5.6em;
+  text-indent: -5em;
   padding-left: 5em;
 }
 
 p.list-page span {
-  margin-right: 0.3em;
+  margin-right: 0.2em;
 }
 
 /* different size screens */
@@ -1194,12 +1194,13 @@ p.list-page span {
 
   .logo {
     background-position: center;
+    display: none;
   }
 
   .masthead {
     width: auto;
     float: none;
-    padding: 1em 10px;
+    padding: 1em 0;
     text-align: center;
     margin: auto 30px;
   }
@@ -1255,12 +1256,11 @@ p.list-page span {
 
   .masthead .menu a, .masthead .menu span {
     display: block;
-    padding: 15px 20px;
     border-bottom: none;
     display: inline-block;
     padding: 5px 10px;
-    border-radius: 5px;
-    line-height: 1.75em;
+    border-radius: 6px;
+    line-height: 28px;
   }
 
   .masthead .menu span {
@@ -1291,7 +1291,7 @@ p.list-page span {
   .masthead .menu li, .masthead .menu li:first-child {
     border: none;
     display: inline-block;
-    margin-top: 5px;
+    margin-bottom: 4px;
   }
 
   .masthead .menu .menu-separator {
@@ -1299,6 +1299,7 @@ p.list-page span {
   }
 
   .title {
+    font-size: 28px;
     margin-top: 32px;
   }
 
@@ -1308,6 +1309,10 @@ p.list-page span {
 
   .dark #theme-toggle-icon::before {
     background-image: url('../images/icons/material-symbols/light/light-mode-outline.svg');
+  }
+
+  .terms {
+    margin-top: 30px;
   }
 }
 

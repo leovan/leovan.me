@@ -1,5 +1,11 @@
 {{ if not .IsHome }}
-<h1 class="title">{{ .Title | markdownify }}</h1>
+<h1 class="title">
+  {{ if eq .Kind "taxonomy" }}
+  {{ index $.Site.Params (lower .Title) | markdownify }}
+  {{ else }}
+  {{ .Title | markdownify }}
+  {{ end }}
+</h1>
 {{ with .Params.subtitle }}<h2 class="subtitle">{{ . | markdownify }}</h2>{{ end }}
 
 {{ $lang := "cn" }}

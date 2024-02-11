@@ -1,9 +1,9 @@
 body {
-  font-family: Palatinom, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Source Han Serif SC', 'Source Han Serif TC', 'Source Han Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Noto Serif CJK', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Source Han Serif SC', 'Source Han Serif TC', 'Source Han Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Noto Serif CJK', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 
 blockquote, .kai, .slogan, .ps-root, .ps-comment, mjx-utext {
-  font-family: Palatinom, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Kaiti SC', 'Kaiti TC', STKaiti, 'Kai', BiauKai, 'AR PL UKai CN', 'AR PL UKai HK', 'AR PL UKai TW', 'AR PL UKai TW MBE', 'AR PL KaitiM GB', KaiTi, KaiTi_GB2312, DFKai-SB, 'TW\-Kai', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Kaiti SC', 'Kaiti TC', STKaiti, 'Kai', BiauKai, 'AR PL UKai CN', 'AR PL UKai HK', 'AR PL UKai TW', 'AR PL UKai TW MBE', 'AR PL KaitiM GB', KaiTi, KaiTi_GB2312, DFKai-SB, 'TW\-Kai', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 
 code, code[class*=language-], pre[class*=language-], div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {

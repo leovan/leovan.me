@@ -74,7 +74,7 @@ get_video_douban_info <- function(douban_id, is_tv) {
         res_json <- douban_api(paste0("/movie/", douban_id))
     }
     movie_info <- list()
-    
+
     movie_info$title <- res_json$title
     movie_info$directors <- paste(res_json$directors$name, collapse = ", ")
     movie_info$actors <- paste(res_json$actors$name, collapse = ", ")
@@ -85,7 +85,7 @@ get_video_douban_info <- function(douban_id, is_tv) {
         min() |>
         as.Date(format = "%Y-%m-%d")
     movie_info$douban_rating <- res_json$rating$value
-    
+
     return(movie_info)
 }
 get_video_douban_info <- Vectorize(get_video_douban_info)
@@ -97,7 +97,7 @@ get_video_douban_info <- Vectorize(get_video_douban_info)
 get_book_douban_info <- function(douban_id) {
     res_json <- douban_api(paste0("/book/", douban_id))
     book_info <- list()
-    
+
     book_info$title <- res_json$title
     book_info$subtitle <- paste(res_json$subtitle, collapse = ", ")
     book_info$author <- paste(res_json$author, collapse = ", ")
@@ -107,7 +107,7 @@ get_book_douban_info <- function(douban_id) {
         str_replace_all("\\(.+\\)", "") |>
         min()
     book_info$douban_rating <- res_json$rating$value
-    
+
     return(book_info)
 }
 get_book_douban_info <- Vectorize(get_book_douban_info)

@@ -7,9 +7,9 @@
   {{ partial "header_meta.html" . }}
   {{ partial "header_json_ld.html" . }}
 
-  {{ range .AlternativeOutputFormats -}}
+  {{ range .AlternativeOutputFormats }}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
+  {{ end }}
 
   {{ partial "header_custom.html" . }}
   </head>

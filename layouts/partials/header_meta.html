@@ -1,8 +1,16 @@
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s - %s" .Title .Site.Title | safeHTML }}{{ end }}</title>
+  {{ $title := printf "%s - %s" .Title .Site.Title | safeHTML }}
+
+  {{ if .IsHome }}
+  {{ $title = .Site.Title }}
+  {{ else if eq .Kind "taxonomy" }}
+  {{ $title = index $.Site.Params (lower .Title) | markdownify }}
+  {{ end }}
+
+  <title>{{ $title }}</title>
 
   <meta name="referrer" content="no-referrer">
 
-  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s - %s" .Title .Site.Title | safeHTML }}{{ end }}">
+  <meta property="og:title" content="{{ $title }}">
   <meta name="description" property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:site_name" content="{{ .Site.Params.description | safeHTML }}">
