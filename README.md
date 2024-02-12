@@ -1,4 +1,4 @@
-# 范叶亮的个人主页 <img src="static/images/web/icon-192x192.png" align="right" alt="logo" height="100" style="border: none; float: right;">
+# 范叶亮的个人主页 <img src="static/images/web/icon-192x192.png" align="right" alt="logo" height="100" style="border: none; float: right; height: 100px;">
 
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
 ![Issues](https://img.shields.io/github/issues/leovan/leovan.me.svg)
