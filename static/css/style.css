@@ -1258,7 +1258,7 @@ p.list-page span {
     display: block;
     border-bottom: none;
     display: inline-block;
-    padding: 6px 10px 2px 10px;
+    padding: 4px 10px 4px 10px;
     border-radius: 6px;
     line-height: 28px;
   }
@@ -1269,7 +1269,8 @@ p.list-page span {
 
   .masthead .menu span::before {
     background-size: auto 1.2em;
-    vertical-align: text-top;
+    vertical-align: middle;
+    line-height: 28px;
   }
 
   .masthead .menu .active a {
