@@ -1,5 +1,5 @@
 ---
-title: 特征值分解，奇异值分解和主成份分析 (EVD, SVD and PCA)
+title: 特征值分解，奇异值分解和主成分分析 (EVD, SVD and PCA)
 author: 范叶亮
 date: '2017-12-11'
 slug: evd-svd-and-pca
@@ -49,7 +49,7 @@ images:
 
 则对于向量 `$\boldsymbol{\alpha} = \left(3, 2\right)^T$`，可以表示为：
 
-`$$\boldsymbol{\alpha} = 2 \left(1, 0\right)^T + 3 \left(0, 1\right)^T$$`
+`$$\boldsymbol{\alpha} = 3 \left(1, 0\right)^T + 2 \left(0, 1\right)^T$$`
 
 其中 `$\left(1, 0\right)^T$` 和 `$\left(0, 1\right)^T$` 为二维空间中的一组基。
 
@@ -338,9 +338,9 @@ $$`
 
 从图中可以看出，我们仅用了 200 个左奇异向量和 200 个右奇异向量重构图像与原始灰度图像已经基本看不出任何区别。因此，我们利用 SVD 可以通过仅保留较大的奇异值实现数据的压缩。
 
-# 主成份分析
+# 主成分分析
 
-主成份分析[^wold1987principal]可以通俗的理解为一种降维方法。其目标可以理解为将一个 `$m$` 维的数据转换称一个 `$k$` 维的数据，其中 `$k < m$`。对于具有 `$n$` 个样本的数据集，设 `$\boldsymbol{x_i}$` 表示 `$m$` 维的列向量，则
+主成分分析[^wold1987principal]可以通俗的理解为一种降维方法。其目标可以理解为将一个 `$m$` 维的数据转换称一个 `$k$` 维的数据，其中 `$k < m$`。对于具有 `$n$` 个样本的数据集，设 `$\boldsymbol{x_i}$` 表示 `$m$` 维的列向量，则
 
 `$$
 X_{m*n} = \left(\boldsymbol{x_1}, \boldsymbol{x_2}, ..., \boldsymbol{x_n}\right)
