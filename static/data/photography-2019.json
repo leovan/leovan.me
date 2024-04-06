@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2019-07-14-great-wall.jpg", "srct": "2019-07-14-great-wall-thumbnail.jpg", "title": "司马台长城" },

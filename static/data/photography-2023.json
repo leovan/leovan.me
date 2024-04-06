@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2023-04-01-shanghei-road.jpg", "srct": "2023-04-01-shanghei-road-thumbnail.jpg", "title": "总有一条漂亮的小路在等你！" },

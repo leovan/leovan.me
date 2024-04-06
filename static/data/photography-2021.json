@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2021-03-27-nanking-xianfeng-book-store.jpg", "srct": "2021-03-27-nanking-xianfeng-book-store-thumbnail.jpg", "title": "书店过客" },

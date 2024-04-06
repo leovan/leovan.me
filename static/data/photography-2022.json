@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2022-04-03-guixiaoshi.jpg", "srct": "2022-04-03-guixiaoshi-thumbnail.jpg", "title": "一座城，两三友，四下皆是快活！" },

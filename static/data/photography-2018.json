@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2018-09-11-over-the-cloud.jpg", "srct": "2018-09-11-over-the-cloud-thumbnail.jpg", "title": "云之上" }

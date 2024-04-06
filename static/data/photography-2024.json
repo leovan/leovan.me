@@ -1,0 +1,28 @@
+{
+  "itemsBaseURL": "/images/photography/",
+  "thumbnailWidth": "auto",
+  "thumbnailHeight": 160,
+  "thumbnailBorderVertical": 0,
+  "thumbnailBorderHorizontal": 0,
+  "thumbnailAlignment": "justified",
+  "thumbnailGutterWidth": 6,
+  "thumbnailGutterHeight": 6,
+  "thumbnailLabel": {
+    "titleMultiLine": true
+  },
+  "allowHTMLinData": true,
+  "thumbnailHoverEffect2": "labelAppear75",
+  "viewerToolbar": {
+    "display": true,
+    "standard":   "minimizeButton, label",
+    "minimized":  "minimizeButton, label, downloadButton"
+  },
+  "items": [
+    { "src": "2024-03-30-xian-dayan-pagoda.jpg", "srct": "2024-03-30-xian-dayan-pagoda-thumbnail.jpg", "title": "大雁塔" },
+    { "src": "2024-04-01-xian-city-wall.jpg", "srct": "2024-04-01-xian-city-wall.jpg", "title": "西安人的城墙下是西安人的火车" },
+    { "src": "2024-04-01-goodbye-xian.jpg", "srct": "2024-04-01-goodbye-xian-thumbnail.jpg", "title": "再见西安，再见长安" },
+    { "src": "2024-04-04-qingcheng-mountain-1.jpg", "srct": "2024-04-04-qingcheng-mountain-1-thumbnail.jpg", "title": "俩长虫成精的地方" },
+    { "src": "2024-04-04-qingcheng-mountain-2.jpg", "srct": "2024-04-04-qingcheng-mountain-2-thumbnail.jpg", "title": "俩长虫成精的地方" },
+    { "src": "2024-04-04-dujiang-dam.jpg", "srct": "2024-04-04-dujiang-dam-thumbnail.jpg", "title": "两千多年前的水沟" }
+  ]
+}

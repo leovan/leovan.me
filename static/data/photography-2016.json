@@ -15,7 +15,7 @@
   "viewerToolbar": {
     "display": true,
     "standard":   "minimizeButton, label",
-    "minimized":  "minimizeButton, label, downloadButton, infoButton"
+    "minimized":  "minimizeButton, label, downloadButton"
   },
   "items": [
     { "src": "2016-11-05-autumn-01.jpg", "srct": "2016-11-05-autumn-01-thumbnail.jpg", "title": "好个秋" },
