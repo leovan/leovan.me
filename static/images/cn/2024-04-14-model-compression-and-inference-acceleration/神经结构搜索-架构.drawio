@@ -1,0 +1,55 @@
+<mxfile host="Electron" modified="2024-04-14T05:40:23.362Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="wRwaALMFrAXI1vb_S5-j" version="24.2.5" type="device">
+  <diagram name="第 1 页" id="-igF9EWiKe5NhWIAdyq4">
+    <mxGraphModel dx="2059" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="iZlIE2iaRLnl1SZiPbrH-1" target="iZlIE2iaRLnl1SZiPbrH-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;搜索空间&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="60" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-5" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="iZlIE2iaRLnl1SZiPbrH-2" target="iZlIE2iaRLnl1SZiPbrH-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;性能评估&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="380" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-4" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="iZlIE2iaRLnl1SZiPbrH-3" target="iZlIE2iaRLnl1SZiPbrH-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;搜索策略&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="220" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="iZlIE2iaRLnl1SZiPbrH-7" target="iZlIE2iaRLnl1SZiPbrH-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-7" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;搜索空间&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="140" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-8" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;搜索策略&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-9" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="140" as="sourcePoint" />
+            <mxPoint x="520" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-10" value="搜索结构" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="300" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-11" value="结构性能" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="300" y="110" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-12" value="早&lt;div&gt;期&lt;/div&gt;&lt;div&gt;架&lt;/div&gt;&lt;div&gt;构&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry width="40" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="iZlIE2iaRLnl1SZiPbrH-13" value="当&lt;div&gt;前&lt;div&gt;&lt;div&gt;架&lt;/div&gt;&lt;div&gt;构&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry y="140" width="40" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
