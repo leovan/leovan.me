@@ -77,7 +77,7 @@ $$`
 
 其中每一行的加和为 1。
 
-**马尔可夫过程（马尔可夫链）**是一个无记忆的随机过程，一个马尔可夫过程可以定义为 `$\langle \mathcal{S}, \mathcal{P} \rangle$`，其中 `$\mathcal{S}$` 是一个有限状态集合，`$\mathcal{P}_{ss'} = \mathbb{P} \left[S_t = s' | S_{t-1} = s\right]$`，`$\mathcal{P}$` 为状态转移概率矩阵。以一个学生的日常生活为例，Class `$i$` 表示第 `$i$` 门课程，Facebook 表示在 Facebook 上进行社交，Pub 表示去酒吧，Pass 表示通过考试，Sleep 表示睡觉，这个马尔可夫过程如下图所示：
+**马尔可夫过程**（**马尔可夫链**）是一个无记忆的随机过程，一个马尔可夫过程可以定义为 `$\langle \mathcal{S}, \mathcal{P} \rangle$`，其中 `$\mathcal{S}$` 是一个有限状态集合，`$\mathcal{P}_{ss'} = \mathbb{P} \left[S_t = s' | S_{t-1} = s\right]$`，`$\mathcal{P}$` 为状态转移概率矩阵。以一个学生的日常生活为例，Class `$i$` 表示第 `$i$` 门课程，Facebook 表示在 Facebook 上进行社交，Pub 表示去酒吧，Pass 表示通过考试，Sleep 表示睡觉，这个马尔可夫过程如下图所示：
 
 {{< figure src="/images/cn/2020-05-23-markov-decision-process/student-markov-chain.png" >}}
 
@@ -93,7 +93,7 @@ C1 -> C2 -> C3 -> Pub -> C2 -> C3 -> Pass -> Sleep
 
 {{< figure src="/images/cn/2020-05-23-markov-decision-process/student-markov-chain-transition-matrix.png" >}}
 
-据此我们可以定义**马尔可夫奖励过程（Markov Reward Process，MRP）**为 `$\langle \mathcal{S, P, R}, \gamma \rangle$`，其中 `$\mathcal{S}$` 和 `$\mathcal{P}$` 同马尔可夫过程定义中的参数相同，`$\mathcal{R}$` 为收益函数，`$\mathcal{R}_s = \mathbb{E} \left[R_t | S_{t-1} = s\right]$`，`$\gamma \in \left[0, 1\right]$` 为**折扣率**。如下图所示：
+据此我们可以定义**马尔可夫奖励过程**（**Markov Reward Process，MRP**）为 `$\langle \mathcal{S, P, R}, \gamma \rangle$`，其中 `$\mathcal{S}$` 和 `$\mathcal{P}$` 同马尔可夫过程定义中的参数相同，`$\mathcal{R}$` 为收益函数，`$\mathcal{R}_s = \mathbb{E} \left[R_t | S_{t-1} = s\right]$`，`$\gamma \in \left[0, 1\right]$` 为**折扣率**。如下图所示：
 
 {{< figure src="/images/cn/2020-05-23-markov-decision-process/student-mrp.png" >}}
 
@@ -109,7 +109,7 @@ $$`
 G_t = R_{t+1} + \gamma G_{t+1}
 $$`
 
-对于存在“最终时刻”的应用中，智能体和环境的交互能被自然地分成一个系列子序列，每个子序列称之为“**幕（episodes）**”，例如一盘游戏、一次走迷宫的过程，每幕都以一种特殊状态结束，称之为**终结状态**。这些幕可以被认为在同样的终结状态下结束，只是对不同的结果有不同的收益，具有这种**分幕**重复特性的任务称之为**分幕式任务**。
+对于存在“最终时刻”的应用中，智能体和环境的交互能被自然地分成一个系列子序列，每个子序列称之为“**幕**（**episodes**）”，例如一盘游戏、一次走迷宫的过程，每幕都以一种特殊状态结束，称之为**终结状态**。这些幕可以被认为在同样的终结状态下结束，只是对不同的结果有不同的收益，具有这种**分幕**重复特性的任务称之为**分幕式任务**。
 
 MRP 的状态价值函数 `$v \left(s\right)$` 给出了状态 `$s$` 的长期价值，定义为：
 
@@ -123,15 +123,15 @@ v(s) &=\mathbb{E}\left[G_{t} | S_{t}=s\right] \\
 \end{aligned}
 $$`
 
-价值函数可以分解为两部分：即时收益 `$R_{t+1}$` 和后继状态的折扣价值 `$\gamma v \left(S_{t+1}\right)$`。上式我们称之为**贝尔曼方程（Bellman Equation）**，其衡量了状态价值和后继状态价值之间的关系。
+价值函数可以分解为两部分：即时收益 `$R_{t+1}$` 和后继状态的折扣价值 `$\gamma v \left(S_{t+1}\right)$`。上式我们称之为**贝尔曼方程**（**Bellman Equation**），其衡量了状态价值和后继状态价值之间的关系。
 
 # 马尔可夫决策过程
 
-一个**马尔可夫决策过程（Markov Decision Process，MDP）**定义为包含决策的马尔可夫奖励过程 `$\langle\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma\rangle$`，在这个环境中所有的状态均具有马尔可夫性。其中，`$\mathcal{S}$` 为有限的状态集合，`$\mathcal{A}$` 为有限的动作集合，`$\mathcal{P}$` 为状态转移概率矩阵，`$\mathcal{P}_{s s^{\prime}}^{a}=\mathbb{P}\left[S_{t+1}=s^{\prime} | S_{t}=s, A_{t}=a\right]$`，`$\mathcal{R}$` 为奖励函数，`$\mathcal{R}_{s}^{a}=\mathbb{E}\left[R_{t+1} | S_{t}=s, A_{t}=a\right]$`，`$\gamma \in \left[0, 1\right]$` 为折扣率。上例中的马尔可夫决策过程如下图所示：
+一个**马尔可夫决策过程**（**Markov Decision Process，MDP**）定义为包含决策的马尔可夫奖励过程 `$\langle\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma\rangle$`，在这个环境中所有的状态均具有马尔可夫性。其中，`$\mathcal{S}$` 为有限的状态集合，`$\mathcal{A}$` 为有限的动作集合，`$\mathcal{P}$` 为状态转移概率矩阵，`$\mathcal{P}_{s s^{\prime}}^{a}=\mathbb{P}\left[S_{t+1}=s^{\prime} | S_{t}=s, A_{t}=a\right]$`，`$\mathcal{R}$` 为奖励函数，`$\mathcal{R}_{s}^{a}=\mathbb{E}\left[R_{t+1} | S_{t}=s, A_{t}=a\right]$`，`$\gamma \in \left[0, 1\right]$` 为折扣率。上例中的马尔可夫决策过程如下图所示：
 
 {{< figure src="/images/cn/2020-05-23-markov-decision-process/student-mdp.png" >}}
 
-**策略（Policy）**定义为给定状态下动作的概率分布：
+**策略**（**Policy**）定义为给定状态下动作的概率分布：
 
 `$$
 \pi \left(a | s\right) = \mathbb{P} \left[A_t = a | S_t = s\right]
