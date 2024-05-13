@@ -1,0 +1,44 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "山",
+      "download": "山.jpg",
+      "src": "/images/photography/2017-07-14-mountains.jpg",
+      "thumb": "/images/photography/2017-07-14-mountains-thumbnail.jpg"
+    },
+    {
+      "alt": "涧",
+      "download": "涧.jpg",
+      "src": "/images/photography/2017-07-14-stream.jpg",
+      "thumb": "/images/photography/2017-07-14-stream-thumbnail.jpg"
+    },
+    {
+      "alt": "湾",
+      "download": "湾.jpg",
+      "src": "/images/photography/2017-08-25-bay.jpg",
+      "thumb": "/images/photography/2017-08-25-bay-thumbnail.jpg"
+    },
+    {
+      "alt": "光",
+      "download": "光.jpg",
+      "src": "/images/photography/2017-08-11-light.jpg",
+      "thumb": "/images/photography/2017-08-11-light-thumbnail.jpg"
+    }
+  ]
+}

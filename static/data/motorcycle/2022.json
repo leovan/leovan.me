@@ -1,0 +1,56 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "潭柘寺",
+      "download": "潭柘寺.jpg",
+      "src": "/images/motorcycle/2022-01-01-tanzhei-temple.jpg",
+      "thumb": "/images/motorcycle/2022-01-01-tanzhei-temple-thumbnail.jpg"
+    },
+    {
+      "alt": "你好五月，你好夏天！",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=j3549cbvvnz",
+      "thumb": "/images/motorcycle/2022-04-30-yanqing-thumbnail.jpg"
+    },
+    {
+      "alt": "一个人走，无聊的路口！",
+      "download": "一个人走-无聊的路口.jpg",
+      "src": "/images/motorcycle/2022-05-03-jinhai-lake.jpg",
+      "thumb": "/images/motorcycle/2022-05-03-jinhai-lake-thumbnail.jpg"
+    },
+    {
+      "alt": "旅人",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=m3549m7oh68",
+      "thumb": "/images/motorcycle/2022-05-03-pinggu-thumbnail.jpg"
+    },
+    {
+      "alt": "再见夏天，Goodbye Summer！",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=b3549xzkfeu",
+      "thumb": "/images/motorcycle/2022-07-23-fangshan-thumbnail.jpg"
+    },
+    {
+      "alt": "乡间野路，一人独享！",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=s35493993vv",
+      "thumb": "/images/motorcycle/2022-10-01-mengtougou-thumbnail.jpg"
+    }
+  ]
+}

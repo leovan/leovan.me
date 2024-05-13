@@ -1,0 +1,26 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "First Sight of Melbourne's Night",
+      "download": "First Sight of Melbourne Night.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/first-sight-of-melbourne-night.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/first-sight-of-melbourne-night.jpg"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "45 毫米手枪",
+      "download": "45-毫米手枪.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/45mm-gun.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/45mm-gun.jpg"
+    },
+    {
+      "alt": "还不赖的结果",
+      "download": "还不赖的结果.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/target-sheet.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/target-sheet.jpg"
+    },
+    {
+      "alt": "霰弹枪",
+      "download": "霰弹枪.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/shotgun.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/shotgun.jpg"
+    }
+  ]
+}

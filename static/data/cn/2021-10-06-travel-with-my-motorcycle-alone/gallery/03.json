@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "小摩托和我",
+      "download": "小摩托和我.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/motorcycle-and-me.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/motorcycle-and-me.jpg"
+    },
+    {
+      "alt": "背影",
+      "download": "背影.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/my-back.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/my-back.jpg"
+    }
+  ]
+}

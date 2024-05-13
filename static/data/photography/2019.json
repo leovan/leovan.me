@@ -1,0 +1,50 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "司马台长城",
+      "download": "司马台长城.jpg",
+      "src": "/images/photography/2019-07-14-great-wall.jpg",
+      "thumb": "/images/photography/2019-07-14-great-wall-thumbnail.jpg"
+    },
+    {
+      "alt": "库布其沙漠挑战赛",
+      "download": "库布其沙漠挑战赛.jpg",
+      "src": "/images/photography/2019-10-25-kubuqi-hiking.jpg",
+      "thumb": "/images/photography/2019-10-25-kubuqi-hiking-thumbnail.jpg"
+    },
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/photography/2019-10-05-xihu-1.jpg",
+      "thumb": "/images/photography/2019-10-05-xihu-1-thumbnail.jpg"
+    },
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/photography/2019-10-05-xihu-2.jpg",
+      "thumb": "/images/photography/2019-10-05-xihu-2-thumbnail.jpg"
+    },
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/photography/2019-10-05-xihu-3.jpg",
+      "thumb": "/images/photography/2019-10-05-xihu-3-thumbnail.jpg"
+    }
+  ]
+}

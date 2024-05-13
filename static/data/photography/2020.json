@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "夜·月",
+      "download": "夜-月.jpg",
+      "src": "/images/photography/2020-03-10-night-moon.jpg",
+      "thumb": "/images/photography/2020-03-10-night-moon-thumbnail.jpg"
+    },
+    {
+      "alt": "普洱干净到无需修图的天",
+      "download": "普洱干净到无需修图的天.jpg",
+      "src": "/images/photography/2020-11-24-clear-view-in-puer.jpg",
+      "thumb": "/images/photography/2020-11-24-clear-view-in-puer-thumbnail.jpg"
+    }
+  ]
+}

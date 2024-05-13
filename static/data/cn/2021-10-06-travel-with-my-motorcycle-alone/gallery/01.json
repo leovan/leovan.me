@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "秋日草原",
+      "download": "秋日草原.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/grassland-in-autumn.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/grassland-in-autumn.jpg"
+    },
+    {
+      "alt": "路两旁的树",
+      "download": "路两旁的树.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-01.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-01.jpg"
+    },
+    {
+      "alt": "小行星即视感",
+      "download": "小行星即视感.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-02.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/saihanba-02.jpg"
+    }
+  ]
+}

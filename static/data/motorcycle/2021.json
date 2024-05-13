@@ -1,0 +1,99 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6,
+    "rowHeight": 160
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "第一辆摩托·幼狮800",
+      "download": "第一辆摩托-幼狮800.jpg",
+      "src": "/images/motorcycle/2021-05-03-my-first-motorcycle-leoncino-800.jpg",
+      "thumb": "/images/motorcycle/2021-05-03-my-first-motorcycle-leoncino-800-thumbnail.jpg"
+    },
+    {
+      "alt": "和摩友一起晚餐",
+      "download": "和摩友一起晚餐.jpg",
+      "src": "/images/motorcycle/2021-05-30-say-goodbye-after-supper.jpg",
+      "thumb": "/images/motorcycle/2021-05-30-say-goodbye-after-supper-thumbnail.jpg"
+    },
+    {
+      "alt": "骑上我心爱的“小”摩托",
+      "download": "骑上我心爱的“小”摩托.jpg",
+      "src": "/images/motorcycle/2021-05-30-on-my-little-motorcycle.jpg",
+      "thumb": "/images/motorcycle/2021-05-30-on-my-little-motorcycle-thumbnail.jpg"
+    },
+    {
+      "alt": "训练中...",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=f3548ozg70a",
+      "thumb": "/images/motorcycle/2021-05-30-on-training-thumbnail.jpg"
+    },
+    {
+      "alt": "第一次跑山",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=k3548rcnx5y",
+      "thumb": "/images/motorcycle/2021-06-28-peking-mentougou-motorcycle-mountain-racing-thumbnail.jpg"
+    },
+    {
+      "alt": "骑士星人打卡地球现场",
+      "download": "骑士星人打卡地球现场.jpg",
+      "src": "/images/motorcycle/2021-07-10-xishan-park-with-friends.jpg",
+      "thumb": "/images/motorcycle/2021-07-10-xishan-park-with-friends-thumbnail.jpg"
+    },
+    {
+      "alt": "798 摆拍现场",
+      "download": "798摆拍现场.jpg",
+      "src": "/images/motorcycle/2021-07-24-798-with-friends.jpg",
+      "thumb": "/images/motorcycle/2021-07-24-798-with-friends-thumbnail.jpg"
+    },
+    {
+      "alt": "大摩托和大灰机",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=c3549f5oe7m",
+      "thumb": "/images/motorcycle/2021-07-24-motorcycle-and-airplane-thumbnail.jpg"
+    },
+    {
+      "alt": "凉风有信，一叶知秋",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=u3549byq1ee",
+      "thumb": "/images/motorcycle/2021-08-07-fanqi-road-mountain-racing-thumbnail.jpg"
+    },
+    {
+      "alt": "我还年轻",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=y3549zlet1z",
+      "thumb": "/images/motorcycle/2021-08-14-teens-edge-thumbnail.jpg"
+    },
+    {
+      "alt": "奔赶夏日的尾巴",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=c3549syikov",
+      "thumb": "/images/motorcycle/2021-08-21-chasing-the-tail-of-summer-thumbnail.jpg"
+    },
+    {
+      "alt": "乌兰察布的火山口",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=e3549ip4f64",
+      "thumb": "/images/motorcycle/2021-10-04-ulanqab-volcanic-vent-thumbnail.jpg"
+    },
+    {
+      "alt": "入冬前最后一次跑山",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=p3549pxfnr1",
+      "thumb": "/images/motorcycle/2021-10-07-last-mountain-racing-in-2021-thumbnail.jpg"
+    }
+  ]
+}

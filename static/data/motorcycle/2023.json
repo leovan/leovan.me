@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "山花，枯树，火车，小路。",
+      "download": "山花-枯树-火车-小路.jpg",
+      "src": "/images/motorcycle/2023-04-01-shanghei-road.jpg",
+      "thumb": "/images/motorcycle/2023-04-01-shanghei-road-thumbnail.jpg"
+    },
+    {
+      "alt": "年轻人不能总躺着，得溜达溜达！",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=r35480uc24y",
+      "thumb": "/images/motorcycle/2023-11-18-fangshan-thumbnail.jpg"
+    }
+  ]
+}

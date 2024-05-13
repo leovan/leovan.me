@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "水上市场",
+      "download": "水上市场.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/pattaya-floating-market.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/pattaya-floating-market.jpg"
+    },
+    {
+      "alt": "海边日落",
+      "download": "海边日落.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/beach-sunset.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/beach-sunset.jpg"
+    }
+  ]
+}

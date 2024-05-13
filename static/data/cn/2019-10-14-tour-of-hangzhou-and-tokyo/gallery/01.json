@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-1.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-1.jpg"
+    },
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-2.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-2.jpg"
+    },
+    {
+      "alt": "西湖",
+      "download": "西湖.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-3.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/west-lake-3.jpg"
+    }
+  ]
+}

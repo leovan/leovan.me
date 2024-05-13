@@ -1,0 +1,74 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "大雁塔",
+      "download": "大雁塔.jpg",
+      "src": "/images/photography/2024-03-30-xian-dayan-pagoda.jpg",
+      "thumb": "/images/photography/2024-03-30-xian-dayan-pagoda-thumbnail.jpg"
+    },
+    {
+      "alt": "西安人的城墙下是西安人的火车",
+      "download": "西安人的城墙下是西安人的火车.jpg",
+      "src": "/images/photography/2024-04-01-xian-city-wall.jpg",
+      "thumb": "/images/photography/2024-04-01-xian-city-wall-thumbnail.jpg"
+    },
+    {
+      "alt": "再见西安，再见长安",
+      "download": "再见西安，再见长安.jpg",
+      "src": "/images/photography/2024-04-01-goodbye-xian.jpg",
+      "thumb": "/images/photography/2024-04-01-goodbye-xian-thumbnail.jpg"
+    },
+    {
+      "alt": "俩长虫成精的地方",
+      "download": "俩长虫成精的地方.jpg",
+      "src": "/images/photography/2024-04-04-qingcheng-mountain-1.jpg",
+      "thumb": "/images/photography/2024-04-04-qingcheng-mountain-1-thumbnail.jpg"
+    },
+    {
+      "alt": "俩长虫成精的地方",
+      "download": "俩长虫成精的地方.jpg",
+      "src": "/images/photography/2024-04-04-qingcheng-mountain-2.jpg",
+      "thumb": "/images/photography/2024-04-04-qingcheng-mountain-2-thumbnail.jpg"
+    },
+    {
+      "alt": "两千多年前的水沟",
+      "download": "两千多年前的水沟.jpg",
+      "src": "/images/photography/2024-04-04-dujiang-dam.jpg",
+      "thumb": "/images/photography/2024-04-04-dujiang-dam-thumbnail.jpg"
+    },
+    {
+      "alt": "塔尔寺",
+      "download": "塔尔寺.jpg",
+      "src": "/images/photography/2024-04-10-kumbum-monastery.jpg",
+      "thumb": "/images/photography/2024-04-10-kumbum-monastery-thumbnail.jpg"
+    },
+    {
+      "alt": "雪山、沙漠、青海湖",
+      "download": "雪山、沙漠、青海湖.jpg",
+      "src": "/images/photography/2024-04-11-qinghai-lake.jpg",
+      "thumb": "/images/photography/2024-04-11-qinghai-lake-thumbnail.jpg"
+    },
+    {
+      "alt": "青海",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=j3548e7oirj",
+      "thumb": "/images/photography/2024-04-10-qinghai-thumbnail.jpg"
+    }
+  ]
+}

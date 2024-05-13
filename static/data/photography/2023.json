@@ -1,0 +1,44 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "总有一条漂亮的小路在等你！",
+      "download": "总有一条漂亮的小路在等你.jpg",
+      "src": "/images/photography/2023-04-01-shanghei-road.jpg",
+      "thumb": "/images/photography/2023-04-01-shanghei-road-thumbnail.jpg"
+    },
+    {
+      "alt": "赤城丹霞赤壁",
+      "download": "赤城丹霞赤壁.jpg",
+      "src": "/images/photography/2023-06-23-chicheng.jpg",
+      "thumb": "/images/photography/2023-06-23-chicheng-thumbnail.jpg"
+    },
+    {
+      "alt": "老掌沟穿越",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=x3548w9fbtv",
+      "thumb": "/images/photography/2023-06-24-wild-crossing-thumbnail.jpg"
+    },
+    {
+      "alt": "二连浩特国境界碑",
+      "download": "二连浩特国境界碑.jpg",
+      "src": "/images/photography/2023-06-25-erlianhaote.jpg",
+      "thumb": "/images/photography/2023-06-25-erlianhaote-thumbnail.jpg"
+    }
+  ]
+}

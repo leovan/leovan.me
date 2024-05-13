@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "假装能吃瘦",
+      "download": "假装能吃瘦.jpg",
+      "src": "/images/cooking/2017-06-24-fitness-diet.jpg",
+      "thumb": "/images/cooking/2017-06-24-fitness-diet-thumbnail.jpg"
+    },
+    {
+      "alt": "酱肘子和桑葚蛋挞，了解一下！",
+      "download": "酱肘子和桑葚蛋挞-了解一下.jpg",
+      "src": "/images/cooking/2017-02-25-special-egg-tart.jpg",
+      "thumb": "/images/cooking/2017-02-25-special-egg-tart-thumbnail.jpg"
+    }
+  ]
+}

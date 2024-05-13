@@ -17,13 +17,13 @@
   {{ $.Page.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Page.Scratch.Get "section" }}{{ end }}">
   <header class="masthead">
-    {{ partial "logo.html" . }}
-    {{ partial "menu.html" . }}
+    {{ partial "header_logo.html" . }}
+    {{ partial "header_menu.html" . }}
   </header>
 
   <article class="main">
     <header class="content-title">
-    {{ partial "post_meta.html" . }}
+    {{ partial "header_post_meta.html" . }}
 
     {{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
     {{ with $.Site.Params.googleAdsense }}

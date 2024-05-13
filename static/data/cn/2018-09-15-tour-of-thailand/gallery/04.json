@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "好多好多水果",
+      "download": "好多好多水果.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/fruit.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/fruit.jpg"
+    },
+    {
+      "alt": "好多好多海鲜",
+      "download": "好多好多海鲜.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/seafood.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/seafood.jpg"
+    }
+  ]
+}

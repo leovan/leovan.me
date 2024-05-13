@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "库布其沙漠",
+      "download": "库布其沙漠.jpg",
+      "src": "/images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-01.jpg",
+      "thumb": "/images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-01.jpg"
+    },
+    {
+      "alt": "库布其沙漠",
+      "download": "库布其沙漠.jpg",
+      "src": "/images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-02.jpg",
+      "thumb": "/images/cn/2019-10-28-jdd-hipo-learning-journey/kubuqi-02.jpg"
+    }
+  ]
+}

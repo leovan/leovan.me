@@ -1,0 +1,26 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "Autonomous Greenhouse Challenge 2019",
+      "download": "Autonomous-Greenhouse-Challenge-2019.png",
+      "src": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/agc-2019-teams.png",
+      "thumb": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/agc-2019-teams.png"
+    }
+  ]
+}

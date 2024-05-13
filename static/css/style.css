@@ -447,16 +447,6 @@ pre[class*="language-"] > code[data-language]:before {
   box-shadow: 0 2px 5px 0 var(--box-shadow) !important;
 }
 
-.nanogallery2-tags a {
-  color: var(--body-bg);
-  background: var(--block-border);
-}
-
-.nanogallery2-tags .active a {
-  border: 1px solid var(--block-border);
-  color: var(--body-fg);
-}
-
 @media screen and (min-width: 960px) {
   html::after {
     content: "";
@@ -1000,64 +990,10 @@ footer .adsbygoogle {
   font-size: 1rem;
 }
 
-/* nanogallery2 */
-.nGY2 .nGY2GThumbnailLabel {
-  line-height: 1.2em !important;
-}
-
-.nGY2 .nGY2GThumbnailAlbumTitle, .nGY2 .nGY2GThumbnailImageTitle {
-  text-shadow: none !important;
-}
-
-.nanogallery2-tags {
-  direction: ltr;
-  max-width: inherit;
-  margin-bottom: 30px;
-}
-
-.nanogallery2-tags ul {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nanogallery2-tags li {
-  border-bottom: 1px solid;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nanogallery2-tags a {
-  display: block;
-  padding: 15px 20px;
-  border-bottom: none;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.nanogallery2-tags .active a {
-  background: none;
-}
-
-.nanogallery2-tags li li a {
-  padding-left: 30px;
-}
-
-.nanogallery2-tags li li::before {
-  content: none;
-}
-
-.nanogallery2-tags li li a::before {
-  content: "•\00a0\00a0\00a0";
-}
-
-.nanogallery2-tags li, .nanogallery2-tags li:first-child {
+/* gallery */
+.gallery a {
   border: none;
-  display: inline-block;
-  margin-top: 5px;
+  text-decoration: none;
 }
 
 /* kbd */
@@ -1146,12 +1082,12 @@ h6:hover .anchor {
   text-align: center;
 }
 
-p.list-page {
+p.list-title {
   text-indent: -5em;
   padding-left: 5em;
 }
 
-p.list-page span {
+p.list-title span {
   margin-right: 0.2em;
 }
 

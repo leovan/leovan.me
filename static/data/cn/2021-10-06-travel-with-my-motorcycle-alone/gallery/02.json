@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "树",
+      "download": "树.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/tree.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/tree.jpg"
+    },
+    {
+      "alt": "路",
+      "download": "路.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/road.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/road.jpg"
+    },
+    {
+      "alt": "河",
+      "download": "河.jpg",
+      "src": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/river.jpg",
+      "thumb": "/images/cn/2021-10-06-travel-with-my-motorcycle-alone/river.jpg"
+    }
+  ]
+}

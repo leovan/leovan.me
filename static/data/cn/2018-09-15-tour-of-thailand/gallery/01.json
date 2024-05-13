@@ -1,0 +1,26 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "蓝蓝的天空",
+      "download": "蓝蓝的天空.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/blue-sky.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/blue-sky.jpg"
+    }
+  ]
+}

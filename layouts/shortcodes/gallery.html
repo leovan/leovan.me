@@ -1,0 +1,14 @@
+{{ if not ($.Page.Scratch.Get "gallery") }}
+  {{ $.Page.Scratch.Set "gallery" 1 }}
+{{ end }}
+
+{{ if not ($.Page.Scratch.Get "gallery-index") }}
+  {{ $.Page.Scratch.Set "gallery-index" 1 }}
+{{ else }}
+  {{ $.Page.Scratch.Set "gallery-index" (add ($.Page.Scratch.Get "gallery-index") 1) }}
+{{ end }}
+
+{{ $gallery_index := $.Page.Scratch.Get "gallery-index" }}
+{{ $data := .Get "data" }}
+
+<div class="gallery" shortcode="gallery" id="gallery-{{ $gallery_index }}" data="{{ $data }}"></div>

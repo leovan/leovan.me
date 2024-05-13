@@ -92,14 +92,15 @@ params:
   imageCompareViewerVersion: "latest"
   jQueryVersion: "3.7.1"
   jsCookieVersion: "3.0.5"
+  justifiedgalleryVersion: "3.8.1"
   lazysizesVersion: "5.3.2"
+  lightgalleryVersion: "2.7.2"
   mathjaxVersion: "3.2.2"
   meetingjsVersion: "latest"
-  nanogallery2Version: "3.0.5"
   pseudocodeVersion: "latest"
   prismjsVersion: "1.29.0"
   vanillaBackToTopVersion: "latest"
-  videojsVersion: "8.11.8"
+  videojsVersion: "8.13.0"
 
   lang:
     slogan:

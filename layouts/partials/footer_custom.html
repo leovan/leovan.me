@@ -23,16 +23,16 @@
 <script src='//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js'></script>
 <script src="/js/toggle-theme.js"></script>
 
-{{ if and (not .IsHome) .Content }}
+{{ if not .IsHome }}
 <script src="/js/no-highlight.js"></script>
 <script src="/js/math-code.js"></script>
 <script src="/js/heading-anchor.js"></script>
 {{ end }}
 
-{{ partial "giscus.html" . }}
+{{ partial "footer_giscus.html" . }}
 {{ partial "footer_prismjs.html" . }}
 {{ partial "footer_pseudocode.html" . }}
-{{ partial "footer_nanogallery2_gallery.html" . }}
+{{ partial "footer_gallery.html" . }}
 {{ partial "footer_image_compare.html" . }}
 
 {{ if $.Page.Scratch.Get "douban-card" }}

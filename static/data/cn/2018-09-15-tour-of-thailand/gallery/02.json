@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "大皇宫",
+      "download": "大皇宫.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/grand-palace.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/grand-palace.jpg"
+    },
+    {
+      "alt": "夜晚的黎明寺",
+      "download": "夜晚的黎明寺.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/wat-arun.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/wat-arun.jpg"
+    },
+    {
+      "alt": "油轮之上",
+      "download": "油轮之上.jpg",
+      "src": "/images/cn/2018-09-15-tour-of-thailand/tanker-in-night.jpg",
+      "thumb": "/images/cn/2018-09-15-tour-of-thailand/tanker-in-night.jpg"
+    }
+  ]
+}

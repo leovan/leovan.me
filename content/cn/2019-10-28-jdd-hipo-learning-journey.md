@@ -75,15 +75,15 @@ C 类特质的人有严谨的优势，但这个优势也需要根据不同的场
 
 课程的最后安排了一个终极挑战「库布其沙漠 50 公里挑战」，对于我这个还比较喜欢出去浪的人是一定不能错过的。比赛之前我们做了些功课，我作为整个队伍的领航员走在最前面负责探路和制定路线，队长则负责在最后面压阵避免有同学掉队。组内的男生分担了两位女生的负重，当然最感动的是两位小姐姐帮我们买了鞋垫神奇 - 姨妈巾。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/nanogallery2/01.json" >}}
+{{< gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/gallery/01.json" >}}
 
 我们一路穿越山丘，峡谷和小河，还有我们巨帅的越野保障车。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/nanogallery2/02.json" >}}
+{{< gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/gallery/02.json" >}}
 
 挑战赛一共两天的行程，第一天路线比较固定，大家基本拼的就是体力和团队凝聚力了，队里的两位小姐姐超级给力，一路我们都保持了很好的队形，最终拿下了第一天赛程的冠军，领先第二名 20 多分钟。第二天赛程给定的建议路线有一个折线，前一晚我们计划选择走更近的直线，但中途被呼叫让我们走回预定线路上去。虽然我们已经提前确定规则并没有要求必须走预定线路，但是由于对讲机里不断呼叫，我们还是回到了预定路线上去。但比赛最后才发现，只有我们回到了预定路线上，其他队伍并没有回去，所以第二赛段我们只拿到了第二，被昨天的第二名领先了 15 分钟。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/nanogallery2/03.json" >}}
+{{< gallery data="/data/cn/2019-10-28-jdd-hipo-learning-journey/gallery/03.json" >}}
 
 庆幸的是两个赛段的总成绩我们还是第一名，当然第一名也还是要有付出的，颁奖仪式上我们用奖杯每人豪饮了一大碗啤酒，足足有一瓶多的一碗。整个比赛下来我感觉三点很重要：目标清晰，分工明确，齐心协力。我们在一开始就朝着冠军的奖杯出发的，我负责领航，队长负责断后，所有人相互帮助，一同朝着目标努力前进。当然，在规则允许的情况下，再多一分坚持己见就更好了。
 
@@ -91,7 +91,7 @@ C 类特质的人有严谨的优势，但这个优势也需要根据不同的场
 
 最后放一下京东数科的 MV 吧，我有出境 6 秒哦 (02:27 - 02:32)，没错，打哈欠和撸猫的就是我，相信我，养猫一定比养猪容易，还有种菜 :smiley:。
 
-{{< video mp4="//dpv.videocc.net/c8f53742da/4/c8f53742dac09ea5574adfd949095164_3.mp4" poster="/images/cn/2019-10-28-jdd-hipo-learning-journey/生活因你而火热.png" >}}
+{{< iframe src="https://v.qq.com/txp/iframe/player.html?vid=z3548bp8mg8" >}}
 
 [^six-seconds]: https://cn.6seconds.org/about
 

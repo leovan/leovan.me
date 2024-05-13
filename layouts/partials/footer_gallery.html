@@ -1,0 +1,68 @@
+{{ if $.Page.Scratch.Get "gallery" }}
+<script src="//cdn.jsdelivr.net/npm/jquery@{{ $.Site.Params.jQueryVersion }}/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/js/jquery.justifiedGallery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/lightgallery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/zoom/lg-zoom.min.js"></script>
+
+<script>
+function setGalleryItemElementAttribute(element, name, value) {
+  if (value !== undefined && value !== null) {
+    element.setAttribute(name, value)
+  }
+}
+
+function createGalleryItemElement(item) {
+  let outerElement = document.createElement("a");
+  let innerElement = document.createElement("img");
+
+  setGalleryItemElementAttribute(innerElement, "alt", item["alt"]);
+  setGalleryItemElementAttribute(outerElement, "data-download", item["download"]);
+  setGalleryItemElementAttribute(outerElement, "data-iframe", item["iframe"]);
+  setGalleryItemElementAttribute(outerElement, "data-iframe-title", item["iframeTitle"]);
+  setGalleryItemElementAttribute(outerElement, "data-poster", item["poster"]);
+  setGalleryItemElementAttribute(outerElement, "data-sizes", item["sizes"]);
+  setGalleryItemElementAttribute(outerElement, "href", item["src"]);
+  setGalleryItemElementAttribute(outerElement, "data-sub-html", item["subHtml"]);
+  setGalleryItemElementAttribute(innerElement, "src", item["thumb"]);
+  setGalleryItemElementAttribute(outerElement, "title", item["title"]);
+  setGalleryItemElementAttribute(outerElement, "data-video", item["video"]);
+
+  outerElement.appendChild(innerElement);
+
+  return outerElement;
+}
+
+function createGallery(elementId, data) {
+  // https://miromannino.github.io/Justified-Gallery/options-and-events/
+  let justifiedGalleryOptions = data["justifiedGalleryOptions"];
+
+  // https://www.lightgalleryjs.com/docs/settings/
+  let lightGalleryOptions = data["lightGalleryOptions"];
+  lightGalleryOptions["plugins"] = [lgZoom, lgThumbnail];
+  lightGalleryOptions["licenseKey"] = "0000-0000-000-0001";
+
+  let galleryElement = document.getElementById(elementId);
+  galleryElement.innerHTML = "";
+  data["items"].forEach(function(item) {
+    let galleryItemElement = createGalleryItemElement(item);
+    galleryElement.appendChild(galleryItemElement);
+  });
+
+  $("#" + elementId).justifiedGallery(justifiedGalleryOptions).on("jg.complete", function() {
+    lightGallery(document.getElementById(elementId), lightGalleryOptions);
+  });
+}
+
+$(document).ready(function() {
+  $(".gallery").each(function() {
+    let dataURL = $(this).attr("data");
+    let elementId = this.id;
+
+    $.getJSON(dataURL, function(data) {
+      createGallery(elementId, data);
+    });
+  });
+});
+</script>
+{{ end }}

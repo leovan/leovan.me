@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "晴空塔",
+      "download": "晴空塔.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-1.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-1.jpg"
+    },
+    {
+      "alt": "晴空塔",
+      "download": "晴空塔.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-2.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-2.jpg"
+    },
+    {
+      "alt": "晴空塔",
+      "download": "晴空塔.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-3.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/tokyo-skytree-3.jpg"
+    }
+  ]
+}

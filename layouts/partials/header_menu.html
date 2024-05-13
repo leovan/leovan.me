@@ -1,0 +1,25 @@
+<nav class="menu">
+  <ul>
+  {{ $currentPage := . }}
+  {{ $menu := "main" }}
+  {{ if .IsHome }}
+    {{ $menu = "home" }}
+  {{ else }}
+    {{ $menu = $.Page.Scratch.Get "section" }}
+  {{ end }}
+  {{ range (default .Site.Menus.main (index .Site.Menus $menu)) }}
+    <li{{ if eq .URL $currentPage.RelPermalink }} class="active"{{ else if eq .URL "#menu-separator" }} class="menu-separator"{{ end }}>{{ if ne .URL "#menu-separator" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ else }}<span>&nbsp;</span>{{ end }}</li>
+  {{ end }}
+  {{ $lang := "cn" }}
+  {{ if (hasPrefix .RelPermalink "/en/") }}
+    {{ $lang = "en" }}
+  {{ end }}
+  {{ if and (not .IsHome) (or .Content .Section) }}
+    {{ with .Section }}
+    <li class="menu-separator"><span>&nbsp;</span></li>
+    <li><a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index $.Site.Params.lang.subscribe $lang }}</a></li>
+    {{ end }}
+  {{ end }}
+  <li class="theme-toggle no-border-bottom"><span id="theme-toggle-icon" class="material-symbols"></span></li>
+  </ul>
+</nav>

@@ -1,0 +1,50 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "一座城，两三友，四下皆是快活！",
+      "download": "一座城-两三友-四下皆是快活.jpg",
+      "src": "/images/photography/2022-04-03-guixiaoshi.jpg",
+      "thumb": "/images/photography/2022-04-03-guixiaoshi-thumbnail.jpg"
+    },
+    {
+      "alt": "漫山桃花已半谢，春日和风尚犹存。",
+      "download": "漫山桃花已半谢-春日和风尚犹存.jpg",
+      "src": "/images/photography/2022-04-05-baihujian.jpg",
+      "thumb": "/images/photography/2022-04-05-baihujian-thumbnail.jpg"
+    },
+    {
+      "alt": "不骑我的小摩托，来骑我的小野马。",
+      "download": "不骑我的小摩托-来骑我的小野马.jpg",
+      "src": "/images/photography/2022-08-13-fengning-01.jpg",
+      "thumb": "/images/photography/2022-08-13-fengning-01-thumbnail.jpg"
+    },
+    {
+      "alt": "越过山丘",
+      "download": "越过山丘.jpg",
+      "src": "/images/photography/2022-08-13-fengning-02.jpg",
+      "thumb": "/images/photography/2022-08-13-fengning-02-thumbnail.jpg"
+    },
+    {
+      "alt": "走起吧，小野马！",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=o35490ui1w8",
+      "thumb": "/images/photography/2022-09-03-fengning-thumbnail.jpg"
+    }
+  ]
+}

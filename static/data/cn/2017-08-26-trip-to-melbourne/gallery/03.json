@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "袋鼠：你瞅啥？",
+      "download": "袋鼠-你瞅啥.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/kangaroo.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/kangaroo.jpg"
+    },
+    {
+      "alt": "袋鼠 - 卒！",
+      "download": "袋鼠-卒.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/kangaroo-meat.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/kangaroo-meat.jpg"
+    },
+    {
+      "alt": "呆萌的考拉",
+      "download": "呆萌的考拉.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/koala.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/koala.jpg"
+    }
+  ]
+}

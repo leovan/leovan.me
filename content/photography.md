@@ -14,4 +14,38 @@ disable_prismjs: true
 
 <h2 class="center no-anchor"> 「人生定格」</h2>
 
-{{< nanogallery2-tags-gallery data-base-url="/data/photography" tags="2024,2023,2022,2021,2020,2019,2018,2017,2016" >}}
+# 2024
+
+{{< gallery data="/data/photography/2024.json" >}}
+
+# 2023
+
+{{< gallery data="/data/photography/2023.json" >}}
+
+# 2022
+
+{{< gallery data="/data/photography/2022.json" >}}
+
+# 2021
+
+{{< gallery data="/data/photography/2021.json" >}}
+
+# 2020
+
+{{< gallery data="/data/photography/2020.json" >}}
+
+# 2019
+
+{{< gallery data="/data/photography/2019.json" >}}
+
+# 2018
+
+{{< gallery data="/data/photography/2018.json" >}}
+
+# 2017
+
+{{< gallery data="/data/photography/2017.json" >}}
+
+# 2016
+
+{{< gallery data="/data/photography/2016.json" >}}

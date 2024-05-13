@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "颁奖仪式",
+      "download": "颁奖仪式.jpg",
+      "src": "/images/cn/2019-10-28-jdd-hipo-learning-journey/award-ceremony.jpg",
+      "thumb": "/images/cn/2019-10-28-jdd-hipo-learning-journey/award-ceremony.jpg"
+    },
+    {
+      "alt": "第一名",
+      "download": "第一名.jpg",
+      "src": "/images/cn/2019-10-28-jdd-hipo-learning-journey/prize.jpg",
+      "thumb": "/images/cn/2019-10-28-jdd-hipo-learning-journey/prize.jpg"
+    }
+  ]
+}

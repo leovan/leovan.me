@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "阿德湖峡",
+      "download": "阿德湖峡.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/loch-ard-gorge.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/loch-ard-gorge.jpg"
+    },
+    {
+      "alt": "十二门徒石",
+      "download": "十二门徒石.jpg",
+      "src": "/images/cn/2017-08-26-trip-to-melbourne/the-twelve-apostles.jpg",
+      "thumb": "/images/cn/2017-08-26-trip-to-melbourne/the-twelve-apostles.jpg"
+    }
+  ]
+}

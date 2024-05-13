@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "书店过客",
+      "download": "书店过客.jpg",
+      "src": "/images/photography/2021-03-27-nanking-xianfeng-book-store.jpg",
+      "thumb": "/images/photography/2021-03-27-nanking-xianfeng-book-store-thumbnail.jpg"
+    },
+    {
+      "alt": "摄「富春山居图」",
+      "download": "摄「富春山居图」.jpg",
+      "src": "/images/photography/2021-04-09-hangzhou-yongan-mountain.jpg",
+      "thumb": "/images/photography/2021-04-09-hangzhou-yongan-mountain-thumbnail.jpg"
+    }
+  ]
+}

@@ -14,4 +14,18 @@ disable_prismjs: true
 
 <h2 class="center no-anchor"> 「我为你翻山越岭，却无心看风景」</h2>
 
-{{< nanogallery2-tags-gallery data-base-url="/data/motorcycle" tags="2024,2023,2022,2021" >}}
+# 2024
+
+{{< gallery data="/data/motorcycle/2024.json" >}}
+
+# 2023
+
+{{< gallery data="/data/motorcycle/2023.json" >}}
+
+# 2022
+
+{{< gallery data="/data/motorcycle/2022.json" >}}
+
+# 2021
+
+{{< gallery data="/data/motorcycle/2021.json" >}}

@@ -1,15 +1,44 @@
-{{ partial "google_analytics.html" . }}
-
-{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) .Content }}
-{{ partial "header_mathjax.html" . }}
+{{ with .Site.GoogleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+if (window.location.hostname == "leovan.me") {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+}
+</script>
 {{ end }}
 
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) .Content }}
-{{ partial "header_prismjs.html" . }}
+{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
+<script>
+MathJax = {
+  loader: {
+    load: ['[tex]/boldsymbol']
+  },
+  tex: {
+    tags: "all",
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    packages: {
+      '[+]': ['boldsymbol']
+    }
+  }
+};
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/es5/tex-chtml.js" crossorigin></script>
+{{ end }}
+
+{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</pre>") }}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css">
 {{ end }}
 
 {{ if and (and (and (not .Params.disable_adsense) (ne .Kind "404")) (not .IsHome)) .Content }}
-{{ partial "google_adsense.html" . }}
+{{ with $.Site.Params.googleAdsense }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{ end }}
 {{ end }}
 
 <link rel="stylesheet" type="text/css" href="{{ "/css/fonts.css" | relURL }}">
@@ -28,4 +57,9 @@
 
 {{ if $.Page.Scratch.Get "metingjs" }}
 <script src="//cdn.jsdelivr.net/npm/@xizeyoupan/meting@{{ $.Site.Params.meetingjsVersion }}/dist/Meting.min.js"></script>
+{{ end }}
+
+{{ if $.Page.Scratch.Get "gallery" }}
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"/>
 {{ end }}

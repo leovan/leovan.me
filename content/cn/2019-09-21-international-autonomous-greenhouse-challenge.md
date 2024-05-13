@@ -43,15 +43,15 @@ images:
 
 [国际智慧温室种植挑战赛](http://www.autonomousgreenhouses.com) 是一个由 [瓦赫宁根大学研究中心 (Wageningen University & Research)](https://www.wur.nl) 主办的旨在利用自动化、信息技术和人工智能技术控制温室以实现增加产量、降低成本等目标的大赛。第一届赛事的种植作物为黄瓜，第二届赛事为樱桃西红柿。
 
-{{< nanogallery2-gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/nanogallery2/01.json" >}}
+{{< gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/gallery/01.json" >}}
 
 很幸运能够在晚些时候加入到 CPlant 队伍中一同参与到这次赛事，虽然加入到队伍中比较晚，但工作之余也参与了大部分赛事的准备工作。
 
-{{< nanogallery2-gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/nanogallery2/02.json" >}}
+{{< gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/gallery/02.json" >}}
 
 整个赛事分为初赛和复赛两个部分，初赛采用 Hackathon 的形式通过仿真模拟进行，初赛晋级的队伍将会在后续 6 个月的时间内通过远程控制进行真实的作物种植比赛。本次赛事吸引了全球顶级的农业与 AI 领域的企业、大学和研究机构参与，组成来自 26 个国家的 21 支团队，超过 200 名专家与学生。
 
-{{< nanogallery2-gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/nanogallery2/03.json" >}}
+{{< gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/gallery/03.json" >}}
 
 初赛黑客马拉松评分主要由三部分组成：团队构成 （20％)、人工智能方法（30％)，以及虚拟西红柿种植净利润（50％)。仿真部分，采用了 Venlo 类型的温室，模拟时间从 2017/12/15 日至 2018/06/01，荷兰本地的外部天气，整个模拟过程并未考虑病虫害问题 (主要受到湿度影响)。仿真模型包含三个子模型：
 
@@ -88,7 +88,7 @@ images:
   </tbody>
 </table>
 
-{{< nanogallery2-gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/nanogallery2/04.json" >}}
+{{< gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/gallery/04.json" >}}
 
 所在的 CPlant 队伍是本次比赛中人数最多的一只队伍 (21 人，最少的队伍为 5 人，虽然人最多却未能进入决赛 :disappointed_relieved:)，评审从国籍，研究和企业组成等多个角度对团队构成进行了评分，最终我们拿到了一个中等偏上的成绩。
 

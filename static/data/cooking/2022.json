@@ -1,0 +1,50 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "曲奇烘烤中...",
+      "download": "曲奇烘烤中.jpg",
+      "src": "/images/cooking/2022-02-04-baking-cookies.jpg",
+      "thumb": "/images/cooking/2022-02-04-baking-cookies-thumbnail.jpg"
+    },
+    {
+      "alt": "巧克力味，请忽略左上角条状物",
+      "download": "巧克力味-请忽略左上角条状物.jpg",
+      "src": "/images/cooking/2022-02-04-chocolate-cookies.jpg",
+      "thumb": "/images/cooking/2022-02-04-chocolate-cookies-thumbnail.jpg"
+    },
+    {
+      "alt": "蔓越莓味",
+      "download": "蔓越莓味.jpg",
+      "src": "/images/cooking/2022-02-04-cranberry-cookies.jpg",
+      "thumb": "/images/cooking/2022-02-04-cranberry-cookies-thumbnail.jpg"
+    },
+    {
+      "alt": "抹茶味",
+      "download": "抹茶味.jpg",
+      "src": "/images/cooking/2022-02-04-matcha-cookies.jpg",
+      "thumb": "/images/cooking/2022-02-04-matcha-cookies-thumbnail.jpg"
+    },
+    {
+      "alt": "成品上盘，表示只有盛菜的盘子了",
+      "download": "成品上盘-表示只有盛菜的盘子了.jpg",
+      "src": "/images/cooking/2022-02-04-three-flavor-cookies.jpg",
+      "thumb": "/images/cooking/2022-02-04-three-flavor-cookies-thumbnail.jpg"
+    }
+  ]
+}

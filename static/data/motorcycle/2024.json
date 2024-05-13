@@ -1,0 +1,26 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "春天来了，夏天还会远吗",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=e3549jihmgw",
+      "thumb": "/images/motorcycle/2024-03-17-mentougou-thumbnail.jpg"
+    }
+  ]
+}

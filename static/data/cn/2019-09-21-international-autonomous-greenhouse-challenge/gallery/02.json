@@ -1,0 +1,38 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "温室",
+      "download": "温室.jpg",
+      "src": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-1.jpg",
+      "thumb": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-1.jpg"
+    },
+    {
+      "alt": "温室",
+      "download": "温室.jpg",
+      "src": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-2.jpg",
+      "thumb": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-2.jpg"
+    },
+    {
+      "alt": "温室",
+      "download": "温室.jpg",
+      "src": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-3.jpg",
+      "thumb": "/images/cn/2019-09-21-international-autonomous-greenhouse-challenge/greenhouse-3.jpg"
+    }
+  ]
+}

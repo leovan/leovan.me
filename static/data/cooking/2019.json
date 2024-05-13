@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "果酱不错，再来点儿山楂的",
+      "download": "果酱不错-再来点儿山楂的.jpg",
+      "src": "/images/cooking/2019-11-24-haw-sauce.jpg",
+      "thumb": "/images/cooking/2019-11-24-haw-sauce-thumbnail.jpg"
+    },
+    {
+      "alt": "苹果吃不了，熬成酱",
+      "download": "苹果吃不了-熬成酱.jpg",
+      "src": "/images/cooking/2019-11-02-apple-jam.jpg",
+      "thumb": "/images/cooking/2019-11-02-apple-jam-thumbnail.jpg"
+    }
+  ]
+}

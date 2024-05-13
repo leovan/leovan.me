@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "浅草寺",
+      "download": "浅草寺.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/sensoji-temple-1.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/sensoji-temple-1.jpg"
+    },
+    {
+      "alt": "浅草寺",
+      "download": "浅草寺.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/sensoji-temple-2.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/sensoji-temple-2.jpg"
+    }
+  ]
+}

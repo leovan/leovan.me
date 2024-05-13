@@ -53,7 +53,7 @@ images:
 
 换完工作方向后的第一个假期，决定好好调整一下，休个小长假，浪完这一圈好收收心，再全身心地投入到后面的工作中去。之前一直也没有陪家里人出去玩玩，父母年岁不小了，所以选择避开十一前面，四号错峰到了杭州，妥妥的人少了不少。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/01.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/01.json" >}}
 
 游西湖的时候下着零星的小雨，烟雨朦胧中的西湖别有一番韵味。想起有一日北京大雨，开完会坐在出租车上还哼起了“西湖的水，我的泪，我情愿和你化作一团火焰.....”。
 
@@ -67,21 +67,21 @@ images:
 
 没有攻略就前一天晚上简单的查了查，第一天到了必打卡的浅草寺，顺着上野公园，又去到了东京国立博物馆。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/02.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/02.json" >}}
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/03.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/03.json" >}}
 
 天气还是很给力的，第二天依旧闲逛，在东京大学里面转了一圈愣是没转到安田讲堂那边，不过在三四郎池旁边抓拍到应该是一只小蜥蜴吧。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/04.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/04.json" >}}
 
 没攻略果然还是有问题的，想去晴空塔却发现距离第一天的浅草寺很近，无奈就只能朝着那个方向又跑了一遍。之前有朋友晚上去过，风景不错，我选择了白天上去，稍微有些雾蒙蒙的，视野还是很开阔的。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/05.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/05.json" >}}
 
 住的附近搜到了一家武士博物馆，下午回来早了就过去看了看，到的时间刚刚好，前面的一波英文讲解刚刚开始。小姐姐讲到刀柄上的文字时，说到日本的文字主要源自自己，英文和中文，她说她也看不懂刀柄上的文字，我过去一瞧发现这不就是繁体中文吗 :smirk:，瞬间感觉到我中华语言和文化的优秀。最后还体验了一把武士对决的表演，感觉人家才是武士，我顶多也就是个浪人 :sweat_smile:。
 
-{{< nanogallery2-gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/nanogallery2/06.json" >}}
+{{< gallery data="/data/cn/2019-10-14-tour-of-hangzhou-and-tokyo/gallery/06.json" >}}
 
 来了日本还有的就是买买买，给自己买，给家人买，给朋友带，总之各种买买买。计划预留了一天的时间去购物，谁知道玩着玩着就听说台风“海贝思”要来了，据说还是近期最大的一次台风，然后 12 号各种地方就都关门了，只能老老实实地呆在酒店里。傍晚还感觉到房子晃了一下，后面查了还真的是有地震，各种情况就这样都被赶上了。
 

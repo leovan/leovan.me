@@ -1,0 +1,32 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "东京大学",
+      "download": "东京大学.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/the-university-of-tokyo-building.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/the-university-of-tokyo-building.jpg"
+    },
+    {
+      "alt": "小蜥蜴",
+      "download": "小蜥蜴.jpg",
+      "src": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/the-university-of-tokyo-lizard.jpg",
+      "thumb": "/images/cn/2019-10-14-tour-of-hangzhou-and-tokyo/the-university-of-tokyo-lizard.jpg"
+    }
+  ]
+}
