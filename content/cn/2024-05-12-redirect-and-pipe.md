@@ -8,13 +8,16 @@ categories:
   - Linux
 tags:
   - 重定向
+  - redirect
   - 管道
+  - pipe
   - 文件描述符
   - stdin
   - stdout
   - stderr
   - Here Document
 images:
+  - /images/cn/2024-05-12-redirect-and-pipe/输入输出.svg
 ---
 
 # 输入输出文件描述符
