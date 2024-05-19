@@ -1,19 +1,36 @@
 baseURL: "https://leovan.me/"
+enableEmoji: true
+hasCJKLanguage: true
+ignoreFiles:
+  - \.Rmarkdown$
+  - \.Rmd$"
+  - \.knit\.md$
+  - \.utf8\.md$
+  - _files$
+  - _cache$
+  - \.txt$
+  - \.csv$
+  - \.tsv$
+  - \.tgz$
+  - \.tar$
+  - \.gz$
+  - \.zip$
+  - \.npz$
 languageCode: "zh-cn"
 title: "范叶亮 | Leo Van"
-googleAnalytics: "G-RJC7CCKE67"
-ignoreFiles: [
-  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
-  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
-  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
-hasCJKLanguage: true
-enableEmoji: true
 rssLimit: 100
+
+services:
+  googleAnalytics:
+    ID: "G-RJC7CCKE67"
 
 permalinks:
   cn: "/cn/:year/:month/:slug/"
   en: "/en/:year/:month/:slug/"
   tech101: "/tech101/:year/:month/:slug/"
+
+taxonomies:
+  category: categories
 
 menu:
   home:
@@ -76,9 +93,6 @@ menu:
     - name: "Resume"
       url: "/en/resume/"
       weight: 6
-
-taxonomies:
-  category: categories
 
 params:
   description: "范叶亮的个人网站 | Leo Van's Personal Website"
