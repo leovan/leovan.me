@@ -318,7 +318,7 @@ $$`
 f \left(x, y\right) = \left(1 - x\right)^2 + 100 \left(y - x^2\right)^2
 $$`
 
-当 `$x \in \left[-2, 2\right], y \in \left[-1, 3\right]$`，定义优化问题为最小化目标函数，最优解为 `$\left(0, 0\right)$`。利用 [PySwarms](https://github.com/ljvmiranda921/pyswarms) 扩展包的优化过程可视化如下：
+当 `$x \in \left[-2, 2\right], y \in \left[-1, 3\right]$`，定义优化问题为最小化目标函数，最优解为 `$\left(1, 1\right)$`。利用 [PySwarms](https://github.com/ljvmiranda921/pyswarms) 扩展包的优化过程可视化如下：
 
 ![Rosenbrock PSO](/images/cn/2019-04-05-heuristic-algorithms/rosenbrock-pso.gif)
 
