@@ -177,6 +177,14 @@ overlayfs:/overlay       31.2G     87.9M     26.6G   0% /
 ...
 ```
 
+在 `/data` 目录中创建用于字体的目录：
+
+```bash
+mkdir /data/fonts
+```
+
+下载 CJK 相关字体至该目录，例如：[Noto Sans CJK](https://github.com/notofonts/noto-cjk/tree/main/Sans)。
+
 在 `/data` 目录中创建用于 Jellyfin 的目录：
 
 ```bash
@@ -245,6 +253,7 @@ docker run -d \
  --volume /data/docker/jellyfin/config:/config \
  --volume /data/docker/jellyfin/cache:/cache \
  --volume /data/docker/jellyfin/media:/media \
+ --volume /data/fonts:/usr/local/share/fonts \
  --user 1000:1000 \
  --net=host \
  --restart=unless-stopped \
@@ -264,6 +273,7 @@ docker run -d \
 | --volume /data/docker/jellyfin/config:/config    | 配置文件目录                       |
 | --volume /data/docker/jellyfin/cache:/cache      | 缓存文件目录                       |
 | --volume /data/docker/jellyfin/media:/media      | 媒体文件目录                       |
+| --volume /data/fonts:/usr/local/share/fonts      | 备用字体目录                       |
 | --user 1000:1000                                 | 运行时用户和用户组                 |
 | --net=host                                       | 网络类型：同宿主机相同网络         |
 | --restart=unless-stopped                         | 重启策略：在容器退出时总是重启容器 |
@@ -277,19 +287,6 @@ docker run -d \
 勾选 Jellyfin 容器，单击 `启动` 按钮启动容器：
 
 ![](/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-container-running.png)
-
-单击容器，选择 `控制台`，以 `root` 用户登录控制台：
-
-在控制台中输入如下命令安装中文字体：
-
-{{< figure src="/images/cn/2023-01-24-build-home-media-center-with-jellyfin-on-openwrt/docker-cmd.png" large-max-width="60%" middle-max-width="80%" >}}
-
-```bash
-apt update
-apt install fonts-noto-cjk-extra
-```
-
-以防止在 Jellyfin 中出现中文无法正常显示的问题。
 
 # Jellyfin 配置
 
@@ -342,7 +339,7 @@ apt install fonts-noto-cjk-extra
 根据[官方文档](https://jellyfin.org/docs/general/administration/hardware-acceleration/#intel-gen9-and-gen11-igpus)说明，针对部分 CPU（例如：N5105）需要勾选 `启用低电压模式的 Intel H.264 硬件编码器`以确保硬件加速正常工作。
 {{% /admonition %}}
 
-在 `服务器 > 播放` 菜单中，勾选 `启用备用字体`，将 `备用字体文件路径` 设置为 `/config/fonts`。在 `/config/fonts` 目录中放置相关字体以确保 ASS/SSA 字幕可以正常渲染。
+在 `服务器 > 播放` 菜单中，勾选 `启用备用字体`，将 `备用字体文件路径` 设置为 `/usr/local/share/fonts`。
 
 # TMM 刮削
 
