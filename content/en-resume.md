@@ -126,9 +126,10 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 5. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
 6. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 7. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
-8. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
-8. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
-8. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+8. [Rasa Pro Doc](https://rasa-pro.leovan.tech): Rasa Pro document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
+9. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+10. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
+11. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
 
 <h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="material-symbols material-symbols-download-outline"></span></a></h2>
 

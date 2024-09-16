@@ -124,9 +124,10 @@ _2015.04 ~ 2015.10 算法设计和开发_
 5. [Hive 函数](https://hive-functions.leovan.tech)：实用自定义 Hive 函数集。 ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
 6. [Cytoscape 中文用户手册](https://cytoscape.leovan.tech)：Cytoscape 中文用户手册。 ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
 7. [Rasa 中文文档](https://rasa.leovan.tech)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
-8. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 文档中渲染伪代码的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
-9. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
-10. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+8. [Rasa Pro 中文文档](https://rasa-pro.leovan.tech)：Rasa Pro 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
+9. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 文档中渲染伪代码的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+10. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
+11. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
 
 <h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <span class="material-symbols material-symbols-download-outline"></span></a></h2>
 
