@@ -1,0 +1,265 @@
+{
+  "rating": {
+      "count": 0,
+      "max": 10,
+      "star_count": 0,
+      "value": 0
+  },
+  "lineticket_url": "",
+  "controversy_reason": "",
+  "pubdate": [
+      "2024-08-31(中国大陆)"
+  ],
+  "last_episode_number": null,
+  "pic": {
+      "large": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2900503162.webp",
+      "normal": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2900503162.webp"
+  },
+  "vendor_count": 1,
+  "body_bg_color": "f9f7f4",
+  "is_tv": true,
+  "card_subtitle": "2024 / 中国大陆 / 剧情 喜剧 / 简川訸 / 殷桃 王骁",
+  "intro": "该剧讲述了三对30岁、40岁的夫妻或情侣在快节奏的大环境下，被生活围追堵截，努力自救，从而实现各自人生价值的故事。当了五年全职主妇的沈琳（殷桃 饰）遭遇丈夫那伟（王骁 饰）失业，夫妻双双无业，二胎嗷嗷待哺，房贷月月逼近，沈琳回归职场之路频频碰壁之后，选择变身个体户实现再就业；名校毕业的沈磊（秦俊杰 饰），考了公务员，在单位档案科工作，岁月静好，与世无争，妻子谢美蓝（陈昊宇 饰）却因他安于现状与之离婚，沈磊信念崩塌，辞去工作，离家出走；百万年薪的程序员那隽（张哲华 饰）被大厂齿轮裹挟前进，因高强度的工作患了惊恐症，为怕失业拼命掩饰，让以及时行乐为人生态度的女友李晓悦（章若楠 饰）难以理解，彼此相爱的两人渐行渐远。面对各自的人生窘境，他们不控诉不自怜，直面内心，共渡人生危机。",
+  "ticket_price_info": "",
+  "pre_playable_date": null,
+  "year": "2024",
+  "head_info": null,
+  "forum_info": null,
+  "webisode": null,
+  "id": "36189205",
+  "gallery_topic_count": 0,
+  "languages": [
+      "汉语普通话"
+  ],
+  "genres": [
+      "剧情",
+      "喜剧"
+  ],
+  "review_count": 80,
+  "title": "凡人歌",
+  "has_linewatch": true,
+  "ugc_tabs": [
+      {
+          "source": "reviews",
+          "type": "review",
+          "title": "剧评"
+      },
+      {
+          "count": 1526,
+          "title": "小组讨论",
+          "uri": "douban://partial.douban.com/subject/36189205/group_topic/_content?group_id=746383",
+          "source": "小组讨论",
+          "type": "custom",
+          "id": "group"
+      }
+  ],
+  "forum_topic_count": 3,
+  "ticket_promo_text": "",
+  "webview_info": {
+
+  },
+  "is_released": true,
+  "vendors": [
+      {
+          "labels": [
+
+          ],
+          "click_trackings": [
+              "https://frodo.douban.com/rohirrim/video_tracking/click?subject_id=36189205&video_type=movie&video_id=993116&source=qq&user_id=None&douban_udid=None&platform=Android&location=vendor_section"
+          ],
+          "book_type_cn": "",
+          "payment_desc": "VIP免费观看",
+          "id": "qq",
+          "impression_trackings": [
+              "https://frodo.douban.com/rohirrim/video_tracking/impression?subject_id=36189205&video_type=movie&video_id=993116&source=qq&user_id=None&douban_udid=None&platform=Android&location=vendor_section"
+          ],
+          "app_uri": "txvideo://skynet.douban.com",
+          "title": "腾讯视频",
+          "app_bundle_id": "com.tencent.qqlive",
+          "click_tracking": "",
+          "is_ad": false,
+          "impression_tracking": "",
+          "promote_desc": "",
+          "book_type": "",
+          "icon": "https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png",
+          "grey_icon": "https://img2.doubanio.com/f/frodo/8200258235dae64145f57e3fd17f0c7cfff0b06c/pics/vendors/tencent_grey.png",
+          "url": "douban://douban.com/goToWXMiniProgram?path=preload_play/play/index?cid=mzc00200d250zvx&vid=w4100wikhlb&type=0&id=gh_fce17bb0518f&ptag=douban",
+          "is_paid": true,
+          "uri": "txvideo://v.qq.com/VideoDetailActivity?universalStyle=true&cid=mzc00200d250zvx&vid=w4100wikhlb&from=newdouban.tv2000024-mzc00200d250zvx-",
+          "episodes_info": "37集全",
+          "payments": [
+              {
+                  "price": "",
+                  "description": "",
+                  "method": "VIP免费观看"
+              }
+          ],
+          "pre_release_desc": "",
+          "subject_id": "36189205"
+      }
+  ],
+  "actors": [
+      {
+          "name": "殷桃"
+      },
+      {
+          "name": "王骁"
+      },
+      {
+          "name": "章若楠"
+      },
+      {
+          "name": "秦俊杰"
+      },
+      {
+          "name": "张哲华"
+      },
+      {
+          "name": "陈昊宇"
+      }
+  ],
+  "interest": null,
+  "episodes_count": 37,
+  "color_scheme": {
+      "is_dark": true,
+      "primary_color_light": "a5a19b",
+      "_base_color": [
+          0.09523809523809519,
+          0.059322033898305114,
+          0.9254901960784314
+      ],
+      "secondary_color": "f9f7f4",
+      "_avg_color": [
+          0.08974358974358991,
+          0.07262569832402226,
+          0.7019607843137254
+      ],
+      "primary_color_dark": "7f7c77"
+  },
+  "type": "tv",
+  "null_rating_reason": "暂无评分",
+  "linewatches": [
+      {
+          "url": "douban://douban.com/goToWXMiniProgram?path=preload_play/play/index?cid=mzc00200d250zvx&vid=w4100wikhlb&type=0&id=gh_fce17bb0518f&ptag=douban",
+          "source": {
+              "literal": "qq",
+              "pic": "https://img2.doubanio.com/img/files/file-1432869201.png",
+              "name": "腾讯视频"
+          },
+          "source_uri": "txvideo://v.qq.com/VideoDetailActivity?universalStyle=true&cid=mzc00200d250zvx&vid=w4100wikhlb&from=newdouban.tv2000024-mzc00200d250zvx-",
+          "free": false
+      }
+  ],
+  "info_url": "https://www.douban.com/doubanapp//h5/movie/36189205/desc",
+  "tags": [
+
+  ],
+  "durations": [
+      "45分钟"
+  ],
+  "comment_count": 10641,
+  "cover": {
+      "description": "",
+      "author": {
+          "loc": null,
+          "kind": "user",
+          "name": "Spring",
+          "reg_time": "2019-06-09 23:51:12",
+          "url": "https://www.douban.com/people/197670513/",
+          "uri": "douban://douban.com/user/197670513",
+          "avatar": "https://img2.doubanio.com/icon/up197670513-1.jpg",
+          "is_club": false,
+          "type": "user",
+          "id": "197670513",
+          "uid": "197670513"
+      },
+      "url": "https://movie.douban.com/photos/photo/2900503162/",
+      "image": {
+          "large": {
+              "url": "https://img3.doubanio.com/view/photo/l/public/p2900503162.webp",
+              "width": 942,
+              "height": 1600,
+              "size": 0
+          },
+          "raw": null,
+          "small": {
+              "url": "https://img3.doubanio.com/view/photo/s/public/p2900503162.webp",
+              "width": 353,
+              "height": 600,
+              "size": 0
+          },
+          "normal": {
+              "url": "https://img3.doubanio.com/view/photo/m/public/p2900503162.webp",
+              "width": 353,
+              "height": 600,
+              "size": 0
+          },
+          "is_animated": false
+      },
+      "uri": "douban://douban.com/photo/2900503162",
+      "create_time": "2023-11-09 23:31:41",
+      "position": 5,
+      "owner_uri": "douban://douban.com/tv/36189205",
+      "type": "photo",
+      "id": "2900503162",
+      "sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/photo/2900503162/"
+  },
+  "cover_url": "https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2900503162.webp",
+  "restrictive_icon_url": "",
+  "header_bg_color": "7f7c77",
+  "is_douban_intro": false,
+  "ticket_vendor_icons": [
+      "https://img9.doubanio.com/view/dale-online/dale_ad/public/0589a62f2f2d7c2.jpg"
+  ],
+  "honor_infos": [
+
+  ],
+  "sharing_url": "https://movie.douban.com/subject/36189205/",
+  "subject_collections": [
+
+  ],
+  "wechat_timeline_share": "screenshot",
+  "countries": [
+      "中国大陆"
+  ],
+  "url": "https://movie.douban.com/subject/36189205/",
+  "release_date": null,
+  "original_title": "",
+  "uri": "douban://douban.com/tv/36189205",
+  "webisode_count": 0,
+  "episodes_info": "37集全",
+  "subtype": "tv",
+  "directors": [
+      {
+          "name": "简川訸"
+      }
+  ],
+  "is_show": false,
+  "in_blacklist": false,
+  "pre_release_desc": "",
+  "video": null,
+  "aka": [
+      "我不是废柴",
+      "Born to be the One"
+  ],
+  "is_restrictive": false,
+  "trailer": {
+      "sharing_url": "https://www.douban.com/doubanapp/dispatch?uri=/tv/36189205/trailer%3Ftrailer_id%3D317548%26trailer_type%3DA",
+      "video_url": "https://vt1.doubanio.com/202409202304/8eeb715d2d886f80f92f188f4763286e/view/movie/M/703170548.mp4",
+      "title": "预告片：定档版 (中文字幕)",
+      "uri": "douban://douban.com/tv/36189205/trailer?trailer_id=317548&trailer_type=A",
+      "cover_url": "https://img3.doubanio.com/img/trailer/medium/2912334397.jpg",
+      "term_num": 0,
+      "n_comments": 18,
+      "create_time": "2024-08-28",
+      "subject_title": "凡人歌",
+      "file_size": 46419957,
+      "runtime": "02:02",
+      "type": "A",
+      "id": "317548",
+      "desc": ""
+  },
+  "vendor_icons": [
+      "https://img9.doubanio.com/f/frodo/fbc90f355fc45d5d2056e0d88c697f9414b56b44/pics/vendors/tencent.png"
+  ]
+}
