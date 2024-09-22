@@ -114,7 +114,7 @@ params:
   pseudocodeVersion: "latest"
   prismjsVersion: "1.29.0"
   vanillaBackToTopVersion: "latest"
-  videojsVersion: "8.13.0"
+  videojsVersion: "8.18.0"
 
   lang:
     slogan:

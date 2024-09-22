@@ -50,7 +50,7 @@ function doubanMovieCard(movidID) {
   }).then(data => {
     let tags = [];
 
-    let country = data.countries[0]
+    let country = data.countries[0];
     tags.push(country);
 
     let pubdate = data.pubdate[0].substring(0, 4);
@@ -65,6 +65,7 @@ function doubanMovieCard(movidID) {
     let title = data.title;
     let rating = data.rating.value;
     let stars = Math.round(rating);
+    let rating_str = rating > 0 ? rating : '暂无评分';
     let image = data.pic.normal;
     let intro = data.intro.replace(/[\n|\r]/g, '');
 
@@ -76,7 +77,7 @@ function doubanMovieCard(movidID) {
           '<span class="douban-card--logo-dou">豆</span>' +
           '<span class="douban-card--logo-rating">豆瓣评分</span>' +
           '<span class="douban-card--stars douban-card--stars-' + stars + '"></span>' +
-          '<span class="douban-card--rating">' + rating + '</span>' +
+          '<span class="douban-card--rating">' + rating_str + '</span>' +
         '</div>' +
         '<div class="douban-card--tags">' + tags.join(' / ') + '</div>' +
         '<div class="douban-card--summary">' + intro + '</div>' +

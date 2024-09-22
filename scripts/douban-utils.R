@@ -3,6 +3,7 @@ library(httpuv)
 library(httr)
 library(rvest)
 library(jsonlite)
+library(stringi)
 
 API_KEY <- "0dad551ec0f84ed02907ff5c42e8ec70"
 API_SECRET <- "bf7dddc7c9cfe6f7"
@@ -55,7 +56,7 @@ douban_api <- function(url, ...) {
 
     tryCatch({
         res <- GET(req_url, user_agent(sample(USER_AGENTS, 1)))
-        res_json <- fromJSON(content(res, as = "text"))
+        res_json <- stri_unescape_unicode(content(res, as = "text"))
     }, error = function(e) {
         print(glue("{url}: {e}"))
     })
@@ -73,6 +74,7 @@ get_video_douban_info <- function(douban_id, is_tv) {
     } else {
         res_json <- douban_api(paste0("/movie/", douban_id))
     }
+    res_json <- fromJSON(res_json, flatten = T)
     movie_info <- list()
 
     movie_info$title <- res_json$title
@@ -96,6 +98,7 @@ get_video_douban_info <- Vectorize(get_video_douban_info)
 #' @return 豆瓣书籍信息
 get_book_douban_info <- function(douban_id) {
     res_json <- douban_api(paste0("/book/", douban_id))
+    res_json <- fromJSON(res_json, flatten = T)
     book_info <- list()
 
     book_info$title <- res_json$title
@@ -111,143 +114,3 @@ get_book_douban_info <- function(douban_id) {
     return(book_info)
 }
 get_book_douban_info <- Vectorize(get_book_douban_info)
-
-#' 根据豆瓣 ID 爬取豆瓣电影信息
-#'
-#' @param douban_id 豆瓣 ID
-#' @return 豆瓣电影信息
-crawl_video_douban_info <- function(douban_id) {
-    info <- tibble(
-        title = NA, directors = NA, actors = NA, countries = NA,
-        genres = NA, release_date = NA, douban_rating = NA)
-
-    if (!is.na(douban_id)) {
-        url <- glue("https://movie.douban.com/subject/{douban_id}")
-
-        tryCatch({
-            session <- session(url, user_agent(sample(USER_AGENTS, 1)))
-
-            title <- session |>
-                html_nodes("title") |>
-                first() |>
-                html_text() |>
-                str_replace_all(" ", "")
-            title <- str_split(title, "(豆瓣)")[1]
-            title <- str_replace_all(title, " ", "")
-            info$title <- title
-
-            directors <- session |>
-                html_nodes("a[rel=\"v:directedBy\"]") |>
-                html_text()
-            info$directors <- paste(directors, collapse = ", ")
-
-            actors <- session |>
-                html_nodes("a[rel=\"v:starring\"]") |>
-                html_text()
-            info$actors <- paste(actors, collapse = ", ")
-
-            countries <- session |>
-                html_nodes("#info") |>
-                html_text() |>
-                str_replace_all("\n", "") |>
-                str_replace(".+制片国家/地区: ", "") |>
-                str_replace("语言: .+", "") |>
-                str_split(" / ", simplify = T)
-            info$countries <- paste(countries, collapse = ", ")
-
-            genres <- session |>
-                html_nodes("span[property=\"v:genre\"]") |>
-                html_text()
-            info$genres <- paste(genres, collapse = ", ")
-
-            release_date <- session |>
-                html_nodes("span[property=\"v:initialReleaseDate\"]") |>
-                html_text() |>
-                str_replace_all("\\(.+\\)", "") |>
-                min()
-            info$release_date <- as.Date(release_date, format = "%Y-%m-%d")
-
-            douban_rating <- session |>
-                html_nodes("strong[property=\"v:average\"]") |>
-                html_text()
-            info$douban_rating <- douban_rating
-        }, error = function(e) {
-            print(glue("{douban_id}: {e}"))
-        })
-    }
-
-    # 防止被反爬
-    Sys.sleep(runif(1, 1, 2))
-
-    return(info)
-}
-
-#' 根据豆瓣 ID 爬取豆瓣书籍信息
-#'
-#' @param douban_id 豆瓣 ID
-#' @return 豆瓣书籍信息
-crawl_book_douban_info <- function(douban_id) {
-    info <- tibble(
-        title = NA, subtitle = NA, author = NA, publisher = NA,
-        published_date = NA, pages = NA, douban_rating = NA)
-
-    if (!is.na(douban_id)) {
-        url <- glue("https://book.douban.com/subject/{douban_id}")
-
-        tryCatch({
-            session <- session(url, user_agent(sample(USER_AGENTS, 1)))
-
-            info$title <- session |>
-                html_node("span[property=\"v:itemreviewed\"]") |>
-                html_text()
-
-            info$douban_rating <- session |>
-                html_node("strong[property=\"v:average\"]") |>
-                html_text(trim = T)
-
-            info_text <- session |>
-                html_node("#info") |>
-                html_text(trim = T) |>
-                str_replace_all("\n", "") |>
-                str_replace_all("\\s+", " ") |>
-                str_replace_all("【", "[") |>
-                str_replace_all("】", "]") |>
-                str_replace_all("•", "·")
-            info_text_v <- session |>
-                html_node("#info") |>
-                html_children() |>
-                html_text(trim = T) |>
-                str_replace_all("\n", "") |>
-                str_replace_all("\\s", "") |>
-                str_replace_all(":.+", ":")
-
-            info_text_keys <- info_text_v[str_detect(info_text_v, ".+:")]
-            info_text_split_regex <- str_c("(", info_text_keys, ")", collapse = "|")
-            info_text_values <- str_split(info_text, info_text_split_regex, simplify = T)
-            info_text_values <- str_trim(info_text_values[info_text_values != ""])
-
-            info$subtitle <- ifelse(
-                "副标题:" %in% info_text_keys,
-                info_text_values[which(info_text_keys == "副标题:")], NA)
-            info$author <- ifelse(
-                "作者:" %in% info_text_keys,
-                info_text_values[which(info_text_keys == "作者:")], NA)
-            info$press <- ifelse(
-                "出版社:" %in% info_text_keys,
-                info_text_values[which(info_text_keys == "出版社:")], NA)
-            info$published_date <- ifelse(
-                "出版年:" %in% info_text_keys,
-                info_text_values[which(info_text_keys == "出版年:")], NA)
-            info$pages <- ifelse(
-                "页数:" %in% info_text_keys,
-                info_text_values[which(info_text_keys == "页数:")], NA)
-        }, error = function(e) {
-            print(glue("{douban_id}: {e}"))
-        })
-    }
-
-    # 防止被反爬
-    Sys.sleep(runif(1, 1, 2))
-
-    return(info)
-}
