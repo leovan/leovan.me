@@ -110,11 +110,11 @@ params:
   lazysizesVersion: "5.3.2"
   lightgalleryVersion: "2.7.2"
   mathjaxVersion: "3.2.2"
-  meetingjsVersion: "latest"
+  metingjsVersion: "latest"
   pseudocodeVersion: "latest"
   prismjsVersion: "1.29.0"
   vanillaBackToTopVersion: "latest"
-  videojsVersion: "8.18.0"
+  videojsVersion: "8.21.1"
 
   lang:
     slogan:
@@ -176,7 +176,7 @@ params:
         cn: "引用"
         en: "Quote"
     donate:
-      cn: "赞 赏"
+      cn: "赞赏"
       en: "DONATE"
     donate_slogan:
       cn: "「真诚赞赏，手留余香」"

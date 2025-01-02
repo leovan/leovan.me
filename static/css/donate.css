@@ -8,13 +8,13 @@
 }
 
 .donate, .donate-button {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
 }
 
 .donate-button {
   color: #ffffff;
-  background: #f36;
+  background: #f05159;
   width: 80px;
   height: 34px;
   border-radius: 4px;
@@ -129,8 +129,8 @@
 }
 
 .donate-box-money-button {
-  border-color: #f1403c;
-  color: #f1403c;
+  border-color: #f05159;
+  color: #f05159;
   width: 29%;
   margin: 0 0 24px;
   font-size: 1em;
@@ -141,7 +141,7 @@
   text-align: center;
   cursor: pointer;
   background: none;
-  border: 1px solid;
+  border: 1px solid #f05159;
   border-radius: 3px;
   outline: none;
 }
@@ -151,7 +151,7 @@
 }
 
 .donate-box-money-button-checked {
-  background: #f1403c;
+  background: #f05159;
   color: #fff;
 }
 
@@ -176,7 +176,7 @@
 }
 
 .donate-box-pay-method-checked {
-  border-color: #f1403c;
+  border-color: #f05159;
 }
 
 .donate-box-pay-method-image {
