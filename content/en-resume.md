@@ -92,7 +92,6 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - <i class="icon icon-pytorch">PyTorch</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 - <i class="icon icon-spark">Spark</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 - <i class="icon icon-qt">Qt</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-react">React</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
 
 ## Foreign Languages
 
@@ -122,15 +121,16 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![github-stars](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
-4. [Duckling Chinese](https://github.com/leovan/duckling-chinese)：Duckling Chinese is Python wrapper of [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) based on Jpype1, which provides parsing service in Chinese of time, data, numeral, etc. ![github-stars](https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars)
-5. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
-6. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
-7. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
-8. [Rasa Pro Doc](https://rasa-pro.leovan.tech): Rasa Pro document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
-9. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
-10. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
-11. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+4. [XGMML](https://github.com/leovan/xgmml): XGMML is a Python library for parsing and generating XGMML files. ![github-stars](https://img.shields.io/github/stars/leovan/xgmml.svg?style=social&label=Stars)
+5. [Duckling Chinese](https://github.com/leovan/duckling-chinese)：Duckling Chinese is Python wrapper of [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) based on Jpype1, which provides parsing service in Chinese of time, data, numeral, etc. ![github-stars](https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars)
+6. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![github-stars](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+7. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+8. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+9. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
+10. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+11. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
+12. [Rasa Pro Doc](https://rasa-pro.leovan.tech): Rasa Pro document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
 
 <h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="material-symbols material-symbols-download-outline"></span></a></h2>
 
-<p style="text-align: right;">Updated on: 2024-02-26</p>
+<p style="text-align: right;">Updated on: 2025-02-16</p>
