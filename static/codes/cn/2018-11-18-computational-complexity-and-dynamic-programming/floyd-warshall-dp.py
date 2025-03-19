@@ -6,8 +6,10 @@ import sys
 from typing import List
 
 
-def solve_shortest_path_floyd_warshall_dp(dist: List[List[int]], dist_m: List[List[int]]):
-    """ 利用 Floyd-Warshall 算法求解最短路
+def solve_shortest_path_floyd_warshall_dp(
+    dist: List[List[int]], dist_m: List[List[int]]
+):
+    """利用 Floyd-Warshall 算法求解最短路
 
     Args:
         dist: 两点间的距离
@@ -27,8 +29,10 @@ def solve_shortest_path_floyd_warshall_dp(dist: List[List[int]], dist_m: List[Li
                     dist_m[i][j] = k
 
 
-def get_shortest_path_floyd_warshall_dp(dist_m: List[List[int]], i: int, j: int, path: List[int]):
-    """ 还原最短路路径
+def get_shortest_path_floyd_warshall_dp(
+    dist_m: List[List[int]], i: int, j: int, path: List[int]
+):
+    """还原最短路路径
 
     Args:
         dist_m: 备忘录
@@ -54,7 +58,9 @@ if __name__ == '__main__':
     inf = sys.maxsize
     vertex_count = 4
 
-    dist = [[inf if i != j else 0 for i in range(vertex_count)] for j in range(vertex_count)]
+    dist = [
+        [inf if i != j else 0 for i in range(vertex_count)] for j in range(vertex_count)
+    ]
     dist[0][1] = 2
     dist[0][2] = 6
     dist[0][3] = 4
@@ -75,7 +81,11 @@ if __name__ == '__main__':
             path = []
             get_shortest_path_floyd_warshall_dp(dist_m, start, end, path)
 
-            print('Start: {start}'.format(start=start+1))
-            print('End: {end}'.format(end=end+1))
+            print('Start: {start}'.format(start=start + 1))
+            print('End: {end}'.format(end=end + 1))
             print('Shortest Path Length: {length}'.format(length=dist[start][end]))
-            print('Shortest Path: {path}\n'.format(path=' -> '.join([str(vertex) for vertex in path])))
+            print(
+                'Shortest Path: {path}\n'.format(
+                    path=' -> '.join([str(vertex) for vertex in path])
+                )
+            )

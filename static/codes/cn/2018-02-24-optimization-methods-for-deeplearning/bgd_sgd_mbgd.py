@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import datasets
 
+
 def BGD(x, y, lr=1e-2, epochs=100):
     m = x.shape[0]
     theta = np.ones(x.shape[1])
@@ -14,7 +15,7 @@ def BGD(x, y, lr=1e-2, epochs=100):
 
     hypothesis = np.dot(x, theta)
     loss = y - hypothesis
-    J = np.sum(loss ** 2) / (2 * m)
+    J = np.sum(loss**2) / (2 * m)
     J_history.append(J)
 
     for epoch in range(epochs):
@@ -36,7 +37,7 @@ def SGD(x, y, lr=1e-2, epochs=100):
 
     hypothesis = np.dot(x, theta)
     loss = y - hypothesis
-    J = np.sum(loss ** 2) / (2 * m)
+    J = np.sum(loss**2) / (2 * m)
     J_history.append(J)
 
     for epoch in range(epochs):
@@ -64,7 +65,7 @@ def MBGD(x, y, batch_size=10, lr=1e-2, epochs=100):
 
     hypothesis = np.dot(x, theta)
     loss = y - hypothesis
-    J = np.sum(loss ** 2) / (2 * m)
+    J = np.sum(loss**2) / (2 * m)
     J_history.append(J)
 
     for epoch in range(epochs):
@@ -87,8 +88,9 @@ def MBGD(x, y, batch_size=10, lr=1e-2, epochs=100):
 
 
 if __name__ == '__main__':
-    x, y = datasets.make_regression(n_samples=100, n_features=1, n_informative=1,
-                                    random_state=0, noise=35)
+    x, y = datasets.make_regression(
+        n_samples=100, n_features=1, n_informative=1, random_state=0, noise=35
+    )
     lr = 1e-3
     epochs = 100
     batch_size = 10

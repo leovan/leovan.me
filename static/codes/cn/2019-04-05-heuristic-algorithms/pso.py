@@ -12,28 +12,30 @@ from pyswarms.single.global_best import GlobalBestPSO
 def rosenbrock_opt(xy, a=1, b=100, c=0):
     return (a - xy[:, 0]) ** 2 + b * (xy[:, 1] - xy[:, 0] ** 2) ** 2 + c
 
+
 def rosenbrock_fig(X, Y, a=1, b=100, c=0):
-    return (a - X) ** 2 + b * (Y - X ** 2) ** 2 + c
+    return (a - X) ** 2 + b * (Y - X**2) ** 2 + c
+
 
 # %%
 X, Y = np.arange(-2, 2, 0.05), np.arange(-1, 3, 0.05)
 X, Y = np.meshgrid(X, Y)
 Z = rosenbrock_fig(X, Y)
 
+
 # %%
-def plot_rosenbrock(
-    X, Y, Z, fig,
-    xlim=(-2, 2), ylim=(-1, 3), zlim=(0, 2500), **kwargs):
+def plot_rosenbrock(X, Y, Z, fig, xlim=(-2, 2), ylim=(-1, 3), zlim=(0, 2500), **kwargs):
     ax = Axes3D(fig)
     ax.view_init(45, -125)
     ax.set_xlim(*xlim)
     ax.set_ylim(*ylim)
     ax.set_zlim(*zlim)
     ax.plot_surface(
-        X, Y, Z, rstride=1, cstride=1,
-        cmap=plt.get_cmap('viridis'), **kwargs)
-    
+        X, Y, Z, rstride=1, cstride=1, cmap=plt.get_cmap('viridis'), **kwargs
+    )
+
     return ax
+
 
 # %%
 x_max = (2, 3)
@@ -47,6 +49,7 @@ cost, pos = optimizer.optimize(rosenbrock_opt, 200)
 
 # %%
 history_pos = optimizer.pos_history
+
 
 # %%
 def gen_rosenbrock_pso_animation(history_pos):
@@ -69,6 +72,7 @@ def gen_rosenbrock_pso_animation(history_pos):
         return fig
 
     return animation.FuncAnimation(fig, gen_frame, frames=200)
+
 
 # %%
 anim = gen_rosenbrock_pso_animation(history_pos)

@@ -5,7 +5,7 @@ from typing import List
 
 
 def solve_longest_common_subsequence_dp(x: List[str], y: List[str]):
-    """ 利用 BP 求解最长公共子序列问题
+    """利用 BP 求解最长公共子序列问题
 
     Args:
         x: 序列 X
@@ -27,22 +27,24 @@ def solve_longest_common_subsequence_dp(x: List[str], y: List[str]):
         for j in range(n):
             if i == 0 or j == 0:
                 c_m[i][j] = 'NA'
-            elif x[i-1] == y[j-1]:
+            elif x[i - 1] == y[j - 1]:
                 c_l[i][j] = c_l[i - 1][j - 1] + 1
                 c_m[i][j] = '↖'
             else:
-                if c_l[i][j-1] <= c_l[i-1][j]:
-                    c_l[i][j] = c_l[i-1][j]
+                if c_l[i][j - 1] <= c_l[i - 1][j]:
+                    c_l[i][j] = c_l[i - 1][j]
                     c_m[i][j] = '↑'
                 else:
-                    c_l[i][j] = c_l[i][j-1]
+                    c_l[i][j] = c_l[i][j - 1]
                     c_m[i][j] = '←'
 
     return c_l, c_m
 
 
-def get_longest_common_subsequence_dp(c_m: List[List[str]], x: List[str], i: int, j: int, s: List[str]):
-    """ 还原最长公共子序列
+def get_longest_common_subsequence_dp(
+    c_m: List[List[str]], x: List[str], i: int, j: int, s: List[str]
+):
+    """还原最长公共子序列
 
     Args:
         c_m: 不同状态下的最长公共子序列备忘录
@@ -60,12 +62,12 @@ def get_longest_common_subsequence_dp(c_m: List[List[str]], x: List[str], i: int
         return
 
     if c_m[i][j] == '↖':
-        s.insert(0, x[i-1])
-        get_longest_common_subsequence_dp(c_m, x, i-1, j-1, s)
+        s.insert(0, x[i - 1])
+        get_longest_common_subsequence_dp(c_m, x, i - 1, j - 1, s)
     elif c_m[i][j] == '↑':
-        get_longest_common_subsequence_dp(c_m, x, i-1, j, s)
+        get_longest_common_subsequence_dp(c_m, x, i - 1, j, s)
     else:
-        get_longest_common_subsequence_dp(c_m, x, i, j-1, s)
+        get_longest_common_subsequence_dp(c_m, x, i, j - 1, s)
 
 
 if __name__ == '__main__':
@@ -76,5 +78,7 @@ if __name__ == '__main__':
     s = []
     get_longest_common_subsequence_dp(c_m, x, len(x), len(y), s)
 
-    print('Longest Common Subsequence Length: {length}'.format(length=c_l[len(x)][len(y)]))
+    print(
+        'Longest Common Subsequence Length: {length}'.format(length=c_l[len(x)][len(y)])
+    )
     print('Longest Common Subsequence: {subsequence}'.format(subsequence=s))

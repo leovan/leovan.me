@@ -50,8 +50,10 @@ for file in glob.glob('data/stopwords/*.txt'):
 # segmentation
 seg = pkuseg.pkuseg(postag=False)
 
+
 def segment(text):
     return ' '.join(filter(lambda t: not t in stopwords, seg.cut(text)))
+
 
 lyrics['seg'] = lyrics['geci'].progress_map(segment)
 
@@ -79,14 +81,15 @@ print('Vocabulary size: {}'.format(len(vocabulary)))
 
 # %%
 # TF-IDF (scikit-learn)
-pipe = Pipeline([
-    ('count', CountVectorizer(vocabulary=vocabulary)),
-    ('tfidf', TfidfTransformer())
-]).fit(list(lyrics['seg']))
+pipe = Pipeline(
+    [('count', CountVectorizer(vocabulary=vocabulary)), ('tfidf', TfidfTransformer())]
+).fit(list(lyrics['seg']))
 
 jaychou_jda = lyrics[(lyrics['singer'] == '周杰伦') & (lyrics['song'] == '简单爱')]
 jaychou_jda_tfidf = pipe.transform(jaychou_jda['seg']).toarray()[0]
-jaychou_jda_keywords = [vocabulary[idx] for idx in jaychou_jda_tfidf.argsort()[-3:][::-1]]
+jaychou_jda_keywords = [
+    vocabulary[idx] for idx in jaychou_jda_tfidf.argsort()[-3:][::-1]
+]
 print(jaychou_jda_keywords)
 
 # %%
@@ -99,10 +102,7 @@ for seg in lyrics['seg']:
 dictionary = corpora.Dictionary(documents_words)
 corpus = [dictionary.doc2bow(words) for words in documents_words]
 
-lda = models.ldamodel.LdaModel(
-    corpus=corpus,
-    id2word=dictionary,
-    num_topics=6)
+lda = models.ldamodel.LdaModel(corpus=corpus, id2word=dictionary, num_topics=6)
 
 documents_topic = []
 

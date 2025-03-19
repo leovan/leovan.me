@@ -38,11 +38,13 @@ class GamblersProblemValueIteration(object):
             old_states_values = np.copy(self._state_values)
             self._state_values_history.append(old_states_values)
 
-            for state in self._states[1:self._GOAL]:
+            for state in self._states[1 : self._GOAL]:
                 actions = np.arange(min(state, self._GOAL - state) + 1)
                 action_returns = [
-                    self._HEAD_PROB * self._state_values[state + action] +
-                    (1 - self._HEAD_PROB) * self._state_values[state - action] for action in actions]
+                    self._HEAD_PROB * self._state_values[state + action]
+                    + (1 - self._HEAD_PROB) * self._state_values[state - action]
+                    for action in actions
+                ]
                 new_value = np.max(action_returns)
                 self._state_values[state] = new_value
 
@@ -54,21 +56,27 @@ class GamblersProblemValueIteration(object):
                 break
 
     def optimal_policy(self):
-        for state in self._states[1:self._GOAL]:
+        for state in self._states[1 : self._GOAL]:
             actions = np.arange(min(state, self._GOAL - state) + 1)
             action_returns = [
-                self._HEAD_PROB * self._state_values[state + action] +
-                (1 - self._HEAD_PROB) * self._state_values[state - action] for action in actions]
-            self._policy[state] = actions[np.argmax(np.round(action_returns[1:], 5)) + 1]
+                self._HEAD_PROB * self._state_values[state + action]
+                + (1 - self._HEAD_PROB) * self._state_values[state - action]
+                for action in actions
+            ]
+            self._policy[state] = actions[
+                np.argmax(np.round(action_returns[1:], 5)) + 1
+            ]
 
-    def plot_state_values_history(self, figure_filename='gamblers-problem-value-iteration.png'):
+    def plot_state_values_history(
+        self, figure_filename='gamblers-problem-value-iteration.png'
+    ):
         plt.figure(figsize=(4, 3))
         labels = {
             1: '遍历 1',
             2: '遍历 2',
             3: '遍历 3',
             32: '遍历 32',
-            (len(self._state_values_history) - 1): '最终价值函数'
+            (len(self._state_values_history) - 1): '最终价值函数',
         }
 
         for idx, state_value in enumerate(self._state_values_history):
@@ -85,7 +93,9 @@ class GamblersProblemValueIteration(object):
         plt.savefig(figure_filename, dpi=100)
         plt.close()
 
-    def plot_optimal_policy(self, figure_filename='gamblers-problem-optimal-policy.png'):
+    def plot_optimal_policy(
+        self, figure_filename='gamblers-problem-optimal-policy.png'
+    ):
         states, policy_ = [], []
 
         for state, policy in zip(self._states, self._policy):

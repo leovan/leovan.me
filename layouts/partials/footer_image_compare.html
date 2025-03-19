@@ -1,28 +1,28 @@
 {{ if $.Page.Scratch.Get "image-compare" }}
 <script src="//cdn.jsdelivr.net/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.js"></script>
 <script type="text/javascript">
-(function(d) {
-  d.querySelectorAll(".image-compare").forEach(function(elem) {
-    let options = {
-      controlColor: elem.dataset.controlColor || "#FFFFFF",
-      controlShadow: elem.dataset.controlColor || true,
-      addCircle: elem.dataset.addCircle || false,
-      addCircleBlur: elem.dataset.addCircleBlur || true,
-      showLabels: elem.dataset.showLabels || false,
-      labelOptions: {
-        before: elem.dataset.labelBefore || "Before",
-        after: elem.dataset.labelAfter || "After",
-        onHover: elem.dataset.labelOnHover || false
-      },
-      smoothing: elem.dataset.smoothing || true,
-      smoothingAmount: elem.dataset.smoothingAmount || 100,
-      hoverStart: elem.dataset.hoverStart || false,
-      verticalMode: elem.dataset.verticalMode || false,
-      startingPoint: elem.dataset.startingPoint || 50,
-      fluidMode: elem.dataset.fluidMode || false
-    };
-    const viewer = new ImageCompare(elem, options).mount();
-  });
-})(document);
+  (function (d) {
+    d.querySelectorAll(".image-compare").forEach(function (el) {
+      let options = {
+        controlColor: el.dataset.controlColor || "#FFFFFF",
+        controlShadow: el.dataset.controlColor || true,
+        addCircle: el.dataset.addCircle || false,
+        addCircleBlur: el.dataset.addCircleBlur || true,
+        showLabels: el.dataset.showLabels || false,
+        labelOptions: {
+          before: el.dataset.labelBefore || "Before",
+          after: el.dataset.labelAfter || "After",
+          onHover: el.dataset.labelOnHover || false,
+        },
+        smoothing: el.dataset.smoothing || true,
+        smoothingAmount: el.dataset.smoothingAmount || 100,
+        hoverStart: el.dataset.hoverStart || false,
+        verticalMode: el.dataset.verticalMode || false,
+        startingPoint: el.dataset.startingPoint || 50,
+        fluidMode: el.dataset.fluidMode || false,
+      };
+      const viewer = new ImageCompare(el, options).mount();
+    });
+  })(document);
 </script>
 {{ end }}

@@ -48,7 +48,9 @@ axes[1].set_ylim(-1, 9)
 
 idx_mode = list(y).index(np.max(y))
 axes[1].plot([x[idx_mode], x[idx_mode]], [0, y[idx_mode]])
-axes[1].annotate('众数 = 中位数 = 平均数', (x[idx_mode], -0.8), ha='center', fontsize=12)
+axes[1].annotate(
+    '众数 = 中位数 = 平均数', (x[idx_mode], -0.8), ha='center', fontsize=12
+)
 
 x = np.linspace(-14, 3, n)
 y = skew(x, 0, 4.4, -4)

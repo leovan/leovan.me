@@ -1,12 +1,12 @@
-  <footer>
-  {{ partial "footer_custom.html" . }}
-  <hr>
-  <div class="copyright no-border-bottom">
-    <div class="copyright-author-year">
-      <span>{{ replace .Site.Params.footer "{Year}" now.Year | markdownify }}</span>
-    </div>
-  </div>
-  </footer>
-  </article>
+      <footer>
+        {{ partial "footer_custom.html" . }}
+        <hr>
+        <div class="copyright no-border-bottom">
+          <div class="copyright-author-year">
+            <span>{{ replace .Site.Params.footer "{Year}" now.Year | markdownify }}</span>
+          </div>
+        </div>
+      </footer>
+    </article>
   </body>
 </html>

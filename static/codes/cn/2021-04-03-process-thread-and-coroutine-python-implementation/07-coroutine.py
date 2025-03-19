@@ -78,8 +78,11 @@ def average_gen():
 def proxy_gen():
     while True:
         total, count, average = yield from average_gen()
-        print('计算完毕，共输入 {} 个数值，总和 {}，平均值 {}'.format(
-            count, total, average))
+        print(
+            '计算完毕，共输入 {} 个数值，总和 {}，平均值 {}'.format(
+                count, total, average
+            )
+        )
 
 
 def test_proxy_average_gen():
@@ -177,7 +180,7 @@ def test_asyncio_parallel():
     tasks = [
         asyncio.ensure_future(coroutine1),
         asyncio.ensure_future(coroutine2),
-        asyncio.ensure_future(coroutine3)
+        asyncio.ensure_future(coroutine3),
     ]
 
     loop = asyncio.get_event_loop()
@@ -195,7 +198,7 @@ async def out_do_some_work():
     tasks = [
         asyncio.ensure_future(coroutine1),
         asyncio.ensure_future(coroutine2),
-        asyncio.ensure_future(coroutine3)
+        asyncio.ensure_future(coroutine3),
     ]
 
     dones, pendings = await asyncio.wait(tasks)
@@ -217,7 +220,7 @@ def test_asyncio_status():
     print('Pending')
 
     try:
-        t = Thread(target=loop.run_until_complete, args=(task, ))
+        t = Thread(target=loop.run_until_complete, args=(task,))
         t.start()
         print('Running')
         t.join()
@@ -236,12 +239,12 @@ def test_asyncio_wait():
     loop = asyncio.get_event_loop()
     tasks = [random_sleep() for _ in range(1, 10)]
 
-    dones, pendings = loop.run_until_complete(asyncio.wait(
-        tasks, return_when=asyncio.FIRST_COMPLETED))
+    dones, pendings = loop.run_until_complete(
+        asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
+    )
     print('第一次完成的任务数：{}'.format(len(dones)))
 
-    dones, pendings = loop.run_until_complete(asyncio.wait(
-        pendings, timeout=2))
+    dones, pendings = loop.run_until_complete(asyncio.wait(pendings, timeout=2))
     print('第二次完成的任务数: {}'.format(len(dones)))
 
     dones, pendings = loop.run_until_complete(asyncio.wait(pendings))
@@ -268,7 +271,6 @@ if __name__ == '__main__':
     print(line_sep)
     test_proxy_average_gen()
     print(line_sep)
-
 
     print(line_sep)
     print('测试委托生成器')

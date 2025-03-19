@@ -1,11 +1,6 @@
-  {{ $lang := "cn" }}
-  {{ if (eq .Section "en") }}
-  {{ $lang = "en" }}
-  {{ end }}
-
-  {{ if .IsPage }}
-
-  <script type="application/ld+json">
+{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }} {{
+if .IsPage }}
+<script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
@@ -42,9 +37,9 @@
     },
     "url": {{ .Permalink | absURL | jsonify | safeJS }}
   }
-  </script>
-  {{ else }}
-  <script type="application/ld+json">
+</script>
+{{ else }}
+<script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
@@ -56,5 +51,5 @@
     },
     "url": {{ .Permalink | absURL | jsonify | safeJS }}
   }
-  </script>
-  {{ end }}
+</script>
+{{ end }}

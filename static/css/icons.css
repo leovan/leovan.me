@@ -16,112 +16,127 @@
   width: 1em;
   height: 1em;
   line-height: 1em;
-  content: '';
+  content: "";
 }
 
 .material-symbols-groups-outline::before {
-  background-image: url('../images/icons/material-symbols/light/groups-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/groups-outline.svg");
 }
+
 .dark .material-symbols-groups-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/groups-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/groups-outline.svg");
 }
 
 .material-symbols-target-outline::before {
-  background-image: url('../images/icons/material-symbols/light/target-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/target-outline.svg");
 }
+
 .dark .material-symbols-target-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/target-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/target-outline.svg");
 }
 
 .material-symbols-list-alt-outline::before {
-  background-image: url('../images/icons/material-symbols/light/list-alt-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/list-alt-outline.svg");
 }
+
 .dark .material-symbols-list-alt-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/list-alt-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/list-alt-outline.svg");
 }
 
 .material-symbols-settings-outline::before {
-  background-image: url('../images/icons/material-symbols/light/settings-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/settings-outline.svg");
 }
+
 .dark .material-symbols-settings-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/settings-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/settings-outline.svg");
 }
 
 .material-symbols-download-outline::before {
-  background-image: url('../images/icons/material-symbols/light/download-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/download-outline.svg");
 }
+
 .dark .material-symbols-download-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/download-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/download-outline.svg");
 }
 
 .material-symbols-play-outline::before {
-  background-image: url('../images/icons/material-symbols/light/play-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/play-outline.svg");
 }
+
 .dark .material-symbols-play-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/play-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/play-outline.svg");
 }
 
 .material-symbols-pause-outline::before {
-  background-image: url('../images/icons/material-symbols/light/pause-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/pause-outline.svg");
 }
+
 .dark .material-symbols-pause-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/pause-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/pause-outline.svg");
 }
 
 .material-symbols-school-outline::before {
-  background-image: url('../images/icons/material-symbols/light/school-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/school-outline.svg");
 }
+
 .dark .material-symbols-school-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/school-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/school-outline.svg");
 }
 
 .material-symbols-award-star-outline::before {
-  background-image: url('../images/icons/material-symbols/light/award-star-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/award-star-outline.svg");
 }
+
 .dark .material-symbols-award-star-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/award-star-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/award-star-outline.svg");
 }
 
 .material-symbols-skip-next-outline::before {
-  background-image: url('../images/icons/material-symbols/light/skip-next-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/skip-next-outline.svg");
 }
+
 .dark .material-symbols-skip-next-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/skip-next-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/skip-next-outline.svg");
 }
 
 .material-symbols-skip-previous-outline::before {
-  background-image: url('../images/icons/material-symbols/light/skip-previous-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/skip-previous-outline.svg");
 }
+
 .dark .material-symbols-skip-previous-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/skip-previous-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/skip-previous-outline.svg");
 }
 
 .material-symbols-star-outline::before {
-  background-image: url('../images/icons/material-symbols/light/star-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/star-outline.svg");
 }
+
 .dark .material-symbols-star-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/star-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/star-outline.svg");
 }
 
 .material-symbols-star-fill::before {
-  background-image: url('../images/icons/material-symbols/light/star-fill.svg');
+  background-image: url("../images/icons/material-symbols/light/star-fill.svg");
 }
+
 .dark .material-symbols-star-fill::before {
-  background-image: url('../images/icons/material-symbols/dark/star-fill.svg');
+  background-image: url("../images/icons/material-symbols/dark/star-fill.svg");
 }
 
 .material-symbols-dark-mode-outline::before {
-  background-image: url('../images/icons/material-symbols/light/dark-mode-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/dark-mode-outline.svg");
 }
+
 .dark .material-symbols-dark-mode-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/dark-mode-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/dark-mode-outline.svg");
 }
 
 .material-symbols-light-mode-outline::before {
-  background-image: url('../images/icons/material-symbols/light/light-mode-outline.svg');
+  background-image: url("../images/icons/material-symbols/light/light-mode-outline.svg");
 }
+
 .dark .material-symbols-light-mode-outline::before {
-  background-image: url('../images/icons/material-symbols/dark/light-mode-outline.svg');
+  background-image: url("../images/icons/material-symbols/dark/light-mode-outline.svg");
 }
 
 /* custom icons */
@@ -141,187 +156,187 @@
   width: 1em;
   height: 1em;
   line-height: 1em;
-  content: '';
+  content: "";
   margin-right: 4px;
   vertical-align: bottom;
 }
 
 .icon-adobe::before {
   width: 1.2em;
-  background-image: url('../images/icons/custom/adobe.svg');
+  background-image: url("../images/icons/custom/adobe.svg");
 }
 
 .icon-airbnb::before {
-  background-image: url('../images/icons/custom/airbnb.svg');
+  background-image: url("../images/icons/custom/airbnb.svg");
 }
 
 .icon-alibaba::before {
   width: 2em;
-  background-image: url('../images/icons/custom/alibaba.svg');
+  background-image: url("../images/icons/custom/alibaba.svg");
 }
 
 .icon-ant-group::before {
   width: 0.8em;
-  background-image: url('../images/icons/custom/ant-group.svg');
+  background-image: url("../images/icons/custom/ant-group.svg");
 }
 
 .icon-apple::before {
-  background-image: url('../images/icons/custom/apple.svg');
+  background-image: url("../images/icons/custom/apple.svg");
 }
 
 .icon-c::before {
-  background-image: url('../images/icons/custom/c.svg');
+  background-image: url("../images/icons/custom/c.svg");
 }
 
 .icon-caffe2::before {
-  background-image: url('../images/icons/custom/caffe2.svg');
+  background-image: url("../images/icons/custom/caffe2.svg");
 }
 
 .icon-cpp::before {
-  background-image: url('../images/icons/custom/cpp.svg');
+  background-image: url("../images/icons/custom/cpp.svg");
 }
 
 .icon-facebook::before {
-  background-image: url('../images/icons/custom/facebook.svg');
+  background-image: url("../images/icons/custom/facebook.svg");
 }
 
 .icon-firefox::before {
-  background-image: url('../images/icons/custom/firefox.svg');
+  background-image: url("../images/icons/custom/firefox.svg");
 }
 
 .icon-go::before {
   width: 2.2em;
   background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/go.svg');
+  background-image: url("../images/icons/custom/go.svg");
 }
 
 .icon-google::before {
-  background-image: url('../images/icons/custom/google.svg');
+  background-image: url("../images/icons/custom/google.svg");
 }
 
 .icon-ibm::before {
   width: 2.5em;
-  background-image: url('../images/icons/custom/ibm.svg');
+  background-image: url("../images/icons/custom/ibm.svg");
 }
 
 .icon-java::before {
-  background-image: url('../images/icons/custom/java.svg');
+  background-image: url("../images/icons/custom/java.svg");
 }
 
 .icon-javascript::before {
-  background-image: url('../images/icons/custom/javascript.svg');
+  background-image: url("../images/icons/custom/javascript.svg");
 }
 
 .icon-julia::before {
   width: 1.6em;
-  background-image: url('../images/icons/custom/julia.svg');
+  background-image: url("../images/icons/custom/julia.svg");
 }
 
 .icon-keras::before {
-  background-image: url('../images/icons/custom/keras.svg');
+  background-image: url("../images/icons/custom/keras.svg");
 }
 
 .icon-linux::before {
-  background-image: url('../images/icons/custom/linux.svg');
+  background-image: url("../images/icons/custom/linux.svg");
 }
 
 .icon-macos::before {
-  background-image: url('../images/icons/custom/macos.svg');
+  background-image: url("../images/icons/custom/macos.svg");
 }
 
 .icon-microsoft::before {
-  background-image: url('../images/icons/custom/microsoft.svg');
+  background-image: url("../images/icons/custom/microsoft.svg");
 }
 
 .icon-mxnet::before {
-  background-image: url('../images/icons/custom/mxnet.png');
+  background-image: url("../images/icons/custom/mxnet.png");
 }
 
 .icon-nodejs::before {
   width: 1.6em;
-  background-image: url('../images/icons/custom/nodejs.svg');
+  background-image: url("../images/icons/custom/nodejs.svg");
 }
 
 .icon-paddlepaddle::before {
   width: 1.85em;
-  background-image: url('../images/icons/custom/paddlepaddle.png');
+  background-image: url("../images/icons/custom/paddlepaddle.png");
 }
 
 .icon-python::before {
-  background-image: url('../images/icons/custom/python.svg');
+  background-image: url("../images/icons/custom/python.svg");
 }
 
 .icon-pytorch::before {
-  background-image: url('../images/icons/custom/pytorch.svg');
+  background-image: url("../images/icons/custom/pytorch.svg");
 }
 
 .icon-qq::before {
   width: 0.8em;
-  background-image: url('../images/icons/custom/qq.svg');
+  background-image: url("../images/icons/custom/qq.svg");
 }
 
 .icon-qt::before {
   width: 1.2em;
   background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/qt.svg');
+  background-image: url("../images/icons/custom/qt.svg");
 }
 
 .icon-r::before {
   width: 1.1em;
   background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/r.svg');
+  background-image: url("../images/icons/custom/r.svg");
 }
 
 .icon-react::before {
   width: 1.2em;
   background-size: auto 0.9em;
-  background-image: url('../images/icons/custom/react.svg');
+  background-image: url("../images/icons/custom/react.svg");
 }
 
 .icon-restful::before {
-  background-image: url('../images/icons/custom/restful.png');
+  background-image: url("../images/icons/custom/restful.png");
 }
 
 .icon-ruby::before {
   width: 0.8em;
   background-size: auto 0.8em;
-  background-image: url('../images/icons/custom/ruby.svg');
+  background-image: url("../images/icons/custom/ruby.svg");
 }
 
 .icon-rust::before {
-  background-image: url('../images/icons/custom/rust.svg');
+  background-image: url("../images/icons/custom/rust.svg");
 }
 
 .icon-salesforce::before {
   width: 1.5em;
-  background-image: url('../images/icons/custom/salesforce.svg');
+  background-image: url("../images/icons/custom/salesforce.svg");
 }
 
 .icon-spark::before {
-  background-image: url('../images/icons/custom/spark.svg');
+  background-image: url("../images/icons/custom/spark.svg");
 }
 
 .icon-sonnet::before {
-  background-image: url('../images/icons/custom/sonnet.png');
+  background-image: url("../images/icons/custom/sonnet.png");
 }
 
 .icon-swift::before {
-  background-image: url('../images/icons/custom/swift.svg');
+  background-image: url("../images/icons/custom/swift.svg");
 }
 
 .icon-tensorflow::before {
-  background-image: url('../images/icons/custom/tensorflow.svg');
+  background-image: url("../images/icons/custom/tensorflow.svg");
 }
 
 .icon-typescript::before {
-  background-image: url('../images/icons/custom/typescript.svg');
+  background-image: url("../images/icons/custom/typescript.svg");
 }
 
 .icon-wechat::before {
   width: 1.2em;
-  background-image: url('../images/icons/custom/wechat.svg');
+  background-image: url("../images/icons/custom/wechat.svg");
 }
 
 .icon-windows::before {
-  background-image: url('../images/icons/custom/windows.svg');
+  background-image: url("../images/icons/custom/windows.svg");
 }

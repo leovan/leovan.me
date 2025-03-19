@@ -21,11 +21,19 @@ from keras.datasets import mnist
 import tensorflow as tf
 from keras.callbacks import TensorBoard
 
+
 class ImageDCGAN:
-    def __init__(self, width, height, channels, a_optimizer=Adam(2e-4, beta_1=0.5),
-                 g_optimizer=Adam(2e-4, beta_1=0.5), d_optimizer=Adam(2e-4, beta_1=0.5),
-                 noise_dim=100):
-        '''
+    def __init__(
+        self,
+        width,
+        height,
+        channels,
+        a_optimizer=Adam(2e-4, beta_1=0.5),
+        g_optimizer=Adam(2e-4, beta_1=0.5),
+        d_optimizer=Adam(2e-4, beta_1=0.5),
+        noise_dim=100,
+    ):
+        """
 
         Args:
             width: 图像宽度
@@ -35,7 +43,7 @@ class ImageDCGAN:
             g_optimizer: 生成器优化器
             d_optimizer: 判别器优化器
             noise_dim: 噪音数据维度
-        '''
+        """
 
         self._data_path = os.path.join(os.path.dirname(__file__), '../../../data')
 
@@ -49,17 +57,19 @@ class ImageDCGAN:
         self._d_optimizer = d_optimizer
 
         self._noise_dim = noise_dim
-        self._noise_shape = (noise_dim, )
+        self._noise_shape = (noise_dim,)
 
         self._plt_noises_nrows = 10
         self._plt_noises_ncols = 10
-        self._plt_default_noises = np.random.normal(0, 1,
-            (self._plt_noises_nrows * self._plt_noises_ncols, self._noise_dim))
+        self._plt_default_noises = np.random.normal(
+            0, 1, (self._plt_noises_nrows * self._plt_noises_ncols, self._noise_dim)
+        )
 
         # 构建和编译判别器
         self._discriminator = self.build_discriminator()
-        self._discriminator.compile(loss='binary_crossentropy', optimizer=d_optimizer,
-                                    metrics=['accuracy'])
+        self._discriminator.compile(
+            loss='binary_crossentropy', optimizer=d_optimizer, metrics=['accuracy']
+        )
 
         # 构建和编译生成器
         self._generator = self.build_generator()
@@ -79,7 +89,6 @@ class ImageDCGAN:
         self._adversarial = Model(noise, label)
         self._adversarial.compile(loss='binary_crossentropy', optimizer=a_optimizer)
 
-
     def build_generator(self):
         model = Sequential()
 
@@ -87,7 +96,9 @@ class ImageDCGAN:
         reshape_height = int((self._height / (2 * 2)))
         dense_layer_dim = int(reshape_width * reshape_height * 256)
 
-        model.add(Dense(dense_layer_dim, activation='relu', input_shape=self._noise_shape))
+        model.add(
+            Dense(dense_layer_dim, activation='relu', input_shape=self._noise_shape)
+        )
         model.add(Reshape((reshape_width, reshape_height, 256)))
         model.add(BatchNormalization(momentum=0.8))
         model.add(UpSampling2D())
@@ -109,11 +120,18 @@ class ImageDCGAN:
 
         return Model(noise, image)
 
-
     def build_discriminator(self):
         model = Sequential()
 
-        model.add(Conv2D(32, kernel_size=3, strides=2, input_shape=self._input_shape, padding='same'))
+        model.add(
+            Conv2D(
+                32,
+                kernel_size=3,
+                strides=2,
+                input_shape=self._input_shape,
+                padding='same',
+            )
+        )
         model.add(LeakyReLU(alpha=0.2))
         model.add(Dropout(0.25))
         model.add(Conv2D(64, kernel_size=3, strides=2, padding='same'))
@@ -138,7 +156,6 @@ class ImageDCGAN:
 
         return Model(image, label)
 
-
     def write_tf_summary(self, callback, names, values, epoch):
         for name, value in zip(names, values):
             summary = tf.Summary()
@@ -148,10 +165,13 @@ class ImageDCGAN:
             callback.writer.add_summary(summary, epoch)
             callback.writer.flush()
 
-
     def train(self, x_train, output_dir, iters, batch_size=32, save_interval=200):
-        tensor_board_cb = TensorBoard(os.path.join(output_dir, 'logs'), histogram_freq=0,
-                                      write_graph=True, write_images=True)
+        tensor_board_cb = TensorBoard(
+            os.path.join(output_dir, 'logs'),
+            histogram_freq=0,
+            write_graph=True,
+            write_images=True,
+        )
         tensor_board_cb.set_model(self._adversarial)
 
         d_loss_history = []
@@ -167,8 +187,12 @@ class ImageDCGAN:
             noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
             generated_images = self._generator.predict(noises)
 
-            d_output_real = self._discriminator.train_on_batch(train_images, np.ones((batch_size, 1)))
-            d_output_fake = self._discriminator.train_on_batch(generated_images, np.zeros((batch_size, 1)))
+            d_output_real = self._discriminator.train_on_batch(
+                train_images, np.ones((batch_size, 1))
+            )
+            d_output_fake = self._discriminator.train_on_batch(
+                generated_images, np.zeros((batch_size, 1))
+            )
             d_output = 0.5 * np.add(d_output_real, d_output_fake)
 
             # 训练生成器
@@ -190,13 +214,16 @@ class ImageDCGAN:
             t_iters.set_postfix(
                 d_acc='%.2f%%' % (d_acc * 100),
                 d_loss='%.2f' % d_loss,
-                g_loss='%.2f' % g_loss)
+                g_loss='%.2f' % g_loss,
+            )
 
             # TensorBoard
-            self.write_tf_summary(tensor_board_cb,
-                                  ['d_loss', 'd_acc', 'g_loss'],
-                                  [d_loss, d_acc, g_loss],
-                                  iter)
+            self.write_tf_summary(
+                tensor_board_cb,
+                ['d_loss', 'd_acc', 'g_loss'],
+                [d_loss, d_acc, g_loss],
+                iter,
+            )
 
             # 保存生成的图片
             if iter % save_interval == 0:
@@ -206,17 +233,23 @@ class ImageDCGAN:
         self.save_image(output_dir, iters, iters)
 
         # 保存历史
-        history = pd.DataFrame({
-            'discriminator_loss': d_loss_history,
-            'discriminator_accuracy': d_acc_history,
-            'generator_loss': g_loss_history
-        })
+        history = pd.DataFrame(
+            {
+                'discriminator_loss': d_loss_history,
+                'discriminator_accuracy': d_acc_history,
+                'generator_loss': g_loss_history,
+            }
+        )
         history.to_csv(os.path.join(output_dir, 'history.csv'), index=False)
 
-
     def save_image(self, output_path, iter, iters, default_noise=True):
-        noises = self._plt_default_noises if default_noise else \
-            np.random.normal(0, 1, (self._plt_noises_nrows * self._plt_noises_ncols, self._noise_dim))
+        noises = (
+            self._plt_default_noises
+            if default_noise
+            else np.random.normal(
+                0, 1, (self._plt_noises_nrows * self._plt_noises_ncols, self._noise_dim)
+            )
+        )
         images = self._generator.predict(noises) * 0.5 + 0.5
 
         fig = plt.figure(figsize=(6, 6))
@@ -235,11 +268,12 @@ class ImageDCGAN:
 
                 ax.axis('off')
 
-        image_name_format = 'mnist-dcgan-epoch-{:0>%dd}.png' % int(np.ceil(np.log10(iters)))
+        image_name_format = 'mnist-dcgan-epoch-{:0>%dd}.png' % int(
+            np.ceil(np.log10(iters))
+        )
         fig.tight_layout()
         fig.savefig(os.path.join(output_path, 'images', image_name_format.format(iter)))
         plt.close()
-
 
     def plot_history(self, history_file_path, history_plt_path):
         history = pd.read_csv(history_file_path)
@@ -264,11 +298,9 @@ class ImageDCGAN:
         fig.savefig(history_plt_path)
         plt.close()
 
-
     def mnist_preprocess(self, data):
         scaled_data = (data.astype(np.float32) - 127.5) / 127.5
         return np.expand_dims(scaled_data, axis=3)
-
 
     def train_mnist(self):
         mnist_path = os.path.join(self._data_path, 'MNIST/mnist.npz')
@@ -276,17 +308,24 @@ class ImageDCGAN:
         (x_train, _), (_, _) = mnist.load_data(mnist_path)
 
         x_train = self.mnist_preprocess(x_train)
-        self.train(x_train,
-                   os.path.join(os.path.dirname(__file__),
-                                '../../../outputs/cn/2018-02-03-gan-introduction/mnist-dcgan-keras'),
-                   iters=30000, save_interval=1000)
+        self.train(
+            x_train,
+            os.path.join(
+                os.path.dirname(__file__),
+                '../../../outputs/cn/2018-02-03-gan-introduction/mnist-dcgan-keras',
+            ),
+            iters=30000,
+            save_interval=1000,
+        )
 
 
 if __name__ == '__main__':
     mnist_dcgan = ImageDCGAN(width=28, height=28, channels=1)
     # mnist_dcgan.train_mnist()
-    output_dir = os.path.join(os.path.dirname(__file__),
-                              '../../../outputs/cn/2018-02-03-gan-introduction/mnist-dcgan-keras')
+    output_dir = os.path.join(
+        os.path.dirname(__file__),
+        '../../../outputs/cn/2018-02-03-gan-introduction/mnist-dcgan-keras',
+    )
     history_file_path = os.path.join(output_dir, 'history.csv')
     history_plt_path = os.path.join(output_dir, 'history.png')
     mnist_dcgan.plot_history(history_file_path, history_plt_path)

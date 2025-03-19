@@ -62,19 +62,28 @@ INITIAL_Q = [np.zeros(2), np.zeros(len(ACTIONS_B)), np.zeros(1)]
 # set up destination for each state and each action
 TRANSITION = [[STATE_TERMINAL, STATE_B], [STATE_TERMINAL] * len(ACTIONS_B)]
 
+
 # choose an action based on epsilon greedy algorithm
 def choose_action(state, q_value):
     if np.random.binomial(1, EPSILON) == 1:
         return np.random.choice(STATE_ACTIONS[state])
     else:
         values_ = q_value[state]
-        return np.random.choice([action_ for action_, value_ in enumerate(values_) if value_ == np.max(values_)])
+        return np.random.choice(
+            [
+                action_
+                for action_, value_ in enumerate(values_)
+                if value_ == np.max(values_)
+            ]
+        )
+
 
 # take @action in @state, return the reward
 def take_action(state, action):
     if state == STATE_A:
         return 0
     return np.random.normal(-0.1, 1)
+
 
 # if there are two state action pair value array, use double Q-Learning
 # otherwise use normal Q-Learning
@@ -87,7 +96,9 @@ def q_learning(q1, q2=None):
             action = choose_action(state, q1)
         else:
             # derive a action form Q1 and Q2
-            action = choose_action(state, [item1 + item2 for item1, item2 in zip(q1, q2)])
+            action = choose_action(
+                state, [item1 + item2 for item1, item2 in zip(q1, q2)]
+            )
         if state == STATE_A and action == ACTION_A_LEFT:
             left_count += 1
         reward = take_action(state, action)
@@ -102,12 +113,19 @@ def q_learning(q1, q2=None):
             else:
                 active_q = q2
                 target_q = q1
-            best_action = np.random.choice([action_ for action_, value_ in enumerate(active_q[next_state]) if value_ == np.max(active_q[next_state])])
+            best_action = np.random.choice(
+                [
+                    action_
+                    for action_, value_ in enumerate(active_q[next_state])
+                    if value_ == np.max(active_q[next_state])
+                ]
+            )
             target = target_q[next_state][best_action]
 
         # Q-Learning update
         active_q[state][action] += ALPHA * (
-            reward + GAMMA * target - active_q[state][action])
+            reward + GAMMA * target - active_q[state][action]
+        )
         state = next_state
     return left_count
 

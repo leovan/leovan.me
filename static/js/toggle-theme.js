@@ -1,5 +1,5 @@
 function getTheme() {
-  theme = Cookies.get("theme", {path: "/"});
+  theme = Cookies.get("theme", { path: "/" });
 
   if (theme == "dark") {
     theme = "dark";
@@ -11,7 +11,7 @@ function getTheme() {
 }
 
 function setTheme(theme) {
-  Cookies.set("theme", theme, {path: "/"});
+  Cookies.set("theme", theme, { path: "/" });
 
   if (theme == "dark") {
     document.documentElement.className = "dark";
@@ -30,7 +30,7 @@ function toggleTheme() {
   }
 }
 
-(function() {
+(function () {
   document.getElementById("theme-toggle-icon").onclick = toggleTheme;
   setTheme(getTheme());
 })();

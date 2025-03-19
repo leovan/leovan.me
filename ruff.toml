@@ -1,0 +1,8 @@
+[lint]
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+quote-style = "single"
+docstring-code-format = true

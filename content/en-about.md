@@ -9,7 +9,7 @@ disable_donate: true
 disable_comments: true
 disable_adsense: true
 disable_mathjax: true
-disable_prismjs: true
+disable_highlight: true
 ---
 
 # Who am I?

@@ -21,30 +21,30 @@
 
 {{ if or (.Params.categories) (.Params.tags) }}
 <h3 class="post-meta">
-{{ if .Params.categories }}
-{{ if gt (len .Params.categories) 0 }}
-<strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>
-{{ range $index, $categories := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-{{ end }}
-{{ end }}
-{{ if and (.Params.categories) (.Params.tags) }}
-{{ if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
-/
-{{ end }}
-{{ end }}
-{{ if .Params.tags }}
-{{ if gt (len .Params.tags) 0 }}
-<strong>{{ index $.Site.Params.lang.tags $lang }}: </strong>
-{{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<span>{{ . }}</span>{{ end }}
-{{ end }}
-{{ end }}
-{{ if or (.Params.categories) (.Params.tags) }}
-{{ if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
-/
-{{ end }}
-{{ end }}
-<strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
-{{ .WordCount }}
+  {{ if .Params.categories }}
+  {{ if gt (len .Params.categories) 0 }}
+  <strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>
+  {{ range $index, $categories := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+  {{ end }}
+  {{ end }}
+  {{ if and (.Params.categories) (.Params.tags) }}
+  {{ if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+  /
+  {{ end }}
+  {{ end }}
+  {{ if .Params.tags }}
+  {{ if gt (len .Params.tags) 0 }}
+  <strong>{{ index $.Site.Params.lang.tags $lang }}: </strong>
+  {{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<span>{{ . }}</span>{{ end }}
+  {{ end }}
+  {{ end }}
+  {{ if or (.Params.categories) (.Params.tags) }}
+  {{ if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+  /
+  {{ end }}
+  {{ end }}
+  <strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
+  {{ .WordCount }}
 </h3>
 {{ end }}
 

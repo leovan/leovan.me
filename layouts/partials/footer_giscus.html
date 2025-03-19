@@ -1,21 +1,21 @@
 {{ if and (not .Params.disable_comments) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
 <section class="comments">
-<script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
-  data-repo="leovan/leovan.me"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkxMTMxOTY0Mjc="
-  data-category="Comments"
-  data-category-id="DIC_kwDOBr89i84CT-R7"
-  data-mapping="{{ if eq $.Kind "404" }}number{{ else }}pathname{{ end }}"
-  {{ if eq $.Kind "404" }}data-term="22"{{ end }}
-  data-strict="1"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="preferred_color_scheme"
-  data-lang="{{ if len (findRE "^/cn/" .RelPermalink) }}zh-CN{{ else }}en{{ end }}"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  defer>
-</script>
+  <script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
+    data-repo="leovan/leovan.me"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxMTMxOTY0Mjc="
+    data-category="Comments"
+    data-category-id="DIC_kwDOBr89i84CT-R7"
+    data-mapping="{{ if eq $.Kind "404" }}number{{ else }}pathname{{ end }}"
+    {{ if eq $.Kind "404" }}data-term="22"{{ end }}
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="{{ if len (findRE "^/cn/" .RelPermalink) }}zh-CN{{ else }}en{{ end }}"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    defer>
+  </script>
 </section>
 {{ end }}

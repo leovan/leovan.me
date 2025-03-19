@@ -15,8 +15,14 @@ def timer(task_mode):
             start_time = time.time()
             func(*args, **kwargs)
             end_time = time.time()
-            print('耗时（{} - {}）: {}'.format(task_mode, task_type, end_time - start_time))
+            print(
+                '耗时（{} - {}）: {}'.format(
+                    task_mode, task_type, end_time - start_time
+                )
+            )
+
         return decorator
+
     return wrapper
 
 

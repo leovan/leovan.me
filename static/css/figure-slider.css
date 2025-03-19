@@ -60,7 +60,7 @@
   border-radius: 6px;
   outline: none;
   opacity: 0.6;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   vertical-align: middle;
 }
 

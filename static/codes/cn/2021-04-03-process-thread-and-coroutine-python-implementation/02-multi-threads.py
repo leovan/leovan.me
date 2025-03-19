@@ -14,7 +14,7 @@ def func(name='Python'):
 def test_thread_1():
     thread_1 = Thread(target=func)
     thread_1.start()
-    thread_2 = Thread(target=func, args=('Leo', ))
+    thread_2 = Thread(target=func, args=('Leo',))
     thread_2.start()
 
 

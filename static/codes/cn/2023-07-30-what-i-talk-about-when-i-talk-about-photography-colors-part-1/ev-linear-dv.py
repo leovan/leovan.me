@@ -13,7 +13,9 @@ axes[0].plot(x, y, color='black')
 
 for x_dot, y_dot in zip(x_dots, y_dots):
     axes[0].plot([x_dot, x_dot], [0, np.power(2, x_dot)], color='black', ls='dotted')
-    axes[0].plot([0, x_dot], [np.power(2, x_dot), np.power(2, x_dot)], color='black', ls='dotted')
+    axes[0].plot(
+        [0, x_dot], [np.power(2, x_dot), np.power(2, x_dot)], color='black', ls='dotted'
+    )
 
 axes[0].set_xticks(x_dots)
 axes[0].set_yticks(y_dots)
@@ -24,7 +26,7 @@ axes[0].set_ylim(0, 256)
 axes[0].set_xlabel('EV')
 axes[0].set_ylabel('曝光量')
 
-axes[0].set_aspect(1 / 32.)
+axes[0].set_aspect(1 / 32.0)
 
 colorbar = np.outer(np.arange(256, 0, -1), np.ones(10))
 axes[1].imshow(colorbar, aspect='auto', cmap=plt.get_cmap('Greys'))

@@ -5,7 +5,7 @@ from typing import List
 
 
 class Item(object):
-    """ 物品
+    """物品
 
     Attributes:
         name: 物品名称
@@ -13,13 +13,16 @@ class Item(object):
         value: 物品价值
 
     """
+
     def __init__(self, name: str, weight: int, value: int):
         self._name = name
         self._weight = weight
         self._value = value
 
     def __repr__(self):
-        return '({name}, w: {weight}, v: {value})'.format(name=self._name, weight=self._weight, value=self._value)
+        return '({name}, w: {weight}, v: {value})'.format(
+            name=self._name, weight=self._weight, value=self._value
+        )
 
     @property
     def name(self):
@@ -35,7 +38,7 @@ class Item(object):
 
 
 class Bag(object):
-    """ 背包
+    """背包
 
     Attributes:
         capacity: 背包容量
@@ -64,7 +67,7 @@ class Bag(object):
         return sum([item.value for item in self._items])
 
     def add_item(self, item: Item):
-        """ 添加单个物品
+        """添加单个物品
 
         Args:
             item: 物品
@@ -76,7 +79,7 @@ class Bag(object):
         self._items.append(item)
 
     def add_items(self, items: List[Item]):
-        """ 添加多个物品
+        """添加多个物品
 
         Args:
             items: 物品列表
@@ -90,7 +93,7 @@ class Bag(object):
 
 
 def solve_zero_one_knapsack_dp(items: List[Item], bag_capacity: int):
-    """ 利用 BP 求解 0-1 背包问题
+    """利用 BP 求解 0-1 背包问题
 
     Args:
         items: 物品列表
@@ -108,12 +111,15 @@ def solve_zero_one_knapsack_dp(items: List[Item], bag_capacity: int):
             if i == 0 or w == 0:
                 continue
             elif w < items[i].weight:
-                bags[i][w].add_items(bags[i-1][w].items)
+                bags[i][w].add_items(bags[i - 1][w].items)
             else:
-                if bags[i-1][w].value > bags[i-1][w-items[i].weight].value + items[i].value:
-                    bags[i][w].add_items(bags[i-1][w].items)
+                if (
+                    bags[i - 1][w].value
+                    > bags[i - 1][w - items[i].weight].value + items[i].value
+                ):
+                    bags[i][w].add_items(bags[i - 1][w].items)
                 else:
-                    bags[i][w].add_items(bags[i-1][w-items[i].weight].items)
+                    bags[i][w].add_items(bags[i - 1][w - items[i].weight].items)
                     bags[i][w].add_item(items[i])
 
     return bags
@@ -126,7 +132,9 @@ if __name__ == '__main__':
     weights = [2, 2, 6, 5, 4]
     values = [6, 3, 5, 4, 6]
 
-    items = [Item(name, weight, value) for name, weight, value in zip(names, weights, values)]
+    items = [
+        Item(name, weight, value) for name, weight, value in zip(names, weights, values)
+    ]
     items.insert(0, Item('NA', 0, 0))
 
     result = solve_zero_one_knapsack_dp(items, bag_capacity)

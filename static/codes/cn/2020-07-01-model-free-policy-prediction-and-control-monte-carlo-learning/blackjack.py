@@ -110,7 +110,7 @@ def play(policy_player, initial_state=None, initial_action=None):
                 # last card must be ace
                 player_sum -= 10
             else:
-                usable_ace_player |= (1 == card)
+                usable_ace_player |= 1 == card
 
         # initialize cards of dealer, suppose dealer will show the first card he gets
         dealer_card1 = get_card()
@@ -147,7 +147,9 @@ def play(policy_player, initial_state=None, initial_action=None):
             action = policy_player(usable_ace_player, player_sum, dealer_card1)
 
         # track player's trajectory for importance sampling
-        player_trajectory.append([(usable_ace_player, player_sum, dealer_card1), action])
+        player_trajectory.append(
+            [(usable_ace_player, player_sum, dealer_card1), action]
+        )
 
         if action == ACTION_STAND:
             break
@@ -167,7 +169,7 @@ def play(policy_player, initial_state=None, initial_action=None):
         if player_sum > 21:
             return state, -1, player_trajectory
         assert player_sum <= 21
-        usable_ace_player = (ace_count == 1)
+        usable_ace_player = ace_count == 1
 
     # dealer's turn
     while True:
@@ -188,7 +190,7 @@ def play(policy_player, initial_state=None, initial_action=None):
         # dealer busts
         if dealer_sum > 21:
             return state, 1, player_trajectory
-        usable_ace_dealer = (ace_count == 1)
+        usable_ace_dealer = ace_count == 1
 
     # compare the sum between player and dealer
     assert player_sum <= 21 and dealer_sum <= 21
@@ -219,7 +221,10 @@ def monte_carlo_on_policy(episodes):
             else:
                 states_no_usable_ace_count[player_sum, dealer_card] += 1
                 states_no_usable_ace[player_sum, dealer_card] += reward
-    return states_usable_ace / states_usable_ace_count, states_no_usable_ace / states_no_usable_ace_count
+    return (
+        states_usable_ace / states_usable_ace_count,
+        states_no_usable_ace / states_no_usable_ace_count,
+    )
 
 
 # Monte Carlo with Exploring Starts
@@ -235,9 +240,17 @@ def monte_carlo_exploring_starts(episodes):
         player_sum -= 12
         dealer_card -= 1
         # get argmax of the average returns(s, a)
-        values_ = state_action_values[player_sum, dealer_card, usable_ace, :] / \
-                  state_action_pair_count[player_sum, dealer_card, usable_ace, :]
-        return np.random.choice([action_ for action_, value_ in enumerate(values_) if value_ == np.max(values_)])
+        values_ = (
+            state_action_values[player_sum, dealer_card, usable_ace, :]
+            / state_action_pair_count[player_sum, dealer_card, usable_ace, :]
+        )
+        return np.random.choice(
+            [
+                action_
+                for action_, value_ in enumerate(values_)
+                if value_ == np.max(values_)
+            ]
+        )
 
     # play for several episodes
     for episode in tqdm(range(episodes)):
@@ -245,7 +258,8 @@ def monte_carlo_exploring_starts(episodes):
         initial_state = [
             bool(np.random.choice([0, 1])),
             np.random.choice(range(12, 22)),
-            np.random.choice(range(1, 11))]
+            np.random.choice(range(1, 11)),
+        ]
         initial_action = np.random.choice(ACTIONS)
         current_policy = behavior_policy if episode else target_policy_player
         _, reward, trajectory = play(current_policy, initial_state, initial_action)
@@ -273,7 +287,9 @@ def monte_carlo_off_policy(episodes):
     returns = []
 
     for _ in range(0, episodes):
-        _, reward, player_trajectory = play(behavior_policy_player, initial_state=initial_state)
+        _, reward, player_trajectory = play(
+            behavior_policy_player, initial_state=initial_state
+        )
 
         # get the importance ratio
         numerator = 1.0
@@ -309,12 +325,18 @@ def plot_monte_carlo_on_policy():
     states_usable_ace_2, states_no_usable_ace_2 = monte_carlo_on_policy(500000)
 
     states = [
-        states_usable_ace_1, states_usable_ace_2,
-        states_no_usable_ace_1, states_no_usable_ace_2]
+        states_usable_ace_1,
+        states_usable_ace_2,
+        states_no_usable_ace_1,
+        states_no_usable_ace_2,
+    ]
 
     titles = [
-        '有可用 A，10000 幕后\n', '有可用 A，500000 幕后\n',
-        '\n无可用 A，10000 幕后\n', '\n无可用 A，500000 幕后\n']
+        '有可用 A，10000 幕后\n',
+        '有可用 A，500000 幕后\n',
+        '\n无可用 A，10000 幕后\n',
+        '\n无可用 A，500000 幕后\n',
+    ]
 
     fig = plt.figure(figsize=(10, 6))
     axes = [fig.add_subplot(2, 2, i, projection='3d') for i in range(1, 5)]
@@ -342,7 +364,9 @@ def plot_monte_carlo_on_policy():
     fig.tight_layout()
     fig.savefig('blackjack-monte-carlo-on-policy.png')
 
-    os.system('convert blackjack-monte-carlo-on-policy.png -trim blackjack-monte-carlo-on-policy.png')
+    os.system(
+        'convert blackjack-monte-carlo-on-policy.png -trim blackjack-monte-carlo-on-policy.png'
+    )
 
 
 # %%
@@ -357,12 +381,18 @@ def plot_monte_carlo_exploring_starts():
     action_usable_ace = np.argmax(state_action_values[:, :, 1, :], axis=-1)
 
     images = [
-        action_usable_ace, state_value_usable_ace,
-        action_no_usable_ace, state_value_no_usable_ace]
+        action_usable_ace,
+        state_value_usable_ace,
+        action_no_usable_ace,
+        state_value_no_usable_ace,
+    ]
 
     titles = [
-        '有可用 A，$\pi_*$', '有可用 A，$v_*$',
-        '无可用 A，$\pi_*$', '无可用 A，$v_*$']
+        '有可用 A，$\pi_*$',
+        '有可用 A，$v_*$',
+        '无可用 A，$\pi_*$',
+        '无可用 A，$v_*$',
+    ]
 
     fig = plt.figure(figsize=(10, 8))
     axes = [
@@ -375,8 +405,12 @@ def plot_monte_carlo_exploring_starts():
     for idx, (image, title, ax) in enumerate(zip(images, titles, axes)):
         if idx % 2 == 0:
             sns.heatmap(
-                np.flipud(image), cmap="YlGnBu", ax=ax,
-                xticklabels=range(1, 11), yticklabels=list(reversed(range(12, 22))))
+                np.flipud(image),
+                cmap='YlGnBu',
+                ax=ax,
+                xticklabels=range(1, 11),
+                yticklabels=list(reversed(range(12, 22))),
+            )
             ax.set_ylabel('玩家总和')
             ax.set_xlabel('庄家显示的牌')
             ax.set_title(title)
@@ -403,7 +437,9 @@ def plot_monte_carlo_exploring_starts():
     fig.tight_layout()
     fig.savefig('blackjack-monte-carlo-exploring-starts.png')
 
-    os.system('convert blackjack-monte-carlo-exploring-starts.png -trim blackjack-monte-carlo-exploring-starts.png')
+    os.system(
+        'convert blackjack-monte-carlo-exploring-starts.png -trim blackjack-monte-carlo-exploring-starts.png'
+    )
 
 
 # %%
@@ -434,7 +470,9 @@ def plot_monte_carlo_off_policy():
     fig.tight_layout()
     fig.savefig('blackjack-monte-carlo-off-policy.png')
 
-    os.system('convert blackjack-monte-carlo-off-policy.png -trim blackjack-monte-carlo-off-policy.png')
+    os.system(
+        'convert blackjack-monte-carlo-off-policy.png -trim blackjack-monte-carlo-off-policy.png'
+    )
 
 
 # %%

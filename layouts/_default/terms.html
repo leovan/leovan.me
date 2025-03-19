@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 
-
 <div class="terms">
 {{ range $key, $value := .Data.Terms.Alphabetical }}
   {{ $name := $value.Name }}
@@ -13,6 +12,5 @@
   </span>
 {{ end }}
 </div>
-
 
 {{ partial "footer.html" . }}

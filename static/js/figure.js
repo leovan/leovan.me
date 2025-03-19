@@ -1,5 +1,5 @@
 (window.onresize = function () {
-  document.querySelectorAll("figure > img").forEach(el => {
+  document.querySelectorAll("figure > img").forEach((el) => {
     if (window.innerWidth >= "1920") {
       el.style.setProperty("max-width", el.dataset.largeMaxWidth);
     } else if (window.innerWidth >= "480") {

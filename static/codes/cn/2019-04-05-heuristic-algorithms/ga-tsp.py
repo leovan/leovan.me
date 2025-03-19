@@ -12,16 +12,24 @@ from deap import algorithms, base, creator, tools
 # 读取数据
 city_coordinate = pd.read_csv('city-coordinate.tsv', header=0, sep='\t')
 
+
 # 构建距离矩阵
 def distance_tsp(latitude1, longitude1, latitude2, longitude2):
     return geodesic((latitude1, longitude1), (latitude2, longitude2)).meters
 
-city_distance_matrix = np.zeros([len(city_coordinate), len(city_coordinate)], dtype=np.float64)
+
+city_distance_matrix = np.zeros(
+    [len(city_coordinate), len(city_coordinate)], dtype=np.float64
+)
 
 for i in range(len(city_coordinate)):
     for j in range(len(city_coordinate)):
-        city_distance_matrix[i, j] = distance_tsp(city_coordinate.iloc[i, 2], city_coordinate.iloc[i, 1],
-                                                  city_coordinate.iloc[j, 2], city_coordinate.iloc[j, 1])
+        city_distance_matrix[i, j] = distance_tsp(
+            city_coordinate.iloc[i, 2],
+            city_coordinate.iloc[i, 1],
+            city_coordinate.iloc[j, 2],
+            city_coordinate.iloc[j, 1],
+        )
 
 # 染色体位数
 IND_SIZE = len(city_coordinate)
@@ -42,27 +50,30 @@ INDPB = 0.05
 NGEN = 1000
 
 # 设置 TSP 问题的 Fitness
-creator.create('FitnessMin', base.Fitness, weights=(-1.0, ))
+creator.create('FitnessMin', base.Fitness, weights=(-1.0,))
 
 # 设置个体
-creator.create("Individual", list, fitness=creator.FitnessMin)
+creator.create('Individual', list, fitness=creator.FitnessMin)
 
 toolbox = base.Toolbox()
 
-toolbox.register("indices", random.sample, range(IND_SIZE), IND_SIZE)
-toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.indices)
-toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+toolbox.register('indices', random.sample, range(IND_SIZE), IND_SIZE)
+toolbox.register('individual', tools.initIterate, creator.Individual, toolbox.indices)
+toolbox.register('population', tools.initRepeat, list, toolbox.individual)
+
 
 def evaluate_tsp(individual):
     distance = city_distance_matrix[individual[-1]][individual[0]]
     for gene1, gene2 in zip(individual[0:-1], individual[1:]):
         distance += city_distance_matrix[gene1][gene2]
-    return distance,
+    return (distance,)
 
-toolbox.register("mate", tools.cxPartialyMatched)
-toolbox.register("mutate", tools.mutShuffleIndexes, indpb=INDPB)
-toolbox.register("select", tools.selTournament, tournsize=3)
-toolbox.register("evaluate", evaluate_tsp)
+
+toolbox.register('mate', tools.cxPartialyMatched)
+toolbox.register('mutate', tools.mutShuffleIndexes, indpb=INDPB)
+toolbox.register('select', tools.selTournament, tournsize=3)
+toolbox.register('evaluate', evaluate_tsp)
+
 
 def main():
     with open('city-path.tsv', 'w') as f:
@@ -100,14 +111,18 @@ def main():
             for ind, fit in zip(invalid_ind, fitnesses):
                 ind.fitness.values = fit
 
-            print("Iter: {iter}, Evaluated {counts} individuals".format(iter=iter, counts=len(invalid_ind)))
+            print(
+                'Iter: {iter}, Evaluated {counts} individuals'.format(
+                    iter=iter, counts=len(invalid_ind)
+                )
+            )
 
             pop[:] = offspring
 
             best_ind = tools.selBest(pop, 1)[0]
 
             path = ','.join(map(str, list(best_ind)))
-            fitness, = best_ind.fitness.values
+            (fitness,) = best_ind.fitness.values
 
             f_writer.writerow({'path': path, 'fitness': fitness})
 

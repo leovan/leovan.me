@@ -28,7 +28,7 @@ class TaxiV3Agent(object):
         gamma=0.8,
         epsilon=0.9,
         epsilon_decay=0.9,
-        epsilon_min=0.01
+        epsilon_min=0.01,
     ):
         if algorithm not in ['q_learning', 'sarsa', 'expected_sarsa']:
             raise ValueError('Unsupported algorithm [{}]'.format(algorithm))
@@ -69,9 +69,14 @@ class TaxiV3Agent(object):
     def step_q_learning(self, state, action, reward, next_state, done):
         if not done:
             self._q_table[state][action] += self._alpha * (
-                reward + self._gamma * np.max(self._q_table[next_state]) - self._q_table[state][action])
+                reward
+                + self._gamma * np.max(self._q_table[next_state])
+                - self._q_table[state][action]
+            )
         else:
-            self._q_table[state][action] += self._alpha * (reward - self._q_table[state][action])
+            self._q_table[state][action] += self._alpha * (
+                reward - self._q_table[state][action]
+            )
             self.update_epsilon()
 
     @staticmethod
@@ -84,21 +89,37 @@ class TaxiV3Agent(object):
 
     def step_sarsa(self, state, action, reward, next_state, done):
         if not done:
-            probs = self.action_probs(self._q_table[next_state], self._epsilon, self._num_actions)
+            probs = self.action_probs(
+                self._q_table[next_state], self._epsilon, self._num_actions
+            )
             next_action = np.argmax(np.cumsum(probs) > np.random.random())
             self._q_table[state][action] += self._alpha * (
-                reward + self._gamma * self._q_table[next_state][next_action] - self._q_table[state][action])
+                reward
+                + self._gamma * self._q_table[next_state][next_action]
+                - self._q_table[state][action]
+            )
         else:
-            self._q_table[state][action] += self._alpha * (reward - self._q_table[state][action])
+            self._q_table[state][action] += self._alpha * (
+                reward - self._q_table[state][action]
+            )
             self.update_epsilon()
 
     def step_expected_sarsa(self, state, action, reward, next_state, done):
         if not done:
-            probs = self.action_probs(self._q_table[next_state], self._epsilon, self._num_actions)
+            probs = self.action_probs(
+                self._q_table[next_state], self._epsilon, self._num_actions
+            )
             self._q_table[state][action] += self._alpha * (
-                reward + self._gamma * np.dot(probs, self._q_table[next_state] - self._q_table[state][action]))
+                reward
+                + self._gamma
+                * np.dot(
+                    probs, self._q_table[next_state] - self._q_table[state][action]
+                )
+            )
         else:
-            self._q_table[state][action] += self._alpha * (reward - self._q_table[state][action])
+            self._q_table[state][action] += self._alpha * (
+                reward - self._q_table[state][action]
+            )
             self.update_epsilon()
 
     def train(self, num_episodes=20000, rewards_window=100):
@@ -156,7 +177,9 @@ def plot_avg_rewards(avg_rewards_lst, algorithms, max_episode=1000):
     fig = plt.figure(figsize=(6, 4))
 
     for avg_rewards, algorithm in zip(avg_rewards_lst, algorithms):
-        plt.plot(list(range(max_episode)), list(avg_rewards)[0:max_episode], label=algorithm)
+        plt.plot(
+            list(range(max_episode)), list(avg_rewards)[0:max_episode], label=algorithm
+        )
 
     plt.xlabel('幕')
     plt.ylabel('回报')
@@ -180,9 +203,12 @@ if __name__ == '__main__':
 
     print('Expected Sarsa')
     agent_expected_sarsa = TaxiV3Agent(algorithm='expected_sarsa')
-    avg_rewards_expected_sarsa, best_avg_reward_expected_sarsa = agent_expected_sarsa.train()
+    avg_rewards_expected_sarsa, best_avg_reward_expected_sarsa = (
+        agent_expected_sarsa.train()
+    )
     print('Best Average Reward: '.format(best_avg_reward_expected_sarsa))
 
     plot_avg_rewards(
         [avg_rewards_q_learning, avg_rewards_sarsa, avg_rewards_expected_sarsa],
-        ['Q-learning', 'Sarsa', 'Expected Sarsa'])
+        ['Q-learning', 'Sarsa', 'Expected Sarsa'],
+    )

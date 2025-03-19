@@ -47,7 +47,7 @@ class Seeker(Thread):
         self.name = name
 
     def run(self):
-        time.sleep(1) # 确保先运行 Hider 中的方法
+        time.sleep(1)  # 确保先运行 Hider 中的方法
 
         self.condition.acquire()
 

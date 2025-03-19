@@ -4,6 +4,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
+
 rcParams['font.family'] = 'sans-serif'
 rcParams['font.sans-serif'] = ['Source Han Sans CN']
 rcParams['font.size'] = 16
@@ -12,9 +13,10 @@ rcParams['text.usetex'] = True
 
 from scipy.spatial.distance import cdist
 
+
 # %%
 def kernel_se(x1, x2, var_f, l):
-    """ Squared Exponential Kernel
+    """Squared Exponential Kernel
 
     Args:
         x1:
@@ -23,11 +25,12 @@ def kernel_se(x1, x2, var_f, l):
         l: length scale hyper-parameter
     """
 
-    return var_f * np.exp((-cdist(x1, x2)**2) / (2 * l**2))
+    return var_f * np.exp((-(cdist(x1, x2) ** 2)) / (2 * l**2))
+
 
 # %%
 def sample(mu, var, num_samples, num_test_points, jitter=1e-10, random_seed=1123):
-    """ Sample from a multivariate Gaussian
+    """Sample from a multivariate Gaussian
 
     Args:
         mu: mean
@@ -42,6 +45,7 @@ def sample(mu, var, num_samples, num_test_points, jitter=1e-10, random_seed=1123
     # cholesky decomposition (square root) of covariance matrix
     L = np.linalg.cholesky(var + jitter * np.eye(var.shape[0]))
     return mu + L @ np.random.normal(size=(num_test_points, num_samples))
+
 
 # %%
 x_min, x_max = -5, 5
@@ -60,7 +64,13 @@ fig = plt.figure(figsize=(12, 5))
 plt.subplot(1, 2, 1)
 plt.plot(x_star, f_prior)
 plt.title('{} samples from the GP prior'.format(num_samples))
-plt.fill_between(x_star.flatten(), 0-2*std, 0+2*std, label='$\pm$2 standard deviations of posterior', color='#dddddd')
+plt.fill_between(
+    x_star.flatten(),
+    0 - 2 * std,
+    0 + 2 * std,
+    label='$\pm$2 standard deviations of posterior',
+    color='#dddddd',
+)
 plt.legend()
 
 # visualize the covariance function
@@ -69,9 +79,11 @@ plt.title('Prior covariance $K(X_*, X_*)$')
 plt.contourf(k_se)
 plt.show()
 
+
 # %%
 def f(x):
     return np.sin(x) + 0.1 * np.cos(2 * x)
+
 
 # %%
 np.random.seed(1123)
@@ -86,6 +98,7 @@ plt.scatter(x_train, y_train, color='black', label='Training points')
 plt.legend()
 plt.show()
 
+
 # %%
 def gp_regression(X, y, k, x_star, var_f, l):
     # calculate mean
@@ -99,6 +112,7 @@ def gp_regression(X, y, k, x_star, var_f, l):
 
     return mu, var
 
+
 # %%
 mu, var = gp_regression(x_train, y_train, kernel_se, x_star, var_f, l)
 std = np.sqrt(np.diag(var))
@@ -110,21 +124,31 @@ fig = plt.figure(figsize=(12, 5))
 # plot underlying function, training data, posterior mean and +/- 2 standard deviations
 plt.subplot(1, 2, 1)
 plt.title('Posterior - Observations')
-plt.fill_between(x_star.flatten(), mu.flatten()-2*std, mu.flatten()+2*std, label='$\pm$2 standard deviations of posterior', color='#dddddd')
+plt.fill_between(
+    x_star.flatten(),
+    mu.flatten() - 2 * std,
+    mu.flatten() + 2 * std,
+    label='$\pm$2 standard deviations of posterior',
+    color='#dddddd',
+)
 plt.plot(x_star, f(x_star), 'b-', label='Underlying function')
 plt.plot(x_star, mu, 'r-', label='Mean of posterior')  # plot mean of posterior
-plt.plot(x_train, y_train, 'kx', ms=8 ,label='Training input-target pairs')
+plt.plot(x_train, y_train, 'kx', ms=8, label='Training input-target pairs')
 plt.legend()
 
 # plot samples from posterior
 plt.subplot(1, 2, 2)
 plt.title('%i samples from GP posterior' % num_samples)
 plt.plot(x_star, f_post)  # plot samples from posterior
-plt.plot(x_train, y_train, 'kx', ms=8 ,label='Training input-target pairs')
+plt.plot(x_train, y_train, 'kx', ms=8, label='Training input-target pairs')
 plt.show()
 
 # %%
-kk = kernel_se(x_star, x_train, 1, 1) @ np.linalg.inv(kernel_se(x_train, x_train, 1, 1)) @ kernel_se(x_train, x_star, 1, 1)
+kk = (
+    kernel_se(x_star, x_train, 1, 1)
+    @ np.linalg.inv(kernel_se(x_train, x_train, 1, 1))
+    @ kernel_se(x_train, x_star, 1, 1)
+)
 
 # %%
 fig = plt.figure(figsize=(18, 5))

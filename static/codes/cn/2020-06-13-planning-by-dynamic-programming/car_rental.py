@@ -88,7 +88,9 @@ class CarRentalPolicyIteration(object):
             self._N_JOBS = n_jobs
 
         self._actions = np.arange(-MAX_MOVE_OF_CARS, MAX_MOVE_OF_CARS + 1)
-        self._inverse_actions = {elem: idx[0] for idx, elem in np.ndenumerate(self._actions)}
+        self._inverse_actions = {
+            elem: idx[0] for idx, elem in np.ndenumerate(self._actions)
+        }
         self._values = np.zeros((MAX_CARS + 1, MAX_CARS + 1))
         self._policy = np.zeros(self._values.shape, dtype=np.int)
 
@@ -105,7 +107,9 @@ class CarRentalPolicyIteration(object):
             print(f'Policy evaluation elapsed time: {elapsed_time} seconds.')
 
             start_time = time.time()
-            policy_change, self._policy = self.policy_improvement(self._policy, self._values, self._actions)
+            policy_change, self._policy = self.policy_improvement(
+                self._policy, self._values, self._actions
+            )
             elapsed_time = time.time() - start_time
             print(f'Policy improvement elapsed time: {elapsed_time} seconds.')
 
@@ -117,7 +121,9 @@ class CarRentalPolicyIteration(object):
             iterations += 1
 
         total_elapsed_time = time.time() - total_start_time
-        print(f'Optimal policy is reached after {iterations} iterations in {total_elapsed_time} seconds.')
+        print(
+            f'Optimal policy is reached after {iterations} iterations in {total_elapsed_time} seconds.'
+        )
 
         with open('car-rental-policy-history.pkl', 'wb') as f:
             pickle.dump(self._policy_history, f)
@@ -149,14 +155,18 @@ class CarRentalPolicyIteration(object):
 
     def policy_improvement(self, policy, values, actions):
         new_policy = np.copy(policy)
-        expected_action_returns = np.zeros((MAX_CARS + 1, MAX_CARS + 1, np.size(actions)))
+        expected_action_returns = np.zeros(
+            (MAX_CARS + 1, MAX_CARS + 1, np.size(actions))
+        )
         cooks = dict()
 
         with mp.Pool(processes=self._N_JOBS) as p:
             for action in actions:
                 k = np.arange(MAX_CARS + 1)
                 all_states = ((i, j) for i, j in itertools.product(k, k))
-                cooks[action] = partial(self.expected_return_policy_improvement, action, values)
+                cooks[action] = partial(
+                    self.expected_return_policy_improvement, action, values
+                )
                 results = p.map(cooks[action], all_states)
 
                 for v, i, j, a in results:
@@ -177,38 +187,69 @@ class CarRentalPolicyIteration(object):
 
         for rental_request_first_loc in range(self._TRUNCATE):
             for rental_request_second_loc in range(self._TRUNCATE):
-
                 num_of_cars_first_loc = int(min(state[0] - action, MAX_CARS))
                 num_of_cars_second_loc = int(min(state[1] + action, MAX_CARS))
 
-                real_rental_first_loc = min(num_of_cars_first_loc, rental_request_first_loc)
-                real_rental_second_loc = min(num_of_cars_second_loc, rental_request_second_loc)
+                real_rental_first_loc = min(
+                    num_of_cars_first_loc, rental_request_first_loc
+                )
+                real_rental_second_loc = min(
+                    num_of_cars_second_loc, rental_request_second_loc
+                )
 
                 reward = (real_rental_first_loc + real_rental_second_loc) * RENT_REWARD
                 num_of_cars_first_loc -= real_rental_first_loc
                 num_of_cars_second_loc -= real_rental_second_loc
 
-                prob_rental = poisson_distribution(rental_request_first_loc, RENTAL_REQUEST_FIRST_LOC) * \
-                    poisson_distribution(rental_request_second_loc, RENTAL_REQUEST_SECOND_LOC)
+                prob_rental = poisson_distribution(
+                    rental_request_first_loc, RENTAL_REQUEST_FIRST_LOC
+                ) * poisson_distribution(
+                    rental_request_second_loc, RENTAL_REQUEST_SECOND_LOC
+                )
 
                 if constant_returned_cars:
                     returned_cars_first_loc = RETURNS_FIRST_LOC
                     returned_cars_second_loc = RETURNS_SECOND_LOC
-                    num_of_cars_first_loc = min(num_of_cars_first_loc + returned_cars_first_loc, MAX_CARS)
-                    num_of_cars_second_loc = min(num_of_cars_second_loc + returned_cars_second_loc, MAX_CARS)
-                    expected_return += prob_rental * \
-                        (reward + DISCOUNT * values[num_of_cars_first_loc, num_of_cars_second_loc])
+                    num_of_cars_first_loc = min(
+                        num_of_cars_first_loc + returned_cars_first_loc, MAX_CARS
+                    )
+                    num_of_cars_second_loc = min(
+                        num_of_cars_second_loc + returned_cars_second_loc, MAX_CARS
+                    )
+                    expected_return += prob_rental * (
+                        reward
+                        + DISCOUNT
+                        * values[num_of_cars_first_loc, num_of_cars_second_loc]
+                    )
                 else:
                     for returned_cars_first_loc in range(self._TRUNCATE):
                         for returned_cars_second_loc in range(self._TRUNCATE):
-                            prob_return = poisson_distribution(returned_cars_first_loc, RETURNS_FIRST_LOC) * \
-                                poisson_distribution(returned_cars_second_loc, RETURNS_SECOND_LOC)
+                            prob_return = poisson_distribution(
+                                returned_cars_first_loc, RETURNS_FIRST_LOC
+                            ) * poisson_distribution(
+                                returned_cars_second_loc, RETURNS_SECOND_LOC
+                            )
 
-                            num_of_cars_first_loc_ = min(num_of_cars_first_loc + returned_cars_first_loc, MAX_CARS)
-                            num_of_cars_second_loc_ = min(num_of_cars_second_loc + returned_cars_second_loc, MAX_CARS)
+                            num_of_cars_first_loc_ = min(
+                                num_of_cars_first_loc + returned_cars_first_loc,
+                                MAX_CARS,
+                            )
+                            num_of_cars_second_loc_ = min(
+                                num_of_cars_second_loc + returned_cars_second_loc,
+                                MAX_CARS,
+                            )
 
-                            expected_return += prob_return * prob_rental * \
-                                (reward + DISCOUNT * values[num_of_cars_first_loc_, num_of_cars_second_loc_])
+                            expected_return += (
+                                prob_return
+                                * prob_rental
+                                * (
+                                    reward
+                                    + DISCOUNT
+                                    * values[
+                                        num_of_cars_first_loc_, num_of_cars_second_loc_
+                                    ]
+                                )
+                            )
 
         return expected_return
 
@@ -225,7 +266,9 @@ class CarRentalPolicyIteration(object):
         return expected_return, state[0], state[1], action
 
     @classmethod
-    def plot_policy_history(cls, policy_history, values, figure_filename='car-rental-policy-history.png'):
+    def plot_policy_history(
+        cls, policy_history, values, figure_filename='car-rental-policy-history.png'
+    ):
         _, axes = plt.subplots(3, 2, figsize=(8, 10))
         axes = axes.flatten()
 

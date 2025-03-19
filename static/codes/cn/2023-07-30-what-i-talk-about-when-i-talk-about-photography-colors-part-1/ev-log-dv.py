@@ -24,7 +24,7 @@ axes[0].set_ylim(0, 256)
 axes[0].set_xlabel('EV')
 axes[0].set_ylabel(r'曝光量 $\log$ 值')
 
-axes[0].set_aspect(1 / 32.)
+axes[0].set_aspect(1 / 32.0)
 
 colorbar = np.outer(np.arange(256, 0, -1), np.ones(10))
 axes[1].imshow(colorbar, aspect='auto', cmap=plt.get_cmap('Greys'))

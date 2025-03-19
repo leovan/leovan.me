@@ -10,7 +10,7 @@ from matplotlib.image import imsave
 
 # %%
 def func(X, Y):
-    return np.exp(-(X**2 + Y**2)) + 2 * np.exp(-((X - 1.7)**2 + (Y - 1.7)**2))
+    return np.exp(-(X**2 + Y**2)) + 2 * np.exp(-((X - 1.7) ** 2 + (Y - 1.7) ** 2))
 
 
 # %%
@@ -73,8 +73,7 @@ def hill_climbing(X, Y, init_x_idx, init_y_idx):
 
 
 # %%
-def simulated_annealing_next_point(
-        x, y, x_min, x_max, y_min, y_max, temp, init_temp):
+def simulated_annealing_next_point(x, y, x_min, x_max, y_min, y_max, temp, init_temp):
     range_scale = max(temp / init_temp, 0.2)
 
     range_x_min = x - (x - x_min) * range_scale
@@ -102,8 +101,15 @@ def simulated_annealing_next_point(
 
 # %%
 def simulated_annealing(
-        X, Y, init_x, init_y,
-        init_temp=200, temp_delta=0.98, temp_min=1e-10, random_seed=112358):
+    X,
+    Y,
+    init_x,
+    init_y,
+    init_temp=200,
+    temp_delta=0.98,
+    temp_min=1e-10,
+    random_seed=112358,
+):
     X_path = [init_x]
     Y_path = [init_y]
 
@@ -116,7 +122,8 @@ def simulated_annealing(
 
     while temp > temp_min:
         next_x, next_y = simulated_annealing_next_point(
-                x, y, x_min, x_max, y_min, y_max, temp, init_temp)
+            x, y, x_min, x_max, y_min, y_max, temp, init_temp
+        )
 
         if next_x is not None and next_y is not None:
             x, y = next_x, next_y
@@ -205,8 +212,7 @@ def plot_simulated_annealing(init_x, init_y, random_seed=112358):
     X = np.arange(-2, 4, 0.01)
     Y = np.arange(-2, 4, 0.01)
 
-    X_path, Y_path = simulated_annealing(
-            X, Y, init_x, init_y, random_seed=random_seed)
+    X_path, Y_path = simulated_annealing(X, Y, init_x, init_y, random_seed=random_seed)
     Z_path = func(X_path, Y_path)
 
     draw_surface(X, Y)
@@ -216,13 +222,13 @@ def plot_simulated_annealing(init_x, init_y, random_seed=112358):
 
 
 # %%
-def make_simulated_annealing_frames(
-        init_x_idx, init_y_idx, random_seed=112358):
+def make_simulated_annealing_frames(init_x_idx, init_y_idx, random_seed=112358):
     X = np.arange(-2, 4, 0.01)
     Y = np.arange(-2, 4, 0.01)
 
     X_path, Y_path = simulated_annealing(
-            X, Y, init_x_idx, init_y_idx, random_seed=random_seed)
+        X, Y, init_x_idx, init_y_idx, random_seed=random_seed
+    )
 
     return make_frames(X, Y, X_path, Y_path)
 
@@ -246,7 +252,9 @@ mlab.clf()
 
 
 # %%
-os.system('convert hill-climbing-1.png hill-climbing-2.png -gravity south +append hill-climbing.png')
+os.system(
+    'convert hill-climbing-1.png hill-climbing-2.png -gravity south +append hill-climbing.png'
+)
 os.system('convert hill-climbing.png -trim hill-climbing.png')
 
 # %%
@@ -280,5 +288,7 @@ mlab.clf()
 
 
 # %%
-os.system('convert simulated-annealing-1.png simulated-annealing-2.png -gravity south +append simulated-annealing.png')
+os.system(
+    'convert simulated-annealing-1.png simulated-annealing-2.png -gravity south +append simulated-annealing.png'
+)
 os.system('convert simulated-annealing.png -trim simulated-annealing.png')

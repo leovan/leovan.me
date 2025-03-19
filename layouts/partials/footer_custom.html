@@ -1,36 +1,42 @@
 {{ if .Section }}
 <nav class="post-nav">
-  <span class="nav-prev">{{ with .PrevInSection }}&larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span>
-  <span class="nav-next">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;{{ end }}</span>
+  <span class="nav-prev"
+    >{{ with .PrevInSection }}&larr;
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span
+  >
+  <span class="nav-next"
+    >{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    &rarr;{{ end }}</span
+  >
 </nav>
 {{ end }}
 
-{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
+{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content)}}
 {{ with $.Site.Params.googleAdsense }}
 <ins
   class="adsbygoogle"
-  style="display:block; text-align:center;"
+  style="display: block; text-align: center"
   data-ad-layout="in-article"
   data-ad-format="fluid"
   data-ad-client="{{ . }}"
-  data-ad-slot="8302038603"></ins>
+  data-ad-slot="8302038603"
+></ins>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 {{ end }}
 {{ end }}
 
-<script src='//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js'></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js"></script>
 <script src="/js/toggle-theme.js"></script>
 
 {{ if not .IsHome }}
-<script src="/js/no-highlight.js"></script>
 <script src="/js/math-code.js"></script>
 <script src="/js/heading-anchor.js"></script>
 {{ end }}
 
 {{ partial "footer_giscus.html" . }}
-{{ partial "footer_prismjs.html" . }}
+{{ partial "footer_highlight.html" . }}
 {{ partial "footer_pseudocode.html" . }}
 {{ partial "footer_gallery.html" . }}
 {{ partial "footer_image_compare.html" . }}
@@ -44,7 +50,11 @@
 {{ end }}
 
 {{ if $.Page.Scratch.Get "videojs" }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css"
+/>
 <script src="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
 {{ end }}
 
@@ -62,7 +72,7 @@
 
 <script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
-addBackToTop({
-  diameter: 48
-});
+  addBackToTop({
+    diameter: 48,
+  });
 </script>

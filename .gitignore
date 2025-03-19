@@ -1,5 +1,4 @@
-# R Blogdown
-blogdown
+# Hugo
 public
 .hugo_build.lock
 
@@ -32,9 +31,9 @@ data/*.png
 static/codes/**/*.txt
 static/codes/**/*.json
 
-# Outputs
-outputs
-
 # System
 .DS_Store
 Thumbs.db
+
+# Others
+.ruff_cache

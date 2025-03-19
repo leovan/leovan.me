@@ -9,7 +9,7 @@ disable_donate: true
 disable_comments: true
 disable_adsense: true
 disable_mathjax: true
-disable_prismjs: true
+disable_highlight: true
 ---
 
 <h2 class="center no-anchor">  「唯有爱与美食，不可辜负。」</h2>

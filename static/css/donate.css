@@ -7,7 +7,8 @@
   display: none;
 }
 
-.donate, .donate-button {
+.donate,
+.donate-button {
   font-size: 1em;
   font-weight: bold;
 }
@@ -47,7 +48,7 @@
 .donate-modal-wrapper-show {
   opacity: 1;
   visibility: visible;
-  transform: scale(1.0);
+  transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
@@ -60,7 +61,7 @@
   max-height: calc(100dvh - 48px);
   margin-right: auto;
   margin-left: auto;
-  box-shadow: 0 5px 20px rgba(26,26,26,.1);
+  box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
   box-sizing: border-box;
 }
 
@@ -121,7 +122,8 @@
   align-items: stretch;
 }
 
-.donate-box-money, .donate-box-footer {
+.donate-box-money,
+.donate-box-footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -147,7 +149,7 @@
 }
 
 .donate-box-money-button-unchecked:hover {
-  background-color: rgba(255, 51, 102, .06);
+  background-color: rgba(255, 51, 102, 0.06);
 }
 
 .donate-box-money-button-checked {

@@ -1,38 +1,34 @@
 {{ with .Site.Config.Services.GoogleAnalytics.ID }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
-if (window.location.hostname == "leovan.me") {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ . }}');
-}
+  if (window.location.hostname == "leovan.me") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  }
 </script>
 {{ end }}
 
 {{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
 <script>
-MathJax = {
-  loader: {
-    load: ['[tex]/boldsymbol']
-  },
-  tex: {
-    tags: "all",
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    packages: {
-      '[+]': ['boldsymbol']
+  MathJax = {
+    loader: {
+      load: ['[tex]/boldsymbol']
+    },
+    tex: {
+      tags: "all",
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {
+        '[+]': ['boldsymbol']
+      }
     }
-  }
-};
+  };
 </script>
 <script src="//cdn.jsdelivr.net/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/es5/tex-chtml.js" crossorigin></script>
-{{ end }}
-
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</pre>") }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css">
 {{ end }}
 
 {{ if and (and (and (not .Params.disable_adsense) (ne .Kind "404")) (not .IsHome)) .Content }}
@@ -45,6 +41,10 @@ MathJax = {
 <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
+
+{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+<link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
+{{ end }}
 
 {{ if (and .IsPage (not .Params.disable_donate)) }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
