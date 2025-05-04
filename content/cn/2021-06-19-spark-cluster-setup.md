@@ -177,7 +177,7 @@ hdfs dfs -mkdir /logs/spark
 
 通过 http://vm-01:8081 可以进入 Spark Web 页面：
 
-![](/images/tech101/2021-06-19-spark-cluster-setup/spark-master-web.png)
+![](/images/cn/2021-06-19-spark-cluster-setup/spark-master-web.png)
 
 启动 Spark History Server：
 
@@ -200,7 +200,7 @@ spark-submit \
 
 在 YARN 中，通过 Application ID 查看对应的 Container 的 stdout 日志，可以得到示例程序的运行结果：
 
-![](/images/tech101/2021-06-19-spark-cluster-setup/spark-yarn-all-applications-web.png)
+![](/images/cn/2021-06-19-spark-cluster-setup/spark-yarn-all-applications-web.png)
 
 ```
 Pi is roughly 3.1424791424791425
@@ -208,7 +208,7 @@ Pi is roughly 3.1424791424791425
 
 通过 http://vm-01:18081 可以进入 Spark History Server 页面：
 
-![](/images/tech101/2021-06-19-spark-cluster-setup/spark-history-server-web.png)
+![](/images/cn/2021-06-19-spark-cluster-setup/spark-history-server-web.png)
 
 # NFS 配置
 

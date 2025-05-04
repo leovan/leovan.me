@@ -18,8 +18,8 @@ tags:
   - Node Manager
   - Journal Node
 images:
-  - /images/tech101/2021-06-13-hadoop-cluster-setup/web-hadoop.png
-  - /images/tech101/2021-06-13-hadoop-cluster-setup/web-yarn.png
+  - /images/cn/2021-06-13-hadoop-cluster-setup/web-hadoop.png
+  - /images/cn/2021-06-13-hadoop-cluster-setup/web-yarn.png
 ---
 
 文本使用的软件版本分别为：
@@ -535,8 +535,8 @@ Starting nodemanagers
 
 通过 http://vm-01:50070 可以进入 Hadoop Web 页面：
 
-![](/images/tech101/2021-06-13-hadoop-cluster-setup/web-hadoop.png)
+![](/images/cn/2021-06-13-hadoop-cluster-setup/web-hadoop.png)
 
 通过 http://vm-01:8088 可以进入 YARN 页面：
 
-![](/images/tech101/2021-06-13-hadoop-cluster-setup/web-yarn.png)
+![](/images/cn/2021-06-13-hadoop-cluster-setup/web-yarn.png)
