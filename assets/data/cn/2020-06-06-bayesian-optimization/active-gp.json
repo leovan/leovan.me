@@ -1,0 +1,68 @@
+{
+  "autoplay": {
+    "delay": 2000,
+    "pauseOnMouseEnter": true
+  },
+  "effect": "fade",
+  "loop": true,
+  "navigation": {
+    "prevEl": ".swiper-button-prev",
+    "nextEl": ".swiper-button-next"
+  },
+  "scrollbar": {
+    "el": ".swiper-scrollbar",
+    "draggable": true
+  },
+  "items": [
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-0.png",
+      "caption": "Iteration 0"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-1.png",
+      "caption": "Iteration 1"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-2.png",
+      "caption": "Iteration 2"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-3.png",
+      "caption": "Iteration 3"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-4.png",
+      "caption": "Iteration 4"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-5.png",
+      "caption": "Iteration 5"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-6.png",
+      "caption": "Iteration 6"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-7.png",
+      "caption": "Iteration 7"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-8.png",
+      "caption": "Iteration 8"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2020-06-06-bayesian-optimization/active-gp-9.png",
+      "caption": "Iteration 9"
+    }
+  ]
+}

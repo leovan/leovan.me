@@ -20,6 +20,17 @@
   {{ $vertical_align_style = " text-align: right;" }}
 {{ end }}
 
-<div class="vertical-mode {{ $font | safeCSS }}" style='writing-mode: tb-rl; writing-mode: vertical-rl; max-width: 100%; height: {{ .Get "height" | default "auto" | safeCSS }}; overflow: auto;{{ $horizontal_align_style | safeCSS }}{{ $vertical_align_style | safeCSS }}'>
+<div
+  class="vertical-mode {{ $font | safeCSS }}"
+  style='
+    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    max-width: 100%;
+    height: {{ .Get "height" | default "auto" | safeCSS }};
+    overflow: auto;
+    {{ $horizontal_align_style | safeCSS }}
+    {{ $vertical_align_style | safeCSS }}
+  '
+>
   {{ .Inner | markdownify }}
 </div>

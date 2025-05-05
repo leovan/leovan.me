@@ -336,7 +336,7 @@ $$`
 
 在估计 `$f \left(x\right)$` 的过程中，我们希望最小化评估的次数，因此我们可以通过主动学习来“智能”地选择下一个评估的数据点。通过不断的选择具有最高不确定性的数据点来获得 `$f \left(x\right)$` 更准确的估计，直至收敛或达到停止条件。下图展示了利用主动学习估计真实数据分布的过程：
 
-{{< figure-slider base-url="/images/cn/2020-06-06-bayesian-optimization/" image-filename-prefix="active-gp-" image-max-index="9" >}}
+{{< swiper data="/data/cn/2020-06-06-bayesian-optimization/active-gp.json" >}}
 
 ## 贝叶斯优化问题
 

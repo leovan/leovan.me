@@ -1,8 +1,0 @@
-{{ if not ($.Page.Scratch.Get "details-summary") }}
-<link rel="stylesheet" href="/css/details-summary.css" />
-{{ .Page.Scratch.Add "details-summary" 1 }}
-{{ end }}
-<details {{ if (eq (.Get "default") "open")}}open{{end}}>
-  <summary>{{ .Get "summary" | markdownify }}</summary>
-  <div class="detail-content">{{ .Inner }}</div>
-</details>

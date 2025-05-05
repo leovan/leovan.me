@@ -1,5 +1,8 @@
-{{ $lang := "cn" }} {{ if (hasPrefix .RelPermalink "/en/") }} {{ $lang = "en" }}
-{{ end }} {{ if (not .Params.disable_donate) }}
+{{ $lang := "cn" }}
+{{ if (hasPrefix .RelPermalink "/en/") }}
+  {{ $lang = "en" }}
+{{ end }}
+{{ if (not .Params.disable_donate) }}
 <div class="donate">
   <div class="donate-header"></div>
   <div class="donate-slug" id="donate-slug">{{ .Slug }}</div>

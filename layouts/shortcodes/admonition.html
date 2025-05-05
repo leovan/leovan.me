@@ -1,31 +1,31 @@
-{{ if not ($.Page.Scratch.Get "admonition") }}
-<link rel="stylesheet" href="/css/admonition.css" />
-{{ .Page.Scratch.Add "admonition" 1 }}
+{{ if not ($.Page.Store.Get "admonition") }}
+  {{ .Page.Store.Add "admonition" 1 }}
+  <link rel="stylesheet" type="text/css" href="/css/admonition.css" />
 {{ end }}
 
 {{ $lang := "cn" }}
 {{ if (eq $.Page.Section "en") }}
 {{ $lang = "en" }}
 {{ end }}
-{{ $type := .Get "type" | default "note" }}
+{{ $type := .Get "type" | default "quote" }}
 {{ $noIcon := .Get "no-icon" | default false }}
 {{ $foldable := .Get "foldable" | default false }}
-{{ $close := .Get "close" | default false }}
+{{ $close := .Get "close" | default true }}
 {{ $hasTitle := and (ne .Params nil) (isset .Params "title") }}
 {{ $title := .Get "title" | default (index (index $.Site.Params.lang.admonition $type) $lang ) }}
 
 {{ if (eq $foldable true) }}
 <details
-  class="admonition admonition-{{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai"
+  class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai"
   {{ if (ne $close true) }}open="open"{{ end }}>
-  <summary>{{ $title | markdownify }}</summary>
-  <div class="admonition-content">{{ .Inner | markdownify }}</div>
+  <summary class="admonition-title">{{ $title | markdownify }}</summary>
+  <p class="admonition-content">{{ .Inner | markdownify }}</p>
 </details>
 {{ else }}
-<div class="admonition admonition-{{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai">
+<div class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai">
   {{ if $hasTitle }}
   <p class="admonition-title">{{ $title | markdownify }}</p>
   {{ end }}
-  <div class="admonition-content">{{ .Inner | markdownify }}</div>
+  <p class="admonition-content">{{ .Inner | markdownify }}</p>
 </div>
 {{ end }}

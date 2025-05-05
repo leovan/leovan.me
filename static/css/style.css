@@ -31,41 +31,44 @@ img {
   max-width: 100%;
 }
 
+/* icons */
+:root {
+  --code-copy-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V7q0-.425.288-.712T4 6t.713.288T5 7v13h10q.425 0 .713.288T16 21t-.288.713T15 22zm4-6V4z"/></svg>');
+  --code-copy-success-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.4l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.5q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z"/></svg>');
+  --code-copy-error-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l2.9 2.9q.275.275.7.275t.7-.275t.275-.7t-.275-.7L13.4 12l2.9-2.9q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275L12 10.6L9.1 7.7q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l2.9 2.9l-2.9 2.9q-.275.275-.275.7t.275.7t.7.275t.7-.275zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z"/></svg>');
+}
+
 /* colors */
 :root {
-  --html-bg: #fafafa;
-  --body-bg: #ffffff;
-  --body-bg-alpha: rgba(255, 255, 255, 0.66);
-  --body-fg: #000000;
+  --html-background: #fafafa;
+  --body-background: #ffffff;
+  --body-background-alpha: rgba(255, 255, 255, 0.66);
+  --body-foreground: #000000;
   --block-border: #444444;
-  --block-bg: #eeeeee;
+  --block-background: #eeeeee;
   --code-border: #dddddd;
-  --code-fg: #4f424c;
-  --code-bg: #f6f6f6;
-  --code-lang-bg: #dddddd;
-  --code-lang-fg: #4f424c;
+  --code-foreground: #444444;
+  --code-background: #f6f6f6;
+  --code-lang-background: #dddddd;
+  --code-lang-foreground: #444444;
   --box-shadow: rgba(0, 0, 0, 0.25);
 
   --code-button-copy-default: #00000012;
   --code-button-copy-area-hover: #707070;
-
-  --code-copy-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>');
-  --code-copy-success-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"/></svg>');
-  --code-copy-error-icon: url('data:image/svg+xml;charset=utf-8,<<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"/></svg>');
 }
 
 .dark {
-  --html-bg: #232323;
-  --body-bg: #2f2f2f;
-  --body-bg-alpha: rgba(47, 47, 47, 0.66);
-  --body-fg: #e6e6e6;
+  --html-background: #232323;
+  --body-background: #2f2f2f;
+  --body-background-alpha: rgba(47, 47, 47, 0.66);
+  --body-foreground: #e6e6e6;
   --block-border: #e6e6e6;
-  --block-bg: #383838;
+  --block-background: #383838;
   --code-border: #dddddd;
-  --code-fg: #cccccc;
-  --code-bg: #383838;
-  --code-lang-bg: #444444;
-  --code-lang-fg: #cccccc;
+  --code-foreground: #cccccc;
+  --code-background: #383838;
+  --code-lang-background: #444444;
+  --code-lang-foreground: #cccccc;
   --box-shadow: rgba(0, 0, 0, 0.25);
 
   --code-button-copy-default: #ffffff24;
@@ -73,17 +76,17 @@ img {
 }
 
 html {
-  background: var(--html-bg) !important;
+  background: var(--html-background) !important;
 }
 
 body {
-  background: var(--body-bg) !important;
-  background: var(--body-bg-alpha) !important;
+  background: var(--body-background) !important;
+  background: var(--body-background-alpha) !important;
 }
 
 body,
 a {
-  color: var(--body-fg);
+  color: var(--body-foreground);
 }
 
 .logo {
@@ -96,7 +99,7 @@ a {
 }
 
 .main {
-  border-left: 3px solid var(--body-fg);
+  border-left: 3px solid var(--body-foreground);
 }
 
 blockquote {
@@ -104,7 +107,7 @@ blockquote {
 }
 
 #TableOfContents {
-  background-color: var(--block-bg);
+  background-color: var(--block-background);
 }
 
 table {
@@ -119,7 +122,7 @@ table thead th {
 thead,
 tfoot,
 tr:nth-child(even) {
-  background: var(--block-bg);
+  background: var(--block-background);
 }
 
 .ps-root .ps-algorithm {
@@ -132,39 +135,39 @@ tr:nth-child(even) {
 }
 
 .douban-card {
-  background: var(--block-bg) !important;
+  background: var(--block-background) !important;
   box-shadow: 0 2px 4px var(--box-shadow), 0 0 2px var(--box-shadow);
 }
 
 .donate-button {
-  color: var(--body-fg);
+  color: var(--body-foreground);
 }
 
 .aplayer {
-  background: var(--block-bg) !important;
+  background: var(--block-background) !important;
 }
 
 .aplayer .aplayer-lrc:after {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
-    var(--block-bg) 100%
+    var(--block-background) 100%
   ) !important;
 }
 
 .highlight {
-  background: var(--code-bg) !important;
-  color: var(--code-fg) !important;
+  background: var(--code-background) !important;
+  color: var(--code-foreground) !important;
 }
 
 code:before {
-  background: var(--code-lang-bg) !important;
-  color: var(--code-lang-fg) !important;
+  background: var(--code-lang-background) !important;
+  color: var(--code-lang-foreground) !important;
 }
 
 #back-to-top {
-  background: var(--block-bg) !important;
-  color: var(--body-fg) !important;
+  background: var(--block-background) !important;
+  color: var(--body-foreground) !important;
   box-shadow: 0 2px 5px 0 var(--box-shadow) !important;
 }
 
@@ -197,26 +200,26 @@ code:before {
 
 @media screen and (max-width: 960px) {
   html {
-    background: var(--html-bg);
+    background: var(--html-background);
   }
 
   body {
-    background: var(--body-bg);
+    background: var(--body-background);
   }
 
   .masthead {
-    border-bottom: 3px solid var(--body-fg);
+    border-bottom: 3px solid var(--body-foreground);
   }
 
   .masthead .menu a,
   .masthead .menu span {
-    color: var(--body-bg);
+    color: var(--body-background);
     background: var(--block-border);
   }
 
   .masthead .menu .active a {
     border: 1px solid var(--block-border);
-    color: var(--body-fg);
+    color: var(--body-foreground);
   }
 }
 

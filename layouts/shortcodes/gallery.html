@@ -1,14 +1,16 @@
-{{ if not ($.Page.Scratch.Get "gallery") }}
-  {{ $.Page.Scratch.Set "gallery" 1 }}
+{{ if not ($.Page.Store.Get "gallery") }}
+  {{ $.Page.Store.Set "gallery" 1 }}
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"/>
 {{ end }}
 
-{{ if not ($.Page.Scratch.Get "gallery-index") }}
-  {{ $.Page.Scratch.Set "gallery-index" 1 }}
+{{ if not ($.Page.Store.Get "galleryId") }}
+  {{ $.Page.Store.Set "galleryId" 1 }}
 {{ else }}
-  {{ $.Page.Scratch.Set "gallery-index" (add ($.Page.Scratch.Get "gallery-index") 1) }}
+  {{ $.Page.Store.Set "galleryId" (add ($.Page.Store.Get "galleryId") 1) }}
 {{ end }}
 
-{{ $gallery_index := $.Page.Scratch.Get "gallery-index" }}
+{{ $galleryId := printf "gallery-%d" ($.Page.Store.Get "galleryId") }}
 {{ $data := .Get "data" }}
 
-<div class="gallery" shortcode="gallery" id="gallery-{{ $gallery_index }}" data="{{ $data }}"></div>
+<div class="gallery" shortcode="gallery" id="{{ $galleryId }}" data="{{ $data }}"></div>

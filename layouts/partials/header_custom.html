@@ -49,17 +49,3 @@
 {{ if (and .IsPage (not .Params.disable_donate)) }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
 {{ end }}
-
-{{ if $.Page.Scratch.Get "aplayer" }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
-<script src="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
-{{ end }}
-
-{{ if $.Page.Scratch.Get "metingjs" }}
-<script src="//cdn.jsdelivr.net/npm/@xizeyoupan/meting@{{ $.Site.Params.metingjsVersion }}/dist/Meting.min.js"></script>
-{{ end }}
-
-{{ if $.Page.Scratch.Get "gallery" }}
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"/>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"/>
-{{ end }}

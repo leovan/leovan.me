@@ -39,17 +39,13 @@
 {{ partial "footer_highlight.html" . }}
 {{ partial "footer_pseudocode.html" . }}
 {{ partial "footer_gallery.html" . }}
-{{ partial "footer_image_compare.html" . }}
+{{ partial "footer_image_comparer.html" . }}
 
-{{ if $.Page.Scratch.Get "douban-card" }}
+{{ if $.Page.Store.Get "douban-card" }}
 <script src="/js/douban-card.js"></script>
 {{ end }}
 
-{{ if $.Page.Scratch.Get "figure-slider" }}
-<script src="/js/figure-slider.js"></script>
-{{ end }}
-
-{{ if $.Page.Scratch.Get "videojs" }}
+{{ if $.Page.Store.Get "video" }}
 <link
   rel="stylesheet"
   type="text/css"

@@ -159,9 +159,9 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 
 利用 Python 绘制的直方图如下所示：
 
-{{% details-summary summary="直方图代码" %}}
+{{% details summary="直方图代码" %}}
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-histgram.py" language="python" >}}
-{{% /details-summary %}}
+{{% /details %}}
 
 {{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-image-histgram.png" title="原始图片直方图" %}}
 
@@ -175,18 +175,18 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 
 针对图片分别应用 5000K 和 10000K 色温的对比结果如下图所示：
 
-{{% details-summary summary="色温代码" %}}
+{{% details summary="色温代码" %}}
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-temperature.py" language="python" >}}
-{{% /details-summary %}}
+{{% /details %}}
 
-{{< image-compare show-labels=true label-before="暖色" label-after="冷色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-warm.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-cold.jpg" >}}
+{{< image-comparer show-labels=true label-before="暖色" label-after="冷色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-warm.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-cold.jpg" >}}
 
 # 色调
 
 色调（Tint）允许我们为了实现中和色偏或增加色偏的目的，而将色偏向绿色或洋红色转变。针对图片分别应用 -30 和 +30 色调的对比结果如下图所示：
 
-{{% details-summary summary="色调代码" %}}
+{{% details summary="色调代码" %}}
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-tint.py" language="python" >}}
-{{% /details-summary %}}
+{{% /details %}}
 
-{{< image-compare show-labels=true label-before="洋红" label-after="绿色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-negative.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-positive.jpg" >}}
+{{< image-comparer show-labels=true label-before="洋红" label-after="绿色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-negative.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-positive.jpg" >}}

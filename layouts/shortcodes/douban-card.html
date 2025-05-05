@@ -1,5 +1,10 @@
-{{ if not ($.Page.Scratch.Get "douban-card") }}
-<link rel="stylesheet" href="/css/douban-card.css" />
-{{ .Page.Scratch.Add "douban-card" 1 }}
+{{ if not ($.Page.Store.Get "douban-card") }}
+  {{ .Page.Store.Add "douban-card" 1 }}
+  <link rel="stylesheet" type="text/css" href="/css/douban-card.css" />
 {{ end }}
-<div class='douban-card douban-card-{{ .Get "type" | default "book" }}' id='douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}' douban-id='{{ .Get "id" }}'></div>
+
+<div
+  class='douban-card douban-card-{{ .Get "type" | default "book" }}'
+  id='douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}'
+  douban-id='{{ .Get "id" }}'
+></div>

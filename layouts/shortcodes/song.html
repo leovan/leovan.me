@@ -1,8 +1,11 @@
-{{ if not ($.Page.Scratch.Get "aplayer") }}
-  {{ $.Page.Scratch.Set "aplayer" 1 }}
-{{ end }}
-{{ if not ($.Page.Scratch.Get "metingjs") }}
-  {{ $.Page.Scratch.Set "metingjs" 1 }}
+{{ if not ($.Page.Store.Get "song") }}
+  {{ $.Page.Store.Set "song" 1 }}
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
+  <script src="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/meting@{{ $.Site.Params.metingjsVersion }}/dist/Meting.min.js"></script>
+  <script>
+    window.meting_api = "{{ $.Site.Params.metingApi }}";
+  </script>
 {{ end }}
 
 <meting-js
@@ -13,7 +16,7 @@
   {{ with .Get "name" }}name="{{ . }}"{{ end }}
   {{ with .Get "artist" }}artist="{{ . }}"{{ end }}
   {{ with .Get "url" }}url="{{ . }}"{{ end }}
-  {{ with .Get "conver" }}conver="{{ . }}"{{ end }}
+  {{ with .Get "cover" }}cover="{{ . }}"{{ end }}
   {{ with .Get "lrc" }}lrc="{{ . }}"{{ end }}
   {{ with .Get "fixed" }}fixed="{{ . }}"{{ end }}
   {{ with .Get "mini" }}mini="{{ . }}"{{ end }}

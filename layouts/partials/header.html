@@ -14,9 +14,9 @@
     {{ partial "header_custom.html" . }}
   </head>
 
-  {{ $.Page.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
+  {{ $.Page.Store.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
 
-  <body class="{{ if .IsHome }}home{{ else }}{{ $.Page.Scratch.Get "section" }}{{ end }}">
+  <body class="{{ if .IsHome }}home{{ else }}{{ $.Page.Store.Get "section" }}{{ end }}">
   <header class="masthead">
     {{ partial "header_logo.html" . }}
     {{ partial "header_menu.html" . }}

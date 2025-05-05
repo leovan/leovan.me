@@ -167,7 +167,7 @@ $$`
 
 最终 SDR 和 HDR 成像的区别如下图 [^image-source-hdr-sdr] 所示（模拟效果）：
 
-{{< image-compare show-labels=true label-before="SDR" label-after="HDR" image-before="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/sdr.png" image-after="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/hdr.png" >}}
+{{< image-comparer show-labels=true label-before="SDR" label-after="HDR" image-before="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/sdr.png" image-after="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/hdr.png" >}}
 
 [^image-source-hdr-sdr]: <https://kmbcomm.com/demystifying-high-dynamic-range-hdr-wide-color-gamut-wcg/>
 
