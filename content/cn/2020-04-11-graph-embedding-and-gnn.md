@@ -65,7 +65,7 @@ $$`
 
 {{< figure src="/images/cn/2020-04-11-graph-embedding-and-gnn/graph-embedding-vs-graph-neural-networks.png" >}}
 
-{{% admonition type="warn" %}}
+{{% admonition type="tip" title="" %}}
 本文中**图嵌入**和**网络表示学习**均表示 Graph / Network Embedding。
 {{% /admonition %}}
 

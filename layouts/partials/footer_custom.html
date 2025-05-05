@@ -31,8 +31,11 @@
 <script src="/js/toggle-theme.js"></script>
 
 {{ if not .IsHome }}
-<script src="/js/math-code.js"></script>
 <script src="/js/heading-anchor.js"></script>
+{{ end }}
+
+{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+<script src="/js/math-code.js"></script>
 {{ end }}
 
 {{ partial "footer_giscus.html" . }}

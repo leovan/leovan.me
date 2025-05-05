@@ -406,3 +406,8 @@ html .admonition-title:last-child {
 .admonition-content {
   margin: var(--admonition-margin) auto;
 }
+
+.admonition {
+  border-width: 0;
+  border-left-width: 3px;
+}

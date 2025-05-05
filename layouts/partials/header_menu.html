@@ -10,10 +10,7 @@
     {{ range (default .Site.Menus.main (index .Site.Menus $menu)) }}
       <li{{ if eq .URL $currentPage.RelPermalink }} class="active"{{ else if eq .URL "#menu-separator" }} class="menu-separator"{{ end }}>{{ if ne .URL "#menu-separator" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ else }}<span>&nbsp;</span>{{ end }}</li>
     {{ end }}
-    {{ $lang := "cn" }}
-    {{ if (hasPrefix .RelPermalink "/en/") }}
-      {{ $lang = "en" }}
-    {{ end }}
+    {{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
     {{ if and (not .IsHome) (or .Content .Section) }}
       {{ with .Section }}
       <li class="menu-separator"><span>&nbsp;</span></li>

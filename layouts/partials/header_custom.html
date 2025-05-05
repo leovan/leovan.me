@@ -10,7 +10,7 @@
 </script>
 {{ end }}
 
-{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
+{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
 <script>
   MathJax = {
     loader: {
@@ -42,10 +42,10 @@
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
 
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
 {{ end }}
 
-{{ if (and .IsPage (not .Params.disable_donate)) }}
+{{ if and .IsPage (not .Params.disable_donate) }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
 {{ end }}

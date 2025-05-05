@@ -191,7 +191,7 @@ $$`
 
 **有向网络**（directed network）或**有向图**（directed graph）有时简称为 digraph，在这类网络中，每条边都有方向，从一个顶点指向另一个顶点，称之为**有向边**（directed edge）。
 
-{{% admonition title="" %}}
+{{% admonition type="tip" title="" %}}
 有向网络的邻接矩阵中元素 `$A_{ij} = 1$` 时表示存在从顶点 `$j$` 到顶点 `$i$` 的边。虽然表示方法有些出人意料，但在数据计算上会带来极大的方便。
 {{% /admonition %}}
 

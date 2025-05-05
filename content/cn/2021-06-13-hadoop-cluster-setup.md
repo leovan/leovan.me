@@ -357,7 +357,7 @@ mkdir /data/hadoop/hdfs/datanode
 </configuration>
 ```
 
-{{% admonition title="" %}}
+{{% admonition type="tip" title="" %}}
 需要在 vm-02 中将 `yarn.resourcemanager.ha.id` 的值设置为 `rm2`，在 vm-03 中删除 `yarn.resourcemanager.ha.id` 属性。
 {{% /admonition %}}
 

@@ -268,7 +268,7 @@ h6 {
 
 blockquote {
   margin: 1em 0;
-  padding: 0 2em;
+  padding: 0 0.6em;
 }
 
 blockquote p {
@@ -408,18 +408,19 @@ li[role="doc-endnote"] p {
 
 /* links */
 a {
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px dashed;
   line-break: anywhere;
+  text-decoration-line: underline;
+  text-underline-offset: 6px;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
 }
 
 a:hover {
-  border-bottom: none;
+  text-decoration-line: none;
 }
 
 sup a {
-  border-bottom: none;
+  text-decoration-line: none;
 }
 
 /* miscellanea */
@@ -586,7 +587,7 @@ td code {
 .menu li:not([class]) a,
 a:hover,
 .no-border-bottom a {
-  border-bottom: none;
+  text-decoration-line: none;
 }
 
 .theme-toggle {
@@ -755,12 +756,11 @@ footer .adsbygoogle {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  column-gap: 1em;
 }
 
 .term {
-  flex: 1 1 auto;
-  margin: auto 0.6rem 0.6rem 0.6rem;
-  text-align: center;
+  height: 3rem;
 }
 
 .term a {
@@ -941,7 +941,7 @@ p.list-title span {
   body {
     width: auto;
     max-width: 720px;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
   }
 
   h1,
@@ -961,7 +961,7 @@ p.list-title span {
   .masthead {
     width: auto;
     float: none;
-    padding: 1em 0;
+    padding: 1em 0 0 0;
     text-align: center;
     margin: auto 30px;
   }
@@ -987,7 +987,7 @@ p.list-title span {
   .masthead .menu {
     direction: ltr;
     max-width: inherit;
-    margin: 10px auto 0 auto;
+    margin-right: 0;
   }
 
   .masthead .menu ul {
@@ -1005,6 +1005,7 @@ p.list-title span {
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 1em;
   }
 
   .masthead .menu li:first-child {
@@ -1018,20 +1019,15 @@ p.list-title span {
   .masthead .menu a,
   .masthead .menu span {
     display: block;
-    border-bottom: none;
-    display: inline-block;
-    padding: 4px 10px 4px 10px;
+    text-decoration-line: none;
+    padding: 4px 10px 0 10px;
     border-radius: 6px;
     line-height: 28px;
   }
 
-  .masthead .menu span {
-    display: block;
-  }
-
   .masthead .menu span::before {
     background-size: auto 1.2em;
-    vertical-align: middle;
+    vertical-align: text-top;
     line-height: 28px;
   }
 
@@ -1056,7 +1052,6 @@ p.list-title span {
   .masthead .menu li:first-child {
     border: none;
     display: inline-block;
-    margin-bottom: 4px;
   }
 
   .masthead .menu .menu-separator {
@@ -1099,10 +1094,6 @@ p.list-title span {
   h5,
   h6 {
     font-size: 16px;
-  }
-
-  .masthead {
-    padding-top: 0;
   }
 
   .flex {

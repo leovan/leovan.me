@@ -27,7 +27,6 @@ services:
 permalinks:
   cn: "/cn/:year/:month/:slug/"
   en: "/en/:year/:month/:slug/"
-  tech101: "/tech101/:year/:month/:slug/"
 
 taxonomies:
   category: categories
@@ -209,7 +208,7 @@ markup:
     renderer:
       unsafe: true
     parser:
-      autoHeadingIDType: blackfriday
+      autoIDType: blackfriday
   tableOfContents:
     startLevel: 1
     endLevel: 4

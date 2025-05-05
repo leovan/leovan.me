@@ -4,16 +4,16 @@
   let pseudocodeCaptionCount = 0;
   (function(d) {
     d.querySelectorAll(".pseudocode").forEach(function(el) {
-      let pseudocode_options = {
+      let options = {
         indentSize: '{{ $.Site.Params.indentSize | default "1.2em" }}',
         commentDelimiter: '{{ $.Site.Params.commentDelimiter | default "//" }}',
         lineNumber: {{ $.Site.Params.lineNumber | default true }},
         lineNumberPunc: '{{ $.Site.Params.lineNumberPunc | default ":" }}',
         noEnd: {{ $.Site.Params.noEnd | default false }}
       };
-      pseudocode_options.captionCount = pseudocodeCaptionCount;
+      options.captionCount = pseudocodeCaptionCount;
       pseudocodeCaptionCount += 1;
-      pseudocode.renderElement(el, pseudocode_options);
+      pseudocode.renderElement(el, options);
     });
   })(document);
 </script>

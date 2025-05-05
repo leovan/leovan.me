@@ -16,10 +16,7 @@
 <meta property="og:site_name" content="{{ .Site.Params.description | safeHTML }}">
 <meta property="og:url" content="{{ .Permalink }}">
 
-{{ $lang := "cn" }}
-{{ if (eq .Section "en") }}
-{{ $lang = "en" }}
-{{ end }}
+{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
 
 {{ with or .Params.author (index $.Site.Params.lang.author $lang) }}
 <meta name="author" property="article:author" content="{{ . }}">

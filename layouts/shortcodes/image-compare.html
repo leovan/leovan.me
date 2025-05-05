@@ -1,10 +1,10 @@
-{{ if not ($.Page.Store.Get "image-comparer") }}
+{{ if not ($.Page.Store.Get "image-compare") }}
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.css">
-{{ $.Page.Store.Add "image-comparer" 1 }}
+{{ $.Page.Store.Add "image-compare" 1 }}
 {{ end }}
 
 <p>
-  <div class="image-comparer"
+  <div class="image-compare"
     {{ with .Get "control-color" }}data-control-color="{{ . }}"{{ end }}
     {{ with .Get "control-shadow" }}data-control-shadow="{{ . }}"{{ end }}
     {{ with .Get "add-circle" }}data-add-circle="{{ . }}"{{ end }}

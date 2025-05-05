@@ -179,7 +179,7 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-temperature.py" language="python" >}}
 {{% /details %}}
 
-{{< image-comparer show-labels=true label-before="暖色" label-after="冷色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-warm.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-cold.jpg" >}}
+{{< image-compare show-labels=true label-before="暖色" label-after="冷色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-warm.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-temperature-cold.jpg" >}}
 
 # 色调
 
@@ -189,4 +189,4 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-tint.py" language="python" >}}
 {{% /details %}}
 
-{{< image-comparer show-labels=true label-before="洋红" label-after="绿色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-negative.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-positive.jpg" >}}
+{{< image-compare show-labels=true label-before="洋红" label-after="绿色" image-before="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-negative.jpg" image-after="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-color-tint-positive.jpg" >}}

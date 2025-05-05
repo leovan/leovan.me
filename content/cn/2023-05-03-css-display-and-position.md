@@ -204,7 +204,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 该属性用于设置当交叉轴上有额外的空间时容器多行的内部对齐方式，类似 `justify-content` 设置主轴上子元素的对齐方式。
 
-{{% admonition title="" %}}
+{{% admonition type="warning" title="" %}}
 该属性仅对包含多行子元素的容器有效。
 {{% /admonition %}}
 
