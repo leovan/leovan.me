@@ -916,7 +916,7 @@ p.list-title span {
   width: device-width;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
   body {
     width: 1260px;
   }

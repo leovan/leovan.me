@@ -20,7 +20,9 @@
 {{ end }}
 {{ $swiperId := printf "swiper-%d" ($.Page.Store.Get "swiperId") }}
 
-<div class="swiper" id="{{ $swiperId }}">
+{{ $maxWidth := .Get "max-width" | default "100%" }}
+
+<div class="swiper" id="{{ $swiperId }}" style="max-width: {{ $maxWidth }};">
   <div class="swiper-wrapper">
     {{ range $item := $data.items }}
       <div class="swiper-slide">
