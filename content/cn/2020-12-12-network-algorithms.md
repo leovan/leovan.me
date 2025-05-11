@@ -367,12 +367,12 @@ $$`
 
 | 名称                                                         | 语言                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [NetworkX](https://networkx.org/)                            | <i class="icon icon-python">Python</i>                       |
-| [graph-tool](https://graph-tool.skewed.de/)                  | <i class="icon icon-python">Python</i>                       |
-| [SNAP](https://snap.stanford.edu/index.html)                 | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [NetworKit](https://github.com/networkit/networkit)          | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [igraph](https://igraph.org/)                                | <i class="icon icon-c">C</i>, <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i>, <i class="icon icon-r">R</i> |
-| [lightgraphs](https://github.com/JuliaGraphs/LightGraphs.jl) | <i class="icon icon-julia">Julia</i>                         |
+| [NetworkX](https://networkx.org/)                            | <i class="icon icon-python"></i> Python                      |
+| [graph-tool](https://graph-tool.skewed.de/)                  | <i class="icon icon-python"></i> Python                      |
+| [SNAP](https://snap.stanford.edu/index.html)                 | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [NetworKit](https://github.com/networkit/networkit)          | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [igraph](https://igraph.org/)                                | <i class="icon icon-c"></i> C, <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-r"></i> R |
+| [lightgraphs](https://github.com/JuliaGraphs/LightGraphs.jl) | <i class="icon icon-julia"></i> Julia                        |
 
 不同扩展包之间的性能比较如下表所示 [^lin2020benchmark]：
 
@@ -398,10 +398,10 @@ $$`
 
 | 软件                                         | 平台                                                         |
 | -------------------------------------------- | ------------------------------------------------------------ |
-| [Cytoscape](https://cytoscape.org/)          | <i class="icon icon-windows">Windows</i>, <i class="icon icon-macos">macOS</i>, <i class="icon icon-linux">Linux</i> |
-| [Gephi](https://gephi.org/)                  | <i class="icon icon-windows">Windows</i>, <i class="icon icon-macos">macOS</i>, <i class="icon icon-linux">Linux</i> |
-| [Tulip](https://tulip.labri.fr/TulipDrupal/) | <i class="icon icon-windows">Windows</i>, <i class="icon icon-macos">macOS</i>, <i class="icon icon-linux">Linux</i> |
-| [Pajek](http://mrvar.fdv.uni-lj.si/pajek/)   | <i class="icon icon-windows">Windows</i>                     |
+| [Cytoscape](https://cytoscape.org/)          | <i class="icon icon-windows"></i> Windows, <i class="icon icon-macos"></i> macOS, <i class="icon icon-linux"></i> Linux |
+| [Gephi](https://gephi.org/)                  | <i class="icon icon-windows"></i> Windows, <i class="icon icon-macos"></i> macOS, <i class="icon icon-linux"></i> Linux |
+| [Tulip](https://tulip.labri.fr/TulipDrupal/) | <i class="icon icon-windows"></i> Windows, <i class="icon icon-macos"></i> macOS, <i class="icon icon-linux"></i> Linux |
+| [Pajek](http://mrvar.fdv.uni-lj.si/pajek/)   | <i class="icon icon-windows"></i> Windows                    |
 
 不同可视化软件之间的比较如下表所示 [^pavlopoulos2017empirical]：
 

@@ -328,28 +328,28 @@ NSG [^fu2019fast] 提出了一种新的图结构 Monotonic Relative Neighborhood
 
 | 库                                                           | API                                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [spotify/annoy](https://github.com/spotify/annoy)            | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i>, <i class="icon icon-go">Go</i> |
-| [vioshyvo/mrpt](https://github.com/vioshyvo/mrpt)            | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i>, <i class="icon icon-go">[Go](https://github.com/rikonor/go-ann)</i> |
-| [pixelogik/NearPy](https://github.com/pixelogik/NearPy)      | <i class="icon icon-python">Python</i>                       |
-| [aaalgo/kgraph](https://github.com/aaalgo/kgraph)            | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [nmslib/nmslib](https://github.com/nmslib/nmslib)            | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [nmslib/hnswlib](https://github.com/nmslib/hnswlib)          | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [lyst/rpforest](https://github.com/lyst/rpforest)            | <i class="icon icon-python">Python</i>                       |
-| [facebookresearch/faiss](https://github.com/facebookresearch/faiss) | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [ekzhu/datasketch](https://github.com/ekzhu/datasketch)      | <i class="icon icon-python">Python</i>                       |
-| [lmcinnes/pynndescent](https://github.com/lmcinnes/pynndescent) | <i class="icon icon-python">Python</i>                       |
-| [yahoojapan/NGT](https://github.com/yahoojapan/NGT)          | <i class="icon icon-c">C</i>, <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">[Python](https://github.com/yahoojapan/NGT/blob/master/python/README.md)</i>, <i class="icon icon-go">[Go](https://github.com/yahoojapan/gongt)</i>, <i class="icon icon-ruby">[Ruby](https://github.com/ankane/ngt)</i> |
-| [microsoft/SPTAG](https://github.com/microsoft/SPTAG)        | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [puffinn/puffinn](https://github.com/puffinn/puffinn)        | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i> |
-| [kakao/n2](https://github.com/kakao/n2)                      | <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i>, <i class="icon icon-go">Go</i> |
-| [ZJULearning/nsg](https://github.com/ZJULearning/nsg)        | <i class="icon icon-cpp">C++</i>                             |
+| [spotify/annoy](https://github.com/spotify/annoy)            | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> Go |
+| [vioshyvo/mrpt](https://github.com/vioshyvo/mrpt)            | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> [Go](https://github.com/rikonor/go-ann) |
+| [pixelogik/NearPy](https://github.com/pixelogik/NearPy)      | <i class="icon icon-python"></i> Python                      |
+| [aaalgo/kgraph](https://github.com/aaalgo/kgraph)            | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [nmslib/nmslib](https://github.com/nmslib/nmslib)            | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [nmslib/hnswlib](https://github.com/nmslib/hnswlib)          | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [lyst/rpforest](https://github.com/lyst/rpforest)            | <i class="icon icon-python"></i> Python                      |
+| [facebookresearch/faiss](https://github.com/facebookresearch/faiss) | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [ekzhu/datasketch](https://github.com/ekzhu/datasketch)      | <i class="icon icon-python"></i> Python                      |
+| [lmcinnes/pynndescent](https://github.com/lmcinnes/pynndescent) | <i class="icon icon-python"></i> Python                      |
+| [yahoojapan/NGT](https://github.com/yahoojapan/NGT)          | <i class="icon icon-c"></i> C, <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> [Python](https://github.com/yahoojapan/NGT/blob/master/python/README.md), <i class="icon icon-go"></i> [Go](https://github.com/yahoojapan/gongt), <i class="icon icon-ruby"></i> [Ruby](https://github.com/ankane/ngt) |
+| [microsoft/SPTAG](https://github.com/microsoft/SPTAG)        | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [puffinn/puffinn](https://github.com/puffinn/puffinn)        | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python |
+| [kakao/n2](https://github.com/kakao/n2)                      | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> Go |
+| [ZJULearning/nsg](https://github.com/ZJULearning/nsg)        | <i class="icon icon-cpp"></i> C++                            |
 
 ## 开源搜索引擎
 
 | 搜索引擎                                                | API                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------ |
-| [milvus-io/milvus](https://github.com/milvus-io/milvus) | <i class="icon icon-c">C</i>, <i class="icon icon-cpp">C++</i>, <i class="icon icon-python">Python</i>, <i class="icon icon-java">Java</i><br/><i class="icon icon-go">Go</i>, <i class="icon icon-nodejs">Node.js</i>, <i class="icon icon-restful">RESTful API</i> |
-| [vearch/vearch](https://github.com/vearch/vearch)       | <i class="icon icon-python">Python</i>, <i class="icon icon-go">Go</i> |
+| [milvus-io/milvus](https://github.com/milvus-io/milvus) | <i class="icon icon-c"></i> C, <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-java"></i> Java<br/><i class="icon icon-go"></i> Go, <i class="icon icon-nodejs"></i> Node.js, <i class="icon icon-restful"></i> RESTful API |
+| [vearch/vearch](https://github.com/vearch/vearch)       | <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> Go |
 
 ## 评测
 

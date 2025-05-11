@@ -1,13 +1,15 @@
-.material-symbols {
+/* common */
+.material-symbols,
+.icon {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  vertical-align: middle;
   line-height: 1em;
 }
 
-.material-symbols::before {
+.material-symbols::before,
+.icon::before {
   display: inline-block;
   background-size: auto 1em;
   background-repeat: no-repeat;
@@ -17,38 +19,24 @@
   height: 1em;
   line-height: 1em;
   content: "";
+  vertical-align: text-top;
 }
 
-.material-symbols-groups-outline::before {
-  background-image: url("../images/icons/material-symbols/light/groups-outline.svg");
+/* material-symbols icons */
+.material-symbols-award-star-outline::before {
+  background-image: url("../images/icons/material-symbols/light/award-star-outline.svg");
 }
 
-.dark .material-symbols-groups-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/groups-outline.svg");
+.dark .material-symbols-award-star-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/award-star-outline.svg");
 }
 
-.material-symbols-target-outline::before {
-  background-image: url("../images/icons/material-symbols/light/target-outline.svg");
+.material-symbols-dark-mode-outline::before {
+  background-image: url("../images/icons/material-symbols/light/dark-mode-outline.svg");
 }
 
-.dark .material-symbols-target-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/target-outline.svg");
-}
-
-.material-symbols-list-alt-outline::before {
-  background-image: url("../images/icons/material-symbols/light/list-alt-outline.svg");
-}
-
-.dark .material-symbols-list-alt-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/list-alt-outline.svg");
-}
-
-.material-symbols-settings-outline::before {
-  background-image: url("../images/icons/material-symbols/light/settings-outline.svg");
-}
-
-.dark .material-symbols-settings-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/settings-outline.svg");
+.dark .material-symbols-dark-mode-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/dark-mode-outline.svg");
 }
 
 .material-symbols-download-outline::before {
@@ -59,12 +47,28 @@
   background-image: url("../images/icons/material-symbols/dark/download-outline.svg");
 }
 
-.material-symbols-play-outline::before {
-  background-image: url("../images/icons/material-symbols/light/play-outline.svg");
+.material-symbols-groups-outline::before {
+  background-image: url("../images/icons/material-symbols/light/groups-outline.svg");
 }
 
-.dark .material-symbols-play-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/play-outline.svg");
+.dark .material-symbols-groups-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/groups-outline.svg");
+}
+
+.material-symbols-light-mode-outline::before {
+  background-image: url("../images/icons/material-symbols/light/light-mode-outline.svg");
+}
+
+.dark .material-symbols-light-mode-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/light-mode-outline.svg");
+}
+
+.material-symbols-list-alt-outline::before {
+  background-image: url("../images/icons/material-symbols/light/list-alt-outline.svg");
+}
+
+.dark .material-symbols-list-alt-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/list-alt-outline.svg");
 }
 
 .material-symbols-pause-outline::before {
@@ -75,6 +79,14 @@
   background-image: url("../images/icons/material-symbols/dark/pause-outline.svg");
 }
 
+.material-symbols-play-outline::before {
+  background-image: url("../images/icons/material-symbols/light/play-outline.svg");
+}
+
+.dark .material-symbols-play-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/play-outline.svg");
+}
+
 .material-symbols-school-outline::before {
   background-image: url("../images/icons/material-symbols/light/school-outline.svg");
 }
@@ -83,12 +95,12 @@
   background-image: url("../images/icons/material-symbols/dark/school-outline.svg");
 }
 
-.material-symbols-award-star-outline::before {
-  background-image: url("../images/icons/material-symbols/light/award-star-outline.svg");
+.material-symbols-settings-outline::before {
+  background-image: url("../images/icons/material-symbols/light/settings-outline.svg");
 }
 
-.dark .material-symbols-award-star-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/award-star-outline.svg");
+.dark .material-symbols-settings-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/settings-outline.svg");
 }
 
 .material-symbols-skip-next-outline::before {
@@ -107,14 +119,6 @@
   background-image: url("../images/icons/material-symbols/dark/skip-previous-outline.svg");
 }
 
-.material-symbols-star-outline::before {
-  background-image: url("../images/icons/material-symbols/light/star-outline.svg");
-}
-
-.dark .material-symbols-star-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/star-outline.svg");
-}
-
 .material-symbols-star-fill::before {
   background-image: url("../images/icons/material-symbols/light/star-fill.svg");
 }
@@ -123,46 +127,25 @@
   background-image: url("../images/icons/material-symbols/dark/star-fill.svg");
 }
 
-.material-symbols-dark-mode-outline::before {
-  background-image: url("../images/icons/material-symbols/light/dark-mode-outline.svg");
+.material-symbols-star-outline::before {
+  background-image: url("../images/icons/material-symbols/light/star-outline.svg");
 }
 
-.dark .material-symbols-dark-mode-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/dark-mode-outline.svg");
+.dark .material-symbols-star-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/star-outline.svg");
 }
 
-.material-symbols-light-mode-outline::before {
-  background-image: url("../images/icons/material-symbols/light/light-mode-outline.svg");
+.material-symbols-target-outline::before {
+  background-image: url("../images/icons/material-symbols/light/target-outline.svg");
 }
 
-.dark .material-symbols-light-mode-outline::before {
-  background-image: url("../images/icons/material-symbols/dark/light-mode-outline.svg");
+.dark .material-symbols-target-outline::before {
+  background-image: url("../images/icons/material-symbols/dark/target-outline.svg");
 }
 
 /* custom icons */
-.icon {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1em;
-}
-
-.icon::before {
-  display: inline-block;
-  background-size: auto 1em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 1em;
-  height: 1em;
-  line-height: 1em;
-  content: "";
-  margin-right: 4px;
-  vertical-align: bottom;
-}
 
 .icon-adobe::before {
-  width: 1.2em;
   background-image: url("../images/icons/custom/adobe.svg");
 }
 
@@ -171,13 +154,11 @@
 }
 
 .icon-alibaba::before {
-  width: 2em;
   background-image: url("../images/icons/custom/alibaba.svg");
 }
 
-.icon-ant-group::before {
-  width: 0.8em;
-  background-image: url("../images/icons/custom/ant-group.svg");
+.icon-alipay::before {
+  background-image: url("../images/icons/custom/alipay.svg");
 }
 
 .icon-apple::before {
@@ -205,8 +186,6 @@
 }
 
 .icon-go::before {
-  width: 2.2em;
-  background-size: auto 0.8em;
   background-image: url("../images/icons/custom/go.svg");
 }
 
@@ -215,7 +194,6 @@
 }
 
 .icon-ibm::before {
-  width: 2.5em;
   background-image: url("../images/icons/custom/ibm.svg");
 }
 
@@ -228,7 +206,6 @@
 }
 
 .icon-julia::before {
-  width: 1.6em;
   background-image: url("../images/icons/custom/julia.svg");
 }
 
@@ -253,12 +230,10 @@
 }
 
 .icon-nodejs::before {
-  width: 1.6em;
   background-image: url("../images/icons/custom/nodejs.svg");
 }
 
 .icon-paddlepaddle::before {
-  width: 1.85em;
   background-image: url("../images/icons/custom/paddlepaddle.png");
 }
 
@@ -271,25 +246,18 @@
 }
 
 .icon-qq::before {
-  width: 0.8em;
   background-image: url("../images/icons/custom/qq.svg");
 }
 
 .icon-qt::before {
-  width: 1.2em;
-  background-size: auto 0.8em;
   background-image: url("../images/icons/custom/qt.svg");
 }
 
 .icon-r::before {
-  width: 1.1em;
-  background-size: auto 0.8em;
   background-image: url("../images/icons/custom/r.svg");
 }
 
 .icon-react::before {
-  width: 1.2em;
-  background-size: auto 0.9em;
   background-image: url("../images/icons/custom/react.svg");
 }
 
@@ -298,8 +266,6 @@
 }
 
 .icon-ruby::before {
-  width: 0.8em;
-  background-size: auto 0.8em;
   background-image: url("../images/icons/custom/ruby.svg");
 }
 
@@ -308,7 +274,6 @@
 }
 
 .icon-salesforce::before {
-  width: 1.5em;
   background-image: url("../images/icons/custom/salesforce.svg");
 }
 
@@ -333,7 +298,6 @@
 }
 
 .icon-wechat::before {
-  width: 1.2em;
   background-image: url("../images/icons/custom/wechat.svg");
 }
 

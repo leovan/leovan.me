@@ -367,21 +367,21 @@ Alibaba Fusion Design 希望构建一套提升设计与开发之间 UI 构建效
 
 # 设计语言列表
 
-| 企业      | 设计语言                                                     |
-| ---------- | ------------------------------------------------------------ |
-| <i class="icon icon-apple">Apple</i>      | [Human Interface Guidelines](https://developer.apple.com/design/) |
-| <i class="icon icon-google">Google</i> | [Material Design](https://material.io/design)                |
-| <i class="icon icon-microsoft">Microsoft</i> | [Fluent Design](https://www.microsoft.com/design/fluent)     |
-| <i class="icon icon-facebook">Facebook</i>   | [Facebook Design](https://design.facebook.com/)              |
-| <i class="icon icon-adobe">Adobe</i>      | [Spectrum](https://spectrum.adobe.com/)                      |
-| <i class="icon icon-firefox">Firefox</i>    | [Photon Design](https://design.firefox.com/photon)           |
-| <i class="icon icon-ibm">IBM</i>        | [Carbon Design System](https://www.carbondesignsystem.com/)  |
-| <i class="icon icon-airbnb">Airbnb</i>     | [Lottie](https://airbnb.design/lottie/)                      |
-| <i class="icon icon-salesforce">Salesforce</i> | [Lightning Design System](https://www.lightningdesignsystem.com/) |
-| <i class="icon icon-ant-group">蚂蚁金服</i>   | [Ant Design](https://ant.design/)                            |
-| <i class="icon icon-alibaba">阿里巴巴</i>   | [Fusion Design](https://fusion.design/)                     |
-| <i class="icon icon-wechat">腾讯</i>       | [WeUI](https://weui.io/)                                     |
-| <i class="icon icon-qq">腾讯</i>       | [Q Design](https://qq.design/)                               |
+| 企业     | 设计语言                                                     |
+| ---------- | :----------------------------------------------------------- |
+| <i class="icon icon-apple"></i> Apple           | [Human Interface Guidelines](https://developer.apple.com/design/) |
+| <i class="icon icon-google"></i> Google         | [Material Design](https://material.io/design)                |
+| <i class="icon icon-microsoft"></i> Microsoft   | [Fluent Design](https://www.microsoft.com/design/fluent)     |
+| <i class="icon icon-facebook"></i> Facebook     | [Facebook Design](https://design.facebook.com/)              |
+| <i class="icon icon-adobe"></i> Adobe           | [Spectrum](https://spectrum.adobe.com/)                      |
+| <i class="icon icon-firefox"></i> Firefox       | [Photon Design](https://design.firefox.com/photon)           |
+| <i class="icon icon-ibm"></i> IBM               | [Carbon Design System](https://www.carbondesignsystem.com/)  |
+| <i class="icon icon-airbnb"></i> Airbnb         | [Lottie](https://airbnb.design/lottie/)                      |
+| <i class="icon icon-salesforce"></i> Salesforce | [Lightning Design System](https://www.lightningdesignsystem.com/) |
+| <i class="icon icon-alipay"></i> 蚂蚁金服       | [Ant Design](https://ant.design/)                            |
+| <i class="icon icon-alibaba"></i> 阿里巴巴      | [Fusion Design](https://fusion.design/)                      |
+| <i class="icon icon-wechat"></i> 腾讯           | [WeUI](https://weui.io/)                                     |
+| <i class="icon icon-qq"></i> 腾讯               | [Q Design](https://qq.design/)                               |
 
 [^design-language-wikipedia]: https://en.wikipedia.org/wiki/Design_language
 

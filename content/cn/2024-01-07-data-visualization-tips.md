@@ -52,13 +52,13 @@ images:
 
 | 企业      | 数据可视化规范                                      |
 | ---------- | ------------------------------------------------------------ |
-| <i class="icon icon-apple">Apple</i>      | [Human Interface Guidelines - Charts](https://developer.apple.com/design/human-interface-guidelines/charts) |
-| <i class="icon icon-google">Google</i> | [Material Design - Data Visualization](https://m2.material.io/design/communication/data-visualization.html)                |
-| <i class="icon icon-microsoft">Microsoft</i> | [Data visualization style guidelines for Office Add-ins](https://learn.microsoft.com/en-us/office/dev/add-ins/design/data-visualization-guidelines)     |
-| <i class="icon icon-adobe">Adobe</i>      | [Spectrum - Data Visualization](https://spectrum.adobe.com/page/data-visualization-fundamentals/)                      |
-| <i class="icon icon-ibm">IBM</i>        | [Carbon Design System - Data Visualization](https://carbondesignsystem.com/data-visualization/getting-started/)  |
-| <i class="icon icon-salesforce">Salesforce</i> | [Lightning Design System - Data Visualization](https://www.lightningdesignsystem.com/guidelines/data-visualization/charts/) |
-| <i class="icon icon-ant-group">蚂蚁金服</i>  | [Ant Vision](https://antv.antgroup.com/specification/principles/basic)                            |
+| <i class="icon icon-apple"></i> Apple           | [Human Interface Guidelines - Charts](https://developer.apple.com/design/human-interface-guidelines/charts) |
+| <i class="icon icon-google"></i> Google         | [Material Design - Data Visualization](https://m2.material.io/design/communication/data-visualization.html) |
+| <i class="icon icon-microsoft"></i> Microsoft   | [Data visualization style guidelines for Office Add-ins](https://learn.microsoft.com/en-us/office/dev/add-ins/design/data-visualization-guidelines) |
+| <i class="icon icon-adobe"></i>  Adobe          | [Spectrum - Data Visualization](https://spectrum.adobe.com/page/data-visualization-fundamentals/) |
+| <i class="icon icon-ibm"></i> IBM               | [Carbon Design System - Data Visualization](https://carbondesignsystem.com/data-visualization/getting-started/) |
+| <i class="icon icon-salesforce"></i> Salesforce | [Lightning Design System - Data Visualization](https://www.lightningdesignsystem.com/guidelines/data-visualization/charts/) |
+| <i class="icon icon-alipay"></i> 蚂蚁金服       | [Ant Vision](https://antv.antgroup.com/specification/principles/basic) |
 
 各家的设计理念有所不同，但我相信其目标是一致的，就是让用户可以更好更快地理解数据并从数据中获取洞见。上面的大多数数据可视化规范依旧是以面向产品设计为主，不过我认为大部分理念是可以迁移到文档中的可视化，尤其是 HTML 格式的动态文档。
 
@@ -79,14 +79,14 @@ Apple、Google、Microsoft 三大家的规范在自家系统的平台上针对**
 
 | 扩展包                                              | JS/TS | Python                  | R             | 统计图 | 地图 | 关系图 |
 | --------------------------------------------------- | ----- | ----------------------- | ------------- | ------ | ---- | ------ |
-| [Ant Vision](https://github.com/antvis)             | ✅     | ❌                       | ⛔️[^g2r]       | ✅      | ✅    | ✅      |
-| [ECharts](https://echarts.apache.org/zh/index.html) | ✅     | ☑️[^pyecharts]           | ☑️[^echarts4r] | ✅      | ✅    | ✅      |
-| [Plotly](https://plotly.com/)                       | ✅     | ✅                       | ✅             | ✅      | ✅    | ✅      |
-| [D3](https://d3js.org/)                             | ✅     | ☑️[^d3blocks] [^d3graph] | ☑️[^r2d3]      | ✅      | ✅    | ✅      |
-| [Matplotlib](https://matplotlib.org/)               | ❌     | ✅                       | ❌             | ✅      | ✅    | ✅      |
-| [seaborn](https://seaborn.pydata.org/)              | ❌     | ✅                       | ❌             | ✅      | ❌    | ❌      |
-| [plotnine](https://plotnine.readthedocs.io/)        | ❌     | ✅                       | ❌             | ✅      | ✅    | ❌      |
-| [ggplot2](https://ggplot2.tidyverse.org/)           | ❌     | ❌                       | ✅             | ✅      | ✅    | ✅      |
+| [Ant Vision](https://github.com/antvis)             | ✅     | ❌                        | ⛔️ [^g2r]       | ✅      | ✅    | ✅      |
+| [ECharts](https://echarts.apache.org/zh/index.html) | ✅     | ☑️ [^pyecharts]           | ☑️ [^echarts4r] | ✅      | ✅    | ✅      |
+| [Plotly](https://plotly.com/)                       | ✅     | ✅                        | ✅              | ✅      | ✅    | ✅      |
+| [D3](https://d3js.org/)                             | ✅     | ☑️ [^d3blocks] [^d3graph] | ☑️ [^r2d3]      | ✅      | ✅    | ✅      |
+| [Matplotlib](https://matplotlib.org/)               | ❌     | ✅                        | ❌              | ✅      | ✅    | ✅      |
+| [seaborn](https://seaborn.pydata.org/)              | ❌     | ✅                        | ❌              | ✅      | ❌    | ❌      |
+| [plotnine](https://plotnine.readthedocs.io/)        | ❌     | ✅                        | ❌              | ✅      | ✅    | ❌      |
+| [ggplot2](https://ggplot2.tidyverse.org/)           | ❌     | ❌                        | ✅              | ✅      | ✅    | ✅      |
 
 [^g2r]: 由第三方 [g2r](https://github.com/devOpifex/g2r) 提供 G2 部分支持，已停止更新。
 
@@ -123,16 +123,16 @@ Apple、Google、Microsoft 三大家的规范在自家系统的平台上针对**
 
 | 扩展包                                              | JS/TS                                                        | Python                                                       | R                                                            |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Ant Vision](https://github.com/antvis)             | ☑️[详情](https://g2.antv.antgroup.com/theme)                  | -                                                            | -                                                            |
-| [ECharts](https://echarts.apache.org/zh/index.html) | ☑️[详情](https://echarts.apache.org/handbook/zh/concepts/style) | ☑️[详情](https://pyecharts.org/#/zh-cn/themes)                | ☑️[详情](https://echarts4r.john-coene.com/articles/themes)    |
-| [Plotly](https://plotly.com/)                       | ☑️[详情](https://plotly.com/javascript/layout-template/)      | ✅[详情](https://plotly.com/python/templates/)                | ☑️[详情](https://plotly.com/r/styling-figures/)，✅复用 ggplot2 |
-| [D3](https://d3js.org/)                             | ❌[详情](https://d3-graph-gallery.com/custom.html)            | ❌                                                            | ❌                                                            |
-| [Matplotlib](https://matplotlib.org/)               | -                                                            | ✅[详情](https://matplotlib.org/stable/users/explain/customizing.html) | -                                                            |
-| [seaborn](https://seaborn.pydata.org/)              | -                                                            | ✅复用 Matplotlib                                             | -                                                            |
-| [plotnine](https://plotnine.readthedocs.io/)        | -                                                            | ✅[详情](https://plotnine.readthedocs.io/en/latest/api.html#theme-helper-functions-and-classes) | -                                                            |
-| [ggplot2](https://ggplot2.tidyverse.org/)           | -                                                            | -                                                            | ✅[详情](https://ggplot2.tidyverse.org/reference/index.html#themes) |
+| [Ant Vision](https://github.com/antvis)             | ☑️ [详情](https://g2.antv.antgroup.com/theme)                 | -                                                            | -                                                            |
+| [ECharts](https://echarts.apache.org/zh/index.html) | ☑️ [详情](https://echarts.apache.org/handbook/zh/concepts/style) | ☑️ [详情](https://pyecharts.org/#/zh-cn/themes)               | ☑️ [详情](https://echarts4r.john-coene.com/articles/themes)   |
+| [Plotly](https://plotly.com/)                       | ☑️ [详情](https://plotly.com/javascript/layout-template/)     | ✅ [详情](https://plotly.com/python/templates/)               | ☑️ [详情](https://plotly.com/r/styling-figures/)，✅ 复用 ggplot2 |
+| [D3](https://d3js.org/)                             | ❌ [详情](https://d3-graph-gallery.com/custom.html)           | ❌                                                            | ❌                                                            |
+| [Matplotlib](https://matplotlib.org/)               | -                                                            | ✅ [详情](https://matplotlib.org/stable/users/explain/customizing.html) | -                                                            |
+| [seaborn](https://seaborn.pydata.org/)              | -                                                            | ✅ 复用 Matplotlib                                            | -                                                            |
+| [plotnine](https://plotnine.readthedocs.io/)        | -                                                            | ✅ [详情](https://plotnine.readthedocs.io/en/latest/api.html#theme-helper-functions-and-classes) | -                                                            |
+| [ggplot2](https://ggplot2.tidyverse.org/)           | -                                                            | -                                                            | ✅ [详情](https://ggplot2.tidyverse.org/reference/index.html#themes) |
 
-其中，✅表示支持自定义样式，且支持修改全局默认样式；☑️表示支持自定义样式，不支持修改全局默认样式，但支持通过函数一次性设置自定义样式；❌表示支持自定义样式，但需要每次手动配置所有样式细节。
+其中，✅ 表示支持自定义样式，且支持修改全局默认样式；☑️ 表示支持自定义样式，不支持修改全局默认样式，但支持通过函数一次性设置自定义样式；❌ 表示支持自定义样式，但需要每次手动配置所有样式细节。
 
 ## 布局
 

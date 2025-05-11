@@ -16,22 +16,22 @@ disable_highlight: true
 
 # Fan Yeliang (Leo Van)
 
-# <span class="material-symbols material-symbols-target-outline"></span> Research Interest
+# <i class="material-symbols material-symbols-target-outline"></i> Research Interest
 
 - I am working on application of **data science** in **security and risk**.
 - Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
-# <span class="material-symbols material-symbols-school-outline"></span> Education
+# <i class="material-symbols material-symbols-school-outline"></i> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
 - 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
-# <span class="material-symbols material-symbols-groups-outline"></span> Work Experiences
+# <i class="material-symbols material-symbols-groups-outline"></i> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
-# <span class="material-symbols material-symbols-list-alt-outline"></span> Project Experiences
+# <i class="material-symbols material-symbols-list-alt-outline"></i> Project Experiences
 
 ## Security & Risk
 
@@ -78,26 +78,26 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-# <span class="material-symbols material-symbols-settings-outline"></span> Skills
+# <i class="material-symbols material-symbols-settings-outline"></i> Skills
 
 ## Programing Languages
 
-- <i class="icon icon-python">Python</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-r">R</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-javascript">JavaScript</i> / <i class="icon icon-typescript">TypeScript</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-rust">Rust</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- <i class="icon icon-python"></i> Python: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-r"></i> R: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
 
 ## Frameworks
 
-- <i class="icon icon-pytorch">PyTorch</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-spark">Spark</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
-- <i class="icon icon-qt">Qt</i>: <span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-fill"></span><span class="material-symbols material-symbols-star-outline"></span><span class="material-symbols material-symbols-star-outline"></span>
+- <i class="icon icon-pytorch"></i> PyTorch: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-spark"></i> Spark: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-qt"></i> Qt: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-react"></i> React: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
 
 ## Foreign Languages
 
 - English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
-# <span class="material-symbols material-symbols-award-star-outline"></span> Research Achievements
+# <i class="material-symbols material-symbols-award-star-outline"></i> Research Achievements
 
 ## Papers
 
@@ -131,6 +131,6 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 11. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 12. [Rasa Pro Doc](https://rasa-pro.leovan.tech): Rasa Pro document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <span class="material-symbols material-symbols-download-outline"></span></a></h2>
+<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-symbols material-symbols-download-outline"></i></a></h2>
 
 <p style="text-align: right;">Updated on: 2025-02-16</p>
