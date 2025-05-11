@@ -19,9 +19,9 @@
     {{- if or (.Get "alt") $caption }}
     alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify| plainify }}{{ end }}"
     {{- end -}}
-    data-large-max-width="{{ or (.Get "large-max-width") (.Get "middle-max-width") | default "100%" }}"
-    data-middle-max-width="{{ .Get "middle-max-width" | default "100%" }}"
-    data-small-max-width="{{ .Get "small-max-width" | default "100%" }}"
+    {{- with .Get "large-max-width" | default "100%" -}}data-large-max-width="{{ . }}"{{- end -}}
+    {{- with .Get "middle-max-width" | default "100%" -}}data-middle-max-width="{{ . }}"{{- end -}}
+    {{- with .Get "small-max-width" | default "100%" -}}data-small-max-width="{{ . }}"{{- end -}}
   />
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or $caption (.Get "attr") -}}

@@ -9,7 +9,7 @@
 {{ end }}
 
 <meting-js
-  {{ with .Get "id" }}id="{{ . }}"{{ end }}
+  id="{{ .Get "id" }}"
   {{ with .Get "server" }}server="{{ . }}"{{ end }}
   {{ with .Get "type" }}type="{{ . }}"{{ end }}
   {{ with .Get "auto" }}auto="{{ . }}"{{ end }}

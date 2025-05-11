@@ -1,4 +1,5 @@
-{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
 {{ if (not .Params.disable_donate) }}
 <div class="donate">
   <div class="donate-header"></div>

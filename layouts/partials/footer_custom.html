@@ -11,7 +11,7 @@
 </nav>
 {{ end }}
 
-{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content)}}
+{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
 {{ with $.Site.Params.googleAdsense }}
 <ins
   class="adsbygoogle"

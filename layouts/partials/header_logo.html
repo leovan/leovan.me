@@ -1,3 +1,4 @@
-{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
 <div class="logo"></div>
 <p class="slogan">{{ index $.Site.Params.lang.slogan $lang }}</p>

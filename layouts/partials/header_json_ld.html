@@ -1,4 +1,5 @@
-{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
 {{ if .IsPage }}
 <script type="application/ld+json">
   {

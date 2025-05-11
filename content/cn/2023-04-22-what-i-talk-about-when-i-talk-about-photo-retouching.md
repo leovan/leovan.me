@@ -104,7 +104,7 @@ HSL 和 HSV 都是一种将 RGB 色彩模型中的点在圆柱坐标系中的表
 
 明度值是与同样亮的白色物体相比，某物的亮的程度。如果我们拍摄一张图像，提取图像色相、饱和度和明度值，然后将它们与不同色彩空间的明度值进行比较，可以迅速地从视觉上得出差异。如下图所示，HSV 色彩空间中的 V 值和 HSL 色彩空间中的 L 值与感知明度值明显不同：
 
-{{% flex %}}
+{{< flex >}}
 
 {{% flex-item %}}
 {{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather.jpg" title="原始图片" %}}
@@ -118,7 +118,7 @@ HSL 和 HSV 都是一种将 RGB 色彩模型中的点在圆柱坐标系中的表
 {{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather-hsv-v.jpg" title="HSV 中的 V" %}}
 {{% /flex-item %}}
 
-{{% /flex %}}
+{{< /flex >}}
 
 ### 差异
 
