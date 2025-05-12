@@ -6,6 +6,7 @@
   font-variant: normal;
   text-rendering: auto;
   line-height: 1em;
+  vertical-align: text-top;
 }
 
 .material-symbols::before,
