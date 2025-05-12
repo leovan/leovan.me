@@ -165,6 +165,10 @@
   background-image: url("../images/icons/custom/apple.svg");
 }
 
+.icon-bilibili::before {
+  background-image: url("../images/icons/custom/bilibili.svg");
+}
+
 .icon-c::before {
   background-image: url("../images/icons/custom/c.svg");
 }
@@ -303,4 +307,8 @@
 
 .icon-windows::before {
   background-image: url("../images/icons/custom/windows.svg");
+}
+
+.icon-youtube::before {
+  background-image: url("../images/icons/custom/youtube.svg");
 }
