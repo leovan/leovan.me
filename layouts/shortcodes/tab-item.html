@@ -1,0 +1,8 @@
+{{ $label := .Get "label" }}
+{{ if not (.Parent.Store.Get "tab-items") }}
+  {{ .Parent.Store.Set "tab-items" slice }}
+{{ end }}
+
+{{ with .Inner }}
+  {{ $.Parent.Store.Add "tab-items" (dict "label" $label "content" . ) }}
+{{ end }}
