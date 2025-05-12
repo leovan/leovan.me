@@ -55,6 +55,14 @@ img {
 
   --code-button-copy-default: #00000012;
   --code-button-copy-area-hover: #707070;
+
+  --button-background: var(--code-background);
+  --button-background-hover: rgb(from var(--button-background) r g b / 80%);
+  --button-background-active: rgb(from var(--button-background) r g b / 60%);
+  --button-border: var(--block-border);
+  --button-border-hover: rgb(from var(--button-border) r g b / 80%);
+  --button-border-active: rgb(from var(--button-border) r g b / 60%);
+  --button-color: var(--body-foreground);
 }
 
 .dark {
@@ -909,6 +917,26 @@ p.list-title {
 
 p.list-title span {
   margin-right: 0.2em;
+}
+
+button {
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--button-color);
+  text-decoration: none;
+  background-color: var(--button-background);
+  border: 1px solid var(--button-border);
+}
+
+button:hover {
+  background-color: var(--button-background-hover);
+  border: 1px solid var(--button-border-hover);
+}
+
+button:active {
+  background-color: var(--button-background-active);
+  border: 1px solid var(--button-border-active);
 }
 
 /* different size screens */
