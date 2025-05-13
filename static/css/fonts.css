@@ -9,7 +9,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
-button, code {
+button:not([class]), code {
   font-family: Iosevka, "Iosevka Nerd", "Sarasa Mono", "Sarasa Mono SC",
     "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono",
     "Ubuntu Mono", "Source Han Mono SC", "Source Han Mono TC", "Source Han Mono",

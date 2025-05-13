@@ -5,8 +5,7 @@
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1em;
-  vertical-align: text-top;
+  vertical-align: middle;
 }
 
 .material-symbols::before,
@@ -18,9 +17,7 @@
   font-size: inherit;
   width: 1em;
   height: 1em;
-  line-height: 1em;
   content: "";
-  vertical-align: text-top;
 }
 
 /* material-symbols icons */

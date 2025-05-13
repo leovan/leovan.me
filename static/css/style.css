@@ -133,6 +133,26 @@ tr:nth-child(even) {
   background: var(--block-background);
 }
 
+button:not([class]) {
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--button-color);
+  text-decoration: none;
+  background-color: var(--button-background);
+  border: 1px solid var(--button-border);
+}
+
+button:not([class]):hover {
+  background-color: var(--button-background-hover);
+  border: 1px solid var(--button-border-hover);
+}
+
+button:not([class]):active {
+  background-color: var(--button-background-active);
+  border: 1px solid var(--button-border-active);
+}
+
 .ps-root .ps-algorithm {
   border-top: 1px solid var(--block-border) !important;
   border-bottom: 1px solid var(--block-border) !important;
@@ -221,8 +241,9 @@ code:before {
 
   .masthead .menu a,
   .masthead .menu span {
-    color: var(--body-background);
+    border: 1px solid var(--block-border);
     background: var(--block-border);
+    color: var(--body-background);
   }
 
   .masthead .menu .active a {
@@ -919,26 +940,6 @@ p.list-title span {
   margin-right: 0.2em;
 }
 
-button {
-  padding: 2px 4px;
-  border-radius: 4px;
-  cursor: pointer;
-  color: var(--button-color);
-  text-decoration: none;
-  background-color: var(--button-background);
-  border: 1px solid var(--button-border);
-}
-
-button:hover {
-  background-color: var(--button-background-hover);
-  border: 1px solid var(--button-border-hover);
-}
-
-button:active {
-  background-color: var(--button-background-active);
-  border: 1px solid var(--button-border-active);
-}
-
 /* different size screens */
 @viewport {
   width: device-width;
@@ -1048,15 +1049,15 @@ button:active {
   .masthead .menu span {
     display: block;
     text-decoration-line: none;
-    padding: 4px 10px 0 10px;
+    padding: 0.1em 0.6em;
     border-radius: 6px;
-    line-height: 28px;
+    line-height: 2em;
   }
 
   .masthead .menu span::before {
+    content: "";
     background-size: auto 1.2em;
-    vertical-align: text-top;
-    line-height: 28px;
+    line-height: 2em;
   }
 
   .masthead .menu .active a {
