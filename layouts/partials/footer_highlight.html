@@ -1,4 +1,4 @@
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+{{- if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
 <script src="//cdn.jsdelivr.net/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
 <script>
   function createCodeCopyButton(el) {
@@ -83,4 +83,4 @@
     });
   })();
 </script>
-{{ end }}
+{{- end }}

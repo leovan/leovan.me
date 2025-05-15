@@ -86,7 +86,7 @@ $$`
 
 HSL 和 HSV 都是一种将 RGB 色彩模型中的点在圆柱坐标系中的表示法。这两种表示法试图做到比基于笛卡尔坐标系的几何结构 RGB 更加直观。HSL 即色相、饱和度、亮度（Hue，Saturation，Lightness），HSV 即色相、饱和度、明度（Hue，Saturation，Value），又称 HSB，其中 B 为 Brightness。另种色彩空间定义如下图所示：
 
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/hsl-hsv.png" title="HSL 和 HSV 色彩空间" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/hsl-hsv.png" title="HSL 和 HSV 色彩空间" >}}
 
 ### 色相
 
@@ -107,15 +107,15 @@ HSL 和 HSV 都是一种将 RGB 色彩模型中的点在圆柱坐标系中的表
 {{< flex >}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather.jpg" title="原始图片" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather.jpg" title="原始图片" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather-hsl-l.jpg" title="HSL 中的 L" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather-hsl-l.jpg" title="HSL 中的 L" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather-hsv-v.jpg" title="HSV 中的 V" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/fire-breather-hsv-v.jpg" title="HSV 中的 V" >}}
 {{% /flex-item %}}
 
 {{< /flex >}}
@@ -136,11 +136,11 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 {{% flex justify-content="space-around" %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-photoshop.png" title="Photoshop 拾色器（HSV）" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-photoshop.png" title="Photoshop 拾色器（HSV）" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-affinityphoto.png" title="Afiinity Photo 拾色器（HSL）" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-affinityphoto.png" title="Afiinity Photo 拾色器（HSL）" >}}
 {{% /flex-item %}}
 
 {{% /flex %}}
@@ -151,11 +151,11 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 
 图像直方图是反映图像**色彩亮度**的直方图，其中 $x$ 轴表示亮度值，$y$ 轴表示图像中该亮度值像素点的个数。以 $8$ 位图像为例，亮度的取值范围为 $\left[0, 2^8-1\right]$，即 $\left[0, 255\right]$。以如下图片为例（原始图片：[链接](/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo.jpg)）：
 
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-small.jpg" title="原始图片" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-small.jpg" title="原始图片" >}}
 
 在 Lightroom 中直方图如下所示：
 
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-lightroom-image-histgram.png" title="原始图片 Lightroom 直方图" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-lightroom-image-histgram.png" title="原始图片 Lightroom 直方图" >}}
 
 利用 Python 绘制的直方图如下所示：
 
@@ -163,7 +163,7 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 {{< include-code file="/static/codes/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-histgram.py" language="python" >}}
 {{% /details %}}
 
-{{% figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-image-histgram.png" title="原始图片直方图" %}}
+{{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/demo-image-histgram.png" title="原始图片直方图" >}}
 
 直方图以 $28, 85, 170, 227$ 为分界线可以划分为**黑色**、**阴影**、**曝光**、**高光**、**白色**共 5 个区域。其中曝光区域以适中的亮度保留了图片最多的细节，阴影和高光对应了照片中较暗和较亮的区域，黑色和白色两个部分则几乎没有任何细节。当整个直方图**过于偏左**时表示**欠曝**，**过于偏右**时则表示**过曝**。
 

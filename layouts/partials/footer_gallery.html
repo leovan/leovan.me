@@ -1,4 +1,4 @@
-{{ if $.Page.Store.Get "gallery" }}
+{{- if $.Page.Store.Get "gallery" }}
 <script src="//cdn.jsdelivr.net/npm/jquery@{{ $.Site.Params.jQueryVersion }}/dist/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/js/jquery.justifiedGallery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/lightgallery.min.js"></script>
@@ -79,4 +79,4 @@
     });
   });
 </script>
-{{ end }}
+{{- end }}

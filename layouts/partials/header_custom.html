@@ -1,4 +1,4 @@
-{{ with .Site.Config.Services.GoogleAnalytics.ID }}
+{{- with .Site.Config.Services.GoogleAnalytics.ID }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   if (window.location.hostname == "leovan.me") {
@@ -8,9 +8,9 @@
     gtag('config', '{{ . }}');
   }
 </script>
-{{ end }}
+{{- end }}
 
-{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+{{- if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
 <script>
   MathJax = {
     loader: {
@@ -29,23 +29,23 @@
   };
 </script>
 <script src="//cdn.jsdelivr.net/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/es5/tex-chtml.js" crossorigin></script>
-{{ end }}
+{{- end }}
 
-{{ if and (and (and (not .Params.disable_adsense) (ne .Kind "404")) (not .IsHome)) .Content }}
-{{ with $.Site.Params.googleAdsense }}
+{{- if and (and (and (not .Params.disable_adsense) (ne .Kind "404")) (not .IsHome)) .Content }}
+{{- with $.Site.Params.googleAdsense }}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
-{{ end }}
-{{ end }}
+{{- end }}
+{{- end }}
 
 <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/fonts.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
 
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
+{{- if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
-{{ end }}
+{{- end }}
 
-{{ if and .IsPage (not .Params.disable_donate) }}
+{{- if and .IsPage (not .Params.disable_donate) }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
-{{ end }}
+{{- end }}

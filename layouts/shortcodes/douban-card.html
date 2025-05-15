@@ -1,7 +1,7 @@
-{{ if not ($.Page.Store.Get "douban-card") }}
-  {{ .Page.Store.Add "douban-card" 1 }}
+{{- if not ($.Page.Store.Get "douban-card") }}
+  {{- .Page.Store.Add "douban-card" 1 }}
   <link rel="stylesheet" type="text/css" href="/css/douban-card.css" />
-{{ end }}
+{{- end }}
 
 <div
   class='douban-card douban-card-{{ .Get "type" | default "book" }}'

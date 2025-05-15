@@ -76,9 +76,10 @@
   {{- end }}
   {{- $referrerpolicy := "strict-origin-when-cross-origin" }}
 
+  {{- /* Render. */}}
   <div
     {{- with $class }} class="{{ . }}" {{- end }}
-    {{- with $divStyle }} style="{{ . | safeCSS }}" {{- end -}}
+    {{- with $divStyle }} style="{{ . | safeCSS }}" {{- end }}
   >
     <iframe
       {{- with $iframeAllowList }} allow="{{ . }}" {{- end }}
@@ -86,7 +87,7 @@
       {{- with $referrerpolicy }} referrerpolicy="{{ . }}" {{- end }}
       {{- with $src }} src="{{ . }}" {{- end }}
       {{- with $iframeStyle}} style="{{ . | safeCSS }}" {{- end }}
-      {{- with $title }} title="{{ . }}" {{- end -}}
+      {{- with $title }} title="{{ . }}" {{- end }}
     ></iframe>
   </div>
 {{- end }}

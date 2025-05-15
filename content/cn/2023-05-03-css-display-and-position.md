@@ -80,13 +80,13 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< flex >}}
 
-{{< flex-item >}}
+{{% flex-item %}}
 {{< include "/static/codes/cn/2023-05-03-css-display-and-position/inline-span.html" >}}
-{{< /flex-item >}}
+{{% /flex-item %}}
 
-{{< flex-item >}}
+{{% flex-item %}}
 {{< include "/static/codes/cn/2023-05-03-css-display-and-position/inline-block-span.html" >}}
-{{< /flex-item >}}
+{{% /flex-item %}}
 
 {{< /flex >}}
 
@@ -106,7 +106,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ### 父元素属性
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-container.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-container.svg" middle-max-width="60%" >}}
 
 #### display
 
@@ -120,7 +120,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### flex-direction
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-direction.svg">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-direction.svg" >}}
 
 该属性定义了弹性流向，即基本思想中的 `main-axis`。
 
@@ -137,7 +137,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### flex-wrap
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-wrap.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-wrap.svg" middle-max-width="60%" >}}
 
 默认情况下会将子元素放置在一行中，该属性用于设置换行模式。
 
@@ -163,7 +163,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### justify-content
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-justify-content.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-justify-content.svg" middle-max-width="60%" >}}
 
 该属性用于设置主轴（main axis）方向的对齐方式。
 
@@ -182,7 +182,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-items
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-items.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-items.svg" middle-max-width="60%" >}}
 
 该属性用于设置交叉轴（cross axis）方向的对齐方式。
 
@@ -200,7 +200,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-content
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-content.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-content.svg" middle-max-width="60%" >}}
 
 该属性用于设置当交叉轴上有额外的空间时容器多行的内部对齐方式，类似 `justify-content` 设置主轴上子元素的对齐方式。
 
@@ -225,7 +225,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### gap, row-gap, column-gap
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-gap.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-gap.svg" middle-max-width="60%" >}}
 
 该属性用于控制子元素之间的间距，其仅用于非边缘子元素之间的间距。
 
@@ -244,11 +244,11 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ### 子元素属性
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-items.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-items.svg" middle-max-width="60%" >}}
 
 #### order
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-order.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-order.svg" middle-max-width="60%" >}}
 
 默认情况下，子元素按照代码顺序排列。该属性可以控制子元素在容器中的顺序。
 
@@ -260,7 +260,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### flex-grow
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-grow.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-grow.svg" middle-max-width="60%" >}}
 
 该属性定义了子元素在必要时的扩张能力，其接受一个整数比例值用于设定子元素占用容器的空间。如果所有子元素的 `flew-grow` 都设置为 1，则所有子元素将评分容器的剩余空间；如果一个子元素的 `flex-grow` 设置为 2，则该子元素将尝试占用其他子元素 2 倍大小的空间。
 
@@ -302,7 +302,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-self
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-self.svg" middle-max-width="60%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-self.svg" middle-max-width="60%" >}}
 
 该属性可以覆盖由 `align-items` 指定的对齐方式。
 
@@ -352,25 +352,25 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 网格线即构成网格结构的分界线。其可以是位于行或列任意一侧的垂直或水平线。如下示例中，黄色的线为一条列网格线：
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-line.svg" middle-max-width="60%" large-max-width="40%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-line.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 #### 网格单元
 
 网格单元即两个相邻行和两个相邻列之间的区域。如下示例中，黄色区域为行网格线 1 和 2 以及列网格线 2 和 3 之间的单元格：
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-cell.svg" middle-max-width="60%" large-max-width="40%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-cell.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 #### 网格轨道
 
 网格轨道即 2 条相邻网格线之间的区域，可以将其视为网格的行或列。如下示例中，黄色区域为第 2 行和第 3 行网格线之间的网格轨道：
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-track.svg" middle-max-width="60%" large-max-width="40%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-track.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 #### 网格区域
 
 网格区域即 4 条网格线包围的区域，一个网格区域可以由任意数量的网格单元组成。如下示例中，黄色区域为行网格线 1 和 3 以及列网格线 1 和 3 之间的网格区域：
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-area.svg" middle-max-width="60%" large-max-width="40%">}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-area.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 ### 父元素属性
 

@@ -50,7 +50,7 @@ images:
 
 图（Graph / Network）数据类型可以自然地表达物体和物体之间的联系，在我们的日常生活与工作中无处不在。例如：微信和新浪微博等构成了人与人之间的社交网络；互联网上成千上万个页面构成了网页链接网络；国家城市间的运输交通构成了物流网络。
 
-{{% figure src="/images/cn/2020-04-11-graph-embedding-and-gnn/graph.png" title="图片来源：[The power of relationships in data](https://www.allthingsdistributed.com/2019/12/power-of-relationships.html)" %}}
+{{< figure src="/images/cn/2020-04-11-graph-embedding-and-gnn/graph.png" title="图片来源：[The power of relationships in data](https://www.allthingsdistributed.com/2019/12/power-of-relationships.html)" >}}
 
 通常定义一个图 `$G = \left(V, E\right)$`，其中 `$V$` 为**顶点（Vertices）**集合，`$E$` 为**边（Edges）**集合。对于一条边 `$e = u, v$` 包含两个**端点（Endpoints）** `$u$` 和 `$v$`，同时 `$u$` 可以称为 `$v$` 的**邻居（Neighbor）**。当所有的边为有向边时，图称之为**有向（Directed）**图，当所有边为无向边时，图称之为**无向（Undirected）**图。对于一个顶点 `$v$`，令 `$d \left(v\right)$` 表示连接的边的数量，称之为**度（Degree）**。对于一个图 `$G = \left(V, E\right)$`，其**邻接矩阵（Adjacency Matrix）** `$A \in \mathbb{A}^{|V| \times |V|}$` 定义为：
 

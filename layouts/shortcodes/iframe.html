@@ -1,6 +1,6 @@
-{{ $src := .Get "src" }}
-{{ $ratio := .Get "ratio" | default 0.5625 }}
-{{ $ratio = mul $ratio 100 }}
+{{- $src := .Get "src" }}
+{{- $ratio := .Get "ratio" | default 0.5625 }}
+{{- $ratio = mul $ratio 100 }}
 
 <p
   style="

@@ -1,18 +1,20 @@
-{{ if .Section }}
+{{- if .Section }}
 <nav class="post-nav">
-  <span class="nav-prev"
-    >{{ with .PrevInSection }}&larr;
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span
-  >
-  <span class="nav-next"
-    >{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    &rarr;{{ end }}</span
-  >
+  <span class="nav-prev">
+    {{- with .PrevInSection }}
+    &larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- end }}
+  </span>
+  <span class="nav-next">
+    {{- with .NextInSection }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;
+    {{- end }}
+  </span>
 </nav>
-{{ end }}
+{{- end }}
 
-{{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
-{{ with $.Site.Params.googleAdsense }}
+{{- if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
+{{- with $.Site.Params.googleAdsense }}
 <ins
   class="adsbygoogle"
   style="display: block; text-align: center"
@@ -24,50 +26,50 @@
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-{{ end }}
-{{ end }}
+{{- end }}
+{{- end }}
 
 <script src="//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js"></script>
 <script src="/js/toggle-theme.js"></script>
 
-{{ if not .IsHome }}
+{{- if not .IsHome }}
 <script src="/js/heading-anchor.js"></script>
-{{ end }}
+{{- end }}
 
-{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+{{- if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
 <script src="/js/math-code.js"></script>
-{{ end }}
+{{- end }}
 
-{{ partial "footer_giscus.html" . }}
-{{ partial "footer_highlight.html" . }}
-{{ partial "footer_pseudocode.html" . }}
-{{ partial "footer_gallery.html" . }}
-{{ partial "footer_image_comparer.html" . }}
+{{- partial "footer_giscus.html" . }}
+{{- partial "footer_highlight.html" . }}
+{{- partial "footer_pseudocode.html" . }}
+{{- partial "footer_gallery.html" . }}
+{{- partial "footer_image_comparer.html" . }}
 
-{{ if $.Page.Store.Get "douban-card" }}
+{{- if $.Page.Store.Get "douban-card" }}
 <script src="/js/douban-card.js"></script>
-{{ end }}
+{{- end }}
 
-{{ if $.Page.Store.Get "video" }}
+{{- if $.Page.Store.Get "video" }}
 <link
   rel="stylesheet"
   type="text/css"
   href="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css"
 />
 <script src="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
-{{ end }}
+{{- end }}
 
-{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
+{{- if or (eq .Kind "404") (and (not .IsHome) .Content) }}
 <script async src="/js/center-img.js"></script>
 <script async src="/js/right-quote.js"></script>
 <script async src="/js/external-link.js"></script>
 <script async src="/js/alt-title.js"></script>
 <script async src="/js/figure.js"></script>
-{{ end }}
+{{- end }}
 
-{{ if and (not .IsHome) .Content }}
+{{- if and (not .IsHome) .Content }}
 <script src="//cdn.jsdelivr.net/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
-{{ end }}
+{{- end }}
 
 <script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>

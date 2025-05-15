@@ -1,56 +1,56 @@
-{{ if not ($.Page.Store.Get "swiper") }}
-  {{ $.Page.Store.Set "swiper" 1 }}
+{{- if not ($.Page.Store.Get "swiper") }}
+  {{- $.Page.Store.Set "swiper" 1 }}
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css">
   <link rel="stylesheet" type="text/css" href="/css/swiper.css"/>
   <script src="//cdn.jsdelivr.net/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
-{{ end }}
+{{- end }}
 
-{{ $data := dict }}
-{{ $path := .Get "data" }}
-{{ with resources.Get $path }}
-  {{ with . | transform.Unmarshal }}
-    {{ $data = . }}
-  {{ end }}
-{{ end }}
+{{- $data := dict }}
+{{- $path := .Get "data" }}
+{{- with resources.Get $path }}
+  {{- with . | transform.Unmarshal }}
+    {{- $data = . }}
+  {{- end }}
+{{- end }}
 
-{{ if not ($.Page.Store.Get "swiperId") }}
-  {{ $.Page.Store.Set "swiperId" 1 }}
-{{ else }}
-  {{ $.Page.Store.Set "swiperId" (add ($.Page.Store.Get "swiperId") 1) }}
-{{ end }}
-{{ $swiperId := printf "swiper-%d" ($.Page.Store.Get "swiperId") }}
+{{- if not ($.Page.Store.Get "swiperId") }}
+  {{- $.Page.Store.Set "swiperId" 1 }}
+{{- else }}
+  {{- $.Page.Store.Set "swiperId" (add ($.Page.Store.Get "swiperId") 1) }}
+{{- end }}
+{{- $swiperId := printf "swiper-%d" ($.Page.Store.Get "swiperId") }}
 
-{{ $maxWidth := .Get "max-width" | default "100%" }}
+{{- $maxWidth := .Get "max-width" | default "100%" }}
 
 <div class="swiper" id="{{ $swiperId }}" style="max-width: {{ $maxWidth }};">
   <div class="swiper-wrapper">
-    {{ range $item := $data.items }}
+    {{- range $item := $data.items }}
       <div class="swiper-slide">
-        {{ $itemType := $item.type }}
-        {{ if eq $itemType "image" }}
-          {{ $imageSrc := $item.src }}
-          {{ $imageCaption := default "" $item.caption }}
+        {{- $itemType := $item.type }}
+        {{- if eq $itemType "image" }}
+          {{- $imageSrc := $item.src }}
+          {{- $imageCaption := default "" $item.caption }}
             <div class="swiper-slide-image">
               <img src="{{ $imageSrc }}"/>
             </div>
-        {{ else }}
-        {{ end }}
+        {{- else }}
+        {{- end }}
       </div>
-    {{ end }}
+    {{- end }}
   </div>
   <div class="swiper-controls">
-    {{ with $data.pagination.el }}
+    {{- with $data.pagination.el }}
       <div class="swiper-pagination {{ replaceRE "^\\." "" . }}"></div>
-    {{ end }}
-    {{ with $data.navigation.prevEl }}
+    {{- end }}
+    {{- with $data.navigation.prevEl }}
       <div class="swiper-navigation-prev {{ replaceRE "^\\." "" . }}"></div>
-    {{ end }}
-    {{ with $data.navigation.nextEl }}
+    {{- end }}
+    {{- with $data.navigation.nextEl }}
       <div class="swiper-navigation-next {{ replaceRE "^\\." "" . }}"></div>
-    {{ end }}
-    {{ with $data.scrollbar.el }}
+    {{- end }}
+    {{- with $data.scrollbar.el }}
       <div class="swiper-scrollbar {{ replaceRE "^\\." "" . }}"></div>
-    {{ end }}
+    {{- end }}
   </div>
 </div>
 

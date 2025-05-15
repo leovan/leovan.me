@@ -1,4 +1,4 @@
-{{ if and (not .Params.disable_comments) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{- if and (not .Params.disable_comments) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
 <section class="comments">
   <script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
     data-repo="leovan/leovan.me"
@@ -18,4 +18,4 @@
     defer>
   </script>
 </section>
-{{ end }}
+{{- end }}

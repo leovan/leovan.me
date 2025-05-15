@@ -1,50 +1,57 @@
-{{ if not .IsHome }}
+{{- if not .IsHome }}
 <h1 class="title">
-  {{ if eq .Kind "taxonomy" }}
-  {{ index $.Site.Params (lower .Title) | markdownify }}
-  {{ else }}
-  {{ .Title | markdownify }}
-  {{ end }}
+  {{- if eq .Kind "taxonomy" }}
+    {{- index $.Site.Params (lower .Title) | markdownify }}
+  {{- else }}
+    {{- .Title | markdownify }}
+  {{- end }}
 </h1>
-{{ with .Params.subtitle }}<h2 class="subtitle">{{ . | markdownify }}</h2>{{ end }}
+{{- with .Params.subtitle }}<h2 class="subtitle">{{ . | markdownify }}</h2>{{- end }}
 
-{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}{{ $lang = "en" }}{{- end }}
 
-{{ if .IsPage }}
-{{ if not .Params.disable_author_date }}
-<h2 class="author-date">{{ with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}{{  print . " / " }}{{ end }}
-{{ if .Lastmod }}{{ if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{ end }}{{ else if .Date }}{{ if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ end }}</h2>
-{{ end }}
+{{- if .IsPage }}
+{{- if not .Params.disable_author_date }}
+<h2 class="author-date">{{- with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}{{  print . " / " }}{{- end }}
+{{- if .Lastmod }}{{- if gt .Lastmod 0 }}{{ .Lastmod.Format "2006-01-02" }}{{- end }}{{- else if .Date }}{{- if gt .Date 0 }}{{ .Date.Format "2006-01-02" }}{{- end }}{{- end }}</h2>
+{{- end }}
 
-{{ if or (.Params.categories) (.Params.tags) }}
+{{- if or (.Params.categories) (.Params.tags) }}
 <h3 class="post-meta">
-  {{ if .Params.categories }}
-  {{ if gt (len .Params.categories) 0 }}
+  {{- if .Params.categories }}
+  {{- if gt (len .Params.categories) 0 }}
   <strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>
-  {{ range $index, $categories := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-  {{ end }}
-  {{ end }}
-  {{ if and (.Params.categories) (.Params.tags) }}
-  {{ if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+  {{- range $index, $categories := .Params.categories }}
+  {{- if gt $index 0 }}, {{- end }}
+  <a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+  {{- end }}
+  {{- end }}
+  {{- end }}
+  {{- if and (.Params.categories) (.Params.tags) }}
+  {{- if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
   /
-  {{ end }}
-  {{ end }}
-  {{ if .Params.tags }}
-  {{ if gt (len .Params.tags) 0 }}
+  {{- end }}
+  {{- end }}
+  {{- if .Params.tags }}
+  {{- if gt (len .Params.tags) 0 }}
   <strong>{{ index $.Site.Params.lang.tags $lang }}: </strong>
-  {{ range $index, $tags := .Params.tags }}{{ if gt $index 0 }}, {{ end }}<span>{{ . }}</span>{{ end }}
-  {{ end }}
-  {{ end }}
-  {{ if or (.Params.categories) (.Params.tags) }}
-  {{ if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+  {{- range $index, $tags := .Params.tags }}
+  {{- if gt $index 0 }}, {{- end }}
+  <span>{{ . }}</span>
+  {{- end }}
+  {{- end }}
+  {{- end }}
+  {{- if or (.Params.categories) (.Params.tags) }}
+  {{- if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
   /
-  {{ end }}
-  {{ end }}
+  {{- end }}
+  {{- end }}
   <strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
   {{ .WordCount }}
 </h3>
-{{ end }}
+{{- end }}
 
-{{ end }}
+{{- end }}
 <hr>
-{{ end }}
+{{- end }}

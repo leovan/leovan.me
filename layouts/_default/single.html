@@ -1,11 +1,11 @@
-{{ partial "header.html" . }}
+{{- partial "header.html" . }}
 
-{{ if .Params.show_toc }}
+{{- if .Params.show_toc }}
 <div{{ with .Params.toc_depth }} class="toc-depth-{{ . }}" {{ end }}>{{ .TableOfContents }}</div>
-{{ end }}
+{{- end }}
 
 {{ .Content }}
 
-{{ partial "donate.html" . }}
+{{- partial "donate.html" . }}
 
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . }}

@@ -1,10 +1,10 @@
-{{ $title := printf "%s - %s" .Title .Site.Title | safeHTML }}
+{{- $title := printf "%s - %s" .Title .Site.Title | safeHTML }}
 
-{{ if .IsHome }}
-{{ $title = .Site.Title }}
-{{ else if eq .Kind "taxonomy" }}
-{{ $title = index $.Site.Params (lower .Title) | markdownify }}
-{{ end }}
+{{- if .IsHome }}
+{{- $title = .Site.Title }}
+{{- else if eq .Kind "taxonomy" }}
+{{- $title = index $.Site.Params (lower .Title) | markdownify }}
+{{- end }}
 
 <title>{{ $title }}</title>
 
@@ -16,24 +16,25 @@
 <meta property="og:site_name" content="{{ .Site.Params.description | safeHTML }}">
 <meta property="og:url" content="{{ .Permalink }}">
 
-{{ $lang := "cn" }} {{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}{{ $lang = "en" }}{{- end }}
 
-{{ with or .Params.author (index $.Site.Params.lang.author $lang) }}
+{{- with or .Params.author (index $.Site.Params.lang.author $lang) }}
 <meta name="author" property="article:author" content="{{ . }}">
-{{ end }}
+{{- end }}
 
-{{ with .Date }}
+{{- with .Date }}
 <meta name="date" property="article:published_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
-{{ end }}
-{{ with .Lastmod }}
+{{- end }}
+{{- with .Lastmod }}
 <meta name="date" property="article:modified_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
-{{ end }}
+{{- end }}
 
-{{ if .Keywords }}
+{{- if .Keywords }}
 <meta name="keywords" property="article:tag" content ="{{ delimit .Keywords "," }}">
-{{ else if .Params.tags }}
+{{- else if .Params.tags }}
 <meta name="keywords" property="article:tag" content ="{{ delimit .Params.tags "," }}">
-{{ end }}
+{{- end }}
 
 <meta name="theme-color" content="#0d0d0d">
 

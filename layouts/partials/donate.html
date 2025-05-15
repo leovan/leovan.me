@@ -1,6 +1,6 @@
-{{ $lang := "cn" }}
-{{ if (eq .Section "en") }} {{ $lang = "en" }} {{ end }}
-{{ if (not .Params.disable_donate) }}
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}{{ $lang = "en" }}{{- end }}
+{{- if (not .Params.disable_donate) }}
 <div class="donate">
   <div class="donate-header"></div>
   <div class="donate-slug" id="donate-slug">{{ .Slug }}</div>
@@ -124,4 +124,4 @@
 </div>
 
 <script type="text/javascript" src="/js/donate.js"></script>
-{{ end }}
+{{- end }}

@@ -102,11 +102,11 @@ $$`
 {{% flex justify-content="space-around" %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-24-bit.png" title="24bit（98KB）" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-24-bit.png" title="24bit（98KB）" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-8-bit.png" title="8bit（37KB -62%）" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-8-bit.png" title="8bit（37KB -62%）" >}}
 {{% /flex-item %}}
 
 {{% /flex %}}
@@ -114,11 +114,11 @@ $$`
 {{% flex justify-content="space-around" %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="4bit（13KB -87%）" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="4bit（13KB -87%）" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="2bit（6KB -94%）" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="2bit（6KB -94%）" >}}
 {{% /flex-item %}}
 
 {{% /flex %}}
@@ -203,11 +203,11 @@ $$`
 {{% flex justify-content="space-around" %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-linear-dv.png" title="EV 和曝光量关系" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-linear-dv.png" title="EV 和曝光量关系" >}}
 {{% /flex-item %}}
 
 {{% flex-item %}}
-{{% figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-log-dv.png" title="EV 和曝光量 $\log$ 值关系" %}}
+{{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-log-dv.png" title="EV 和曝光量 $\log$ 值关系" >}}
 {{% /flex-item %}}
 
 {{% /flex %}}

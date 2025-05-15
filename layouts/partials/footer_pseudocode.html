@@ -1,4 +1,4 @@
-{{ if $.Page.Store.Get "pseudocode" }}
+{{- if $.Page.Store.Get "pseudocode" }}
 <script src="//cdn.jsdelivr.net/npm/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.js"></script>
 <script type="text/javascript">
   let pseudocodeCaptionCount = 0;
@@ -17,4 +17,4 @@
     });
   })(document);
 </script>
-{{ end }}
+{{- end }}

@@ -1,7 +1,7 @@
-{{ if not ($.Page.Store.Get "flex") }}
+{{- if not ($.Page.Store.Get "flex") }}
 <link rel="stylesheet" type="text/css" href="/css/flex.css">
-{{ $.Page.Store.Add "flex" 1 }}
-{{ end }}
+{{- $.Page.Store.Add "flex" 1 }}
+{{- end }}
 
 <div class="flex" style="
   display: flex;

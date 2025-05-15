@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    {{ partial "header_meta.html" . }}
-    {{ partial "header_json_ld.html" . }}
+    {{- partial "header_meta.html" . }}
+    {{- partial "header_json_ld.html" . }}
 
-    {{ range .AlternativeOutputFormats }}
+    {{- range .AlternativeOutputFormats }}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end }}
+    {{- end }}
 
-    {{ partial "header_custom.html" . }}
+    {{- partial "header_custom.html" . }}
   </head>
 
-  {{ $.Page.Store.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
+  {{- $.Page.Store.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
 
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Page.Store.Get "section" }}{{ end }}">
   <header class="masthead">
-    {{ partial "header_logo.html" . }}
-    {{ partial "header_menu.html" . }}
+    {{- partial "header_logo.html" . }}
+    {{- partial "header_menu.html" . }}
   </header>
 
   <article class="main">
     <header class="content-title">
-    {{ partial "header_post_meta.html" . }}
+    {{- partial "header_post_meta.html" . }}
 
-    {{ if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
-    {{ with $.Site.Params.googleAdsense }}
+    {{- if and (not .Params.disable_adsense) (and (not .IsHome) .Content) }}
+    {{- with $.Site.Params.googleAdsense }}
     <ins
       class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -39,6 +39,6 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    {{ end }}
-    {{ end }}
+    {{- end }}
+    {{- end }}
     </header>
