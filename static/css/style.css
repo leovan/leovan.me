@@ -526,22 +526,21 @@ body {
 }
 
 .masthead .menu {
-  margin-right: 20px;
   direction: rtl;
 }
 
-.masthead .menu a {
-  direction: ltr;
-}
-
-.masthead .menu ul ul {
+.masthead .menu ul {
   list-style: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 0;
 }
 
-.masthead .menu li li::before {
-  content: "•\00a\000a0\00a0";
+.masthead .menu ul li::before {
+  content: "•\00a\00a0";
+}
+
+.masthead .menu ul li.menu-separator::before,
+.masthead .menu ul li.theme-toggle::before {
+  content: "";
 }
 
 /* main */
@@ -1025,65 +1024,39 @@ p.list-title span {
     padding: 0;
   }
 
-  .masthead .menu ul ul {
-    margin: 0;
-  }
-
-  .masthead .menu li {
-    border-bottom: 1px solid;
+  .masthead .menu ul li {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-bottom: 1em;
-  }
-
-  .masthead .menu li:first-child {
-    border-top: 1px solid;
-  }
-
-  .masthead .menu li li:last-child {
-    border-bottom: none;
-  }
-
-  .masthead .menu a,
-  .masthead .menu span {
-    display: block;
-    text-decoration-line: none;
-    padding: 0.1em 0.6em;
-    border-radius: 6px;
-    line-height: 2em;
-  }
-
-  .masthead .menu span::before {
-    content: "";
-    background-size: auto 1.2em;
-    line-height: 2em;
-  }
-
-  .masthead .menu .active a {
-    background: none;
-  }
-
-  .masthead .menu li li a,
-  .masthead .menu li li span {
-    padding-left: 30px;
-  }
-
-  .masthead .menu li li::before {
-    content: none;
-  }
-
-  .masthead .menu li li a::before {
-    content: "•\00a0\00a0\00a0";
-  }
-
-  .masthead .menu li,
-  .masthead .menu li:first-child {
-    border: none;
     display: inline-block;
   }
 
-  .masthead .menu .menu-separator {
+  .masthead .menu ul li::before {
+    content: none;
+  }
+
+  .masthead .menu ul li a,
+  .masthead .menu ul li span {
+    display: block;
+    text-decoration-line: none;
+    padding: 0 0.5em;
+    border-radius: 0.3em;
+    height: 2em;
+    line-height: 2;
+  }
+
+  .masthead .menu ul li.active a {
+    background: none;
+  }
+
+  .masthead .menu ul li.theme-toggle span::before {
+    height: 1.2em;
+    background-size: auto 1.2em;
+    vertical-align: sub;
+  }
+
+  .masthead .menu ul li.menu-separator {
     display: none;
   }
 
