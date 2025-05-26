@@ -5,20 +5,20 @@
 
 <p>
   <div class="image-compare"
-    {{- with .Get "control-color" }}data-control-color="{{ . }}" {{- end }}
-    {{- with .Get "control-shadow" }}data-control-shadow="{{ . }}" {{- end }}
-    {{- with .Get "add-circle" }}data-add-circle="{{ . }}" {{- end }}
-    {{- with .Get "add-circle-blur" }}data-add-circle-blur="{{ . }}" {{- end }}
-    {{- with .Get "show-labels" }}data-show-labels="{{ . }}" {{- end }}
-    {{- with .Get "label-before" }}data-label-before="{{ . }}" {{- end }}
-    {{- with .Get "label-after" }}data-label-after="{{ . }}" {{- end }}
-    {{- with .Get "label-on-hover" }}data-label-on-hover="{{ . }}" {{- end }}
-    {{- with .Get "smoothing" }}data-smoothing="{{ . }}" {{- end }}
-    {{- with .Get "smoothing-amount" }}data-smoothing-amount="{{ . }}" {{- end }}
-    {{- with .Get "hover-start" }}data-hover-start="{{ . }}" {{- end }}
-    {{- with .Get "vertical-mode" }}data-vertical-mode="{{ . }}" {{- end }}
-    {{- with .Get "starting-point" }}data-starting-point="{{ . }}" {{- end }}
-    {{- with .Get "fluid-mode" }}data-fluid-mode="{{ . }}" {{- end }}>
+    {{- with .Get "control-color" }} data-control-color="{{ . }}" {{- end }}
+    {{- with .Get "control-shadow" }} data-control-shadow="{{ . }}" {{- end }}
+    {{- with .Get "add-circle" }} data-add-circle="{{ . }}" {{- end }}
+    {{- with .Get "add-circle-blur" }} data-add-circle-blur="{{ . }}" {{- end }}
+    {{- with .Get "show-labels" }} data-show-labels="{{ . }}" {{- end }}
+    {{- with .Get "label-before" }} data-label-before="{{ . }}" {{- end }}
+    {{- with .Get "label-after" }} data-label-after="{{ . }}" {{- end }}
+    {{- with .Get "label-on-hover" }} data-label-on-hover="{{ . }}" {{- end }}
+    {{- with .Get "smoothing" }} data-smoothing="{{ . }}" {{- end }}
+    {{- with .Get "smoothing-amount" }} data-smoothing-amount="{{ . }}" {{- end }}
+    {{- with .Get "hover-start" }} data-hover-start="{{ . }}" {{- end }}
+    {{- with .Get "vertical-mode" }} data-vertical-mode="{{ . }}" {{- end }}
+    {{- with .Get "starting-point" }} data-starting-point="{{ . }}" {{- end }}
+    {{- with .Get "fluid-mode" }} data-fluid-mode="{{ . }}" {{- end }}>
     <img src="{{ .Get "image-before" }}" />
     <img src="{{ .Get "image-after" }}" />
   </div>

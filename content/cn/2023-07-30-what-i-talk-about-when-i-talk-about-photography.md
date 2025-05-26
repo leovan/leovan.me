@@ -99,7 +99,7 @@ $$`
 
 **色彩深度**，简称**色深**（Color Depth），即存储一个像素的颜色所需要的位数。若色彩深度为 $n$ 位，则代表一共包含 $2^n$ 种颜色。例如我们常说的**真彩色**，即 24 位，对应 RGB 三个通道，每个通道 8 位（即 0-255），共可以表示 16,777,216 种颜色。
 
-{{% flex justify-content="space-around" %}}
+{{< flex justify-content="space-around" >}}
 
 {{% flex-item %}}
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-24-bit.png" title="24bit（98KB）" >}}
@@ -109,9 +109,9 @@ $$`
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-8-bit.png" title="8bit（37KB -62%）" >}}
 {{% /flex-item %}}
 
-{{% /flex %}}
+{{< /flex >}}
 
-{{% flex justify-content="space-around" %}}
+{{< flex justify-content="space-around" >}}
 
 {{% flex-item %}}
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="4bit（13KB -87%）" >}}
@@ -121,7 +121,7 @@ $$`
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/color-depth-2-bit.png" title="2bit（6KB -94%）" >}}
 {{% /flex-item %}}
 
-{{% /flex %}}
+{{< /flex >}}
 
 从上述对比图 [^image-source-color-depth] 中不难看出，色深越大，图像的效果越好，图像内容之间的过度越自然，与此同时占用的存储也会越多。
 
@@ -200,7 +200,7 @@ $$`
 
 以 8bit 为例，对于高光部分（7 - 8 档曝光值）会使用 128 位存储相关信息，而对于暗部（0 - 1 档曝光值）则仅使用 8 位存储相关信息，如下图左所示。此时由于高光部分看起来亮度变化并不大，使用的存储位数比暗部多得多，这种非均衡的的存储容易丢失图像的暗部细节。通过对曝光量进行 Log 处理，可以得到均衡的对应关系，如下图右所示。
 
-{{% flex justify-content="space-around" %}}
+{{< flex justify-content="space-around" >}}
 
 {{% flex-item %}}
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-linear-dv.png" title="EV 和曝光量关系" >}}
@@ -210,7 +210,7 @@ $$`
 {{< figure src="/images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/ev-log-dv.png" title="EV 和曝光量 $\log$ 值关系" >}}
 {{% /flex-item %}}
 
-{{% /flex %}}
+{{< /flex >}}
 
 在真实场景中，各个相机厂商的所搭载的 Log 曲线并不完全相同，都会为了实现某种效果进行调整修改。但整体来说其目的还是为了让每一档曝光值之间存储的信息量大致相同。颜色矫正后和原始应用 Log 曲线的对比图像 [^image-source-normal-vs-logc] 如下所示：
 

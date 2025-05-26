@@ -133,7 +133,7 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 
 以 Photoshop 和 Afiinity Photo 两款软件的拾色器为例：
 
-{{% flex justify-content="space-around" %}}
+{{< flex justify-content="space-around" >}}
 
 {{% flex-item %}}
 {{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-photoshop.png" title="Photoshop 拾色器（HSV）" >}}
@@ -143,7 +143,7 @@ HSV 和 HSL 两者对于色相（H）的定义一致，但对于饱和度（S）
 {{< figure src="/images/cn/2023-04-22-what-i-talk-about-when-i-talk-about-photo-retouching/color-picker-affinityphoto.png" title="Afiinity Photo 拾色器（HSL）" >}}
 {{% /flex-item %}}
 
-{{% /flex %}}
+{{< /flex >}}
 
 两个软件分别采用 HSV 和 HSL 色彩空间，其横轴为饱和度（S），纵轴分别为明度（V）和亮度（L）。不难看出，在 Photoshop 拾色器中，越往上混入的黑色越少，明度越高；越往右混入的白色越少，纯度越高。在 Afiinity Photo 拾色器中，下部为纯黑色，亮度最小，从下往上，混入的黑色逐渐减少，直到 50\% 位置处完全没有黑色混入，继续往上走，混入的白色逐渐增加，直到 100\% 位置处完全变为纯白色，亮度最高。
 
