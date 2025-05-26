@@ -3,7 +3,7 @@ library(httpuv)
 library(httr)
 library(rvest)
 library(jsonlite)
-library(stringi)
+library(stringr)
 
 API_KEY <- "0dad551ec0f84ed02907ff5c42e8ec70"
 API_SECRET <- "bf7dddc7c9cfe6f7"
