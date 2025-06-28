@@ -16,13 +16,13 @@
 
 {{- if (eq $foldable true) }}
 <details
-  class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai"
+  class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} font-kai"
   {{- if (ne $close true) }} open="open" {{- end }}>
   <summary class="admonition-title">{{ $title | markdownify }}</summary>
   <p class="admonition-content">{{ .Inner | markdownify }}</p>
 </details>
 {{- else }}
-<div class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} kai">
+<div class="admonition {{ $type }} {{ if $noIcon }}admonition-no-icon{{ end }} font-kai">
   {{- if $hasTitle }}
   <p class="admonition-title">{{ $title | markdownify }}</p>
   {{- end }}

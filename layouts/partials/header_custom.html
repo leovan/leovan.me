@@ -42,7 +42,7 @@
 <link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | relURL }}">
 
-{{- if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
+{{- if and (and (and (not .Params.disable_highlight) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
 <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
 {{- end }}
 

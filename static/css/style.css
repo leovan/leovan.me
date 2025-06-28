@@ -34,8 +34,8 @@ img {
 /* icons */
 :root {
   --code-copy-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V7q0-.425.288-.712T4 6t.713.288T5 7v13h10q.425 0 .713.288T16 21t-.288.713T15 22zm4-6V4z"/></svg>');
-  --code-copy-success-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 13.4l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.5q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z"/></svg>');
-  --code-copy-error-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l2.9 2.9q.275.275.7.275t.7-.275t.275-.7t-.275-.7L13.4 12l2.9-2.9q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275L12 10.6L9.1 7.7q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l2.9 2.9l-2.9 2.9q-.275.275-.275.7t.275.7t.7.275t.7-.275zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z"/></svg>');
+  --code-copy-success-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path fill="currentColor" fill-opacity="0.3" d="M3 12c0 -4.97 4.03 -9 9 -9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9Z"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0.3;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12l3 3l5 -5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="14;0"/></path></g></svg>');
+  --code-copy-error-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.39s" values="64;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 12l4 4M12 12l-4 -4M12 12l-4 4M12 12l4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.39s" dur="0.13s" values="8;0"/></path></g></svg>');
 }
 
 /* colors */
@@ -72,7 +72,7 @@ img {
   --body-foreground: #e6e6e6;
   --block-border: #e6e6e6;
   --block-background: #383838;
-  --code-border: #dddddd;
+  --code-border: #444444;
   --code-foreground: #cccccc;
   --code-background: #383838;
   --code-lang-background: #444444;
@@ -327,96 +327,6 @@ video {
   max-width: 100%;
   display: block;
   margin: auto;
-}
-
-/* code */
-.highlight-wrapper {
-  position: relative;
-}
-
-.highlight-wrapper:hover .code-button-copy,
-.highlight-wrapper:focus-within .code-button-copy {
-  color: var(--code-button-copy-area-hover);
-}
-
-.highlight {
-  padding: 1em;
-  border-radius: 0.3rem;
-  font-size: 0.9em !important;
-}
-
-.chroma {
-  margin: 0;
-}
-
-code {
-  line-height: 1.5em;
-  direction: ltr;
-  text-align: left;
-  text-shadow: none;
-  word-spacing: normal;
-  tab-size: 4;
-  hyphens: none;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-
-code:before {
-  content: attr(data-lang);
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-top-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-  padding: 0 0.5em;
-  text-shadow: none;
-}
-
-code[class="language-plain"]:before {
-  display: none;
-}
-
-.code-button-copy {
-  position: absolute;
-  top: 0.3em;
-  right: 0.3em;
-  color: var(--code-button-copy-default);
-  cursor: pointer;
-  display: block;
-  height: 1.5em;
-  width: 1.5em;
-  transition: color 0.25s;
-  border: 0;
-  background: #00000000;
-}
-
-.code-button-copy:after {
-  -webkit-mask-image: var(--code-copy-icon);
-  mask-image: var(--code-copy-icon);
-  background-color: currentcolor;
-  content: "";
-  display: block;
-  height: 1.125em;
-  width: 1.125em;
-  margin: 0 auto;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-.code-button-copy-success:after {
-  -webkit-mask-image: var(--code-copy-success-icon);
-  mask-image: var(--code-copy-success-icon);
-}
-
-.code-button-copy-error:after {
-  -webkit-mask-image: var(--code-copy-error-icon);
-  mask-image: var(--code-copy-error-icon);
 }
 
 /* lists */

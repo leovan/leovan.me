@@ -131,4 +131,4 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 <h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-symbols material-symbols-download-outline"></i></a></h2>
 
-<p class="kai" style="text-align: right;">更新于：2025-02-16</p>
+<p class="font-kai" style="text-align: right;">更新于：2025-02-16</p>

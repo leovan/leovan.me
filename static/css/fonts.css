@@ -1,4 +1,5 @@
-body {
+body,
+.font-song {
   font-family: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia,
     "Latin Modern Roman", "Linux Libertine", "Liberation Serif",
     "Source Han Serif SC", "Source Han Serif TC", "Source Han Serif",
@@ -9,7 +10,16 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
-button:not([class]), code {
+.font-hei {
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+button:not([class]), code, .highlight-title {
   font-family: Iosevka, "Iosevka Nerd", "Sarasa Mono", "Sarasa Mono SC",
     "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono",
     "Ubuntu Mono", "Source Han Mono SC", "Source Han Mono TC", "Source Han Mono",
@@ -18,7 +28,7 @@ button:not([class]), code {
 }
 
 blockquote,
-.kai,
+.font-kai,
 .slogan,
 code span[class="comment"],
 code span[class="c"],

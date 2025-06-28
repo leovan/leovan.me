@@ -1,3 +1,115 @@
+.highlight-wrapper {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.highlight-title {
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 0.9em !important;
+  background: var(--code-background) !important;
+  color: var(--code-foreground) !important;
+  border-radius: 0.3rem 0.3rem 0 0;
+  border-bottom: 1px solid var(--code-border);
+}
+
+.highlight-content {
+  position: relative;
+}
+
+.highlight-wrapper .highlight-content {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.highlight-content:hover .code-button-copy,
+.highlight-content:focus-within .code-button-copy {
+  color: var(--code-button-copy-area-hover);
+}
+
+.highlight {
+  padding: 1em;
+  border-radius: 0.3rem;
+  font-size: 0.9em !important;
+}
+
+.highlight-wrapper:has(.highlight-title) .highlight {
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+code {
+  line-height: 1.5em;
+  direction: ltr;
+  text-align: left;
+  text-shadow: none;
+  word-spacing: normal;
+  tab-size: 4;
+  hyphens: none;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+code:before {
+  content: attr(data-lang);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  padding: 0 0.5em;
+  text-shadow: none;
+}
+
+code[class="language-plain"]:before {
+  display: none;
+}
+
+.code-button-copy {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  color: var(--code-button-copy-default);
+  cursor: pointer;
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+  transition: color 0.25s;
+  border: 0;
+  background: #00000000;
+}
+
+.code-button-copy:after {
+  -webkit-mask-image: var(--code-copy-icon);
+  mask-image: var(--code-copy-icon);
+  background-color: currentcolor;
+  content: "";
+  display: block;
+  height: 1.125em;
+  width: 1.125em;
+  margin: 0 auto;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.code-button-copy-success:after {
+  -webkit-mask-image: var(--code-copy-success-icon);
+  mask-image: var(--code-copy-success-icon);
+}
+
+.code-button-copy-error:after {
+  -webkit-mask-image: var(--code-copy-error-icon);
+  mask-image: var(--code-copy-error-icon);
+}
+
+.chroma {
+  margin: 0;
+}
+
 /* Other */
 .chroma .x {
 }

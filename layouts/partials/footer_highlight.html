@@ -1,15 +1,15 @@
-{{- if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+{{- if and (and (and (not .Params.disable_highlight) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
 <script src="//cdn.jsdelivr.net/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
 <script>
   function createCodeCopyButton(el) {
     let button = document.createElement("button");
     button.classList.add("code-button-copy");
 
-    let wrapper = document.createElement("p");
-    wrapper.classList.add("highlight-wrapper");
-    el.parentNode.insertBefore(wrapper, el);
-    wrapper.appendChild(button);
-    wrapper.appendChild(el);
+    let content = document.createElement("p");
+    content.classList.add("highlight-content");
+    el.parentNode.insertBefore(content, el);
+    content.appendChild(button);
+    content.appendChild(el);
 
     let code = el.querySelector(
       ":last-child > .chroma > code"
