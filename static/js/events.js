@@ -1,5 +1,5 @@
 (window.onresize = function () {
-  document.querySelectorAll("figure > img").forEach((el) => {
+  function setMaxWidth(el) {
     if (window.innerWidth >= 1440) {
       el.style.setProperty("max-width", el.dataset.largeMaxWidth);
     } else if (window.innerWidth >= 960) {
@@ -7,5 +7,7 @@
     } else {
       el.style.setProperty("max-width", el.dataset.smallMaxWidth);
     }
-  });
+  }
+  document.querySelectorAll("figure > img").forEach(setMaxWidth);
+  document.querySelectorAll(".image-compare").forEach(setMaxWidth);
 })();

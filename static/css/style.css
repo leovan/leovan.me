@@ -317,7 +317,7 @@ figure {
   text-align: center;
 }
 
-figure img {
+figure img, .image-compare {
   max-width: attr(data-large-max-width);
 }
 
@@ -847,6 +847,11 @@ p.list-title {
 
 p.list-title span {
   margin-right: 0.2em;
+}
+
+.image-compare {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* different size screens */

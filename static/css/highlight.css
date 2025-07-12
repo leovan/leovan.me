@@ -24,6 +24,7 @@
 .highlight-content:hover .code-button-copy,
 .highlight-content:focus-within .code-button-copy {
   color: var(--code-button-copy-area-hover);
+  background: radial-gradient(var(--code-background) 60%, transparent);
 }
 
 .highlight {
