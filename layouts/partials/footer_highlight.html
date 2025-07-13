@@ -19,7 +19,7 @@
     function registerClipboard() {
       let clip = new ClipboardJS(button, {
         text: function () {
-          return code;
+          return code.replace(/\n$/, "");
         },
       });
 
