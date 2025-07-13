@@ -1,0 +1,50 @@
+{
+  "effect": "slide",
+  "loop": true,
+  "navigation": {
+    "prevEl": ".swiper-button-prev",
+    "nextEl": ".swiper-button-next"
+  },
+  "pagination": {
+    "el": ".swiper-pagination",
+    "clickable": true,
+    "type": "bullets"
+  },
+  "items": [
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-00-welcome.avif",
+      "caption": "欢迎页面"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-01-fresh-install.avif",
+      "caption": "安装位置"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-02-version.avif",
+      "caption": "安装版本"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-03-gpu.avif",
+      "caption": "GPU 情况"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-04-review.avif",
+      "caption": "安装选项"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-05-install.avif",
+      "caption": "安装"
+    },
+    {
+      "type": "image",
+      "src": "/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation-06-finish.avif",
+      "caption": "安装完成"
+    }
+  ]
+}
