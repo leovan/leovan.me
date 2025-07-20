@@ -1,6 +1,6 @@
 ---
 title: '使用 Invoke 创作你的第一张图片'
-subtitle: 'Invoke 101 教程'
+subtitle: 'Invoke AI 101 教程'
 author: 范叶亮
 date: '2025-06-01'
 slug: invoke-101-creating-your-first-image-in-invoke
