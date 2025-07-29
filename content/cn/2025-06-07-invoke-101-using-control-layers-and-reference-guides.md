@@ -49,7 +49,7 @@ tags:
 {{% /tab-item %}}
 
 {{% tab-item label="<i class='icon icon-youtube'></i> YouTube" %}}
-{{< youtube id="GAnmeY2terY" >}}
+{{< youtube id="dtojbQayPUU" >}}
 {{% /tab-item %}}
 
 {{< /tab >}}
