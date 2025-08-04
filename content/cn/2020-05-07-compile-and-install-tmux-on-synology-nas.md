@@ -324,6 +324,4 @@ sudo ./PkgCreate.py -v 6.2 -p apollolake tmux
 tmux 3.1b
 ```
 
-在此放出编译好的 [tmux 扩展包](https://cdn.leovan.me/packages/synology/tmux-apollolake-3.1b.spk)，方便和 DS418play 具有相同系统的 CPU 架构的小伙伴直接使用。
-
 > 本文主要参考了 Synology 官方的扩展包构建指南：https://help.synology.com/developer-guide/create_package/index.html

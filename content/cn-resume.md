@@ -101,7 +101,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. (2018). A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _2018 International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
 2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
-3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://cdn.leovan.me/documents/publications/IEAF.pdf). _Unpublished_.
+3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://r2.leovan.me/publications/IEAF.pdf). _Unpublished_.
 
 ## 专利
 
@@ -129,6 +129,6 @@ _2015.04 ~ 2015.10 算法设计和开发_
 11. [Rasa 中文文档](https://rasa.leovan.tech)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
 12. [Rasa Pro 中文文档](https://rasa-pro.leovan.tech)：Rasa Pro 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="//cdn.leovan.me/documents/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-symbols material-symbols-download-outline"></i></a></h2>
+<h2 style="text-align: right;"><a href="https://r2.leovan.me/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-symbols material-symbols-download-outline"></i></a></h2>
 
 <p class="font-kai" style="text-align: right;">更新于：2025-02-16</p>
