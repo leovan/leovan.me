@@ -15,7 +15,7 @@
     class="lazyload"
     data-src="{{ $src }}"
     {{- if or (.Get "alt") $caption }}
-    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify| plainify }}{{ end }}"
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
     {{- end }}
     {{- with .Get "large-max-width" | default "100%" }} data-large-max-width="{{ . }}" {{- end }}
     {{- with .Get "middle-max-width" | default "100%" }} data-middle-max-width="{{ . }}" {{- end }}
