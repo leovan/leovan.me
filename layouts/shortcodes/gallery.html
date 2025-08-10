@@ -1,7 +1,7 @@
 {{- if not ($.Page.Store.Get "gallery") }}
   {{- $.Page.Store.Set "gallery" 1 }}
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"/>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"/>
 {{- end }}
 
 {{- if not ($.Page.Store.Get "galleryId") }}

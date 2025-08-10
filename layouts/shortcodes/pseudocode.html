@@ -1,6 +1,6 @@
 {{- if not ($.Page.Store.Get "pseudocode") }}
   {{- $.Page.Store.Set "pseudocode" 1 }}
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.css">
 {{- end }}
 
 <div>

@@ -1,8 +1,8 @@
 {{- if not ($.Page.Store.Get "swiper") }}
   {{- $.Page.Store.Set "swiper" 1 }}
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css">
   <link rel="stylesheet" type="text/css" href="/css/swiper.css"/>
-  <script src="//cdn.jsdelivr.net/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
+  <script src="//cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
 {{- end }}
 
 {{- $data := dict }}

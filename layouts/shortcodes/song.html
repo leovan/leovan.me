@@ -1,8 +1,8 @@
 {{- if not ($.Page.Store.Get "song") }}
   {{- $.Page.Store.Set "song" 1 }}
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
-  <script src="//cdn.jsdelivr.net/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/meting@{{ $.Site.Params.metingjsVersion }}/dist/Meting.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css">
+  <script src="//cdn.jsdmirror.com/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
+  <script src="//cdn.jsdmirror.com/npm/meting@{{ $.Site.Params.metingjsVersion }}/dist/Meting.min.js"></script>
   <script>
     window.meting_api = "{{ $.Site.Params.metingApi }}";
   </script>

@@ -29,7 +29,7 @@
 {{- end }}
 {{- end }}
 
-<script src="//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js"></script>
+<script src="//cdn.jsdmirror.com/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js"></script>
 <script src="/js/toggle-theme.js"></script>
 
 {{- if not .IsHome }}
@@ -54,9 +54,9 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css"
+  href="//cdn.jsdmirror.com/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css"
 />
-<script src="//cdn.jsdelivr.net/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
+<script src="//cdn.jsdmirror.com/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
 {{- end }}
 
 {{- if or (eq .Kind "404") (and (not .IsHome) .Content) }}
@@ -68,10 +68,10 @@
 {{- end }}
 
 {{- if and (not .IsHome) .Content }}
-<script src="//cdn.jsdelivr.net/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+<script src="//cdn.jsdmirror.com/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 {{- end }}
 
-<script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
+<script src="//cdn.jsdmirror.com/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
   addBackToTop({
     diameter: 48,

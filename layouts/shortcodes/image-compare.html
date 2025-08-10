@@ -1,5 +1,5 @@
 {{- if not ($.Page.Store.Get "image-compare") }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdmirror.com/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.css">
 {{- $.Page.Store.Add "image-compare" 1 }}
 {{- end }}
 

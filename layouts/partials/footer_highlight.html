@@ -1,5 +1,5 @@
 {{- if and (and (and (not .Params.disable_highlight) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
-<script src="//cdn.jsdelivr.net/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
+<script src="//cdn.jsdmirror.com/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
 <script>
   function createCodeCopyButton(el) {
     let button = document.createElement("button");

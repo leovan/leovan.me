@@ -108,12 +108,12 @@ params:
   justifiedgalleryVersion: "3.8.1"
   lazysizesVersion: "5.3.2"
   lightgalleryVersion: "2.8.3"
-  mathjaxVersion: "3.2.2"
+  mathjaxVersion: "4.0.0"
   metingjsVersion: "2.0.1"
   pseudocodeVersion: "latest"
-  swiperVersion: "11.2.6"
+  swiperVersion: "11.2.10"
   vanillaBackToTopVersion: "latest"
-  videojsVersion: "8.22.0"
+  videojsVersion: "8.23.4"
 
   metingApi: "https://api.obdo.cc/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r"
 
