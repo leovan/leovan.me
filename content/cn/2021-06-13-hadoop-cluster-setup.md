@@ -5,7 +5,7 @@ date: '2021-06-13'
 slug: hadoop-cluster-setup
 categories:
   - Tech101
-  - 编程
+  - 教程
 tags:
   - Hadoop
   - Hadoop 集群

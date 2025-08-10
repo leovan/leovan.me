@@ -5,7 +5,7 @@ date: '2021-06-14'
 slug: hive-setup
 categories:
   - Tech101
-  - 编程
+  - 教程
 tags:
   - Hive
   - MySQL

@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2025-05-25'
 slug: auto-apply-and-deploy-certificate-on-openwrt-and-synology
 categories:
-  - 编程
+  - 教程
 tags:
   - OpenWrt
   - 群晖

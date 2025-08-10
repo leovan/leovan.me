@@ -4,8 +4,7 @@ author: 范叶亮
 date: '2023-03-19'
 slug: gpu-machine-learning-environment-configuration-under-windows-with-wsl2-and-ubuntu
 categories:
-  - Tech101
-  - 编程
+  - 教程
 tags:
   - GPU
   - WSL

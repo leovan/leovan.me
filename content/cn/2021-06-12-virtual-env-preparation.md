@@ -5,7 +5,7 @@ date: '2021-06-12'
 slug: virtual-env-preparation
 categories:
   - Tech101
-  - 编程
+  - 教程
 tags:
   - 虚拟环境
   - VirtualBox

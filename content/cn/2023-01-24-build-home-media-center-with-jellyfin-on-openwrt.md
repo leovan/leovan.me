@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2023-01-24'
 slug: build-home-media-center-with-jellyfin-on-openwrt
 categories:
-  - 生活
+  - 教程
 tags:
   - OpenWrt
   - Jellyfin
