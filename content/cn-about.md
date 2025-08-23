@@ -2,7 +2,7 @@
 title: 关于
 author: 范叶亮
 date: '2017-12-04'
-lastmod: '2019-07-22'
+lastmod: '2025-08-23'
 slug: cn/about
 disable_author_date: true
 disable_donate: true
@@ -14,7 +14,7 @@ disable_highlight: true
 
 # 我是谁？
 
-我是**范叶亮**，可以叫我**小黑**或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的[简历](/cn/resume/)页面，当前页面可以让你了解生活中的我。
+我是**范叶亮**，可以叫我**小黑**或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的[简历](/cn/cv/)页面，当前页面可以让你了解生活中的我。
 
 <picture>
   <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">

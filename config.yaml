@@ -71,7 +71,7 @@ menu:
       url: "/cn/about/"
       weight: 8
     - name: "简历"
-      url: "/cn/resume/"
+      url: "/cn/cv/"
       weight: 9
   en:
     - name: "Home"
@@ -89,8 +89,8 @@ menu:
     - name: "About"
       url: "/en/about/"
       weight: 5
-    - name: "Resume"
-      url: "/en/resume/"
+    - name: "CV"
+      url: "/en/cv/"
       weight: 6
 
 params:

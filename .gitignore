@@ -2,7 +2,7 @@
 public
 .hugo_build.lock
 
-# R Common
+# R
 .Rhistory
 .Rproj.user
 .RData

@@ -2,7 +2,7 @@
 title: About
 author: Leo Van
 date: '2017-12-04'
-lastmod: '2019-07-22'
+lastmod: '2025-08-23'
 slug: en/about
 disable_author_date: true
 disable_donate: true
@@ -14,7 +14,7 @@ disable_highlight: true
 
 # Who am I?
 
-I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [Resume](/en/resume/) page. This page will let you know my lifestyle.
+I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [cv](/en/cv/) page. This page will let you know my lifestyle.
 
 <picture>
   <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">

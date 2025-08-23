@@ -2,8 +2,8 @@
 title: 简历
 author: 范叶亮
 date: '2017-12-04'
-lastmod: '2023-04-01'
-slug: cn/resume
+lastmod: '2025-08-23'
+slug: cn/cv
 disable_author_date: true
 disable_donate: true
 disable_comments: true
@@ -126,9 +126,5 @@ _2015.04 ~ 2015.10 算法设计和开发_
 8. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 文档中渲染伪代码的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
 9. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
 10. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
-11. [Rasa 中文文档](https://rasa.leovan.tech)：Rasa 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
-12. [Rasa Pro 中文文档](https://rasa-pro.leovan.tech)：Rasa Pro 中文文档。 ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="https://r2.leovan.me/cv/FanYeliang-CV-zh.pdf" target="_blank" style="border: none;">离线版本 <i class="material-symbols material-symbols-download-outline"></i></a></h2>
-
-<p class="font-kai" style="text-align: right;">更新于：2025-02-16</p>
+<p class="font-kai" style="text-align: right;">更新于：2025-08-23</p>

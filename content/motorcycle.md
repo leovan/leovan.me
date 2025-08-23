@@ -2,7 +2,7 @@
 title: 摩托
 author: 范叶亮
 date: '2021-05-31'
-lastmod: '2021-05-31'
+lastmod: '2025-08-23'
 slug: motorcycle
 disable_author_date: true
 disable_donate: true

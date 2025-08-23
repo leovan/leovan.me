@@ -1,9 +1,9 @@
 ---
-title: Resume
+title: CV
 author: Leo Van
 date: '2017-12-04'
-lastmod: '2023-04-01'
-slug: en/resume
+lastmod: '2025-08-23'
+slug: en/cv
 disable_author_date: true
 disable_donate: true
 disable_comments: true
@@ -128,9 +128,5 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 8. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
 9. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
 10. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
-11. [Rasa Doc](https://rasa.leovan.tech): Rasa document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-doc.svg?style=social&label=Stars)
-12. [Rasa Pro Doc](https://rasa-pro.leovan.tech): Rasa Pro document (Chinese Version). ![github-stars](https://img.shields.io/github/stars/leovan/rasa-pro-doc.svg?style=social&label=Stars)
 
-<h2 style="text-align: right;"><a href="https://r2.leovan.me/cv/FanYeliang-CV-en.pdf" target="_blank" style="border: none;">Offline Version <i class="material-symbols material-symbols-download-outline"></i></a></h2>
-
-<p style="text-align: right;">Updated on: 2025-02-16</p>
+<p style="text-align: right;">Updated on: 2025-08-23</p>
