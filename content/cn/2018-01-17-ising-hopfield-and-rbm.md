@@ -1087,7 +1087,7 @@ $$`
 \end{algorithm}
 {{< /pseudocode >}}
 
-其中，`$k$` 为 CDK 算法参数，`$\text{max_iter}$` 为最大迭代次数，`$\boldsymbol{S}$` 为训练样本，`$n_s = |\boldsymbol{S}|$`，`$\eta$` 为学习率。
+其中，`$k$` 为 CDK 算法参数，`$\text{max\_iter}$` 为最大迭代次数，`$\boldsymbol{S}$` 为训练样本，`$n_s = |\boldsymbol{S}|$`，`$\eta$` 为学习率。
 
 对于模型的评估，最简单的是利用 RBM 模型的似然或对数似然，但由于涉及到归一化因子 `$Z$` 的计算，其复杂度太高。更常用的方式是利用**重构误差** (reconstruction error)，即输入数据和利用 RBM 模型计算得到隐含节点再重构回可见节点之间的误差。
 

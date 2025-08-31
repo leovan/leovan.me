@@ -535,11 +535,11 @@ CRF 层的损失包含两部分，这两部分构成了 CRF 层的关键：
 | `I_ORG` | 3    |
 | `O`     | 4    |
 
-我们利用 `$x_{i y_{j}}$` 表示发射分数，`$i$` 为词的索引，`$y_i$` 为标注标签的索引。例如：`$x_{i=1, y_{j}=2} = x_{w_1, \text{B_ORG}} = 0.1$`，表示 `$w_1$` 为 `B_ORG` 的分数为 0.1。
+我们利用 `$x_{i y_{j}}$` 表示发射分数，`$i$` 为词的索引，`$y_i$` 为标注标签的索引。例如：`$x_{i=1, y_{j}=2} = x_{w_1, \text{B\_ORG}} = 0.1$`，表示 `$w_1$` 为 `B_ORG` 的分数为 0.1。
 
 - 转移分数（Transition Score）
 
-我们利用 `$t_{y_i, y_j}$` 表示转移分数，例如 `$t_{\text{B_PER}, \text{I_PER}} = 0.9$` 表示由标签 `B_PER` 转移到 `I_PER` 的分数为 0.9。因此，需要一个转移分数矩阵用于存储所有标注标签之间的转移分数。为了使得转移分数矩阵更加鲁棒，需要添加两个标签 `START` 和 `END`，分别表示一个句子的开始和结束。下表为一个转移分数矩阵的示例：
+我们利用 `$t_{y_i, y_j}$` 表示转移分数，例如 `$t_{\text{B\_PER}, \text{I\_PER}} = 0.9$` 表示由标签 `B_PER` 转移到 `I_PER` 的分数为 0.9。因此，需要一个转移分数矩阵用于存储所有标注标签之间的转移分数。为了使得转移分数矩阵更加鲁棒，需要添加两个标签 `START` 和 `END`，分别表示一个句子的开始和结束。下表为一个转移分数矩阵的示例：
 
 |         | `START` | `B-PER` | `I-PER` | `B-ORG` | `I-ORG` | `O`  | `END` |
 | ------- | ------- | ------- | ------- | ------- | ------- | ---- | ----- |
@@ -569,8 +569,8 @@ $$`
 
 `$$
 \begin{aligned}
-\text{EmissionScore} = \ &x_{0, \text{START}} + x_{1, \text{B_PER}} + x_{2, \text{I_PER}} \\
-&+ x_{3, \text{O}} + x_{4, \text{B_ORG}} + x_{5, \text{O}} + x_{6, \text{END}}
+\text{EmissionScore} = \ &x_{0, \text{START}} + x_{1, \text{B\_PER}} + x_{2, \text{I\_PER}} \\
+&+ x_{3, \text{O}} + x_{4, \text{B\_ORG}} + x_{5, \text{O}} + x_{6, \text{END}}
 \end{aligned}
 $$`
 
@@ -578,8 +578,8 @@ $$`
 
 `$$
 \begin{aligned}
-\text{TransitionScore} = \ &t_{\text{START}, \text{B_PER}} + t_{\text{B_PER}, \text{I_PER}} + t_{\text{I_PER}, \text{O}} \\
-&+ t_{\text{O}, \text{B_ORG}} + t_{\text{B_ORG}, \text{O}} + t_{\text{O}, \text{END}}
+\text{TransitionScore} = \ &t_{\text{START}, \text{B\_PER}} + t_{\text{B\_PER}, \text{I\_PER}} + t_{\text{I\_PER}, \text{O}} \\
+&+ t_{\text{O}, \text{B\_ORG}} + t_{\text{B\_ORG}, \text{O}} + t_{\text{O}, \text{END}}
 \end{aligned}
 $$`
 

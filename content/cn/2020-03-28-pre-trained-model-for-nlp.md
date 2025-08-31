@@ -338,7 +338,7 @@ $$`
 `$$
 \begin{aligned}
 h_0 &= UW_e + W_p \\
-h_l &= \text{transformer_black} \left(h_{l-1}\right), \forall i \in \left[1, n\right] \\
+h_l &= \text{transformer\_black} \left(h_{l-1}\right), \forall i \in \left[1, n\right] \\
 P \left(u\right) &= \text{softmax} \left(h_n W^{\top}_e\right)
 \end{aligned}
 $$`
@@ -417,7 +417,7 @@ BERT 的输入表示既可以表示一个单独的文本序列，也可以表示
 \mathbf{M}_{ij} &= 
 \begin{cases}
 0, & \text{allow to attend} \\
-- \infty, & \text{prevent from attending}
+-\infty, & \text{prevent from attending}
 \end{cases} \\
 \mathbf{A}_l &= \text{softmax} \left(\dfrac{\mathbf{Q} \mathbf{K}^{\top}}{\sqrt{d_k}} + \mathbf{M}\right) \mathbf{V}_l
 \end{aligned}

@@ -73,7 +73,7 @@ images:
 
 之后 Tim Berners-Lee 又提出了**语义网堆栈**（Semantic Web Stack）的概念。语义网堆栈利用图示解释是不同层面的语言所构成的层级结构，其中，每一层面都将利用下游层面的能力，语义网堆栈如下图所示：
 
-<img src="/images/cn/2021-01-01-network-storage-and-computing/sweb-stack-zh.png" width="60%" />
+{{< figure src="/images/cn/2021-01-01-network-storage-and-computing/sweb-stack-zh.png" large-max-width="60%" >}}
 
 **资源描述框架**（Resource Description Framework，RDF）是用于描述网络资源的 W3C 标准，比如网页的标题、作者、修改日期、内容以及版权信息。
 
