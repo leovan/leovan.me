@@ -1,0 +1,24 @@
+@media print {
+  html,
+  html::after,
+  body {
+    background: none !important;
+  }
+
+  .anchor,
+  .adsbygoogle,
+  .comments,
+  .donate,
+  .donate-modal-wrapper,
+  .menu-left,
+  .menu-top,
+  .shortcode-douban-card,
+  meting-js {
+    display: none !important;
+  }
+
+  .content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

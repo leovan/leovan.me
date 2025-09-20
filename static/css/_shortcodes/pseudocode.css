@@ -1,0 +1,5 @@
+.shortcode-pseudocode,
+.ps-algorithmic {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

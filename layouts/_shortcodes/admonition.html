@@ -1,0 +1,32 @@
+{{- if not ($.Page.Store.Get "shortcode-admonition") }}
+  {{- .Page.Store.Add "shortcode-admonition" 1 }}
+  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/admonition.css" />
+{{- end }}
+
+{{- $lang := "cn" }}
+{{- if (eq $.Page.Section "en") }}
+  {{- $lang = "en" }}
+{{- end }}
+
+{{- $type := .Get "type" | default "quote" }}
+{{- $noIcon := .Get "no-icon" | default false }}
+{{- $foldable := .Get "foldable" | default false }}
+{{- $close := .Get "close" | default true }}
+{{- $hasTitle := and (ne .Params nil) (isset .Params "title") }}
+{{- $title := .Get "title" | default (index (index $.Site.Params.lang.admonition $type) $lang ) }}
+
+{{- if (eq $foldable true) }}
+  <details
+    class="shortcode-admonition shortcode-admonition-{{ $type }} {{ if $noIcon }}shortcode-admonition-no-icon{{ end }} font-kai"
+    {{- if (ne $close true) }} open="open" {{- end }}>
+    <summary class="shortcode-admonition-title">{{ $title | markdownify }}</summary>
+    <p class="shortcode-admonition-content">{{ .Inner | markdownify }}</p>
+  </details>
+{{- else }}
+  <div class="shortcode-admonition shortcode-admonition-{{ $type }} {{ if $noIcon }}shortcode-admonition-no-icon{{ end }} font-kai">
+    {{- if $hasTitle }}
+      <p class="shortcode-admonition-title">{{ $title | markdownify }}</p>
+    {{- end }}
+    <p class="shortcode-admonition-content">{{ .Inner | markdownify }}</p>
+  </div>
+{{- end }}

@@ -28,9 +28,9 @@ tags:
 
 在我的编程语言学习路径中，各个编程语言之间还是存在很大差异的，以最早接触的 Logo 为例，其除了教学目的之外似乎就真的没有什么大用途了。这些编程语言可以大致划分为如下三种类型：
 
-- **通用编程语言（General-purpose Programming Language，GPL）**：Basic，C，C++，Python，JavaScript，TypeScript，Java，Rust
-- **领域特定语言（Domain-Specific Language，DSL）**：Logo，CSS，Matlab，R，SQL
-- **标记语言（Markup Language）**：HTML，Markdown
+- **通用编程语言**（General-purpose Programming Language，GPL）：Basic，C，C++，Python，JavaScript，TypeScript，Java，Rust
+- **领域特定语言**（Domain-Specific Language，DSL）：Logo，CSS，Matlab，R，SQL
+- **标记语言**（Markup Language）：HTML，Markdown
 
 领域特定语言和标记语言就不用多说了，其应用范围有限。通用编程语言虽然定义为通用，但各自也有擅长和不擅长的领域，需要针对实际场景进行选择。
 
@@ -97,11 +97,8 @@ Python 此时就真的很难插入一脚了，不过话无绝对，基于 WebAss
 综上所述，作为数据科学工作的从业者，我将以并将长期以如下四句作为我编程语言选择的重要指导方针：
 
 {{% admonition type="tip" %}}
-人生苦短，我用 <i class="icon icon-python"> Python</i>。
-
-想要甜些，得上 <i class="icon icon-javascript"> JavaScript</i> / <i class="icon icon-typescript"> TypeScript</i>。
-
-开心的话，就用 <i class="icon icon-r"> R</i>。
-
+人生苦短，我用 <i class="icon icon-python"> Python</i>。  
+想要甜些，得上 <i class="icon icon-javascript"> JavaScript</i> / <i class="icon icon-typescript"> TypeScript</i>。  
+开心的话，就用 <i class="icon icon-r"> R</i>。  
 再想更屌，恶补 <i class="icon icon-rust"> Rust</i>。
 {{% /admonition %}}

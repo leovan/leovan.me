@@ -7,12 +7,12 @@ slug: photography
 disable_author_date: true
 disable_donate: true
 disable_comments: true
-disable_adsense: true
-disable_mathjax: true
+disable_google_adsense: true
+disable_math: true
 disable_highlight: true
 ---
 
-<h2 class="center no-anchor"> 「人生定格」</h2>
+<h1 class="center no-anchor"> 「人生定格」</h1>
 
 # 2024
 

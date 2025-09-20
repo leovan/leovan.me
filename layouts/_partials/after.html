@@ -1,0 +1,25 @@
+<script src="/js/theme.js"></script>
+
+{{- if not .IsHome }}
+  <script src="/js/anchor.js"></script>
+{{- end }}
+
+{{- if not .IsHome }}
+  <script src="/js/figure.js"></script>
+{{- end }}
+
+{{- if and (and (and (not .Params.disable_math) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+  <script src="/js/math.js"></script>
+{{- end }}
+
+{{- if and (not .IsHome) .Content }}
+  <script src="https://cdn.jsdmirror.com/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+{{- end }}
+
+{{- partial "highlight.html" . }}
+
+{{- partial "shortcode_douban_card.html" . }}
+{{- partial "shortcode_image_compare.html" . }}
+{{- partial "shortcode_gallery.html" . }}
+{{- partial "shortcode_pseudocode.html" . }}
+{{- partial "shortcode_video.html" . }}

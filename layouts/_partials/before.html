@@ -1,0 +1,11 @@
+{{- partial "google_analytics.html" . }}
+{{- partial "google_adsense.html" . }}
+{{- partial "mathjax.html" . }}
+
+{{- if and (and (and (not .Params.disable_highlight) (ne .Kind "404")) (not .IsHome)) (strings.Contains .Content "</code>") }}
+  <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
+{{- end }}
+
+{{- if and .IsPage (not .Params.disable_donate) }}
+  <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
+{{- end }}

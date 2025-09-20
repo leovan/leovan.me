@@ -52,7 +52,7 @@ images:
 
 {{< figure src="/images/cn/2020-04-11-graph-embedding-and-gnn/graph.png" title="图片来源：[The power of relationships in data](https://www.allthingsdistributed.com/2019/12/power-of-relationships.html)" >}}
 
-通常定义一个图 `$G = \left(V, E\right)$`，其中 `$V$` 为**顶点（Vertices）**集合，`$E$` 为**边（Edges）**集合。对于一条边 `$e = u, v$` 包含两个**端点（Endpoints）** `$u$` 和 `$v$`，同时 `$u$` 可以称为 `$v$` 的**邻居（Neighbor）**。当所有的边为有向边时，图称之为**有向（Directed）**图，当所有边为无向边时，图称之为**无向（Undirected）**图。对于一个顶点 `$v$`，令 `$d \left(v\right)$` 表示连接的边的数量，称之为**度（Degree）**。对于一个图 `$G = \left(V, E\right)$`，其**邻接矩阵（Adjacency Matrix）** `$A \in \mathbb{A}^{|V| \times |V|}$` 定义为：
+通常定义一个图 `$G = \left(V, E\right)$`，其中 `$V$` 为**顶点**（Vertices）集合，`$E$` 为**边**（Edges）集合。对于一条边 `$e = u, v$` 包含两个**端点**（Endpoints） `$u$` 和 `$v$`，同时 `$u$` 可以称为 `$v$` 的**邻居**（Neighbor）。当所有的边为有向边时，图称之为**有向**（Directed）图，当所有边为无向边时，图称之为**无向**（Undirected）图。对于一个顶点 `$v$`，令 `$d \left(v\right)$` 表示连接的边的数量，称之为**度**（Degree）。对于一个图 `$G = \left(V, E\right)$`，其**邻接矩阵**（Adjacency Matrix） `$A \in \mathbb{A}^{|V| \times |V|}$` 定义为：
 
 `$$
 A_{i j}=\left\{\begin{array}{ll}
@@ -61,7 +61,7 @@ A_{i j}=\left\{\begin{array}{ll}
 \end{array}\right.
 $$`
 
-作为一个典型的非欧式数据，对于图数据的分析主要集中在节点分类，链接预测和聚类等。对于图数据而言，**图嵌入（Graph / Network Embedding）**和**图神经网络（Graph Neural Networks, GNN）**是两个类似的研究领域。图嵌入旨在将图的节点表示成一个低维向量空间，同时保留网络的拓扑结构和节点信息，以便在后续的图分析任务中可以直接使用现有的机器学习算法。一些基于深度学习的图嵌入同时也属于图神经网络，例如一些基于图自编码器和利用无监督学习的图卷积神经网络等。下图描述了图嵌入和图神经网络之间的差异：
+作为一个典型的非欧式数据，对于图数据的分析主要集中在节点分类，链接预测和聚类等。对于图数据而言，**图嵌入**（Graph / Network Embedding）和**图神经网络**（Graph Neural Networks, GNN）是两个类似的研究领域。图嵌入旨在将图的节点表示成一个低维向量空间，同时保留网络的拓扑结构和节点信息，以便在后续的图分析任务中可以直接使用现有的机器学习算法。一些基于深度学习的图嵌入同时也属于图神经网络，例如一些基于图自编码器和利用无监督学习的图卷积神经网络等。下图描述了图嵌入和图神经网络之间的差异：
 
 {{< figure src="/images/cn/2020-04-11-graph-embedding-and-gnn/graph-embedding-vs-graph-neural-networks.png" >}}
 
@@ -215,9 +215,9 @@ $$`
 
 metapath2vec [^dong2017metapath2vec] 提出了一种基于元路径的异构网络表示学习方法。在此我们引入 3 个定义：
 
-1. **异构网络（(Heterogeneous information network，HIN）**可以定义为一个有向图 `$G = \left(V, E\right)$`，一个节点类型映射 `$\tau: V \to A$` 和一个边类型映射 `$\phi: E \to R$`，其中对于 `$v \in V$` 有 `$\tau \left(v\right) \in A$`，`$e \in E$` 有 `$\phi \left(e\right) \in R$`，且 `$|A| + |R| > 1$`。
-2. **网络模式（Network schema）**定义为 `$T_G = \left(A, R\right)$`，为一个包含节点类型映射 `$\tau \left(v\right) \in A$` 和边映射 `$\phi \left(e\right) \in R$` 异构网络的 `$G = \left(V, E\right)$` 的元模板。
-3. **元路径（Meta-path）**定义为网络模式 `$T_G = \left(A, R\right)$` 上的一条路径 `$P$`，形式为 `$A_{1} \stackrel{R_{1}}{\longrightarrow} A_{2} \stackrel{R_{2}}{\longrightarrow} \cdots \stackrel{R_{l}}{\longrightarrow} A_{l+1}$`。
+1. **异构网络**（(Heterogeneous information network，HIN）可以定义为一个有向图 `$G = \left(V, E\right)$`，一个节点类型映射 `$\tau: V \to A$` 和一个边类型映射 `$\phi: E \to R$`，其中对于 `$v \in V$` 有 `$\tau \left(v\right) \in A$`，`$e \in E$` 有 `$\phi \left(e\right) \in R$`，且 `$|A| + |R| > 1$`。
+2. **网络模式**（Network schema）定义为 `$T_G = \left(A, R\right)$`，为一个包含节点类型映射 `$\tau \left(v\right) \in A$` 和边映射 `$\phi \left(e\right) \in R$` 异构网络的 `$G = \left(V, E\right)$` 的元模板。
+3. **元路径**（Meta-path）定义为网络模式 `$T_G = \left(A, R\right)$` 上的一条路径 `$P$`，形式为 `$A_{1} \stackrel{R_{1}}{\longrightarrow} A_{2} \stackrel{R_{2}}{\longrightarrow} \cdots \stackrel{R_{l}}{\longrightarrow} A_{l+1}$`。
 
 下图展示了一个学术网络和部分元路径：
 

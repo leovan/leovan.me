@@ -261,7 +261,7 @@ Galileo 是由京东零售研发的图计算平台，提供离线和在线图计
 
 关于图神经网络内容，请参见之前的博客 [图嵌入 (Graph Embedding) 和图神经网络 (Graph Neural Network)](/cn/2020/04/graph-embedding-and-gnn/)。
 
-<h2>:tada::tada::tada: Happe New Year! :tada::tada::tada:</h2>
+<h2><center>🎉🎉🎉 Happy New Year! 🎉🎉🎉</center></h2>
 
 [^fan2018parallelizing]: Fan, W., Yu, W., Xu, J., Zhou, J., Luo, X., Yin, Q., ... & Xu, R. (2018). Parallelizing sequential graph computations. _ACM Transactions on Database Systems (TODS)_, 43(4), 1-39.
 

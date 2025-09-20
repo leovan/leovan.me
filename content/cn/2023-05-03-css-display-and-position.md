@@ -38,7 +38,7 @@ images:
   - /images/cn/2023-05-03-css-display-and-position/css-box-model.png
 ---
 
-CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的属性，其控制着元素在网页中的显示方式。之前对布局和定位可谓是一知半解，最终奏不奏效全凭一顿乱试😂，想了想还是应该细致地了解下，后面虽不妄想写起代码来事半功倍，但至少不会再暴力遍历破解了。
+CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的属性，其控制着元素在网页中的显示方式。之前对布局和定位可谓是一知半解，最终奏不奏效全凭一顿乱试 😂，想了想还是应该细致地了解下，后面虽不妄想写起代码来事半功倍，但至少不会再暴力遍历破解了。
 
 # 盒模型
 
@@ -48,7 +48,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 元素的宽度 `width` 为内容的宽度 + 左边框 + 有边框 + 左内边距 + 右内边距，上例中为 $360+10+10+10+10=400$；元素的的高度 `height` 为内容的高度 + 上边框 + 下边框 + 上内边距 + 下内边距，上例中为 $240+10+10+20+20=300$。在实际中，我们并不能直接设定内容的宽度和高度，只能设置元素的宽度和高度，而显示区域的宽度和高度则通过计算自动设定。
 
-在 CSS 中广泛使用的有两种盒子模型：**块级盒子（block box）** 和 **内联盒子（inline box）**[^mdn-css-box-model]。
+在 CSS 中广泛使用的有两种盒子模型：**块级盒子**（block box） 和 **内联盒子**（inline box）[^mdn-css-box-model]。
 
 **块级盒子**有如下表现行为：
 
@@ -98,15 +98,15 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 本节内容主要参考自：[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 {{% /admonition %}}
 
-**弹性布局（Flexbox Layout，Flexible Box Layout）** 旨在提供一种更加有效的方式来布局、对齐和分配容器中元素之间的空间，即使元素的大小是未知或动态的，这也就是称为“弹性”的原因。
+**弹性布局**（Flexbox Layout，Flexible Box Layout） 旨在提供一种更加有效的方式来布局、对齐和分配容器中元素之间的空间，即使元素的大小是未知或动态的，这也就是称为“弹性”的原因。
 
-弹性布局是一套完整的模块而非一个单一的属性，其中一些属性要设置在**父元素（flex container）** 上，一些属性要设置在**子元素（flex items）** 上。常规布局是基于块级元素和内联元素的的流向，而弹性布局是基于**弹性流向（flex-flow directions）**。下图展示了弹性布局的基本思想：
+弹性布局是一套完整的模块而非一个单一的属性，其中一些属性要设置在**父元素**（flex container） 上，一些属性要设置在**子元素**（flex items） 上。常规布局是基于块级元素和内联元素的的流向，而弹性布局是基于**弹性流向**（flex-flow directions）。下图展示了弹性布局的基本思想：
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-basic-terminology.svg" title="Flexbox 基本思想" >}}
 
 ### 父元素属性
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-container.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-container.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 #### display
 
@@ -137,7 +137,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### flex-wrap
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-wrap.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-wrap.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 默认情况下会将子元素放置在一行中，该属性用于设置换行模式。
 
@@ -163,7 +163,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### justify-content
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-justify-content.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-justify-content.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性用于设置主轴（main axis）方向的对齐方式。
 
@@ -182,7 +182,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-items
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-items.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-items.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性用于设置交叉轴（cross axis）方向的对齐方式。
 
@@ -200,7 +200,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-content
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-content.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-content.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性用于设置当交叉轴上有额外的空间时容器多行的内部对齐方式，类似 `justify-content` 设置主轴上子元素的对齐方式。
 
@@ -225,7 +225,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### gap, row-gap, column-gap
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-gap.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-gap.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性用于控制子元素之间的间距，其仅用于非边缘子元素之间的间距。
 
@@ -244,11 +244,11 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ### 子元素属性
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-items.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-items.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 #### order
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-order.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-order.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 默认情况下，子元素按照代码顺序排列。该属性可以控制子元素在容器中的顺序。
 
@@ -260,7 +260,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### flex-grow
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-grow.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-grow.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性定义了子元素在必要时的扩张能力，其接受一个整数比例值用于设定子元素占用容器的空间。如果所有子元素的 `flew-grow` 都设置为 1，则所有子元素将评分容器的剩余空间；如果一个子元素的 `flex-grow` 设置为 2，则该子元素将尝试占用其他子元素 2 倍大小的空间。
 
@@ -302,7 +302,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 #### align-self
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-self.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-self.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 该属性可以覆盖由 `align-items` 指定的对齐方式。
 
@@ -318,7 +318,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 本节内容主要参考自：[A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 {{% /admonition %}}
 
-**网格布局（Grid Layout）** 是一种基于网格的布局系统，相比于沿轴线 **一维布局** 的弹性布局，网格布局可以看做是一种 **二维布局**。
+**网格布局**（Grid Layout）是一种基于网格的布局系统，相比于沿轴线 **一维布局** 的弹性布局，网格布局可以看做是一种 **二维布局**。
 
 ### 核心概念
 
@@ -410,7 +410,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 网格线默认将会被分为正整数（-1 作为最后一个的替代值）。
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-columns-rows-01.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-columns-rows-01.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 同时也可以明确指定这些线的名称，请注意括号命名语法：
 
@@ -421,7 +421,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-columns-rows-02.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-columns-rows-02.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 请注意，一个行或列可以有多个名称：
 
@@ -481,7 +481,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  grid-template-areas: 
+  grid-template-areas:
     "<grid-area-name> | . | none | ..."
     "...";
 }
@@ -505,7 +505,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "main main . sidebar"
     "footer footer footer footer";
@@ -514,7 +514,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 上述示例将创建一个 4 列 3 行的网格。整个顶部为 `header` 区域，中间一行由 `main` 和 `sidebar` 两个区域和一个空单元格组成，最后一行为 `footer`。
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-areas.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-template-areas.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 声明中的每一行都需要有相同数量的单元格。可以使用任意数量的句点声明一个空单元格，只要句点之间没有空格，就代表一个单元格。
 
@@ -547,8 +547,8 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 .container {
   grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
   grid-template-columns: auto 50px auto;
-  grid-template-areas: 
-    "header header header" 
+  grid-template-areas:
+    "header header header"
     "footer footer footer";
 }
 ```
@@ -574,13 +574,13 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 ```css
 .container {
   grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px; 
+  grid-template-rows: 80px auto 80px;
   column-gap: 10px;
   row-gap: 15px;
 }
 ```
 
-{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-gap.svg" middle-max-width="60%" >}}
+{{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-gap.svg" middle-max-width="60%" large-max-width="40%" >}}
 
 间距仅在列和行之间创建，不在边缘创建。注意，带有 `grid-` 前缀的属性将被废弃。
 
@@ -601,7 +601,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 ```css
 .container {
   grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px; 
+  grid-template-rows: 80px auto 80px;
   gap: 15px 10px;
 }
 ```
@@ -732,7 +732,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
 }
 ```
 
@@ -806,13 +806,13 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: start | end | center | stretch | space-around | space-between | space-evenly;    
+  align-content: start | end | center | stretch | space-around | space-between | space-evenly;
 }
 ```
 
 ```css
 .container {
-  align-content: start;    
+  align-content: start;
 }
 ```
 
@@ -820,7 +820,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: end;    
+  align-content: end;
 }
 ```
 
@@ -828,7 +828,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: center;    
+  align-content: center;
 }
 ```
 
@@ -836,7 +836,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: stretch;    
+  align-content: stretch;
 }
 ```
 
@@ -844,7 +844,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: space-around;    
+  align-content: space-around;
 }
 ```
 
@@ -852,7 +852,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: space-between;    
+  align-content: space-between;
 }
 ```
 
@@ -860,7 +860,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 ```css
 .container {
-  align-content: space-evenly;    
+  align-content: space-evenly;
 }
 ```
 
@@ -1057,11 +1057,11 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 
 .container {
-  grid-template-areas: 
+  grid-template-areas:
     "header header header"
     "footer footer footer";
   grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
-  grid-template-columns: auto 50px auto;    
+  grid-template-columns: auto 50px auto;
 }
 ```
 
@@ -1306,7 +1306,7 @@ body {
 h1 {
   text-align: center;
 }
-  
+
 p {
   margin: 10px;
   padding: 10px;
@@ -1318,7 +1318,7 @@ p {
 
 ## 静态定位
 
-**静态定位（`static`）** 是 `position` 属性的 **默认值**，它表示将元素放置在文档布局流的默认位置上。
+**静态定位**（`static`）是 `position` 属性的 **默认值**，它表示将元素放置在文档布局流的默认位置上。
 
 静态定位样式为：
 
@@ -1334,7 +1334,7 @@ p {
 
 ## 相对定位
 
-**相对定位（`relative`）** 表示相对于 **静态定位** 的默认位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。
+**相对定位**（`relative`）表示相对于 **静态定位** 的默认位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。
 
 相对定位样式为：
 
@@ -1354,7 +1354,7 @@ p {
 
 ## 绝对定位
 
-**绝对定位（`absolute`）** 表示相对于 **上级元素** 的位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。绝对定位的定位基点不能为 `static` 定位，否则定位基点将变成网页根元素 `html`。
+**绝对定位**（`absolute`）表示相对于 **上级元素** 的位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。绝对定位的定位基点不能为 `static` 定位，否则定位基点将变成网页根元素 `html`。
 
 绝对定位样式为：
 
@@ -1374,7 +1374,7 @@ p {
 
 ## 固定定位
 
-**固定定位（`fixed`）** 表示相对于 **视窗（viewport，即浏览器窗口）** 进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。利用固定定位可以实现元素位置不随页面滚动而发生变化。
+**固定定位**（`fixed`）表示相对于 **视窗**（viewport，即浏览器窗口）进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。利用固定定位可以实现元素位置不随页面滚动而发生变化。
 
 为了演示固定定位，修改 HTML 代码如下：
 
@@ -1408,7 +1408,7 @@ p {
 
 ## 粘性定位
 
-**粘性定位（`sticky`）** 可以理解为 **静态定位（`static`）** 和 **固定定位（`fixed`）** 的 **混合**。当指定一个元素的 `position` 属性为 `sticky` 后，它会在正常布局流中滚动，直至它出现在设定的相对于容器的位置，此时它会停止滚动，表现为固定定位。
+**粘性定位**（`sticky`）可以理解为 **静态定位**（`static`）和 **固定定位**（`fixed`）的 **混合**。当指定一个元素的 `position` 属性为 `sticky` 后，它会在正常布局流中滚动，直至它出现在设定的相对于容器的位置，此时它会停止滚动，表现为固定定位。
 
 为了演示粘性定位，修改 HTML 代码如下：
 

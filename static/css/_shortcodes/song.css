@@ -1,0 +1,28 @@
+:root {
+  --color-shortcode-song-background: #eeeeee;
+
+  --shadow-shortcode-song: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
+}
+
+.dark {
+  --color-shortcode-song-background: #383838;
+}
+
+.aplayer {
+  margin: 1em auto !important;
+  border-radius: 0.2rem !important;
+  background: var(--color-shortcode-song-background) !important;
+  box-shadow: var(--shadow-shortcode-song) !important;
+}
+
+.aplayer .aplayer-lrc:before {
+  display: none !important;
+}
+
+.aplayer .aplayer-lrc:after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    var(--color-shortcode-song-background) 100%
+  ) !important;
+}

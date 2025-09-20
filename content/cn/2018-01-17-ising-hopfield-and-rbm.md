@@ -26,7 +26,7 @@ images:
 
 # Ising 模型
 
-`$\renewcommand{\sign}{\operatorname{sign}}$`[Ising 模型](https://zh.wikipedia.org/zh/易辛模型)最早是由物理学家威廉·冷次在 1920 年发明的，他把该模型当成是一个给他学生恩斯特·易辛的问题。易辛在他一篇 1924 年的论文 [^ising1924contribution] 中求得了一维易辛模型的解析解，并且证明它不会产生相变。 二维方晶格易辛模型相对于一维的难出许多，因此其解析的描述在一段时间之后才在 1943 年由拉斯·昂萨格给出 [^onsager1944a]。
+[Ising 模型](https://zh.wikipedia.org/zh/易辛模型)最早是由物理学家威廉·冷次在 1920 年发明的，他把该模型当成是一个给他学生恩斯特·易辛的问题。易辛在他一篇 1924 年的论文 [^ising1924contribution] 中求得了一维易辛模型的解析解，并且证明它不会产生相变。 二维方晶格易辛模型相对于一维的难出许多，因此其解析的描述在一段时间之后才在 1943 年由拉斯·昂萨格给出 [^onsager1944a]。
 
 Ising 模型假设铁磁物质是由一堆规则排列的小磁针构成，每个磁针只有上下两个方向。相邻的小磁针之间通过能量约束发生相互作用，同时受到环境热噪声的干扰而发生磁性的随机转变。涨落的大小由关键的温度参数决定，温度越高，随机涨落干扰越强，小磁针越容易发生无序而剧烈地状态转变，从而让上下两个方向的磁性相互抵消，整个系统消失磁性，如果温度很低，则小磁针相对宁静，系统处于能量约束高的状态，大量的小磁针方向一致，铁磁系统展现出磁性。而当系统处于临界温度 `$T_C$` 时，Ising 模型表现出一系列幂律行为和自相似现象 [^ising-model]。
 
@@ -71,7 +71,7 @@ $$`
 each_round <- function(current_matrix, ising_config) {
     n_row <- nrow(current_matrix)
     n_col <- ncol(current_matrix)
-    
+
     for (i in 1:n_row) {
         for (j in 1:n_col) {
             current_row <- sample(1:n_row, 1)
@@ -84,15 +84,15 @@ each_round <- function(current_matrix, ising_config) {
                 s * ising_config$j
             mu <- min(exp((e + e) / (ising_config$k * ising_config$t)), 1)
             mu_random <- runif(1)
-            
+
             if (mu_random < mu) {
                 s <- -1 * s
             }
-            
+
             current_matrix[current_row, current_col] <- s
         }
     }
-    
+
     current_matrix
 }
 
@@ -101,23 +101,23 @@ ising_simulation <- function(N, iter, ising_config, saved_steps) {
     set.seed(112358)
     current_matrix <- matrix(sample(0:1, N^2, replace = T), N, N)*2-1
     saved_matrix <- list()
-    
+
     if (0 %in% saved_steps) {
         saved_matrix <- c(saved_matrix, list(current_matrix))
     }
-    
+
     for (i in 1:iter) {
         if (i %in% saved_steps) {
             saved_matrix <- c(saved_matrix, list(current_matrix))
         }
-        
+
         current_matrix <- each_round(current_matrix, ising_config)
-        
+
         if (i %% 1000 == 0) {
             cat(paste0("Steps: ", i, '\n'))
         }
     }
-    
+
     saved_matrix
 }
 
@@ -180,6 +180,7 @@ $$`
 其中，DHNN 中 `$f$` 多为符号函数，即
 
 `$$
+\renewcommand{\sign}{\operatorname{sign}}
 x_i = \sign \left(net_i\right) = \begin{cases}
 1, net_i \geq 0 \\
 -1, net_i < 0
@@ -287,20 +288,20 @@ digits_patterns <- lapply(digits, function(digit) {
 
 ```r
 #' 训练 Hopfield 网络
-#' 
+#'
 #' @param n 网络节点个数
 #' @param pattern_list 模式列表
 #' @return 训练好的 Hopfield 网络
 train_hopfield <- function(n, pattern_list) {
     weights <- matrix(rep(0, n*n), n, n)
     n_patterns <- length(pattern_list)
-    
+
     for (i in 1:n_patterns) {
         weights <- weights + pattern_list[[i]] %o% pattern_list[[i]]
     }
     diag(weights) <- 0
     weights <- weights / n_patterns
-    
+
     list(weights = weights, n = n)
 }
 
@@ -347,21 +348,21 @@ run_hopfield <- function(hopfield_network, pattern,
                          max_iter = 100, save_history = T) {
     last_pattern <- pattern
     history_patterns <- list()
-    
+
     for (iter in 1:max_iter) {
         current_pattern <- last_pattern
-        
+
         i <- round(runif(1, 1, hopfield_network$n))
         net_i <- hopfield_network$weights[i, ] %*% current_pattern
         current_pattern[i] <- ifelse(net_i < 0, -1, 1)
-        
+
         if (save_history) {
             history_patterns[[iter]] <- last_pattern
         }
-        
+
         last_pattern <- current_pattern
     }
-    
+
     list(history_patterns = history_patterns,
          final_pattern = last_pattern)
 }
@@ -371,7 +372,6 @@ digits_test_results_patterns <- lapply(digits_test_patterns,
                                        function(pattern) {
     run_hopfield(digits_hopfield_network, pattern, max_iter = 300)
 })
-
 # 转换测试数据结果为图片
 digits_test_results <- lapply(digits_test_results_patterns,
                               function(result) {
@@ -521,7 +521,7 @@ $$`
 1, x = y \\
 0, x \neq y
 \end{cases}
-, 
+,
 \delta_{ij} = \begin{cases}
 1, i = j \\
 0, i \neq j
@@ -570,7 +570,7 @@ cities <- data.frame(
 distance_matrix <- function(points) {
     n <- nrow(points)
     d <- matrix(rep(0, n^2), n, n)
-    
+
     for (i in 1:n) {
         for (j in i:n) {
             distance <- sqrt((points[i, ]$x - points[j, ]$x)^2 +
@@ -579,7 +579,7 @@ distance_matrix <- function(points) {
             d[j, i] <- distance
         }
     }
-    
+
     d
 }
 
@@ -594,7 +594,7 @@ check_path_valid <- function(v, n) {
             }
         }
     }
-    
+
     # 时间约束
     c2 <- 0
     for (i in 1:n) {
@@ -604,17 +604,17 @@ check_path_valid <- function(v, n) {
             }
         }
     }
-    
+
     # 有效性约束
     c3 <- sum(v)
-    
+
     ifelse(c1 == 0 & c2 == 0 & c3 == n, T, F)
 }
 
 # 根据结果矩阵获取路径
 v_to_path <- function(v, n) {
     p <- c()
-    
+
     for (i in 1:n) {
         for (x in 1:n) {
             if (v[x, i] == 1) {
@@ -623,7 +623,7 @@ v_to_path <- function(v, n) {
             }
         }
     }
-    
+
     p
 }
 
@@ -631,11 +631,11 @@ v_to_path <- function(v, n) {
 path_distance <- function(v, n, d) {
     p <- v_to_path(v, n)
     p <- c(p, p[1])
-    distance <- 0 
+    distance <- 0
     for (i in 1:(length(p)-1)) {
         distance <- distance + d[p[i], p[i+1]]
     }
-    
+
     distance
 }
 
@@ -647,7 +647,7 @@ tsp_chnn <- function(d, n, gamma = 0.02, alpha = 0.0001,
     v <- matrix(runif(n^2), n, n)
     u <- matrix(rep(1, n^2), n, n) * (-gamma * log(n-1) / 2)
     du <- matrix(rep(0, n^2), n, n)
-    
+
     for (iter in 1:max_iter) {
         for (x in 1:n) {
             for (i in 1:n) {
@@ -659,7 +659,7 @@ tsp_chnn <- function(d, n, gamma = 0.02, alpha = 0.0001,
                     }
                 }
                 e1 <- -A * e1
-                
+
                 # E2
                 e2 <- 0
                 for (y in 1:n) {
@@ -668,10 +668,10 @@ tsp_chnn <- function(d, n, gamma = 0.02, alpha = 0.0001,
                     }
                 }
                 e2 <- -B * e2
-                
+
                 # E3
                 e3 <- -C * (sum(v) - n)
-                
+
                 # E4
                 e4 <- 0
                 for (y in 1:n) {
@@ -681,16 +681,16 @@ tsp_chnn <- function(d, n, gamma = 0.02, alpha = 0.0001,
                     }
                 }
                 e4 <- -D * e4
-                
+
                 du[x, i] <- e1 + e2 + e3 + e4 - u[x, i] / tau
             }
         }
-        
+
         u <- u + alpha * du
         v <- (1 + tanh(u / gamma)) / 2
         v <- ifelse(v >= theta, 1, 0)
     }
-    
+
     v
 }
 
@@ -705,7 +705,7 @@ tsp_solutions <- lapply(1:100, function(round) {
     v <- tsp_chnn(d, n)
     valid <- check_path_valid(v, n)
     distance <- ifelse(valid, path_distance(v, n, d), NA)
-    
+
     list(round = round, valid = valid,
          distance = distance, v = v)
 })
@@ -1021,8 +1021,8 @@ $$`
     \FORALL{$\boldsymbol{v \in S}$}
         \STATE $\boldsymbol{v}^{\left(0\right)} \gets \boldsymbol{v}$
         \FOR{$t = 0, 1, ..., k-1$}
-            \STATE $\boldsymbol{h}^{\left(t\right)} \gets \text{sample_h_given_v} \left(\boldsymbol{v}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
-            \STATE $\boldsymbol{v}^{\left(t+1\right)} \gets \text{sample_v_given_h} \left(\boldsymbol{h}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
+            \STATE $\boldsymbol{h}^{\left(t\right)} \gets \text{sample\_h\_given\_v} \left(\boldsymbol{v}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
+            \STATE $\boldsymbol{v}^{\left(t+1\right)} \gets \text{sample\_v\_given\_h} \left(\boldsymbol{h}^{\left(t\right)}, \text{RBM}\left(W, b, c\right)\right)$
         \ENDFOR
         \FOR{$i = 1, 2, ..., n_h; j = 1, 2, ..., n_v$}
             \STATE $\Delta w_{i, j} \gets \Delta w_{i, j} + \left[P\left(h_i=1|\boldsymbol{v}^{\left(0\right)}\right) v_j^{\left(0\right)} - P\left(h_i=1|\boldsymbol{v}^{\left(k\right)}\right) v_j^{\left(k\right)}\right]$
@@ -1120,9 +1120,9 @@ bbrbm_errs = bbrbm.fit(mnist_train_images, n_epoches=30, batch_size=10)
 
 # Epoch: 0: 100%|##########| 5500/5500 [00:11<00:00, 480.39it/s]
 # Train error: 0.1267
-# 
+#
 # ......
-# 
+#
 # Epoch: 29: 100%|##########| 5500/5500 [00:11<00:00, 482.15it/s]
 # Train error: 0.0347
 ```
@@ -1188,7 +1188,7 @@ def plot_mnist(mnist_images, nrows, ncols, cmap='gray'):
             ax.axis('off')
 
     return fig
-    
+
 plot_mnist(mnist_test_images_samples_plt, 10, 20)
 ```
 

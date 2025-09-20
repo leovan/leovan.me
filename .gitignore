@@ -2,12 +2,6 @@
 public
 .hugo_build.lock
 
-# R
-.Rhistory
-.Rproj.user
-.RData
-.Ruserdata
-
 # VS Code
 .vscode
 
@@ -17,8 +11,9 @@ public
 *.pyo
 .ipynb_checkpoints
 
-# JetBrains
-.idea
+# Node
+node_modules
+package-lock.json
 
 # Data
 *.zip

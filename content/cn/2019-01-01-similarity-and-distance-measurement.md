@@ -403,4 +403,4 @@ $$`
 
 关于流形距离请参见之前的博客：[流形学习 (Manifold Learning)](/cn/2018/03/manifold-learning)。
 
-<h2>:tada::tada::tada: Happe New Year! :tada::tada::tada:</h2>
+<h2><center>🎉🎉🎉 Happy New Year! 🎉🎉🎉</center></h2>

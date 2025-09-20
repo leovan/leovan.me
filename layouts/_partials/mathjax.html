@@ -1,0 +1,27 @@
+{{- if and (and (and (not .Params.disable_math) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+  <script>
+    MathJax = {
+      loader: {
+        load: ["[tex]/boldsymbol"]
+      },
+      options: {
+        enableEnrichment: false,
+        enableExplorer: false,
+      },
+      output: {
+        displayOverflow: "scroll"
+      },
+      tex: {
+        tags: "all",
+        inlineMath: [["$","$"], ["\\(","\\)"]],
+        displayMath: [["$$","$$"]],
+        processEscapes: true,
+        processEnvironments: true,
+        packages: {
+          "[+]": ["boldsymbol"]
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdmirror.com/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/tex-chtml.js" crossorigin="anonymous"></script>
+{{- end }}

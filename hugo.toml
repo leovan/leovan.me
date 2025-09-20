@@ -1,0 +1,273 @@
+baseURL = "https://leovan.me/"
+hasCJKLanguage = true
+ignoreFiles = [
+  "\\.Rmarkdown$",
+  "\\.Rmd$\"",
+  "\\.knit\\.md$",
+  "\\.utf8\\.md$",
+  "_files$",
+  "_cache$",
+  "\\.txt$",
+  "\\.csv$",
+  "\\.tsv$",
+  "\\.tgz$",
+  "\\.tar$",
+  "\\.gz$",
+  "\\.zip$",
+  "\\.npz$"
+]
+languageCode = "zh-cn"
+title = "范叶亮 | Leo Van"
+rssLimit = 100
+
+[services.googleAnalytics]
+ID = "G-RJC7CCKE67"
+
+[permalinks]
+cn = "/cn/:year/:month/:slug/"
+en = "/en/:year/:month/:slug/"
+
+[taxonomies]
+category = "categories"
+
+[[menu.home]]
+name = "博客"
+url = "/cn/"
+weight = 1
+
+[[menu.home]]
+name = "关于"
+url = "/cn/about/"
+weight = 2
+
+[[menu.home]]
+name = "Blog"
+url = "/en/"
+weight = 3
+
+[[menu.home]]
+name = "About"
+url = "/en/about/"
+weight = 4
+
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "博客"
+url = "/cn/"
+weight = 2
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+weight = 3
+
+[[menu.main]]
+identifier = "cn-menu-separator-1"
+url = "#menu-separator"
+weight = 4
+
+[[menu.main]]
+name = "摄影"
+url = "/photography/"
+weight = 5
+
+[[menu.main]]
+name = "烹饪"
+url = "/cooking/"
+weight = 6
+
+[[menu.main]]
+name = "摩托"
+url = "/motorcycle/"
+weight = 7
+
+[[menu.main]]
+name = "关于"
+url = "/cn/about/"
+weight = 8
+
+[[menu.main]]
+name = "简历"
+url = "/cn/cv/"
+weight = 9
+
+[[menu.en]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.en]]
+name = "Blog"
+url = "/en/"
+weight = 2
+
+[[menu.en]]
+name = "Categories"
+url = "/categories/"
+weight = 3
+
+[[menu.en]]
+identifier = "en-menu-separator-1"
+url = "#menu-separator"
+weight = 4
+
+[[menu.en]]
+name = "About"
+url = "/en/about/"
+weight = 5
+
+[[menu.en]]
+name = "CV"
+url = "/en/cv/"
+weight = 6
+
+[params]
+description = "范叶亮的个人网站 | Leo Van's Personal Website"
+footer = "Copyright &copy; 2017-{Year} 范叶亮 Leo Van"
+licenseURL = "https://github.com/leovan/leovan.me/blob/main/LICENSE"
+googleAdsense = "ca-pub-2608165017777396"
+categories = "分类 | Categories"
+aplayerVersion = "1.10.1"
+clipboardjsVersion = "2.0.11"
+imageCompareViewerVersion = "latest"
+jQueryVersion = "3.7.1"
+jsCookieVersion = "3.0.5"
+justifiedgalleryVersion = "3.8.1"
+lazysizesVersion = "5.3.2"
+lightgalleryVersion = "2.8.3"
+mathjaxVersion = "4.0.0"
+metingjsVersion = "2.0.1"
+pseudocodeVersion = "latest"
+swiperVersion = "12.0.1"
+vanillaBackToTopVersion = "latest"
+videojsVersion = "8.23.4"
+metingApi = "https://api.obdo.cc/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r"
+
+[params.lang.slogan]
+en = "Soldier to Soldier"
+cn = "手中有刀，心里有佛"
+
+[params.lang.author]
+en = "Leo Van"
+cn = "范叶亮"
+
+[params.lang.license]
+cn = "版权"
+en = "License"
+
+[params.lang.subscribe]
+cn = "订阅"
+en = "Subscribe"
+
+[params.lang.categories]
+cn = "分类"
+en = "Categories"
+
+[params.lang.tags]
+cn = "标签"
+en = "Tags"
+
+[params.lang.wordcount]
+cn = "字数"
+en = "Word Count"
+
+[params.lang.admonition.note]
+cn = "注意"
+en = "Note"
+
+[params.lang.admonition.abstract]
+cn = "摘要"
+en = "Abstract"
+
+[params.lang.admonition.info]
+cn = "信息"
+en = "Info"
+
+[params.lang.admonition.tip]
+cn = "提示"
+en = "Tip"
+
+[params.lang.admonition.success]
+cn = "成功"
+en = "Success"
+
+[params.lang.admonition.question]
+cn = "问题"
+en = "Question"
+
+[params.lang.admonition.warning]
+cn = "警告"
+en = "Warning"
+
+[params.lang.admonition.failure]
+cn = "失败"
+en = "Failure"
+
+[params.lang.admonition.danger]
+cn = "危险"
+en = "Danger"
+
+[params.lang.admonition.bug]
+cn = "错误"
+en = "Bug"
+
+[params.lang.admonition.example]
+cn = "示例"
+en = "Example"
+
+[params.lang.admonition.quote]
+cn = "引用"
+en = "Quote"
+
+[params.lang.donate]
+cn = "赞赏"
+en = "DONATE"
+
+[params.lang.donate_slogan]
+cn = "「真诚赞赏，手留余香」"
+en = "「Donation Given, Fragrance in Hand」"
+
+[params.lang.donate_2_cny]
+cn = "2 元"
+en = "2 CNY"
+
+[params.lang.donate_5_cny]
+cn = "5 元"
+en = "5 CNY"
+
+[params.lang.donate_10_cny]
+cn = "10 元"
+en = "10 CNY"
+
+[params.lang.donate_50_cny]
+cn = "50 元"
+en = "50 CNY"
+
+[params.lang.donate_100_cny]
+cn = "100 元"
+en = "100 CNY"
+
+[params.lang.donate_custom_cny]
+cn = "任意金额"
+en = "CUSTOM"
+
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.parser]
+autoIDType = "blackfriday"
+
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 4
+
+[[module.mounts]]
+source = "assets"
+target = "assets"

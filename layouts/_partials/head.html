@@ -1,0 +1,109 @@
+{{- $title := printf "%s - %s" .Title site.Title | safeHTML }}
+
+{{- if .IsHome }}
+  {{- $title = site.Title }}
+{{- else if eq .Kind "taxonomy" }}
+  {{- $title = index site.Params (lower .Title) | markdownify }}
+{{- end }}
+
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}
+  {{ $lang = "en" }}
+{{- end }}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>{{ $title }}</title>
+
+<meta name="referrer" content="no-referrer">
+
+<meta property="og:title" content="{{ $title }}">
+<meta name="description" property="og:description" content="{{ if .IsHome }}{{ site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ site.Params.description | safeHTML }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{- with or .Params.author (index site.Params.lang.author $lang) }}
+  <meta name="author" property="article:author" content="{{ . }}">
+{{- end }}
+
+{{- with .Date }}
+  <meta name="date" property="article:published_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
+{{- end }}
+{{- with .Lastmod }}
+  <meta name="date" property="article:modified_time" content="{{ dateFormat "2006-01-02" . }}" scheme="YYYY-MM-DD">
+{{- end }}
+
+{{- if .Keywords }}
+  <meta name="keywords" property="article:tag" content ="{{ delimit .Keywords "," }}">
+{{- else if .Params.tags }}
+  <meta name="keywords" property="article:tag" content ="{{ delimit .Params.tags "," }}">
+{{- end }}
+
+<meta name="theme-color" content="#0d0d0d">
+
+<link rel="icon" type="image/png" sizes="16x16" href="/images/web/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/web/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/web/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="62x62" href="/images/web/favicon-62x62.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/web/favicon-192x192.png">
+<link rel="apple-touch-icon" size="192x192" href="/images/web/icon-192x192.png">
+<link rel="manifest" href="/manifest.json">
+
+{{- if .IsPage }}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ .Section | absURL | jsonify | safeJS }}
+      },
+      "name": {{ .Title | jsonify | safeJS }},
+      "headline": {{ .Title | jsonify | safeJS }},
+      "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage }}{{ .Summary | jsonify | safeJS }}{{ end }},
+      "genre": [
+        {{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}
+      ],
+      "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
+      "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
+      "wordCount": "{{ .WordCount }}",
+      "keywords": [
+        {{ if .Keywords }}{{ range $i, $e := .Keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ else if .Params.tags }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ end }}
+      ],
+      "image": [
+        {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL | jsonify | safeJS }}{{ end }}
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "{{ (or .Params.author (index site.Params.lang.author $lang)) }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ (or .Params.author (index site.Params.lang.author $lang)) }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ "/images/web/publisher-logo.png" | absURL | jsonify | safeJS }}
+        }
+      },
+      "url": {{ .Permalink | absURL | jsonify | safeJS }}
+    }
+  </script>
+{{- else }}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
+      "name": {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s - %s" .Title site.Title | jsonify | safeJS }}{{ end }},
+      "description": {{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ printf "%s - %s" .Title site.Params.description | jsonify | safeJS }}{{ end }},
+      "author": {
+        "@type": "Person",
+        "name": "{{ (or .Params.author (index site.Params.lang.author $lang)) }}"
+      },
+      "url": {{ .Permalink | absURL | jsonify | safeJS }}
+    }
+  </script>
+{{- end }}
+
+{{- $.Page.Store.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}

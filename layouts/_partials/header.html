@@ -1,0 +1,102 @@
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}
+  {{ $lang = "en" }}
+{{- end }}
+
+{{- $currentPage := . }}
+{{- $menu := "main" }}
+{{- if .IsHome }}
+  {{- $menu = "home" }}
+{{- else }}
+  {{- $menu = $.Page.Store.Get "section" }}
+{{- end }}
+
+{{- if not .IsHome }}
+  <div class="meta">
+    <h1 class="title">
+      {{- if eq .Kind "taxonomy" }}
+        {{- index $.Site.Params (lower .Title) | markdownify }}
+      {{- else }}
+        {{- .Title | markdownify }}
+      {{- end }}
+    </h1>
+
+    {{- with .Params.subtitle }}
+      <h2 class="subtitle">{{ . | markdownify }}</h2>
+    {{- end }}
+
+    {{- if .IsPage }}
+      {{- if not .Params.disable_author_date }}
+        <div class="author-date">
+        {{- with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}
+          {{  print . " / " }}
+        {{- end }}
+        {{- if .Lastmod }}{{- if gt .Lastmod 0 }}
+          {{ .Lastmod.Format "2006-01-02" }}
+        {{- end }}
+        {{- else if .Date }}
+          {{- if gt .Date 0 }}
+            {{ .Date.Format "2006-01-02" }}
+          {{- end }}
+        {{- end }}
+        </div>
+      {{- end }}
+
+      {{- if or (.Params.categories) (.Params.tags) }}
+        <div class="category-tag">
+          {{- if .Params.categories }}
+            {{- if gt (len .Params.categories) 0 }}
+              <strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>
+              {{- range $index, $categories := .Params.categories }}
+                {{- if gt $index 0 }}, {{- end }}
+                <a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+              {{- end }}
+            {{- end }}
+          {{- end }}
+
+          {{- if or (.Params.categories) (.Params.tags) }}
+            {{- if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+              /
+            {{- end }}
+          {{- end }}
+
+          <strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
+          {{ .WordCount }}
+
+          {{- if and (.Params.categories) (.Params.tags) }}
+            {{- if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
+              /
+            {{- end }}
+          {{- end }}
+
+          {{- if .Params.tags }}
+            {{- if gt (len .Params.tags) 0 }}
+              <strong>{{ index $.Site.Params.lang.tags $lang }}: </strong>
+              {{- range $index, $tags := .Params.tags }}
+                {{- if gt $index 0 }}, {{- end }}
+                <span>{{ . }}</span>
+              {{- end }}
+            {{- end }}
+          {{- end }}
+        </div>
+      {{- end }}
+    {{- end }}
+    <hr>
+  </div>
+{{- end }}
+
+{{- if and (not .Params.disable_google_adsense) (and (not .IsHome) .Content) }}
+  {{- with $.Site.Params.googleAdsense }}
+    <ins
+      class="adsbygoogle adsbygoogle-post-header"
+      style="display: block; text-align: center"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="{{ . }}"
+      data-ad-slot="8302038603"
+    ></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  {{- end }}
+{{- end }}

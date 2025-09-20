@@ -271,7 +271,7 @@ $$`
 
 - **LSA, PLSA, LDA & HDP**
 
-**潜在语义分析（LSA, Latent Semantic Analysis）**[^deerwester1990indexing] 的核心思想是将文本的高维词空间映射到一个低维的向量空间，我们称之为隐含语义空间。降维可以通过[奇异值分解（SVD）](/cn/2017/12/evd-svd-and-pca/)实现，令 `$X$` 表示语料矩阵，元素 `$\left(i, j\right)$` 表示词 `$i$` 和文档 `$j$` 的共现情况（例如：词频）：
+**潜在语义分析**（LSA, Latent Semantic Analysis）[^deerwester1990indexing] 的核心思想是将文本的高维词空间映射到一个低维的向量空间，我们称之为隐含语义空间。降维可以通过[奇异值分解（SVD）](/cn/2017/12/evd-svd-and-pca/)实现，令 `$X$` 表示语料矩阵，元素 `$\left(i, j\right)$` 表示词 `$i$` 和文档 `$j$` 的共现情况（例如：词频）：
 
 `$$
 X = \mathbf{d}_{j} \cdot \mathbf{t}_{i}^{T} = \left[\begin{array}{c} x_{1, j} \\ \vdots \\ x_{i, j} \\ \vdots \\ x_{m, j} \end{array}\right] \cdot \left[\begin{array}{ccccc}
@@ -318,7 +318,7 @@ LSA 的缺点：
 4. 高斯分布假设不符合文本特征（词频不为负）
 5. 维度的确定是 Ad hoc 的
 
-**概率潜语义分析（Probabilistic Latent Semantic Analysis, PLSA）**[^hofmann1999probabilistic] 相比于 LSA 增加了概率模型，每个变量以及相应的概率分布和条件概率分布都有明确的物理解释。
+**概率潜语义分析**（Probabilistic Latent Semantic Analysis, PLSA）[^hofmann1999probabilistic] 相比于 LSA 增加了概率模型，每个变量以及相应的概率分布和条件概率分布都有明确的物理解释。
 
 PLSA 认为一篇文档可以由多个主题混合而成，而每个主题都是词上的概率分布，文章中的每个词都是由一个固定的主题生成的，如下图所示：
 
@@ -351,13 +351,13 @@ PLSA 缺点：
 2. 可以生成语料中的文档的模型，但不能生成新文档的模型
 3. EM 算法求解的计算量较大
 
-**隐含狄利克雷分布（Latent Dirichlet Allocation, LDA）**[^blei2003latent] 在 PLSA 的基础上增加了参数的先验分布。在 PLSA 中，对于一个新文档，是无法获取 `$p \left(d\right)$` 的，因此这个概率模型是不完备的。LDA 对于 `$\vec{\theta}_m$` 和 `$\vec{\phi}_k$` 都增加了多项式分布的共轭分布狄利克雷分布作为先验，整个 LDA 模型如下图所示：
+**隐含狄利克雷分布**（Latent Dirichlet Allocation, LDA）[^blei2003latent] 在 PLSA 的基础上增加了参数的先验分布。在 PLSA 中，对于一个新文档，是无法获取 `$p \left(d\right)$` 的，因此这个概率模型是不完备的。LDA 对于 `$\vec{\theta}_m$` 和 `$\vec{\phi}_k$` 都增加了多项式分布的共轭分布狄利克雷分布作为先验，整个 LDA 模型如下图所示：
 
 ![](/images/cn/2020-10-31-text-similarity/lda.png)
 
 LDA 的参数估计可以通过[吉布斯采样](/cn/2017/12/mcmc-and-gibbs-sampling/)实现。PLSA 和 LDA 的更多细节请参见《LDA 数学八卦》[^lda-math]。
 
-LDA 在使用过程中仍需要指定主题的个数，而**层次狄利克雷过程（Hierarchical Dirichlet Processes, HDP）**[^teh2006hierarchical] 通过过程的构造可以自动训练出主题的个数，更多实现细节请参考论文。
+LDA 在使用过程中仍需要指定主题的个数，而**层次狄利克雷过程**（Hierarchical Dirichlet Processes, HDP）[^teh2006hierarchical] 通过过程的构造可以自动训练出主题的个数，更多实现细节请参考论文。
 
 LSA，PLSA，LDA 和 HDP 之间的演化关系如下图所示：
 

@@ -1,0 +1,15 @@
+{{- if not ($.Page.Store.Get "shortcode-flex") }}
+  {{- $.Page.Store.Add "shortcode-flex" 1 }}
+  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/flex.css" />
+{{- end }}
+
+<div class="shortcode-flex" style="
+  flex-direction: {{ .Get "flex-direction" | default "row" }};
+  flex-wrap: {{ .Get "flex-wrap" | default "nowrap" }};
+  justify-content: {{ .Get "justify-content" | default "space-between" }};
+  align-items: {{ .Get "align-items" | default "center" }};
+  align-content: {{ .Get "align-items" | default "center" }};
+  row-gap: {{ .Get "row-gap" | default "16px" }};
+  column-gap: {{ .Get "column-gap" | default "16px" }};">
+  {{ .Inner }}
+</div>

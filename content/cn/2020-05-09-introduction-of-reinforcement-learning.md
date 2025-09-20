@@ -29,14 +29,14 @@ images:
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/machine-learning-types.png" >}}
 
-在强化学习中，有两个可以进行交互的对象：**智能体（Agnet）**和**环境（Environment）**：
+在强化学习中，有两个可以进行交互的对象：**智能体**（Agnet）和**环境**（Environment）：
 
-- 智能体：可以感知环境的**状态（State）**，并根据反馈的**奖励（Reward）**学习选择一个合适的**动作（Action）**，来最大化长期总收益。
+- 智能体：可以感知环境的**状态**（State），并根据反馈的**奖励**（Reward）学习选择一个合适的**动作**（Action），来最大化长期总收益。
 - 环境：环境会接收智能体执行的一系列动作，对这一系列动作进行评价并转换为一种可量化的信号反馈给智能体。
 
 {{< figure src="/images/cn/2020-05-09-introduction-of-reinforcement-learning/reinforcement-learning.png" title="图片来源：https://en.wikipedia.org/wiki/Reinforcement_learning" >}}
 
-除了智能体和环境之外，强化学习系统有四个核心要素：**策略（Policy）**、**回报函数（收益信号，Reward Function）**、**价值函数（Value Function）**和**环境模型（Environment Model）**，其中环境模型是可选的。
+除了智能体和环境之外，强化学习系统有四个核心要素：**策略**（Policy）、**回报函数**（收益信号，Reward Function）、**价值函数**（Value Function）和**环境模型**（Environment Model），其中环境模型是可选的。
 
 - 策略：定义了智能体在特定时间的行为方式。策略是环境状态到动作的映射。
 - 回报函数：定义了强化学习问题中的目标。在每一步中，环境向智能体发送一个称为收益的标量数值。

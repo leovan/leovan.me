@@ -40,7 +40,7 @@ images:
 
 # 时序差分预测
 
-**时序差分（Temporal Difference，TD）**和蒙特卡洛方法都利用经验来解决预测问题。给定策略 `$\pi$` 的一些经验，以及这些经验中的非终止状态 `$S_t$`，一个适用于非平稳环境的简单的每次访问型蒙特卡洛方法可以表示为：
+**时序差分**（Temporal Difference，TD）和蒙特卡洛方法都利用经验来解决预测问题。给定策略 `$\pi$` 的一些经验，以及这些经验中的非终止状态 `$S_t$`，一个适用于非平稳环境的简单的每次访问型蒙特卡洛方法可以表示为：
 
 `$$
 V\left(S_{t}\right) \gets V\left(S_{t}\right)+\alpha\left[G_{t}-V\left(S_{t}\right)\right] \label{eq:mc-update}

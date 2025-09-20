@@ -1,0 +1,7 @@
+.shortcode-flex {
+  display: flex;
+
+  @media (width < 40rem) {
+    display: block;
+  }
+}

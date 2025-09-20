@@ -55,11 +55,11 @@
   donateBoxCloseButton.addEventListener("click", donateModalToggle);
   window.addEventListener("click", donateModalOnClick);
   donateButton.addEventListener("click", donateModalToggle);
-  donateBoxMoneyButtons.forEach((btn) => {
-    btn.addEventListener("click", donateBoxMoneyButtonsOnClick);
+  donateBoxMoneyButtons.forEach((el) => {
+    el.addEventListener("click", donateBoxMoneyButtonsOnClick);
   });
-  donateBoxPayMethods.forEach((btn) => {
-    btn.addEventListener("click", donateBoxPayMethodsOnClick);
+  donateBoxPayMethods.forEach((el) => {
+    el.addEventListener("click", donateBoxPayMethodsOnClick);
   });
 
   function donateModalToggle() {
@@ -91,10 +91,10 @@
   }
 
   function donateBoxMoneyButtonsOnClick() {
-    donateBoxMoneyButtons.forEach((btn) => {
-      btn.innerHTML = btn.getAttribute("data-unchecked");
-      btn.classList.add("donate-box-money-button-unchecked");
-      btn.classList.remove("donate-box-money-button-checked");
+    donateBoxMoneyButtons.forEach((el) => {
+      el.innerHTML = el.getAttribute("data-unchecked");
+      el.classList.add("donate-box-money-button-unchecked");
+      el.classList.remove("donate-box-money-button-checked");
     });
 
     this.innerHTML = this.getAttribute("data-checked");
@@ -105,8 +105,8 @@
   }
 
   function donateBoxPayMethodsOnClick() {
-    donateBoxPayMethods.forEach((btn) => {
-      btn.classList.remove("donate-box-pay-method-checked");
+    donateBoxPayMethods.forEach((el) => {
+      el.classList.remove("donate-box-pay-method-checked");
     });
 
     this.classList.add("donate-box-pay-method-checked");

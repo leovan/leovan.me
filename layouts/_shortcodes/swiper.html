@@ -1,0 +1,63 @@
+{{- if not ($.Page.Store.Get "shortcode-swiper") }}
+  {{- $.Page.Store.Set "shortcode-swiper" 1 }}
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/swiper.css" />
+  <script src="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
+{{- end }}
+
+{{- $data := dict }}
+{{- $path := .Get "data" }}
+{{- with resources.Get $path }}
+  {{- with . | transform.Unmarshal }}
+    {{- $data = . }}
+  {{- end }}
+{{- end }}
+
+{{- if not ($.Page.Store.Get "swiperId") }}
+  {{- $.Page.Store.Set "swiperId" 1 }}
+{{- else }}
+  {{- $.Page.Store.Set "swiperId" (add ($.Page.Store.Get "swiperId") 1) }}
+{{- end }}
+{{- $swiperId := printf "swiper-%d" ($.Page.Store.Get "swiperId") }}
+
+{{- $maxWidth := .Get "max-width" | default "100%" }}
+
+<div class="swiper" id="{{ $swiperId }}" style="max-width: {{ $maxWidth }};">
+  <div class="swiper-wrapper">
+    {{- range $item := $data.items }}
+      <div class="swiper-slide">
+        {{- $itemType := $item.type }}
+        {{- if eq $itemType "image" }}
+          {{- $imageSrc := $item.src }}
+          {{- $imageCaption := default "" $item.caption }}
+          <div class="swiper-slide-image">
+            <img src="{{ $imageSrc }}"/>
+          </div>
+        {{- else }}
+        {{- end }}
+      </div>
+    {{- end }}
+  </div>
+  <div class="swiper-controls">
+    {{- with $data.pagination.el }}
+      <div class="swiper-pagination {{ replaceRE "^\\." "" . }}"></div>
+    {{- end }}
+    {{- with $data.navigation.prevEl }}
+      <div class="swiper-navigation-prev {{ replaceRE "^\\." "" . }}"></div>
+    {{- end }}
+    {{- with $data.navigation.nextEl }}
+      <div class="swiper-navigation-next {{ replaceRE "^\\." "" . }}"></div>
+    {{- end }}
+    {{- with $data.scrollbar.el }}
+      <div class="swiper-scrollbar {{ replaceRE "^\\." "" . }}"></div>
+    {{- end }}
+  </div>
+</div>
+
+<script>
+  (function (d) {
+    let data = {{ $data }};
+    delete data.items;
+    new Swiper("#{{ $swiperId }}", data);
+  })(document);
+</script>

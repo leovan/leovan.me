@@ -7,29 +7,29 @@ slug: cn/cv
 disable_author_date: true
 disable_donate: true
 disable_comments: true
-disable_adsense: true
-disable_mathjax: true
+disable_google_adsense: true
+disable_math: true
 disable_highlight: true
 ---
 
 # 范叶亮
 
-# <i class="material-symbols material-symbols-target-outline"></i> 研究兴趣
+# <i class="icon icon-material-symbols-target-outline"></i> 研究兴趣
 
 - 现从事**数据科学**在**安全风险**领域的**技术应用**和**产品设计**。
 - 对**数据科学**在**农业**和**工业**领域的应用充满兴趣。
 
-# <i class="material-symbols material-symbols-school-outline"></i> 教育背景
+# <i class="icon icon-material-symbols-school-outline"></i> 教育背景
 
 - 2012.09 ~ 2015.03 **河北工业大学** 信息管理 硕士
 - 2008.09 ~ 2012.07 **河北工业大学** 工商管理 学士
 
-# <i class="material-symbols material-symbols-groups-outline"></i> 工作经历
+# <i class="icon icon-material-symbols-groups-outline"></i> 工作经历
 
 1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
 2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
-# <i class="material-symbols material-symbols-list-alt-outline"></i> 项目经历
+# <i class="icon icon-material-symbols-list-alt-outline"></i> 项目经历
 
 ## 安全和风险
 
@@ -76,26 +76,26 @@ _2015.04 ~ 2015.10 算法设计和开发_
 - 设计开发一种基于 Bass 扩散模型，优化的时间序列相似度和聚类算法的混合产品生命周期识别模型，尾货识别**准确率 95%+**，辅助贷款方商品质押准入决策和质押率的制定。
 - 设计开发不同数据源的商品信息融合模型，相同商品识别**准确率 90%+**，配合 ElasticSearch 开发商品模糊匹配查询服务，为商品质押提供精准的价格等相关信息。
 
-# <i class="material-symbols material-symbols-settings-outline"></i> 专业技能
+# <i class="icon icon-material-symbols-settings-outline"></i> 专业技能
 
 ## 开发语言
 
-- <i class="icon icon-python"></i> Python: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-r"></i> R: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-python"></i> Python: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-r"></i> R: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
 
 ## 平台框架
 
-- <i class="icon icon-pytorch"></i> PyTorch: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-spark"></i> Spark: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-qt"></i> Qt: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-react"></i> React: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-pytorch"></i> PyTorch: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-spark"></i> Spark: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-qt"></i> Qt: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-react"></i> React: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
 
 ## 外语能力
 
 - 英语: CET6 518，能说，会写，看菜单略费劲...
 
-# <i class="material-symbols material-symbols-award-star-outline"></i> 研究成果
+# <i class="icon icon-material-symbols-award-star-outline"></i> 研究成果
 
 ## 论文
 
@@ -115,6 +115,8 @@ _2015.04 ~ 2015.10 算法设计和开发_
 
 - **技术主页**：[https://leovan.tech](https://leovan.tech)
 - **Github**: [https://github.com/leovan](https://github.com/leovan) ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
+
+<br/>
 
 1. [R 语言数据科学导论](https://ds-r.leovan.tech)：一份以 R 语言为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Python 数据科学导论](https://ds-python.leovan.tech)：一份以 Python 为基础的数据科学入门教程。![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)

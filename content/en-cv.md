@@ -7,8 +7,8 @@ slug: en/cv
 disable_author_date: true
 disable_donate: true
 disable_comments: true
-disable_adsense: true
-disable_mathjax: true
+disable_google_adsense: true
+disable_math: true
 disable_highlight: true
 ---
 
@@ -16,22 +16,22 @@ disable_highlight: true
 
 # Fan Yeliang (Leo Van)
 
-# <i class="material-symbols material-symbols-target-outline"></i> Research Interest
+# <i class="icon icon-material-symbols-target-outline"></i> Research Interest
 
 - I am working on application of **data science** in **security and risk**.
 - Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
-# <i class="material-symbols material-symbols-school-outline"></i> Education
+# <i class="icon icon-material-symbols-school-outline"></i> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
 - 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
-# <i class="material-symbols material-symbols-groups-outline"></i> Work Experiences
+# <i class="icon icon-material-symbols-groups-outline"></i> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
-# <i class="material-symbols material-symbols-list-alt-outline"></i> Project Experiences
+# <i class="icon icon-material-symbols-list-alt-outline"></i> Project Experiences
 
 ## Security & Risk
 
@@ -78,26 +78,26 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-# <i class="material-symbols material-symbols-settings-outline"></i> Skills
+# <i class="icon icon-material-symbols-settings-outline"></i> Skills
 
 ## Programing Languages
 
-- <i class="icon icon-python"></i> Python: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-r"></i> R: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-python"></i> Python: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-r"></i> R: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
 
 ## Frameworks
 
-- <i class="icon icon-pytorch"></i> PyTorch: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-spark"></i> Spark: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-qt"></i> Qt: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
-- <i class="icon icon-react"></i> React: <i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-fill"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i><i class="material-symbols material-symbols-star-outline"></i>
+- <i class="icon icon-pytorch"></i> PyTorch: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-spark"></i> Spark: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-qt"></i> Qt: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
+- <i class="icon icon-react"></i> React: <i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-fill"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i><i class="icon icon-material-symbols-star-outline"></i>
 
 ## Foreign Languages
 
 - English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
-# <i class="material-symbols material-symbols-award-star-outline"></i> Research Achievements
+# <i class="icon icon-material-symbols-award-star-outline"></i> Research Achievements
 
 ## Papers
 
@@ -117,6 +117,8 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 
 - **Technical Website**: [https://leovan.tech](https://leovan.tech)
 - **Github**: [https://github.com/leovan](https://github.com/leovan) ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
+
+<br/>
 
 1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
 2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese).  ![github-stars](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)

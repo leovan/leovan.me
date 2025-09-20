@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="taxonomy">
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+      {{- $name := $value.Name }}
+      {{- $count := $value.Count }}
+      {{- $weight := (math.Round (add (mul (div (math.Log (math.Min $count 100)) (math.Log 100)) 8) 1)) }}
+      <span class="taxonomy-item">
+        <a data-weight="{{ $weight }}" data-count="{{$count }}" href="{{ (print "/" $.Data.Plural "/" $name | urlize) | relURL }}">
+          {{ upper $name }}
+        </a>
+      </span>
+    {{- end }}
+  </div>
+{{ end }}

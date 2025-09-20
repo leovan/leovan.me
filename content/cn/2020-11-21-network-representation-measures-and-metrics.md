@@ -222,7 +222,7 @@ $$`
 
 ## 树
 
-**树（tree）**是连通的、无向的且不包含闭合循环的网络，如下图所示。
+**树**（tree）是连通的、无向的且不包含闭合循环的网络，如下图所示。
 
 ![](/images/cn/2020-11-21-network-representation-measures-and-metrics/tree.png)
 

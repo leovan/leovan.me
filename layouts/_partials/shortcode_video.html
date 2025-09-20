@@ -1,0 +1,4 @@
+{{- if $.Page.Store.Get "shortcode-video" }}
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video-js.min.css" />
+  <script src="https://cdn.jsdmirror.com/npm/video.js@{{ $.Site.Params.videojsVersion }}/dist/video.min.js"></script>
+{{- end }}

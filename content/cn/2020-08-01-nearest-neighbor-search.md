@@ -57,7 +57,7 @@ images:
   - /images/cn/2020-08-01-nearest-neighbor-search/sift-128-k-10.png
 ---
 
-**最近邻搜索（Nearest Neighbor Search）**是指在一个确定的距离度量和一个搜索空间内寻找与给定查询项距离最小的元素。更精确地，对于一个包含 `$N$` 个元素的集合 `$\mathcal{X} = \left\{\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_n\right\}$`，给定查询项 `$\mathbf{q}$` 的最近邻 `$NN \left(\mathbf{q}\right) = \arg\min_{\mathbf{x} \in \mathcal{X}} dist \left(\mathbf{q}, \mathbf{x}\right)$`，其中 `$dist \left(\mathbf{q}, \mathbf{x}\right)$` 为 `$\mathbf{q}$` 和 `$\mathbf{x}$` 之间的距离。由于[维数灾难](/cn/2018/10/word-embeddings/#维数灾难-the-curse-of-dimensionality)，我们很难在高维欧式空间中以较小的代价找到精确的最近邻。**近似最近邻搜索（Approximate Nearest Neighbor Search）**则是一种通过牺牲精度来换取时间和空间的方式从大量样本中获取最近邻的方法。
+**最近邻搜索**（Nearest Neighbor Search）是指在一个确定的距离度量和一个搜索空间内寻找与给定查询项距离最小的元素。更精确地，对于一个包含 `$N$` 个元素的集合 `$\mathcal{X} = \left\{\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_n\right\}$`，给定查询项 `$\mathbf{q}$` 的最近邻 `$NN \left(\mathbf{q}\right) = \arg\min_{\mathbf{x} \in \mathcal{X}} dist \left(\mathbf{q}, \mathbf{x}\right)$`，其中 `$dist \left(\mathbf{q}, \mathbf{x}\right)$` 为 `$\mathbf{q}$` 和 `$\mathbf{x}$` 之间的距离。由于[维数灾难](/cn/2018/10/word-embeddings/#维数灾难-the-curse-of-dimensionality)，我们很难在高维欧式空间中以较小的代价找到精确的最近邻。**近似最近邻搜索**（Approximate Nearest Neighbor Search）则是一种通过牺牲精度来换取时间和空间的方式从大量样本中获取最近邻的方法。
 
 # 精确搜索
 
@@ -101,7 +101,7 @@ k-D 树（k-Dimesion Tree）[^bentley1975multidimensional] 是一种可以高效
 
 ## 基于哈希的算法
 
-基于哈希的算法的目标是将一个高维数据点转换为哈希编码的表示方式，主要包含两类方法：**局部敏感哈希（Local Sensitive Hash, LSH）**和**哈希学习（Learning to Hash, L2H）**。
+基于哈希的算法的目标是将一个高维数据点转换为哈希编码的表示方式，主要包含两类方法：**局部敏感哈希**（Local Sensitive Hash, LSH）和**哈希学习**（Learning to Hash, L2H）。
 
 ### 局部敏感哈希
 
@@ -200,7 +200,7 @@ Multi-probe LSH [^lv2007multiprobe] 引入了一种新的策略解决召回的�
 
 ## 矢量量化算法
 
-**矢量量化（Vector Quantization）**是信息论中一种用于数据压缩的方法，其目的是减少表示空间的维度。一个量化器可以表示为由 `$D$` 维向量 `$x \in \mathbb{R}^D$` 到一个向量 `$q \left(x\right) \in \mathcal{C} = \left\{c_i; i \in \mathcal{I}\right\}$` 的映射 `$q$`，其中下标集合 `$\mathcal{I}$` 为有限集合，即 `$\mathcal{I} = 0, \cdots, k-1$`。`$c_i$` 称之为形心（centroids），`$\mathcal{C}$` 称之为大小为 `$k$` 的码本（codebook）。映射后的向量到一个给定下标 `$i$` 的集合 `$\mathcal{V}_i \triangleq \left\{x \in \mathbb{R}^D: q \left(x\right) = c_i\right\}$`（Voronoi），称之为一个单元（cell）。
+**矢量量化**（Vector Quantization）是信息论中一种用于数据压缩的方法，其目的是减少表示空间的维度。一个量化器可以表示为由 `$D$` 维向量 `$x \in \mathbb{R}^D$` 到一个向量 `$q \left(x\right) \in \mathcal{C} = \left\{c_i; i \in \mathcal{I}\right\}$` 的映射 `$q$`，其中下标集合 `$\mathcal{I}$` 为有限集合，即 `$\mathcal{I} = 0, \cdots, k-1$`。`$c_i$` 称之为形心（centroids），`$\mathcal{C}$` 称之为大小为 `$k$` 的码本（codebook）。映射后的向量到一个给定下标 `$i$` 的集合 `$\mathcal{V}_i \triangleq \left\{x \in \mathbb{R}^D: q \left(x\right) = c_i\right\}$`（Voronoi），称之为一个单元（cell）。
 
 以一个图像编码为例，我们通过 K-Means 算法得到 `$k$` 个 centroids，然后用这些 centroids 的像素值来替换对应簇中所有点的像素值。当 `$k = 2, 10, 100$` 时，压缩后的图像和原始图像的对比结果如下图所示：
 

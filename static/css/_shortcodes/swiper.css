@@ -1,0 +1,127 @@
+:root {
+  --color-shortcode-swiper-navigation-background: #888888;
+  --color-shortcode-swiper-pagination-background: #dddddd;
+  --color-shortcode-swiper-pagination-active-background: #888888;
+  --color-shortcode-swiper-scrollbar-foreground: #eeeeee;
+  --color-shortcode-swiper-scrollbar-background: #eeeeee;
+  --color-shortcode-swiper-scrollbar-drag-foreground: #888888;
+  --color-shortcode-swiper-scrollbar-drag-background: #888888;
+
+  --icon-shortcode-swiper-navigation-prev: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm10.5 10V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4A.5.5 0 0 0 10.5 12"/></svg>');
+  --icon-shortcode-swiper-navigation-next: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4z"/></svg>');
+
+  --swiper-controls-height: 2em;
+  --swiper-navigation-sides-offset: 0;
+  --swiper-scrollbar-sides-offset: 3em;
+  --swiper-scrollbar-size: 2em;
+}
+
+.dark {
+  --color-shortcode-swiper-navigation-background: #cccccc;
+  --color-shortcode-swiper-pagination-background: #444444;
+  --color-shortcode-swiper-pagination-active-background: #cccccc;
+  --color-shortcode-swiper-scrollbar-foreground: #eeeeee;
+  --color-shortcode-swiper-scrollbar-background: #444444;
+  --color-shortcode-swiper-scrollbar-drag-foreground: #cccccc;
+  --color-shortcode-swiper-scrollbar-drag-background: #cccccc;
+}
+
+.swiper-controls {
+  position: relative !important;
+  height: var(--swiper-controls-height);
+  margin-top: 1em;
+}
+
+.swiper-pagination,
+.swiper-navigation-prev,
+.swiper-navigation-next {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  height: var(--swiper-controls-height) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 0 !important;
+  top: 0 !important;
+}
+
+.swiper-pagination,
+.swiper-scrollbar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-scrollbar {
+  top: calc(var(--swiper-controls-height) / 2 - var(--swiper-scrollbar-size) / 2) !important;
+}
+
+.swiper-navigation-prev,
+.swiper-navigation-next {
+  width: var(--swiper-controls-height);
+  height: var(--swiper-controls-height);
+}
+
+.swiper-navigation-prev::after,
+.swiper-navigation-next::after {
+  content: "";
+  display: block;
+  font-size: 100%;
+  width: var(--swiper-controls-height);
+  height: var(--swiper-controls-height);
+  background-color: var(--color-shortcode-swiper-navigation-background);
+  opacity: 1;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3 !important;
+}
+
+.swiper-navigation-icon {
+  display: none;
+}
+
+.swiper-navigation-prev::after {
+  -webkit-mask-image: var(--icon-shortcode-swiper-navigation-prev);
+  mask-image: var(--icon-shortcode-swiper-navigation-prev);
+}
+
+.swiper-navigation-next::after {
+  -webkit-mask-image: var(--icon-shortcode-swiper-navigation-next);
+  mask-image: var(--icon-shortcode-swiper-navigation-next);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-shortcode-swiper-pagination-background);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-shortcode-swiper-pagination-active-background);
+  opacity: 1;
+}
+
+.swiper-scrollbar {
+  color: var(--color-shortcode-swiper-scrollbar-foreground);
+  background-color: var(--color-shortcode-swiper-scrollbar-background);
+  opacity: 1;
+}
+
+.swiper-scrollbar-drag {
+  color: var(--color-shortcode-swiper-scrollbar-drag-foreground);
+  background-color: var(--color-shortcode-swiper-scrollbar-drag-background);
+  opacity: 1;
+}
+
+.swiper-slide-image {
+  display: flex;
+}

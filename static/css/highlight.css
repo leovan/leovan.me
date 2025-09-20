@@ -1,3 +1,17 @@
+:root {
+  --color-highlight-hl-background: #dddddd;
+
+  --shadow-highlight: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
+
+  --icon-highlight-copy: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V7q0-.425.288-.712T4 6t.713.288T5 7v13h10q.425 0 .713.288T16 21t-.288.713T15 22zm4-6V4z"/></svg>');
+  --icon-highlight-copy-success: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path fill="currentColor" fill-opacity="0.3" d="M3 12c0 -4.97 4.03 -9 9 -9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9Z"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0.3;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12l3 3l5 -5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="14;0"/></path></g></svg>');
+  --icon-highlight-copy-error: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.39s" values="64;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 12l4 4M12 12l-4 -4M12 12l-4 4M12 12l4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.39s" dur="0.13s" values="8;0"/></path></g></svg>');
+}
+
+.dark {
+  --color-highlight-hl-background: #444444;
+}
+
 .highlight-wrapper {
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -5,36 +19,37 @@
 
 .highlight-title {
   padding: 0.5em 1em 0.5em 1em;
+  font-family: var(--font-kai);
   font-size: 0.9em !important;
-  background: var(--code-background) !important;
-  color: var(--code-foreground) !important;
-  border-radius: 0.3rem 0.3rem 0 0;
-  border-bottom: 1px solid var(--code-border);
+  background: var(--color-highlight-background) !important;
+  color: var(--color-highlight-foreground) !important;
+  border-radius: 0.2rem 0.2rem 0 0;
+  border-bottom: 1px solid var(--color-highlight-border);
+  box-shadow: var(--shadow-highlight);
 }
 
 .highlight-content {
   position: relative;
-}
-
-.highlight-wrapper .highlight-content {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-.highlight-content:hover .code-button-copy,
-.highlight-content:focus-within .code-button-copy {
-  color: var(--code-button-copy-area-hover);
-  background: radial-gradient(var(--code-background) 60%, transparent);
+.highlight-content:hover .highlight-button-copy,
+.highlight-content:focus-within .highlight-button-copy {
+  color: var(--color-highlight-button-copy-hover);
 }
 
 .highlight {
   padding: 1em;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-size: 0.9em !important;
+  background: var(--color-highlight-background) !important;
+  color: var(--color-highlight-foreground) !important;
+  box-shadow: var(--shadow-highlight);
 }
 
 .highlight-wrapper:has(.highlight-title) .highlight {
-  border-radius: 0 0 0.3rem 0.3rem;
+  border-radius: 0 0 0.2rem 0.2rem;
 }
 
 code {
@@ -56,21 +71,23 @@ code:before {
   position: absolute;
   bottom: 0;
   right: 0;
-  border-top-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  border-top-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
   padding: 0 0.5em;
   text-shadow: none;
+  background: var(--color-highlight-language-background) !important;
+  color: var(--color-highlight-language-foreground) !important;
 }
 
 code[class="language-plain"]:before {
   display: none;
 }
 
-.code-button-copy {
+.highlight-button-copy {
   position: absolute;
   top: 0.3em;
   right: 0.3em;
-  color: var(--code-button-copy-default);
+  color: var(--color-highlight-button-copy-foreground);
   cursor: pointer;
   display: block;
   height: 1.5em;
@@ -80,9 +97,9 @@ code[class="language-plain"]:before {
   background: #00000000;
 }
 
-.code-button-copy:after {
-  -webkit-mask-image: var(--code-copy-icon);
-  mask-image: var(--code-copy-icon);
+.highlight-button-copy::after {
+  -webkit-mask-image: var(--icon-highlight-copy);
+  mask-image: var(--icon-highlight-copy);
   background-color: currentcolor;
   content: "";
   display: block;
@@ -97,14 +114,14 @@ code[class="language-plain"]:before {
   mask-size: contain;
 }
 
-.code-button-copy-success:after {
-  -webkit-mask-image: var(--code-copy-success-icon);
-  mask-image: var(--code-copy-success-icon);
+.highlight-button-copy-success::after {
+  -webkit-mask-image: var(--icon-highlight-copy-success);
+  mask-image: var(--icon-highlight-copy-success);
 }
 
-.code-button-copy-error:after {
-  -webkit-mask-image: var(--code-copy-error-icon);
-  mask-image: var(--code-copy-error-icon);
+.highlight-button-copy-error::after {
+  -webkit-mask-image: var(--icon-highlight-copy-error);
+  mask-image: var(--icon-highlight-copy-error);
 }
 
 .chroma {
@@ -149,7 +166,7 @@ code[class="language-plain"]:before {
 
 /* LineHighlight */
 .chroma .hl {
-  background-color: #cfd1c5;
+  background-color: var(--color-highlight-hl-background);
 }
 
 /* LineNumbersTable */

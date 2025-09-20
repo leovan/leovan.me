@@ -42,7 +42,7 @@ images:
 
 ## Flask 服务封装
 
-为了将模型代码和 Flask 服务进行整合，首先假设你已经对模型部分代码做了完美的封装 :sunglasses:，整个工程先叫做 `model-serving-demo` 吧。整理一下代码的目录结构，给一个我中意的 Python 目录结构风格：
+为了将模型代码和 Flask 服务进行整合，首先假设你已经对模型部分代码做了完美的封装 😎，整个工程先叫做 `model-serving-demo` 吧。整理一下代码的目录结构，给一个我中意的 Python 目录结构风格：
 
 ```
 model-serving-demo/                # 工程根目录

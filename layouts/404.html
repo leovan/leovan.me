@@ -1,9 +1,7 @@
-{{- partial "header.html" . }}
-
-<p><center>页面不见了，劳烦留言告知下，多谢！</center></p>
-
-<p><center>Page not found, please leave a message to let me know. Thanks!</center></p>
-
-<p><img src="/images/web/404.gif" alt="404 not found" /></p>
-
-{{- partial "footer.html" . }}
+{{ define "main" }}
+  <div class="code-404">
+    <p>页面不见了，劳烦留言告知下，多谢！</p>
+    <p>Page not found, please leave a message to let me know. Thanks!</p>
+    <p><img src="/images/web/404.gif" alt="404 not found" /></p>
+  </div>
+{{ end }}

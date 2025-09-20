@@ -1,0 +1,63 @@
+{{- $lang := "cn" }}
+{{- if (eq .Section "en") }}
+  {{ $lang = "en" }}
+{{- end }}
+
+{{- $currentPage := . }}
+{{- $menu := "main" }}
+{{- if .IsHome }}
+  {{- $menu = "home" }}
+{{- else }}
+  {{- $menu = $.Page.Store.Get "section" }}
+{{- end }}
+
+<div class="menu-left">
+  <div class="avatar"></div>
+  <div class="slogan">
+    <p>{{ index site.Params.lang.slogan $lang }}</p>
+  </div>
+  <ul>
+    {{- range (default site.Menus.main (index site.Menus $menu)) }}
+      {{- if eq .URL "#menu-separator" }}
+        <li class="block">
+          <span>&nbsp;</span>
+        </li>
+      {{- else }}
+        <li {{- if eq .URL $currentPage.RelPermalink }} class="active" {{- end }}>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{- end }}
+    {{- end }}
+    {{- with .Section }}
+      <li class="block"><span>&nbsp;</span></li>
+      <li>
+        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang
+          }}</a>
+      </li>
+    {{- end }}
+  </ul>
+  <div class="theme-toggle">
+    <i class="icon icon-theme-toggle"></i>
+  </div>
+</div>
+
+<div class="menu-top">
+  <div class="menu-container">
+    {{- range (default site.Menus.main (index site.Menus $menu)) }}
+      {{- if ne .URL "#menu-separator" }}
+        <div class="menu-item {{- if eq .URL $currentPage.RelPermalink }} active {{- end }}">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </div>
+      {{- end }}
+    {{- end }}
+    {{- with .Section }}
+      <div class="menu-item">
+        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang
+          }}</a>
+      </div>
+    {{- end }}
+    <div class="menu-item theme-toggle">
+      <i class="icon icon-theme-toggle"></i>
+    </div>
+  </div>
+</div>

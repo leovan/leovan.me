@@ -73,7 +73,7 @@ images:
 
 > 本文主要参考自 _SIFT meets CNN: A decade survey of instance retrieval_ [^zheng2017sift] 和 _Deep Learning for Instance Retrieval: A Survey_ [^chen2022deep]。
 
-**基于内容的图像检索（Content-based image retrieval，CBIR）**，属于图像分析的一个研究领域。基于内容的图像检索目的是在给定查询图像的前提下，依据内容信息或指定查询标准，在图像数据库中搜索并查找出符合查询条件的相应图片 [^cbir-wikipedia]。
+**基于内容的图像检索**（Content-based image retrieval，CBIR），属于图像分析的一个研究领域。基于内容的图像检索目的是在给定查询图像的前提下，依据内容信息或指定查询标准，在图像数据库中搜索并查找出符合查询条件的相应图片 [^cbir-wikipedia]。
 
 根据不同的视觉表示方法，可以将基于内容的图像检索方法分为两类：**基于 SIFT 特征的**和**基于深度学习的**。基于 SIFT 特征的方法分为如下 3 类：
 
