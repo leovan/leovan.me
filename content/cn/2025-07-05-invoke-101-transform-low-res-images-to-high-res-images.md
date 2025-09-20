@@ -79,7 +79,7 @@ blurry, out of focus, over saturated, text+++
 
 从如下的对比中可以看出，生成的图片具有更多的细节，这样我们就可以在更高的分辨率下获得更加清晰锐利的图像。
 
-{{< image-compare show-labels=true large-max-width="50%" label-before="低分辨率" label-after="高分辨率" image-before="/images/cn/2025-07-05-invoke-101-transform-low-res-images-to-high-res-images/toucan-low-res.jpg" image-after="/images/cn/2025-07-05-invoke-101-transform-low-res-images-to-high-res-images/upscaling-basic.avif" >}}
+{{< image-compare show-labels=true large-max-width="50%" middle-max-width="50%" small-max-width="100%" label-before="低分辨率" label-after="高分辨率" image-before="/images/cn/2025-07-05-invoke-101-transform-low-res-images-to-high-res-images/toucan-low-res.jpg" image-after="/images/cn/2025-07-05-invoke-101-transform-low-res-images-to-high-res-images/upscaling-basic.avif" >}}
 
 单击画布上方的 `Exit Compare` 退出对比，在生成的图片上右键，单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M228,104a12,12,0,0,1-24,0V69l-59.51,59.51a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"></path></svg></span> 按钮可以在新窗口中打开图片，之后则可以使用鼠标进行放大来观察图片细节。
 

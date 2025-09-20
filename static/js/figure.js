@@ -50,5 +50,5 @@
     }
   }
   document.querySelectorAll("figure > img").forEach(setMaxWidth);
-  document.querySelectorAll(".image-compare").forEach(setMaxWidth);
+  document.querySelectorAll(".shortcode-image-compare").forEach(setMaxWidth);
 })();
