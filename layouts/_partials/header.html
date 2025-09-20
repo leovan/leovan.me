@@ -12,22 +12,22 @@
 {{- end }}
 
 {{- if not .IsHome }}
-  <div class="meta">
-    <h1 class="title">
+  <div class="post-meta">
+    <div class="post-title">
       {{- if eq .Kind "taxonomy" }}
         {{- index $.Site.Params (lower .Title) | markdownify }}
       {{- else }}
         {{- .Title | markdownify }}
       {{- end }}
-    </h1>
+    </div>
 
     {{- with .Params.subtitle }}
-      <h2 class="subtitle">{{ . | markdownify }}</h2>
+      <div class="post-subtitle">{{ . | markdownify }}</div>
     {{- end }}
 
     {{- if .IsPage }}
       {{- if not .Params.disable_author_date }}
-        <div class="author-date">
+        <div class="post-author-date">
         {{- with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}
           {{  print . " / " }}
         {{- end }}
@@ -43,7 +43,7 @@
       {{- end }}
 
       {{- if or (.Params.categories) (.Params.tags) }}
-        <div class="category-tag">
+        <div class="post-tag">
           {{- if .Params.categories }}
             {{- if gt (len .Params.categories) 0 }}
               <strong>{{ index $.Site.Params.lang.categories $lang }}: </strong>

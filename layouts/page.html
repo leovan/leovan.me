@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{- if .Params.show_toc }}
-    <div{{ with .Params.toc_depth }} class="toc toc-depth-{{ . }}" {{ end }}>{{ .TableOfContents }}</div>
+    <div class="toc {{- with .Params.toc_depth }} toc-depth-{{ . }} {{- end }}">{{ .TableOfContents }}</div>
   {{- end }}
   {{ .Content }}
 {{ end }}

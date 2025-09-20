@@ -448,7 +448,11 @@
     }
   }
 
-  .meta {
+  .theme-toggle {
+    cursor: pointer;
+  }
+
+  .post-meta {
     @apply text-center;
 
     a {
@@ -456,23 +460,27 @@
     }
   }
 
-  .theme-toggle {
-    cursor: pointer;
-  }
-
-  /* meta */
-  .title {
-    font-size: 32px;
-    margin-top: var(--spacing-p-margin-y);
-  }
-
-  .author-date {
-    font-size: 24px;
+  .post-title,
+  .post-subtitle,
+  .post-author-date {
     font-weight: bold;
-    margin: 32px auto;
+    margin-top: var(--spacing-p-margin-y);
+    margin-bottom: var(--spacing-p-margin-y);
   }
 
-  .category-tag {
+  .post-title {
+    font-size: 32px;
+  }
+
+  .post-subtitle {
+    font-size: 24px;
+  }
+
+  .post-author-date {
+    font-size: 20px;
+  }
+
+  .post-tag {
     font-size: 0.9em;
   }
 
