@@ -407,23 +407,23 @@ $$`
 
 |                          | Cytoscape | Tulip | Gephi | Pajek |
 | ------------------------ | --------- | ----- | ----- | ----- |
-| Scalability              | ⭑⭑        | ⭑     | ⭑⭑⭑   | ⭑⭑⭑⭑  |
-| User friendliness        | ⭑⭑        | ⭑⭑⭑⭑  | ⭑⭑⭑   | ⭑     |
-| Visual styles            | ⭑⭑⭑⭑      | ⭑⭑    | ⭑⭑⭑   | ⭑     |
-| Edge bundling            | ⭑⭑⭑       | ⭑⭑⭑⭑  | ⭑⭑    | -     |
-| Relevance to biology     | ⭑⭑⭑⭑      | ⭑⭑    | ⭑⭑⭑   | ⭑     |
-| Memory efficiency        | ⭑         | ⭑⭑    | ⭑⭑⭑   | ⭑⭑⭑⭑  |
-| Clustering               | ⭑⭑⭑⭑      | ⭑⭑⭑   | ⭑     | ⭑⭑    |
-| Manual node/edge editing | ⭑⭑⭑       | ⭑⭑⭑⭑  | ⭑⭑⭑   | ⭑     |
-| Layouts                  | ⭑⭑⭑       | ⭑⭑    | ⭑⭑⭑⭑  | ⭑     |
-| Network profiling        | ⭑⭑⭑⭑      | ⭑⭑    | ⭑⭑⭑   | ⭑     |
-| File formats             | ⭑⭑        | ⭑⭑⭑   | ⭑⭑⭑⭑  | ⭑     |
-| Plugins                  | ⭑⭑⭑⭑      | ⭑⭑    | ⭑⭑⭑   | ⭑     |
-| Stability                | ⭑⭑⭑       | ⭑     | ⭑⭑⭑⭑  | ⭑⭑⭑   |
-| Speed                    | ⭑⭑        | ⭑     | ⭑⭑⭑   | ⭑⭑⭑⭑  |
-| Documentation            | ⭑⭑⭑⭑      | ⭑     | ⭑⭑    | ⭑⭑⭑   |
+| Scalability              | ★★        | ★     | ★★★   | ★★★★  |
+| User friendliness        | ★★        | ★★★★  | ★★★   | ★     |
+| Visual styles            | ★★★★      | ★★    | ★★★   | ★     |
+| Edge bundling            | ★★★       | ★★★★  | ★★    | -     |
+| Relevance to biology     | ★★★★      | ★★    | ★★★   | ★     |
+| Memory efficiency        | ★         | ★★    | ★★★   | ★★★★  |
+| Clustering               | ★★★★      | ★★★   | ★     | ★★    |
+| Manual node/edge editing | ★★★       | ★★★★  | ★★★   | ★     |
+| Layouts                  | ★★★       | ★★    | ★★★★  | ★     |
+| Network profiling        | ★★★★      | ★★    | ★★★   | ★     |
+| File formats             | ★★        | ★★★   | ★★★★  | ★     |
+| Plugins                  | ★★★★      | ★★    | ★★★   | ★     |
+| Stability                | ★★★       | ★     | ★★★★  | ★★★   |
+| Speed                    | ★★        | ★     | ★★★   | ★★★★  |
+| Documentation            | ★★★★      | ★     | ★★    | ★★★   |
 
-其中，⭑ 表示较弱、⭑⭑ 表示中等、⭑⭑⭑ 表示较好、⭑⭑⭑⭑ 表示优秀。
+其中，★ 表示较弱、★★ 表示中等、★★★ 表示较好、★★★★ 表示优秀。
 
 [^newman2014networks]: Newman, M. E. J. (2014) _网络科学引论_. 电子工业出版社.
 
