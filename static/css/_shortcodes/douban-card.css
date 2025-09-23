@@ -30,7 +30,7 @@
 
 .shortcode-douban-card--middle {
   width: auto;
-  padding: 1.5em;
+  padding: 1em;
 }
 
 .shortcode-douban-card--title {
@@ -45,15 +45,22 @@
   max-height: 1.8em;
   line-height: 1.8em;
   color: var(--color-shortcode-douban-card-tag-foreground);
+  display: -webkit-box;
   overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .shortcode-douban-card--summary {
   font-size: 14px;
-  line-height: 1.8em;
-  max-height: 5.4em;
+  line-height: 1.6em;
+  max-height: 6.4em;
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .shortcode-douban-card--right {
@@ -70,33 +77,12 @@
   border-bottom-right-radius: 0.2rem;
 }
 
-@media (width < 40rem) {
-  .shortcode-douban-card {
-    max-height: 11.2em;
-  }
-
-  .shortcode-douban-card--right {
-    min-width: 0;
-  }
-
-  .shortcode-douban-card--stars {
-    display: none !important;
-  }
-
-  .shortcode-douban-card--tags {
-    max-height: 5.4em;
-  }
-
-  .shortcode-douban-card--summary {
-    display: none;
-  }
-}
-
 .shortcode-douban-card--stars-rating {
   font-size: 14px;
   height: 1.8em;
   line-height: 1.8em;
   overflow: hidden;
+  margin: 0.2rem 0;
 }
 
 .shortcode-douban-card--logo-dou {
