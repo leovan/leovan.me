@@ -8,7 +8,7 @@
   <script src="/js/figure.js"></script>
 {{- end }}
 
-{{- if and (and (and (not .Params.disable_math) (ne .Kind "404")) (not .IsHome)) (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+{{- if and (not .Params.disable_math) .IsPage (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
   <script src="/js/math.js"></script>
 {{- end }}
 

@@ -1,5 +1,5 @@
 <footer class="footer">
-  {{- if and (not .Params.disable_donate) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+  {{- if and (not .Params.disable_donate) .IsPage }}
     {{- partial "donate.html" . }}
   {{- end }}
 
@@ -18,7 +18,7 @@
   </div>
   {{- end }}
 
-  {{- if and (not .Params.disable_google_adsense) (and (not .IsHome) .Content) }}
+  {{- if and (not .Params.disable_google_adsense) .IsPage }}
     {{- with $.Site.Params.googleAdsense }}
       <ins
         class="adsbygoogle adsbygoogle-post-footer"
@@ -34,7 +34,7 @@
     {{- end }}
   {{- end }}
 
-  {{- if and (not .Params.disable_comments) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+  {{- if and (not .Params.disable_comments) (not .IsHome) (or (eq .Kind "404") .IsPage) }}
     <section class="comments">
       <script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
         data-repo="leovan/leovan.me"

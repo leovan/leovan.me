@@ -1,4 +1,4 @@
-{{- if and (and (and (not .Params.disable_highlight) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+{{- if and (not .Params.disable_highlight) .IsPage (strings.Contains .Content "</code>") }}
   <script src="https://cdn.jsdmirror.com/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
   <script>
     function createCodeCopyButton(el) {

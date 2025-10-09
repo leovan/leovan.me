@@ -85,7 +85,7 @@
   </div>
 {{- end }}
 
-{{- if and (not .Params.disable_google_adsense) (and (not .IsHome) .Content) }}
+{{- if and (not .Params.disable_google_adsense) .IsPage }}
   {{- with $.Site.Params.googleAdsense }}
     <ins
       class="adsbygoogle adsbygoogle-post-header"
