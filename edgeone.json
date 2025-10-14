@@ -1,0 +1,87 @@
+{
+  "installCommand": "HUGO_BIN_EXTENDED=true npm install --save-dev cross-env",
+  "buildCommand": "npm run build",
+  "outputDirectory": "./public",
+  "redirects": [
+    {
+      "source": "/index.xml",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed/",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/rss",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/rss/",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/cn/feed",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/cn/feed/",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/cn/rss",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/cn/rss/",
+      "destination": "/cn/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/feed",
+      "destination": "/en/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/feed/",
+      "destination": "/en/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/rss",
+      "destination": "/en/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/rss/",
+      "destination": "/en/index.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/tech101",
+      "destination": "/categories/tech101/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tech101/",
+      "destination": "/categories/tech101/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tech101/*",
+      "destination": "/cn/:splat",
+      "statusCode": 301
+    }
+  ]
+}
