@@ -22,6 +22,7 @@
   --icon-airbnb: url("/images/icons/custom/airbnb.svg");
   --icon-alibaba: url("/images/icons/custom/alibaba.svg");
   --icon-alipay: url("/images/icons/custom/alipay.svg");
+  --icon-apple: url("/images/icons/custom/apple.svg");
   --icon-bilibili: url("/images/icons/custom/bilibili.svg");
   --icon-c: url("/images/icons/custom/c.svg");
   --icon-caffe2: url("/images/icons/custom/caffe2.svg");
@@ -200,6 +201,10 @@
 
 .icon-alipay::before {
   background-image: var(--icon-alipay);
+}
+
+.icon-apple::before {
+  background-image: var(--icon-apple);
 }
 
 .icon-bilibili::before {

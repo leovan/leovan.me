@@ -464,6 +464,7 @@
   .post-subtitle,
   .post-author-date {
     font-weight: bold;
+    line-height: 1.25em;
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);
   }

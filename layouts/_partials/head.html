@@ -1,4 +1,7 @@
-{{- $title := printf "%s - %s" .Title site.Title | safeHTML }}
+{{- $title := .Title }}
+{{- with .Params.subtitle }}
+  {{- $title = printf "%s - %s" $title . }}
+{{- end }}
 
 {{- if .IsHome }}
   {{- $title = site.Title }}
@@ -14,12 +17,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>{{ $title }}</title>
+<title>{{ $title | safeHTML }}</title>
 
 <meta name="referrer" content="no-referrer">
 
-<meta property="og:title" content="{{ $title }}">
-<meta name="description" property="og:description" content="{{ if .IsHome }}{{ site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
+<meta property="og:title" content="{{ $title | safeHTML }}">
+<meta name="description" property="og:description" content="{{ if .IsHome }}{{ site.Params.description | safeHTML }}{{ else if .Description }}{{ .Description | plainify | safeHTML }}{{ else if .IsPage }}{{ .Summary | plainify | safeHTML }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:site_name" content="{{ site.Params.description | safeHTML }}">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -60,9 +63,9 @@
         "@type": "WebPage",
         "@id": {{ .Section | absURL | jsonify | safeJS }}
       },
-      "name": {{ .Title | jsonify | safeJS }},
-      "headline": {{ .Title | jsonify | safeJS }},
-      "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage }}{{ .Summary | jsonify | safeJS }}{{ end }},
+      "name": {{ $title | jsonify | safeJS }},
+      "headline": {{ $title | jsonify | safeJS }},
+      "description" : {{ if .Description }}{{ .Description | plainify | jsonify | safeJS }}{{ else if .IsPage }}{{ .Summary | plainify | jsonify | safeJS }}{{ end }},
       "genre": [
         {{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}
       ],
@@ -96,7 +99,7 @@
       "@context": "http://schema.org",
       "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
       "name": {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s - %s" .Title site.Title | jsonify | safeJS }}{{ end }},
-      "description": {{ if .IsHome }}{{ site.Params.description }}{{ else }}{{ printf "%s - %s" .Title site.Params.description | jsonify | safeJS }}{{ end }},
+      "description": {{ if .IsHome }}{{ site.Params.description | plainify }}{{ else }}{{ printf "%s - %s" .Title site.Params.description | plainify | jsonify | safeJS }}{{ end }},
       "author": {
         "@type": "Person",
         "name": "{{ (or .Params.author (index site.Params.lang.author $lang)) }}"

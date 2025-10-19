@@ -34,7 +34,7 @@
     {{- end }}
   {{- end }}
 
-  {{- if and (not .Params.disable_comments) (not .IsHome) (or (eq .Kind "404") .IsPage) }}
+  {{- if and (not .Params.disable_comments) (or (eq .Kind "404") .IsPage) }}
     <section class="comments">
       <script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
         data-repo="leovan/leovan.me"
