@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2021-01-17'
 slug: is-voting-fair-and-reasonable
 categories:
-  - 思辨
+  - 思考
 tags:
   - 投票
   - 公平

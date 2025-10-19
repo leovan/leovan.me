@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2025-08-09'
 slug: fine-tuning-llms
 categories:
-  - 深度学习
+  - AI
 tags:
   - 微调
   - Fine-tuning

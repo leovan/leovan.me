@@ -5,7 +5,6 @@ date: '2018-09-01'
 slug: war-of-medias
 categories:
   - 思考
-  - 思辨
 tags:
   - 信息
   - 文化

@@ -5,7 +5,6 @@ date: '2018-06-30'
 slug: play-safe-smart-choice-and-yuppie
 categories:
   - 思考
-  - 思辨
 tags:
   - Play Safe
   - Smart Choice
@@ -15,7 +14,6 @@ tags:
   - 明智之选
   - 雅皮士
   - 教育
-  - 思辨
 images:
   - /images/cn/2018-06-30-play-safe-smart-choice-and-yuppie/yappie-ep1-screen-shot.png
   - /images/cn/2018-06-30-play-safe-smart-choice-and-yuppie/trolley-problem.png
