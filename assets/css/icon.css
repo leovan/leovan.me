@@ -1,98 +1,70 @@
 @theme {
-  --icon-material-symbols-award-star-outline: url("/images/icons/material-symbols/light/award-star-outline.svg");
-  --icon-material-symbols-dark-mode-outline: url("/images/icons/material-symbols/light/dark-mode-outline.svg");
-  --icon-material-symbols-download-outline: url("/images/icons/material-symbols/light/download-outline.svg");
-  --icon-material-symbols-groups-outline: url("/images/icons/material-symbols/light/groups-outline.svg");
-  --icon-material-symbols-light-mode-outline: url("/images/icons/material-symbols/light/light-mode-outline.svg");
-  --icon-material-symbols-list-alt-outline: url("/images/icons/material-symbols/light/list-alt-outline.svg");
-  --icon-material-symbols-pause-outline: url("/images/icons/material-symbols/light/pause-outline.svg");
-  --icon-material-symbols-play-outline: url("/images/icons/material-symbols/light/play-outline.svg");
-  --icon-material-symbols-school-outline: url("/images/icons/material-symbols/light/school-outline.svg");
-  --icon-material-symbols-settings-outline: url("/images/icons/material-symbols/light/settings-outline.svg");
-  --icon-material-symbols-skip-next-outline: url("/images/icons/material-symbols/light/skip-next-outline.svg");
-  --icon-material-symbols-skip-previous-outline: url("/images/icons/material-symbols/light/skip-previous-outline.svg");
-  --icon-material-symbols-star-fill: url("/images/icons/material-symbols/light/star-fill.svg");
-  --icon-material-symbols-star-outline: url("/images/icons/material-symbols/light/star-outline.svg");
-  --icon-material-symbols-target-outline: url("/images/icons/material-symbols/light/target-outline.svg");
+  --icon-lucide-moon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>');
+  --icon-lucide-sun: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>');
+  --icon-lucide-star-filled: url("/images/icons/lucide/star-filled.svg");
 
-  --icon-theme-toggle-top: url("/images/icons/material-symbols/dark/dark-mode-outline.svg");
-  --icon-theme-toggle-left: url("/images/icons/material-symbols/light/dark-mode-outline.svg");
+  --icon-theme-toggle: var(--icon-lucide-moon);
 
-  --icon-adobe: url("/images/icons/custom/adobe.svg");
-  --icon-airbnb: url("/images/icons/custom/airbnb.svg");
-  --icon-alibaba: url("/images/icons/custom/alibaba.svg");
-  --icon-alipay: url("/images/icons/custom/alipay.svg");
-  --icon-apple: url("/images/icons/custom/apple.svg");
-  --icon-bilibili: url("/images/icons/custom/bilibili.svg");
-  --icon-c: url("/images/icons/custom/c.svg");
-  --icon-caffe2: url("/images/icons/custom/caffe2.svg");
-  --icon-cpp: url("/images/icons/custom/cpp.svg");
-  --icon-facebook: url("/images/icons/custom/facebook.svg");
-  --icon-firefox: url("/images/icons/custom/firefox.svg");
-  --icon-go: url("/images/icons/custom/go.svg");
-  --icon-google: url("/images/icons/custom/google.svg");
-  --icon-ibm: url("/images/icons/custom/ibm.svg");
-  --icon-java: url("/images/icons/custom/java.svg");
-  --icon-javascript: url("/images/icons/custom/javascript.svg");
-  --icon-julia: url("/images/icons/custom/julia.svg");
-  --icon-keras: url("/images/icons/custom/keras.svg");
-  --icon-linux: url("/images/icons/custom/linux.svg");
-  --icon-macos: url("/images/icons/custom/macos.svg");
-  --icon-microsoft: url("/images/icons/custom/microsoft.svg");
-  --icon-mxnet: url("/images/icons/custom/mxnet.png");
-  --icon-nodejs: url("/images/icons/custom/nodejs.svg");
-  --icon-paddlepaddle: url("/images/icons/custom/paddlepaddle.png");
-  --icon-python: url("/images/icons/custom/python.svg");
-  --icon-pytorch: url("/images/icons/custom/pytorch.svg");
-  --icon-qq: url("/images/icons/custom/qq.svg");
-  --icon-qt: url("/images/icons/custom/qt.svg");
-  --icon-r: url("/images/icons/custom/r.svg");
-  --icon-react: url("/images/icons/custom/react.svg");
-  --icon-restful: url("/images/icons/custom/restful.png");
-  --icon-ruby: url("/images/icons/custom/ruby.svg");
-  --icon-rust: url("/images/icons/custom/rust.svg");
-  --icon-salesforce: url("/images/icons/custom/salesforce.svg");
-  --icon-spark: url("/images/icons/custom/spark.svg");
-  --icon-sonnet: url("/images/icons/custom/sonnet.png");
-  --icon-swift: url("/images/icons/custom/swift.svg");
-  --icon-tensorflow: url("/images/icons/custom/tensorflow.svg");
-  --icon-typescript: url("/images/icons/custom/typescript.svg");
-  --icon-wechat: url("/images/icons/custom/wechat.svg");
-  --icon-windows: url("/images/icons/custom/windows.svg");
-  --icon-youtube: url("/images/icons/custom/youtube.svg");
+  --icon-adobe: url("/images/icons/adobe.svg");
+  --icon-airbnb: url("/images/icons/airbnb.svg");
+  --icon-alibaba: url("/images/icons/alibaba.svg");
+  --icon-alipay: url("/images/icons/alipay.svg");
+  --icon-apple: url("/images/icons/apple.svg");
+  --icon-bilibili: url("/images/icons/bilibili.svg");
+  --icon-c: url("/images/icons/c.svg");
+  --icon-caffe2: url("/images/icons/caffe2.svg");
+  --icon-cpp: url("/images/icons/cpp.svg");
+  --icon-facebook: url("/images/icons/facebook.svg");
+  --icon-firefox: url("/images/icons/firefox.svg");
+  --icon-go: url("/images/icons/go.svg");
+  --icon-google: url("/images/icons/google.svg");
+  --icon-ibm: url("/images/icons/ibm.svg");
+  --icon-java: url("/images/icons/java.svg");
+  --icon-javascript: url("/images/icons/javascript.svg");
+  --icon-julia: url("/images/icons/julia.svg");
+  --icon-keras: url("/images/icons/keras.svg");
+  --icon-linux: url("/images/icons/linux.svg");
+  --icon-macos: url("/images/icons/macos.svg");
+  --icon-microsoft: url("/images/icons/microsoft.svg");
+  --icon-mxnet: url("/images/icons/mxnet.png");
+  --icon-nodejs: url("/images/icons/nodejs.svg");
+  --icon-paddlepaddle: url("/images/icons/paddlepaddle.png");
+  --icon-python: url("/images/icons/python.svg");
+  --icon-pytorch: url("/images/icons/pytorch.svg");
+  --icon-qq: url("/images/icons/qq.svg");
+  --icon-qt: url("/images/icons/qt.svg");
+  --icon-r: url("/images/icons/r.svg");
+  --icon-react: url("/images/icons/react.svg");
+  --icon-restful: url("/images/icons/restful.png");
+  --icon-ruby: url("/images/icons/ruby.svg");
+  --icon-rust: url("/images/icons/rust.svg");
+  --icon-salesforce: url("/images/icons/salesforce.svg");
+  --icon-spark: url("/images/icons/spark.svg");
+  --icon-sonnet: url("/images/icons/sonnet.png");
+  --icon-swift: url("/images/icons/swift.svg");
+  --icon-tensorflow: url("/images/icons/tensorflow.svg");
+  --icon-typescript: url("/images/icons/typescript.svg");
+  --icon-wechat: url("/images/icons/wechat.svg");
+  --icon-windows: url("/images/icons/windows.svg");
+  --icon-youtube: url("/images/icons/youtube.svg");
 }
 
 @layer theme {
   .dark {
-    --icon-material-symbols-award-star-outline: url("/images/icons/material-symbols/dark/award-star-outline.svg");
-    --icon-material-symbols-dark-mode-outline: url("/images/icons/material-symbols/dark/dark-mode-outline.svg");
-    --icon-material-symbols-download-outline: url("/images/icons/material-symbols/dark/download-outline.svg");
-    --icon-material-symbols-groups-outline: url("/images/icons/material-symbols/dark/groups-outline.svg");
-    --icon-material-symbols-light-mode-outline: url("/images/icons/material-symbols/dark/light-mode-outline.svg");
-    --icon-material-symbols-list-alt-outline: url("/images/icons/material-symbols/dark/list-alt-outline.svg");
-    --icon-material-symbols-pause-outline: url("/images/icons/material-symbols/dark/pause-outline.svg");
-    --icon-material-symbols-play-outline: url("/images/icons/material-symbols/dark/play-outline.svg");
-    --icon-material-symbols-school-outline: url("/images/icons/material-symbols/dark/school-outline.svg");
-    --icon-material-symbols-settings-outline: url("/images/icons/material-symbols/dark/settings-outline.svg");
-    --icon-material-symbols-skip-next-outline: url("/images/icons/material-symbols/dark/skip-next-outline.svg");
-    --icon-material-symbols-skip-previous-outline: url("/images/icons/material-symbols/dark/skip-previous-outline.svg");
-    --icon-material-symbols-star-fill: url("/images/icons/material-symbols/dark/star-fill.svg");
-    --icon-material-symbols-star-outline: url("/images/icons/material-symbols/dark/star-outline.svg");
-    --icon-material-symbols-target-outline: url("/images/icons/material-symbols/dark/target-outline.svg");
-
-    --icon-theme-toggle-top: url("/images/icons/material-symbols/light/light-mode-outline.svg");
-    --icon-theme-toggle-left: url("/images/icons/material-symbols/dark/light-mode-outline.svg");
+    --icon-theme-toggle: var(--icon-lucide-sun);
   }
 }
 
-.icon {
+.icon,
+.icon-mask {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
 }
 
-.icon::before {
+.icon::before,
+.icon-mask::before {
   display: inline-block;
   background-size: auto 1em;
   background-repeat: no-repeat;
@@ -104,89 +76,35 @@
   vertical-align: middle;
 }
 
-/* others */
+.icon-mask::before {
+  mask-size: auto 1em;
+  background-color: var(--color-html-foreground);
+}
+
+.lucide {
+  width: 1em;
+  height: 1em;
+}
+
 .icon-theme-toggle::before {
   width: 1.2em;
   height: 1.2em;
   background-size: auto 1.2em;
-  background-image: var(--icon-theme-toggle-top);
+  background-color: var(--color-html-background);
+  mask-image: var(--icon-theme-toggle);
+  mask-size: 1.2em 1.2em;
 
   @variant lg {
-    width: 1.5em;
-    height: 1.5em;
-    background-size: auto 1.5em;
-    background-image: var(--icon-theme-toggle-left);
+    background-color: var(--color-html-foreground);
   }
 }
 
-/* material symbols */
-
-.icon-material-symbols-award-star-outline::before {
-  background-image: var(--icon-material-symbols-award-star-outline);
-}
-
-.icon-material-symbols-dark-mode-outline::before {
-  background-image: var(--icon-material-symbols-dark-mode-outline);
-}
-
-.icon-material-symbols-download-outline::before {
-  background-image: var(--icon-material-symbols-download-outline);
-}
-
-.icon-material-symbols-groups-outline::before {
-  background-image: var(--icon-material-symbols-groups-outline);
-}
-
-.icon-material-symbols-light-mode-outline::before {
-  background-image: var(--icon-material-symbols-light-mode-outline);
-}
-
-.icon-material-symbols-list-alt-outline::before {
-  background-image: var(--icon-material-symbols-list-alt-outline);
-}
-
-.icon-material-symbols-pause-outline::before {
-  background-image: var(--icon-material-symbols-pause-outline);
-}
-
-.icon-material-symbols-play-outline::before {
-  background-image: var(--icon-material-symbols-play-outline);
-}
-
-.icon-material-symbols-school-outline::before {
-  background-image: var(--icon-material-symbols-school-outline);
-}
-
-.icon-material-symbols-settings-outline::before {
-  background-image: var(--icon-material-symbols-settings-outline);
-}
-
-.icon-material-symbols-skip-next-outline::before {
-  background-image: var(--icon-material-symbols-skip-next-outline);
-}
-
-.icon-material-symbols-skip-next-outline::before {
-  background-image: var(--icon-material-symbols-skip-next-outline);
-}
-
-.icon-material-symbols-skip-previous-outline::before {
-  background-image: var(--icon-material-symbols-skip-previous-outline);
-}
-
-.icon-material-symbols-star-fill::before {
-  background-image: var(--icon-material-symbols-star-fill);
-}
-
-.icon-material-symbols-star-outline::before {
-  background-image: var(--icon-material-symbols-star-outline);
-}
-
-.icon-material-symbols-target-outline::before {
-  background-image: var(--icon-material-symbols-target-outline);
+/* lucide */
+.icon-lucide-star-filled::before {
+  mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-filled-icon lucide-star-filled"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>');
 }
 
 /* custom */
-
 .icon-adobe::before {
   background-image: var(--icon-adobe);
 }
