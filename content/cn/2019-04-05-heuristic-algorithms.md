@@ -55,7 +55,7 @@ images:
   - /images/cn/2019-04-05-heuristic-algorithms/hyper-heuristic-algorithms-model.png
 ---
 
-# 启发式算法 (Heuristic Algorithms)
+## 启发式算法 (Heuristic Algorithms)
 
 **启发式算法 (Heuristic Algorithms)** 是相对于最优算法提出的。一个问题的最优算法是指求得该问题每个实例的最优解. 启发式算法可以这样定义 [^xing2005modern]：一个基于直观或经验构造的算法，在可接受的花费 (指计算时间、占用空间等) 下给出待解决组合优化问题每一个实例的一个可行解，该可行解与最优解的偏离程度不一定事先可以预计。
 
@@ -71,9 +71,9 @@ images:
 
 ![Heuristic-Algorithms](/images/cn/2019-04-05-heuristic-algorithms/heuristic-algorithms.png)
 
-# 简单启发式算法 (Simple Heuristic Algorithms)
+## 简单启发式算法 (Simple Heuristic Algorithms)
 
-## 贪心算法 (Greedy Algorithm)
+### 贪心算法 (Greedy Algorithm)
 
 贪心算法是指一种在求解问题时总是采取当前状态下最优的选择从而得到最优解的算法。贪心算法的基本步骤定义如下：
 
@@ -95,7 +95,7 @@ images:
 | 自顶向下的求解                                   | 自底向上的求解 (也可采用带备忘录的自顶向下方法) |
 | 通常情况下简单高效                               | 效率可能比较低                                  |
 
-## 局部搜索 (Local Search) 和爬山算法 (Hill Climbing)
+### 局部搜索 (Local Search) 和爬山算法 (Hill Climbing)
 
 局部搜索算法基于贪婪思想，从一个候选解开始，持续地在其**邻域**中搜索，直至邻域中没有更好的解。对于一个优化问题：
 
@@ -111,11 +111,11 @@ $$`
 
 当我们的优化目标为最大化目标函数 `$f \left(x\right)$` 时，这种局部搜索算法称之为爬山算法。
 
-# 元启发式算法 (Meta-Heuristic Algorithms)
+## 元启发式算法 (Meta-Heuristic Algorithms)
 
 元启发式算法 (Meta-Heuristic Algorithms) 是启发式算法的改进，通常使用随机搜索技巧，可以应用在非常广泛的问题上，但不能保证效率。本节部分内容参考了《智能优化方法》[^wang2007intelligent] 和《现代优化计算方法》[^xing2005modern]。
 
-## 禁忌搜索 (Tabu Search)
+### 禁忌搜索 (Tabu Search)
 
 禁忌搜索 (Tabu Search) 是由 Glover [^glover1997tabu] 提出的一种优化方法。禁忌搜索通过在解邻域内搜索更优的解的方式寻找目标的最优解，在搜索的过程中将搜索历史放入禁忌表 (Tabu List) 中从而避免重复搜索。禁忌表通过模仿人类的记忆功能，禁忌搜索因此得名。
 
@@ -130,7 +130,7 @@ $$`
 3. 更新禁忌表。
 4. 判断是否满足停止条件，如果满足，则停止算法；否则转至步骤 2。
 
-## 模拟退火 (Simulated Annealing)
+### 模拟退火 (Simulated Annealing)
 
 模拟退火 (Simulated Annealing) 是一种通过在邻域中寻找目标值相对小的状态从而求解全局最优的算法，现代的模拟退火是由 Kirkpatrick 等人于 1983 年提出 [^kirkpatrick1983optimization]。模拟退火算法源自于对热力学中退火过程的模拟，在给定一个初始温度下，通过不断降低温度，使得算法能够在多项式时间内得到一个近似最优解。
 
@@ -190,13 +190,13 @@ $$`
 
 其中，<span style="color:#FFF; background-color:#000;">**白色**</span> 的大点为初始解位置，<span style="color:#F71893;">**粉色**</span> 的大点为求解的最优解位置，颜色从白到粉描述了迭代次数。从图中不难看出，由于局部最大值的存在，从不同的初始解出发，爬山算法容易陷入局部最大值，而模拟退火算法则相对稳定。
 
-## 遗传算法 (Genetic Algorithm)
+### 遗传算法 (Genetic Algorithm)
 
 遗传算法 (Genetic Algorithm, GA) 是由 John Holland 提出，其学生 Goldberg 对整个算法进行了进一步完善 [^wikipedia-ga]。算法的整个思想来源于达尔文的进化论，其基本思想是根据问题的目标函数构造一个适应度函数 (Fitness Function)，对于种群中的每个个体 (即问题的一个解) 进行评估 (计算适应度)，选择，交叉和变异，通过多轮的繁殖选择适应度最好的个体作为问题的最优解。算法的整个流程如下所示：
 
 ![GA-Process](/images/cn/2019-04-05-heuristic-algorithms/ga-process.png)
 
-### 初始化种群
+#### 初始化种群
 
 在初始化种群时，我们首先需要对每一个个体进行编码，常用的编码方式有二进制编码，实值编码 [^michalewicz1992modified]，矩阵编码 [^gottlieb1998genetic]，树形编码等。以二进制为例 (如下不做特殊说明时均以二进制编码为例)，对于 `$p \in \left\{0, 1, \dotsc, 100\right\}$` 中 `$p_i = 50$` 可以表示为：
 
@@ -212,11 +212,11 @@ $$`
 
 其中，`$m$` 为染色体的长度或编码的位数。初始化种群个体共 `$n$` 个，对于任意一个个体染色体的任意一位 `$i$`，随机生成一个随机数 `$\text{rand} \in U \left(0, 1\right)$`，若 `$\text{rand} > 0.5$`，则 `$p_i = 1$`，否则 `$p_i = 0$`。
 
-### 计算适应度
+#### 计算适应度
 
 适应度为评价个体优劣程度的函数 `$f\left(x\right)$`，通常为问题的目标函数，对最小化优化问题 `$f\left(x\right) = - \min \sum{\mathcal{L} \left(\hat{y}, y\right)}$`，对最大化优化问题 `$f\left(x\right) = \max \sum{\mathcal{L} \left(\hat{y}, y\right)}$`，其中 `$\mathcal{L}$` 为损失函数。
 
-### 选择
+#### 选择
 
 对于种群中的每个个体，计算其适应度，记第 `$i$` 个个体的适应度为 `$F_i = f\left(x_i\right)$`。则个体在一次选择中被选中的概率为：
 
@@ -247,7 +247,7 @@ $$`
 
 ![GA-Roulette-Wheel](/images/cn/2019-04-05-heuristic-algorithms/ga-roulette-wheel.png)
 
-### 交叉
+#### 交叉
 
 交叉运算类似于染色体之间的交叉，常用的方法有单点交叉，多点交叉和均匀交叉等。
 
@@ -263,11 +263,11 @@ $$`
 
 ![GA-Crossover-Uniform](/images/cn/2019-04-05-heuristic-algorithms/ga-crossover-uniform.png)
 
-### 变异
+#### 变异
 
 变异即对于一个染色体的任意位置的值以一定的概率 `$P_m$` 发生变化，对于二进制编码来说即反转该位置的值。其中  `$P_m$` 为一个较小的值，例如 `$P_m = 0.05$`。
 
-### 小结
+#### 小结
 
 在整个遗传运算的过程中，不同的操作发挥着不同的作用：
 
@@ -277,7 +277,7 @@ $$`
 
 除此之外，对于基本的遗传算法还有多种优化方法，例如：精英主义，即将每一代中的最优解原封不动的复制到下一代中，这保证了最优解可以存活到整个算法结束。
 
-### 示例 - 商旅问题
+#### 示例 - 商旅问题
 
 以 [商旅问题](https://zh.wikipedia.org/zh/旅行推销员问题) 为例，利用 GA 算法求解中国 34 个省会城市的商旅问题。求解代码利用了 [Deap](https://deap.readthedocs.io/en/master/) 库，结果可视化如下图所示：
 
@@ -287,7 +287,7 @@ $$`
 
 ![GA-Mona-Lisa](/images/cn/2019-04-05-heuristic-algorithms/ga-mona-lisa.png)
 
-## 蚁群算法 (Ant Colony Optimization, ACO)
+### 蚁群算法 (Ant Colony Optimization, ACO)
 
 1991 年，意大利学者 Dorigo M. 等人在第一届欧洲人工生命会议 (ECAL) 上首次提出了蚁群算法。1996 年 Dorigo M. 等人发表的文章 “Ant system: optimization by a colony of cooperating agents” [^dorigo1996ant] 为蚁群算法奠定了基础。在自然界中，蚂蚁会分泌一种叫做信息素的化学物质，蚂蚁的许多行为受信息素的调控。蚂蚁在运动过程中能够感知其经过的路径上信息素的浓度，蚂蚁倾向朝着信息素浓度高的方向移动。以下图为例 [^toksari2016hybrid]：
 
@@ -295,7 +295,7 @@ $$`
 
 蚂蚁从蚁巢 (N) 出发到达食物源所在地 (F)，取得食物后再折返回蚁巢。整个过程中蚂蚁有多种路径可以选择，单位时间内路径上通过蚂蚁的数量越多，则该路径上留下的信息素浓度越高。因此，最短路径上走过的蚂蚁数量越多，则后来的蚂蚁选择该路径的机率就越大，从而蚂蚁通过信息的交流实现了寻找食物和蚁巢之间最短路的目的。
 
-## 粒子群算法 (Particle Swarm Optimization, PSO)
+### 粒子群算法 (Particle Swarm Optimization, PSO)
 
 Eberhart, R. 和 Kennedy, J. 于 1995 年提出了粒子群优化算法 [^eberhart1995particle] [^eberhart1995new]。粒子群算法模仿的是自然界中鸟群和鱼群等群体的行为，其基本原理描述如下：
 
@@ -326,7 +326,7 @@ $$`
 
 本节相关示例代码详见 [这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2019-04-05-heuristic-algorithms/)。
 
-# 超启发式算法 (Hyper-Heuristic Algorithms)
+## 超启发式算法 (Hyper-Heuristic Algorithms)
 
 超启发式算法 (Hyper-Heuristic Algorithms) 提供了一种高层次启发式方法，通过管理或操纵一系列低层次启发式算法 (Low-Level Heuristics，LLH)，以产生新的启发式算法。这些新启发式算法被用于求解各类组合优化问题 [^jiang2011hyper]。
 

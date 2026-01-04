@@ -40,7 +40,7 @@ images:
 
 CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的属性，其控制着元素在网页中的显示方式。之前对布局和定位可谓是一知半解，最终奏不奏效全凭一顿乱试 😂，想了想还是应该细致地了解下，后面虽不妄想写起代码来事半功倍，但至少不会再暴力遍历破解了。
 
-# 盒模型
+## 盒模型
 
 在介绍布局和定位之前，首先回顾一下 CSS 的盒模型。CSS 盒模型从外到内由**外边距 `margin`**、**边框 `border`**、**内边距 `padding`** 和**内容 `content`** 共 4 部分组成，如下图所示：
 
@@ -70,7 +70,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 [^mdn-css-box-model]: https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model
 
-# 布局
+## 布局
 
 在 CSS 中使用 `display` 属性控制元素的布局方式，上文中的 `block` 和 `inline` 是最常用的两种布局方式。除此之外还有一种介于块级盒子和内联盒子之间的布局方式，即 `inline-block`，其具有如下表现行为：
 
@@ -92,7 +92,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 上图分别展示了 `display: inline` 和 `display: inline-block` 两种布局 `span` 元素的显示差异。
 
-## 弹性布局
+### 弹性布局
 
 {{% admonition %}}
 本节内容主要参考自：[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -104,11 +104,11 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-basic-terminology.svg" title="Flexbox 基本思想" >}}
 
-### 父元素属性
+#### 父元素属性
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-container.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### display
+##### display
 
 该属性启用弹性容器，为其子元素开启弹性上下文。
 
@@ -118,7 +118,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### flex-direction
+##### flex-direction
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-direction.svg" >}}
 
@@ -135,7 +135,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 - `column`：从上至下
 - `column-reverse`：从下至上
 
-#### flex-wrap
+##### flex-wrap
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-wrap.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -151,7 +151,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 - `wrap`：允许换行，从上至下。
 - `wrap-reverse`：允许换行，从下至上。
 
-#### flex-flow
+##### flex-flow
 
 该属性是 `flex-direction` 和 `flex-wrap` 两个属性的简写。
 
@@ -161,7 +161,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### justify-content
+##### justify-content
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-justify-content.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -180,7 +180,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 - `space-around`：将子元素沿着 `flex-direction` 方向均匀排列，每个子元素周围分配相同的空间。
 - `space-evenly`：将子元素沿着 `flex-direction` 方向均匀排列，每个子元素之间的间隔相同。
 
-#### align-items
+##### align-items
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-items.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -198,7 +198,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 - `center`：子元素在交叉轴上居中对齐。
 - `baseline`：子元素沿着他们的基线对齐。
 
-#### align-content
+##### align-content
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-content.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -223,7 +223,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 - `space-evenly`：子元素均匀分布，每行元素之间的间隔相同。
 - `stretch`：子元素拉伸占用剩余空间。
 
-#### gap, row-gap, column-gap
+##### gap, row-gap, column-gap
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-gap.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -242,11 +242,11 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 该属性产生的行为可以认为是子元素之间的最小间距。
 
-### 子元素属性
+#### 子元素属性
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-items.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### order
+##### order
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-order.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -258,7 +258,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### flex-grow
+##### flex-grow
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-flex-grow.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -270,7 +270,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### flex-shrink
+##### flex-shrink
 
 该属性定义了子元素在必要时的收缩能力。
 
@@ -280,7 +280,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### flex-basis
+##### flex-basis
 
 该属性定义了分配剩余空间之前子元素的默认大小。其可以为例如 `20%`、`5rem` 之类的长度或一个关键字。
 
@@ -290,7 +290,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### flex
+##### flex
 
 该属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 三个属性的简写。
 
@@ -300,7 +300,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### align-self
+##### align-self
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/flexbox-align-self.svg" middle-max-width="60%" large-max-width="40%" >}}
 
@@ -312,7 +312,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-## 网格布局
+### 网格布局
 
 {{% admonition %}}
 本节内容主要参考自：[A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
@@ -320,9 +320,9 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 **网格布局**（Grid Layout）是一种基于网格的布局系统，相比于沿轴线 **一维布局** 的弹性布局，网格布局可以看做是一种 **二维布局**。
 
-### 核心概念
+#### 核心概念
 
-#### 网格容器
+##### 网格容器
 
 网格容器即属性 `display` 为 `grid` 的元素，其为所有网格项目的直接父级。如下示例中，`container` 即为网格容器：
 
@@ -334,7 +334,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 </div>
 ```
 
-#### 网格项目
+##### 网格项目
 
 网格项目为网格容器的直接后代。如下示例中，`item` 即为网格项目，但 `sub-item` 不是：
 
@@ -348,33 +348,33 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 </div>
 ```
 
-#### 网格线
+##### 网格线
 
 网格线即构成网格结构的分界线。其可以是位于行或列任意一侧的垂直或水平线。如下示例中，黄色的线为一条列网格线：
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-line.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### 网格单元
+##### 网格单元
 
 网格单元即两个相邻行和两个相邻列之间的区域。如下示例中，黄色区域为行网格线 1 和 2 以及列网格线 2 和 3 之间的单元格：
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-cell.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### 网格轨道
+##### 网格轨道
 
 网格轨道即 2 条相邻网格线之间的区域，可以将其视为网格的行或列。如下示例中，黄色区域为第 2 行和第 3 行网格线之间的网格轨道：
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-track.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### 网格区域
+##### 网格区域
 
 网格区域即 4 条网格线包围的区域，一个网格区域可以由任意数量的网格单元组成。如下示例中，黄色区域为行网格线 1 和 3 以及列网格线 1 和 3 之间的网格区域：
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-terms-grid-area.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-### 父元素属性
+#### 父元素属性
 
-#### display
+##### display
 
 该属性启用网格容器，为其子元素开启网格上下文。
 
@@ -384,7 +384,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### grid-template-columns, grid-template-rows
+##### grid-template-columns, grid-template-rows
 
 该属性通过空格分隔的值列表定义网格的列和行，值代表轨道的大小。值列表包括：
 
@@ -471,7 +471,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### grid-template-areas
+##### grid-template-areas
 
 该属性通过引用网格区域的名称 `grid-area` 来定义网格。重复网格区域名称会导致内容跨越这些单元格。句点表示一个空单元格。语法本身提供了网格结构的可视化。
 
@@ -520,7 +520,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 注意使用此语法仅可以命名区域，不可命名线。使用此语法时，区域两端的线会自动命名，如果网格区域名称为 `foo`，那么该区域的起始行线和起始列线名称为 `foo-start`，该区域的终止行线和终止列线名称为 `foo-end`。这意味着某些线可能有多个名称，上述示例中最左边的行线将有 3 个名称：`header-start`、`main-start` 和 `footer-start`。
 
-#### grid-template
+##### grid-template
 
 该属性是 `grid-template-rows`、`grid-template-columns` 和 `grid-template-areas` 三个属性的简写。
 
@@ -555,7 +555,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 由于 `grid-template` 并不会重置网格的隐含属性（`grid-auto-columns`、`grid-auto-rows` 和 `grid-auto-flow`）。因此，建议使用 `grid` 属性而非 `grid-template`。
 
-#### column-gap, row-gap, grid-column-gap, grid-row-gap
+##### column-gap, row-gap, grid-column-gap, grid-row-gap
 
 该属性用于指定网格线的大小，你可以将其看做列和行之间的间距。
 
@@ -584,7 +584,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 间距仅在列和行之间创建，不在边缘创建。注意，带有 `grid-` 前缀的属性将被废弃。
 
-#### gap, grid-gap
+##### gap, grid-gap
 
 该属性为 `row-gap` 和 `column-gap` 两个属性的简写。
 
@@ -608,7 +608,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 如果未指定 `row-gap`，则它将被设置为与 `column-gap` 相同的值。注意，带有 `grid-` 前缀的属性将被废弃。
 
-#### justify-items
+##### justify-items
 
 沿 `inline`（行）轴对齐网格项（与沿 `block`（列）轴对齐 `align-items` 相反）。该属性将应用于容器内所有网格项。
 
@@ -655,7 +655,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-justify-items-center.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### align-items
+##### align-items
 
 沿 `block`（列）轴对齐网格项（与沿 `inline`（行）轴对齐 `align-items` 相反）。该属性将应用于容器内所有网格项。
 
@@ -705,7 +705,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 通过 `align-self` 属性可以在单个网格项上覆盖由 `align-items` 指定的对齐方式。
 
-#### place-items
+##### place-items
 
 该属性在单次声明中同时设置 `align-items` 和 `justify-items` 属性。
 
@@ -718,7 +718,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-#### justify-content
+##### justify-content
 
 当所有网格项均使用非弹性的单位（例如 `px`）来确定大小，则网格的总大小可能小于网格容器的大小。在这种情况下，可以在网格容器内设置网格的对齐方式。该属性沿 `inline`（行）轴（与沿 `block`（列）轴对齐 `align-content` 相反）对齐网格。
 
@@ -792,7 +792,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-justify-content-space-evenly.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### align-content
+##### align-content
 
 当所有网格项均使用非弹性的单位（例如 `px`）来确定大小，则网格的总大小可能小于网格容器的大小。在这种情况下，可以在网格容器内设置网格的对齐方式。该属性沿 `block`（列）轴（与沿 `inline`（行）轴对齐 `justify-content` 相反）对齐网格。
 
@@ -866,13 +866,13 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-align-content-space-evenly.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### place-content
+##### place-content
 
 该属性在单次声明中同时设置 `align-content` 和 `justify-content` 属性。
 
 - `<align-content> / <justify-content>`：省略第二个值则将第一个值分配给两个属性。
 
-#### grid-auto-columns, grid-auto-rows
+##### grid-auto-columns, grid-auto-rows
 
 该属性指定自动生成的网格轨道（也称为隐式网格轨道）的大小。当网格项多于网格中的单元格或当网格项放置在显示网格之外时，将创建隐式网格轨道。
 
@@ -921,7 +921,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-auto-columns-rows-03.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### grid-auto-flow
+##### grid-auto-flow
 
 如果有未明确放置在网格中的网格项目，自动放置算法会自动放置这些网格项目。此属性用于控制自动放置算法的工作方式。
 
@@ -990,7 +990,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-auto-flow-02.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### grid
+##### grid
 
 该属性为 `grid-template-rows`、`grid-template-columns`、`grid-template-areas`、`grid-auto-rows`、`grid-auto-columns` 和 `grid-auto-flow` 属性的简写。
 
@@ -1065,9 +1065,9 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 }
 ```
 
-### 子元素属性
+#### 子元素属性
 
-#### grid-column-start, grid-column-end, grid-row-start, grid-row-end
+##### grid-column-start, grid-column-end, grid-row-start, grid-row-end
 
 该属性通过网格线来设置网格项在网格中的位置。`grid-column-start` 和 `grid-row-start` 为网格项起始的线，`grid-column-end` 和 `grid-row-end` 为网格项结束的线。
 
@@ -1109,7 +1109,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 如果 `grid-column-end` 或 `grid-row-end` 未声明，则该网格项将默认跨越一个轨道。网格项目之间可以相互重叠，使用 `z-index` 可以控制它们的重叠次序。
 
-#### grid-column, grid-row
+##### grid-column, grid-row
 
 分别是 `grid-column-start` + `grid-column-end` 和 `grid-row-start`+ `grid-row-end` 的简写。
 
@@ -1133,7 +1133,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 如果未设置结束线的值，则该网格项将默认跨越一个轨道。
 
-#### grid-area
+##### grid-area
 
 为一个网格项命名以便它可以使用 `grid-template-areas` 属性创建的模板引用。此属性可以作为 `grid-row-start` + `grid-column-start` + `grid-row-end` + `grid-column-end` 的简写。
 
@@ -1158,7 +1158,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-area.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### justify-self
+##### justify-self
 
 沿 `inline`（行）轴对齐单元格内的网格项（与沿 `block`（列）轴对齐 `align-self` 相反）。该属性仅应用于单个单元格内的网格项。
 
@@ -1207,7 +1207,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 通过 `justify-items` 属性可以为容器中所有的网格项设置对齐方式。
 
-#### align-self
+##### align-self
 
 沿 `block`（列）轴对齐单元格内的网格项（与沿 `inline`（行）轴对齐 `justify-self` 相反）。该属性将仅应用于单个单元格内的网格项。
 
@@ -1254,7 +1254,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-align-self-center.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-#### place-self
+##### place-self
 
 `place-self` 可以在单次声明中同时设置 `align-self` 和 `justify-self`。
 
@@ -1277,7 +1277,7 @@ CSS 中的布局 `display` 和定位 `position` 可以说是两个最基本的�
 
 {{< figure src="/images/cn/2023-05-03-css-display-and-position/grid-place-self-center-stretch.svg" middle-max-width="60%" large-max-width="40%" >}}
 
-# 定位
+## 定位
 
 {{% admonition %}}
 本节内容主要参考自：[定位技术](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction#%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF)
@@ -1316,7 +1316,7 @@ p {
 }
 ```
 
-## 静态定位
+### 静态定位
 
 **静态定位**（`static`）是 `position` 属性的 **默认值**，它表示将元素放置在文档布局流的默认位置上。
 
@@ -1332,7 +1332,7 @@ p {
 
 <iframe height="300" width="100%" style="background: #ffffff; border: 1px solid var(--code-border); border-radius: 3px;" src="/codes/cn/2023-05-03-css-display-and-position/static-position.html"></iframe>
 
-## 相对定位
+### 相对定位
 
 **相对定位**（`relative`）表示相对于 **静态定位** 的默认位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。
 
@@ -1352,7 +1352,7 @@ p {
 
 <iframe height="300" width="100%" style="background: #ffffff; border: 1px solid var(--code-border); border-radius: 3px;" src="/codes/cn/2023-05-03-css-display-and-position/relative-position.html"></iframe>
 
-## 绝对定位
+### 绝对定位
 
 **绝对定位**（`absolute`）表示相对于 **上级元素** 的位置进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。绝对定位的定位基点不能为 `static` 定位，否则定位基点将变成网页根元素 `html`。
 
@@ -1372,7 +1372,7 @@ p {
 
 <iframe height="300" width="100%" style="background: #ffffff; border: 1px solid var(--code-border); border-radius: 3px;" src="/codes/cn/2023-05-03-css-display-and-position/absolute-position.html"></iframe>
 
-## 固定定位
+### 固定定位
 
 **固定定位**（`fixed`）表示相对于 **视窗**（viewport，即浏览器窗口）进行偏移，其需要搭配 `top`、`bottom`、`left` 和 `right` 四个属性使用。利用固定定位可以实现元素位置不随页面滚动而发生变化。
 
@@ -1406,7 +1406,7 @@ p {
 
 <iframe height="300" width="100%" style="background: #ffffff; border: 1px solid var(--code-border); border-radius: 3px;" src="/codes/cn/2023-05-03-css-display-and-position/fixed-position.html"></iframe>
 
-## 粘性定位
+### 粘性定位
 
 **粘性定位**（`sticky`）可以理解为 **静态定位**（`static`）和 **固定定位**（`fixed`）的 **混合**。当指定一个元素的 `position` 属性为 `sticky` 后，它会在正常布局流中滚动，直至它出现在设定的相对于容器的位置，此时它会停止滚动，表现为固定定位。
 

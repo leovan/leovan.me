@@ -16,7 +16,7 @@ images:
   - /images/cn/2020-05-07-compile-and-install-tmux-on-synology-nas/tmux-installed.png
 ---
 
-# 工具链安装
+## 工具链安装
 
 登录 NAS 控制台，在系统根目录创建 `toolkit` 目录：
 
@@ -61,7 +61,7 @@ ds.apollolake-6.2.env.txz
 sudo ./EnvDeploy -v 6.2 -p apollolake -t /toolkit/toolkit_tarballs
 ```
 
-# 编译 tmux
+## 编译 tmux
 
 在 `/toolkit` 目录下建立 `source` 文件夹，并将 tmux 源代码（本文以 3.1b 版本为例）下载到该文件夹中：
 
@@ -312,7 +312,7 @@ sudo ./PkgCreate.py -v 6.2 -p apollolake tmux
 
 最终构建完毕的扩展包位于 `/toolkit/build_env/ds.apollolake-6.2/image/packages` 中。
 
-# 安装 tmux
+## 安装 tmux
 
 在 `/toolkit/build_env/ds.apollolake-6.2/image/packages` 目录中有两个编译好的扩展包，分别是 `tmux-apollolake-3.1b_debug.spk` 和 `tmux-apollolake-3.1b.spk`。其中 `tmux-apollolake-3.1b.spk` 为 Release 版本，传输到本地，通过 NAS 的套件中心手动安装即可。安装完毕后，套件中心的“已安装”会出现 tmux，如下图所示：
 

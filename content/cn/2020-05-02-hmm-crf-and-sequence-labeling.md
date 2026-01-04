@@ -35,7 +35,7 @@ images:
   - /images/cn/2020-05-02-hmm-and-crf/relationship-between-nb-lr-hmm-lcrf-gdm-gcrf.png
 ---
 
-# 隐马尔可夫
+## 隐马尔可夫
 
 隐马尔可夫模型（Hidden Markov Model，HMM）是一个描述包含隐含未知参数的马尔可夫过程的统计模型。马尔可夫过程（Markov Process）是因俄国数学家安德雷·安德耶维齐·马尔可夫（Андрей Андреевич Марков）而得名一个随机过程，在该随机过程中，给定当前状态和过去所有状态的条件下，其下一个状态的条件概率分布仅依赖于当前状态，通常具备离散状态的马尔可夫过程称之为马尔可夫链（Markov Chain）。因此，马尔可夫链可以理解为一个有限状态机，给定了当前状态为 `$S_i$` 时，下一时刻状态为 `$S_j$` 的概率，不同状态之间变换的概率称之为转移概率。下图描述了 3 个状态 `$S_a, S_b, S_c$` 之间转换状态的马尔可夫链。
 
@@ -93,9 +93,9 @@ $$`
 2. 学习问题。已知观测序列 `$O = \{o_1, o_2, \cdots, o_T\}$`，估计模型 `$\lambda = \left(A, B, \pi\right)$` 参数，使得在该模型下观测序列概率 `$P\left(X | \lambda \right)$` 最大。即用极大似然估计的方法估计参数。
 3. 预测问题，也称为解码（decoding）问题。已知模型 `$\lambda = \left(A, B, \pi\right)$` 和观测序列 `$O = \{o_1, o_2, \cdots, o_T\}$`，求对给定观测序列条件概率 `$P \left(I | O\right)$` 最大的状态序列 `$I = \{i_1, i_2, \cdots, i_T\}$`。即给定观测序列，求最有可能的对应的状态序列。
 
-## 概率计算
+### 概率计算
 
-### 直接计算法
+#### 直接计算法
 
 给定模型 `$\lambda = \left(A, B, \pi \right)$` 和观测序列 `$O = \{o_1, o_2, ..., o_T\}$`，计算在模型 `$\lambda$` 下观测序列 `$O$` 出现的概率 `$P\left(O | \lambda \right)$`。最简单的办法就是列举出左右可能的状态序列 `$I = \{i_1, i_2, ..., i_T\}$`，再根据观测概率矩阵 `$B$`，计算每种状态序列对应的联合概率 `$P \left(O, I | \lambda\right)$`，对其进行求和得到概率 `$P\left(O | \lambda \right)$`。
 
@@ -131,7 +131,7 @@ $$`
 
 但利用上式的计算量很大，是 `$O \left(T N^T\right)$` 阶的，这种算法不可行。
 
-### 前向算法
+#### 前向算法
 
 **前向概率**：给定马尔可夫模型 `$\lambda$`，给定到时刻 `$t$` 部分观测序列为 `$o_1, o_2, \cdots, o_t$` 且状态为 `$q_i$` 的概率为前向概率，记作：
 
@@ -154,7 +154,7 @@ $$`
   P(O | \lambda)=\sum_{i=1}^{N} \alpha_{T}(i)
   $$`
 
-### 后向算法
+#### 后向算法
 
 **后向概率**：给定隐马尔可夫模型 `$\lambda$`，给定在时刻 `$t$` 状态为 `$q_i$` 的条件下，从 `$t+1$` 到 `$T$` 的部分观测序列为 `$o_{t+1}, o_{t+2}, \cdots, o_T$` 的概率为后向概率，记作：
 
@@ -177,9 +177,9 @@ $$`
   P(O | \lambda)=\sum_{i=1}^{N} \pi_{i} b_{i}\left(o_{1}\right) \beta_{1}(i)
   $$`
 
-## 学习算法
+### 学习算法
 
-### 监督学习算法
+#### 监督学习算法
 
 假设以给训练数据包含 `$S$` 个长度相同的观测序列和对应的状态序列 `$\left\{\left(O_1, I_1\right), \left(O_2, I_2\right), \cdots, \left(O_S, I_S\right)\right\}$`，那么可以利用极大似然估计法来估计隐马尔可夫模型的参数。
 
@@ -197,7 +197,7 @@ $$`
 
 初始状态概率 `$\pi_i$` 的估计 `$\hat{\pi}_i$` 为 `$S$` 个样本中初始状态为 `$q_i$` 的频率。
 
-### 无监督学习算法
+#### 无监督学习算法
 
 假设给定训练数据值包含 `$S$` 个长度为 `$T$` 的观测序列 `$\left\{O_1, O_2, \cdots, O_S\right\}$` 而没有对应的状态序例，目标是学习隐马尔可夫模型 `$\lambda = \left(A, B, \pi\right)$` 的参数。我们将观测序列数据看做观测数据 `$O$`，状态序列数据看作不可观测的隐数据 `$I$`，那么马尔可夫模型事实上是一个含有隐变量的概率模型：
 
@@ -225,9 +225,9 @@ $$`
   $$`
 3. 终止。得到模型参数 `$\lambda^{(n+1)}=\left(A^{(n+1)}, B^{(n+1)}, \pi^{(n+1)}\right)$`。
 
-## 预测算法
+### 预测算法
 
-### 近似算法
+#### 近似算法
 
 近似算法的思想是，在每个时刻 `$t$` 选择在该时刻最有可能出现的状态 `$i_t^*$`，从而得到一个状态序列 `$I^{*}=\left(i_{1}^{*}, i_{2}^{*}, \cdots, i_{T}^{*}\right)$`，将它作为预测的结果。给定隐马尔可夫模型 `$\lambda$` 和观测序列 `$O$`，在时刻 `$t$` 处于状态 `$q_i$` 的概率 `$\gamma_t \left(i\right)$` 是：
 
@@ -245,7 +245,7 @@ $$`
 
 近似算法的优点是计算简单，其缺点是不能保证预测的状态序列整体是最有可能的状态序列，因为预测的状态序列可能有实际不发生的部分。事实上，上述方法得到的状态序列中有可能存在转移概率为0的相邻状态，即对某些 `$i, j, a_{ij} = 0$` 。尽管如此，近似算法仍然是有用的。
 
-### 维特比算法
+#### 维特比算法
 
 维特比算法（Viterbi Algorithm）实际是用动态规划（Dynamic Programming）解隐马尔可夫模型预测问题，即用动态规划求概率最大路径（最优路径）。这时一条路径对应着一个状态序列。
 
@@ -300,7 +300,7 @@ $$`
 
 求的最优路径 `$I^{*}=\left(i_{1}^{*}, i_{2}^{*}, \cdots, i_{T}^{*}\right)$`。
 
-# 条件随机场
+## 条件随机场
 
 概率无向图模型（Probabilistic Undirected Graphical Model）又称为马尔可夫随机场（Markov Random Field），是一个可以由无向图表示的联合概率分布。概率图模型（Probabilistic Graphical Model）是由图表示的概率分布，设有联合概率分布 `$P \left(Y\right), Y \in \mathcal{Y}$` 是一组随机变量。由无向图 `$G = \left(V, E\right)$` 表示概率分布 `$P \left(Y\right)$`，即在图 `$G$` 中，结点 `$v \in V$` 表示一个随机变量 `$Y_v, Y = \left(Y_v\right)_{v \in V}$`，边 `$e \in E$` 表示随机变量之间的概率依赖关系。
 
@@ -418,7 +418,7 @@ $$`
 
 如上图所示，上面部分为生成式模型，下面部分为判别式模型，生成式模型尝试构建联合分布 `$P \left(Y, X\right)$`，而判别模型则尝试构建条件分布 `$P \left(Y | X\right)$`。
 
-# 序列标注
+## 序列标注
 
 序列标注（Sequence Labeling）是自然语言处理中的一项重要任务，对于给定的文本序列需要给出对应的标注序列。常见的序列标注任务包含：组块分析（Chunking），词性标注（Part-of-Speech，POS）和命名实体识别（Named Entity Recognition，NER）。
 
@@ -426,7 +426,7 @@ $$`
 
 上图为一段文本的词性标注和命名实体识别的结果。
 
-## 词性标注
+### 词性标注
 
 词性标注是指为分词结果中的每个单词标注一个正确的词性，即确定每个词是名词、动词、形容词或其他词性的过程。
 
@@ -438,7 +438,7 @@ $$`
 4. The Part-Of-Speech Tagging Guidelines for the Penn Chinese Treebank (3.0) [^xia2000pos]
 5. 中文文本标注规范（微软亚洲研究院）[^huang2006tokenization]
 
-## 命名实体识别
+### 命名实体识别
 
 命名实体识别，又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。
 
@@ -491,7 +491,7 @@ $$`
 
 其中，N 为命名实体类型的数量。
 
-### BiLSTM CRF [^huang2015bidirectional]
+#### BiLSTM CRF [^huang2015bidirectional]
 
 > 本小节内容参考和修改自 [CRF-Layer-on-the-Top-of-BiLSTM](https://github.com/createmomo/CRF-Layer-on-the-Top-of-BiLSTM)。
 
@@ -589,7 +589,7 @@ $$`
 
 利用训练好的 BiLSTM-CRF 模型进行预测时，首先我们可以得到序列的发射分数和转移分数，其次用维特比算法可以得到最终的预测标注序列。
 
-### Lattice LSTM [^zhang2018chinese]
+#### Lattice LSTM [^zhang2018chinese]
 
 Zhang 等人针对中文提出了一种基于 Lattice LSTM 的命名实体识别方法，Lattice LSTM 的结构如下图所示：
 
@@ -652,9 +652,9 @@ $$`
 \end{aligned}
 $$`
 
-# 开放资源
+## 开放资源
 
-## 标注工具
+### 标注工具
 
 1. [synyi/poplar](https://github.com/synyi/poplar)
 2. [nlplab/brat](https://github.com/nlplab/brat)
@@ -663,7 +663,7 @@ $$`
 5. [deepwel/Chinese-Annotator](https://github.com/deepwel/Chinese-Annotator)
 6. [jiesutd/YEDDA](https://github.com/jiesutd/YEDDA)
 
-## 开源模型，框架和代码
+### 开源模型，框架和代码
 
 1. [pytorch/text](https://github.com/pytorch/text)
 2. [flairNLP/flair](https://github.com/flairNLP/flair)
@@ -681,7 +681,7 @@ $$`
 14. [hankcs/HanLP](https://github.com/hankcs/HanLP)
 15. [jiesutd/NCRFpp](https://github.com/jiesutd/NCRFpp)
 
-## 其他资源
+### 其他资源
 
 1. [keon/awesome-nlp](https://github.com/keon/awesome-nlp)
 2. [crownpku/Awesome-Chinese-NLP](https://github.com/crownpku/Awesome-Chinese-NLP)

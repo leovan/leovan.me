@@ -88,7 +88,7 @@ $$`
 3. `$d \left(x, y\right) = d \left(y, x\right)$` (对称性)
 4. `$d \left(x, z\right) \leq d \left(x, y\right) + d \left(y, z\right)$` (三角不等式)
 
-# 明可夫斯基距离 (明氏距离, Minkowski Distance)
+## 明可夫斯基距离 (明氏距离, Minkowski Distance)
 
 对于点 `$x = \left(x_1, x_2, ..., x_n\right)$` 和点 `$y = \left(y_1, y_2, ..., y_n\right)$`，`$p$` **阶明可夫斯基距离** 定义为：
 
@@ -122,7 +122,7 @@ $$`
 
 ![2D Unit Balls](/images/cn/2019-01-01-similarity-and-distance-measurement/2D-unit-balls.png)
 
-# 马哈拉诺比斯距离 (马氏距离, Mahalanobis Distance)
+## 马哈拉诺比斯距离 (马氏距离, Mahalanobis Distance)
 
 马哈拉诺比斯距离表示数据的 **协方差距离**，与欧式距离不同其考虑到各种特性之间的联系是 **尺度无关 (Scale Invariant)** 的。对于一个协方差矩阵为 `$\sum$` 的变量 `$x$` 和 `$y$`，马氏距离定义为：
 
@@ -136,7 +136,7 @@ $$`
 
 左侧图中根据欧式距离计算，<span style="color:#F07769;">**红色**</span> 的点距离 <span style="color:#34BA27;">**绿色**</span> 的点更近一些，右侧图是根据马氏距离进行座标变换后的示意图，不难看出此时 <span style="color:#F07769;">**红色**</span> 的点距离 <span style="color:#6C9BFF;">**蓝色**</span> 的点更近一些。
 
-# 向量内积 (Inner Product of Vectors)
+## 向量内积 (Inner Product of Vectors)
 
 在欧几里得几何中，两个笛卡尔坐标向量的点积常称为内积，向量内积是两个向量的长度与它们夹角余弦的积，定义为：
 
@@ -179,7 +179,7 @@ $$`
 
 ![Correlation Examples](/images/cn/2019-01-01-similarity-and-distance-measurement/correlation-examples.png)
 
-# 集合距离 (Distance of Sets)
+## 集合距离 (Distance of Sets)
 
 对于两个集合之间的相似性度量，主要有如下几种方法：
 
@@ -207,7 +207,7 @@ $$`
 
 其中，`$X \setminus Y$` 表示集合的相对补集。Tversky 系数可以理解为 Jaccard 系数和 Dice 系数的一般化，当 `$\alpha = \beta = 1$` 时为 Jaccard 系数，当 `$\alpha = \beta = 0.5$` 时为 Dice 系数。
 
-# 字符串距离 (Distance of Strings)
+## 字符串距离 (Distance of Strings)
 
 对于两个字符串之间的相似性度量，主要有如下几种方法：
 
@@ -253,7 +253,7 @@ $$`
 
 汉明距离为两个**等长字符串**对应位置的不同字符的个数，也就是将一个字符串变换成另外一个字符串所需要**替换**的字符个数。例如：**10<span style="color:#0000ff;">1</span>1<span style="color:#0000ff;">1</span>01** 与 **10<span style="color:#ff0000;">0</span>1<span style="color:#ff0000;">0</span>01** 之间的汉明距离是 2，**“<span style="color:#0000ff;">t</span>o<span style="color:#0000ff;">n</span>e<span style="color:#0000ff;">d</span>”** 与 **“<span style="color:#ff0000;">r</span>o<span style="color:#ff0000;">s</span>e<span style="color:#ff0000;">s</span>”** 之间的汉明距离是 3。
 
-# 信息论距离 (Information Theory Distance)
+## 信息论距离 (Information Theory Distance)
 
 首先我们需要理解什么是 **熵 (Entropy)**？熵最早是用来表示物理学中一个热力系统无序的程度，后来依据香农的信息论，熵用来衡量一个随机变量的不确定性程度。对于一个随机变量 `$X$`，其概率分布为：
 
@@ -370,7 +370,7 @@ $$`
 D_{W} \left(P, Q\right) = \dfrac{\sum_{i=1}^{m}{\sum_{j=1}^{n}{d_{i, j} f_{i, j}^*}}}{\sum_{i=1}^{m}{\sum_{j=1}^{n}{f_{i, j}^*}}}
 $$`
 
-# 其他距离 (Other Distance)
+## 其他距离 (Other Distance)
 
 - **DTW (Dynamic Time Warping) 距离**
 

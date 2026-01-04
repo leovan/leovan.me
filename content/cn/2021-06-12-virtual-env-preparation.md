@@ -53,7 +53,7 @@ images:
 
 本文以 VirtualBox 和 Ubuntu Server 为例，介绍在 macOS 下搭建 3 台虚拟机集群过程。
 
-# 安装 VirtualBox
+## 安装 VirtualBox
 
 从[官网](https://www.virtualbox.org/wiki/Downloads)下载最新版本的 VirtualBox 和 VirtualBox Extension Pack，本文以 6.1.22 版本为例。根据安装向导安装 VirtualBox。
 
@@ -67,9 +67,9 @@ images:
 
 ![](/images/cn/2021-06-12-virtual-env-preparation/virtualbox-add-host-only-network.png)
 
-# 安装 Ubuntu Server
+## 安装 Ubuntu Server
 
-## 虚拟机配置
+### 虚拟机配置
 
 从[官网](https://ubuntu.com/download/server)下载最新版本的 Ubuntu Server，本文以 20.04.2 LTS 版本为例。在 VirtualBox 通过 `New` 按钮添加新的虚拟机，首先为虚拟机配置名称，存储路径和内存大小等基本信息：
 
@@ -107,7 +107,7 @@ images:
 
 ![](/images/cn/2021-06-12-virtual-env-preparation/virtualbox-settings-storage-add-disk.png)
 
-## Ubuntu Server 安装配置
+### Ubuntu Server 安装配置
 
 单击 `Start` 按钮启动虚拟机，启动后等待片刻，在语言选择页面选择 `English`：
 
@@ -157,9 +157,9 @@ images:
 
 ![](/images/cn/2021-06-12-virtual-env-preparation/install-ubuntu-complete.png)
 
-# 配置 Ubuntu Server
+## 配置 Ubuntu Server
 
-## 克隆虚拟机
+### 克隆虚拟机
 
 重启后，输入用户名和密码即可进入系统：
 
@@ -187,7 +187,7 @@ sudo shutdown now
 
 ![](/images/cn/2021-06-12-virtual-env-preparation/clone-virtual-machine-2.png)
 
-## 配置网络
+### 配置网络
 
 分别进入虚拟机 2 和 3，修改固定 IP 地址为 `191.168.56.102` 和 `191.168.56.103`。
 
@@ -240,7 +240,7 @@ sudo vi /etc/hosts
 192.168.56.103 vm-03
 ```
 
-## 配置 SSH
+### 配置 SSH
 
 分别进入三台虚拟机并生成密钥：
 

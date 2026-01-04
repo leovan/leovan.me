@@ -59,13 +59,13 @@ images:
 
 **最近邻搜索**（Nearest Neighbor Search）是指在一个确定的距离度量和一个搜索空间内寻找与给定查询项距离最小的元素。更精确地，对于一个包含 `$N$` 个元素的集合 `$\mathcal{X} = \left\{\mathbf{x}_1, \mathbf{x}_2, \cdots, \mathbf{x}_n\right\}$`，给定查询项 `$\mathbf{q}$` 的最近邻 `$NN \left(\mathbf{q}\right) = \arg\min_{\mathbf{x} \in \mathcal{X}} dist \left(\mathbf{q}, \mathbf{x}\right)$`，其中 `$dist \left(\mathbf{q}, \mathbf{x}\right)$` 为 `$\mathbf{q}$` 和 `$\mathbf{x}$` 之间的距离。由于[维数灾难](/cn/2018/10/word-embeddings/#维数灾难-the-curse-of-dimensionality)，我们很难在高维欧式空间中以较小的代价找到精确的最近邻。**近似最近邻搜索**（Approximate Nearest Neighbor Search）则是一种通过牺牲精度来换取时间和空间的方式从大量样本中获取最近邻的方法。
 
-# 精确搜索
+## 精确搜索
 
-## 暴力查找（Brute-force Search）
+### 暴力查找（Brute-force Search）
 
 最简单的最邻近搜索便是遍历整个点集，计算它们和目标点之间的距离，同时记录目前的最近点。这样的算法较为初级，可以为较小规模的点集所用，但是对于点集的尺寸和空间的维数稍大的情况则不适用。对于 `$D$` 维的 `$N$` 个样本而言，暴力查找方法的复杂度为 `$O \left(DN\right)$`。
 
-## k-D 树
+### k-D 树
 
 k-D 树（k-Dimesion Tree）[^bentley1975multidimensional] 是一种可以高效处理 `$k$` 维空间信息的数据结构。k-D 树具有二叉搜索树的形态，二叉搜索树上的每个结点都对应 `$k$` 维空间内的一个点。其每个子树中的点都在一个 `$k$` 维的超长方体内，这个超长方体内的所有点也都在这个子树中。k-D 树的构建过程如下：
 
@@ -80,7 +80,7 @@ k-D 树（k-Dimesion Tree）[^bentley1975multidimensional] 是一种可以高效
 
 构建 k-D 树目前最优方法的时间复杂度为 `$O \left(n \log n\right)$`。对于单次查询，当 `$2$` 维时，查询时间复杂度最优为 `$O \left(\log n\right)$`，最坏为 `$O \left(\sqrt{n}\right)$`，扩展至 `$k$` 维，最坏为 `$O \left(n^{1 - \frac{1}{k}}\right)$`。k-D 树对于低维度最近邻搜索比较好，但当 `$k$` 增长到很大时，搜索的效率就变得很低，这也是“维数灾难”的一种体现。
 
-## Ball 树
+### Ball 树
 
 为了解决 k-D 树在高维数据上的问题，Ball 树 [^omohundro1989five] 结构被提了出来。k-D 树是沿着笛卡尔积（坐标轴）方向迭代分割数据，而 Ball 树是通过一系列的超球体分割数据而非超长方体。Ball 树的构建过程如下：
 
@@ -97,13 +97,13 @@ k-D 树（k-Dimesion Tree）[^bentley1975multidimensional] 是一种可以高效
 
 构建 Ball 树的时间复杂度为 `$O \left(n \left(\log n\right)^2\right)$`，查询时间复杂度为 `$O \left(\log \left(n\right)\right)$`。
 
-# 近似搜索
+## 近似搜索
 
-## 基于哈希的算法
+### 基于哈希的算法
 
 基于哈希的算法的目标是将一个高维数据点转换为哈希编码的表示方式，主要包含两类方法：**局部敏感哈希**（Local Sensitive Hash, LSH）和**哈希学习**（Learning to Hash, L2H）。
 
-### 局部敏感哈希
+#### 局部敏感哈希
 
 局部敏感哈希采用的是与数据无关的哈希函数，也就是说整个学习处理过程不依赖于任何的数据内容信息。LSH 通过一个局部敏感哈希函数将相似的数据点以更高的概率映射到相同的哈希编码上去。这样我们在进行查询时就可以先找到查询样本落入那个哈希桶，然后再在这个哈希桶内进行遍历比较就可以找到最近邻了。
 
@@ -187,7 +187,7 @@ $$`
 
 Multi-probe LSH [^lv2007multiprobe] 引入了一种新的策略解决召回的问题。Multi-probe LSH 不仅仅会遍历查询样本所在桶内的元素，同时还会查询一些其他有可能包含最近邻的桶，从而在避免构建多个哈希表的情况下增加召回率。
 
-### 哈希学习
+#### 哈希学习
 
 哈希学习（Learning to Hash）是由 Salakhutdinov 和 Hinton [^salakhutdinov2009semantic] 引入到机器学习领域，通过机器学习机制将数据映射成二进制串的形式，能显著减少数据的存储和通信开销，从而有效提高学习系统的效率 [^li2015big]。从原空间中的特征表示直接学习得到二进制的哈希编码是一个 NP-Hard 问题。现在很多的哈希学习方法都采用两步学习策略：
 
@@ -198,7 +198,7 @@ Multi-probe LSH [^lv2007multiprobe] 引入了一种新的策略解决召回的�
 
 哈希学习相关的具体算法不再一一展开，更多细节请参见下文提供的相关 Survey。
 
-## 矢量量化算法
+### 矢量量化算法
 
 **矢量量化**（Vector Quantization）是信息论中一种用于数据压缩的方法，其目的是减少表示空间的维度。一个量化器可以表示为由 `$D$` 维向量 `$x \in \mathbb{R}^D$` 到一个向量 `$q \left(x\right) \in \mathcal{C} = \left\{c_i; i \in \mathcal{I}\right\}$` 的映射 `$q$`，其中下标集合 `$\mathcal{I}$` 为有限集合，即 `$\mathcal{I} = 0, \cdots, k-1$`。`$c_i$` 称之为形心（centroids），`$\mathcal{C}$` 称之为大小为 `$k$` 的码本（codebook）。映射后的向量到一个给定下标 `$i$` 的集合 `$\mathcal{V}_i \triangleq \left\{x \in \mathbb{R}^D: q \left(x\right) = c_i\right\}$`（Voronoi），称之为一个单元（cell）。
 
@@ -241,7 +241,7 @@ Optimized Product Quantization (OPQ) [^ge2013optimized] 是乘积量化的一个
 
 在利用乘积量化进行编码时，对于切分的各个子空间，应尽可能使得各个子空间的方差接近。上图中 `$(a)$` 图在 x 和 y 轴上的方差较大，而 `$(c)$` 图在两个方向上比较接近。OPQ 致力解决的问题就是对各个子空间方差上的均衡，OPQ 对于该问题的求解分为非参数求解方法和参数求解方法两种，更多算法细节请参见 ITQ 和 OPQ 原文。
 
-## 基于图的算法
+### 基于图的算法
 
 NSW（Navigable Small World）[^malkov2014approximate] 算法是一种由 Malkov 等人提出的基于图的索引的方法。我们将 Navigable Small World 网络表示为一个图 `$G \left(V, E\right)$`，其中数据集合 `$X$` 的点被唯一映射到集合 `$V$` 中的一条边，边集 `$E$` 由构造算法确定。对于与一个节点 `$v_i$` 共享一条边的所有节点，我们称之为该节点的“友集”。
 
@@ -305,7 +305,7 @@ NSG [^fu2019fast] 提出了一种新的图结构 Monotonic Relative Neighborhood
 
 本文部分内容参考自 [图像检索：向量索引](https://yongyuan.name/blog/vector-ann-search.html)。
 
-## 算法对比
+### 算法对比
 
 常用算法的开源实现的评测如下，更多评测结果请参见 [erikbern/ann-benchmarks](https://github.com/erikbern/ann-benchmarks/)。
 
@@ -313,9 +313,9 @@ NSG [^fu2019fast] 提出了一种新的图结构 Monotonic Relative Neighborhood
 
 {{< figure src="/images/cn/2020-08-01-nearest-neighbor-search/sift-128-k-10.png" title="SIFT-128-Euclidean (K=10)" >}}
 
-# 开放资源
+## 开放资源
 
-## Survey
+### Survey
 
 - A Survey on Learning to Hash [^wang2017survey]
 - A Survey on Nearest Neighbor Search Methods [^reza2014survey]
@@ -324,7 +324,7 @@ NSG [^fu2019fast] 提出了一种新的图结构 Monotonic Relative Neighborhood
 - Binary Hashing for Approximate Nearest Neighbor Search on Big Data: A Survey [^cao2017binary]
 - Hashing for Similarity Search: A Survey [^wang2014hashing]
 
-## 开源库
+### 开源库
 
 | 库                                                           | API                                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -344,14 +344,14 @@ NSG [^fu2019fast] 提出了一种新的图结构 Monotonic Relative Neighborhood
 | [kakao/n2](https://github.com/kakao/n2)                      | <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> Go |
 | [ZJULearning/nsg](https://github.com/ZJULearning/nsg)        | <i class="icon icon-cpp"></i> C++                            |
 
-## 开源搜索引擎
+### 开源搜索引擎
 
 | 搜索引擎                                                | API                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------ |
 | [milvus-io/milvus](https://github.com/milvus-io/milvus) | <i class="icon icon-c"></i> C, <i class="icon icon-cpp"></i> C++, <i class="icon icon-python"></i> Python, <i class="icon icon-java"></i> Java<br/><i class="icon icon-go"></i> Go, <i class="icon icon-nodejs"></i> Node.js, <i class="icon icon-restful"></i> RESTful API |
 | [vearch/vearch](https://github.com/vearch/vearch)       | <i class="icon icon-python"></i> Python, <i class="icon icon-go"></i> Go |
 
-## 评测
+### 评测
 
 - https://github.com/erikbern/ann-benchmarks/
 - https://github.com/DBWangGroupUNSW/nns_benchmark

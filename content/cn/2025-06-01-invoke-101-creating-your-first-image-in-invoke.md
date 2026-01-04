@@ -37,7 +37,7 @@ tags:
 
 {{< /tab >}}
 
-# 安装 Invoke
+## 安装 Invoke
 
 从 [Invoke 官网](https://www.invoke.com/downloads)下载对应系统的安装包，根据如下步骤完成安装。
 
@@ -51,7 +51,7 @@ tags:
 
 {{< swiper data="/data/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation.json" max-width="800px" >}}
 
-# 用户界面
+## 用户界面
 
 Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 在后台启动了一个 HTTP 服务，用浏览器打开 `http://127.0.0.1:9090` 可以得到相同的界面：
 
@@ -63,9 +63,9 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 2. 中间：用于显示生成的图片。
 3. 右侧：用于显示生成图片的所需的图层和历史生成的图片等。
 
-## 左侧
+### 左侧
 
-### 提示词
+#### 提示词
 
 {{< flex align-items="flex-start" >}}
 
@@ -83,7 +83,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-### 图像
+#### 图像
 
 {{< flex align-items="flex-start" >}}
 
@@ -100,7 +100,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-### 生成
+#### 生成
 
 {{< flex align-items="flex-start" >}}
 
@@ -118,7 +118,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-## 中间
+### 中间
 
 {{< flex align-items="flex-start" >}}
 
@@ -134,9 +134,9 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-## 右侧
+### 右侧
 
-### 图板和图片库
+#### 图板和图片库
 
 {{< flex align-items="flex-start" >}}
 
@@ -152,7 +152,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-### 图层
+#### 图层
 
 {{< flex align-items="flex-start" >}}
 
@@ -166,7 +166,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 {{< /flex >}}
 
-# 模型
+## 模型
 
 单击左侧面板的 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" widht="1em" xmlns="http://www.w3.org/2000/svg"><path d="M225.6,62.64l-88-48.17a19.91,19.91,0,0,0-19.2,0l-88,48.17A20,20,0,0,0,20,80.19v95.62a20,20,0,0,0,10.4,17.55l88,48.17a19.89,19.89,0,0,0,19.2,0l88-48.17A20,20,0,0,0,236,175.81V80.19A20,20,0,0,0,225.6,62.64ZM128,36.57,200,76,128,115.4,56,76ZM44,96.79l72,39.4v76.67L44,173.44Zm96,116.07V136.19l72-39.4v76.65Z"></path></svg></span> 图标打开模型页面。针对新手用户 Invoke 提供了新手模型包，单击 `Starter Models` 选项卡，可以看到系统提供了 `Stable Diffusion 1.5`、`SDXL` 和 `FLUX` 三款模型包。根据官方[系统环境要求](https://invoke-ai.github.io/InvokeAI/installation/quick_start/#step-1-system-requirements)和自己的设备性能选择合适的模型包。
 
@@ -196,7 +196,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 ![模型](/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/ui-models.avif)
 
-# 创作图片
+## 创作图片
 
 在提示词模板中选择 `Environment Art`，在 `Prompt` 中输入如下提示词：
 
@@ -232,7 +232,7 @@ futuristic urban park, neon lighting, raised highways, green spaces, modern arch
 
 {{< /flex >}}
 
-# 中文测试
+## 中文测试
 
 为了验证 `Juggernaut XL v9` 模型对于中文提示词的兼容性，对上述示例和 `Environment Art` 提示词模板中的提示词整理中英文对照版本如下：
 

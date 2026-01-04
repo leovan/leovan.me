@@ -42,7 +42,7 @@ tags:
 
 在本节教程中我们不会讨论如何训练模型，我们将重点介绍不同模型之间的差异，展示它们如何影响图片生成的过程。除此之外我们还会讨论概念适配器（通常也称为 LoRA），来帮助你更好的理解相关工具。
 
-# 模型比较
+## 模型比较
 
 进入模型管理页面，在添加模型选项卡处选择 `HuggingFace`，输入 `cagliostrolab/animagine-xl-4.0` 下载 Animagine XL 4.0 模型。Animagine XL 模型与其他的通用模型有很大的不同，Animagine XL 模型是一个动漫主题的 SDXL 微调模型。Animagine XL 4.0 基于 Stable Diffusion XL 1.0 进行重新训练所得，它使用了 840 万张不同来源不同动漫风格的图片进行微调。
 
@@ -155,7 +155,7 @@ lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer
 
 不难看出，从正向和负向提示词中删除关于图片质量的关键词后，Animagine XL 4.0 模型生成的图片有显著的画质降低，而 Juggernaut XL v9 模型生成的图片质量变化并不大。实验说明提示词在不同的模型中效果存在差异，你必须了解模型的训练过程才能更好的使用提示词生成所需的图片。
 
-# 概念适配器
+## 概念适配器
 
 上述问题就导致了概念适配器的诞生，通过自己训练概念适配器，你可以完全掌握对于模型的修改。进入模型管理页面，在添加模型选项卡处选择 `HuggingFace`，输入 `nerijs/pixel-art-xl` 下载 Pixel Art XL 概念适配器。利用如下正向和负向提示词分别使用 Animagine XL 4.0 模型和 Juggernaut XL v9 模型生成图片。
 

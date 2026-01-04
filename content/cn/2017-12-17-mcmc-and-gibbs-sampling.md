@@ -17,7 +17,7 @@ images:
   - /images/cn/2017-12-17-mcmc-and-gibbs-sampling/gibbs-sampling-bivariate-guassian-distribution.gif
 ---
 
-# 蒙特卡罗方法 (Monte Carlo, MC)
+## 蒙特卡罗方法 (Monte Carlo, MC)
 
 蒙特卡罗方法 (Monte Carlo) 也称为统计模拟方法，是于 20 世纪 40 年代由冯·诺伊曼，斯塔尼斯拉夫·乌拉姆和尼古拉斯·梅特罗波利斯在洛斯阿拉莫斯国家实验室为核武器计划工作时 (曼哈顿计划) 发明。因为乌拉姆的叔叔经常在摩纳哥的蒙特卡罗赌场输钱，该方法被定名为蒙特卡罗方法。蒙特卡罗方法是以概率为基础的方法，与之对应的是确定性算法。
 
@@ -49,7 +49,7 @@ points_generator <- function(size) {
     set.seed(112358)
     points_x <- runif(size, min = 0, max = 2*r)
     points_y <- runif(size, min = 0, max = 2*r)
-    
+
     tibble(
         x = points_x,
         y = points_y,
@@ -81,7 +81,7 @@ print(estimated_pi)
 
 这时候则需要更加复杂的模拟方法来生成样本了。
 
-# 马尔科夫链 (Markov Chain, MC)
+## 马尔科夫链 (Markov Chain, MC)
 
 马尔可夫过程 (Markov Process) 是因俄国数学家安德雷·安德耶维齐·马尔可夫 (Андрей Андреевич Марков) 而得名一个随机过程，在该随机过程中，给定当前状态和过去所有状态的条件下，其下一个状态的条件概率分布仅依赖于当前状态，通常具备离散状态的马尔科夫过程称之为马尔科夫链 (Markov Chain)。因此，马尔科夫链可以理解为一个有限状态机，给定了当前状态为 `$s_i$` 时，下一时刻状态为 `$s_j$` 的概率，不同状态之间变换的概率称之为转移概率。下图描述了 3 个状态 `$S_a, S_b, S_c$` 之间转换状态的马尔科夫链。
 
@@ -215,7 +215,7 @@ $$`
 
 `$\pi^*$` 称之为这个马尔科夫链的平稳分布。
 
-# 马尔科夫链蒙特卡洛方法 (MCMC)
+## 马尔科夫链蒙特卡洛方法 (MCMC)
 
 构造一个转移矩阵为 `$P$` 的马尔科夫链，如果其能收敛到平稳分布 `$p\left(x\right)$`，则可以从任意一个状态 `$x_0$` 出发，得到一个状态转移序列 `$x_0, x_1, ..., x_n, x_{n+1}, ...$`，如果马尔科夫链在第 `$n$` 部收敛，我们就可以得到服从分布 `$p\left(x\right)$` 的样本 `$x_n, x_{n+1}, ...$`。因此，利用马尔科夫链的平稳性生成数据的样本的关键就在于如何构造一个状态转移矩阵 `$P$`，使得其平稳分布为 `$p\left(x\right)$`。
 
@@ -270,7 +270,7 @@ $$`
 \end{algorithm}
 {{< /pseudocode >}}
 
-# 吉布斯采样 (Gibbs Sampling)
+## 吉布斯采样 (Gibbs Sampling)
 
 对于 Metropolis-Hastings 算法，由于存在接受跳转概率 `$\alpha < 1$`，因此为了提高算法效率，我们尝试构建一个转移矩阵，使得 `$\alpha = 1$`。以二维情形为例，对于概率分布 `$p\left(x, y\right)$`，考虑两个点 `$A\left(x_1, y_1\right)$` 和 `$B\left(x_1, y_2\right)$`
 

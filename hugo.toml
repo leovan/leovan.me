@@ -1,21 +1,5 @@
 baseURL = "https://leovan.me/"
 hasCJKLanguage = true
-ignoreFiles = [
-  "\\.Rmarkdown$",
-  "\\.Rmd$\"",
-  "\\.knit\\.md$",
-  "\\.utf8\\.md$",
-  "_files$",
-  "_cache$",
-  "\\.txt$",
-  "\\.csv$",
-  "\\.tsv$",
-  "\\.tgz$",
-  "\\.tar$",
-  "\\.gz$",
-  "\\.zip$",
-  "\\.npz$"
-]
 languageCode = "zh-cn"
 title = "范叶亮 | Leo Van"
 rssLimit = 100

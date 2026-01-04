@@ -75,11 +75,11 @@ images:
 
 计算资源量是一个前置制约因素，理论上更多的资源能够带来更快的计算效果。计算数据量也可以认为是一个前置制约因素，理论上更大的数据量会导致计算速度降低，但对于复杂的计算逻辑，通过合理的 SQL 可以更好的控制计算过程中的数据量，从而提升 SQL 性能。计算复杂度是影响 SQL 性能的关键因素，复杂的业务逻辑必然比简单的业务逻辑处理时间要长，相同业务逻辑的不同 SQL 实现也会影响运行效率，这就要求我们对业务逻辑进行全面的理解，对实现 SQL 进行合理优化，从而提升计算速度。
 
-# 执行引擎
+## 执行引擎
 
 SQL 是用于一种用于数据定义和数据操纵的特定目的的编程语言 [^sql-wiki]。SQL 虽然有 ISO 标准 [^sql-iso]，但大部分 SQL 代码在不同的数据库系统中并不具有完全的跨平台性。不同的执行引擎也会对 SQL 的语法有相应的改动和扩展，同时对于 SQL 的执行也会进行不同的适配和优化。因此，脱离执行引擎的 SQL 性能优化是不可取的。
 
-## Hive
+### Hive
 
 Apache Hive 是一个建立在 Hadoop 架构之上的数据仓库。可以将结构化的数据文件映射为一张数据库表，并提供简单的 SQL 查询功能，可以将 SQL 语句转换为 MapReduce 任务进行运行。因此 MapReduce 是 Hive SQL 运行的核心和根基。
 
@@ -94,7 +94,7 @@ Apache Hive 是一个建立在 Hadoop 架构之上的数据仓库。可以将结
 5. **Reducing**：对 Shuffling 合并的结果进行汇总。本例中讲相同 `K` 的 `V` 值进行加和操作并返回单个统计结果。
 6. **Merged**：对 Reducing 的结果进行融合形成最终输出。
 
-## Spark
+### Spark
 
 Apache Spark 是一个用于大规模数据处理的统一分析引擎，Spark SQL 则作为 Apache Spark 用于处理结构化数据的模块。
 
@@ -129,7 +129,7 @@ Spark 相比于 Hadoop 的主要改进有如下几点：
 1. Hadoop 的 MapReduce 的中间结果都会持久化到磁盘上，而 Spark 则采用基于内存的计算（内存不足时也可选持久化到磁盘上），从而减少 Shuffle 数据，进而提升计算速度。
 2. Spark 采用的 DAG 相比于 Hadoop 的 MapReduce 具有更好的容错性和可恢复性，由于 Spark 预先计算出了整个任务的 DAG，相比于 MapReduce 中各个操作之间是独立的，这更有助于进行全局优化。
 
-## Presto
+### Presto
 
 Presto 是一种用于大数据的高性能分布式 SQL 查询引擎。Presto 与 Hive 执行任务过程的差异如下图所示：
 
@@ -142,7 +142,7 @@ Presto 的优点主要有如下几点：
 
 虽然 Presto 能够处理 PB 级数据，但并不代表 Presto 会把 PB 级别数据都放在内存中计算。而是根据场景，例如 `COUNT` 和 `AVG` 等聚合操作，是边读数据边计算，再清理内存，再读取数据计算，这种情况消耗的内存并不高。但是连表查询，可能产生大量的临时数据，从而速度会变慢。
 
-# 性能调优
+## 性能调优
 
 本节关于 SQL 性能调优的建议主要针对 Hive，Spark 和 Presto 这类大数据 OLAP 执行引擎设计，其他执行引擎不一定完全适用。
 
@@ -174,13 +174,13 @@ CREATE TABLE IF NOT EXISTS sku_info
 COMMENT '商品信息表'
 ```
 
-## 减少数据量
+### 减少数据量
 
 - 限定查询分区。对于包含分区的数据表（例如：日期分区），通过合理限定分区来减少数据量，避免全表扫描。
 - 限定查询字段。避免使用 `SELECT *`，仅选择需要的字段。`SELECT *` 会通过查询元数据获取字段信息，同时查询所有字段会造成更大的网络开销。
 - 在关联前过滤数据。应在进行数据表关联之前按照业务逻辑进行数据过滤，从而提升执行效率。
 
-## 数据倾斜
+### 数据倾斜
 
 在 Shuffle 阶段，需要将各节点上相同的 Key 拉取到某个节点（Task）上处理，如果某个 Key 对应的数据量特别大则会产生数据倾斜。结果就是该 Task 运行的时间要远远大于其他 Task 的运行时间，从而造成作业整体运行缓慢，数据量过大甚至可能导致某个 Task 出现 OOM。
 
@@ -333,7 +333,7 @@ set spark.sql.autoBroadcastJoinThreshold=10485760;
     ;
     ```
 
-## 其他建议
+### 其他建议
 
 - 使用 [Common Table Expressions (CTEs)](https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL#Common_table_expression) 而非子查询。`WITH` 语句产生的结果类似临时表，可以重复使用，从而避免相同逻辑业务重复计算。
 - 使用 `LEFT SEMI JOIN` 而非 `IN` 和子查询。Hive 在 0.13 后的版本中才在 `IN` 和 `NOT IN` 中支持子查询。
@@ -364,11 +364,11 @@ set spark.sql.autoBroadcastJoinThreshold=10485760;
     ;
     ```
 
-# 参数调优
+## 参数调优
 
 除了 SQL 本身逻辑的优化外，执行引擎的相关参数设置也会影响 SQL 的执行性能。本小节以 Spark 引擎为例，总结相关参数的设置及其影响。
 
-## 动态分区
+### 动态分区
 
 ```shell
 /* 以下 Hive 参数对 Spark 同样有效 */
@@ -383,7 +383,7 @@ set hive.exec.dynamic.partition.mode=nonstrict;
 set hive.exec.max.dynamic.partitions=1000;
 ```
 
-## 资源申请
+### 资源申请
 
 ```shell
 /* 每个 Executor 中的核数 */
@@ -405,7 +405,7 @@ set spark.yarn.driver.memoryOverhead=1024;
 set spark.memory.fraction=0.7;
 ```
 
-## 动态分配
+### 动态分配
 
 开启动态分配，Spark 可以根据当前作业负载动态申请和释放资源：
 
@@ -420,7 +420,7 @@ set spark.dynamicAllocation.minExecutors=10;
 set spark.dynamicAllocation.maxExecutors=100;
 ```
 
-## 小文件合并
+### 小文件合并
 
 ```shell
 /* 小文件合并阈值，如果生成的文件平均大小低于阈值会额外启动一轮 Stage 进行小文件的合并，默认不合并小文件。 */
@@ -435,7 +435,7 @@ set spark.hadoopRDD.targetBytesInPartition=67108864;
 
 在决定一个目录是否需要合并小文件时，会统计目录下的平均大小，然后和 `spark.sql.mergeSmallFileSize` 比较。在合并文件时，一个 Map Task 读取的数据量取决于下面三者的较大值：`spark.sql.mergeSmallFileSize`，`spark.sql.targetBytesInPartitionWhenMerge`，`spark.hadoopRDD.targetBytesInPartition`。
 
-## Shuffle 相关
+### Shuffle 相关
 
 当大表 `JOIN` 小表时，如果小表足够小，可以将小表广播到所有 Executor 中，在 Map 阶段完成 `JOIN`。如果该值设置太大，容易导致 Executor 出现 OOM。
 
@@ -477,7 +477,7 @@ set spark.shuffle.io.maxRetries=3;
 set spark.shuffle.io.retryWait=5;
 ```
 
-## ORC 相关
+### ORC 相关
 
 ORC 文件的格式如下图所示：
 
@@ -519,7 +519,7 @@ set spark.hadoop.mapreduce.input.fileinputformat.split.maxsize=268435456;
 set spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version=2;
 ```
 
-## 自适应执行
+### 自适应执行
 
 ```shell
 /* 开启动态执行 */
@@ -566,7 +566,7 @@ set spark.sql.adaptive.skewedPartitionSizeThreshold=536870912;
 set spark.sql.adaptive.skewedPartitionFactor=10;
 ```
 
-## 推测执行
+### 推测执行
 
 ```shell
 /* Spark 推测执行开关，默认是 true */

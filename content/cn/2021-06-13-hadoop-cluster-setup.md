@@ -36,7 +36,7 @@ images:
 | vm-02  | 192.168.56.102 | HDFS Namenode<br/>HDFS Datanode<br/>YARN Resource Manager<br/>YARN Node Manager<br/>Journal Node<br/>Zookeeper |
 | vm-03  | 192.168.56.103 | HDFS Namenode<br/>HDFS Datanode<br/>YARN Node Manager<br/>Journal Node<br/>Zookeeper |
 
-# 系统配置
+## 系统配置
 
 将 `/opt` 目录所有者赋予当前用户：
 
@@ -51,7 +51,7 @@ sudo mkdir /data
 sudo chown -R leo:leo /data
 ```
 
-# JDK 配置
+## JDK 配置
 
 将 JDK 安装包解压缩到 `/opt` 目录并创建软链接：
 
@@ -76,7 +76,7 @@ rsync -auvp /opt/jdk1.8.0_291 leo@vm-02:/opt
 rsync -auvp /opt/jdk1.8.0_291 leo@vm-03:/opt 
 ```
 
-# Zookeeper 配置
+## Zookeeper 配置
 
 将 Zookeeper 安装包解压到 `/opt` 目录并创建软链接：
 
@@ -136,7 +136,7 @@ rsync -auvp /opt/apache-zookeeper-3.7.0-bin leo@vm-02:/opt
 rsync -auvp /opt/apache-zookeeper-3.7.0-bin leo@vm-03:/opt 
 ```
 
-# Hadoop 配置
+## Hadoop 配置
 
 将 Hadoop 安装包解压到 `/opt` 目录并创建软链接：
 
@@ -432,9 +432,9 @@ rsync -auvp /opt/hadoop-3.2.2 leo@vm-02:/opt
 rsync -auvp /opt/hadoop-3.2.2 leo@vm-03:/opt 
 ```
 
-# 启动集群
+## 启动集群
 
-## 启动 zookeeper
+### 启动 zookeeper
 
 分别在 vm-01，vm-02 和 vm-03 上执行如下操作：
 
@@ -466,7 +466,7 @@ Client port found: 2181. Client address: localhost. Client SSL: false.
 Mode: follower
 ```
 
-## 启动 journalnode
+### 启动 journalnode
 
 分别在 vm-01，vm-02 和 vm-03 上执行如下操作：
 
@@ -474,7 +474,7 @@ Mode: follower
 hdfs --daemon start journalnode
 ```
 
-## 格式化 namenode
+### 格式化 namenode
 
 在 vm-01 上执行如下操作：
 
@@ -495,7 +495,7 @@ rsync -auvp /data/hadoop/hdfs/namenode/current vm-02:/data/hadoop/hdfs/namenode/
 hdfs zkfc -formatZK
 ```
 
-## 停止 journalnode
+### 停止 journalnode
 
 分别在 vm-01，vm-02 和 vm-03 上执行如下操作：
 
@@ -503,7 +503,7 @@ hdfs zkfc -formatZK
 hdfs --daemon stop journalnode
 ```
 
-## 启动 hadoop
+### 启动 hadoop
 
 在 vm-01 启动 DFS：
 

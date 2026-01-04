@@ -21,13 +21,13 @@ images:
 
 为了在本地局域网环境中摆脱 IP 用上域名（纯属闲来无事瞎鼓捣），购入了 `leovan.dev` 域名。想着把各种服务都映射到不同的二级域名上，这样就可以不用 IP 和端口了，岂不完美。然，问题这就来了。
 
-# acme.sh
+## acme.sh
 
 域名是在 Cloudflare 上申请的，在 Cloudflare 上使用 [Page 服务](https://pages.cloudflare.com/)部署网站就可以白嫖他家的证书，还能自动帮你续期，比如当前的站点就是使用 Page 进行部署的。但你要是想生成证书下载下来使用，就会很麻烦，因为证书的有效期只有三个月，手动续期再加上各种替换操作就不太方便了。
 
 这时候就要请出我们的 [acme.sh](https://github.com/acmesh-official/acme.sh) 了，除了支持各种桌面和服务器操作系统外，还支持 OpenWrt 路由器系统。
 
-# Cloudflare
+## Cloudflare
 
 使用 acme.sh 申请免费证书需要使用 DNS 验证对域名的所有权，本文以 Cloudflare 为例，其它 DNS 请参考[官方文档](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)。Cloudflare 支持两种方式，一种是使用 API Token，另一种是使用全局 API Key，这里我们以 API Token 为例。
 
@@ -43,7 +43,7 @@ images:
 
 将区域 ID 保存为 `CF_Zone_ID="xxxxxxxxx"`，将账户 ID 保存为 `CF_Account_ID="xxxxxxxxx"`。
 
-# OpenWrt
+## OpenWrt
 
 Opwnert 使用 [uHTTPd](https://openwrt.org/docs/guide-user/services/webserver/http.uhttpd) 作为默认的 Web 服务器。正如官网上说的，这是一个轻量极了的 Web 服务器，以至于不支持反向代理。
 
@@ -53,7 +53,7 @@ Opwnert 使用 [uHTTPd](https://openwrt.org/docs/guide-user/services/webserver/h
 
 但这不影响我们先把路由器的域名 `router.leovan.dev` 映射到 `192.168.100.1` 上先用起来。
 
-## acme.sh
+### acme.sh
 
 通过 `系统 - 软件包` 或命令行安装 acme.sh 相关软件包：
 
@@ -93,7 +93,7 @@ opkg install acme acme-acmesh-dnsapi luci-app-acme luci-i18n-acme-zh-cn luci-ssl
 0 0 * * * /etc/init.d/acme renew
 ```
 
-## uHTTPd
+### uHTTPd
 
 通过 `系统 - 软件包` 或命令行安装 uHTTPd 的管理界面：
 
@@ -121,11 +121,11 @@ opkg install luci-app-uhttpd luci-i18n-uhttpd-zh-cn
 
 可以看出通过 `router.leovan.dev` 域名进行访问已经实现了 HTTPS 安全访问。
 
-# 群晖
+## 群晖
 
 由于在 OpenWrt 上搞 Nginx 有些麻烦，此时此刻，恰巧手里还有一台群晖的 NAS，恰巧群晖默认支持反向代理服务器，这一切的一切不就又双叒叕完美了。
 
-## acme.sh
+### acme.sh
 
 稍显遗憾的是在群晖中没有像 OpenWrt 那样的工具可以直接使用，这里就只能用脚本的方式手搓部署了。首先通过命令行 SSH 登录群晖，并切换到 root 用户：
 
@@ -201,7 +201,7 @@ export SYNO_USE_TEMP_ADMIN=1
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/synology-cron-3.png" title="计划任务 - 任务设置" large-max-width="60%" >}}
 
-## 反向代理
+### 反向代理
 
 在 Cloudflare 中将 `nas.leovan.dev` 解析到 `192.168.100.10` 上后，在群晖的 `登录门户 - 高级` 单击 <button>反向代理服务器</button> 按钮打开对话框，单击 <button>新增</button> 按钮，根据下图添加配置：
 

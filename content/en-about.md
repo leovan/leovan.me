@@ -12,7 +12,7 @@ disable_math: true
 disable_highlight: true
 ---
 
-# Who am I?
+## Who am I?
 
 I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more about my work on [cv](/en/cv/) page. This page will let you know my lifestyle.
 
@@ -25,32 +25,32 @@ I am **Leo Van** (**Yeliang Fan, 范叶亮** in Chinese). You can know more abou
   <img src="/images/me/about-small.jpg" alt="Leo Van">
 </picture>
 
-# What do I like?
+## What do I like?
 
-## Music
+### Music
 
-### Folk
+#### Folk
 
 - Chinese: [Liang XiaoXue 梁晓雪](https://site.douban.com/kulu/), [Jiang Ming 蒋明](https://site.douban.com/jiangming/room/623845/), [Zhao Zhao 赵照](https://site.douban.com/zhaozhao/), [Zhao Lei 赵雷](https://site.douban.com/leizizhao/)
 - English: [Bob Dylan](https://en.wikipedia.org/wiki/Bob_Dylan), [Don McLean](https://en.wikipedia.org/wiki/Don_McLean)
 
-### Jazz
+#### Jazz
 
 - Chinese: [Joanna Wang 王若琳](https://en.wikipedia.org/wiki/Joanna_Wang)
 
-### Pop
+#### Pop
 
 - Chinese: [Richie Ren 任贤齐](https://en.wikipedia.org/wiki/Richie_Jen), [Leehom Wang 王力宏](https://en.wikipedia.org/wiki/Wang_Leehom), [Jay Chou 周杰伦](https://en.wikipedia.org/wiki/Jay_Chou), [Karen Mok 莫文蔚](https://en.wikipedia.org/wiki/Karen_Mok), [Csun-Yuk Chang 张震岳](https://en.wikipedia.org/wiki/Chang_Chen-yue), [Eason Chan 陈奕迅](https://en.wikipedia.org/wiki/Eason_Chan)
 - English: [Westlife](https://en.wikipedia.org/wiki/Westlife)
 
-### Something Special
+#### Something Special
 
 - Chinese: [Jonathan Lee 李宗盛](https://en.wikipedia.org/wiki/Jonathan_Lee_(musician)), [Tsai Chin 蔡琴](https://en.wikipedia.org/wiki/Tsai_Chin_(singer)), [Chyi Yu 齐豫](https://en.wikipedia.org/wiki/Chyi_Yu)
 
-## Books
+### Books
 
 Reading is not something you have to do, but something you want to do.
 
-## Movies
+### Movies
 
 A peace loving person likes any military-related movies.

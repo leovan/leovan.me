@@ -18,11 +18,11 @@ images:
 
 知道**贝塞尔曲线 (Bézier Curve)** 这个名字已经有很长一段时间了，但一直没有去详细了解一番。直到最近想要绘制一个比较复杂的曲线，才发现很多工具都以贝塞尔曲线为基础的，这包括 Adobe 全家桶中的钢笔工具，还有 OmniGraffle 中的曲线。迫于仅靠猜其是如何工作的但一直没猜透的无奈，只能去详细了解一下其原理再使用了。
 
-# 数学表示
+## 数学表示
 
 贝塞尔曲线 (Bézier Curve) 是由法国工程师[皮埃尔·贝兹 (Pierre Bézier)](https://zh.wikipedia.org/wiki/皮埃尔·贝塞尔) 于 1962 年所广泛发表，他运用贝塞尔曲线来为汽车的主体进行设计 [^bezier-curve-wikipedia]。贝塞尔曲线最初由[保尔·德·卡斯特里奥 (Paul de Casteljau)](https://en.wikipedia.org/wiki/Paul_de_Casteljau) 于 1959 年运用[德卡斯特里奥算法 (De Casteljau's Algorithm)](https://zh.wikipedia.org/wiki/德卡斯特里奥算法) 开发，以稳定数值的方法求出贝塞尔曲线。
 
-## 线性贝塞尔曲线
+### 线性贝塞尔曲线
 
 给定点 `$P_0, P_1$`，线性贝塞尔曲线定义为：
 
@@ -40,7 +40,7 @@ $$`
 
 ![线性贝塞尔曲线生成过程](/images/cn/2019-02-19-bezier-curve/1st-power-bezier-curve.gif)
 
-## 二次贝塞尔曲线
+### 二次贝塞尔曲线
 
 给定点 `$P_0, P_1, P_2$`，二次贝塞尔曲线定义为：
 
@@ -56,7 +56,7 @@ $$`
 
 ![二次贝塞尔曲线生成过程](/images/cn/2019-02-19-bezier-curve/2nd-power-bezier-curve.gif)
 
-## 三次贝塞尔曲线
+### 三次贝塞尔曲线
 
 给定点 `$P_0, P_1, P_2, P_3$`，三次贝塞尔曲线定义为：
 
@@ -72,7 +72,7 @@ $$`
 
 ![三次贝塞尔曲线生成过程](/images/cn/2019-02-19-bezier-curve/3rd-power-bezier-curve.gif)
 
-## 一般化的贝塞尔曲线
+### 一般化的贝塞尔曲线
 
 对于一般化的贝塞尔曲线，给定点 `$P_0, P_1, \cdots, P_n$`， `$n$` 次贝塞尔曲线定义为：
 
@@ -98,7 +98,7 @@ $$`
 
 上述图形和动画的绘制代码请参见[这里](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2019-02-19-bezier-curve/bezier-curve-images.py)。
 
-# 应用技巧
+## 应用技巧
 
 在很多绘图软件中，钢笔工具使用的是三次贝塞尔曲线，其中**起始点**和**结束点**分别对应 `$P_0$` 和 `$P_1$`，起始点和结束点的**控制点**分别对应 `$P_2$` 和 `$P_3$`。
 

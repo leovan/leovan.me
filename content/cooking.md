@@ -12,20 +12,20 @@ disable_math: true
 disable_highlight: true
 ---
 
-<h1 class="center no-anchor">  「唯有爱与美食，不可辜负。」</h1>
+<h2 class="center no-anchor">「唯有爱与美食，不可辜负。」</h2>
 
-# 2022
+## 2022
 
 {{< gallery data="/data/cooking/2022.json" >}}
 
-# 2020
+## 2020
 
 {{< gallery data="/data/cooking/2020.json" >}}
 
-# 2019
+## 2019
 
 {{< gallery data="/data/cooking/2019.json" >}}
 
-# 2017
+## 2017
 
 {{< gallery data="/data/cooking/2017.json" >}}

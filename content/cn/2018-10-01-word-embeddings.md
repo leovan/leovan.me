@@ -29,7 +29,7 @@ images:
   - /images/cn/2018-10-01-word-embeddings/cw2vec-stroke-n-gram-generation.png
 ---
 
-# 文本表示
+## 文本表示
 
 文本表示是计算机处理自然语言的核心，我们希望计算机能够同人类一样对自然语言能够实现语义层面的理解，但这并非易事。在中文和拉丁语系中，文本的直观表示就存在一定的差异，拉丁语系中词与词之间存在天然的分隔符，而中文则没有。
 
@@ -44,7 +44,7 @@ $$`
 
 One-Hot Encoding 的表示方法十分简洁，但也存在着一些问题。
 
-## 维数灾难 (The Curse of Dimensionality)
+### 维数灾难 (The Curse of Dimensionality)
 
 在很多现实问题中，我们仅用少数的特征是很难利用一个线性模型将数据区分开来的，也就是线性不可分问题。一个有效的方法是利用核函数实现一个非线性变换，将非线性问题转化成线性问题，通过求解变换后的线性问题进而求解原来的非线性问题。
 
@@ -68,7 +68,7 @@ One-Hot Encoding 的表示方法十分简洁，但也存在着一些问题。
 
 可以说随着维度的增加，我们更有可能找到一个超平面（线性模型）将数据划分开来。尽管看起来，随着维度的增加似乎有助于我们构建模型，但是同时数据在高维空间的分布变得越来越**稀疏**。因此，在构建机器学习模型时，当我们需要更好的覆盖数据的分布时，我们需要的数据量就更大，这也就会导致需要更多的时间去训练模型。例如，假设所有特征均为0到1之间连续分布的数据，针对1维的情况，当覆盖50%的数据时，仅需全体50%的样本即可；针对2维的情况，当覆盖50%的数据时，则需全体71% ( `$0.71^2 \approx 0.5$` ) 的样本；针对3维的情况，当覆盖50%的数据时，则需全体79% ( `$0.79^3 \approx 0.5$` )，这就是我们所说的维数灾难。
 
-## 分散式表示 (Distributed Representations)
+### 分散式表示 (Distributed Representations)
 
 分散式表示（Distributed Representations）[^hinton1986learning] 最早由 Hiton 提出，对比于传统的 One-Hot Representation ，Distributed Representations 可以将数据表示为低维，稠密，连续的向量，也就是说将原始空间中的潜在信息分散的表示在低维空间的不同维度上。
 
@@ -94,9 +94,9 @@ One-Hot Encoding 的表示方法十分简洁，但也存在着一些问题。
 
 利用这种表示，我们不仅可以将稀疏的高维空间转换为稠密的低维空间，同时我们还能学习出文本间的语义相似性来，例如实例中的 `父亲` 和 `爸爸`，从语义上看其均表示 `父亲` 的含义，但是如果利用 One-Hot Representation 编码则 `父亲` 与 `爸爸` 的距离同其与 `母亲` 或 `妈妈` 的距离时相同的，而利用 Distributed Representation 编码，则 `父亲` 同 `爸爸` 之间的距离要远小于其同 `母亲` 或 `妈妈` 之间的距离。
 
-# Word Embedding 之路
+## Word Embedding 之路
 
-## N-gram 模型
+### N-gram 模型
 
 N-gram (N 元语法) 是一种文本表示方法，指文中连续出现的 `$n$` 个词语。N-gram 模型是基于 `$n-1$` 阶马尔科夫链的一种概率语言模型，可以通过前 `$n-1$` 个词对第 `$n$` 个词进行预测。Bengio 等人 [^bengio2003neural] 提出了一个三层的神经网络的概率语言模型，其网络结构如下图所示：
 
@@ -116,7 +116,7 @@ $$`
 
 其中，`$f \left(w_t, w_{t-1}, ..., w_{t-n+1}\right)$` 为利用前 `$n-1$` 个词预测当前词 `$w_t$` 的条件概率，`$R \left(\theta\right)$` 为参数的正则项，`$\theta = \left(b, d, W, U, H, C\right)$`。`$C$` 作为模型的参数之一，随着模型的训练不断优化，在模型训练完毕后，`$C$` 中保存的即为词向量。
 
-## Continuous Bag-of-Words (CBOW) 和 Skip-gram 模型
+### Continuous Bag-of-Words (CBOW) 和 Skip-gram 模型
 
 CBOW 和 Skip-gram 均考虑一个词的上下文信息，两种模型的结构如下图所示：
 
@@ -137,7 +137,7 @@ $$`
 1. CBOW 要比 Skip-gram 模型训练快。从模型中我们不难发现：从隐含层到输出层，CBOW 仅需要计算一个损失，而 Skip-gram 则需要计算 `$C$` 个损失再进行平均进行参数优化。
 2. Skip-gram 在小数量的数据集上效果更好，同时对于生僻词的表示效果更好。CBOW 在从输入层到隐含层时，对输入的词向量进行了平均 (可以理解为进行了平滑处理)，因此对于生僻词，平滑后则容易被模型所忽视。
 
-## Word2Vec
+### Word2Vec
 
 Mikolov 等人 [^mikolov2013efficient] 利用上面介绍的 CBOW 和 Skip-gram 两种模型提出了经典的 Word2Vec 算法。Word2Vec 中针对 CBOW 和 Skip-gram 又提出了两种具体的实现方案 Hierarchical Softmax (层次 Softmax) 和 Negative Sampling (负采样)，因此共有 4 种不同的模型。
 
@@ -531,9 +531,9 @@ $$`
 本节内容参考了 licstar 的 [博客](http://licstar.net/archives/328) 和 peghoty 的 [博客](https://www.cnblogs.com/peghoty/p/3857839.html)。
 {{% /admonition %}}
 
-# 其他 Embedding 方法
+## 其他 Embedding 方法
 
-## GloVe
+### GloVe
 
 GloVe (Global Vector 的简写) 是由 Pennington 等人 [^pennington2014glove] 提出了一种词向量生成方法，该方法利用了语料的全局统计信息。
 
@@ -612,7 +612,7 @@ $$`
 
 其中两个超参数的值建议为 `$x_{\max} = 100, \alpha = 0.75$`。
 
-## fastText
+### fastText
 
 fastText 是由 Bojanowski 和 Grave 等人 [^bojanowski2017enriching] 提出的一种词向量表示方法。原始的 Skip-gram 模型忽略了词语内部的结构信息，fastText 利用 N-gram 方法将其考虑在内。
 
@@ -626,7 +626,7 @@ $$`
 
 模型在学习不同词向量时可以共享权重 (不同词的可能包含相同的 N-gram)，使得在学习低频词时也可得到可靠的向量表示。
 
-## WordRank
+### WordRank
 
 WordRank 是由 Ji 等人 [^ji2016wordrank] 提出的一种词向量表示方法，其将词向量学习问题转换成一个排序问题。
 
@@ -729,7 +729,7 @@ $$`
 \end{algorithm}
 {{< /pseudocode >}}
 
-## cw2vec
+### cw2vec
 
 cw2vec 是由 Cao 等人 [^cao2018cw2vec] 提出的一种基于汉字笔画 N-gram 的中文词向量表示方法。该方法根据汉字作为象形文字具有笔画信息的特点，提出了笔画 N-gram 的概念。针对一个词的笔画 N-gram，其生成过程如下图所示：
 

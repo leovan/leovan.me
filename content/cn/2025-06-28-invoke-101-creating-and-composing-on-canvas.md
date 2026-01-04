@@ -65,7 +65,7 @@ futuristic terraced structure built into a mountain at dusk, twilight hues, lush
 
 为了保证可复现性，在生成这张图片时可以将随机数种子 `Seed` 固定，此处设置为 `42`。
 
-# 边界框
+## 边界框
 
 将生成的图片拖入画布并创建一个新的 Raster Layer。在画布上单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208,100a20,20,0,0,0,20-20V48a20,20,0,0,0-20-20H176a20,20,0,0,0-20,20v4H100V48A20,20,0,0,0,80,28H48A20,20,0,0,0,28,48V80a20,20,0,0,0,20,20h4v56H48a20,20,0,0,0-20,20v32a20,20,0,0,0,20,20H80a20,20,0,0,0,20-20v-4h56v4a20,20,0,0,0,20,20h32a20,20,0,0,0,20-20V176a20,20,0,0,0-20-20h-4V100ZM180,52h24V76H180ZM52,52H76V76H52ZM76,204H52V180H76Zm128,0H180V180h24Zm-24-48h-4a20,20,0,0,0-20,20v4H100v-4a20,20,0,0,0-20-20H76V100h4a20,20,0,0,0,20-20V76h56v4a20,20,0,0,0,20,20h4Z"></path></svg></span> Bbox 按钮，此时图片的周围将显示一个边界框，使用鼠标按住可以拖动边界框的位置，放在边界框的四角可以调整边界框的大小。
 
@@ -85,7 +85,7 @@ futuristic terraced structure built into a mountain at dusk, twilight hues, lush
 
 {{< image-compare show-labels=true label-before="生成前" label-after="生成后" image-before="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/same-bbox-before-invoke.avif" image-after="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/same-bbox-after-invoke.avif" >}}
 
-# 修复蒙版
+## 修复蒙版
 
 修复蒙版（Inpaint Mask）用于控制在边界框中哪些区域会被修改。在图层中单击 `+` 新建一个 Inpaint Mask 图层。单击画布上的 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M236,32a12,12,0,0,0-12-12c-44.78,0-90,48.54-115.9,82a64,64,0,0,0-80,62c0,12-3.1,22.71-9.23,31.76A43,43,0,0,1,9.4,206.05a11.88,11.88,0,0,0-4.91,13.38A12.07,12.07,0,0,0,16.11,228h76A64,64,0,0,0,154,148C187.49,122.05,236,76.8,236,32ZM209.62,46.39c-4,12.92-13.15,27.49-26.92,42.91-3,3.39-6.16,6.7-9.35,9.89a104.31,104.31,0,0,0-16.5-16.51c3.19-3.19,6.49-6.32,9.88-9.35C182.15,59.55,196.71,50.43,209.62,46.39ZM92.07,204H42a80.17,80.17,0,0,0,10.14-40,40,40,0,1,1,40,40Zm38.18-91.32c3.12-3.93,6.55-8.09,10.23-12.35a80.52,80.52,0,0,1,15.23,15.24c-4.26,3.68-8.42,7.11-12.35,10.23A64.43,64.43,0,0,0,130.25,112.68Z"></path></svg></span> 按钮后，则可以在画布上绘制所需要修改的区域。
 

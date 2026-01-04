@@ -63,7 +63,7 @@ Thomas G. Dietterich [^dietterich2000ensemble] [^dietterich2002ensemble] 指出�
 
 集成算法大致可以分为：Bagging，Boosting 和 Stacking 等类型。
 
-# Bagging
+## Bagging
 
 Bagging (Boostrap Aggregating) 是由 Breiman 于 1996 年提出 [^breiman1996bagging]，基本思想如下：
 
@@ -103,7 +103,7 @@ $$`
 
 即每个学习器仅用到了训练集中 `$63.2\%$` 的数据集，剩余的 `$36.8\%$` 的训练集样本可以用作验证集对于学习器的泛化能力进行包外估计 (out-of-bag estimate)。
 
-## 随机森林 (Random Forests)
+### 随机森林 (Random Forests)
 
 随机森林 (Random Forests) [^breiman2001random] 是一种利用决策树作为基学习器的 Bagging 集成学习算法。随机森林模型的构建过程如下：
 
@@ -121,7 +121,7 @@ $$`
 2. 随机森林可以处理高维数据，无需进行特征选择，在训练过程中可以得出不同特征对模型的重要性程度。
 3. 随机森林的每个基分类器采用决策树，方法简单且容易实现。同时每个基分类器之间没有相互依赖关系，整个算法易并行化。
 
-# Boosting
+## Boosting
 
 Boosting 是一种提升算法，可以将弱的学习算法提升 (boost) 为强的学习算法。基本思路如下：
 
@@ -130,7 +130,7 @@ Boosting 是一种提升算法，可以将弱的学习算法提升 (boost) 为�
 3. 重复上述步骤，直至得到 `$M$` 个学习器。
 4. 对于分类问题，采用有权重的投票方式；对于回归问题，采用加权平均得到预测值。
 
-## Adaboost
+### Adaboost
 
 Adaboost [^freund1997decision] 是 Boosting 算法中有代表性的一个。原始的 Adaboost 算法用于解决二分类问题，因此对于一个训练集
 
@@ -209,7 +209,7 @@ AdaBoost 算法过程如下所示：
 \end{algorithm}
 {{< /pseudocode >}}
 
-## GBDT (GBM, GBRT, MART)
+### GBDT (GBM, GBRT, MART)
 
 GBDT (Gradient Boosting Decision Tree) 是另一种基于 Boosting 思想的集成算法，除此之外 GBDT 还有很多其他的叫法，例如：GBM (Gradient Boosting Machine)，GBRT (Gradient Boosting Regression Tree)，MART (Multiple Additive Regression Tree) 等等。GBDT 算法由 3 个主要概念构成：Gradient Boosting (GB)，Regression Decision Tree (DT 或 RT) 和 Shrinkage。
 
@@ -271,7 +271,7 @@ $$`
 
 注意，这里的 Shrinkage 和学习算法中 Gradient 的步长是两个不一样的概念。Shrinkage 设置小一些可以避免发生过拟合现象；而 Gradient 中的步长如果设置太小则会陷入局部最优，如果设置过大又容易结果不收敛。
 
-## XGBoost
+### XGBoost
 
 XGBoost 是由 Chen 等人 [^chen2016xgboost] 提出的一种梯度提升树模型框架。XGBoost 的基本思想同 GBDT 一样，对于一个包含 `$n$` 个样本和 `$m$` 个特征的数据集 `$\mathcal{D} = \left\{\left(\mathbf{x}_i, y_i\right)\right\}$`，其中 `$\left|\mathcal{D}\right| = n, \mathbf{x}_i \in \mathbb{R}^m, y_i \in \mathbb{R}$`，一个集成树模型可以用 `$K$` 个加法函数预测输出：
 
@@ -343,14 +343,14 @@ $$`
 
 XGBoost 也采用了 Shrinkage 的思想减少每棵树的影响，为后续树模型留下更多的改进空间。同时 XGBoost 也采用了随机森林中的特征下采样 (列采样) 方法用于避免过拟合，同时 XGBoost 也支持样本下采样 (行采样)。XGBoost 在分裂点的查找上也进行了优化，使之能够处理无法将全部数据读入内存的情况，同时能够更好的应对一些由于数据缺失，大量零值和 One-Hot 编码导致的特征稀疏问题。除此之外，XGBoost 在系统实现，包括：并行化，Cache-Aware 加速和数据的核外计算 (Out-of-Core Computation) 等方面也进行了大量优化，相关具体实现请参见论文和 [文档](https://xgboost.readthedocs.io/en/latest/)。
 
-## LightGBM
+### LightGBM
 
 LightGBM 是由微软研究院的 Ke 等人 [^ke2017lightgbm] 提出了一种梯度提升树模型框架。之前的 GBDT 模型在查找最优分裂点时需要扫描所有的样本计算信息增益，因此其计算复杂度与样本的数量和特征的数量成正比，这使得在处理大数据量的问题时非常耗时。LightGBM 针对这个问题提出了两个算法：
 
 1. Gradient-based One-Side Sampling (GOSS)
 2. Exclusive Feature Bundling (EFB)
 
-### Gradient-based One-Side Sampling
+#### Gradient-based One-Side Sampling
 
 在 AdaBoost 中，样本的权重很好的诠释了数据的重要性，但在 GBDT 中并没有这样的权重，因此无法直接应用 AdaBoost 的采样方法。幸运的是 GBDT 中每个样本的梯度可以为我们的数据采样提供有用的信息。当一个样本具有较小的梯度时，其训练的误差也较小，表明其已经训练好了。一个直观的想法就是丢弃这些具有较小梯度的样本，但是这样操作会影响整个数据的分布，从而对模型的精度造成损失。
 
@@ -389,7 +389,7 @@ GOSS 的做法是保留具有较大梯度的样本，并从具有较小梯度的
 \end{algorithm}
 {{< /pseudocode >}}
 
-### Exclusive Feature Bundling
+#### Exclusive Feature Bundling
 
 高维数据往往是稀疏的，特征空间的稀疏性为我们提供了可能的近似无损的特征降维实现。进一步而言，在稀疏的特征空间中，很多特征之间是互斥的，也就是说它们不同时取非零值。因此，我们就可以将这些互斥的特征绑定成一个特征。由于 `$\#bundle \ll \#feature$`，因此构建直方图的复杂度就可以从 `$O \left(\#data \times \#features\right)$` 减小至 `$O \left(\#data \times \#bundle\right)$`，从而在不损失精度的情况下加速模型的训练。这样我们就需要解决如下两个问题：
 
@@ -470,7 +470,7 @@ GOSS 的做法是保留具有较大梯度的样本，并从具有较小梯度的
 
 EFB 算法可以将大量的互斥特征合并为少量的稠密特征，从而通过避免对零值特征的计算提高算法的运行效率。
 
-### Tree Growth
+#### Tree Growth
 
 大多的决策树算法通过逐层 (Level-wise / Depth-wise) 的方法生成树，如下图所示：
 
@@ -484,14 +484,14 @@ LightGBM 采用了另外一种 Leaf-wise (或称 Best-first) 的方式生成 [^s
 
 更多有关 LightGBM 的优化请参见论文和 [文档](https://github.com/Microsoft/LightGBM/blob/master/docs/Features.rst)。
 
-## CatBoost
+### CatBoost
 
 CatBoost 是由俄罗斯 Yandex 公司 [^dorogush2018catboost] [^prokhorenkova2018catBoost] 提出的一种梯度提升树模型框架。相比于之前的实现，CatBoost 的优化主要包括如下几点：
 
 1. 提出了一种处理分类特征 (Categorical Features) 的算法。
 2. 提出了一种解决预测偏移 (Prediction Shift) 问题的算法。
 
-### 分类特征
+#### 分类特征
 
 分类特征是由一些离散的值构成的集合，其无法直接应用在提升树模型中，一个常用的方法是利用 One-Hot 编码对分类特征进行预处理，将其转化成值特征。
 
@@ -535,7 +535,7 @@ $$`
 
 Catboost 采用了一种更有效的策略：首先对于训练样本进行随机排列，得到排列下标 `$\sigma$`，之后对于每个训练样本仅利用“历史”样本来计算 TS，即：`$\mathcal{D}_k = \left\{\mathbf{x}_j: \sigma \left(j\right) < \sigma \left(k\right)\right\}$`，对于每个测试样本 `$\mathcal{D}_k = \mathcal{D}$`。
 
-### Prediction Shift & Ordered Boosting
+#### Prediction Shift & Ordered Boosting
 
 类似计算 TS，Prediction Shift 是由一种特殊的 Target Leakage 所导致的。对于第 `$t$` 次迭代，我们优化的目标为：
 
@@ -590,7 +590,7 @@ CatBoost 提出了一种解决 Prediction Shift 的算法：Ordered Boosting。�
 
 更多 CatBoost 的实现细节请参见论文和 [文档](https://tech.yandex.com/catboost/)。
 
-## 不同实现的比较
+### 不同实现的比较
 
 针对 [scikit-learn](https://github.com/scikit-learn/scikit-learn)，[XGBoost](https://github.com/dmlc/xgboost)，[LightGBM](https://github.com/Microsoft/LightGBM) 和 [CatBoost](https://github.com/catboost/catboost) 4 种 GBDT 的具体实现，下表汇总了各自的相关特性：
 
@@ -642,7 +642,7 @@ CatBoost 提出了一种解决 Prediction Shift 的算法：Ordered Boosting。�
 - [Laurae++: xgboost / LightGBM](https://sites.google.com/view/lauraepp/home) (XGBoost, LightGBM), [代码](https://github.com/Laurae2/gbt_benchmarks)
 - [GBM Performance](https://github.com/szilard/GBM-perf) (XGBoost, LightGBM, H2O), [代码](https://github.com/szilard/GBM-perf)
 
-# Stacking
+## Stacking
 
 Stacking 本身是一种集成学习方法，同时也是一种模型组合策略，我们首先介绍一些相对简单的模型组合策略：**平均法** 和 **投票法**。
 

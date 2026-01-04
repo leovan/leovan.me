@@ -30,7 +30,7 @@ tags:
 
 按照 [Hadoop 集群搭建 (Hadoop Cluster Setup)](/tech101/2021/06/hadoop-cluster-setup/) 搭建 Hadoop 集群。
 
-# MySQL 安装和配置
+## MySQL 安装和配置
 
 通过如下命令安装 MySQL：
 
@@ -155,7 +155,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-# Hive 安装和配置
+## Hive 安装和配置
 
 将 Hive 安装包解压缩到 `/opt` 目录并创建软链接：
 
@@ -168,7 +168,7 @@ ln -s /opt/apache-hive-3.1.2-bin /opt/hive
 将如下信息添加到 `/etc/profile` 中：
 
 ```txt
-# Hive
+## Hive
 export HIVE_HOME=/opt/hive
 export PATH=$PATH:$HIVE_HOME/bin
 ```
@@ -255,7 +255,7 @@ Initialization script completed
 schemaTool completed
 ```
 
-# 启动 Hive
+## 启动 Hive
 
 执行如下命令启动 Hive：
 

@@ -12,30 +12,30 @@ disable_math: true
 disable_highlight: true
 ---
 
-# 范叶亮
+<h2 class="center no-anchor">范叶亮</h2>
 
-# <i data-lucide="crosshair"></i> 研究兴趣
+## <i data-lucide="crosshair"></i> 研究兴趣
 
 - 现从事**数据科学**在**安全风险**领域的**技术应用**和**产品设计**。
 - 对**数据科学**在**农业**和**工业**领域的应用充满兴趣。
 
-# <i data-lucide="graduation-cap"></i> 教育背景
+## <i data-lucide="graduation-cap"></i> 教育背景
 
 - 2012.09 ~ 2015.03 **河北工业大学** 信息管理 硕士
 - 2008.09 ~ 2012.07 **河北工业大学** 工商管理 学士
 
-# <i data-lucide="building-2"></i> 工作经历
+## <i data-lucide="building-2"></i> 工作经历
 
 1. 2020.08 ~ 至今 **美团** 风险数据挖掘专家
 2. 2015.04 ~ 2020.08 **京东** 高级算法工程师
 
-# <i data-lucide="notebook-tabs"></i> 项目经历
+## <i data-lucide="notebook-tabs"></i> 项目经历
 
-## 安全和风险
+### 安全和风险
 
 _2020.08 ~ 至今 风险数据挖掘专家_
 
-## 智慧农业
+### 智慧农业
 
 _2019.07 ~ 2020.08 算法 & 产品负责人_
 
@@ -43,7 +43,7 @@ _2019.07 ~ 2020.08 算法 & 产品负责人_
 - **智能环控**：设计和实现了基于时间序列分析，深度学习和强化学习的智能环控算法和解决方案。将智能环控算法拆解为环境模型和控制模型两部分，实现了同一作物和家畜在不同环境下种养殖模型的复用。通过专家知识引擎和机器学习算法实现了在保持现有产量不变的前提下各项环境指标控制误差相比于人工降低了 **50%+**，整体平均成本（水，电，肥等）降低 **20%+**。参加 2019 年国际智慧温室种植挑战赛，在 24 小时 Hackathon 模拟挑战赛中，获得人工智能策略方法 **4/21** 名，虚拟西红柿种植净利润 **9/21** 名。
 - **智能集蛋**：设计和实现了一套基于计算机视觉和 IoT 传感器的智能集蛋装置和算法。在笼养模式集蛋过程中，利用摄像头和 IoT 传感器采集的数据实现了鸡蛋计数和隶属笼体的识别，准确率 **99%+**。通过鸡蛋隶属笼体识别可以精准分析不同笼体内的料蛋比，为淘汰鸡提供强有力的数据支持，同时也为蛋品的溯源提供了更细力度的数据。
 
-## Daat (复杂网络和知识图谱)
+### Daat (复杂网络和知识图谱)
 
 _2018.04 ~ 2019.06 项目负责人_
 
@@ -52,7 +52,7 @@ _2018.04 ~ 2019.06 项目负责人_
 - **大规模异构网络嵌入**：实现针对**千万级别顶点**和**亿级别边**的异构网络嵌入算法。通过 Alias 方法进行高效地加权节点采样，实现了基于具有丰富业务含义元路径 (Meta-Path) 和其他算法的网络节点嵌入。利用异构网络节点嵌入结果作为节点特征 (例如：用户，商品等) 为风控，营销和推荐等业务模型和系统提供服务。
 - **基于用户网络和用户行为的推荐和营销**：通过用户的历史购买记录构建包含用户，商品 (实物，理财等) 等多类型节点和边的异构网络，并利用异构网络嵌入算法构建不同类型节点的向量表示。结合用户传统特征和用户在线行为，构建推荐候选结果生成和营销人群生成模型，结合最终业务模型，平均辅助提升效果 **20%+**。
 
-## 全视之眼 (中文地址分析)
+### 全视之眼 (中文地址分析)
 
 _2015.04 ~ 2018.04 项目负责人_
 
@@ -63,47 +63,47 @@ _2015.04 ~ 2018.04 项目负责人_
 - **企业地址画像系统**：构建企业、地址和用户关系，设计企业地址画像相关指标体系，服务于 [**京东企业信用**](https://icredit.jd.com/)，对内外部提供离线数据和实时查询服务。
 - **农村金融小站选址模型**：根据地址画像系统，结合农村金融相关业务，构建基于地址画像的农村金融小站选址模型和系统，为农村金融小站的线下选址提供辅助决策。
 
-## 用户行为分析
+### 用户行为分析
 
 _2017.10 ~ 2017.12 算法设计和开发_
 
 - 设计开发了一种 Behavior2Vec 用户行为表示方法，基于层次聚类和深度搜索，构建了一个用于识别用户异常行为的混合模型。在校园白条中介激活和账号盗用问题上，相比传统的 Bag of Words 和 N-GRAM 等表示方法，在保证**准确率 80%+** 的前提下，提高异常用户识别数量 **3+ 倍**。
 
-## 动产融资
+### 动产融资
 
 _2015.04 ~ 2015.10 算法设计和开发_
 
 - 设计开发一种基于 Bass 扩散模型，优化的时间序列相似度和聚类算法的混合产品生命周期识别模型，尾货识别**准确率 95%+**，辅助贷款方商品质押准入决策和质押率的制定。
 - 设计开发不同数据源的商品信息融合模型，相同商品识别**准确率 90%+**，配合 ElasticSearch 开发商品模糊匹配查询服务，为商品质押提供精准的价格等相关信息。
 
-# <i data-lucide="settings"></i> 专业技能
+## <i data-lucide="settings"></i> 专业技能
 
-## 开发语言
+### 开发语言
 
 - <i class="icon icon-python"></i> Python: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i>
 - <i class="icon icon-r"></i> R: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i>
 - <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
 
-## 平台框架
+### 平台框架
 
 - <i class="icon icon-pytorch"></i> PyTorch: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
 - <i class="icon icon-spark"></i> Spark: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
 - <i class="icon icon-qt"></i> Qt: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
 - <i class="icon icon-react"></i> React: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
 
-## 外语能力
+### 外语能力
 
 - 英语: CET6 518，能说，会写，看菜单略费劲...
 
-# <i data-lucide="award"></i> 研究成果
+## <i data-lucide="award"></i> 研究成果
 
-## 论文
+### 论文
 
 1. Zhou, F., Yin, H., Zhan, L., Li, H., **Fan, Y.**, & Jiang, L. (2018). A Novel Ensemble Strategy Combining Gradient Boosted Decision Trees and Factorization Machine Based Neural Network for Clicks Prediction. In _2018 International Conference on Big Data and Artificial Intelligence (BDAI)_ (pp. 29-33). IEEE.
 2. Li, J., **Fan, Y.\***, Xu, Y., & Feng, H. (2013). An Improved Forecasting Algorithm for Spare Parts of Short Life Cycle Products Based on EMD-SVM. In _Information Science and Cloud Computing Companion (ISCC-C), 2013 International Conference on_ (pp. 722-727). IEEE.
-3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://r2.leovan.me/publications/IEAF.pdf). _Unpublished_.
+3. **Fan, Y.**, Li, J., Chu, C. (2014). [IEAF: A Hybrid Method for Forecasting Short Life Cycle Spare Parts](https://cdn.leovan.me/publication/2014_IEAF_A_Hybrid_Method_for_Forecasting_Short_Life_Cycle_Spare_Parts.pdf). _Unpublished_.
 
-## 专利
+### 专利
 
 1. 一种中文地址分词方法及系统 (发明，[CN 105159949](http://epub.cnipa.gov.cn/patent/CN105159949B)，**授权**，第一发明人，2015)
 2. 一种产品库存预测方法及装置 (发明，[CN 106056239](http://epub.cnipa.gov.cn/patent/CN106056239B)，**授权**，第一发明人，2016)
@@ -111,7 +111,7 @@ _2015.04 ~ 2015.10 算法设计和开发_
 4. 一种数据处理方法、装置、设备及介质 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN110309235B)，**授权**，第一发明人，2019)
 6. 用于生成信息的方法和装置 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN112395490B)，**授权**，第一发明人，2019)
 
-## 技术项目
+### 技术项目
 
 - **技术主页**：[https://leovan.tech](https://leovan.tech)
 - **Github**: [https://github.com/leovan](https://github.com/leovan) ![github-followers](https://img.shields.io/github/followers/leovan?style=social&label=Follow)

@@ -12,7 +12,7 @@ disable_math: true
 disable_highlight: true
 ---
 
-# 我是谁？
+## 我是谁？
 
 我是**范叶亮**，可以叫我**小黑**或是 **Leo**。如果想更多的了解我的工作和研究，请参见我的[简历](/cn/cv/)页面，当前页面可以让你了解生活中的我。
 
@@ -25,15 +25,15 @@ disable_highlight: true
   <img src="/images/me/about-small.jpg" alt="范叶亮">
 </picture>
 
-# 喜欢啥？
+## 喜欢啥？
 
 年轻时追新，人老后思旧，并不是拒绝新事物，而是随着时间的流逝，对旧事物有了新的理解，于是便想再回味一遍。莫要嫌我一个 90 后喜欢的东西太老，毕竟 90 后已经很老了...
 
-## 音乐
+### 音乐
 
 > 会因为一首歌去听这个人的所有专辑
 
-### 民谣
+#### 民谣
 
 **矫情但不做作**，矫情是说容易为了些小事动情，不做作是说情是真的，不假。
 
@@ -43,11 +43,11 @@ disable_highlight: true
 - [**蒋明**](https://site.douban.com/jiangming/room/623845/)，有些古色古香的味道，浑厚的声音。
 - [**赵照**](https://site.douban.com/zhaozhao/) [**赵雷**](https://site.douban.com/leizizhao/)，很喜欢这师徒俩，听赵照的歌更早些，最喜欢 “在冬天和奶奶一起晒太阳 一只麻雀偷偷上了我家的房”。
 
-### 爵士
+#### 爵士
 
 听爵士乐不多，开始听爵士乐也是很机缘巧合，还要从喜欢的 _Vincent_ 说起，后面 [**杜丽莎**](https://music.douban.com/musician/105345/) 老师在比赛中唱过，很好听，就开始搜索各个版本。后来，发现了 [**王若琳**](https://music.douban.com/musician/104596/) 的版本，就渐渐的开始去了解一些爵士曲风了。
 
-### 流行
+#### 流行
 
 - [**Westlife**](https://music.douban.com/musician/103706/)，高中时期听了很多西城的歌，_You raise me up, so I can stand on mountains. You raise me up to walk on stormy seas._
 - [**任贤齐**](https://music.douban.com/musician/104467/)，听得第一盘磁带就是任贤齐的，很久没有新专辑了，比较新的单曲 [朋友的酒](https://music.douban.com/subject/26917676/)，[MV](http://v.yinyuetai.com/video/2738122) 拍的不错。
@@ -57,19 +57,19 @@ disable_highlight: true
 - [**张震岳**](https://music.douban.com/musician/104859/)，台湾原住民特有的味道，简单的歌词，真诚又有点叛逆，至少我这么认为。
 - [**陈奕迅**](https://music.douban.com/musician/103939/)，没去现场听过他的歌，但从演唱会录影上看得出，很走心，很卖力。
 
-### 独特
+#### 独特
 
 - [**李宗盛**](https://music.douban.com/musician/104294/)，有人说年轻人听不懂李宗盛的歌，不过是欠些生活阅历，歌曲所表达的感情不就是源自于人生旅程中的点滴吗。
 - [**蔡琴**](https://music.douban.com/musician/103876/)，有大河的深沉，有黄昏的惆怅，还有宿醉难醒的缠绵 - By 龙应台。
 - [**齐豫**](https://music.douban.com/musician/104445/)，姐姐的歌有些仙儿。
 
-## 书籍
+### 书籍
 
 > 书中自有千钟粟，书中自有黄金屋，书中车马多如簇，书中自有颜如玉。
 
 好读书，多为闲书。读书，不是非做不可的事，而是想要去做的事。人燥的时候就多做些通灵的事情，无需如鼓琴，对画，临帖一般高雅，一书，一茶，足矣，静下来，腐朽之气全无。
 
-## 影视
+### 影视
 
 > 看电影，会笑，也会哭。
 

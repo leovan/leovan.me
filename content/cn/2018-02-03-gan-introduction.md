@@ -17,19 +17,19 @@ images:
   - /images/cn/2018-02-03-gan-introduction/mnist-gan-keras-train-history.png
 ---
 
-# Generative Adversarial Networks (GAN)
+## Generative Adversarial Networks (GAN)
 
 **生成对抗网络** (**Generative Adversarial Network, GAN**) 是由 Goodfellow [^goodfellow2014generative] 于 2014 年提出的一种对抗网络。这个网络框架包含两个部分，一个生成模型 (generative model) 和一个判别模型 (discriminative model)。其中，生成模型可以理解为一个伪造者，试图通过构造假的数据骗过判别模型的甄别；判别模型可以理解为一个警察，尽可能甄别数据是来自于真实样本还是伪造者构造的假数据。两个模型都通过不断的学习提高自己的能力，即生成模型希望生成更真的假数据骗过判别模型，而判别模型希望能学习如何更准确的识别生成模型的假数据。
 
 ![](/images/cn/2018-02-03-gan-introduction/zhoubotong.png)
 
-## 网络框架
+### 网络框架
 
 GAN 由两部分构成，一个**生成器** (**Generator**) 和一个**判别器** (**Discriminator**)。对于生成器，我们需要学习关于数据 `$\boldsymbol{x}$` 的一个分布 `$p_g$`，首先定义一个输入数据的先验分布 `$p_{\boldsymbol{z}} \left(\boldsymbol{z}\right)$`，其次定义一个映射 `$G \left(\boldsymbol{z}; \theta_g\right): \boldsymbol{z} \to \boldsymbol{x}$`。对于判别器，我们则需要定义一个映射 `$D \left(\boldsymbol{x}; \theta_d\right)$` 用于表示数据 `$\boldsymbol{x}$` 是来自于真实数据，还是来自于 `$p_g$`。GAN 的网络框架如下图所示 [^goodfellow2016nips]：
 
 ![](/images/cn/2018-02-03-gan-introduction/gan-framework.svg)
 
-## 模型训练
+### 模型训练
 
 Goodfellow 在文献中给出了一个重要的公式用于求解最优的生成器
 
@@ -100,11 +100,11 @@ $$`
 
 在实际的训练过程中，我们通常不会直接训练 `$G$` **最小化** `$\log \left(1 - D \left(G \left(\boldsymbol{z}\right)\right)\right)$`，因为其在学习过程中的早起处于饱和状态，因此我们通常会通过**最大化** `$\log \left(D \left(G \left(z\right)\right)\right)$`。
 
-## 存在的问题
+### 存在的问题
 
 针对 GAN，包括 Goodfellow 自己在内也提出了其中包含的很多问题 [^goodfellow2016nips]，因此后人也提出了大量的改进，衍生出了大量的 GAN 变种。本章节仅对原始的 GAN 中存在的问题进行简略介绍，相关的改进请参见后续的具体改进算法。
 
-### JS 散度问题
+#### JS 散度问题
 
 我们在训练判别器的时候，其目标是最大化 JS 散度，但 JS 散度真的能够很好的帮助我们训练判别器吗？ Wasserstein GAN 一文 [^arjovsky2017wasserstein]给出了不同生成器情况下 JS 散度的变化情况。
 
@@ -123,7 +123,7 @@ $$`
 
 上图中 Y 轴绘制的为 `$\dfrac{1}{2} L \left(D, \theta_g\right) + \log 2$`，因为 `$-2 \log 2 \leq L \left(D, \theta_g\right) \leq 0$`，因此我们可得 `$0 \leq \dfrac{1}{2} L \left(D, \theta_g\right) + \log 2 \leq \log 2$`。从图中我们可以看出，针对两种不同的情况，其值均很快的逼近最大值 `$\log 2 \approx 0.69$`，当接近最大值的时候，判别器将具有接近于零的损失，此时我们可以发现，尽管 JS 散度很快趋于饱和，但 DCGAN 生成器的效果却仍在不断的变好，因此，使用 JS 散度作为判别其的目标就显得不是很合适。
 
-### 多样性问题 Mode Collapse
+#### 多样性问题 Mode Collapse
 
 Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数据，导致的结果就是生成的数据缺乏多样性，如下图所示 [^mlds-gan-basic-idea]:
 
@@ -142,7 +142,7 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 - 基于 Unrolled Optimization 的优化 [^metz2016unrolled]
 - 基于集成算法的优化 [^tolstikhin2017adagan]
 
-## MNIST 示例
+### MNIST 示例
 
 我们利用 MNIST 数据集测试原始的 GAN 模型的效果，代码主要参考了 [`Keras-GAN`](https://github.com/eriklindernoren/Keras-GAN)，最终实现代码详见 [`image_gan_keras.py`](https://github.com/leovan/leovan.me/tree/main/static/codes/cn/2018-02-03-gan-introduction/image_gan_keras.py)，我们简单对其核心部分进行说明。
 
@@ -222,30 +222,30 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
               hidden_dim: 隐含层最大维度
           '''
           
-          # 省略一大坨代码
+          ## 省略一大坨代码
   
-          # 构建和编译判别器
+          ## 构建和编译判别器
           self._discriminator = self.build_discriminator()
           self._discriminator.compile(loss='binary_crossentropy',
                                       optimizer=d_optimizer,
                                       metrics=['accuracy'])
   
-          # 构建和编译生成器
+          ## 构建和编译生成器
           self._generator = self.build_generator()
           self._generator.compile(loss='binary_crossentropy',
                                   optimizer=g_optimizer)
   
-          # 生成器利用噪声数据作为输入
+          ## 生成器利用噪声数据作为输入
           noise = Input(shape=self._noise_shape)
           generated_image = self._generator(noise)
   
-          # 当训练整个对抗网络时，仅训练生成器
+          ## 当训练整个对抗网络时，仅训练生成器
           self._discriminator.trainable = False
   
-          # 判别器将生成的图像作为输入
+          ## 判别器将生成的图像作为输入
           label = self._discriminator(generated_image)
   
-          # 构建和编译整个对抗网络
+          ## 构建和编译整个对抗网络
           self._adversarial = Model(noise, label)
           self._adversarial.compile(loss='binary_crossentropy',
                                     optimizer=a_optimizer)
@@ -269,10 +269,10 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
           save_interval: 结果保存间隔
       '''
       
-      # 省略一大坨代码
+      ## 省略一大坨代码
   
       for iter in range(iters):
-          # 训练判别器
+          ## 训练判别器
           for _ in range(k):
               train_indices = np.random.randint(0, x_train.shape[0],
                                                 batch_size)
@@ -286,13 +286,13 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
               self._discriminator.train_on_batch(generated_images,
                                                  np.zeros((batch_size, 1)))
               
-          # 训练生成器
+          ## 训练生成器
           noises = np.random.normal(0, 1, (batch_size, self._noise_dim))
           labels = np.ones(batch_size)
   
           self._adversarial.train_on_batch(noises, labels)
   
-      # 再省略一大坨代码
+      ## 再省略一大坨代码
   ```
 
 在训练整个对抗网络的时候，我们对于一个给定的生成器，我们将生成器生成的数据作为负样本，将从真实数据中采样的数据作为正样本训练判别器。Goodfellow 在描述 GAN 训练的过程中，对于给定的生成器，训练判别器 `$k$` 次，不过通常取 `$k = 1$`。训练好判别器后，再随机生成噪音数据用于训练生成器，周而复始直至达到最大迭代次数。
@@ -307,7 +307,7 @@ Mode Collapse 问题是指生成器更多的是生成了大量相同模式的数
 
 ![](/images/cn/2018-02-03-gan-introduction/mnist-gan-generated-images.gif)
 
-# Deep Convolutional GAN
+## Deep Convolutional GAN
 
 DCGAN (Deep Convolutional GAN) 是由 Radford [^radford2015unsupervised] 等人提出的一种对原始 GAN 的变种，其基本的思想就是将原始 GAN 中的全链接层用卷积神经网络代替。在文中，Radford 等人给出构建一个稳定的 DCGAN 的建议，如下：
 

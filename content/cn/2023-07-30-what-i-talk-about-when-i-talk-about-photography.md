@@ -51,7 +51,7 @@ images:
   - /images/cn/2023-07-30-what-i-talk-about-when-i-talk-about-photography-colors-part-1/hdr-sdr.png
 ---
 
-# 色域
+## 色域
 
 在[当我谈修图时，我谈些什么 - 色彩篇 Part 1](/cn/2023/04/what-i-talk-about-when-i-talk-about-photo-retouching-colors-part-1) 中已经介绍过什么是[**色彩空间**](/cn/2023/04/what-i-talk-about-when-i-talk-about-photo-retouching-colors-part-1/#色彩空间)，在**显示领域**通常会使用 **RGB 色彩模型**，在**印刷领域**通常会使用 **CMYK 色彩模型**。而在**颜色感知领域**，[**CIE 1931 色彩空间**](https://zh.wikipedia.org/wiki/CIE_1931色彩空间) 则是在设计之初便要求包含普通人眼可见的所有颜色的标准色彩空间。
 
@@ -95,7 +95,7 @@ $$`
 
 [^wikipedia-meaning-of-xyz]: <https://en.wikipedia.org/wiki/CIE_1931_color_space#Meaning_of_X,_Y_and_Z>
 
-# 色彩深度
+## 色彩深度
 
 **色彩深度**，简称**色深**（Color Depth），即存储一个像素的颜色所需要的位数。若色彩深度为 $n$ 位，则代表一共包含 $2^n$ 种颜色。例如我们常说的**真彩色**，即 24 位，对应 RGB 三个通道，每个通道 8 位（即 0-255），共可以表示 16,777,216 种颜色。
 
@@ -139,7 +139,7 @@ $$`
 
 所以，一块原生 10bit 屏幕优于 8bit FRC 10bit 的屏幕优于原生 8bit 的屏幕。
 
-# 色度抽样
+## 色度抽样
 
 在拍摄视频时，除了 8bit 和 10bit 位深的区别外，我们还经常听到 4:2:2 和 4:2:0 等比值，这代表**色度抽样**。由于人眼对色度的敏感度不及对亮度的敏感度，图像的色度分量不需要有和亮度分量相同的清晰度，在色度上进行抽样可以在不明显降低画面质量的同时降低影像信号的总带宽。
 
@@ -155,7 +155,7 @@ $$`
 
 [^image-source-chroma-subsampling]: <https://en.wikipedia.org/wiki/Chroma_subsampling>
 
-# 动态范围
+## 动态范围
 
 **动态范围**（**Dynamic Range**）是可变信号（例如声音或光）最大值和最小值的比值。在相机中，设置不同的 ISO 会影响到动态范围在记录高光和暗部时的噪点表现。
 

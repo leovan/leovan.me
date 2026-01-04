@@ -32,7 +32,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
 
 本文给出的 SQL 样式指南基于上述几种进行整理和修改。
 
-# 一般原则
+## 一般原则
 
 - 使用一致的、描述性名称。
 - 使用空格（2 个或 4 个，项目中保持一致），避免使用 TAB 缩进。
@@ -41,7 +41,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
 - 运算符前后添加空格，逗号 `,` 后添加空格，避免行尾有空格。
 - 每行代码不超过 80 个字符。
 
-# 命名惯例
+## 命名惯例
 
 - 避免名称和保留字一样。
 - 关键词、函数名称采用大写，字段名、表名采用小蛇式（lower snake case）命名。
@@ -50,7 +50,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
 - 尽量避免使用缩写词。使用时一定确定这个缩写简明易懂。
 - 字段名总是使用单数。
 
-# 对齐和换行
+## 对齐和换行
 
 - 避免[川流](https://zh.wikipedia.org/wiki/川流_\(字体排印学\))式对齐代码。
 
@@ -182,7 +182,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
     ;
     ```
 
-# 明确指定
+## 明确指定
 
 - 使用 `AS` 明确指定别名，而非隐式。
 
@@ -306,7 +306,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
     ;
     ```
 
-# 子查询
+## 子查询
 
 - 尽量使用 [Common Table Expressions (CTEs)](https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL#Common_table_expression) 而非子查询。
 
@@ -380,7 +380,7 @@ Google 针对大多数编程语言（例如：C/C++，Java，JavaScript，Python
     ON backers.backer_id = backers_and_creators.backer_id
     ```
 
-# 其他
+## 其他
 
 - 尽量使用 `!=` 而不是 `<>` 表示不等于。
 - 尽量使用 `BETWEEN` 而不是多个 `AND` 语句。

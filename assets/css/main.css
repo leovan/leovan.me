@@ -237,19 +237,23 @@
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
   }
 
   h3 {
+    font-size: 24px;
+  }
+
+  h4 {
     font-size: 20px;
   }
 
-  h4,
   h5,
   h6 {
     font-size: 16px;

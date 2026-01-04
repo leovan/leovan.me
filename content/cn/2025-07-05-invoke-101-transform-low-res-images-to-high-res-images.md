@@ -57,7 +57,7 @@ magick toucan-raw.jpg -resize 512x -quality 10 toucan-low-res.jpg
 
 [^image-source]: 图片来源：<https://pixabay.com/zh/photos/toucan-nature-bird-beak-costa-rica-9603854/>
 
-# 基础操作
+## 基础操作
 
 单击左侧 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M140,88a12,12,0,0,1,12-12h32a12,12,0,0,1,12,12v32a12,12,0,0,1-24,0V100H152A12,12,0,0,1,140,88ZM72,180h32a12,12,0,0,0,0-24H84V136a12,12,0,0,0-24,0v32A12,12,0,0,0,72,180ZM236,56V200a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V56A20,20,0,0,1,40,36H216A20,20,0,0,1,236,56Zm-24,4H44V196H212Z"></path></svg></span> 按钮进入 Upscaling 界面，将上面生成的低分辨率图片拖入 Assets 中，之后再拖入到 Upscale 面板的图片区域。
 
@@ -83,7 +83,7 @@ blurry, out of focus, over saturated, text+++
 
 单击画布上方的 `Exit Compare` 退出对比，在生成的图片上右键，单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M228,104a12,12,0,0,1-24,0V69l-59.51,59.51a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"></path></svg></span> 按钮可以在新窗口中打开图片，之后则可以使用鼠标进行放大来观察图片细节。
 
-# 进阶操作
+## 进阶操作
 
 除了基础的分辨率提升以外，还有一些高级选项可以用来控制分辨率提升后的图片与原始图片的相似程度以及在提升分辨率过程中的创意性。`Creativity` 参数用于设置提示词控制图像生成的创意性，从而控制与原始图像的差异程度，值越大表示越具有创意性。`Structure` 参数用于确保分辨率提升过程中图像中的元素与原始图像中的元素的形状和位置匹配，值越大表示越会严格遵守原始图片的结构。
 
@@ -91,7 +91,7 @@ blurry, out of focus, over saturated, text+++
 
 同时也可以调整生成的模型及其相关参数，例如：`Scheduler` 和 `CFG Scale` 等。
 
-# 风格调整
+## 风格调整
 
 如果在提升分辨率的过程中还希望调整图片的风格，你可以尝试使用不同的提示词，例如下面是一个绘画风格的提示词：
 
