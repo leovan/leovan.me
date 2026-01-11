@@ -674,15 +674,20 @@
     padding: 1em;
   }
 
-  .toc-depth-1 nav ul li ul {
+  .toc > nav > ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .toc-depth-1 > nav > ul > li > ul {
     display: none;
   }
 
-  .toc-depth-2 nav ul li ul li ul {
+  .toc-depth-2 > nav > ul > li > ul > li > ul {
     display: none;
   }
 
-  .toc-depth-3 nav ul li ul li ul li ul {
+  .toc-depth-3 > nav > ul > li > ul > li > ul > li > ul {
     display: none;
   }
 }
