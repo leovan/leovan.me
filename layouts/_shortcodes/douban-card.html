@@ -5,6 +5,25 @@
 
 <div
   class='shortcode-douban-card shortcode-douban-card-{{ .Get "type" | default "book" }}'
-  id='shortcode-douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}'
-  data-douban-id='{{ .Get "id" }}'
-></div>
+  id='shortcode-douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}'>
+  <div class="shortcode-douban-card--middle">
+    <div class="shortcode-douban-card--title">
+      <a href="https://{{ .Get "type" | default "book" }}.douban.com/subject/{{ .Get "id" }}/" target="_blank">{{ .Get "title" }}</a>
+    </div>
+    <div class="shortcode-douban-card--stars-rating">
+      <span class="shortcode-douban-card--logo-dou">豆</span>
+      <span class="shortcode-douban-card--logo-rating">豆瓣评分</span>
+      <div class="shortcode-douban-card--stars shortcode-douban-card--stars-{{ math.Round (.Get "rating") }}"></div>
+      <span class="shortcode-douban-card--rating">{{ .Get "rating" }}</span>
+    </div>
+    <div class="shortcode-douban-card--tags">
+      {{ .Get "tags" }}
+    </div>
+    <div class="shortcode-douban-card--summary">
+      {{ .Get "summary" }}
+    </div>
+  </div>
+  <div class="shortcode-douban-card--right">
+    <img src="{{ .Get "image" }}" />
+  </div>
+</div>

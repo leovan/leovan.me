@@ -654,6 +654,16 @@
     display: none !important;
   }
 
+  .mjx-dialog {
+    margin: auto !important;
+    top: 0 !important;
+  }
+
+  .mjx-dialog-button > mjx-dialog-icon {
+    padding: 7px 0 6px !important;
+    border: none !important;
+  }
+
   /* pseudocode */
   .ps-root .ps-line {
     line-height: 1.5rem !important;

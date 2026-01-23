@@ -6,8 +6,8 @@
     "preview": "hugo server"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "hugo-extended": "^0.154.2",
-    "tailwindcss": "^4.1.17"
+    "@tailwindcss/cli": "^4.1.18",
+    "hugo-extended": "^0.154.5",
+    "tailwindcss": "^4.1.18"
   }
 }
