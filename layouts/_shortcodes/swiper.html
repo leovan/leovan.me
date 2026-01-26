@@ -1,6 +1,10 @@
 {{- if not ($.Page.Store.Get "shortcode-swiper") }}
   {{- $.Page.Store.Set "shortcode-swiper" 1 }}
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" type="text/css" href="/css/_shortcodes/swiper.css" />
   <script src="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
 {{- end }}
@@ -22,6 +26,7 @@
 
 {{- $maxWidth := .Get "max-width" | default "100%" }}
 
+
 <div class="swiper" id="{{ $swiperId }}" style="max-width: {{ $maxWidth }};">
   <div class="swiper-wrapper">
     {{- range $item := $data.items }}
@@ -31,7 +36,7 @@
           {{- $imageSrc := $item.src }}
           {{- $imageCaption := default "" $item.caption }}
           <div class="swiper-slide-image">
-            <img src="{{ $imageSrc }}"/>
+            <img src="{{ $imageSrc }}" />
           </div>
         {{- else }}
         {{- end }}

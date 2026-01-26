@@ -1,11 +1,21 @@
 {{- if not ($.Page.Store.Get "shortcode-image-compare") }}
   {{- $.Page.Store.Add "shortcode-image-compare" 1 }}
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/image-compare.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdmirror.com/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/_shortcodes/image-compare.css"
+  />
 {{- end }}
 
+
 <div class="shortcode-image-compare-container">
-  <div class="shortcode-image-compare"
+  <div
+    class="shortcode-image-compare"
     {{- with .Get "control-color" }} data-control-color="{{ . }}" {{- end }}
     {{- with .Get "control-shadow" }} data-control-shadow="{{ . }}" {{- end }}
     {{- with .Get "add-circle" }} data-add-circle="{{ . }}" {{- end }}

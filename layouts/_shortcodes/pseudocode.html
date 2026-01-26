@@ -1,14 +1,18 @@
 {{- if not ($.Page.Store.Get "shortcode-pseudocode") }}
   {{- $.Page.Store.Set "shortcode-pseudocode" 1 }}
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/pseudocode.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/_shortcodes/pseudocode.css"
+  />
 {{- end }}
+
 
 <div>
   <pre
     class="shortcode-pseudocode"
     data-indent-size="{{ .Get "indent-size" | default "1.2em" }}"
-    data-comment-delimiter="{{ .Get "comment-delimiter" | default "//" }}"
+    data-comment-delimiter="{{ .Get "comment-delimiter" | default "// " }}"
     data-line-number="{{ .Get "line-number" | default "true" }}"
     data-line-number-punc="{{ .Get "line-number-punc" | default ":" }}"
     data-no-end="{{ .Get "no-end" | default "true" }}"

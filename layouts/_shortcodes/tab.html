@@ -8,9 +8,15 @@
 {{- $tabItemsLength := .Store.Get "shortcode-tab-items" | len }}
 {{- $labelsPosition := .Get "labels-position" | default "flex-start" }}
 
+
 <div class="shortcode-tab" style="justify-content: {{ $labelsPosition }};">
   {{- range $idx, $tabItem := .Store.Get "shortcode-tab-items" }}
-    <input type="radio" id="{{ $tabId }}-{{ $idx }}" name="{{ $tabId }}" {{- if eq $idx 0 }}checked="checked"{{ end }}>
+    <input
+      type="radio"
+      id="{{ $tabId }}-{{ $idx }}"
+      name="{{ $tabId }}"
+      {{- if eq $idx 0 }} checked="checked" {{ end }}
+    />
     <label for="{{ $tabId }}-{{ $idx }}">{{ .label | markdownify }}</label>
     <div class="shortcode-tab-item">
       {{ .content }}

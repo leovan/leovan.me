@@ -28,17 +28,18 @@
     {{- if .IsPage }}
       {{- if not .Params.disable_author_date }}
         <div class="post-author-date">
-        {{- with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}
-          {{  print . " / " }}
-        {{- end }}
-        {{- if .Lastmod }}{{- if gt .Lastmod 0 }}
-          {{ .Lastmod.Format "2006-01-02" }}
-        {{- end }}
-        {{- else if .Date }}
-          {{- if gt .Date 0 }}
-            {{ .Date.Format "2006-01-02" }}
+          {{- with or (or .Params.author (index $.Site.Params.lang.author $lang)) "" }}
+            {{ print . " / " }}
           {{- end }}
-        {{- end }}
+          {{- if .Lastmod }}
+            {{- if gt .Lastmod 0 }}
+              {{ .Lastmod.Format "2006-01-02" }}
+            {{- end }}
+          {{- else if .Date }}
+            {{- if gt .Date 0 }}
+              {{ .Date.Format "2006-01-02" }}
+            {{- end }}
+          {{- end }}
         </div>
       {{- end }}
 
@@ -59,6 +60,7 @@
               /
             {{- end }}
           {{- end }}
+
 
           <strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
           {{ .WordCount }}
@@ -81,8 +83,11 @@
         </div>
       {{- end }}
     {{- end }}
-    <hr>
   </div>
+{{- end }}
+
+{{- if not .IsHome }}
+<hr />
 {{- end }}
 
 {{- if and (not .Params.disable_google_adsense) .IsPage }}

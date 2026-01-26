@@ -1,7 +1,5 @@
 :root {
   --color-shortcode-song-background: #eeeeee;
-
-  --shadow-shortcode-song: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
 }
 
 .dark {
@@ -10,9 +8,9 @@
 
 .aplayer {
   margin: 1em auto !important;
-  border-radius: 0.2rem !important;
+  border-radius: 0.25rem !important;
   background: var(--color-shortcode-song-background) !important;
-  box-shadow: var(--shadow-shortcode-song) !important;
+  box-shadow: none !important;
 }
 
 .aplayer .aplayer-lrc:before {
@@ -20,9 +18,5 @@
 }
 
 .aplayer .aplayer-lrc:after {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    var(--color-shortcode-song-background) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--color-shortcode-song-background) 100%) !important;
 }

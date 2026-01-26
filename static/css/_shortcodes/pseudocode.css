@@ -1,5 +1,94 @@
-.shortcode-pseudocode,
-.ps-algorithmic {
+.ps-root {
+  font-family: var(--font-math);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.ps-root .ps-algorithm {
+  margin: 0.8em 0;
+  border-top: 1px solid var(--color-block-border);
+  border-bottom: 1px solid var(--color-block-border);
+}
+
+.ps-root .MathJax_CHTML, .ps-root .MathJax {
+  text-indent: 0;
+  font-size: 1em !important;
+}
+
+.ps-root .ps-line {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem !important;
+}
+
+.ps-root .ps-funcname {
+  font-weight: normal;
+  font-variant: small-caps;
+  font-style: normal;
+  text-transform: none;
+}
+
+.ps-root .ps-keyword {
+  font-weight: bold;
+  font-variant: normal;
+  font-style: normal;
+  text-transform: none;
+}
+
+.ps-root .ps-comment {
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+  text-transform: none;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line,
+.ps-root .ps-algorithm.with-caption > .ps-line > .ps-keyword {
+  font-family: var(--font-sans);
+  font-weight: normal;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line,
+.ps-root .ps-algorithmic > .ps-block {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+.ps-root .ps-algorithm.with-caption > .ps-line:first-child {
+  border-bottom: 1px solid var(--color-block-border);
+}
+
+.ps-root .ps-algorithmic {
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+/* line number support */
+.ps-root .ps-linenum {
+  font-size: 0.8em;
+  line-height: 1em;
+  width: 1.6em;
+  text-align: right;
+  display: inline-block;
+  position: relative;
+  padding-right: 0.3em;
+}
+
+.ps-root .ps-algorithmic.with-linenum .ps-line.ps-code {
+  text-indent: -1.6em;
+}
+
+.ps-root .ps-algorithmic.with-linenum .ps-line.ps-code > span {
+  text-indent: 0em;
+}
+
+/* scope lines support */
+.ps-root .ps-algorithmic.with-scopelines div.ps-block {
+  border-left-style: solid;
+  border-left-width: 0.1em;
+  padding-left: 0.6em;
+}
+
+.ps-root .ps-algorithmic.with-scopelines > div.ps-block {
+  border-left: none;
 }

@@ -1,11 +1,55 @@
+{{- with resources.Get "css/main.css" }}
+  {{- $opts := dict
+    "minify" hugo.IsProduction
+  }}
+  {{- with . | css.TailwindCSS $opts }}
+    {{- if hugo.IsProduction }}
+      {{- with . | fingerprint }}
+        <link
+          rel="stylesheet"
+          href="{{ .RelPermalink }}"
+          integrity="{{ .Data.Integrity }}"
+          crossorigin="anonymous"
+        />
+      {{- end }}
+    {{- else }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with resources.Get "js/js-before.js" }}
+  {{ with resources.ExecuteAsTemplate "js/js-before.js" $ . }}
+    {{- if hugo.IsProduction }}
+      {{- with . | fingerprint }}
+        <script
+          src="{{ .RelPermalink }}"
+          integrity="{{ .Data.Integrity }}"
+          crossorigin="anonymous"
+        ></script>
+      {{- end }}
+    {{- else }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
 {{- partial "google_analytics.html" . }}
 {{- partial "google_adsense.html" . }}
 {{- partial "mathjax.html" . }}
 
 {{- if and (not .Params.disable_highlight) .IsPage (strings.Contains .Content "</code>") }}
-  <link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ "/css/highlight.css" | relURL }}"
+  />
 {{- end }}
 
 {{- if and (not .Params.disable_donate) .IsPage }}
-  <link rel="stylesheet" type="text/css" href="{{ "/css/donate.css" | relURL }}">
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ "/css/donate.css" | relURL }}"
+  />
 {{- end }}

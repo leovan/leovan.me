@@ -2,7 +2,7 @@
   <script>
     MathJax = {
       loader: {
-        load: ["[tex]/boldsymbol"]
+        load: ["[tex]/boldsymbol"],
       },
       options: {
         enableEnrichment: false,
@@ -13,8 +13,11 @@
       },
       tex: {
         tags: "all",
-        inlineMath: [["$","$"], ["\\(","\\)"]],
-        displayMath: [["$$","$$"]],
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [["$$", "$$"]],
         processEscapes: true,
         processEnvironments: true,
         packages: {
@@ -23,5 +26,8 @@
       },
     };
   </script>
-  <script src="https://cdn.jsdmirror.com/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/tex-chtml.js" crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdmirror.com/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/tex-chtml.js"
+    crossorigin="anonymous"
+  ></script>
 {{- end }}

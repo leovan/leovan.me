@@ -1,9 +1,7 @@
 :root {
-  --color-shortcode-douban-card-background: #eeeeee;
+  --color-shortcode-douban-card-background: #f5f5f5;
   --color-shortcode-douban-card-tag-foreground: #999999;
   --color-shortcode-douban-card-green: #42be57;
-
-  --shadow-shortcode-douban-card: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
 
   --image-shortcode-douban-card-stars-1x: url("/images/_shortcodes/douban-card/douban-stars.png");
   --image-shortcode-douban-card-stars-2x: url("/images/_shortcodes/douban-card/douban-stars@2x.png");
@@ -18,9 +16,9 @@
   margin: 1em auto;
   position: relative;
   display: flex;
+  justify-content: space-between;
   background: var(--color-shortcode-douban-card-background);
-  box-shadow: var(--shadow-shortcode-douban-card);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .shortcode-douban-card a {
@@ -66,7 +64,6 @@
 .shortcode-douban-card--right {
   min-width: 160px;
   max-width: 160px;
-  float: right;
 }
 
 .shortcode-douban-card--right img {
@@ -113,10 +110,9 @@
   height: 15px !important;
   background-image: var(--image-shortcode-douban-card-stars-1x);
   background: -webkit-image-set(
-      var(--image-shortcode-douban-card-stars-1x) 1x,
-      var(--image-shortcode-douban-card-stars-2x) 2x
-    )
-    no-repeat;
+    var(--image-shortcode-douban-card-stars-1x) 1x,
+    var(--image-shortcode-douban-card-stars-2x) 2x
+    ) no-repeat;
   background-position: center center;
   overflow: hidden;
   margin-left: 0.6em;

@@ -86,7 +86,7 @@
       {{- with $loading }} loading="{{ . }}" {{- end }}
       {{- with $referrerpolicy }} referrerpolicy="{{ . }}" {{- end }}
       {{- with $src }} src="{{ . }}" {{- end }}
-      {{- with $iframeStyle}} style="{{ . | safeCSS }}" {{- end }}
+      {{- with $iframeStyle }} style="{{ . | safeCSS }}" {{- end }}
       {{- with $title }} title="{{ . }}" {{- end }}
     ></iframe>
   </div>

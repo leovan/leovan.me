@@ -1,0 +1,87 @@
+@theme {
+  --color-html-background: #fafafa;
+  --color-html-foreground: #000000;
+
+  --color-body-background: #ffffffa8;
+  --color-body-foreground: #000000;
+
+  --color-toggle-theme-background-light: #d1d1d180;
+  --color-toggle-theme-background-dark: #ffffff00;
+  --color-toggle-theme-border: var(--color-toggle-theme-background-light);
+  --color-toggle-theme-light: #171717;
+  --color-toggle-theme-dark: #737373;
+
+  --color-block-background: #f5f5f5;
+  --color-block-border: #444444;
+
+  --color-highlight-background: #f5f5f5;
+  --color-highlight-foreground: #444444;
+  --color-highlight-border: #dddddd;
+  --color-highlight-language-background: #dddddd;
+  --color-highlight-language-foreground: #444444;
+  --color-highlight-button-copy-foreground: #00000012;
+  --color-highlight-button-copy-hover: #707070;
+
+  --color-button-border: #e5e5e5;
+  --color-button-background: #ffffff;
+  --color-button-background-hover: #f5f5f5;
+
+  --font-song: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, "Noto Serif CJK SC", "Noto Serif CJK TC", "Noto Serif CJK", "Source Han Serif SC", "Source Han Serif TC", "Source Han Serif", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-hei: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", "Noto Sans", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-kai: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Kaiti", "Kaiti SC", "Kaiti TC", STKaiti, "Kai", BiauKai, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-fangsong: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --font-serif: var(--font-song);
+  --font-sans: var(--font-hei);
+  --font-mono: Iosevka, "Iosevka Nerd", "Sarasa Mono", "Sarasa Mono SC", "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono", "Ubuntu Mono", "Source Han Mono SC", "Source Han Mono TC", "Source Han Mono", "Noto Sans Mono SC", "Noto Sans Mono TC", "Noto Sans Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-math: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", "Noto Sans", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --image-avatar: url(/images/web/avatar-light-theme.svg);
+  --image-background: url(/images/web/little-bear-light.png);
+
+  --spacing-menu-left: 240px;
+  --spacing-menu-left-padding-x: 40px;
+  --spacing-body-padding-y: 16px;
+  --spacing-main-md-padding-x: 20px;
+  --spacing-main-lg-padding-x: 40px;
+  --spacing-main-padding-y: 16px;
+  --spacing-p-margin-y: 16px;
+
+  --width-sm: 40rem;
+  --width-md: 48rem;
+  --width-lg: 64rem;
+}
+
+@layer theme {
+  .dark {
+    --color-html-background: #232323;
+    --color-html-foreground: #e6e6e6;
+
+    --color-body-background: #2f2f2fa8;
+    --color-body-foreground: #e6e6e6;
+
+    --color-toggle-theme-background-light: #00000000;
+    --color-toggle-theme-background-dark: #6868684d;
+    --color-toggle-theme-border: var(--color-toggle-theme-background-dark);
+    --color-toggle-theme-light: #b8b8b8;
+    --color-toggle-theme-dark: #e6e6e6;
+
+    --color-block-background: #383838;
+    --color-block-border: #e6e6e6;
+
+    --color-highlight-background: #383838;
+    --color-highlight-foreground: #cccccc;
+    --color-highlight-border: #444444;
+    --color-highlight-language-background: #444444;
+    --color-highlight-language-foreground: #cccccc;
+    --color-highlight-button-copy-foreground: #ffffff24;
+    --color-highlight-button-copy-hover: #cccccc;
+
+    --color-button-border: #ffffff26;
+    --color-button-background: #ffffff0b;
+    --color-button-background-hover: #ffffff13;
+
+    --image-avatar: url(/images/web/avatar-dark-theme.svg);
+    --image-background: url(/images/web/little-bear-dark.png);
+  }
+}

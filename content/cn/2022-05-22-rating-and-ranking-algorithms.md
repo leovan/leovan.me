@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2022-05-22'
 slug: rating-and-ranking-algorithms
 show_toc: true
-toc_depth: 2
+toc_depth: 3
 categories:
   - 思考
   - 数学

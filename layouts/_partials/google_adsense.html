@@ -1,5 +1,9 @@
 {{- if and (not .Params.disable_google_adsense) .IsPage }}
   {{- with $.Site.Params.googleAdsense }}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}"
+      crossorigin="anonymous"
+    ></script>
   {{- end }}
 {{- end }}

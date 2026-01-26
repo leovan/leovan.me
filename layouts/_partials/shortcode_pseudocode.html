@@ -1,23 +1,21 @@
 {{- if $.Page.Store.Get "shortcode-pseudocode" }}
-  <script src="https://cdn.jsdmirror.com/npm/pseudocode@{{ $.Site.Params.pseudocodeVersion }}/build/pseudocode.min.js"></script>
+  <script src="/js/_shortcodes/pseudocode.min.js"></script>
   <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-      let pseudocodeCaptionCount = 0;
-      (function(d) {
-        d.querySelectorAll(".shortcode-pseudocode").forEach(function(el) {
-          let options = {
-            indentSize: el.dataset.indentSize,
-            commentDelimiter: el.dataset.commentDelimiter,
-            lineNumber: el.dataset.lineNumber.toLowerCase() === "true",
-            lineNumberPunc: el.dataset.lineNumberPunc,
-            noEnd: el.dataset.noEnd.toLowerCase() === "true",
-            titlePrefix: el.dataset.captionPrefix
-          };
-          options.captionCount = pseudocodeCaptionCount;
-          pseudocodeCaptionCount += 1;
-          pseudocode.renderElement(el, options);
-        });
-      })(document);
-    });
+    let pseudocodeCaptionCount = 0;
+    (function (d) {
+      d.querySelectorAll(".shortcode-pseudocode").forEach(function (el) {
+        let options = {
+          indentSize: el.dataset.indentSize,
+          commentDelimiter: el.dataset.commentDelimiter,
+          lineNumber: el.dataset.lineNumber.toLowerCase() === "true",
+          lineNumberPunc: el.dataset.lineNumberPunc,
+          noEnd: el.dataset.noEnd.toLowerCase() === "true",
+          titlePrefix: el.dataset.captionPrefix,
+        };
+        options.captionCount = pseudocodeCaptionCount;
+        pseudocodeCaptionCount += 1;
+        pseudocode.renderElement(el, options);
+      });
+    })(document);
   </script>
 {{- end }}

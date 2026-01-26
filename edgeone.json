@@ -2,6 +2,26 @@
   "installCommand": "HUGO_BIN_EXTENDED=true npm install --save-dev cross-env",
   "buildCommand": "npm run build",
   "outputDirectory": "./public",
+  "headers": [
+    {
+      "source": "/css/*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/images/*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/index.xml",

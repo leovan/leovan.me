@@ -1,8 +1,6 @@
 :root {
   --color-shortcode-admonition-foreground: #444444;
-  --color-shortcode-admonition-background: #f6f6f6;
-
-  --shadow-shortcode-admonition: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
+  --color-shortcode-admonition-background: #f5f5f5;
 
   --icon-admonition-icon-note: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-paperclip" viewBox="0 0 24 24"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></svg>');
   --icon-admonition-icon-abstract: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-notebook-text" viewBox="0 0 24 24"><path d="M2 6h4m-4 4h4m-4 4h4m-4 4h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5m-5 4H16m-6.5 4H14"/></svg>');
@@ -26,18 +24,12 @@
 .shortcode-admonition {
   background-color: var(--color-shortcode-admonition-background);
   border: 0.075em solid #448aff;
-  border-radius: 0.2em;
-  box-shadow: var(--shadow-shortcode-admonition);
+  border-radius: 0.25rem;
   color: var(--color-shortcode-admonition-foreground);
   display: flow-root;
   margin: 1.5625em 0;
-  padding: 0 0.6em;
+  padding: 0 1em;
   page-break-inside: avoid;
-  transition: box-shadow 125ms;
-}
-
-.shortcode-admonition:focus-within {
-  box-shadow: 0 0 0 0.2em #448aff1a;
 }
 
 .shortcode-admonition > * {
@@ -106,16 +98,8 @@ html .shortcode-admonition-title:last-child {
   width: 1em;
 }
 
-.shortcode-admonition-title code {
-  box-shadow: 0 0 0 0.05em var(--box-shadow);
-}
-
 .shortcode-admonition.shortcode-admonition-note {
   border-color: #448aff;
-}
-
-.shortcode-admonition.shortcode-admonition-note:focus-within {
-  box-shadow: 0 0 0 0.2em #448aff1a;
 }
 
 .shortcode-admonition-note > .shortcode-admonition-title {
@@ -136,10 +120,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #00b0ff;
 }
 
-.shortcode-admonition.shortcode-admonition-abstract:focus-within {
-  box-shadow: 0 0 0 0.2em #00b0ff1a;
-}
-
 .shortcode-admonition-abstract > .shortcode-admonition-title {
   background-color: #00b0ff1a;
 }
@@ -156,10 +136,6 @@ html .shortcode-admonition-title:last-child {
 
 .shortcode-admonition.shortcode-admonition-info {
   border-color: #00b8d4;
-}
-
-.shortcode-admonition.shortcode-admonition-info:focus-within {
-  box-shadow: 0 0 0 0.2em #00b8d41a;
 }
 
 .shortcode-admonition-info > .shortcode-admonition-title {
@@ -180,10 +156,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #00bfa5;
 }
 
-.shortcode-admonition.shortcode-admonition-tip:focus-within {
-  box-shadow: 0 0 0 0.2em #00bfa51a;
-}
-
 .shortcode-admonition-tip > .shortcode-admonition-title {
   background-color: #00bfa51a;
 }
@@ -200,10 +172,6 @@ html .shortcode-admonition-title:last-child {
 
 .shortcode-admonition.shortcode-admonition-success {
   border-color: #00c853;
-}
-
-.shortcode-admonition.shortcode-admonition-success:focus-within {
-  box-shadow: 0 0 0 0.2em #00c8531a;
 }
 
 .shortcode-admonition-success > .shortcode-admonition-title {
@@ -224,10 +192,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #64dd17;
 }
 
-.shortcode-admonition.shortcode-admonition-question:focus-within {
-  box-shadow: 0 0 0 0.2em #64dd171a;
-}
-
 .shortcode-admonition-question > .shortcode-admonition-title {
   background-color: #64dd171a;
 }
@@ -244,10 +208,6 @@ html .shortcode-admonition-title:last-child {
 
 .shortcode-admonition.shortcode-admonition-warning {
   border-color: #ff9100;
-}
-
-.shortcode-admonition.shortcode-admonition-warning:focus-within {
-  box-shadow: 0 0 0 0.2em #ff91001a;
 }
 
 .shortcode-admonition-warning > .shortcode-admonition-title {
@@ -268,10 +228,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #ff5252;
 }
 
-.shortcode-admonition.shortcode-admonition-failure:focus-within {
-  box-shadow: 0 0 0 0.2em #ff52521a;
-}
-
 .shortcode-admonition-failure > .shortcode-admonition-title {
   background-color: #ff52521a;
 }
@@ -288,10 +244,6 @@ html .shortcode-admonition-title:last-child {
 
 .shortcode-admonition.shortcode-admonition-danger {
   border-color: #ff1744;
-}
-
-.shortcode-admonition.shortcode-admonition-danger:focus-within {
-  box-shadow: 0 0 0 0.2em #ff17441a;
 }
 
 .shortcode-admonition-danger > .shortcode-admonition-title {
@@ -312,10 +264,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #f50057;
 }
 
-.shortcode-admonition.shortcode-admonition-bug:focus-within {
-  box-shadow: 0 0 0 0.2em #f500571a;
-}
-
 .shortcode-admonition-bug > .shortcode-admonition-title {
   background-color: #f500571a;
 }
@@ -332,10 +280,6 @@ html .shortcode-admonition-title:last-child {
 
 .shortcode-admonition.shortcode-admonition-example {
   border-color: #7c4dff;
-}
-
-.shortcode-admonition.shortcode-admonition-example:focus-within {
-  box-shadow: 0 0 0 0.2em #7c4dff1a;
 }
 
 .shortcode-admonition-example > .shortcode-admonition-title {
@@ -356,10 +300,6 @@ html .shortcode-admonition-title:last-child {
   border-color: #9e9e9e;
 }
 
-.shortcode-admonition.shortcode-admonition-quote:focus-within {
-  box-shadow: 0 0 0 0.2em #9e9e9e1a;
-}
-
 .shortcode-admonition-quote > .shortcode-admonition-title {
   background-color: #9e9e9e1a;
 }
@@ -377,19 +317,23 @@ html .shortcode-admonition-title:last-child {
 /* custom */
 :root {
   --spacing-shortcode-admonition-title-icon-size: 1.3em;
-  --spacing-shortcode-admonition-margin: 0.6em;
+  --spacing-shortcode-admonition-margin-x: 1em;
+  --spacing-shortcode-admonition-margin-y: 0.6em;
 }
 
 .shortcode-admonition .shortcode-admonition-title {
-  padding-left: calc(var(--spacing-shortcode-admonition-title-icon-size) + var(--spacing-shortcode-admonition-margin) * 2);
+  padding-left: calc(var(--spacing-shortcode-admonition-title-icon-size) + var(--spacing-shortcode-admonition-margin-x) + 0.5em);
+  padding-right: var(--spacing-shortcode-admonition-margin-x);
+  margin: 0 calc(var(--spacing-shortcode-admonition-margin-x) * -1);
 }
 
 .shortcode-admonition-no-icon .shortcode-admonition-title {
-  padding-left: var(--spacing-shortcode-admonition-margin);
+  padding-left: var(--spacing-shortcode-admonition-margin-x);
 }
 
 .shortcode-admonition-title:before {
-  top: var(--spacing-shortcode-admonition-margin);
+  left: var(--spacing-shortcode-admonition-margin-x);
+  top: var(--spacing-shortcode-admonition-margin-y);
   width: var(--spacing-shortcode-admonition-title-icon-size);
   height: var(--spacing-shortcode-admonition-title-icon-size);
 }
@@ -399,7 +343,7 @@ html .shortcode-admonition-title:last-child {
 }
 
 .shortcode-admonition-content {
-  margin: var(--spacing-shortcode-admonition-margin) auto;
+  margin: var(--spacing-shortcode-admonition-margin-y) auto;
 }
 
 .shortcode-admonition {

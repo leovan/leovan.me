@@ -67,15 +67,15 @@
     let qrcodeKey = donatePayMethod + "-" + donateMoney + "-" + theme;
     d.querySelector("#donate-box-pay-method-image-wechat-pay").setAttribute(
       "src",
-      wechatPayLogos[theme]
+      wechatPayLogos[theme],
     );
     d.querySelector("#donate-box-pay-method-image-alipay").setAttribute(
       "src",
-      alipayLogos[theme]
+      alipayLogos[theme],
     );
     d.querySelector("#donate-box-pay-qrcode").setAttribute(
       "src",
-      qrcodes[qrcodeKey]
+      qrcodes[qrcodeKey],
     );
 
     donateModelWrapper.classList.toggle("donate-modal-wrapper-show");
@@ -119,7 +119,7 @@
       currentDonatePayMethod + "-" + currentDonateMoney + "-" + getTheme();
     d.querySelector("#donate-box-pay-qrcode").setAttribute(
       "src",
-      qrcodes[qrcodeKey]
+      qrcodes[qrcodeKey],
     );
 
     donateBoxPay.style.display = "block";

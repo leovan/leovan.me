@@ -1,7 +1,15 @@
 {{- if not ($.Page.Store.Get "shortcode-gallery") }}
   {{- $.Page.Store.Set "shortcode-gallery" 1 }}
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdmirror.com/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/css/justifiedGallery.min.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"
+  />
 {{- end }}
 
 {{- if not ($.Page.Store.Get "shortcode-gallery-id") }}
@@ -13,4 +21,10 @@
 {{- $galleryId := printf "gallery-%d" ($.Page.Store.Get "shortcode-gallery-id") }}
 {{- $data := .Get "data" }}
 
-<div class="shortcode-gallery" shortcode="gallery" id="{{ $galleryId }}" data="{{ $data }}"></div>
+
+<div
+  class="shortcode-gallery"
+  shortcode="gallery"
+  id="{{ $galleryId }}"
+  data="{{ $data }}"
+></div>

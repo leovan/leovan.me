@@ -90,7 +90,7 @@ images:
 
 {{< gallery data="/data/cn/2019-09-21-international-autonomous-greenhouse-challenge/gallery/04.json" >}}
 
-所在的 CPlant 队伍是本次比赛中人数最多的一只队伍 (21 人，最少的队伍为 5 人，虽然人最多却未能进入决赛 :disappointed_relieved:)，评审从国籍，研究和企业组成等多个角度对团队构成进行了评分，最终我们拿到了一个中等偏上的成绩。
+所在的 CPlant 队伍是本次比赛中人数最多的一只队伍 (21 人，最少的队伍为 5 人，虽然人最多却未能进入决赛 😥)，评审从国籍，研究和企业组成等多个角度对团队构成进行了评分，最终我们拿到了一个中等偏上的成绩。
 
 人工智能方法方面是我们在准备过程中讨论比较多的内容，每个人根据自己的优势不同分别负责了 Plant Growth Model, Machine Learning, Deep Learning, Reinforcement Learning 和 Knowledge Graph 等不同部分的设计。答辩过程中多位评委对于我们的 Knowledge Graph 在整个人工智能中的应用很感兴趣，在最后点评中也提到我们是唯一一只提到 Knowledge Graph 及其在智慧农业中应用的队伍。我认为智慧农业不同于其他人工智能应用领域分支，其具有一定的特殊性，数据和实验并不像其他领域容易获取和实现，我们需要更多地结合农业科学本身的相关经验和知识。由于我之前从事过 NLP 和 Knowledge Graph 相关工作，我深信 Knowledge Graph 一定会是一个将农业和人工智能有机地结合起来的好工具，但至于如果结合和实现落地还需要进一步探索和研究。最终这部分我们拿到了一个相对不错的成绩。
 

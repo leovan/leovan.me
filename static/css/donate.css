@@ -1,10 +1,9 @@
 :root {
   --color-donate-box-background: #ffffff;
-  --color-donate-box-header-background: #f6f6f6;
+  --color-donate-box-header-background: #f5f5f5;
   --color-donate-box-header-foreground: #444444;
 
   --color-donate-modal-wrapper-background: #00000080;
-  --color-donate-modal-shadow: #1a1a1a1a;
   --color-donate-button-foreground: #ffffff;
   --color-donate-red: #f05159;
   --color-donate-pay-border: #eeeeee;
@@ -37,7 +36,7 @@
   background: var(--color-donate-red);
   width: 80px;
   height: 34px;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   margin: 12px auto 12px auto;
   padding: 0;
   cursor: pointer;
@@ -80,14 +79,13 @@
   max-height: calc(100dvh - 48px);
   margin-right: auto;
   margin-left: auto;
-  box-shadow: 0 5px 20px var(--color-donate-modal-shadow);
   box-sizing: border-box;
 }
 
 .donate-box {
   overflow: auto;
   background: var(--color-donate-box-background);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .donate-box-content {
@@ -127,7 +125,7 @@
   font-weight: bold;
   line-height: 2em;
   background: var(--color-donate-box-header-background);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   color: var(--color-donate-box-header-foreground);
   margin-bottom: 20px;
   position: relative;
@@ -163,7 +161,7 @@
   cursor: pointer;
   background: none;
   border: 1px solid var(--color-donate-red);
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
@@ -193,7 +191,7 @@
   width: 46%;
   padding: 10px 20px;
   border: 1px solid;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   border-color: var(--color-donate-pay-border);
   cursor: pointer;
 }

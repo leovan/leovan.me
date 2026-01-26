@@ -129,4 +129,4 @@ _2015.04 ~ 2015.10 算法设计和开发_
 9. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
 10. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。![github-stars](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
 
-<p class="font-kai" style="text-align: right;">更新于：2025-08-23</p>
+<p style="text-align: right;">更新于：2025-08-23</p>

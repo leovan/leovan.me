@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2020-03-28'
 slug: pre-trained-model-for-nlp
 show_toc: true
-toc_depth: 2
+toc_depth: 3
 categories:
   - 深度学习
   - 表示学习

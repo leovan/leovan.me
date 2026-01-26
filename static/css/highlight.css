@@ -1,8 +1,6 @@
 :root {
   --color-highlight-hl-background: #dddddd;
 
-  --shadow-highlight: 0 0.2em 0.5em #0000000d, 0 0 0.05em #0000001a;
-
   --icon-highlight-copy: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V7q0-.425.288-.712T4 6t.713.288T5 7v13h10q.425 0 .713.288T16 21t-.288.713T15 22zm4-6V4z"/></svg>');
   --icon-highlight-copy-success: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path fill="currentColor" fill-opacity="0.3" d="M3 12c0 -4.97 4.03 -9 9 -9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9Z"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0.3;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12l3 3l5 -5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="14;0"/></path></g></svg>');
   --icon-highlight-copy-error: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.39s" values="64;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 12l4 4M12 12l-4 -4M12 12l-4 4M12 12l4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.39s" dur="0.13s" values="8;0"/></path></g></svg>');
@@ -19,13 +17,11 @@
 
 .highlight-title {
   padding: 0.5em 1em 0.5em 1em;
-  font-family: var(--font-kai);
   font-size: 0.9em !important;
   background: var(--color-highlight-background) !important;
   color: var(--color-highlight-foreground) !important;
-  border-radius: 0.2rem 0.2rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   border-bottom: 1px solid var(--color-highlight-border);
-  box-shadow: var(--shadow-highlight);
 }
 
 .highlight-content {
@@ -41,11 +37,10 @@
 
 .highlight {
   padding: 1em;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
   font-size: 0.9em !important;
   background: var(--color-highlight-background) !important;
   color: var(--color-highlight-foreground) !important;
-  box-shadow: var(--shadow-highlight);
 }
 
 .highlight-wrapper:has(.highlight-title) .highlight {
@@ -129,8 +124,7 @@ code[class="language-plain"]:before {
 }
 
 /* Other */
-.chroma .x {
-}
+.chroma .x {}
 
 /* Error */
 .chroma .err {
@@ -138,8 +132,7 @@ code[class="language-plain"]:before {
 }
 
 /* CodeLine */
-.chroma .cl {
-}
+.chroma .cl {}
 
 /* LineLink */
 .chroma .lnlinks {
@@ -230,8 +223,7 @@ code[class="language-plain"]:before {
 }
 
 /* Name */
-.chroma .n {
-}
+.chroma .n {}
 
 /* NameAttribute */
 .chroma .na {
@@ -239,12 +231,10 @@ code[class="language-plain"]:before {
 }
 
 /* NameBuiltin */
-.chroma .nb {
-}
+.chroma .nb {}
 
 /* NameBuiltinPseudo */
-.chroma .bp {
-}
+.chroma .bp {}
 
 /* NameClass */
 .chroma .nc {
@@ -262,8 +252,7 @@ code[class="language-plain"]:before {
 }
 
 /* NameEntity */
-.chroma .ni {
-}
+.chroma .ni {}
 
 /* NameException */
 .chroma .ne {
@@ -276,12 +265,10 @@ code[class="language-plain"]:before {
 }
 
 /* NameFunctionMagic */
-.chroma .fm {
-}
+.chroma .fm {}
 
 /* NameLabel */
-.chroma .nl {
-}
+.chroma .nl {}
 
 /* NameNamespace */
 .chroma .nn {
@@ -294,8 +281,7 @@ code[class="language-plain"]:before {
 }
 
 /* NameProperty */
-.chroma .py {
-}
+.chroma .py {}
 
 /* NameTag */
 .chroma .nt {
@@ -308,20 +294,16 @@ code[class="language-plain"]:before {
 }
 
 /* NameVariableClass */
-.chroma .vc {
-}
+.chroma .vc {}
 
 /* NameVariableGlobal */
-.chroma .vg {
-}
+.chroma .vg {}
 
 /* NameVariableInstance */
-.chroma .vi {
-}
+.chroma .vi {}
 
 /* NameVariableMagic */
-.chroma .vm {
-}
+.chroma .vm {}
 
 /* Literal */
 .chroma .l {
@@ -349,8 +331,7 @@ code[class="language-plain"]:before {
 }
 
 /* LiteralStringChar */
-.chroma .sc {
-}
+.chroma .sc {}
 
 /* LiteralStringDelimiter */
 .chroma .dl {
@@ -448,8 +429,7 @@ code[class="language-plain"]:before {
 }
 
 /* Punctuation */
-.chroma .p {
-}
+.chroma .p {}
 
 /* Comment */
 .chroma .c {
@@ -487,8 +467,7 @@ code[class="language-plain"]:before {
 }
 
 /* Generic */
-.chroma .g {
-}
+.chroma .g {}
 
 /* GenericDeleted */
 .chroma .gd {
@@ -501,8 +480,7 @@ code[class="language-plain"]:before {
 }
 
 /* GenericError */
-.chroma .gr {
-}
+.chroma .gr {}
 
 /* GenericHeading */
 .chroma .gh {
@@ -515,8 +493,7 @@ code[class="language-plain"]:before {
 }
 
 /* GenericOutput */
-.chroma .go {
-}
+.chroma .go {}
 
 /* GenericPrompt */
 .chroma .gp {
@@ -536,13 +513,10 @@ code[class="language-plain"]:before {
 }
 
 /* GenericTraceback */
-.chroma .gt {
-}
+.chroma .gt {}
 
 /* GenericUnderline */
-.chroma .gl {
-}
+.chroma .gl {}
 
 /* TextWhitespace */
-.chroma .w {
-}
+.chroma .w {}

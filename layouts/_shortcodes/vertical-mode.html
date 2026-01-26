@@ -1,6 +1,5 @@
 {{- $horizontal_align := .Get "horizontal-align" | default "center" }}
 {{- $vertical_align := .Get "vertical-align" | default "top" }}
-{{- $font := .Get "font" | default "font-kai"}}
 
 {{- $horizontal_align_style := "" }}
 {{- if (eq $horizontal_align "left") }}
@@ -20,8 +19,9 @@
   {{- $vertical_align_style = " text-align: right;" }}
 {{- end }}
 
+
 <div
-  class="vertical-mode {{ $font | safeCSS }}"
+  class="vertical-mode"
   style="
     writing-mode: tb-rl;
     writing-mode: vertical-rl;

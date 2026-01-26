@@ -11,6 +11,7 @@
   {{- $menu = $.Page.Store.Get "section" }}
 {{- end }}
 
+
 <div class="menu-left">
   <div class="avatar"></div>
   <div class="slogan">
@@ -31,13 +32,16 @@
     {{- with .Section }}
       <li class="block"><span>&nbsp;</span></li>
       <li>
-        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang
-          }}</a>
+        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang }}</a>
       </li>
     {{- end }}
   </ul>
-  <div class="theme-toggle">
-    <i class="icon icon-theme-toggle"></i>
+  <div class="empty"></div>
+  <div class="toggle-theme-left">
+    <button class="toggle-theme-button toggle-theme-button-left">
+      <i class="icon icon-toggle-theme-light"></i>
+      <i class="icon icon-toggle-theme-dark"></i>
+    </button>
   </div>
 </div>
 
@@ -52,12 +56,11 @@
     {{- end }}
     {{- with .Section }}
       <div class="menu-item">
-        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang
-          }}</a>
+        <a href="/{{ . }}/index.xml" target="_blank" type="application/rss+xml">{{ index site.Params.lang.subscribe $lang }}</a>
       </div>
     {{- end }}
-    <div class="menu-item theme-toggle">
-      <i class="icon icon-theme-toggle"></i>
+    <div class="menu-item toggle-theme-button toggle-theme-button-top">
+      <i class="icon icon-toggle-theme"></i>
     </div>
   </div>
 </div>

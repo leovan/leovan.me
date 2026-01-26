@@ -1,110 +1,8 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
+@import "variable.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-  --color-html-background: #fafafa;
-  --color-html-foreground: #000000;
-
-  --color-body-background: #ffffffa8;
-  --color-body-foreground: #000000;
-
-  --color-block-background: #eeeeee;
-  --color-block-border: #444444;
-  --color-block-shadow: #00000040;
-
-  --color-highlight-background: #f6f6f6;
-  --color-highlight-foreground: #444444;
-  --color-highlight-border: #dddddd;
-  --color-highlight-language-background: #dddddd;
-  --color-highlight-language-foreground: #444444;
-  --color-highlight-button-copy-foreground: #00000012;
-  --color-highlight-button-copy-hover: #707070;
-
-  --color-button-background: var(--color-highlight-background);
-  --color-button-foreground: var(--color-body-foreground);
-  --color-button-background-hover: rgb(
-    from var(--color-button-background) r g b / 80%
-  );
-  --color-button-background-active: rgb(
-    from var(--color-button-background) r g b / 60%
-  );
-  --color-button-border: var(--color-block-border);
-  --color-button-border-hover: rgb(from var(--color-button-border) r g b / 80%);
-  --color-button-border-active: rgb(
-    from var(--color-button-border) r g b / 60%
-  );
-
-  --font-song: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia,
-    "Latin Modern Roman", "Linux Libertine", "Liberation Serif",
-    "Source Han Serif SC", "Source Han Serif TC", "Source Han Serif",
-    "Noto Serif CJK SC", "Noto Serif CJK TC", "Noto Serif CJK", "Songti SC",
-    STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung",
-    "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK",
-    "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, ui-serif, serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-hei: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
-    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
-    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
-    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
-    SimHei, "WenQuanYi Zen Hei Sharp", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-kai: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia,
-    "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Kaiti SC",
-    "Kaiti TC", STKaiti, "Kai", BiauKai, "AR PL UKai CN", "AR PL UKai HK",
-    "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312,
-    DFKai-SB, "TW\-Kai", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-
-  --font-serif: var(--font-song);
-  --font-sans: var(--font-hei);
-  --font-mono: Iosevka, "Iosevka Nerd", "Sarasa Mono", "Sarasa Mono SC",
-    "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono",
-    "Ubuntu Mono", "Source Han Mono SC", "Source Han Mono TC", "Source Han Mono",
-    "Noto Sans Mono SC", "Noto Sans Mono TC", "Noto Sans Mono", monospace,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-  --image-avatar: url(/images/web/avatar-light-theme.svg);
-  --image-background: url(/images/web/little-bear-light.png);
-
-  --spacing-menu-left: 240px;
-  --spacing-menu-left-padding-x: 40px;
-  --spacing-body-padding-y: 16px;
-  --spacing-main-md-padding-x: 20px;
-  --spacing-main-lg-padding-x: 40px;
-  --spacing-main-padding-y: 16px;
-  --spacing-p-margin-y: 16px;
-
-  --width-sm: 40rem;
-  --width-md: 48rem;
-  --width-lg: 64rem;
-}
-
-@layer theme {
-  .dark {
-    --color-html-background: #232323;
-    --color-html-foreground: #e6e6e6;
-
-    --color-body-background: #2f2f2fa8;
-    --color-body-foreground: #e6e6e6;
-
-    --color-block-background: #383838;
-    --color-block-border: #e6e6e6;
-    --color-block-shadow: #00000040;
-
-    --color-highlight-background: #383838;
-    --color-highlight-foreground: #cccccc;
-    --color-highlight-border: #444444;
-    --color-highlight-language-background: #444444;
-    --color-highlight-language-foreground: #cccccc;
-    --color-highlight-button-copy-foreground: #ffffff24;
-    --color-highlight-button-copy-hover: #cccccc;
-
-    --image-avatar: url(/images/web/avatar-dark-theme.svg);
-    --image-background: url(/images/web/little-bear-dark.png);
-  }
-}
 
 @layer base {
   /* reset */
@@ -143,7 +41,7 @@
   /* global */
 
   html {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     color: var(--color-html-foreground);
     background: var(--color-html-background);
   }
@@ -169,7 +67,7 @@
   a {
     line-break: anywhere;
     text-decoration-line: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 0.4em;
     text-decoration-style: dashed;
     text-decoration-thickness: 1px;
   }
@@ -179,7 +77,6 @@
   }
 
   blockquote {
-    font-family: var(--font-kai);
     margin-left: 0;
     margin-right: 0;
     padding-left: 1em;
@@ -187,25 +84,16 @@
   }
 
   button:not([class]) {
-    padding: 2px 6px;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    color: var(--color-button-foreground);
-    line-height: normal;
-    text-decoration: none;
-    font-family: var(--font-hei);
+    @apply px-2.5 rounded-lg border transition-all;
+
+    border-color: var(--color-button-border);
     background-color: var(--color-button-background);
-    border: 1px solid var(--color-button-border);
+
+    cursor: pointer;
   }
 
   button:not([class]):hover {
     background-color: var(--color-button-background-hover);
-    border: 1px solid var(--color-button-border-hover);
-  }
-
-  button:not([class]):active {
-    background-color: var(--color-button-background-active);
-    border: 1px solid var(--color-button-border-active);
   }
 
   details {
@@ -221,7 +109,6 @@
 
   figcaption {
     margin-top: var(--spacing-p-margin-y);
-    font-family: var(--font-kai);
   }
 
   h1,
@@ -325,6 +212,7 @@
 }
 
 @layer components {
+
   /* layout */
   .body {
     @apply lg:flex lg:items-stretch m-auto w-full md:w-3xl lg:w-5xl xl:w-7xl;
@@ -336,7 +224,7 @@
   }
 
   .menu-left {
-    @apply self-start fixed hidden lg:block h-dvh;
+    @apply self-start fixed hidden lg:flex lg:flex-col h-dvh;
 
     min-width: var(--spacing-menu-left);
     width: var(--spacing-menu-left);
@@ -351,13 +239,10 @@
 
     .avatar {
       height: 128px;
+      min-height: 128px;
       background-image: var(--image-avatar);
       background-repeat: no-repeat;
       background-position: right;
-    }
-
-    .slogan {
-      font-family: var(--font-kai);
     }
 
     a {
@@ -371,7 +256,48 @@
     ul {
       direction: rtl;
       list-style-type: disc;
-      list-style-position: inside;
+      padding-right: 1em;
+    }
+
+    .empty {
+      flex-grow: 1;
+    }
+
+    .toggle-theme-left {
+      @apply flex flex-row-reverse;
+    }
+
+    .toggle-theme-button-left {
+      @apply flex border rounded-full;
+
+      cursor: pointer;
+      border-color: var(--color-toggle-theme-border);
+
+      .icon {
+        @apply size-6.5 rounded-full p-1.5 leading-0;
+      }
+
+      .icon-toggle-theme-light {
+        background-color: var(--color-toggle-theme-background-light);
+      }
+
+      .icon-toggle-theme-dark {
+        background-color: var(--color-toggle-theme-background-dark);
+      }
+
+      .icon::before {
+        font-size: 14px !important;
+      }
+
+      .icon-toggle-theme-light::before {
+        mask-image: var(--icon-lucide-sun);
+        background-color: var(--color-toggle-theme-light);
+      }
+
+      .icon-toggle-theme-dark::before {
+        mask-image: var(--icon-lucide-moon);
+        background-color: var(--color-toggle-theme-dark);
+      }
     }
   }
 
@@ -403,10 +329,8 @@
       background: var(--color-block-border);
       padding: 1px 6px;
       border: 1px solid var(--color-block-border);
-      border-radius: 0.2rem;
+      border-radius: 0.25rem;
       cursor: pointer;
-      height: 2em;
-      line-height: 2em;
     }
 
     .active {
@@ -415,8 +339,9 @@
       background: none;
     }
 
-    .theme-toggle {
-      line-height: 1.75em;
+    .icon-toggle-theme::before {
+      mask-image: var(--icon-toggle-theme);
+      background-color: var(--color-html-background);
     }
   }
 
@@ -449,10 +374,6 @@
     @variant lg {
       margin-left: var(--spacing-menu-left);
     }
-  }
-
-  .theme-toggle {
-    cursor: pointer;
   }
 
   .post-meta {
@@ -517,16 +438,9 @@
     content: "]";
   }
 
-  .footer {
-    hr {
-      margin-bottom: var(--spacing-p-margin-y);
-    }
-  }
-
   .nav-post {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
 
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);
@@ -548,6 +462,10 @@
       text-decoration-line: none;
     }
 
+    hr {
+      margin-bottom: var(--spacing-p-margin-y);
+    }
+
     .copyright-line-break {
       display: none;
     }
@@ -564,7 +482,7 @@
   }
 
   .taxonomy {
-    @apply flex flex-row flex-wrap justify-between align-baseline gap-3;
+    @apply flex flex-row flex-wrap justify-between gap-3;
 
     .taxonomy-item {
       height: 3rem;
@@ -626,7 +544,7 @@
   }
 
   /* adsense */
-  .adsbygoogle-post-footer {
+  .adsbygoogle {
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);
   }
@@ -664,24 +582,11 @@
     border: none !important;
   }
 
-  /* pseudocode */
-  .ps-root .ps-line {
-    line-height: 1.5rem !important;
-  }
-
-  .ps-root .ps-algorithm {
-    border-top: 1px solid var(--color-block-border) !important;
-    border-bottom: 1px solid var(--color-block-border) !important;
-  }
-
-  .ps-root .ps-algorithm.with-caption > .ps-line:first-child {
-    border-bottom: 1px solid var(--color-block-border) !important;
-  }
-
   /* table of contents */
   .toc {
     background-color: var(--color-block-background);
     padding: 1em;
+    border-radius: 0.25rem;
   }
 
   .toc > nav > ul {

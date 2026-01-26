@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2019-01-01'
 slug: similarity-and-distance-measurement
 show_toc: true
-toc_depth: 2
+toc_depth: 3
 categories:
   - 机器学习
 tags:

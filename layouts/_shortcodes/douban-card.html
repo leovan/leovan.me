@@ -1,11 +1,17 @@
 {{- if not ($.Page.Store.Get "shortcode-douban-card") }}
   {{- .Page.Store.Add "shortcode-douban-card" 1 }}
-  <link rel="stylesheet" type="text/css" href="/css/_shortcodes/douban-card.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/_shortcodes/douban-card.css"
+  />
 {{- end }}
 
+
 <div
-  class='shortcode-douban-card shortcode-douban-card-{{ .Get "type" | default "book" }}'
-  id='shortcode-douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}'>
+  class="shortcode-douban-card shortcode-douban-card-{{ .Get "type" | default "book" }}"
+  id="shortcode-douban-card-{{ .Get "type" | default "book" }}-{{ .Get "id" }}"
+>
   <div class="shortcode-douban-card--middle">
     <div class="shortcode-douban-card--title">
       <a href="https://{{ .Get "type" | default "book" }}.douban.com/subject/{{ .Get "id" }}/" target="_blank">{{ .Get "title" }}</a>

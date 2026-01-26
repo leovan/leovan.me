@@ -4,7 +4,7 @@ author: 范叶亮
 date: '2019-04-05'
 slug: heuristic-algorithms
 show_toc: true
-toc_depth: 2
+toc_depth: 3
 categories:
   - 最优化
 tags:

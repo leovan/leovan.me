@@ -11,9 +11,7 @@
       content.appendChild(button);
       content.appendChild(el);
 
-      let code = el.querySelector(
-        ":last-child > .chroma > code"
-      ).textContent;
+      let code = el.querySelector(":last-child > .chroma > code").textContent;
       let ClipboardJS = window.ClipboardJS || undefined;
 
       function registerClipboard() {
@@ -50,7 +48,6 @@
         c: "C",
         css: "CSS",
         cypher: "Cypher",
-        dos: "DOS",
         gremlin: "Gremlin",
         html: "HTML",
         javascript: "JavaScript",

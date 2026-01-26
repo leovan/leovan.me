@@ -4,21 +4,27 @@
   {{- end }}
 
   {{- if .Section }}
-  <div class="nav-post">
-    <span class="nav-post-prev">
-      {{- with .PrevInSection }}
-        &larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{- end }}
-    </span>
-    <span class="nav-post-next">
-      {{- with .NextInSection }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;
-      {{- end }}
-    </span>
-  </div>
+    <div class="nav-post">
+      <span class="nav-post-prev">
+        {{- with .PrevInSection }}
+          &larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end }}
+      </span>
+      <span class="nav-post-next">
+        {{- with .NextInSection }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;
+        {{- end }}
+      </span>
+    </div>
   {{- end }}
 
-  {{- if and (not .Params.disable_google_adsense) .IsPage }}
+  {{- $showGoogleAdsense := and (not .Params.disable_google_adsense) .IsPage }}
+  {{- $showComment := and (not .Params.disable_comments) (or (eq .Kind "404") .IsPage) }}
+
+  {{- if or $showGoogleAdsense $showComment }}
+  {{- end }}
+
+  {{- if $showGoogleAdsense }}
     {{- with $.Site.Params.googleAdsense }}
       <ins
         class="adsbygoogle adsbygoogle-post-footer"
@@ -34,9 +40,11 @@
     {{- end }}
   {{- end }}
 
-  {{- if and (not .Params.disable_comments) (or (eq .Kind "404") .IsPage) }}
+  {{- if $showComment }}
     <section class="comments">
-      <script {{ if $.Site.BuildDrafts }}data-{{ end }}src="https://giscus.app/client.js"
+      <hr />
+      <script
+        id="giscus"
         data-repo="leovan/leovan.me"
         data-repo-id="MDEwOlJlcG9zaXRvcnkxMTMxOTY0Mjc="
         data-category="Comments"
@@ -47,20 +55,33 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="preferred_color_scheme"
         data-lang="{{ if len (findRE "^/cn/" .RelPermalink) }}zh-CN{{ else }}en{{ end }}"
         data-loading="lazy"
         crossorigin="anonymous"
-        defer>
+        defer
+      ></script>
+      <script>
+        if (isValidDomain()) {
+          let theme = getTheme();
+          let giscusCss = theme === "dark" ? darkGiscusCss : lightGiscusCss;
+          let giscusScript = document.getElementById("giscus");
+          giscusScript.setAttribute("data-theme", giscusCss);
+          {{- if $.Site.BuildDrafts }}
+            giscusScript.setAttribute("data-src", "https://giscus.app/client.js");
+          {{- else }}
+            giscusScript.setAttribute("src", "https://giscus.app/client.js");
+          {{- end }}
+        }
       </script>
     </section>
   {{- end }}
 
-  <hr>
+
   <div class="copyright">
+    <hr />
     <span>{{ replace site.Params.footer "{Year}" now.Year | markdownify }}</span>
     <span class="copyright-separator">|</span>
-    <span class="copyright-line-break"><br/></span>
+    <span class="copyright-line-break"><br /></span>
     <a href="https://beian.miit.gov.cn/" target="_blank">冀ICP备2025124008号-3</a>
   </div>
 </footer>

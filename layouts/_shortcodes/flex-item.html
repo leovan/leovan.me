@@ -1,8 +1,11 @@
-<div class="shortcode-flex-item" style="
+<div
+  class="shortcode-flex-item"
+  style="
   align-self: {{ .Get "align-self" | default "auto" }};
   flex-basis: {{ .Get "flex-basis" | default "auto" }};
   flex-grow: {{ .Get "flex-grow" | default 0 }};
   flex-shrink: {{ .Get "flex-shrink" | default 1 }};
-  order: {{ .Get "order" | default 0 }};">
+  order: {{ .Get "order" | default 0 }};"
+>
   {{ .Inner }}
 </div>

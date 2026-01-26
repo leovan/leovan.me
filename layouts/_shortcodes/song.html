@@ -1,6 +1,10 @@
 {{- if not ($.Page.Store.Get "shortcode-song") }}
   {{- $.Page.Store.Set "shortcode-song" 1 }}
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdmirror.com/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdmirror.com/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.css"
+  />
   <link rel="stylesheet" type="text/css" href="/css/_shortcodes/song.css" />
   <script src="https://cdn.jsdmirror.com/npm/aplayer@{{ $.Site.Params.APlayerVersion }}/dist/APlayer.min.js"></script>
   <script src="https://cdn.jsdmirror.com/npm/meting@{{ $.Site.Params.metingjsVersion }}/dist/Meting.min.js"></script>
@@ -8,6 +12,7 @@
     window.meting_api = "{{ $.Site.Params.metingApi }}";
   </script>
 {{- end }}
+
 
 <meting-js
   id="{{ .Get "id" }}"

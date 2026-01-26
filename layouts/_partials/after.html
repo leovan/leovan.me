@@ -13,10 +13,6 @@
   <script src="/js/figure.js"></script>
 {{- end }}
 
-{{- if and (not .Params.disable_math) .IsPage (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
-  <script src="/js/math.js"></script>
-{{- end }}
-
 {{- if and (not .IsHome) .Content }}
   <script src="https://cdn.jsdmirror.com/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 {{- end }}
@@ -27,3 +23,23 @@
 {{- partial "shortcode_gallery.html" . }}
 {{- partial "shortcode_pseudocode.html" . }}
 {{- partial "shortcode_video.html" . }}
+
+{{- if and (not .Params.disable_math) .IsPage (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}
+  <script src="/js/math.js"></script>
+{{- end }}
+
+{{- with resources.Get "js/js-after.js" }}
+  {{ with resources.ExecuteAsTemplate "js/js-after.js" $ . }}
+    {{- if hugo.IsProduction }}
+      {{- with . | fingerprint }}
+        <script
+          src="{{ .RelPermalink }}"
+          integrity="{{ .Data.Integrity }}"
+          crossorigin="anonymous"
+        ></script>
+      {{- end }}
+    {{- else }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
