@@ -1,7 +1,9 @@
-<script src="https://cdn.jsdmirror.com/npm/lucide@{{ $.Site.Params.lucideVersion }}/dist/umd/lucide.min.js"></script>
-<script>
-  lucide.createIcons();
-</script>
+{{- if strings.Contains .Content "data-lucide" }}
+  <script src="https://cdn.jsdmirror.com/npm/lucide@{{ $.Site.Params.lucideVersion }}/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+{{- end }}
 
 <script src="/js/theme.js"></script>
 

@@ -5,11 +5,7 @@
       {{- range .Pages }}
         <p>
           <span>{{ .Date.Format "2006-01-02" }}</span>
-          <a href="{{ .RelPermalink }}">
-            {{ .Title | markdownify }}{{ with .Params.subtitle }}
-              - {{ . | markdownify }}
-            {{ end }}
-          </a>
+          <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}{{ with .Params.subtitle }} - {{ . | markdownify }}{{ end }}</a>
         </p>
       {{- end }}
     {{- end }}

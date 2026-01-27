@@ -22,11 +22,5 @@
 {{- if or (not (eq $u.Hostname "")) (.Page.IsPage) -}}
   {{- $target = true -}}
 {{- end -}}
-<a
-  href="{{ $href }}"
-  {{- with .Title }}title="{{ . }}"{{- end }}
-  {{- if $target }}target="_blank"{{- end }}
-  >
-  {{ .Text }}
-</a>
+<a href="{{ $href }}" {{- with .Title }} title="{{ . }}" {{- end }} {{- if $target }} target="_blank" {{- end }}>{{ .Text }}</a>
 {{- /**/ -}}

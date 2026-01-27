@@ -29,11 +29,7 @@
   {{- if .Get "link" }}</a>{{ end }}
   {{- if or $caption (.Get "attr") }}
     <figcaption>
-      {{- with .Get "attrlink" }}
-        <a href="{{ . }}">
-      {{- end }}
-      {{ $caption | markdownify }}
-      {{- if .Get "attrlink" }}</a>{{ end }}
+      {{- with .Get "attrlink" }}<a href="{{ . }}">{{- end }}{{ $caption | markdownify }}{{- if .Get "attrlink" }}</a>{{ end }}
     </figcaption>
   {{- end }}
 </figure>
