@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
-    "hugo-extended": "^0.154.5",
+    "hugo-extended": "^0.155.1",
     "tailwindcss": "^4.1.18"
   }
 }

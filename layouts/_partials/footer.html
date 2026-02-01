@@ -42,9 +42,9 @@
 
   {{- if $showComment }}
     <section class="comments">
-      <hr />
+      <hr class="giscus-component hidden" />
       <script
-        id="giscus"
+        id="giscus-script"
         data-repo="leovan/leovan.me"
         data-repo-id="MDEwOlJlcG9zaXRvcnkxMTMxOTY0Mjc="
         data-category="Comments"
@@ -64,7 +64,7 @@
         if (isValidDomain()) {
           let theme = getTheme();
           let giscusCss = theme === "dark" ? darkGiscusCss : lightGiscusCss;
-          let giscusScript = document.getElementById("giscus");
+          let giscusScript = document.getElementById("giscus-script");
           giscusScript.setAttribute("data-theme", giscusCss);
           {{- if $.Site.BuildDrafts }}
             giscusScript.setAttribute("data-src", "https://giscus.app/client.js");
