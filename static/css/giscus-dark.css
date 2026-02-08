@@ -109,11 +109,11 @@ main {
 }
 
 main .pagination-loader-container {
-  background-image: url({{ absURL "images/giscus/progressive-disclosure-line-light.svg" }});
+  background-image: url("https://leovan.me/images/giscus/progressive-disclosure-line-dark.svg");
 }
 
 main .gsc-loading-image {
-  background-image: url({{ absURL "images/giscus/mona-loading-light.gif" }});
+  background-image: url("https://leovan.me/images/giscus/mona-loading-dark.gif");
 }
 
 main input::placeholder,
