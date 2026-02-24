@@ -1,0 +1,50 @@
+{
+  "justifiedGalleryOptions": {
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "90%"
+  },
+  "items": [
+    {
+      "alt": "冬天的广州很舒服",
+      "download": "冬天的广州很舒服.jpg",
+      "src": "/images/photography/2025-01-05-guangzhou.jpg",
+      "thumb": "/images/photography/2025-01-05-guangzhou-thumbnail.jpg"
+    },
+    {
+      "alt": "海边日落",
+      "download": "海边日落.jpg",
+      "src": "/images/photography/2025-04-16-sanya.jpg",
+      "thumb": "/images/photography/2025-04-16-sanya-thumbnail.jpg"
+    },
+    {
+      "alt": "出差的最后一晚来杯茶颜悦色",
+      "download": "出差的最后一晚来杯茶颜悦色.jpg",
+      "src": "/images/photography/2025-06-27-changsha.jpg",
+      "thumb": "/images/photography/2025-06-27-changsha-thumbnail.jpg"
+    },
+    {
+      "alt": "调个滤镜蓝色的头发明显了",
+      "download": "调个滤镜蓝色的头发明显了.jpg",
+      "src": "/images/photography/2025-10-12-yangshuo.jpg",
+      "thumb": "/images/photography/2025-10-12-yangshuo-thumbnail.jpg"
+    },
+    {
+      "alt": "透亮的美景",
+      "download": "透亮的美景.jpg",
+      "src": "/images/photography/2025-10-13-yangshuo.jpg",
+      "thumb": "/images/photography/2025-10-13-yangshuo-thumbnail.jpg"
+    }
+  ]
+}

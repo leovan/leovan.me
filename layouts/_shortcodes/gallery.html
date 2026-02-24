@@ -10,6 +10,11 @@
     type="text/css"
     href="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/css/lightgallery-bundle.min.css"
   />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/_shortcodes/gallery.css"
+  />
 {{- end }}
 
 {{- if not ($.Page.Store.Get "shortcode-gallery-id") }}
