@@ -1,7 +1,7 @@
 ---
 title: 词向量 (Word Embeddings)
 author: 范叶亮
-date: '2018-10-01'
+date: 2018-10-01
 slug: word-embeddings
 categories:
   - 深度学习

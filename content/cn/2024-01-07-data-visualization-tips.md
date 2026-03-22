@@ -2,7 +2,7 @@
 title: 数据可视化小贴士
 subtitle: 面向动态文档生成，秉承规范、统一和实用的理念
 author: 范叶亮
-date: '2024-01-07'
+date: 2024-01-07
 slug: data-visualization-tips
 categories:
   - 编程

@@ -1,8 +1,8 @@
 ---
 title: 简历
 author: 范叶亮
-date: '2017-12-04'
-lastmod: '2025-08-23'
+date: 2017-12-04
+lastmod: 2025-08-23
 slug: cn/cv
 disable_author_date: true
 disable_donate: true

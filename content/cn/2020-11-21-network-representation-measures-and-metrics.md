@@ -2,7 +2,7 @@
 title: 网络表示，测度和度量 (Network Representation, Measures & Metrics)
 subtitle: 复杂网络系列
 author: 范叶亮
-date: '2020-11-21'
+date: 2020-11-21
 slug: network-representation-measures-and-metrics
 show_toc: true
 toc_depth: 3

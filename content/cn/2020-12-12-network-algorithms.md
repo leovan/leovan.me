@@ -2,7 +2,7 @@
 title: 网络算法 (Network Algorithms)
 subtitle: 复杂网络系列
 author: 范叶亮
-date: '2020-12-12'
+date: 2020-12-12
 slug: network-algorithms
 show_toc: true
 toc_depth: 3

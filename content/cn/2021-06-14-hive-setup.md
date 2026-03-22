@@ -1,7 +1,7 @@
 ---
 title: Hive 安装和配置 (Hive Setup)
 author: 范叶亮
-date: '2021-06-14'
+date: 2021-06-14
 slug: hive-setup
 categories:
   - Tech101

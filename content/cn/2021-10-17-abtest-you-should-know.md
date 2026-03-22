@@ -1,7 +1,7 @@
 ---
 title: 你所应该知道的 A/B 测试 (A/B Test You Should Know)
 author: 范叶亮
-date: '2021-10-17'
+date: 2021-10-17
 slug: abtest-you-should-know
 categories:
   - 产品

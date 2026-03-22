@@ -1,7 +1,7 @@
 ---
-title: '大语言模型微调 (Fine-tuning Large Language Models)'
+title: 大语言模型微调 (Fine-tuning Large Language Models)
 author: 范叶亮
-date: '2025-08-09'
+date: 2025-08-09
 slug: fine-tuning-llms
 categories:
   - AI

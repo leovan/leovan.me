@@ -2,7 +2,7 @@
 title: 进程，线程和协程 (Process, Thread and Coroutine)
 subtitle: 理论篇
 author: 范叶亮
-date: '2021-04-01'
+date: 2021-04-01
 slug: process-thread-and-coroutine-theory
 show_toc: true
 toc_depth: 3

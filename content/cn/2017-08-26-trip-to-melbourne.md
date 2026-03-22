@@ -1,7 +1,7 @@
 ---
 title: 墨尔本之行 (Trip to Melbourne)
 author: 范叶亮
-date: '2017-08-26'
+date: 2017-08-26
 slug: trip-to-melbourne
 categories:
   - 旅行

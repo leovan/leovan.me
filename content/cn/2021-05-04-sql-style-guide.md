@@ -1,7 +1,7 @@
 ---
 title: SQL 样式指南 (SQL Style Guide)
 author: 范叶亮
-date: '2021-05-04'
+date: 2021-05-04
 slug: sql-style-guide
 categories:
   - 编程

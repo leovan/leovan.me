@@ -1,8 +1,8 @@
 ---
-title: '探索 AI 模型和概念适配器'
-subtitle: 'Invoke AI 101 教程'
+title: 探索 AI 模型和概念适配器
+subtitle: Invoke AI 101 教程
 author: 范叶亮
-date: '2025-06-20'
+date: 2025-06-20
 slug: invoke-101-exploring-ai-models-and-concept-adapters
 categories:
   - Tech101

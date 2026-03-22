@@ -1,7 +1,7 @@
 ---
 title: 投票公平合理吗？
 author: 范叶亮
-date: '2021-01-17'
+date: 2021-01-17
 slug: is-voting-fair-and-reasonable
 categories:
   - 思考

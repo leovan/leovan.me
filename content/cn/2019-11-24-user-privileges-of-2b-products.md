@@ -1,7 +1,7 @@
 ---
 title: ToB 产品用户权限 (User Privileges of ToB Products)
 author: 范叶亮
-date: '2019-11-24'
+date: 2019-11-24
 slug: user-privileges-of-2b-products
 categories:
   - 产品

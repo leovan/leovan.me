@@ -55,17 +55,16 @@
             {{- end }}
           {{- end }}
 
-          {{- if or (.Params.categories) (.Params.tags) }}
+          {{- if .Params.categories }}
             {{- if or (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
               /
             {{- end }}
           {{- end }}
 
-
           <strong>{{ index $.Site.Params.lang.wordcount $lang }}: </strong>
           {{ .WordCount }}
 
-          {{- if and (.Params.categories) (.Params.tags) }}
+          {{- if .Params.tags }}
             {{- if and (gt (len .Params.categories) 0) (gt (len .Params.tags) 0) }}
               /
             {{- end }}

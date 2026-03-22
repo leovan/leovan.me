@@ -2,7 +2,7 @@
 title: 从 rm -rf * 说起
 subtitle: 喜新、怀旧、再出发
 author: 范叶亮
-date: '2023-12-17'
+date: 2023-12-17
 slug: some-thoughts-after-run-rm-rf-all
 categories:
   - 生活

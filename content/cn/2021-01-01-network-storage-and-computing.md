@@ -2,7 +2,7 @@
 title: 图存储与计算（Network Storage & Computing)
 subtitle: 复杂网络系列
 author: 范叶亮
-date: '2021-01-01'
+date: 2021-01-01
 slug: network-storage-and-computing
 show_toc: true
 toc_depth: 3

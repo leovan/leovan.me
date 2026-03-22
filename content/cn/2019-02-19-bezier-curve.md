@@ -1,7 +1,7 @@
 ---
 title: 贝塞尔曲线 (Bézier Curve)
 author: 范叶亮
-date: '2019-02-19'
+date: 2019-02-19
 slug: bezier-curve
 categories:
   - 数学

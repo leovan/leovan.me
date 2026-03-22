@@ -2,7 +2,7 @@
 title: 进程，线程和协程 (Process, Thread and Coroutine)
 subtitle: 实现篇
 author: 范叶亮
-date: '2021-04-03'
+date: 2021-04-03
 slug: process-thread-and-coroutine-python-implementation
 show_toc: true
 toc_depth: 3

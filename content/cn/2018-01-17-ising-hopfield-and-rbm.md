@@ -1,7 +1,7 @@
 ---
 title: Ising 模型，Hopfield 网络和受限的玻尔兹曼机 (Ising, Hopfield and RBM)
 author: 范叶亮
-date: '2018-01-17'
+date: 2018-01-17
 slug: ising-hopfield-and-rbm
 categories:
   - 机器学习

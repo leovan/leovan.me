@@ -2,7 +2,7 @@
 title: 真实世界网络结构 (Structure of Real-World Network)
 subtitle: 复杂网络系列
 author: 范叶亮
-date: '2020-11-28'
+date: 2020-11-28
 slug: structure-of-real-world-network
 show_toc: true
 toc_depth: 3

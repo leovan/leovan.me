@@ -1,8 +1,8 @@
 ---
-title: '使用画布创建和组合生成新的图片'
-subtitle: 'Invoke AI 101 教程'
+title: 使用画布创建和组合生成新的图片
+subtitle: Invoke AI 101 教程
 author: 范叶亮
-date: '2025-06-28'
+date: 2025-06-28
 slug: invoke-101-creating-and-composing-on-canvas
 categories:
   - Tech101

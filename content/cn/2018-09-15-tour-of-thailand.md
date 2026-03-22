@@ -1,7 +1,7 @@
 ---
 title: 泰国之行 (Tour of Thailand)
 author: 范叶亮
-date: '2018-09-15'
+date: 2018-09-15
 slug: tour-of-thailand
 categories:
   - 旅行

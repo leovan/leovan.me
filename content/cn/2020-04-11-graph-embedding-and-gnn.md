@@ -1,7 +1,7 @@
 ---
 title: 图嵌入 (Graph Embedding) 和图神经网络 (Graph Neural Network)
 author: 范叶亮
-date: '2020-04-11'
+date: 2020-04-11
 slug: graph-embedding-and-gnn
 show_toc: true
 toc_depth: 3

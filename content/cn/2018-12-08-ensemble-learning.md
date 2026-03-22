@@ -1,7 +1,7 @@
 ---
 title: 集成学习算法 (Ensemble Learning)
 author: 范叶亮
-date: '2018-12-08'
+date: 2018-12-08
 slug: ensemble-learning
 categories:
   - 机器学习
@@ -41,8 +41,7 @@ images:
   - /images/cn/2018-12-08-ensemble-learning/gbdt-decision-tree-1.png
   - /images/cn/2018-12-08-ensemble-learning/gbdt-decision-tree-2.png
   - /images/cn/2018-12-08-ensemble-learning/tree-growth-level-wise.png
-  - /images/cn/2018-12-08-ensemble-learning/tree-growth-leaf-wise.png
-  - /images/cn/2018-12-08-ensemble-learning/clfs-decision-regions.png
+  - /images/cn/2018 18-12-08-ensemble-learning/clfs-decision-regions.png
 ---
 
 传统机器学习算法 (例如：决策树，人工神经网络，支持向量机，朴素贝叶斯等) 的目标都是寻找一个最优分类器尽可能的将训练数据分开。集成学习 (Ensemble Learning) 算法的基本思想就是将多个分类器组合，从而实现一个预测效果更好的集成分类器。集成算法可以说从一方面验证了中国的一句老话：三个臭皮匠，赛过诸葛亮。

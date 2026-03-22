@@ -1,7 +1,7 @@
 ---
 title: 媒介之战 (War of Medias)
 author: 范叶亮
-date: '2018-09-01'
+date: 2018-09-01
 slug: war-of-medias
 categories:
   - 思考

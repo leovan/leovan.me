@@ -1,7 +1,7 @@
 ---
 title: 预训练自然语言模型 (Pre-trained Models for NLP)
 author: 范叶亮
-date: '2020-03-28'
+date: 2020-03-28
 slug: pre-trained-model-for-nlp
 show_toc: true
 toc_depth: 3

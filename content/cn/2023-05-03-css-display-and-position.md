@@ -1,7 +1,7 @@
 ---
 title: CSS 布局和定位 (CSS Display & Position)
 author: 范叶亮
-date: '2023-05-03'
+date: 2023-05-03
 slug: css-display-and-position
 show_toc: true
 toc_depth: 3

@@ -2,7 +2,7 @@
 title: 强化学习简介 (Introduction of Reinforcement Learning)
 subtitle: 强化学习系列
 author: 范叶亮
-date: '2020-05-09'
+date: 2020-05-09
 slug: introduction-of-reinforcement-learning
 categories:
   - 机器学习

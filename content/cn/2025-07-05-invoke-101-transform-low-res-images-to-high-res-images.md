@@ -1,8 +1,8 @@
 ---
-title: '提升图片分辨率和质量'
-subtitle: 'Invoke AI 101 教程'
+title: 提升图片分辨率和质量
+subtitle: Invoke AI 101 教程
 author: 范叶亮
-date: '2025-07-05'
+date: 2025-07-05
 slug: invoke-101-transform-low-res-images-to-high-res-images
 categories:
   - Tech101

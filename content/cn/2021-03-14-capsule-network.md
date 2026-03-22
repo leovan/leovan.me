@@ -1,7 +1,7 @@
 ---
 title: 胶囊网络 (Capsule Network)
 author: 范叶亮
-date: '2021-03-14'
+date: 2021-03-14
 slug: capsule-network
 categories:
   - 深度学习

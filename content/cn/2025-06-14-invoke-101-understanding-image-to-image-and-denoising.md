@@ -1,8 +1,8 @@
 ---
-title: '理解图像到图像和降噪过程'
-subtitle: 'Invoke AI 101 教程'
+title: 理解图像到图像和降噪过程
+subtitle: Invoke AI 101 教程
 author: 范叶亮
-date: '2025-06-14'
+date: 2025-06-14
 slug: invoke-101-understanding-image-to-image-and-denoising
 categories:
   - Tech101

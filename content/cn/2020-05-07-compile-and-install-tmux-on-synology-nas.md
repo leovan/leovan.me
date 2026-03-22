@@ -1,7 +1,7 @@
 ---
 title: 在群晖 NAS 上编译安装 tmux
 author: 范叶亮
-date: '2020-05-07'
+date: 2020-05-07
 slug: compile-and-install-tmux-on-synology-nas
 categories:
   - 编程

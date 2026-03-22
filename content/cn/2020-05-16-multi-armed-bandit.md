@@ -2,7 +2,7 @@
 title: 多臂赌博机 (Multi-armed Bandit)
 subtitle: 强化学习系列
 author: 范叶亮
-date: '2020-05-16'
+date: 2020-05-16
 slug: multi-armed-bandit
 categories:
   - 机器学习

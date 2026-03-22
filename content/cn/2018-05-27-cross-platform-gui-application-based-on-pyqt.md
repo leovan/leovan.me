@@ -1,7 +1,7 @@
 ---
 title: 基于 PyQt5/PySide2 和 QML 的跨平台 GUI 程序开发
 author: 范叶亮
-date: '2018-05-27'
+date: 2018-05-27
 slug: cross-platform-gui-application-based-on-pyqt
 categories:
   - 编程

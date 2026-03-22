@@ -1,7 +1,7 @@
 ---
 title: 一个人的摩旅 (Travel with My Motorcycle Alone)
 author: 范叶亮
-date: '2021-10-06'
+date: 2021-10-06
 slug: travel-with-my-motorcycle-alone
 categories:
   - 旅行

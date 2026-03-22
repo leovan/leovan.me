@@ -1,8 +1,8 @@
 ---
-title: '业余无线电入门'
-subtitle: 'CQ, CQ, CQ, this is BD1CZP. Calling CQ and standing by.'
+title: 业余无线电入门
+subtitle: CQ, CQ, CQ, this is BD1CZP. Calling CQ and standing by.
 author: 范叶亮
-date: '2025-10-25'
+date: 2025-10-25
 slug: amateur-radio-introduction
 categories:
   - 生活

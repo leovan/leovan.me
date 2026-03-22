@@ -1,7 +1,7 @@
 ---
 title: 生成对抗网络简介 (GAN Introduction)
 author: 范叶亮
-date: '2018-02-03'
+date: 2018-02-03
 slug: gan-introduction
 categories:
   - 机器学习

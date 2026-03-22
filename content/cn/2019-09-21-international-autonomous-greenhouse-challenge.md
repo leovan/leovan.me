@@ -1,7 +1,7 @@
 ---
 title: 国际智慧温室种植挑战赛 (International Autonomous Greenhouse Challenge)
 author: 范叶亮
-date: '2019-09-21'
+date: 2019-09-21
 slug: international-autonomous-greenhouse-challenge
 categories:
   - 智慧农业

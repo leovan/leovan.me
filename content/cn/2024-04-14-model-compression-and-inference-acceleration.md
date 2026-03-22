@@ -1,7 +1,7 @@
 ---
 title: 模型压缩和推理加速 (Model Compression & Inference Acceleration)
 author: 范叶亮
-date: '2024-04-14'
+date: 2024-04-14
 slug: model-compression-and-inference-acceleration
 categories:
   - 深度学习

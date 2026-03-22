@@ -2,7 +2,7 @@
 title: 当我谈修图时，我谈些什么
 subtitle: 色彩篇 Part 1
 author: 范叶亮
-date: '2023-04-22'
+date: 2023-04-22
 slug: what-i-talk-about-when-i-talk-about-photo-retouching-colors-part-1
 categories:
   - 科普

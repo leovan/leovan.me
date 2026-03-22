@@ -2,7 +2,7 @@
 title: 无模型策略预测和控制 - 蒙特卡洛方法 (Model-Free Policy Prediction and Control - Monte-Carlo Learning)
 subtitle: 强化学习系列
 author: 范叶亮
-date: '2020-07-01'
+date: 2020-07-01
 slug: model-free-policy-prediction-and-control-monte-carlo-learning
 categories:
   - 机器学习

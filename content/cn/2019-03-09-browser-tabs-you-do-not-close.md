@@ -1,7 +1,7 @@
 ---
 title: 关不掉的浏览器标签页 (Browser Tabs You do not Close)
 author: 范叶亮
-date: '2019-03-09'
+date: 2019-03-09
 slug: browser-tabs-you-do-not-close
 categories:
   - 思考

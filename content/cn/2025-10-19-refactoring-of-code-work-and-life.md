@@ -1,6 +1,6 @@
 ---
-title: '重构'
-subtitle: '之于代码、之于工作、之于生活'
+title: 重构
+subtitle: 之于代码、之于工作、之于生活
 author: 范叶亮
 date: '2025-10-19'
 slug: refactoring-of-code-work-and-life

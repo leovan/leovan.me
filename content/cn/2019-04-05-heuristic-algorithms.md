@@ -1,7 +1,7 @@
 ---
 title: 启发式算法 (Heuristic Algorithms)
 author: 范叶亮
-date: '2019-04-05'
+date: 2019-04-05
 slug: heuristic-algorithms
 show_toc: true
 toc_depth: 3

@@ -1,7 +1,7 @@
 ---
 title: 大数据 SQL 性能调优 (Big Data SQL Performance Tuning)
 author: 范叶亮
-date: '2021-05-23'
+date: 2021-05-23
 slug: big-data-sql-performance-tuning
 categories:
   - 编程

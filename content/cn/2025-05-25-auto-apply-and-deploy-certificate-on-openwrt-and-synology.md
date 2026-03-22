@@ -1,7 +1,7 @@
 ---
-title: '在 OpenWrt 和群晖中自动申请和部署证书'
+title: 在 OpenWrt 和群晖中自动申请和部署证书
 author: 范叶亮
-date: '2025-05-25'
+date: 2025-05-25
 slug: auto-apply-and-deploy-certificate-on-openwrt-and-synology
 categories:
   - 教程

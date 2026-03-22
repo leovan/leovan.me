@@ -1,7 +1,7 @@
 ---
 title: 小记这一波裁员浪潮
 author: 范叶亮
-date: '2022-04-10'
+date: 2022-04-10
 slug: survived-from-this-round-of-layoff
 categories:
   - 思考

@@ -1,7 +1,7 @@
 ---
 title: 在 OpenWrt 中安装 Jellyfin 搭建家庭影音中心
 author: 范叶亮
-date: '2023-01-24'
+date: 2023-01-24
 slug: build-home-media-center-with-jellyfin-on-openwrt
 categories:
   - 教程

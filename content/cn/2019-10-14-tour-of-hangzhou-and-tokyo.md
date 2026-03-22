@@ -1,7 +1,7 @@
 ---
 title: 杭州和东京之旅 (Tour of Hangzhou and Tokyo)
 author: 范叶亮
-date: '2019-10-14'
+date: 2019-10-14
 slug: tour-of-hangzhou-and-tokyo
 categories:
   - 旅行

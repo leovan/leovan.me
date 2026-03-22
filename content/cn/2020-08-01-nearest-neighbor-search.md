@@ -1,7 +1,7 @@
 ---
 title: 最近邻搜索 (Nearest Neighbor Search)
 author: 范叶亮
-date: '2020-08-01'
+date: 2020-08-01
 slug: nearest-neighbor-search
 categories:
   - 机器学习

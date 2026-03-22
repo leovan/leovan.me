@@ -1,7 +1,7 @@
 ---
 title: 序列到序列 (Seq2Seq) 和注意力机制 (Attention Machanism)
 author: 范叶亮
-date: '2018-10-12'
+date: 2018-10-12
 slug: seq2seq-and-attention-machanism
 categories:
   - 深度学习

@@ -1,7 +1,7 @@
 ---
 title: 隐马尔可夫 (Hidden Markov Model, HMM)，条件随机场 (Conditional Random Fields, CRF) 和序列标注 (Sequence Labeling)
 author: 范叶亮
-date: '2020-05-02'
+date: 2020-05-02
 slug: hmm-crf-and-sequence-labeling
 categories:
   - 机器学习

@@ -1,7 +1,7 @@
 ---
 title: 自私和贪婪 (Selfish and Greedy)
-author: '范叶亮'
-date: '2022-09-11'
+author: 范叶亮
+date: 2022-09-11
 slug: selfish-and-greedy
 categories:
   - 思考

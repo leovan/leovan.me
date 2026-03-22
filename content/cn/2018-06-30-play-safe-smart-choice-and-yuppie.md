@@ -1,7 +1,7 @@
 ---
 title: Play Safe, Smart Choice & Yuppie
 author: 范叶亮
-date: '2018-06-30'
+date: 2018-06-30
 slug: play-safe-smart-choice-and-yuppie
 categories:
   - 思考

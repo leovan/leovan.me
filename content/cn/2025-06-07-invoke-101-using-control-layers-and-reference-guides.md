@@ -1,8 +1,8 @@
 ---
-title: '使用控制层和指示控制图片的生成'
-subtitle: 'Invoke AI 101 教程'
+title: 使用控制层和指示控制图片的生成
+subtitle: Invoke AI 101 教程
 author: 范叶亮
-date: '2025-06-07'
+date: 2025-06-07
 slug: invoke-101-using-control-layers-and-reference-guides
 show_toc: true
 toc_depth: 3

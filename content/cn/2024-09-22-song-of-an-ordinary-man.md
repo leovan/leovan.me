@@ -2,7 +2,7 @@
 title: 凡人歌
 subtitle: 凡人，但不要烦心
 author: 范叶亮
-date: '2024-09-22'
+date: 2024-09-22
 slug: song-of-an-ordinary-man
 categories:
   - 生活

@@ -2,7 +2,7 @@
 title: 当我谈摄影时，我谈些什么
 subtitle: 色彩篇 Part 1
 author: 范叶亮
-date: '2023-07-30'
+date: 2023-07-30
 slug: what-i-talk-about-when-i-talk-about-photography-colors-part-1
 categories:
   - 科普

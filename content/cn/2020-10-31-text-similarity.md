@@ -1,7 +1,7 @@
 ---
 title: 文本相似度 (Text Similarity)
 author: 范叶亮
-date: '2020-10-31'
+date: 2020-10-31
 slug: text-similarity
 show_toc: true
 toc_depth: 3

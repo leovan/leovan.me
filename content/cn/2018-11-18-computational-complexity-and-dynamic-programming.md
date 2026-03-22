@@ -1,7 +1,7 @@
 ---
 title: 计算复杂性 (Computational Complexity) 与动态规划 (Dynamic Programming)
 author: 范叶亮
-date: '2018-11-18'
+date: 2018-11-18
 slug: computational-complexity-and-dynamic-programming
 categories:
   - 最优化

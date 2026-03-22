@@ -1,7 +1,7 @@
 ---
 title: 利用 Flask 和 Google App Engine 部署模型服务
 author: 范叶亮
-date: '2018-10-19'
+date: 2018-10-19
 slug: serving-models-with-flask-and-gae
 categories:
   - 编程
