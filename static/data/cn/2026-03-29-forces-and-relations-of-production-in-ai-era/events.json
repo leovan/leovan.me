@@ -1,0 +1,646 @@
+[
+  {
+    "date": "2026-01-12",
+    "data": {
+      "title": "Apple 与 Google 达成合作，将由 Gemini 模型驱动新版 Siri ",
+      "desc": "Apple 正式宣布与 Google 达成协议，将放弃自主研发的大型语言模型基础建设，转而采用 Google 的 Gemini 作为 Apple Intelligence 及新一代 Siri 的核心技术。此举旨在解决 Siri 长线以来的性能瓶颈，更个人化的 Siri 版本预计将于今年稍晚推出。"
+    }
+  },
+  {
+    "date": "2026-01-05",
+    "data": {
+      "title": "NVIDIA 于 CES 2026 发表 Vera Rubin 架构",
+      "desc": "在 CES 2026 上，NVIDIA 推出了继 Blackwell 之后的下一代 AI 架构「Vera Rubin」。该平台整合了全新的 Rubin GPU 与 Vera CPU，被描述为将整个资料中心视为单一「AI 超级电脑」的极致设计，预计将大幅提升 AI 训练与推论的效率。"
+    }
+  },
+  {
+    "date": "2025-12-11",
+    "data": {
+      "title": "OpenAI 推出 GPT-5.2",
+      "desc": "OpenAI 于 12 月 11 日发布了 GPT-5.2，被视为对 Google Gemini 3 的紧急回应。该系列包含 Instant（极速）、Thinking（思考）和 Pro（专业）三个版本，旨在夺回在专业知识工作和长线运行 AI 代理（Agent）领域的领先地位。"
+    }
+  },
+  {
+    "date": "2025-12-02",
+    "data": {
+      "title": "Mistral 推出 Mistral 3 系列与开源模型更新",
+      "desc": "Mistral 推出 Mistral 3 系列模型及 Devstral-2（123B 参数）和 Mistral Small 2。这些开源模型在性能上挑战了专用模型，特别是在程式码生成和推理任务上表现强劲，进一步推动了开源 AI 生态系统的发展。"
+    }
+  },
+  {
+    "date": "2025-12-01",
+    "data": {
+      "title": "DeepSeek 推出 DeepSeek-V3.2 系列模型",
+      "desc": "DeepSeek 于 12 月 1 日正式发布了最新的 DeepSeek-V3.2 及其强化推理版本 DeepSeek-V3.2-Speciale。V3.2 被定位为旗舰模型，具备强大的综合能力，并首次将「思考模式」与「工具使用」深度结合，使其能在推理过程中调用外部工具。而专注于推理的 V3.2-Speciale 则在数学与复杂逻辑任务上表现优异，号称在推理基准测试中匹敌 Google 的 Gemini 3.0 Pro 与 OpenAI 的 GPT-5，且两者皆持续秉持开源精神。"
+    }
+  },
+  {
+    "date": "2025-11-24",
+    "data": {
+      "title": "Anthropic 推出 Claude Opus 4.5",
+      "desc": "Anthropic 于 11 月 24 日推出了其最强大的模型 Claude Opus 4.5。该模型专为程式设计、代理（Agent）任务和电脑操作而设计，在处理复杂的多步骤任务和软件工程方面表现优异，并宣称在相关基准测试中超越了竞争对手。此外，它还以更具竞争力的价格向开发者开放。"
+    }
+  },
+  {
+    "date": "2025-11-24",
+    "data": {
+      "title": "美国总统特朗普签署「创世纪任务」行政命令，推动AI加速的科学研究与发现。",
+      "desc": "美国总统特朗普于 2025 年 11 月 24 日签署的「创世纪任务」(Genesis Mission)行政命令。该任务旨在推动人工智慧 (AI) 加速的科学创新与发现，并与二战时期的曼哈顿计画相媲美。"
+    }
+  },
+  {
+    "date": "2025-11-18",
+    "data": {
+      "title": "Google 推出 Gemini 3",
+      "desc": "Google 推出 Gemini 3，号称最先进的多模态理解模型。Google 首次在模型发布日就将 Gemini 应用于搜寻功能，并且同步登陆Gemini 应用、 AI Studio和Vertex AI 的开发者平台，以及Agent开发平台Google Antigravity。"
+    }
+  },
+  {
+    "date": "2025-11-18",
+    "data": {
+      "title": "微软、英伟达、Anthropic 宣布建立战略伙伴关係",
+      "desc": "微软、英伟达、Anthropic 宣布建立新的战略伙伴关係，英伟达承诺最多向Anthropic投资100亿美元，微软则承诺最多向Anthropic投资50亿美元。而Anthropic则承诺向微软Azure云端服务购买300亿美元的算力，并预订上看1 GW的额外算力。"
+    }
+  },
+  {
+    "date": "2025-11-17",
+    "data": {
+      "title": "xAI 推出 Grok 4.1",
+      "desc": "xAI 推出 Grok 4.1，该模型在创造力、情商和日常任务处理方面进行了重大升级，据称在盲测中表现优于前代产品。"
+    }
+  },
+  {
+    "date": "2025-11-12",
+    "data": {
+      "title": "OpenAI 推出 GPT-5.1",
+      "desc": "OpenAI 推出 GPT-5.1 模型，分为「Instant」（即时）和「Thinking」（思考）两个版本。新模型在推理能力和对话自然度上有显着提升，并针对企业和教育用户提供了增强功能。同时，OpenAI 也推出了针对美国 K-12 教育者的「ChatGPT for Teachers」。"
+    }
+  },
+  {
+    "date": "2025-11-03",
+    "data": {
+      "title": "OpenAI 宣布与 AWS 合作",
+      "desc": "OpenAI 宣布与亚马逊 AWS 建立多年策略伙伴关係，AWS 将为 OpenAI 提供 Amazon EC2 UltraServer，该服务器配备数十万个芯片，并能够扩展到数千万个 CPU，以满足其先进的生成式 AI 工作负载的需求。OpenAI 承诺投入 380 亿美元，将迅速扩大运算能力，同时受益于 AWS 的价格、效能、规模和安全性。"
+    }
+  },
+  {
+    "date": "2025-10-22",
+    "data": {
+      "title": "OpenAI 宣布与 Broadcom 合作",
+      "desc": "OpenAI 宣布与 Broadcom 合作开发10吉瓦的客製化人工智慧加速器与乙太网路解决方案的系统，预计在2026年下半年开始，并在2029年底前完成。"
+    }
+  },
+  {
+    "date": "2025-10-06",
+    "data": {
+      "title": "OpenAI 宣布与 AMD 合作",
+      "desc": "OpenAI 宣布与 AMD 达成协议，将在数据中心部署 6 吉瓦的 AMD GPU。"
+    }
+  },
+  {
+    "date": "2025-09-30",
+    "data": {
+      "title": "OpenAI 推出 Sora 2 文生影片模型",
+      "desc": "OpenAI 推出 Sora 2 文生影片模型向美国和加拿大的特定用户发布。"
+    }
+  },
+  {
+    "date": "2025-09-22",
+    "data": {
+      "title": "Nvidia 宣布投资 OpenAI 1000 亿美元",
+      "desc": "Nvidia 宣布计划向 OpenAI 投资 1000 亿美元，作为数据中心建设项目的一部分。"
+    }
+  },
+  {
+    "date": "2025-09-10",
+    "data": {
+      "title": "OpenAI 承诺向 Oracle 采购 3000 亿美元算力",
+      "desc": "OpenAI 承诺在未来数年内向甲骨文 (Oracle) 采购价值 3000 亿美元的运算能力，带动 Oracle 股价应大涨。"
+    }
+  },
+  {
+    "date": "2025-08-07",
+    "data": {
+      "title": "OpenAI 推出 GPT-5",
+      "desc": "OpenAI 推出了其最新的 AI 模型 GPT-5。该公司声称 GPT-5 更智慧、速度更快且更有用。"
+    }
+  },
+  {
+    "date": "2025-08-05",
+    "data": {
+      "title": "OpenAI 推出 gpt-oss 开源模型",
+      "desc": "OpenAI 推出 gpt-oss 开源模型，两个版本包括参数量更大的 gpt-oss-120b（1170 亿参数），以及参数量较小的 gpt-oss-20b（210 亿参数），OpenAI 宣称它们的效能分别与o4-mini和o3-mini相当。"
+    }
+  },
+  {
+    "date": "2025-08-01",
+    "data": {
+      "title": "MIT 研究声称 95% 企业 AI 专案无回报",
+      "desc": "麻省理工学院 (MIT) 研究发现，高达 95% 的企业 AI 专案未能带来回报。"
+    }
+  },
+  {
+    "date": "2025-07-09",
+    "data": {
+      "title": "xAI 推出 Grok 4模型",
+      "desc": "xAI 推出 Grok 4模型，包括 Grok 4 和 Grok 4 Heavy 两个版本，并推出虚拟伙伴「Ani」功能。"
+    }
+  },
+  {
+    "date": "2025-05-22",
+    "data": {
+      "title": "Anthropic 推出 Claude Sonnet 4 和 Claude Opus 4",
+      "desc": "Anthropic 推出 Claude Sonnet 4 和Claude Opus 4 模型，改进程式功能并引进了新的API功能，包括模型上下文协定（MCP）连接器。Opus 4也是首款达到ASL-3安全等级的模型。"
+    }
+  },
+  {
+    "date": "2025-05-20",
+    "data": {
+      "title": "Google 推出 Veo3 影像模型",
+      "desc": "作为Google I/O 大会的一部分，Google发布了Veo 3先进影像生成模型，并已添加音讯功能，可以引导角色进入情境感知状态。"
+    }
+  },
+  {
+    "date": "2025-04-29",
+    "data": {
+      "title": "阿里巴巴推出 Qwen3 系列",
+      "desc": "阿里巴巴宣布开源新一代的 Qwen3 系列模型，共 8 款不同规模，包含从 0.6B 到 235B 的 MoE 变体，至此已开源超过 200 个模型，形成与 Meta Llama 并驾齐驱的强大开源 AI 生态。"
+    }
+  },
+  {
+    "date": "2025-03-25",
+    "data": {
+      "title": "Google 推出 Gemini 2.5",
+      "desc": "Google 推出了 Gemini 2.5，并在同年6月5日发布Gemini 2.5 Pro，该模型服务的性能和使用率均获得提升。"
+    }
+  },
+  {
+    "date": "2025-03-25",
+    "data": {
+      "title": "OpenAI 推出 GPT-4o原生图像功能",
+      "desc": "OpenAI 推出 GPT-4o原生图像功能，推动文字生成图像的模型前沿能力，社群媒体充斥吉卜力工作室风格的AI生成图像。"
+    }
+  },
+  {
+    "date": "2025-03-25",
+    "data": {
+      "title": "xAI 聊天机器人 Grok 发表不当言论",
+      "desc": "xAI 公司的 AI 聊天机器人 Grok 因发表反犹太主义言论而面临批评。"
+    }
+  },
+  {
+    "date": "2025-03-05",
+    "data": {
+      "title": "Manus 推出 LLM 代理",
+      "desc": "由总部位于新加坡、在中国设有营运机构的科技新创公司Butterfly Effect Technology所开发的自主人工智慧代理，旨在无需持续的人工监督即可独立执行复杂的现实世界任务。"
+    }
+  },
+  {
+    "date": "2025-02-27",
+    "data": {
+      "title": "OpenAI 推出 GPT-4.5",
+      "desc": "OpenAI 推出 GPT-4.5，截至当时规模最大、表现最强的聊天模型，透过扩展无监督学习，GPT-4.5 提高识别模式、建立联繫以及无需推理即可产生创造性见解的能力。"
+    }
+  },
+  {
+    "date": "2025-02-24",
+    "data": {
+      "title": "Anthropic 推出 Claude 3.7 Sonnet",
+      "desc": "Anthropic 推出 Claude 3.7 Sonnet 模型，具有扩展的思维能力和优化的数学、程式基准性能，并发布 Claude Code，一个代理程式工具。"
+    }
+  },
+  {
+    "date": "2025-02-17",
+    "data": {
+      "title": "xAI 推出 Grok 3模型",
+      "desc": "xAI 推出 Grok 3模型，号称在20万个H100 GPU上进行训练，功能远超Grok 2，被Elon Musk称为「地球上最聪明的AI」"
+    }
+  },
+  {
+    "date": "2025-01-28",
+    "data": {
+      "title": "阿里巴巴推出 Qwen 2.5-Max",
+      "desc": "阿里巴巴推出 Qwen 2.5-Max旗舰模型，属于超大规模的混合专家 (MoE) 模型。阿里巴巴声称 Qwen 2.5-Max 性能优于 GPT-4o 和 Llama 3.1 405B，并首次原生支持 100 万 Token 的上下文长度。"
+    }
+  },
+  {
+    "date": "2025-01-25",
+    "data": {
+      "title": "DeepSeek 推出低成本高效能聊天机器人",
+      "desc": "DeepSeek 推出聊天机器人，上架后短短数日内，登上App Store下载排行榜冠军，引发美国科技业股价的急剧下跌。"
+    }
+  },
+  {
+    "date": "2025-01-21",
+    "data": {
+      "title": "美国总统特朗普宣布「Stargate 计画」",
+      "desc": "美国总统特朗普宣布了一项名为「Stargate 计画」的合资企业，由软银、OpenAI 和甲骨文合作，斥资 5000 亿美元在美国建设 AI 基础设施。"
+    }
+  },
+  {
+    "date": "2025-01-20",
+    "data": {
+      "title": "DeepSeek 推出DeepSeek-R1开源模型",
+      "desc": "DeepSeek 推出DeepSeek-R1开源模型，在数学、程式码、自然语言推理等任务上，效能与OpenAI o1相当，而训练成本却不到600万美元。"
+    }
+  },
+  {
+    "date": "2024-12-27",
+    "data": {
+      "title": "DeepSeek 推出DeepSeek-V3开源模型",
+      "desc": "DeepSeek 推出DeepSeek-V3开源模型，其开发所使用的运算资源远少于最先进的模型，但在 MMLU 和 GPQA 等基准测试上的表现却超越了顶尖模型。"
+    }
+  },
+  {
+    "date": "2024-12-20",
+    "data": {
+      "title": "OpenAI 推出 o3 (beta)",
+      "desc": "OpenAI 推出 o3 (beta) 多模态模型，在软件工程 (SWE)、竞赛程式编码、竞赛数学、博士级科学以及研究数学等基准测试中，表现超越了所有先前的模型，同时也在 ARC-AGI 基准测试中创下新纪录。"
+    }
+  },
+  {
+    "date": "2024-12-12",
+    "data": {
+      "title": "OpenAI 正式推出 Sora 文生影片模型",
+      "desc": "OpenAI 于2024 年 12 月向美国和加拿大的ChatGPT Plus和 ChatGPT Pro 用户公开发布 Sora 模型。"
+    }
+  },
+  {
+    "date": "2024-12-11",
+    "data": {
+      "title": "Google 推出 Gemini 2.0",
+      "desc": "Google发布了首个Gemini 2.0系列的人工智慧模型，名为Gemini 2.0 Flash。"
+    }
+  },
+  {
+    "date": "2024-10-16",
+    "data": {
+      "title": "Mistral 推出 Ministral",
+      "desc": "Ministral 是包含 30 亿和 80 亿参数的小型模型，在公认的主要基准测试中，表现超越了同等规模的 Gemma 和 Llama 模型。"
+    }
+  },
+  {
+    "date": "2024-09-19",
+    "data": {
+      "title": "阿里巴巴推出 Qwen 2.5",
+      "desc": "阿里巴巴推出 Qwen 2.5，包含了一系列高效的小型模型，以及专为特定功能而设计的专门程式编码和数学模型"
+    }
+  },
+  {
+    "date": "2024-09-12",
+    "data": {
+      "title": "OpenAI 推出 o1-preview",
+      "desc": "OpenAI 推出「o 系列」中的第一个模型，专为进阶推理和处理复杂任务而设计，尤其在数学、科学和程式编码方面取得能力进展。"
+    }
+  },
+  {
+    "date": "2024-08-15",
+    "data": {
+      "title": "Google 推出Imagen 3文生图模型",
+      "desc": "Imagen于2022年5月首次在一篇论文中发表，具备从自然语言生成高保真图像的能力。第二代Imagen 2发布于2023年12月，特点是能产生文字与标誌影像。Imagen 3则于2024年8月推出，在GenAI-Bench图像基准测试中取得最高分。"
+    }
+  },
+  {
+    "date": "2024-08-13",
+    "data": {
+      "title": "xAI 推出 Grok 2模型",
+      "desc": "xAI发表Grok 2模型。 Grok 2具有聊天、编码和推理方面的强大能力，在文字和视觉理解方面提供了先进的功能。"
+    }
+  },
+  {
+    "date": "2024-07-23",
+    "data": {
+      "title": "Meta 推出 Llama 3.1 405B 开源模型",
+      "desc": "Meta 发布了其 Llama 3.1 系列，其中包括一个高达 4050 亿参数（405B）的开放权重模型，首次将一个 GPT-4o/Claude-3-Opus 级别性能的顶尖模型开放给公众"
+    }
+  },
+  {
+    "date": "2024-06-18",
+    "data": {
+      "title": "Nvidia 市值首次登顶 S&amp;P 500",
+      "desc": "Nvidia 市值突破 3 万亿美元，首次成为 S&amp;P 500 指数中市值最高的股票。"
+    }
+  },
+  {
+    "date": "2024-06-10",
+    "data": {
+      "title": "Apple 宣布 Apple Intelligence",
+      "desc": "苹果 (Apple) 在 WWDC 大会上宣布宣布Apple Intelligence，一套深度整合到 iOS、iPadOS 和 macOS 系统底层的 AI 功能，并宣布与 OpenAI 建立合作伙伴关係，将 ChatGPT 整合至 Siri。"
+    }
+  },
+  {
+    "date": "2024-05-30",
+    "data": {
+      "title": "DeepSeek 发布 DeepSeek-Coder-V2",
+      "desc": "中国 AI 新创 DeepSeek（深度求索），发布开源程式码模型 V2，在多个程式码和数学基准测试上，击败了包括 GPT-4 Turbo、Claude 3 Opus 和 Gemini 1.5 Pro 在内的所有闭源旗舰模型。"
+    }
+  },
+  {
+    "date": "2024-05-13",
+    "data": {
+      "title": "OpenAI 推出 GPT-4o",
+      "desc": "OpenAI 推出了 GPT-4o。该模型能够跨越文字、音讯、图像和影片输入，进行更复杂的即时互动。"
+    }
+  },
+  {
+    "date": "2024-04-17",
+    "data": {
+      "title": "Meta 推出 Llama 3 开源模型",
+      "desc": "Meta 推出 Llama 3 开源模型，分别拥有 80 亿和 700 亿个参数两个版本，模型使用公开来源收集的15万亿个文字token进行预训练，并经过「公开的token资料集」以及「超过1000万个人工标註范例」进行微调，在大多数基准测试中都优于Gemini Pro 1.5和Claude 3 Sonnet。"
+    }
+  },
+  {
+    "date": "2024-04-05",
+    "data": {
+      "title": "Meta 推出 Llama 4 开源模型",
+      "desc": "Meta 推出 Llama 4 开源模型，架构改为专家混合架构，并支援多模态（文字和图像输入，文字输出）和多语言（12 种语言）。根据专家数量、模型规模、训练方法，分为 Scout、Maverick 两种版本，以及尚未发布的「巨兽」 (Behemoth)版本，预计拥有 2 万亿总参数量。"
+    }
+  },
+  {
+    "date": "2024-03-18",
+    "data": {
+      "title": "NVIDIA 宣布 Blackwell 架构 (B100/B200)",
+      "desc": "英伟达（Nvidia）在 GTC 2024 大会上，宣布了接替 Hopper 的 Blackwell GPU 架构，及其旗舰芯片 B200。采用台积电 4奈米製程，拥有 2080 亿个电晶体。由两颗 B200 芯片组成的 GB200 系统，在 GPT-3 基准测试上的性能是 H100 的 7 倍，训练速度提高了 4 倍。"
+    }
+  },
+  {
+    "date": "2024-03-17",
+    "data": {
+      "title": "xAI 宣布大模型Grok-1开源",
+      "desc": "xAI宣布大模型Grok-1开源，遵循Apache 2.0协定开放模型权重与架构。开源版本有3,140亿个参数，使用者可以自行使用、修改和分发软件。"
+    }
+  },
+  {
+    "date": "2024-03-04",
+    "data": {
+      "title": "Anthropic 推出 Claude 3 家族模型",
+      "desc": "Anthropic 发布 Claude 3 系列：Haiku（快速）、Sonnet（中阶）、Opus（旗舰）。Anthropic 公司表示，在当时的基准测试中，它的性能优于 OpenAI 的GPT-4和 GPT-3.5 以及 Google 的 Gemini Ultra。Sonnet 和 Haiku 分别是 Anthropic 公司的中型和小型模型。所有三种模型均支援影像输入。"
+    }
+  },
+  {
+    "date": "2024-02-27",
+    "data": {
+      "title": "GitHub 宣布推出 Copilot Enterprise",
+      "desc": "GitHub 宣布推出 Copilot Enterprise 的 AI 程式编写辅助工具，包含了增强的客製化功能。"
+    }
+  },
+  {
+    "date": "2024-02-22",
+    "data": {
+      "title": "Google Gemini 因生成不当图像受批评",
+      "desc": "Google 的聊天机器人 Gemini 因生成具有种族争议且带有冒犯性的历史图像而受到广泛批评，Google 随后暂停了人物图像生成功能。"
+    }
+  },
+  {
+    "date": "2024-02-15",
+    "data": {
+      "title": "OpenAI 展示 Sora 文生影片模型",
+      "desc": "OpenAI 首次展示其文生影片模型 Sora，演示影片长达 60 秒，展现出惊人的物理一致性、时序连贯性和对复杂提示的理解力。"
+    }
+  },
+  {
+    "date": "2024-02-15",
+    "data": {
+      "title": "Google 推出 Gemini 1.5 Pro",
+      "desc": "在 Sora 发布的同一天，Google 迅速发布了 Gemini 1.5 Pro，核心突破在于上下文窗口，其在测试中可以稳定支持100 万个 Token ，相当于整本小说或 1 小时的影片"
+    }
+  },
+  {
+    "date": "2024-02-04",
+    "data": {
+      "title": "阿里巴巴推出 Qwen 1.5",
+      "desc": "阿里巴巴推出 Qwen 1.5 系列，开源了从 0.5B 到 72B 的多个模型，并将其程式码整合到 Hugging Face transformers 函式库中，简化开发者的使用流程。"
+    }
+  },
+  {
+    "date": "2023-12-06",
+    "data": {
+      "title": "Google 推出全新 AI 模型 Gemini 1.0",
+      "desc": "Google 推出名为 Gemini 的全新 AI 模型，分为 Ultra、Pro、Nano 三种规格，属于多模态模型，未来将为其众多产品和服务提供支援。"
+    }
+  },
+  {
+    "date": "2023-11-06",
+    "data": {
+      "title": "OpenAI 举办首届开发者大会",
+      "desc": "OpenAI 举办开发者大会，发布了 GPT-4 Turbo（128K 上下文窗口）、GPTs（允许用户自订 ChatGPT）以及 Assistants API 等生态系工具，象征从「模型公司」向「平台公司」转变"
+    }
+  },
+  {
+    "date": "2023-11-05",
+    "data": {
+      "title": "xAI开始向部分X（Twitter）付费用户推出Grok聊天机器人",
+      "desc": "xAI开始向部分X（Twitter）付费高阶用户推播Grok聊天机器人，之后又推送给美国的X Premium+订阅用户。"
+    }
+  },
+  {
+    "date": "2023-11-01",
+    "data": {
+      "title": "微软将 AI 聊天机器人升级并更名为 Copilot",
+      "desc": "微软在 Ignite 大会上宣布升级其 AI 聊天机器人，并将其统一重新命名为 Microsoft Copilot。"
+    }
+  },
+  {
+    "date": "2023-09-27",
+    "data": {
+      "title": "Mistral AI 发布 Mistral 7B",
+      "desc": "法国新创公司 Mistral AI 发布了其第一个模型 Mistral 7B，模型参数仅有 70 亿，但在所有基准测试中均击败了 Meta 的 Llama 2 13B 模型。其使用分组查询注意力 (GQA) 和滑动窗口注意力 (SWA) ，证明了更优的「模型架构」比「蛮力堆砌参数」更具资本效率"
+    }
+  },
+  {
+    "date": "2023-09-20",
+    "data": {
+      "title": "OpenAI 推出 DALL-E 3",
+      "desc": "OpenAI 宣布推出其 AI 图像生成器 DALL-E 3，能够创造出更为精细和详细的图像。"
+    }
+  },
+  {
+    "date": "2023-08-03",
+    "data": {
+      "title": "阿里巴巴推出 Qwen-7B 开源模型",
+      "desc": "阿里巴巴发布了通义千问系列的第一个开源模型 Qwen-7B"
+    }
+  },
+  {
+    "date": "2023-07-18",
+    "data": {
+      "title": "Meta 发表 LLaMA 2 模型",
+      "desc": "Meta 正式发布 Llama 2，并宣布可免费用于研究和商业用途，为全球企业和开发者提供了一个免费且性能接近 GPT-3.5的闭源模型替代品"
+    }
+  },
+  {
+    "date": "2023-07-13",
+    "data": {
+      "title": "FTC 调查 ChatGPT 是否造成损害",
+      "desc": "美国联邦贸易委员会 (FTC) 对 ChatGPT 展开调查，以确定其是否因向用户提供不正确的信息而造成了损害。"
+    }
+  },
+  {
+    "date": "2023-07-12",
+    "data": {
+      "title": "Elon Musk 成立 xAI",
+      "desc": "由于为避免日后与OpenAI产生利益衝突，再加上不同意OpenAI管理阶层及其对人工智慧安全的态度，Elon Musk于2018年离开OpenAI董事会。后于 2023 年 7 月 12 日创办 xAI，由多位 OpenAI、Google DeepMind、微软、特斯拉、Twitter等机构前员工组成。"
+    }
+  },
+  {
+    "date": "2023-07-11",
+    "data": {
+      "title": "Anthorpic 推出 Claude 2 模型",
+      "desc": "Anthropic 推出全新模型Claude 2。公司声称 Claude 2 效能更佳，回应时间更长，易于沟通，能够清晰地解释其思考过程，更不容易产生有害输出，并且记忆力更强。使用者每次提示最多可以输入 10 万个token，相当于可以处理数百页的技术文檔，甚至一本书。"
+    }
+  },
+  {
+    "date": "2023-05-30",
+    "data": {
+      "title": "Nvidia 市值突破 1 万亿美元",
+      "desc": "在 AI 驱动的乐观情绪下，Nvidia 股价大幅上涨，使其市值达到 1 万亿美元。"
+    }
+  },
+  {
+    "date": "2023-04-11",
+    "data": {
+      "title": "阿里巴巴推出「通义千问」",
+      "desc": "阿里巴巴集团 (Alibaba) 宣布推出其大型语言模型「通义千问」(Tongyi Qianwen)，并宣布将整合到阿里巴巴生态系的所有业务中，标誌着大型模型开始在中国的商业生态中落地。"
+    }
+  },
+  {
+    "date": "2023-03-31",
+    "data": {
+      "title": "义大利短暂禁用 ChatGPT",
+      "desc": "由于对数据隐私的担忧，义大利的数据保护机构下令暂时禁用 ChatGPT。"
+    }
+  },
+  {
+    "date": "2023-03-14",
+    "data": {
+      "title": "Anthorpic 推出 Claude 模型",
+      "desc": "Anthropic发表了两个产品的版本：Claude和Claude Instant，后者更为轻巧。Claude 确立了「AI 安全」的产品差异化路线，并它基于「宪法 AI」(Constitutional AI) 理念 ，旨在使其「更有帮助、诚实且无害」。"
+    }
+  },
+  {
+    "date": "2023-03-14",
+    "data": {
+      "title": "OpenAI 推出 ChatGPT-4.0",
+      "desc": "OpenAI 发布 ChatGPT-4.0，此版本在可靠性、创造力和解决问题能力方面均有显着提升。"
+    }
+  },
+  {
+    "date": "2023-02-24",
+    "data": {
+      "title": "Meta 发表 LLaMA 模型",
+      "desc": "Meta AI 发布了 LLaMA (Large Language Model Meta AI) 模型家族（7B 至 65B 参数），最初仅将授权给学术研究者，但在发布后一周，该模型权重就透过 BitTorrent 被洩漏到了网路上"
+    }
+  },
+  {
+    "date": "2023-02-14",
+    "data": {
+      "title": "微软整合 AI 至自家浏览器",
+      "desc": "微软宣布将 OpenAI 的大型语言模型整合到 Bing 搜寻引擎和 Edge 浏览器中，推出「New Bing」（后更名为 Copilot）。"
+    }
+  },
+  {
+    "date": "2023-02-06",
+    "data": {
+      "title": "Google 发表 Bard 模型",
+      "desc": "在微软 (Microsoft) 宣布推出其 AI 聊天机器人 Bing Chat 的前一天，Google 仓促宣布了自家的生成式 AI 工具 Bard，但在其 2月8号首次公开演示中提供错误的答案，导致 Google 母公司 Alphabet 股价下跌。"
+    }
+  },
+  {
+    "date": "2023-01-23",
+    "data": {
+      "title": "微软对 OpenAI 进行 100 亿美元投资",
+      "desc": "微软宣布对 OpenAI 进行第三阶段的数十亿美元投资。OpenAI 获得了用于训练 GPT-4 及后续模型的庞大算力（Azure 云端资源 ），而微软则获得了 OpenAI 最先进模型的优先使用权"
+    }
+  },
+  {
+    "date": "2022-11-30",
+    "data": {
+      "title": "OpenAI 推出 ChatGPT-3.5",
+      "desc": "OpenAI 公开发布 ChatGPT-3.5，这是一款突破性的生成式 AI 工具，能根据文字输入生成类似人类的长篇回应。该工具在短短五天内用户数就突破了 100 万。"
+    }
+  },
+  {
+    "date": "2022-08-01",
+    "data": {
+      "title": "Perplexity AI 成立",
+      "desc": "由 Aravind Srinivas（前 OpenAI）、Denis Yarats（前 Meta）、Johnny Ho（前 Quora）等人创立，利用现有的语言模型（如 GPT）来打造一个专门的「答案引擎」(Answer Engine)，专注于取代传统的关键字搜寻，象征进入「后 LLM 时代」的垂直应用探索时期。"
+    }
+  },
+  {
+    "date": "2022-07-22",
+    "data": {
+      "title": "DeepMind 发布 AlphaFold 2",
+      "desc": "DeepMind 发布 AlphaFold 2，用于预测、解决蛋白质折迭问题，在生物学领域引发革命性突破。Demis Hassabis和John Jumpe因管理该计划而在2024年获得诺贝尔化学奖。"
+    }
+  },
+  {
+    "date": "2022-07-12",
+    "data": {
+      "title": "Midjourney 进入公开 Beta 测试",
+      "desc": "由 David Holz（Leap Motion 创办人）领导的 Midjourney 实验室，向公众开放了其文生图模型的 Beta 测试。同年9月，在一场美国科罗拉多州举办的艺术竞赛中，得奖者Jason Allen凭藉Midjourney生成的作品击败其他参赛者，引发争议。"
+    }
+  },
+  {
+    "date": "2022-04-06",
+    "data": {
+      "title": "OpenAI 发表 DALL-E 2",
+      "desc": "OpenAI 推出 DALL-E 2，这是一个能根据文本描述生成高解析度、高逼真度图像的 AI 模型，证明了 Transformer 和扩散模型（Diffusion Model）的结合，能够将 LLM 的「概念理解」能力扩展到视觉领域。"
+    }
+  },
+  {
+    "date": "2022-03-22",
+    "data": {
+      "title": "NVIDIA 宣布 H100 GPU 与 Hopper 架构",
+      "desc": "英伟达（Nvidia）在 GTC 大会上正式揭晓了其下一代资料中心 GPU 架构 Hopper，并推出了首款产品 NVIDIA H100。其内建「Transformer 引擎」，能显着加速大型语言模型 (LLM) 的训练和推理。相较于上一代 A100，H100 据称可提供高达 9 倍的 AI 训练速度和 30 倍的 AI 推理速度，成为驱动后续 ChatGPT 及所有生成式 AI 爆发的核心硬件基础"
+    }
+  },
+  {
+    "date": "2021-01-01",
+    "data": {
+      "title": "Anthropic 成立",
+      "desc": "由前 OpenAI 研究副总裁 Dario Amodei 及其妹妹 Daniela Amodei 带领一批 OpenAI 核心员工出走，创立 Anthropic。据称是对 OpenAI 接受微软投资、转向商业化以及对 GPT-3 安全性日益担忧而离开。Anthropic 的成立也代表了「安全优先」(Safety-first) 的 AI 研发路线。"
+    }
+  },
+  {
+    "date": "2020-06-11",
+    "data": {
+      "title": "OpenAI 推出 GPT-3 API",
+      "desc": "OpenAI 发表 GPT-3（1750 亿参数），参数规模比 GPT-2 大 100 倍，其展现出「情境学习」(In-context Learning) 能力（即 Zero-shot / Few-shot，无需微调就能靠提示词完成任务），但宣布不再开源模型，而是透过 API 提供服务，标誌着其从「非营利研究室」向「商业 AI 巨头」的转型。"
+    }
+  },
+  {
+    "date": "2019-02-14",
+    "data": {
+      "title": "OpenAI 发表 GPT-2 模型",
+      "desc": "OpenAI 发表 GPT-2（15 亿参数）模型，能够翻译文本、回答问题、总结段落，并产生文本输出。"
+    }
+  },
+  {
+    "date": "2018-06-11",
+    "data": {
+      "title": "OpenAI 发表 GPT-1 论文",
+      "desc": "OpenAI 发表《透过生成式预训练提升语言理解》论文，是继2017年Google推出Transformer架构后，OpenAI推出的第一个大型语言模型。采取新的训练模式，包括无监督式的「生成式预训练」(Generative Pre-training)，以及有监督的 「判别式微调」(Discriminative Fine-tuning)，证明了可以先在海量无标註数据上（如网路文本）学习通用的语言规律（预测下一个词），然后再用少量有标註数据微调，以解决特定任务。"
+    }
+  },
+  {
+    "date": "2017-06-12",
+    "data": {
+      "title": "Google 发表 &quot;Attention Is All You Need&quot; 论文",
+      "desc": "Google Brain 团队发表 &quot;Attention Is All You Need&quot; 论文，提出 Transformer 架构，其核心是「自注意力机制」(Self-Attention)，摒弃了先前自然语言处理 (NLP) 领域主流的 RNN/LSTM 循环结构，Transformer 可以对输入序列（如整个句子）中的所有 tokens 并行处理，释放 GPU 的并行运算能力，也使得训练大型语言模型（如后来的 GPT-3）更具有可行性。"
+    }
+  },
+  {
+    "date": "2016-03-15",
+    "data": {
+      "title": "DeepMind AlphaGo 击败围棋世界冠军李世乭",
+      "desc": "Google 旗下的 DeepMind 所开发的 AlphaGo，在首尔的五局制比赛中，以 4:1 的压倒性胜利击败了围棋世界冠军李世乭。围棋可能的局面数量超过已知宇宙的原子总数 ，使得「蛮力搜索」变得不可行，而 AlphaGo 采用深度神经网路（用于评估局势和「棋感」）与强化学习（用于自我对弈学习），证明了 AI 不仅能计算，还能透过学习掌握「直觉」和「大局观」。"
+    }
+  },
+  {
+    "date": "2015-12-08",
+    "data": {
+      "title": "OpenAI 成立",
+      "desc": "OpenAI 由 Sam Altman、Elon Musk、Ilya Sutskever、Greg Brockman 等人共同创立，最初是一家非营利组织 ，其核心使命是「确保通用人工智慧 (AGI) 惠及全人类」。"
+    }
+  }
+]
