@@ -1,0 +1,8 @@
+.antv-container {
+  margin-top: var(--spacing-p-margin-y);
+  margin-bottom: var(--spacing-p-margin-y);
+}
+
+.antv-container figcaption {
+  text-align: center;
+}

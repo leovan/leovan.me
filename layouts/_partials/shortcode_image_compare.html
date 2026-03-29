@@ -1,5 +1,5 @@
 {{- if $.Page.Store.Get "shortcode-image-compare" }}
-  <script src="https://cdn.jsdmirror.com/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/image-compare-viewer@{{ $.Site.Params.imageCompareViewerVersion }}/dist/image-compare-viewer.min.js"></script>
   <script type="text/javascript">
     (function (d) {
       d.querySelectorAll(".shortcode-image-compare").forEach(function (el) {

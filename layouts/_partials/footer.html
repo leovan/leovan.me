@@ -66,7 +66,7 @@
           let giscusCss = theme === "dark" ? darkGiscusCss : lightGiscusCss;
           let giscusScript = document.getElementById("giscus-script");
           giscusScript.setAttribute("data-theme", giscusCss);
-          {{- if $.Site.BuildDrafts }}
+          {{- if $.Page.Draft }}
             giscusScript.setAttribute("data-src", "https://giscus.app/client.js");
           {{- else }}
             giscusScript.setAttribute("src", "https://giscus.app/client.js");

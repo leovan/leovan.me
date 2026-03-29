@@ -3,10 +3,10 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css"
+    href="{{ $.Site.Params.jsdelivrMirror }}/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.css"
   />
   <link rel="stylesheet" type="text/css" href="/css/_shortcodes/swiper.css" />
-  <script src="https://cdn.jsdmirror.com/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/swiper@{{ $.Site.Params.swiperVersion }}/swiper-bundle.min.js"></script>
 {{- end }}
 
 {{- $data := dict }}

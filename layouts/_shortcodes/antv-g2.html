@@ -1,0 +1,50 @@
+{{- if not ($.Page.Store.Get "shortcode-antv-g2") }}
+  {{- $.Page.Store.Set "shortcode-antv-g2" 1 }}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/_shortcodes/antv.css"
+  />
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/@antv/g2@{{ $.Site.Params.g2Version }}/dist/g2.min.js"></script>
+{{- end }}
+
+{{- if not ($.Page.Store.Get "shortcode-antv-g2-id") }}
+  {{- $.Page.Store.Set "shortcode-antv-g2-id" 1 }}
+{{- else }}
+  {{- $.Page.Store.Set "shortcode-antv-g2-id" (add ($.Page.Store.Get "shortcode-antv-g2-id") 1) }}
+{{- end }}
+
+{{- $containerId := printf "antv-g2-container-%d" ($.Page.Store.Get "shortcode-antv-g2-id") }}
+{{- $height := .Get "height" | default "480px" }}
+{{- $width := .Get "width" | default "100%" }}
+{{- $autoFit := .Get "autoFit" | default true }}
+{{- $padding := .Get "padding" | default "auto" }}
+{{- $margin := .Get "margin" | default 16 }}
+{{- $caption := or (.Get "caption") (.Get "title") }}
+{{- $script := .Get "script" | resources.Get }}
+
+<div class="antv-container">
+  <div class="antv-g2-container" id="{{ $containerId }}" style="height: {{ $height }};"></div>
+  {{- if $caption }}
+    <figcaption>{{ $caption | markdownify }}</figcaption>
+  {{- end }}
+</div>
+
+<script>
+(function (d) {
+  const chart = new G2.Chart({
+    container: "{{ $containerId }}",
+    autoFit: {{ $autoFit }},
+    padding: {{ $padding }},
+    margin: {{ $margin }},
+  });
+
+  {{ $script.Content | safeJS }}
+
+  chart.theme({ type: getTheme() === "dark" ? "dark" : "light" });
+
+  antvG2Charts.push(chart);
+
+  chart.render();
+})(document);
+</script>

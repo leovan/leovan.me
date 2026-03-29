@@ -1,5 +1,6 @@
 let lightGiscusCss = "{{ absURL "css/giscus-light.css" }}";
-let darkGiscusCss= "{{ absURL "css/giscus-dark.css" }}";
+let darkGiscusCss = "{{ absURL "css/giscus-dark.css" }}";
+let antvG2Charts = [];
 
 function getTheme() {
   let theme = "light";
@@ -38,6 +39,17 @@ function setGiscusTheme(theme) {
   });
 }
 
+function setAntvTheme(theme) {
+  antvG2Charts.forEach((chart) => {
+    try {
+      chart.theme({ type: theme === "dark" ? "dark" : "light" });
+      chart.render(false);
+    } catch (error) {
+      console.error("设置 AntV G2 主题错误：", error);
+    }
+  });
+}
+
 function setTheme(theme) {
   localStorage.setItem("theme", theme);
 
@@ -48,6 +60,7 @@ function setTheme(theme) {
   }
 
   setGiscusTheme(theme);
+  setAntvTheme(theme);
 }
 
 function toggleTheme() {

@@ -1,5 +1,15 @@
+{{- if .Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from "{{ $.Site.Params.jsdelivrMirror }}/npm/mermaid@{{ $.Site.Params.mermaidVersion }}/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: getTheme() === "dark" ? "dark" : "neutral",
+    });
+  </script>
+{{- end }}
+
 {{- if strings.Contains .Content "data-lucide" }}
-  <script src="https://cdn.jsdmirror.com/npm/lucide@{{ $.Site.Params.lucideVersion }}/dist/umd/lucide.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lucide@{{ $.Site.Params.lucideVersion }}/dist/umd/lucide.min.js"></script>
   <script>
     lucide.createIcons();
   </script>
@@ -16,7 +26,7 @@
 {{- end }}
 
 {{- if and (not .IsHome) .Content }}
-  <script src="https://cdn.jsdmirror.com/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 {{- end }}
 
 {{- partial "highlight.html" . }}

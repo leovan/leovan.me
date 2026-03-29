@@ -1,9 +1,9 @@
 {{- if $.Page.Store.Get "shortcode-gallery" }}
-  <script src="https://cdn.jsdmirror.com/npm/jquery@{{ $.Site.Params.jQueryVersion }}/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdmirror.com/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/js/jquery.justifiedGallery.min.js"></script>
-  <script src="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/lightgallery.min.js"></script>
-  <script src="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/thumbnail/lg-thumbnail.min.js"></script>
-  <script src="https://cdn.jsdmirror.com/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/jquery@{{ $.Site.Params.jQueryVersion }}/dist/jquery.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/justifiedGallery@{{ $.Site.Params.justifiedgalleryVersion }}/dist/js/jquery.justifiedGallery.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/lightgallery.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lightgallery@{{ $.Site.Params.lightgalleryVersion }}/plugins/zoom/lg-zoom.min.js"></script>
 
   <script>
     function setGalleryItemElementAttribute(el, name, value) {
