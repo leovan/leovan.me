@@ -1,10 +1,23 @@
 {{- if .Store.Get "hasMermaid" }}
   <script type="module">
     import mermaid from "{{ $.Site.Params.jsdelivrMirror }}/npm/mermaid@{{ $.Site.Params.mermaidVersion }}/dist/mermaid.esm.min.mjs";
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: getTheme() === "dark" ? "dark" : "neutral",
+
+    document.querySelectorAll(".mermaid").forEach(element => {
+      element.setAttribute("data-text", element.innerHTML);
     });
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: getTheme() === "dark" ? "dark" : "neutral",
+      darkMode: getTheme() === "dark" ? true : false,
+      fontFamily: "var(--font-sans)",
+    });
+
+    await mermaid.run({
+      querySelector: '.mermaid',
+    });
+
+    window.mermaid = mermaid;
   </script>
 {{- end }}
 

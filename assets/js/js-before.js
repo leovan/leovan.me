@@ -50,6 +50,28 @@ function setAntvTheme(theme) {
   });
 }
 
+function setMermaidTheme(theme) {
+  if (window.mermaid) {
+    document.querySelectorAll(".mermaid").forEach(element => {
+      element.removeAttribute("data-processed");
+      element.innerHTML = element.getAttribute("data-text");
+    });
+
+    window.mermaid.initialize({
+      startOnLoad: false,
+      theme: theme === "dark" ? "dark" : "neutral",
+      darkMode: theme === "dark" ? true : false,
+      fontFamily: "var(--font-sans)",
+    });
+
+    (async () => {
+      await window.mermaid.run({
+        querySelector: '.mermaid',
+      });
+    })();
+  }
+}
+
 function setTheme(theme) {
   localStorage.setItem("theme", theme);
 
@@ -61,6 +83,7 @@ function setTheme(theme) {
 
   setGiscusTheme(theme);
   setAntvTheme(theme);
+  setMermaidTheme(theme);
 }
 
 function toggleTheme() {
