@@ -123,7 +123,7 @@
 
   details summary::after  {
     line-height: 1em;
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+    content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
     transition: transform 0.2s ease;
     transform-origin: center;
   }
@@ -311,29 +311,29 @@
       cursor: pointer;
       border-color: var(--color-toggle-theme-border);
 
-      .icon {
+      .icon-container {
         @apply size-6.5 rounded-full p-1.5 leading-0;
       }
 
-      .icon-toggle-theme-light {
+      .icon-toggle-theme-light-container {
         background-color: var(--color-toggle-theme-background-light);
       }
 
-      .icon-toggle-theme-dark {
+      .icon-toggle-theme-dark-container {
         background-color: var(--color-toggle-theme-background-dark);
       }
 
-      .icon::before {
+      .icon {
         font-size: 14px !important;
       }
 
-      .icon-toggle-theme-light::before {
-        mask-image: var(--icon-lucide-sun);
+      .icon-toggle-theme-light {
+        mask-image: var(--icon-sun);
         background-color: var(--color-toggle-theme-light);
       }
 
-      .icon-toggle-theme-dark::before {
-        mask-image: var(--icon-lucide-moon);
+      .icon-toggle-theme-dark {
+        mask-image: var(--icon-moon);
         background-color: var(--color-toggle-theme-dark);
       }
     }
@@ -377,7 +377,7 @@
       background: none;
     }
 
-    .icon-toggle-theme::before {
+    .icon-toggle-theme {
       mask-image: var(--icon-toggle-theme);
       background-color: var(--color-html-background);
     }

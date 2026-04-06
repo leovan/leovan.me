@@ -16,22 +16,22 @@ disable_highlight: true
 
 <h2 class="center no-anchor">Fan Yeliang (Leo Van)</h2>
 
-## <i data-lucide="crosshair"></i> Research Interest
+## <i class="icon-mask icon-lucide-crosshair"></i> Research Interest
 
 - I am working on application of **data science** in **security and risk**.
 - Also I am saturated with application of **data science** in **agriculture** and **industry**.
 
-## <i data-lucide="graduation-cap"></i> Education
+## <i class="icon-mask icon-lucide-graduation-cap"></i> Education
 
 - 2012.09 ~ 2015.03, **Hebei University of Technology**, M.S. in Information Management
 - 2008.09 ~ 2012.07, **Hebei University of Technology**, B.S. in Business Administration
 
-## <i data-lucide="building-2"></i> Work Experiences
+## <i class="icon-mask icon-lucide-building-2"></i> Work Experiences
 
 1. 2020.08 ~ Present, **Meituan, Inc.** Risk Data Mining Expert
 2. 2015.04 ~ 2020.08, **JD.com, Inc.** Senior Algorithm Engineer
 
-## <i data-lucide="notebook-tabs"></i> Project Experiences
+## <i class="icon-mask icon-lucide-notebook-tabs"></i> Project Experiences
 
 ### Security & Risk
 
@@ -78,26 +78,26 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 - Development of a hybrid product life cycle identification model based on Bass Diffusion model, optimized time series similarity method and clustering method. It got an **accuracy of 95%+** when identifying the excess inventory products, which helped to make loans goods pledge decisions and calculate the loan-to-value ratio.
 - Development of product information fusion model and system with ElasticSearch which got **90%+ recognition accuracy** and provided accurate and relevant information, such as price, etc.
 
-## <i data-lucide="settings"></i> Skills
+## <i class="icon-mask icon-lucide-settings"></i> Skills
 
 ### Programing Languages
 
-- <i class="icon icon-python"></i> Python: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i>
-- <i class="icon icon-r"></i> R: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i>
-- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+- <i class="icon icon-python"></i> Python: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i>
+- <i class="icon icon-r"></i> R: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i>
+- <i class="icon icon-javascript"></i> JavaScript / <i class="icon icon-typescript"></i> TypeScript: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i>
 
 ### Frameworks
 
-- <i class="icon icon-pytorch"></i> PyTorch: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-- <i class="icon icon-spark"></i> Spark: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-- <i class="icon icon-qt"></i> Qt: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-- <i class="icon icon-react"></i> React: <i class="icon-mask icon-lucide-star-filled"></i><i class="icon-mask icon-lucide-star-filled"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+- <i class="icon icon-pytorch"></i> PyTorch: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i>
+- <i class="icon icon-spark"></i> Spark: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i>
+- <i class="icon icon-qt"></i> Qt: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i>
+- <i class="icon icon-react"></i> React: <i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-filled"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i><i class="icon-mask icon-star-outline"></i>
 
 ### Foreign Languages
 
 - English: CET-6 518, fluent in speaking, reading and writing skillful in English.
 
-## <i data-lucide="award"></i> Research Achievements
+## <i class="icon-mask icon-lucide-award"></i> Research Achievements
 
 ### Papers
 

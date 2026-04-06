@@ -1,0 +1,21 @@
+{{- $class := or (.Get "class") "" }}
+{{- $name := or (.Get "name") "" }}
+{{- $summary := or (.Get "summary") "Details" }}
+{{- $title := or (.Get "title") "" }}
+{{- $open := false }}
+{{- if in (slice "false" false 0) (.Get "open") }}
+  {{- $open = false }}
+{{- else if in (slice "true" true 1) (.Get "open") }}
+  {{- $open = true }}
+{{- end }}
+
+{{- /* Render. */}}
+<details
+  {{- with $class }} class="{{ . }}" {{- end }}
+  {{- with $name }} name="{{ . }}" {{- end }}
+  {{- with $open }} open {{- end }}
+  {{- with $title }} title="{{ . }}" {{- end -}}
+>
+  <summary><span>{{ $summary | .Page.RenderString }}</span></summary>
+  {{ .Inner | .Page.RenderString (dict "display" "block") -}}
+</details>

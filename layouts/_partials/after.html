@@ -21,13 +21,6 @@
   </script>
 {{- end }}
 
-{{- if strings.Contains .Content "data-lucide" }}
-  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/lucide@{{ $.Site.Params.lucideVersion }}/dist/umd/lucide.min.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-{{- end }}
-
 <script src="/js/theme.js"></script>
 
 {{- if not .IsHome }}

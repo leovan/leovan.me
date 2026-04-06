@@ -1,9 +1,20 @@
 @theme {
-  --icon-lucide-moon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>');
-  --icon-lucide-sun: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>');
-  --icon-lucide-star-filled: url("/images/icons/lucide/star-filled.svg");
+  --icon-moon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>');
+  --icon-sun: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>');
+  --icon-star-filled: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>');
+  --icon-star-outline: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>');
 
-  --icon-toggle-theme: var(--icon-lucide-moon);
+  --icon-toggle-theme: var(--icon-moon);
+
+  --icon-lucide-award: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award-icon lucide-award"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>');
+  --icon-lucide-brain: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>');
+  --icon-lucide-building-2: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2-icon lucide-building-2"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>');
+  --icon-lucide-crosshair: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair-icon lucide-crosshair"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>');
+  --icon-lucide-eye: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>');
+  --icon-lucide-graduation-cap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>');
+  --icon-lucide-hammer: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>');
+  --icon-lucide-notebook-tabs: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-tabs-icon lucide-notebook-tabs"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M15 2v20"/><path d="M15 7h5"/><path d="M15 12h5"/><path d="M15 17h5"/></svg>');
+  --icon-lucide-settings: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915A2.34 2.34 0 0 1 .67,14a2.34,2.34,0,0,0,3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>');
 
   --icon-adobe: url("/images/icons/adobe.svg");
   --icon-airbnb: url("/images/icons/airbnb.svg");
@@ -53,20 +64,19 @@
 
 @layer theme {
   .dark {
-    --icon-toggle-theme: var(--icon-lucide-sun);
+    --icon-toggle-theme: var(--icon-sun);
   }
 }
 
-.icon,
-.icon-mask {
+.icon {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
 }
 
-.icon::before,
-.icon-mask::before {
+.icon,
+.icon-mask {
   display: inline-block;
   background-size: auto 1em;
   background-repeat: no-repeat;
@@ -76,206 +86,241 @@
   height: 1em;
   line-height: 1em;
   content: "";
-  vertical-align: -0.1em;
+  vertical-align: -0.15em;
   mask-size: 1em 1em;
 }
 
-.icon-mask::before {
-  mask-size: auto 1em;
+.icon-mask {
   background-color: var(--color-html-foreground);
 }
 
-.lucide {
-  width: 1em;
-  height: 1em;
+/* website */
+.icon-sun {
+  mask-image: var(--icon-sun);
+}
+
+.icon-moon {
+  mask-image: var(--icon-moon);
+}
+
+.icon-star-filled {
+  mask-image: var(--icon-star-filled);
+}
+
+.icon-star-outline {
+  mask-image: var(--icon-star-outline);
 }
 
 /* lucide */
-.icon-lucide-sun::before {
-  mask-image: var(--icon-lucide-sun);
+.icon-lucide-award {
+  mask-image: var(--icon-lucide-award);
 }
 
-.icon-lucide-moon::before {
-  mask-image: var(--icon-lucide-moon);
+.icon-lucide-brain {
+  mask-image: var(--icon-lucide-brain);
 }
 
-.icon-lucide-star-filled::before {
-  mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-filled-icon lucide-star-filled"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>');
+.icon-lucide-building-2 {
+  mask-image: var(--icon-lucide-building-2);
+}
+
+.icon-lucide-crosshair {
+  mask-image: var(--icon-lucide-crosshair);
+}
+
+.icon-lucide-eye {
+  mask-image: var(--icon-lucide-eye);
+}
+
+.icon-lucide-graduation-cap {
+  mask-image: var(--icon-lucide-graduation-cap);
+}
+
+.icon-lucide-hammer {
+  mask-image: var(--icon-lucide-hammer);
+}
+
+.icon-lucide-notebook-tabs {
+  mask-image: var(--icon-lucide-notebook-tabs);
+}
+
+.icon-lucide-settings {
+  mask-image: var(--icon-lucide-settings);
 }
 
 /* custom */
-.icon-adobe::before {
+.icon-adobe {
   background-image: var(--icon-adobe);
 }
 
-.icon-airbnb::before {
+.icon-airbnb {
   background-image: var(--icon-airbnb);
 }
 
-.icon-alibaba::before {
+.icon-alibaba {
   background-image: var(--icon-alibaba);
 }
 
-.icon-alipay::before {
+.icon-alipay {
   background-image: var(--icon-alipay);
 }
 
-.icon-apple::before {
+.icon-apple {
   background-image: var(--icon-apple);
 }
 
-.icon-bilibili::before {
+.icon-bilibili {
   background-image: var(--icon-bilibili);
 }
 
-.icon-c::before {
+.icon-c {
   background-image: var(--icon-c);
 }
 
-.icon-caffe2::before {
+.icon-caffe2 {
   background-image: var(--icon-caffe2);
 }
 
-.icon-cpp::before {
+.icon-cpp {
   background-image: var(--icon-cpp);
 }
 
-.icon-facebook::before {
+.icon-facebook {
   background-image: var(--icon-facebook);
 }
 
-.icon-firefox::before {
+.icon-firefox {
   background-image: var(--icon-firefox);
 }
 
-.icon-go::before {
+.icon-go {
   background-image: var(--icon-go);
 }
 
-.icon-google::before {
+.icon-google {
   background-image: var(--icon-google);
 }
 
-.icon-huggingface::before {
+.icon-huggingface {
   background-image: var(--icon-huggingface);
 }
 
-.icon-ibm::before {
+.icon-ibm {
   background-image: var(--icon-ibm);
 }
 
-.icon-java::before {
+.icon-java {
   background-image: var(--icon-java);
 }
 
-.icon-javascript::before {
+.icon-javascript {
   background-image: var(--icon-javascript);
 }
 
-.icon-julia::before {
+.icon-julia {
   background-image: var(--icon-julia);
 }
 
-.icon-keras::before {
+.icon-keras {
   background-image: var(--icon-keras);
 }
 
-.icon-linux::before {
+.icon-linux {
   background-image: var(--icon-linux);
 }
 
-.icon-macos::before {
+.icon-macos {
   background-image: var(--icon-macos);
 }
 
-.icon-microsoft::before {
+.icon-microsoft {
   background-image: var(--icon-microsoft);
 }
 
-.icon-modelscope::before {
+.icon-modelscope {
   background-image: var(--icon-modelscope);
 }
 
-.icon-mxnet::before {
+.icon-mxnet {
   background-image: var(--icon-mxnet);
 }
 
-.icon-nodejs::before {
+.icon-nodejs {
   background-image: var(--icon-nodejs);
 }
 
-.icon-paddlepaddle::before {
+.icon-paddlepaddle {
   background-image: var(--icon-paddlepaddle);
 }
 
-.icon-python::before {
+.icon-python {
   background-image: var(--icon-python);
 }
 
-.icon-pytorch::before {
+.icon-pytorch {
   background-image: var(--icon-pytorch);
 }
 
-.icon-qq::before {
+.icon-qq {
   background-image: var(--icon-qq);
 }
 
-.icon-qt::before {
+.icon-qt {
   background-image: var(--icon-qt);
 }
 
-.icon-r::before {
+.icon-r {
   background-image: var(--icon-r);
 }
 
-.icon-react::before {
+.icon-react {
   background-image: var(--icon-react);
 }
 
-.icon-restful::before {
+.icon-restful {
   background-image: var(--icon-restful);
 }
 
-.icon-ruby::before {
+.icon-ruby {
   background-image: var(--icon-ruby);
 }
 
-.icon-rust::before {
+.icon-rust {
   background-image: var(--icon-rust);
 }
 
-.icon-salesforce::before {
+.icon-salesforce {
   background-image: var(--icon-salesforce);
 }
 
-.icon-spark::before {
+.icon-spark {
   background-image: var(--icon-spark);
 }
 
-.icon-sonnet::before {
+.icon-sonnet {
   background-image: var(--icon-sonnet);
 }
 
-.icon-swift::before {
+.icon-swift {
   background-image: var(--icon-swift);
 }
 
-.icon-tensorflow::before {
+.icon-tensorflow {
   background-image: var(--icon-tensorflow);
 }
 
-.icon-typescript::before {
+.icon-typescript {
   background-image: var(--icon-typescript);
 }
 
-.icon-wechat::before {
+.icon-wechat {
   background-image: var(--icon-wechat);
 }
 
-.icon-windows::before {
+.icon-windows {
   background-image: var(--icon-windows);
 }
 
-.icon-youtube::before {
+.icon-youtube {
   background-image: var(--icon-youtube);
 }
