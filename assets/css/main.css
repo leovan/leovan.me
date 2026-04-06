@@ -110,7 +110,7 @@
     cursor: pointer;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 0.25rem;
-    background: var(--color-block-background) !important;
+    background: var(--color-block-background);
   }
 
   details summary::-webkit-details-marker {

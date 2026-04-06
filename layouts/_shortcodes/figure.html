@@ -23,13 +23,13 @@
     alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
     {{- end }}
     {{- $width := .Get "width" | default "auto" }}
-    {{- $largeMaxWidth := .Get "large-max-width" | default $width}}
-    {{- $middleMaxWidth := .Get "middle-max-width" | default $largeMaxWidth }}
-    {{- $smallMaxWidth := .Get "small-max-width" | default $middleMaxWidth  }}
+    {{- $largeMaxWidth := .Get "large-max-width" | default "100%"}}
+    {{- $middleMaxWidth := .Get "middle-max-width" | default "100%" }}
+    {{- $smallMaxWidth := .Get "small-max-width" | default "100%"  }}
     {{- $height := .Get "height" | default "auto" }}
-    {{- $largeMaxHeight := .Get "large-max-height" | default $height}}
-    {{- $middleMaxHeight := .Get "middle-max-height" | default $largeMaxHeight }}
-    {{- $smallMaxHeight := .Get "small-max-height" | default $middleMaxHeight  }}
+    {{- $largeMaxHeight := .Get "large-max-height" | default "100%" }}
+    {{- $middleMaxHeight := .Get "middle-max-height" | default "100%" }}
+    {{- $smallMaxHeight := .Get "small-max-height" | default "100%"  }}
     data-large-max-width="{{ $largeMaxWidth }}"
     data-middle-max-width="{{ $middleMaxWidth }}"
     data-small-max-width="{{ $smallMaxWidth }}"

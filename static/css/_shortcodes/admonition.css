@@ -324,6 +324,7 @@ html .shortcode-admonition-title:last-child {
 :root {
   --spacing-shortcode-admonition-title-icon-size: 1.3em;
   --spacing-shortcode-admonition-margin-x: 1em;
+  --spacing-shortcode-admonition-summary-margin-x: 0.5em;
   --spacing-shortcode-admonition-margin-y: 0.6em;
 }
 
@@ -334,6 +335,16 @@ html .shortcode-admonition-title:last-child {
 }
 
 .shortcode-admonition-no-icon .shortcode-admonition-title {
+  padding-left: var(--spacing-shortcode-admonition-margin-x);
+}
+
+.shortcode-admonition summary.shortcode-admonition-title {
+  padding-left: calc(var(--spacing-shortcode-admonition-title-icon-size) + var(--spacing-shortcode-admonition-margin-x) + 0.5em);
+  padding-right: var(--spacing-shortcode-admonition-summary-margin-x);
+  margin: 0 calc(var(--spacing-shortcode-admonition-summary-margin-x) * -2) auto calc(var(--spacing-shortcode-admonition-margin-x) * -1);
+}
+
+.shortcode-admonition-no-icon summary.shortcode-admonition-title {
   padding-left: var(--spacing-shortcode-admonition-margin-x);
 }
 

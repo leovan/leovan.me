@@ -25,9 +25,11 @@
     {{- if (ne $close true) }} open="open" {{- end }}
   >
     <summary class="shortcode-admonition-title">
-      {{ $title | markdownify }}
+      <span>{{ $title | markdownify }}</span>
     </summary>
-    <p class="shortcode-admonition-content">{{ .Inner | markdownify }}</p>
+    {{- with .Inner }}
+      <p class="shortcode-admonition-content">{{ . | markdownify }}</p>
+    {{- end }}
   </details>
 {{- else }}
   <div
@@ -36,6 +38,8 @@
     {{- if $hasTitle }}
       <p class="shortcode-admonition-title">{{ $title | markdownify }}</p>
     {{- end }}
-    <p class="shortcode-admonition-content">{{ .Inner | markdownify }}</p>
+    {{- with .Inner }}
+      <p class="shortcode-admonition-content">{{ . | markdownify }}</p>
+    {{- end }}
   </div>
 {{- end }}

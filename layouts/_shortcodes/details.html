@@ -16,6 +16,8 @@
   {{- with $open }} open {{- end }}
   {{- with $title }} title="{{ . }}" {{- end -}}
 >
-  <summary><span>{{ $summary | .Page.RenderString }}</span></summary>
+  <summary>
+    <span>{{ $summary | .Page.RenderString }}</span>
+  </summary>
   {{ .Inner | .Page.RenderString (dict "display" "block") -}}
 </details>
