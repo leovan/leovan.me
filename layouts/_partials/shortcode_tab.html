@@ -1,0 +1,22 @@
+{{- if $.Page.Store.Get "shortcode-tab" }}
+  <script>
+    document.addEventListener("change", (event) => {
+      const target = event.target;
+
+      if (
+        target.type === "radio" &&
+        target.classList.contains("shortcode-tab-input") &&
+        target.checked
+      ) {
+        const value = target.value;
+        const saveValueRadios = document.querySelectorAll(
+          `input[type="radio"][class="shortcode-tab-input"][value="${value}"]`,
+        );
+
+        saveValueRadios.forEach((radio) => {
+          radio.checked = true;
+        });
+      }
+    });
+  </script>
+{{- end }}

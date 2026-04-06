@@ -5,6 +5,7 @@ date: 2026-03-29
 slug: forces-and-relations-of-production-in-ai-era
 categories:
   - AI
+  - 思考
 tags:
   - 人工智能
   - AI

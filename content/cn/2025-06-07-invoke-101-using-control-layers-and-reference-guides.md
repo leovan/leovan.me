@@ -42,7 +42,7 @@ tags:
 本节将介绍如何使用控制层和指示来精确控制图片的生成。
 {{% /admonition %}}
 
-{{< tab id="video" labels-position="center" >}}
+{{< tab id="video" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1hjgtzrEeS" >}}

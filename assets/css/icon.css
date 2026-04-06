@@ -18,6 +18,7 @@
   --icon-firefox: url("/images/icons/firefox.svg");
   --icon-go: url("/images/icons/go.svg");
   --icon-google: url("/images/icons/google.svg");
+  --icon-huggingface: url("/images/icons/huggingface.svg");
   --icon-ibm: url("/images/icons/ibm.svg");
   --icon-java: url("/images/icons/java.svg");
   --icon-javascript: url("/images/icons/javascript.svg");
@@ -26,6 +27,7 @@
   --icon-linux: url("/images/icons/linux.svg");
   --icon-macos: url("/images/icons/macos.svg");
   --icon-microsoft: url("/images/icons/microsoft.svg");
+  --icon-modelscope: url("/images/icons/modelscope.svg");
   --icon-mxnet: url("/images/icons/mxnet.png");
   --icon-nodejs: url("/images/icons/nodejs.svg");
   --icon-paddlepaddle: url("/images/icons/paddlepaddle.png");
@@ -72,8 +74,9 @@
   font-size: 1em;
   width: 1em;
   height: 1em;
+  line-height: 1em;
   content: "";
-  vertical-align: text-bottom;
+  vertical-align: -0.1em;
   mask-size: 1em 1em;
 }
 
@@ -153,6 +156,10 @@
   background-image: var(--icon-google);
 }
 
+.icon-huggingface::before {
+  background-image: var(--icon-huggingface);
+}
+
 .icon-ibm::before {
   background-image: var(--icon-ibm);
 }
@@ -183,6 +190,10 @@
 
 .icon-microsoft::before {
   background-image: var(--icon-microsoft);
+}
+
+.icon-modelscope::before {
+  background-image: var(--icon-modelscope);
 }
 
 .icon-mxnet::before {

@@ -75,7 +75,7 @@ Qt 和 PyQt 均采用比较新的版本，版本号需大于 5.10。Qt 直接从
 
 本文以 [Sci-Hub EVA](https://github.com/leovan/SciHubEVA) 作为示例介绍 PyQt 的跨平台 GUI 程序开发。Sci-Hub EVA 是一个利用 Sci-Hub API 下载论文的界面化小工具，功能相对简单。首先介绍一下工程的目录：
 
-```txt
+```plain
 docs\
 images\
 translations\
@@ -136,7 +136,7 @@ self.tr('Saved PDF as: ')
 
 同时将具有待翻译文本的文件加入到 `SciHubEVA.pro` 的主工程文件中，用于后续翻译处理：
 
-```text
+```plain
 lupdate_only {
 SOURCES += \
     ui/SciHubEVA.qml \

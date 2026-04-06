@@ -45,11 +45,5 @@
 .shortcode-tab .shortcode-tab-item {
   order: 999;
   width: 100%;
-  border-top: 1px solid var(--color-shortcode-tab-labels-bottom);
   display: none
-}
-
-.shortcode-tab-border .shortcode-tab-item {
-  padding-left: 1em;
-  padding-right: 1em;
 }

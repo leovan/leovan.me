@@ -39,7 +39,7 @@ ln -s /opt/scala-2.12.14 /opt/scala
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 # Scala
 export SCALA_HOME=/opt/scala
 export PATH=$PATH:$SCALA_HOME/bin
@@ -64,7 +64,7 @@ ln -s /opt/spark-3.1.2-bin-hadoop3.2 /opt/spark
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 # Spark
 export SPARK_HOME=/opt/spark
 export PATH=$PATH:$SPARK_HOME/bin
@@ -101,7 +101,7 @@ cp /opt/spark/conf/spark-defaults.conf.template /opt/spark/conf/spark-defaults.c
 
 修改 `spark-defaults.conf` 文件内容如下：
 
-```txt
+```plain
 spark.eventLog.enabled              true
 spark.eventLog.compress             true
 spark.eventLog.dir                  hdfs://vm-01:9000/logs/spark
@@ -118,7 +118,7 @@ cp /opt/spark/conf/workers.template /opt/spark/conf/workers
 
 修改 `workers` 文件内容如下：
 
-```txt
+```plain
 vm-01
 vm-02
 vm-03
@@ -227,7 +227,7 @@ sudo chown -R leo:leo /nfs
 
 在 vm-01 上修改 `/etc/exports` 文件，配置 NFS 共享目录：
 
-```txt
+```plain
 /nfs 192.168.56.1/24(rw,sync,no_root_squash,no_subtree_check)
 ```
 
@@ -248,7 +248,7 @@ sudo mount vm-01:/nfs /nfs
 
 在 `/etc/fstab` 中添加如下内容实现开机自动挂载：
 
-```txt
+```plain
 vm-01:/nfs /nfs nfs rw
 ```
 
@@ -281,7 +281,7 @@ by running conda init? [yes|no]
 
 修改 `~/.condarc` 更改 Anaconda 镜像：
 
-```txt
+```plain
 channels:
   - defaults
 show_channel_urls: true
@@ -334,7 +334,7 @@ conda activate spark
 
 输入 `pyspark` 进入 PySaprk Shell：
 
-```txt
+```plain
 Welcome to
       ____              __
      / __/__  ___ _____/ /__

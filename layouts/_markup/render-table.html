@@ -1,0 +1,48 @@
+<table
+  {{- range $k, $v := .Attributes }}
+    {{- if $v }}
+      {{- printf " %s=%q" $k ($v | transform.HTMLEscape) | safeHTMLAttr }}
+    {{- end }}
+  {{- end }}>
+  {{- $caption := or (.Attributes.caption) (.Attributes.title) }}
+  {{- with $caption }}
+    <caption>{{ . | markdownify }}</caption>
+  {{- end }}
+  <thead>
+    {{- range .THead }}
+      <tr>
+        {{- range . }}
+          <th
+            {{- with .Alignment }}
+              {{- printf " style=%q" (printf "text-align: %s" .) | safeHTMLAttr }}
+            {{- end -}}
+          >
+            {{- .Text -}}
+          </th>
+        {{- end }}
+      </tr>
+    {{- end }}
+  </thead>
+  <tbody>
+    {{- range .TBody }}
+      <tr>
+        {{- range . }}
+          <td
+            {{- with .Alignment }}
+              {{- printf " style=%q" (printf "text-align: %s" .) | safeHTMLAttr }}
+            {{- end -}}
+          >
+            {{- .Text -}}
+          </td>
+        {{- end }}
+      </tr>
+    {{- end }}
+  </tbody>
+  <tfoot>
+    {{- with .Attributes.footnote }}
+      <tr>
+        <td colspan="{{ index $.THead 0 | len }}">{{ . | markdownify }}</td>
+      </tr>
+    {{- end }}
+  </tfoot>
+</table>

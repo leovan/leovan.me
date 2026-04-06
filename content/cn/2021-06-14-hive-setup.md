@@ -113,7 +113,7 @@ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
 将绑定地址替换为 `0.0.0.0`：
 
-```txt
+```plain
 bind-address            = 0.0.0.0
 mysqlx-bind-address     = 0.0.0.0
 ```
@@ -167,7 +167,7 @@ ln -s /opt/apache-hive-3.1.2-bin /opt/hive
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 ## Hive
 export HIVE_HOME=/opt/hive
 export PATH=$PATH:$HIVE_HOME/bin

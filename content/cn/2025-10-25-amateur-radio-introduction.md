@@ -25,7 +25,7 @@ tags:
 
 从军事领域中的通信，到末世题材影视中的通联，再到越野中的车队通话，都让我对「无线电」这项技术感到高级和炫酷。可能在更多人的眼中无线电或是《永不消逝的电波》中发报机，亦或是保安大哥手中的对讲机。当你深入去了解的时候会发现，这东西不会那么遥不可及，当然也没有想象中那么简单，差评君的一期视频可以带你更好的了解什么是无线电。
 
-{{< tab id="video-1" labels-position="center" >}}
+{{< tab id="video-1" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1QuzhYCESt" >}}
@@ -61,7 +61,7 @@ tags:
 
 针对新手小白的对讲机选购可以参考下面这个视频，只能说没有最好的，从价格、性能、颜值等角度选择适合自己的就好。
 
-{{< tab id="video-2" labels-position="center" >}}
+{{< tab id="video-2" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1SJMiz9Ego" >}}

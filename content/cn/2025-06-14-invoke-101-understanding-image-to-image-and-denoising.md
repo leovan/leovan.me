@@ -23,7 +23,7 @@ tags:
 本节将介绍「 [图像到图像](https://getimg.ai/guides/guide-to-image-to-image)」和「降噪」两个重要概念，帮助大家更好的理解 Invoke 中的画布是如何工作的，或者说生成式 AI 图片生成是如何工作的。
 {{% /admonition %}}
 
-{{< tab id="video" labels-position="center" >}}
+{{< tab id="video" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1s484zyE9S" >}}

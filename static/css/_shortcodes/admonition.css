@@ -1,6 +1,7 @@
 :root {
   --color-shortcode-admonition-foreground: #444444;
   --color-shortcode-admonition-background: #f5f5f5;
+  --color-shortcode-admonition-highlight-background: #ececec;
 
   --icon-admonition-icon-note: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-paperclip" viewBox="0 0 24 24"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></svg>');
   --icon-admonition-icon-abstract: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-notebook-text" viewBox="0 0 24 24"><path d="M2 6h4m-4 4h4m-4 4h4m-4 4h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9.5 8h5m-5 4H16m-6.5 4H14"/></svg>');
@@ -19,6 +20,7 @@
 .dark {
   --color-shortcode-admonition-foreground: #cccccc;
   --color-shortcode-admonition-background: #383838;
+  --color-shortcode-admonition-highlight-background: #3e3e3e;
 }
 
 .shortcode-admonition {
@@ -30,6 +32,10 @@
   margin: 1.5625em 0;
   padding: 0 1em;
   page-break-inside: avoid;
+
+  .highlight {
+    background-color: var(--color-shortcode-admonition-highlight-background) !important;
+  }
 }
 
 .shortcode-admonition > * {

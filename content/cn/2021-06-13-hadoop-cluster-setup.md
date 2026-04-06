@@ -63,7 +63,7 @@ ln -s /opt/jdk1.8.0_291 /opt/jdk
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 # JDK
 export JAVA_HOME=/opt/jdk
 export PATH=$PATH:$JAVA_HOME/bin
@@ -88,7 +88,7 @@ ln -s /opt/apache-zookeeper-3.7.0-bin /opt/zookeeper
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 # Zookeeper
 export ZOOKEEPER_HOME=/opt/zookeeper
 export PATH=$PATH:$ZOOKEEPER_HOME/bin
@@ -148,7 +148,7 @@ ln -s /opt/hadoop-3.2.2 /opt/hadoop
 
 将如下信息添加到 `/etc/profile` 中：
 
-```txt
+```plain
 # Hadoop
 export HADOOP_HOME=/opt/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin

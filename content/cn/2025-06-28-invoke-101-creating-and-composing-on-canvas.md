@@ -27,7 +27,7 @@ tags:
 本节将介绍在使用画布进行创建和组合生成新的图片的过程中使用到的核心工具。
 {{% /admonition %}}
 
-{{< tab id="video" labels-position="center" >}}
+{{< tab id="video" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1pj8EzJE1q" >}}

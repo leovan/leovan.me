@@ -26,7 +26,7 @@ tags:
 本节将介绍图片生成使用到的 AI 模型和概念适配器，我们将讨论提示词和模型的训练方式是如何最终决定提示词对生成图片的有效性。
 {{% /admonition %}}
 
-{{< tab id="video" labels-position="center" >}}
+{{< tab id="video" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV1ii8ezDEQw" >}}

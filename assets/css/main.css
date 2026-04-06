@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@source "hugo_stats.json";
 @import "variable.css";
+@source "hugo_stats.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -101,6 +101,37 @@
     margin-bottom: var(--spacing-p-margin-y);
   }
 
+  details summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+    cursor: pointer;
+    padding: 0.5em 0.5em 0.5em 1em;
+    border-radius: 0.25rem;
+    background: var(--color-block-background) !important;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary::marker {
+    content: "";
+  }
+
+  details summary::after  {
+    line-height: 1em;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>');
+    transition: transform 0.2s ease;
+    transform-origin: center;
+  }
+
+  details[open] summary::after  {
+    transform: rotate(90deg);
+  }
+
   figure {
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);
@@ -179,25 +210,32 @@
   table {
     min-width: 50%;
     max-width: 100%;
-    margin: auto;
+    margin-top: var(--spacing-p-margin-y);
+    margin-bottom: var(--spacing-p-margin-y);
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
     border-top: 1px solid var(--color-block-border);
-    border-bottom: 1px solid var(--color-block-border);
-  }
-
-  thead th {
-    border-bottom: 1px solid var(--color-block-border);
   }
 
   thead,
-  tfoot,
+  tbody {
+    border-bottom: 1px solid var(--color-block-border);
+  }
+
+  tfoot {
+    font-size: 0.8em;
+  }
+
+  thead,
   tr:nth-child(even) {
     background: var(--color-block-background);
   }
 
   th,
-  td {
-    padding: 5px;
+  td,
+  table caption {
+    padding: 0.4em;
   }
 
   td code {

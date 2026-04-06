@@ -25,7 +25,7 @@ tags:
 本节将展示如何使用 Invoke 创作你的第一张图片。
 {{% /admonition %}}
 
-{{< tab id="video" labels-position="center" >}}
+{{< tab id="video" >}}
 
 {{% tab-item label="<i class='icon icon-bilibili'></i> Bilibili" %}}
 {{< bilibili bvid="BV16AuczkEAk" >}}
@@ -170,7 +170,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 单击左侧面板的 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" height="1em" widht="1em" xmlns="http://www.w3.org/2000/svg"><path d="M225.6,62.64l-88-48.17a19.91,19.91,0,0,0-19.2,0l-88,48.17A20,20,0,0,0,20,80.19v95.62a20,20,0,0,0,10.4,17.55l88,48.17a19.89,19.89,0,0,0,19.2,0l88-48.17A20,20,0,0,0,236,175.81V80.19A20,20,0,0,0,225.6,62.64ZM128,36.57,200,76,128,115.4,56,76ZM44,96.79l72,39.4v76.67L44,173.44Zm96,116.07V136.19l72-39.4v76.65Z"></path></svg></span> 图标打开模型页面。针对新手用户 Invoke 提供了新手模型包，单击 `Starter Models` 选项卡，可以看到系统提供了 `Stable Diffusion 1.5`、`SDXL` 和 `FLUX` 三款模型包。根据官方[系统环境要求](https://invoke-ai.github.io/InvokeAI/installation/quick_start/#step-1-system-requirements)和自己的设备性能选择合适的模型包。
 
-{{< tab id="system-requirements" >}}
+{{< tab id="system-requirements" position="start" >}}
 
 {{% tab-item label="Stable Diffusion 1.5" %}}
 - GPU：Nvidia 10xx 或更新，4GB+ 显存
@@ -200,7 +200,7 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 
 在提示词模板中选择 `Environment Art`，在 `Prompt` 中输入如下提示词：
 
-```txt
+```plain
 futuristic urban park, neon lighting, raised highways, green spaces, modern architecture
 ```
 

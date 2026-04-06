@@ -47,6 +47,7 @@
 {{- partial "shortcode_image_compare.html" . }}
 {{- partial "shortcode_gallery.html" . }}
 {{- partial "shortcode_pseudocode.html" . }}
+{{- partial "shortcode_tab.html" . }}
 {{- partial "shortcode_video.html" . }}
 
 {{- if and (not .Params.disable_math) .IsPage (or (strings.Contains .Content "\\(") (strings.Contains .Content "$")) }}

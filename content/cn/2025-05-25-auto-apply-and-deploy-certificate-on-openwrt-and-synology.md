@@ -149,7 +149,7 @@ vi account.conf
 
 `account.conf` 文件示例如下，请根据上文中的内容修改 `CF_Token`、`CF_Zone_ID` 和 `CF_Account_ID` 配置项：
 
-```txt
+```plain
 export CF_Token="xxxxxxxxx"
 export CF_Zone_ID="xxxxxxxxx"
 export CF_Account_ID="xxxxxxxxx"
