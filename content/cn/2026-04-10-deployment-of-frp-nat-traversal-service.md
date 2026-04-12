@@ -15,6 +15,12 @@ tags:
 
 # 环境信息
 
+frp 是一款高性能的反向代理应用，专注于内网穿透。它支持多种协议，包括 TCP、UDP、HTTP、HTTPS 等，并且具备 P2P 通信功能。使用 frp，您可以安全、便捷地将内网服务暴露到公网，通过拥有公网 IP 的节点进行中转 [^frp-docs]。
+
+[^frp-docs]: <https://gofrp.org/zh-cn/docs/overview/>
+
+{{< figure src="/images/cn/2026-04-10-deployment-of-frp-nat-traversal-service/frp-architecture.jpg" title="frp 架构图" >}}
+
 本教程将介绍在具有公网 IP 的服务器和内网路由器上部署 frp 内网穿透服务。本教程涉及到的环境信息如下：
 
 |        | 环境           | 系统          |
@@ -317,7 +323,7 @@ chmod +x /etc/init.d/frpc
 /etc/init.d/frpc status
 ```
 
-在服务商中将 `example-http.example.com` 和 `example-ssh.example.com` 配置 DNS 解析至 frp 服务器的 IP 地址。
+在服务商中配置 DNS 将 `example-http.example.com` 和 `example-ssh.example.com` 解析至 frp 服务器的 IP 地址。
 
 # 连接
 
