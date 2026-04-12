@@ -1,6 +1,5 @@
 ---
 title: 本地部署大模型服务
-subtitle: 养虾系列
 author: 范叶亮
 date: 2026-04-05
 slug: local-deployment-of-llm-server
@@ -24,7 +23,7 @@ tags:
 
 # 环境信息
 
-本教程将介绍在 macOS 和 Windows 环境下部署本地大模型服务。如无特殊说明，macOS 系统下需在终端中执行命令，Windows 系统下需要在 PowerShell 中执行命令。
+本教程将介绍在 macOS 和 Windows 环境下部署本地大模型服务。如无特殊说明，macOS 系统下需在终端中执行命令，Windows 系统下需要在 PowerShell 中执行命令。本教程涉及到的软件和模型信息如下：
 
 | 软件       | 版本                   |
 |:-----------|:-----------------------|
@@ -288,6 +287,10 @@ iwr -Uri http://127.0.0.1:1234/v1/chat/completions `
 {{< admonition type="info" title="建议 macOS 系统测试使用" />}}
 
 推荐从 [oMLX](https://omlx.ai/) 官网下载安装包，并运行安装 oMLX。安装完毕后启动，并从 macOS 菜单栏或 Windows 系统托盘单击 oMLX 图标，选择 `Start Server` 启动服务。待服务启动后，单击 `Admin Panel` 从浏览器打开管理面板，初次登录需要设置 API Key。在 Models - Downloader 中可以直接从 Hugging Face 和 ModelScope 模型仓库下载模型。
+
+{{% admonition type="tip" title="提示" %}}
+建议国内用户切换至 ModelScope 标签，复制上文 ModelScope 模型连接的尾部（例如：`mlx-community/gemma-4-31b-it-nvfp4`）至 REPOSITORY ID 中下载模型。
+{{% /admonition %}}
 
 {{< figure src="/images/cn/2026-04-05-local-deployment-of-llm-server/omlx-admin-panel-models-downloader.avif" large-max-width="800px" >}}
 

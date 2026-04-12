@@ -33,6 +33,7 @@
   padding: 0 1em;
   page-break-inside: avoid;
 
+  code:not([class]),
   .highlight {
     background-color: var(--color-shortcode-admonition-highlight-background) !important;
   }

@@ -153,14 +153,14 @@ TRANSLATIONS += \
 
 因为 Python 代码中也有需要翻译的文件，因此我们需要运行如下命令生成翻译的源文件：
 
-```bash
+```shell
 lupdate SciHubEVA.pro
 pylupdate5 SciHubEVA.pro
 ```
 
 这样在 `translations` 目录即可生成待翻译的源文件 (ts 文件)，利用 Qt 自带的 Liguist 可以对其进行编辑，翻译并保存后，利用如下命令生成翻译的结果文件：
 
-```bash
+```shell
 lrelease SciHubEVA.pro
 ```
 
@@ -218,7 +218,7 @@ PyInstaller 是一个用于打包 Python 代码到一个本地化可执行程序
 
 macOS 下的编译打包命令如下：
 
-```bash
+```shell
 ## 清理相关目录和文件
 rm -rf build
 rm -rf dist

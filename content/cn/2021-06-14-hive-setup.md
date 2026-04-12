@@ -181,7 +181,7 @@ cp /opt/hive/conf/hive-env.sh.template /opt/hive/conf/hive-env.sh
 
 修改 `hive-env.sh` 内容如下：
 
-```bash
+```shell
 export JAVA_HOME=/opt/jdk
 export HADOOP_HOME=/opt/hadoop
 export HIVE_HOME=/opt/hive

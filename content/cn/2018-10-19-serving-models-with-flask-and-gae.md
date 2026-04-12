@@ -251,7 +251,7 @@ Flask 主程序配置完毕后，我们通过 `app.run()` 在本地启动 Flask 
 
 现在就可以测试调用服务了，我们用 `curl` 命令进行简单的测试，相关代码 `request-demo.sh` 如下：
 
-```bash
+```shell
 host=0.0.0.0
 port=9999
 url=/v1/XXXModel
@@ -289,7 +289,7 @@ HTTP/1.0 200 OK
 
 服务启动 (`start.sh`) 脚本代码如下：
 
-```bash
+```shell
 cd `dirname $0`
 cd ..
 
@@ -309,7 +309,7 @@ nohup gunicorn -b ${bind_host}:${bind_port} \
 
 服务停止 (`stop.sh`) 脚本代码如下：
 
-```bash
+```shell
 cd `dirname $0`
 cd ..
 
@@ -378,7 +378,7 @@ $(document).ready(function() {
 
 其次，根据 [Google Cloud SDK 文档](https://cloud.google.com/sdk/docs/) 在本地安装相应版本的 Google Cloud SDK。MacOS 下建议通过 `brew cask install google-cloud-sdk` 方式安装，安装完毕后确认在命令行中可以运行 `gcloud` 命令。
 
-```bash
+```shell
 $ gcloud version
 Google Cloud SDK 221.0.0
 bq 2.0.35
@@ -415,7 +415,7 @@ skip_files:
 
 在部署 GAE 工程之前我们可以利用本地的开发环境对其进行测试，测试无误后，即可运行如下命令将其部署到 GAE 上：
 
-```bash
+```shell
 gcloud app deploy --project [YOUR_PROJECT_ID]
 ```
 

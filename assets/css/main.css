@@ -96,6 +96,12 @@
     background-color: var(--color-button-background-hover);
   }
 
+  code:not([class]) {
+    @apply p-1 rounded;
+
+    background: var(--color-highlight-background);
+  }
+
   details {
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);

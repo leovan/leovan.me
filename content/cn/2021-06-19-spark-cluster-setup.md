@@ -78,7 +78,7 @@ cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
 
 在 `spark-env.sh` 结尾添加如下内容：
 
-```bash
+```shell
 export JAVA_HOME=/opt/jdk
 export SCALA_HOME=/opt/scala
 export HADOOP_HOME=/opt/hadoop
@@ -306,7 +306,7 @@ conda create -n spark python=3.9
 
 分别在 vm-02 和 vm-03 中将如下信息添加到 /etc/profile 中：
 
-```bash
+```shell
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/nfs/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -325,7 +325,7 @@ unset __conda_setup
 
 分别在 vm-01，vm-02 和 vm-03 中将如下信息添加到 /etc/profile 中：
 
-```bash
+```shell
 # Python 3.9 for Spark
 conda activate spark
 ```

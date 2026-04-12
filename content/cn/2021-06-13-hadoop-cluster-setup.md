@@ -389,7 +389,7 @@ mkdir /data/hadoop/hdfs/datanode
 
 修改 `/opt/hadoop/etc/hadoop/hadoop-env.sh` 内容如下：
 
-```bash
+```shell
 export JAVA_HOME=/opt/jdk
 export HADOOP_LOG_DIR=/data/hadoop/logs
 export HADOOP_PID_DIR=/data/hadoop/pid
@@ -397,13 +397,13 @@ export HADOOP_PID_DIR=/data/hadoop/pid
 
 修改 `/opt/hadoop/etc/hadoop/yarn-env.sh` 内容如下：
 
-```bash
+```shell
 export JAVA_HOME=/opt/jdk
 ```
 
 在 `/opt/hadoop/sbin/start-dfs.sh` 和 `/opt/hadoop/sbin/stop-dfs.sh` 开始位置添加：
 
-```bash
+```shell
 HDFS_NAMENODE_USER=leo
 HDFS_DATANODE_USER=leo
 HDFS_JOURNALNODE_USER=leo
@@ -412,7 +412,7 @@ HDFS_ZKFC_USER=leo
 
 在 `/opt/hadoop/sbin/start-yarn.sh` 和 `/opt/hadoop/sbin/stop-yarn.sh` 开始位置添加：
 
-```bash
+```shell
 YARN_RESOURCEMANAGER_USER=leo
 YARN_NODEMANAGER_USER=leo
 ```

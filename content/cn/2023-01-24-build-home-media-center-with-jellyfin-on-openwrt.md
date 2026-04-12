@@ -139,7 +139,7 @@ Partition table entries are not in disk order.
 
 分别对新分区进行格式化：
 
-```bash
+```shell
 mkfs.ext4 /dev/nvme0n1p3
 mkfs.ext4 /dev/nvme0n1p4
 mkfs.ext4 /dev/nvme0n1p5
@@ -147,13 +147,13 @@ mkfs.ext4 /dev/nvme0n1p5
 
 将 `/dev/nvme0n1p3` 挂载至 `/mnt/nvme0n1p3`：
 
-```bash
+```shell
 mount /dev/nvme0n1p3 /mnt/nvme0n1p3
 ```
 
 将 `/overlay` 分区数据全部复制到 `/mnt/nvme0n1p3` 中：
 
-```bash
+```shell
 cp -R /overlay/* /mnt/nvme0n1p3/
 ```
 
@@ -179,7 +179,7 @@ overlayfs:/overlay       31.2G     87.9M     26.6G   0% /
 
 在 `/data` 目录中创建用于字体的目录：
 
-```bash
+```shell
 mkdir /data/fonts
 ```
 
@@ -187,7 +187,7 @@ mkdir /data/fonts
 
 在 `/data` 目录中创建用于 Jellyfin 的目录：
 
-```bash
+```shell
 mkdir /data/docker
 mkdir /data/docker/jellyfin
 mkdir /data/docker/jellyfin/config
@@ -203,13 +203,13 @@ mkdir /data/docker/jellyfin/media/nas/disk4
 
 由于在 Docker 中需要使用 `1000:1000` 作为 UID 和 GID 运行 Jellyfin，需要将 `jellyfin` 目录修改为对应所有者：
 
-```
+```shell
 chown -R 1000:1000 /data/docker/jellyfin/
 ```
 
 进入命令行，输入如下命令将 NAS 上配置好的共享文件夹挂载到 Jellyfin 的相关目录：
 
-```bash
+```shell
 mount.nfs -w 192.168.5.10:/volume1/Disk1 /data/docker/jellyfin/media/nas/disk1 -o nolock
 mount.nfs -w 192.168.5.10:/volume2/Disk2 /data/docker/jellyfin/media/nas/disk2 -o nolock
 mount.nfs -w 192.168.5.10:/volume3/Disk3 /data/docker/jellyfin/media/nas/disk3 -o nolock
@@ -238,13 +238,13 @@ card0       renderD128
 
 为了确保在 Docker 中其他用户可以使用该设备，输入如下命令设置设备权限：
 
-```bash
+```shell
 chmod 777 /dev/dri/*
 ```
 
 通过 `Docker > 容器` 菜单，单击 `添加` 按钮添加容器。单击 `命令行` 并复制如下内容，单击 `提交` 解析命令行：
 
-```
+```shell
 docker run -d \
  --name=jellyfin \
  --hostname=jellyfin \
@@ -347,7 +347,7 @@ tinyMediaManager 是一个用 Java/Swing 编写的媒体管理工具，它可以
 
 在软路由 `/data` 目录中创建用于 TMM 的目录：
 
-```bash
+```shell
 mkdir /data/docker/tinymediamanager
 mkdir /data/docker/tinymediamanager/config
 mkdir /data/docker/tinymediamanager/media
@@ -360,7 +360,7 @@ mkdir /data/docker/tinymediamanager/media/nas/disk4
 
 进入命令行，输入如下命令将 NAS 上配置好的共享文件夹挂载到 TMM 的相关目录：
 
-```bash
+```shell
 mount.nfs -w 192.168.5.10:/volume1/Disk1 /data/docker/tinymediamanager/media/nas/disk1 -o nolock
 mount.nfs -w 192.168.5.10:/volume2/Disk2 /data/docker/tinymediamanager/media/nas/disk2 -o nolock
 mount.nfs -w 192.168.5.10:/volume3/Disk3 /data/docker/tinymediamanager/media/nas/disk3 -o nolock

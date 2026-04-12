@@ -83,7 +83,7 @@ mkdir SynoBuildConf
 
 `build`
 
-```bash
+```shell
 #!/bin/bash
 
 case ${MakeClean} in
@@ -106,14 +106,14 @@ make ${MAKE_FLAGS}
 
 `depends`
 
-```bash
+```shell
 [default]
 all="6.2"
 ```
 
 `install`
 
-```bash
+```shell
 #!/bin/bash
 
 PKG_NAME="tmux"
@@ -172,7 +172,7 @@ mkdir synology
 
 `INFO.sh`
 
-```bash
+```shell
 #!/bin/sh
 
 . /pkgscripts-ng/include/pkg_util.sh
@@ -223,7 +223,7 @@ mkdir scripts
 
 `postinst`
 
-```bash
+```shell
 #!/bin/sh
 
 ln -sf "$SYNOPKG_PKGDEST/usr/local/bin/tmux" /usr/bin/
@@ -231,7 +231,7 @@ ln -sf "$SYNOPKG_PKGDEST/usr/local/bin/tmux" /usr/bin/
 
 `postuninst`
 
-```bash
+```shell
 #!/bin/sh
 
 rm -f /usr/local/bin/tmux
@@ -240,7 +240,7 @@ rm -f /usr/bin/tmux
 
 `postupgrade`
 
-```bash
+```shell
 #!/bin/sh
 
 exit 0
@@ -248,7 +248,7 @@ exit 0
 
 `preinst`
 
-```bash
+```shell
 #!/bin/sh
 
 exit 0
@@ -256,7 +256,7 @@ exit 0
 
 `preuninst`
 
-```bash
+```shell
 #!/bin/sh
 
 exit 0
@@ -264,7 +264,7 @@ exit 0
 
 `preupgrade`
 
-```bash
+```shell
 #!/bin/sh
 
 exit 0
@@ -272,7 +272,7 @@ exit 0
 
 `start-stop-status`
 
-```bash
+```shell
 #!/bin/sh
 
 case $1 in
