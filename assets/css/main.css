@@ -236,17 +236,17 @@
   thead,
   tr:nth-child(even) {
     background: var(--color-block-background);
+
+    code:not([class]),
+    .highlight {
+      background-color: var(--color-highlight-background-2);
+    }
   }
 
   th,
   td,
   table caption {
     padding: 0.4em;
-  }
-
-  td code {
-    background: none !important;
-    padding: 0;
   }
 
   ul {

@@ -15,6 +15,7 @@
   --color-block-border: #444444;
 
   --color-highlight-background: #f5f5f5;
+  --color-highlight-background-2: #ececec;
   --color-highlight-foreground: #444444;
   --color-highlight-border: #dddddd;
   --color-highlight-language-background: #dddddd;
@@ -70,6 +71,7 @@
     --color-block-border: #e6e6e6;
 
     --color-highlight-background: #383838;
+    --color-highlight-background-2: #3e3e3e;
     --color-highlight-foreground: #cccccc;
     --color-highlight-border: #444444;
     --color-highlight-language-background: #444444;

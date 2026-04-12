@@ -12,7 +12,9 @@
 
 .highlight-wrapper {
   margin-block-start: 1em;
+  margin-top: 1em;
   margin-block-end: 1em;
+  margin-bottom: 1em;
 }
 
 .highlight-title {
@@ -26,8 +28,12 @@
 
 .highlight-content {
   position: relative;
+}
+
+.highlight-content:not(p),
+.highlight-title + .highlight-content {
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
 }
 
 .highlight-content:hover .highlight-button-copy,
