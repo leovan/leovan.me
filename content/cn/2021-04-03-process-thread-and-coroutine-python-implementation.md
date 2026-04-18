@@ -1,5 +1,6 @@
 ---
-title: 进程，线程和协程 (Process, Thread and Coroutine)
+title: 进程，线程和协程
+enTitle: Process, Thread and Coroutine
 subtitle: 实现篇
 author: 范叶亮
 date: 2021-04-03

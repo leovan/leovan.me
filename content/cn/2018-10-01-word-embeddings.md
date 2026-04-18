@@ -1,5 +1,6 @@
 ---
-title: 词向量 (Word Embeddings)
+title: 词向量
+enTitle: Word Embeddings
 author: 范叶亮
 date: 2018-10-01
 slug: word-embeddings

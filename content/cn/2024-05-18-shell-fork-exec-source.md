@@ -1,5 +1,6 @@
 ---
-title: Shell 调用方式 fork，exec 和 source (Run Shell with fork, exec and source)
+title: Shell 调用方式 fork，exec 和 source
+enTitle: Run Shell with fork, exec and source
 author: 范叶亮
 date: 2024-05-18
 slug: shell-fork-exec-source

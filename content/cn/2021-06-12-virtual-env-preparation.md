@@ -1,5 +1,6 @@
 ---
-title: 虚拟环境准备 (Virtual Environment Preparation)
+title: 虚拟环境准备
+enTitle: Virtual Environment Preparation
 author: 范叶亮
 date: 2021-06-12
 slug: virtual-env-preparation

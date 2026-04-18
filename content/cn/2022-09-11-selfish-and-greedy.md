@@ -1,5 +1,6 @@
 ---
-title: 自私和贪婪 (Selfish and Greedy)
+title: 自私和贪婪
+enTitle: Selfish and Greedy
 author: 范叶亮
 date: 2022-09-11
 slug: selfish-and-greedy

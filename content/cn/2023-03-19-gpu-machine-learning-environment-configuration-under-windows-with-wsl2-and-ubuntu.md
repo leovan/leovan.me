@@ -1,5 +1,5 @@
 ---
-title: 在 Windows 下利用 WSL2 和 Ubuntu 配置 GPU 机器学习环境 (GPU Machine Leanring Environment Configuration under Windows with WSL2 and Ubuntu)
+title: 在 Windows 下利用 WSL2 和 Ubuntu 配置 GPU 机器学习环境
 author: 范叶亮
 date: 2023-03-19
 slug: gpu-machine-learning-environment-configuration-under-windows-with-wsl2-and-ubuntu

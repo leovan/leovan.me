@@ -1,4 +1,9 @@
 {{- $title := .Title }}
+
+{{- with .Params.enTitle }}
+  {{- $title = printf "%s (%s)" $title . }}
+{{- end }}
+
 {{- with .Params.subtitle }}
   {{- $title = printf "%s - %s" $title . }}
 {{- end }}

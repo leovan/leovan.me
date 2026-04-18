@@ -1,5 +1,6 @@
 ---
-title: 相似性和距离度量 (Similarity & Distance Measurement)
+title: 相似性和距离度量
+enTitle: Similarity and Distance Measurement
 author: 范叶亮
 date: 2019-01-01
 slug: similarity-and-distance-measurement

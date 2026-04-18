@@ -1,5 +1,6 @@
 ---
-title: 集成学习算法 (Ensemble Learning)
+title: 集成学习算法
+enTitle: Ensemble Learning
 author: 范叶亮
 date: 2018-12-08
 slug: ensemble-learning

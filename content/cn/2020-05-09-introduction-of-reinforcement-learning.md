@@ -1,5 +1,6 @@
 ---
-title: 强化学习简介 (Introduction of Reinforcement Learning)
+title: 强化学习简介
+enTitle: Introduction of Reinforcement Learning
 subtitle: 强化学习系列
 author: 范叶亮
 date: 2020-05-09

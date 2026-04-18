@@ -1,5 +1,6 @@
 ---
-title: 启发式算法 (Heuristic Algorithms)
+title: 启发式算法
+enTitle: Heuristic Algorithms
 author: 范叶亮
 date: 2019-04-05
 slug: heuristic-algorithms

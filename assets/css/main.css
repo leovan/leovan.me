@@ -429,6 +429,7 @@
   }
 
   .post-title,
+  .post-entitle,
   .post-subtitle,
   .post-author-date {
     font-weight: bold;
@@ -441,6 +442,7 @@
     font-size: 32px;
   }
 
+  .post-entitle,
   .post-subtitle {
     font-size: 24px;
   }

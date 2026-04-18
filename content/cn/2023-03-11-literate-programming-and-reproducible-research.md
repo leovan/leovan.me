@@ -1,5 +1,6 @@
 ---
-title: 文学编程和可重复性研究 (Literate Programming and Reproducible Research)
+title: 文学编程和可重复性研究
+enTitle: Literate Programming and Reproducible Research
 author: 范叶亮
 date: 2023-03-11
 slug: literate-programming-and-reproducible-research

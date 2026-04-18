@@ -1,5 +1,6 @@
 ---
-title: 马尔可夫决策过程 (Markov Decision Process)
+title: 马尔可夫决策过程
+enTitle: Markov Decision Process
 subtitle: 强化学习系列
 author: 范叶亮
 date: 2020-05-23

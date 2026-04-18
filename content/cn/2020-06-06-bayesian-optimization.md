@@ -1,5 +1,6 @@
 ---
-title: 贝叶斯优化 (Bayesian Optimization)
+title: 贝叶斯优化
+enTitle: Bayesian Optimization
 author: 范叶亮
 date: 2020-06-06
 slug: bayesian-optimization

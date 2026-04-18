@@ -1,5 +1,6 @@
 ---
-title: 重定向和管道 (Redirect and Pipe)
+title: 重定向和管道
+enTitle: Redirect and Pipe
 author: 范叶亮
 date: 2024-05-12
 slug: redirect-and-pipe

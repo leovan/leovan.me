@@ -1,5 +1,6 @@
 ---
-title: 基于内容的图像检索 (Content Based Image Retrieval, CBIR)
+title: 基于内容的图像检索
+enTitle: Content-based Image Retrieval, CBIR
 author: 范叶亮
 date: 2022-01-27
 slug: content-based-image-retrieval

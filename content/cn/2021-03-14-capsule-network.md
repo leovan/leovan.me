@@ -1,5 +1,6 @@
 ---
-title: 胶囊网络 (Capsule Network)
+title: 胶囊网络
+enTitle: Capsule Network
 author: 范叶亮
 date: 2021-03-14
 slug: capsule-network

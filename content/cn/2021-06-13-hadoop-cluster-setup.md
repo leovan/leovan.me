@@ -1,5 +1,6 @@
 ---
-title: Hadoop 集群搭建 (Hadoop Cluster Setup)
+title: Hadoop 集群搭建
+enTitle: Hadoop Cluster Setup
 author: 范叶亮
 date: 2021-06-13
 slug: hadoop-cluster-setup

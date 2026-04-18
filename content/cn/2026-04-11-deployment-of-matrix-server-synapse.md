@@ -1,5 +1,6 @@
 ---
 title: 部署 Matrix 服务器 Synapse
+enTitle: Deployment of Matrix Server Synapse
 author: 范叶亮
 date: 2026-04-11
 slug: deployment-of-matrix-server-synapse

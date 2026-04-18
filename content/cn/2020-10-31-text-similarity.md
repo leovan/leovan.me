@@ -1,5 +1,6 @@
 ---
-title: 文本相似度 (Text Similarity)
+title: 文本相似度
+enTitle: Text Similarity
 author: 范叶亮
 date: 2020-10-31
 slug: text-similarity

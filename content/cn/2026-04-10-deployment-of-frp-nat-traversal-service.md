@@ -1,5 +1,6 @@
 ---
 title: 部署 frp 内网穿透服务
+enTitle: Deployment of frp NAT Traversal Service
 author: 范叶亮
 date: 2026-04-10
 slug: deployment-of-frp-nat-traversal-service

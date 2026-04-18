@@ -1,5 +1,6 @@
 ---
-title: AI 时代的生产力和生产关系 (Forces and Relations of Production in AI Era)
+title: AI 时代的生产力和生产关系
+enTitle: Forces and Relations of Production in AI Era
 author: 范叶亮
 date: 2026-03-29
 slug: forces-and-relations-of-production-in-ai-era

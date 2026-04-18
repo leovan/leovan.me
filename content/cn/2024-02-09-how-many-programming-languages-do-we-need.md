@@ -1,5 +1,6 @@
 ---
-title: 我们需要多少种编程语言 (How Many Programming Languages do We Need)
+title: 我们需要多少种编程语言
+enTitle: How Many Programming Languages do We Need
 author: 范叶亮
 date: 2024-02-09
 slug: how-many-programming-languages-do-we-need

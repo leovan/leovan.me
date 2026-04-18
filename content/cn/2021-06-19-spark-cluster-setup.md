@@ -1,5 +1,6 @@
 ---
-title: Spark 集群搭建 (Spark Cluster Setup)
+title: Spark 集群搭建
+enTitle: Spark Cluster Setup
 author: 范叶亮
 date: 2021-06-19
 slug: spark-cluster-setup

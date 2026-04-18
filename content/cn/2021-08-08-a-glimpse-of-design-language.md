@@ -1,5 +1,6 @@
 ---
-title: 设计语言初探 (A Glimpse of Design Language)
+title: 设计语言初探
+enTitle: A Glimpse of Design Language
 author: 范叶亮
 date: 2021-08-08
 slug: a-glimpse-of-design-language

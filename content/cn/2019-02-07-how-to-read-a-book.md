@@ -1,5 +1,6 @@
 ---
-title: 如何阅读一本书 (How to Read a Book)
+title: 如何阅读一本书
+enTitle: How to Read a Book
 author: 范叶亮
 date: 2019-02-07
 slug: how-to-read-a-book

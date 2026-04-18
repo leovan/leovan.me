@@ -1,5 +1,6 @@
 ---
-title: 图嵌入 (Graph Embedding) 和图神经网络 (Graph Neural Network)
+title: 图嵌入和图神经网络
+enTitle: Graph Embedding and Graph Neural Network
 author: 范叶亮
 date: 2020-04-11
 slug: graph-embedding-and-gnn

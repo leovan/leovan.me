@@ -1,5 +1,6 @@
 ---
-title: 计算复杂性 (Computational Complexity) 与动态规划 (Dynamic Programming)
+title: 计算复杂性与动态规划
+enTitle: Computational Complexity and Dynamic Programming
 author: 范叶亮
 date: 2018-11-18
 slug: computational-complexity-and-dynamic-programming

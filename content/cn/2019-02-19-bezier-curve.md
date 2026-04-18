@@ -1,5 +1,6 @@
 ---
-title: 贝塞尔曲线 (Bézier Curve)
+title: 贝塞尔曲线
+enTitle: Bézier Curve
 author: 范叶亮
 date: 2019-02-19
 slug: bezier-curve

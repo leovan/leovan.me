@@ -1,5 +1,6 @@
 ---
-title: 特征值分解，奇异值分解和主成分分析 (EVD, SVD and PCA)
+title: 特征值分解，奇异值分解和主成分分析
+enTitle: EVD, SVD and PCA
 author: 范叶亮
 date: 2017-12-11
 slug: evd-svd-and-pca

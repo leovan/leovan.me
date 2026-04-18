@@ -1,5 +1,6 @@
 ---
-title: 利用动态规划求解马尔可夫决策过程 (Planning by Dynamic Programming)
+title: 利用动态规划求解马尔可夫决策过程
+enTitle: Planning by Dynamic Programming
 subtitle: 强化学习系列
 author: 范叶亮
 date: 2020-06-13

@@ -1,5 +1,6 @@
 ---
-title: CSS 布局和定位 (CSS Display & Position)
+title: CSS 布局和定位
+enTitle: CSS Layout and Position
 author: 范叶亮
 date: 2023-05-03
 slug: css-display-and-position

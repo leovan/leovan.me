@@ -6,7 +6,9 @@
         <p>
           <span>{{ .Date.Format "2006-01-02" }}</span>
           <a href="{{ .RelPermalink }}">
-            {{ .Title | markdownify }}{{ with .Params.subtitle }} - {{ . | markdownify }}{{ end }}
+            {{ .Title | markdownify }}
+            {{ with .Params.enTitle }} ({{ . | markdownify }}){{ end }}
+            {{ with .Params.subtitle }} - {{ . | markdownify }}{{ end }}
           </a>
         </p>
       {{- end }}

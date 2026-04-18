@@ -1,5 +1,6 @@
 ---
-title: 流形学习 (Manifold Learning)
+title: 流形学习
+enTitle: Manifold Learning
 author: 范叶亮
 date: 2018-03-16
 slug: manifold-learning

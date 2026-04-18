@@ -1,5 +1,6 @@
 ---
-title: 序列到序列 (Seq2Seq) 和注意力机制 (Attention Machanism)
+title: 序列到序列和注意力机制
+enTitle: Seq2Seq and Attention Machanism
 author: 范叶亮
 date: 2018-10-12
 slug: seq2seq-and-attention-machanism

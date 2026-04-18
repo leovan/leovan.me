@@ -1,5 +1,6 @@
 ---
-title: 无模型策略预测和控制 - 时序差分学习 (Model-Free Policy Prediction and Control - Temporal Difference Learning)
+title: 无模型策略预测和控制 - 时序差分学习
+enTitle: Model-Free Policy Prediction and Control - Temporal Difference Learning
 subtitle: 强化学习系列
 author: 范叶亮
 date: 2020-07-11

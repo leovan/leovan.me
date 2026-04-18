@@ -1,5 +1,6 @@
 ---
 title: 本地部署大模型服务
+enTitle: Local Deployment of LLM Services
 author: 范叶亮
 date: 2026-04-05
 slug: local-deployment-of-llm-server

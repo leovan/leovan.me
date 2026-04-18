@@ -1,5 +1,6 @@
 ---
-title: 评分和排名算法 (Rating & Ranking Algorithms)
+title: 评分和排名算法
+enTitle: Rating & Ranking Algorithms
 author: 范叶亮
 date: 2022-05-22
 slug: rating-and-ranking-algorithms

@@ -1,5 +1,6 @@
 ---
-title: 多臂赌博机 (Multi-armed Bandit)
+title: 多臂赌博机
+enTitle: Multi-armed Bandit
 subtitle: 强化学习系列
 author: 范叶亮
 date: 2020-05-16

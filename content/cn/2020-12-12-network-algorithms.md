@@ -1,5 +1,6 @@
 ---
-title: 网络算法 (Network Algorithms)
+title: 网络算法
+enTitle: Network Algorithms
 subtitle: 复杂网络系列
 author: 范叶亮
 date: 2020-12-12

@@ -1,5 +1,6 @@
 ---
-title: 京东数科 HIPO 学习之旅 (JDD HIPO Learning Journey)
+title: 京东数科 HIPO 学习之旅
+enTitle: JDD HIPO Learning Journey
 author: 范叶亮
 date: 2019-10-28
 slug: jdd-hipo-learning-journey

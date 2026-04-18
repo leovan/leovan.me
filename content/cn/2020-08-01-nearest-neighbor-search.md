@@ -1,5 +1,6 @@
 ---
-title: 最近邻搜索 (Nearest Neighbor Search)
+title: 最近邻搜索
+enTitle: Nearest Neighbor Search
 author: 范叶亮
 date: 2020-08-01
 slug: nearest-neighbor-search

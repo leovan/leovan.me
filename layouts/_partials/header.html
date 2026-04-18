@@ -21,6 +21,10 @@
       {{- end }}
     </div>
 
+    {{- with .Params.enTitle }}
+      <div class="post-entitle">{{ . | markdownify }}</div>
+    {{- end }}
+
     {{- with .Params.subtitle }}
       <div class="post-subtitle">{{ . | markdownify }}</div>
     {{- end }}

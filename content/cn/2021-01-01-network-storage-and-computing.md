@@ -1,5 +1,6 @@
 ---
-title: 图存储与计算（Network Storage & Computing)
+title: 图存储与计算
+enTitle: Network Storage and Computing
 subtitle: 复杂网络系列
 author: 范叶亮
 date: 2021-01-01
