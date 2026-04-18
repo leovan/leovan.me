@@ -234,7 +234,7 @@ painting, digital art, sketch, blurry
 
 {{< /flex >}}
 
-单击 <button>Invoke</button> 开始生成图片。此时可以看到模型在控制线条的指示下开始生成图片。
+单击 {{< button >}}Invoke{{</ button >}} 开始生成图片。此时可以看到模型在控制线条的指示下开始生成图片。
 
 {{< figure src="/images/cn/2025-06-07-invoke-101-using-control-layers-and-reference-guides/invoke-control-layer-generation.avif" title="生成图片" >}}
 
@@ -271,7 +271,7 @@ painting, digital art, sketch, blurry
 3. `Weight`：类比控制层。
 4. `Begin/End %`：类比控制层。
 
-在本教程中，将参考图片的 `Weight` 设置为 0.7，将结束百分比设置为 70%，从而给到模型更多的自由度。删除之前生成的 `Raster Layer`，单击 <button>Invoke</button> 开始生成图片。应用参考图片生成的图片和之前生成的图片对比如下：
+在本教程中，将参考图片的 `Weight` 设置为 0.7，将结束百分比设置为 70%，从而给到模型更多的自由度。删除之前生成的 `Raster Layer`，单击 {{< button >}}Invoke{{</ button >}} 开始生成图片。应用参考图片生成的图片和之前生成的图片对比如下：
 
 {{< flex >}}
 
@@ -297,7 +297,7 @@ painting, digital art, sketch, blurry
 
 {{< figure src="/images/cn/2025-06-07-invoke-101-using-control-layers-and-reference-guides/invoke-regional-reference-image-region.avif" title="勾勒需要应用参考的区域" >}}
 
-单击 <button>Invoke</button> 开始生成图片。应用局部参考图片生成的图片和应用参考图片生成的图片对比如下：
+单击 {{< button >}}Invoke{{</ button >}} 开始生成图片。应用局部参考图片生成的图片和应用参考图片生成的图片对比如下：
 
 {{< flex >}}
 
@@ -319,7 +319,7 @@ painting, digital art, sketch, blurry
 
 {{< figure src="/images/cn/2025-06-07-invoke-101-using-control-layers-and-reference-guides/invoke-regional-guidance-text-prompt.avif" title="创建局部文本指示" >}}
 
-单击 <button>Invoke</button> 开始生成图片。应用局部基于文本的指示的图片和应用局部参考图片生成的图片对比如下：
+单击 {{< button >}}Invoke{{</ button >}} 开始生成图片。应用局部基于文本的指示的图片和应用局部参考图片生成的图片对比如下：
 
 {{< flex >}}
 

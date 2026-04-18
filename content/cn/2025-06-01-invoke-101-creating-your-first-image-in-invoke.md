@@ -41,13 +41,13 @@ tags:
 
 从 [Invoke 官网](https://www.invoke.com/downloads)下载对应系统的安装包，根据如下步骤完成安装。
 
-1. 运行 Invoke 社区版本，单击 <button>Install</button> 开始安装。
-2. 选择安装位置，单击 <button>Next</button> 进行下一步。
-3. 选择安装版本，单击 <button>Next</button> 进行下一步。
-4. 确认 GPU 情况，单击 <button>Next</button> 进行下一步。
-5. 确认安装选项，单击 <button>Install</button> 开始安装。
-6. 安装完成，单击 <button>Finish</button> 关闭安装向导。
-7. 安装完成后，单击 <button>Launch</button> 启动 Invoke。
+1. 运行 Invoke 社区版本，单击 {{< button >}}Install{{</ button >}} 开始安装。
+2. 选择安装位置，单击 {{< button >}}Next{{</ button >}} 进行下一步。
+3. 选择安装版本，单击 {{< button >}}Next{{</ button >}} 进行下一步。
+4. 确认 GPU 情况，单击 {{< button >}}Next{{</ button >}} 进行下一步。
+5. 确认安装选项，单击 {{< button >}}Install{{</ button >}} 开始安装。
+6. 安装完成，单击 {{< button >}}Finish{{</ button >}} 关闭安装向导。
+7. 安装完成后，单击 {{< button >}}Launch{{</ button >}} 启动 Invoke。
 
 {{< swiper data="/data/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/installation.json" max-width="800px" >}}
 
@@ -204,13 +204,13 @@ Invoke 启动后会打开主界面，从启动器的日志不难看出，Invoke 
 futuristic urban park, neon lighting, raised highways, green spaces, modern architecture
 ```
 
-单击模板中的 <button><span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M251,123.13c-.37-.81-9.13-20.26-28.48-39.61C196.63,57.67,164,44,128,44S59.37,57.67,33.51,83.52C14.16,102.87,5.4,122.32,5,123.13a12.08,12.08,0,0,0,0,9.75c.37.82,9.13,20.26,28.49,39.61C59.37,198.34,92,212,128,212s68.63-13.66,94.48-39.51c19.36-19.35,28.12-38.79,28.49-39.61A12.08,12.08,0,0,0,251,123.13Zm-46.06,33C183.47,177.27,157.59,188,128,188s-55.47-10.73-76.91-31.88A130.36,130.36,0,0,1,29.52,128,130.45,130.45,0,0,1,51.09,99.89C72.54,78.73,98.41,68,128,68s55.46,10.73,76.91,31.89A130.36,130.36,0,0,1,226.48,128,130.45,130.45,0,0,1,204.91,156.12ZM128,84a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,84Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,148Z"></path></svg></span></button> 按钮会开启应用模板后的提示词预览，如下图所示：
+单击模板中的 {{< button >}}<span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M251,123.13c-.37-.81-9.13-20.26-28.48-39.61C196.63,57.67,164,44,128,44S59.37,57.67,33.51,83.52C14.16,102.87,5.4,122.32,5,123.13a12.08,12.08,0,0,0,0,9.75c.37.82,9.13,20.26,28.49,39.61C59.37,198.34,92,212,128,212s68.63-13.66,94.48-39.51c19.36-19.35,28.12-38.79,28.49-39.61A12.08,12.08,0,0,0,251,123.13Zm-46.06,33C183.47,177.27,157.59,188,128,188s-55.47-10.73-76.91-31.88A130.36,130.36,0,0,1,29.52,128,130.45,130.45,0,0,1,51.09,99.89C72.54,78.73,98.41,68,128,68s55.46,10.73,76.91,31.89A130.36,130.36,0,0,1,226.48,128,130.45,130.45,0,0,1,204.91,156.12ZM128,84a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,84Zm0,64a20,20,0,1,1,20-20A20,20,0,0,1,128,148Z"></path></svg></span>{{</ button >}} 按钮会开启应用模板后的提示词预览，如下图所示：
 
 {{< figure src="/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/prompt-demo-environment-art.avif" title="模板提示词预览"  large-max-width="50%" middle-max-width="50%" >}}
 
 可以看到，提示词模板在用户输入的提示词基础上添加了更多的正向和负向提示词。在 `Generation` 中选择 `Juggernaut XL v9` 作为生成模型。
 
-在左上角 <span style="vertical-align: middle;">![](/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/iteration-and-generation.avif)</span> 中输入生成图片的数量，单击 <button>Invoke</button> 开始生成图片。单击左侧面板的 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M28,64A12,12,0,0,1,40,52H216a12,12,0,0,1,0,24H40A12,12,0,0,1,28,64Zm104,52H40a12,12,0,0,0,0,24h92a12,12,0,0,0,0-24Zm0,64H40a12,12,0,0,0,0,24h92a12,12,0,0,0,0-24Zm120-20a12,12,0,0,1-5.64,10.18l-64,40A12,12,0,0,1,164,200V120a12,12,0,0,1,18.36-10.18l64,40A12,12,0,0,1,252,160Zm-34.64,0L188,141.65v36.7Z"></path></svg></span> 图标打开队列页面，等待中、执行中和已完成的所有任务都将显示在该页面中：
+在左上角 <span style="vertical-align: middle;">![](/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/iteration-and-generation.avif)</span> 中输入生成图片的数量，单击 {{< button >}}Invoke{{</ button >}} 开始生成图片。单击左侧面板的 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M28,64A12,12,0,0,1,40,52H216a12,12,0,0,1,0,24H40A12,12,0,0,1,28,64Zm104,52H40a12,12,0,0,0,0,24h92a12,12,0,0,0,0-24Zm0,64H40a12,12,0,0,0,0,24h92a12,12,0,0,0,0-24Zm120-20a12,12,0,0,1-5.64,10.18l-64,40A12,12,0,0,1,164,200V120a12,12,0,0,1,18.36-10.18l64,40A12,12,0,0,1,252,160Zm-34.64,0L188,141.65v36.7Z"></path></svg></span> 图标打开队列页面，等待中、执行中和已完成的所有任务都将显示在该页面中：
 
 ![队列](/images/cn/2025-06-01-invoke-101-creating-your-first-image-in-invoke/ui-queue.avif)
 

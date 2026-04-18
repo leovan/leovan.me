@@ -2,6 +2,7 @@
 public
 .hugo_build.lock
 resources
+hugo_stats.json
 
 # VS Code
 .vscode

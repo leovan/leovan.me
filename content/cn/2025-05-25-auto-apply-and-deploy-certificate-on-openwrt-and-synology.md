@@ -31,7 +31,7 @@ images:
 
 使用 acme.sh 申请免费证书需要使用 DNS 验证对域名的所有权，本文以 Cloudflare 为例，其它 DNS 请参考[官方文档](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)。Cloudflare 支持两种方式，一种是使用 API Token，另一种是使用全局 API Key，这里我们以 API Token 为例。
 
-进入 [API Token 页面](https://dash.cloudflare.com/profile/api-tokens)，单击 <button>创建令牌</button> 按钮，在 API 令牌模板中选择 `编辑区域 DNS`，单击 <button>使用模板</button> 按钮。在 `权限` 中添加 `区域 - DNS - 编辑` 和 `区域 - 区域 - 读取` 的权限，在 `区域资源` 中根据你的需求选择对应的 `特定区域`，例如 `leovan.dev`，或为了省事选择 `所有区域` 也可以，如下图所示：
+进入 [API Token 页面](https://dash.cloudflare.com/profile/api-tokens)，单击 {{< button >}}创建令牌{{</ button >}} 按钮，在 API 令牌模板中选择 `编辑区域 DNS`，单击 {{< button >}}使用模板{{</ button >}} 按钮。在 `权限` 中添加 `区域 - DNS - 编辑` 和 `区域 - 区域 - 读取` 的权限，在 `区域资源` 中根据你的需求选择对应的 `特定区域`，例如 `leovan.dev`，或为了省事选择 `所有区域` 也可以，如下图所示：
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/cloudflare-create-api-token.png" title="创建 API Token" large-max-width="60%" >}}
 
@@ -69,7 +69,7 @@ opkg install acme acme-acmesh-dnsapi luci-app-acme luci-i18n-acme-zh-cn luci-ssl
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/openwrt-acme-certificate-conf.png" title="ACME 证书 - 证书配置" large-max-width="80%" >}}
 
-单击 <button>添加</button> 按钮打开配置对话框。在 `常规设置` 中勾选 `已启用`，输入所需的域名，选择验证方式为 `DNS`，其它保持默认，如下图所示：
+单击 {{< button >}}添加{{</ button >}} 按钮打开配置对话框。在 `常规设置` 中勾选 `已启用`，输入所需的域名，选择验证方式为 `DNS`，其它保持默认，如下图所示：
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/openwrt-acme-add-certificate-1.png" title="ACME 证书 - 证书配置 - 常规设置" large-max-width="80%" >}}
 
@@ -81,7 +81,7 @@ opkg install acme acme-acmesh-dnsapi luci-app-acme luci-i18n-acme-zh-cn luci-ssl
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/openwrt-acme-add-certificate-3.png" title="ACME 证书 - 证书配置 - 高级设置" large-max-width="80%" >}}
 
-单击 <button>保存</button> 按钮，并在 `ACME 证书` 页面单击 <button>保存并应用</button> 按钮。
+单击 {{< button >}}保存{{</ button >}} 按钮，并在 `ACME 证书` 页面单击 {{< button >}}保存并应用{{</ button >}} 按钮。
 
 稍等片刻后，如果运行正常则可以在 `证书` 中看到对应域名的证书，如下图所示：
 
@@ -113,7 +113,7 @@ opkg install luci-app-uhttpd luci-i18n-uhttpd-zh-cn
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/openwrt-uhttpd-https-key.png" title="uHTTPd - HTTPS 证书" large-max-width="60%" >}}
 
-在 `uHTTPd` 页面单击 <button>保存并应用</button> 按钮。
+在 `uHTTPd` 页面单击 {{< button >}}保存并应用{{</ button >}} 按钮。
 
 在 Cloudflare 中将 `router.leovan.dev` 解析到 `192.168.100.1` 上后，分别通过 `http://192.168.100.1`、`https://192.168.100.1` 和 `https://router.leovan.dev` 访问路由器，如下图所示：
 
@@ -203,7 +203,7 @@ export SYNO_USE_TEMP_ADMIN=1
 
 ### 反向代理
 
-在 Cloudflare 中将 `nas.leovan.dev` 解析到 `192.168.100.10` 上后，在群晖的 `登录门户 - 高级` 单击 <button>反向代理服务器</button> 按钮打开对话框，单击 <button>新增</button> 按钮，根据下图添加配置：
+在 Cloudflare 中将 `nas.leovan.dev` 解析到 `192.168.100.10` 上后，在群晖的 `登录门户 - 高级` 单击 {{< button >}}反向代理服务器{{</ button >}} 按钮打开对话框，单击 {{< button >}}新增{{</ button >}} 按钮，根据下图添加配置：
 
 {{< figure src="/images/cn/2025-05-25-auto-apply-and-deploy-certificate-on-openwrt-and-synology/synology-reverse-proxy.png" title="反向代理" large-max-width="60%" >}}
 

@@ -73,7 +73,7 @@ a vibrant bird, detailed, a high contrast, inviting warmth, sunlit elements, dyn
 blurry, out of focus, over saturated, text+++
 {{< /highlight >}}
 
-将 `Creativity` 和 `Structure` 保持默认值 `0`，单击 <button>Invoke</button> 按钮生成图片。生成完毕后在 Assets 中的低分辨图片上右键，单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M160,88a16,16,0,1,1,16,16A16,16,0,0,1,160,88Zm76-32V160a20,20,0,0,1-20,20H204v20a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V88A20,20,0,0,1,40,68H60V56A20,20,0,0,1,80,36H216A20,20,0,0,1,236,56ZM180,180H80a20,20,0,0,1-20-20V92H44V196H180Zm-21.66-24L124,121.66,89.66,156ZM212,60H84v67.72l25.86-25.86a20,20,0,0,1,28.28,0L192.28,156H212Z"></path></svg></span> 按钮选择进行对比，单击 Images 选项卡回到新生成的图片页面查看对比效果。
+将 `Creativity` 和 `Structure` 保持默认值 `0`，单击 {{< button >}}Invoke{{</ button >}} 按钮生成图片。生成完毕后在 Assets 中的低分辨图片上右键，单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M160,88a16,16,0,1,1,16,16A16,16,0,0,1,160,88Zm76-32V160a20,20,0,0,1-20,20H204v20a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V88A20,20,0,0,1,40,68H60V56A20,20,0,0,1,80,36H216A20,20,0,0,1,236,56ZM180,180H80a20,20,0,0,1-20-20V92H44V196H180Zm-21.66-24L124,121.66,89.66,156ZM212,60H84v67.72l25.86-25.86a20,20,0,0,1,28.28,0L192.28,156H212Z"></path></svg></span> 按钮选择进行对比，单击 Images 选项卡回到新生成的图片页面查看对比效果。
 
 {{< figure src="/images/cn/2025-07-05-invoke-101-transform-low-res-images-to-high-res-images/upscaling-basic-compare.avif" title="对比图片" >}}
 

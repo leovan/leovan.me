@@ -69,19 +69,19 @@ futuristic terraced structure built into a mountain at dusk, twilight hues, lush
 
 将生成的图片拖入画布并创建一个新的 Raster Layer。在画布上单击 <span style="vertical-align: middle;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M208,100a20,20,0,0,0,20-20V48a20,20,0,0,0-20-20H176a20,20,0,0,0-20,20v4H100V48A20,20,0,0,0,80,28H48A20,20,0,0,0,28,48V80a20,20,0,0,0,20,20h4v56H48a20,20,0,0,0-20,20v32a20,20,0,0,0,20,20H80a20,20,0,0,0,20-20v-4h56v4a20,20,0,0,0,20,20h32a20,20,0,0,0,20-20V176a20,20,0,0,0-20-20h-4V100ZM180,52h24V76H180ZM52,52H76V76H52ZM76,204H52V180H76Zm128,0H180V180h24Zm-24-48h-4a20,20,0,0,0-20,20v4H100v-4a20,20,0,0,0-20-20H76V100h4a20,20,0,0,0,20-20V76h56v4a20,20,0,0,0,20,20h4Z"></path></svg></span> Bbox 按钮，此时图片的周围将显示一个边界框，使用鼠标按住可以拖动边界框的位置，放在边界框的四角可以调整边界框的大小。
 
-将边界框移动到画布的一个完全空白的区域，此时边界框中没有任何 Raster Layer 的内容，单击 <button>Invoke</button> 会生成一张新的图片。
+将边界框移动到画布的一个完全空白的区域，此时边界框中没有任何 Raster Layer 的内容，单击 {{< button >}}Invoke{{</ button >}} 会生成一张新的图片。
 
 {{< figure src="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/new-bbox-before-invoke.avif" title="生成前" >}}
 
 {{< figure src="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/new-bbox-after-invoke.avif" title="生成后" >}}
 
-将边界框移动到画布的一个包含部分 Raster Layer 内容的区域，单击 <button>Invoke</button> 会将空白的部分补全，通常称之为 Out Painting 或 Infilling。
+将边界框移动到画布的一个包含部分 Raster Layer 内容的区域，单击 {{< button >}}Invoke{{</ button >}} 会将空白的部分补全，通常称之为 Out Painting 或 Infilling。
 
 {{< figure src="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/overlap-bbox-before-invoke.avif" title="生成前" >}}
 
 {{< figure src="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/overlap-bbox-after-invoke.avif" title="生成后" >}}
 
-如果边界框和 Raster Layer 完全重合，单击 <button>Invoke</button> 将会基于当前 Raster Layer 中的内容重新生成新的图片，通常称之为图像到图像（Image2Image）。
+如果边界框和 Raster Layer 完全重合，单击 {{< button >}}Invoke{{</ button >}} 将会基于当前 Raster Layer 中的内容重新生成新的图片，通常称之为图像到图像（Image2Image）。
 
 {{< image-compare show-labels=true label-before="生成前" label-after="生成后" image-before="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/same-bbox-before-invoke.avif" image-after="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/same-bbox-after-invoke.avif" >}}
 
@@ -103,7 +103,7 @@ futuristic terraced structure built into a mountain at dusk, twilight hues, lush
 2. 创建一个 Inpaint Mask 图层，使用画笔勾勒出需要修改的区域。
 3. 返回 Raster Layer，选择一个颜色，使用画笔勾勒出两个人的大概位置。
 4. 在提示词的前面添加 `two people`。
-5. 选择一个合适的 Denoising Strength，此处设置为 `0.7`，单击 <button>Invoke</button> 按钮启动生成。
+5. 选择一个合适的 Denoising Strength，此处设置为 `0.7`，单击 {{< button >}}Invoke{{</ button >}} 按钮启动生成。
 
 {{< figure src="/images/cn/2025-06-28-invoke-101-creating-and-composing-on-canvas/add-two-people-before-invoke.avif" title="生成前" >}}
 

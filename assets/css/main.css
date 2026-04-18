@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "variable.css";
+@plugin "@tailwindcss/typography";
 @source "hugo_stats.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -76,24 +77,22 @@
     text-decoration-line: none;
   }
 
+  .shortcode-button {
+    @apply inline-flex shrink-0 items-center justify-center rounded-md font-medium border h-8 gap-1 px-2 border-transparent bg-clip-padding cursor-pointer no-underline whitespace-nowrap outline-none select-none transition-all text-sm shadow-xs;
+
+    border-color: var(--color-button-border);
+    background-color: var(--color-button-background);
+  }
+
+  .shortcode-button:hover {
+    background-color: var(--color-button-background-hover);
+  }
+
   blockquote {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1em;
     border-left: 3px solid var(--color-block-border);
-  }
-
-  button:not([class]) {
-    @apply px-2.5 rounded-lg border transition-all;
-
-    border-color: var(--color-button-border);
-    background-color: var(--color-button-background);
-
-    cursor: pointer;
-  }
-
-  button:not([class]):hover {
-    background-color: var(--color-button-background-hover);
   }
 
   code:not([class]) {

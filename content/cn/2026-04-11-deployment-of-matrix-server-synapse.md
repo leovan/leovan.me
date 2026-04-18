@@ -249,4 +249,4 @@ register_new_matrix_user http://localhost:8008 \
 
 # 开始使用
 
-在浏览器上打开 <https://app.element.io>，单击 <button>Sign in</button> 切换 Homeserver 到 `example.com`，输入用户名和密码即可登录。
+在浏览器上打开 <https://app.element.io>，单击 {{< button >}}Sign in{{</ button >}} 切换 Homeserver 到 `example.com`，输入用户名和密码即可登录。
