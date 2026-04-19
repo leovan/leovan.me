@@ -47,6 +47,17 @@
   <script src="/js/math.js"></script>
 {{- end }}
 
+{{- if strings.Contains .Content "doc-noteref" }}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ "/css/footnote.css" | relURL }}"
+  />
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/@popperjs/core@{{ $.Site.Params.popperVersion }}/dist/umd/popper.min.js"></script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/tippy.js@{{ $.Site.Params.tippyVersion }}/dist/tippy-bundle.umd.min.js"></script>
+  <script src="/js/footnote.js"></script>
+{{- end }}
+
 {{- with resources.Get "js/js-after.js" }}
   {{ with resources.ExecuteAsTemplate "js/js-after.js" $ . }}
     {{- if hugo.IsProduction }}

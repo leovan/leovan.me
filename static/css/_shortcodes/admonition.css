@@ -23,8 +23,10 @@
 
 .shortcode-admonition {
   background-color: var(--color-shortcode-admonition-background);
-  border: 0.075em solid #448aff;
+  border-color: #448aff;
   border-radius: 0.25rem;
+  border-width: 0;
+  border-left-width: 4px;
   color: var(--color-shortcode-admonition-foreground);
   display: flow-root;
   margin: 1.5625em 0;
@@ -51,10 +53,6 @@
   margin-top: 0;
 }
 
-html .shortcode-admonition > :last-child {
-  margin-bottom: 0.6em;
-}
-
 .shortcode-admonition-title {
   padding-left: 2em;
   padding-right: 0.6em;
@@ -78,12 +76,16 @@ html .shortcode-admonition > :last-child {
   position: relative;
 }
 
-html .shortcode-admonition-title:last-child {
+.shortcode-admonition-title:last-child {
   margin-bottom: 0;
 }
 
 .shortcode-admonition-title:before {
   left: 0.6em;
+}
+
+.shortcode-admonition-content {
+  margin: var(--spacing-shortcode-admonition-margin-y) auto;
 }
 
 .shortcode-admonition-title:before {
@@ -358,11 +360,10 @@ html .shortcode-admonition-title:last-child {
   display: none;
 }
 
-.shortcode-admonition-content {
-  margin: var(--spacing-shortcode-admonition-margin-y) auto;
+.shortcode-admonition-content > :first-child {
+  margin-top: var(--spacing-shortcode-admonition-margin-y) !important;
 }
 
-.shortcode-admonition {
-  border-width: 0;
-  border-left-width: 4px;
+.shortcode-admonition-content > :last-child {
+  margin-bottom: var(--spacing-shortcode-admonition-margin-y) !important;
 }

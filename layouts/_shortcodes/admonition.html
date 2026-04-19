@@ -28,7 +28,7 @@
       <span>{{ $title | markdownify }}</span>
     </summary>
     {{- with .Inner }}
-      <p class="shortcode-admonition-content">{{ . | markdownify }}</p>
+      <div class="shortcode-admonition-content">{{ . | markdownify }}</div>
     {{- end }}
   </details>
 {{- else }}
@@ -36,10 +36,10 @@
     class="shortcode-admonition shortcode-admonition-{{ $type }} {{ if $noIcon }}shortcode-admonition-no-icon{{ end }}"
   >
     {{- if $hasTitle }}
-      <p class="shortcode-admonition-title">{{ $title | markdownify }}</p>
+      <div class="shortcode-admonition-title">{{ $title | markdownify }}</div>
     {{- end }}
     {{- with .Inner }}
-      <p class="shortcode-admonition-content">{{ . | markdownify }}</p>
+      <div class="shortcode-admonition-content">{{ . | markdownify }}</div>
     {{- end }}
   </div>
 {{- end }}

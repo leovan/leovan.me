@@ -1,0 +1,22 @@
+.shortcode-button {
+  @apply inline-flex shrink-0 items-center justify-center rounded-md font-medium border h-8 gap-1 px-2 border-transparent bg-clip-padding cursor-pointer no-underline whitespace-nowrap outline-none select-none transition-all text-sm shadow-xs;
+
+  border-color: var(--color-button-border);
+  background-color: var(--color-button-background);
+}
+
+.shortcode-button:hover {
+  background-color: var(--color-button-background-hover);
+}
+
+.shortcode-dash-right-container {
+  @apply float-end inline-flex;
+}
+
+.shortcode-dash-right-dash {
+  @apply px-1;
+}
+
+.shortcode-dash-right-content {
+  @apply justify-end;
+}

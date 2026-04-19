@@ -77,17 +77,6 @@
     text-decoration-line: none;
   }
 
-  .shortcode-button {
-    @apply inline-flex shrink-0 items-center justify-center rounded-md font-medium border h-8 gap-1 px-2 border-transparent bg-clip-padding cursor-pointer no-underline whitespace-nowrap outline-none select-none transition-all text-sm shadow-xs;
-
-    border-color: var(--color-button-border);
-    background-color: var(--color-button-background);
-  }
-
-  .shortcode-button:hover {
-    background-color: var(--color-button-background-hover);
-  }
-
   blockquote {
     margin-left: 0;
     margin-right: 0;
@@ -96,7 +85,7 @@
   }
 
   code:not([class]) {
-    @apply p-1 rounded;
+    @apply px-1 py-0.5 rounded;
 
     background: var(--color-highlight-background);
   }
@@ -194,10 +183,12 @@
   }
 
   li {
-    @apply my-1;
+    @apply my-1 text-justify;
   }
 
   p {
+    @apply text-justify overflow-hidden;
+
     line-break: loose;
     margin-top: var(--spacing-p-margin-y);
     margin-bottom: var(--spacing-p-margin-y);
@@ -463,11 +454,17 @@
     }
 
     li {
-      @apply my-2;
+      @apply my-1;
     }
 
     p {
       @apply my-0;
+    }
+  }
+
+  :not(.content) > .footnotes {
+    hr {
+      display: none;
     }
   }
 
@@ -654,3 +651,4 @@
 
 @import "icon.css";
 @import "print.css";
+@import "shortcode.css";

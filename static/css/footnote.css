@@ -1,0 +1,165 @@
+:root {
+  --color-shortcode-footnote-tippy-foreground: var(--color-body-foreground);
+  --color-shortcode-footnote-tippy-background: var(--color-block-background);
+  --color-shortcode-footnote-tippy-border: var(--color-block-border);
+}
+
+.dark {
+  --color-shortcode-footnote-tippy-foreground: var(--color-body-foreground);
+  --color-shortcode-footnote-tippy-background: var(--color-block-background);
+  --color-shortcode-footnote-tippy-border: var(--color-block-border);
+}
+
+.tippy-box {
+  background-color: var(--color-shortcode-footnote-tippy-background);
+  border: solid 1 var(--color-shortcode-footnote-tippy-border);
+  border-radius: 0.25rem;
+  color: var(--color-shortcode-footnote-tippy-foreground);
+}
+
+.tippy-box > .tippy-backdrop {
+  background-color: var(--color-shortcode-footnote-tippy-background);
+}
+
+.tippy-box > .tippy-arrow:after,
+.tippy-box > .tippy-svg-arrow:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.tippy-box > .tippy-arrow:after {
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  bottom: -6px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  top: -6px;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  left: -6px;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  right: -6px;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  border-top-color: var(--color-shortcode-footnote-tippy-background);
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:after {
+  border-top-color: var(--color-shortcode-footnote-tippy-border);
+  border-width: 7px 7px 0;
+  top: 17px;
+  left: 1px;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-svg-arrow > svg {
+  top: 16px;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-svg-arrow:after {
+  top: 17px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  border-bottom-color: var(--color-shortcode-footnote-tippy-background);
+  bottom: 16px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:after {
+  border-bottom-color: var(--color-shortcode-footnote-tippy-border);
+  border-width: 0 7px 7px;
+  bottom: 17px;
+  left: 1px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-svg-arrow > svg {
+  bottom: 15px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-svg-arrow:after {
+  bottom: 17px;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  border-left-color: var(--color-shortcode-footnote-tippy-background);
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:after {
+  border-left-color: var(--color-shortcode-footnote-tippy-border);
+  border-width: 7px 0 7px 7px;
+  left: 17px;
+  top: 1px;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-svg-arrow > svg {
+  left: 11px;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-svg-arrow:after {
+  left: 12px;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  border-right-color: var(--color-shortcode-footnote-tippy-background);
+  right: 16px;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:after {
+  border-width: 7px 7px 7px 0;
+  right: 17px;
+  top: 1px;
+  border-right-color: var(--color-shortcode-footnote-tippy-border);
+}
+
+.tippy-box[data-placement^="right"] > .tippy-svg-arrow > svg {
+  right: 11px;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-svg-arrow:after {
+  right: 12px;
+}
+
+.tippy-box > .tippy-svg-arrow {
+  fill: var(--color-shortcode-footnote-tippy-foreground);
+}
+
+.tippy-box > .tippy-svg-arrow:after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCA2czEuNzk2LS4wMTMgNC42Ny0zLjYxNUM1Ljg1MS45IDYuOTMuMDA2IDggMGMxLjA3LS4wMDYgMi4xNDguODg3IDMuMzQzIDIuMzg1QzE0LjIzMyA2LjAwNSAxNiA2IDE2IDZIMHoiIGZpbGw9InJnYmEoMCwgOCwgMTYsIDAuMikiLz48L3N2Zz4=);
+  background-size: 16px 6px;
+  width: 16px;
+  height: 6px;
+}
+
+/* cunstom */
+.tippy-box {
+  box-shadow: var(--shadow-block);
+  padding: 0;
+}
+
+.tippy-arrow {
+  display: none;
+}
+
+.tippy-box .footnote-backref {
+  display: none;
+}
+
+.tippy-box > .tippy-content {
+  margin: 0.6em;
+}
+
+.tippy-box > .tippy-content > :first-child {
+  margin-top: 0.6em;
+}
+
+.tippy-box > .tippy-content > :last-child {
+  margin-bottom: 0.6em;
+}
