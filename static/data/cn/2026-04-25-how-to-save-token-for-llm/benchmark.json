@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Claude Opus 4.6",
+    "date": "2026-02",
+    "size": 1000,
+    "input_price": 5,
+    "output_price": 25,
+    "cache_price": 0.5,
+    "success_rate": 0.816,
+    "license_type": "闭源",
+    "region_type": "国外"
+  },
+  {
+    "name": "GPT-5.4",
+    "date": "2026-03",
+    "size": 1000,
+    "input_price": 2.5,
+    "output_price": 15,
+    "cache_price": 0.25,
+    "success_rate": 0.794,
+    "license_type": "闭源",
+    "region_type": "国外"
+  },
+  {
+    "name": "Grok 4.20",
+    "date": "2026-03",
+    "size": 1000,
+    "input_price": 2,
+    "output_price": 12,
+    "cache_price": 0.2,
+    "success_rate": 0.712,
+    "license_type": "闭源",
+    "region_type": "国外"
+  },
+  {
+    "name": "Gemma 4 31B",
+    "date": "2026-04",
+    "size": 31,
+    "input_price": 0.14,
+    "output_price": 0.4,
+    "cache_price": 0.07,
+    "success_rate": 0.665,
+    "license_type": "开源",
+    "region_type": "国外"
+  },
+  {
+    "name": "Gemma 4 26B A4B",
+    "date": "2026-04",
+    "size": 26,
+    "input_price": 0.13,
+    "output_price": 0.4,
+    "cache_price": 0.05,
+    "success_rate": 0.741,
+    "license_type": "开源",
+    "region_type": "国外"
+  },
+  {
+    "name": "Kimi K2.5",
+    "date": "2026-02",
+    "size": 1000,
+    "input_price": 0.6,
+    "output_price": 3,
+    "cache_price": 0.1,
+    "success_rate": 0.786,
+    "license_type": "开源",
+    "region_type": "国内"
+  },
+  {
+    "name": "MiniMax M2.5",
+    "date": "2026-03",
+    "size": 230,
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "cache_price": 0.06,
+    "success_rate": 0.828,
+    "license_type": "开源",
+    "region_type": "国内"
+  },
+  {
+    "name": "GLM 5 Turbo",
+    "date": "2026-04",
+    "size": 744,
+    "input_price": 1.2,
+    "output_price": 4,
+    "cache_price": 0.24,
+    "success_rate": 0.803,
+    "license_type": "开源",
+    "region_type": "国内"
+  },
+  {
+    "name": "Qwen 3.5 27B",
+    "date": "2026-02",
+    "size": 27,
+    "input_price": 0.3,
+    "output_price": 2.4,
+    "cache_price": 0.15,
+    "success_rate": 0.785,
+    "license_type": "开源",
+    "region_type": "国内"
+  },
+  {
+    "name": "Qwen 3.5 35B A3B",
+    "date": "2026-02",
+    "size": 35,
+    "input_price": 0.25,
+    "output_price": 2,
+    "cache_price": 0.12,
+    "success_rate": 0.717,
+    "license_type": "开源",
+    "region_type": "国内"
+  }
+]
