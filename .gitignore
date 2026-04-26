@@ -34,3 +34,6 @@ Thumbs.db
 
 # Others
 .ruff_cache
+
+/.quarto/
+**/*.quarto_ipynb

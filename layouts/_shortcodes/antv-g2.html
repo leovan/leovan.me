@@ -21,12 +21,20 @@
 {{- $padding := .Get "padding" | default "auto" }}
 {{- $margin := .Get "margin" | default 16 }}
 {{- $caption := or (.Get "caption") (.Get "title") }}
+{{- $footnote := .Get "footnote" }}
 {{- $script := .Get "script" | resources.Get }}
 
 <div class="antv-container">
   <div class="antv-g2-container" id="{{ $containerId }}" style="height: {{ $height }};"></div>
-  {{- if $caption }}
-    <figcaption>{{ $caption | markdownify }}</figcaption>
+
+  {{- with $footnote }}
+    <div class="figure-foot">
+      {{ . | markdownify }}
+    </div>
+  {{- end }}
+  
+  {{- with $caption }}
+    <figcaption>{{ . | markdownify }}</figcaption>
   {{- end }}
 </div>
 

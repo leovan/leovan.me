@@ -50,6 +50,18 @@ function setAntvTheme(theme) {
   });
 }
 
+function setMarkmapTheme(theme) {
+  if (theme === "dark") {
+    document.querySelectorAll(".markmap-container").forEach((el) => {
+      el.classList.add("markmap-dark");
+    });
+  } else {
+    document.querySelectorAll(".markmap-container").forEach((el) => {
+      el.classList.remove("markmap-dark");
+    });
+  }
+}
+
 function setMermaidTheme(theme) {
   if (window.mermaid) {
     document.querySelectorAll(".mermaid").forEach(element => {
@@ -83,6 +95,7 @@ function setTheme(theme) {
 
   setGiscusTheme(theme);
   setAntvTheme(theme);
+  setMarkmapTheme(theme);
   setMermaidTheme(theme);
 }
 

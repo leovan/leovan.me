@@ -1,0 +1,80 @@
+{{- if $.Page.Store.Get "shortcode-copy-to-clipboard" }}
+<script>
+  (function (d) {
+    let ClipboardJS = window.ClipboardJS || undefined;
+    if (!ClipboardJS) return;
+
+    let tippy = window.tippy || undefined;
+    if (!tippy) return;
+
+    function makeTippy(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const tippyConfig = {
+        allowHTML: true,
+        arrow: false,
+        appendTo: function (el) {
+          return d.querySelector(".content");
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        placement: "top",
+        trigger: "manual",
+      };
+
+      if (contentFn) {
+        tippyConfig.content = contentFn;
+      }
+
+      if (onTriggerFn) {
+        tippyConfig.onTrigger = onTriggerFn;
+      }
+
+      if (onUntriggerFn) {
+        tippyConfig.onUntrigger = onUntriggerFn;
+      }
+
+      return tippy(el, tippyConfig);
+    }
+
+    document
+      .querySelectorAll(".shortcode-copy-to-clipboard")
+      .forEach(function (el) {
+        let clip = new ClipboardJS(el, {
+          text: function () {
+            return el
+              .getAttribute("data-clipboard-text")
+              .replace(/\n$/, "")
+              .replace(/^\n/, "");
+          },
+        });
+
+        const successMessage =
+          el.getAttribute("data-clipboard-success-message") || "复制成功";
+        const errorMessage =
+          el.getAttribute("data-clipboard-error-message") || "复制失败";
+        const dealy = 600;
+
+        clip.on("success", function () {
+          const tippyInstance = makeTippy(el, function () {
+            return el.getAttribute("data-clipboard-success-message");
+          });
+          tippyInstance.show();
+
+          setInterval(function () {
+            tippyInstance.hide();
+          }, dealy);
+        });
+
+        clip.on("error", function () {
+          const tippyInstance = makeTippy(el, function () {
+            return el.getAttribute("data-clipboard-error-message");
+          });
+          tippyInstance.show();
+
+          setInterval(function () {
+            tippyInstance.hide();
+          }, dealy);
+        });
+      });
+  })(document);
+</script>
+{{- end }}

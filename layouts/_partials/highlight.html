@@ -1,5 +1,4 @@
 {{- if and (not .Params.disable_highlight) .IsPage (strings.Contains .Content "</code>") }}
-  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
   <script>
     function createCodeCopyButton(el) {
       let button = document.createElement("button");
@@ -15,6 +14,8 @@
       let ClipboardJS = window.ClipboardJS || undefined;
 
       function registerClipboard() {
+        if (!ClipboardJS) return;
+
         let clip = new ClipboardJS(button, {
           text: function () {
             return code.replace(/\n$/, "");

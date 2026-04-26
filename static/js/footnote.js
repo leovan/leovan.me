@@ -1,6 +1,9 @@
 (function (d) {
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
+  let tippy = window.tippy || undefined;
+  if (!tippy) return;
+
+  function makeTippy(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const tippyConfig = {
       allowHTML: true,
       maxWidth: 640,
       delay: 100,
@@ -14,25 +17,25 @@
     };
 
     if (contentFn) {
-      config.content = contentFn;
+      tippyConfig.content = contentFn;
     }
 
     if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
+      tippyConfig.onTrigger = onTriggerFn;
     }
 
     if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
+      tippyConfig.onUntrigger = onUntriggerFn;
     }
 
-    window.tippy(el, config);
+    tippy(el, tippyConfig);
   }
 
   const refs = d.querySelectorAll('a[role="doc-noteref"]');
 
   for (var i = 0; i < refs.length; i++) {
     const ref = refs[i];
-    tippyHover(ref, function () {
+    makeTippy(ref, function () {
       let href = ref.getAttribute("href");
       try {
         href = new URL(href).hash;

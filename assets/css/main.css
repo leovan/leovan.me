@@ -132,8 +132,15 @@
     text-align: center;
   }
 
+  .figure-foot {
+    text-align: left;
+    font-size: 0.8em;
+    padding-top: 0.4em;
+    padding-bottom: 0;
+  }
+
   figcaption {
-    margin-top: var(--spacing-p-margin-y);
+    padding-top: 0.4em;
   }
 
   h1,
@@ -223,6 +230,10 @@
     font-size: 0.8em;
   }
 
+  tfoot tr td {
+    padding-bottom: 0;
+  }
+
   thead,
   tr:nth-child(even) {
     background: var(--color-block-background);
@@ -234,9 +245,12 @@
   }
 
   th,
-  td,
-  table caption {
+  td {
     padding: 0.4em;
+  }
+
+  table caption {
+    padding-bottom: 0.4em;
   }
 
   ul {
@@ -607,6 +621,12 @@
   h5:hover .anchor,
   h6:hover .anchor {
     display: inline-block;
+  }
+
+  /* markmap */
+  .markmap svg {
+    width: 100%;
+    height: 480px;
   }
 
   /* mathjax */

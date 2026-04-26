@@ -1,3 +1,7 @@
+<script src="{{ $.Site.Params.jsdelivrMirror }}/npm/clipboard@{{ $.Site.Params.clipboardjsVersion }}/dist/clipboard.min.js"></script>
+<script src="{{ $.Site.Params.jsdelivrMirror }}/npm/@popperjs/core@{{ $.Site.Params.popperVersion }}/dist/umd/popper.min.js"></script>
+<script src="{{ $.Site.Params.jsdelivrMirror }}/npm/tippy.js@{{ $.Site.Params.tippyVersion }}/dist/tippy-bundle.umd.min.js"></script>
+
 {{- if .Store.Get "hasMermaid" }}
   <script type="module">
     import mermaid from "{{ $.Site.Params.jsdelivrMirror }}/npm/mermaid@{{ $.Site.Params.mermaidVersion }}/dist/mermaid.esm.min.mjs";
@@ -19,6 +23,18 @@
 
     window.mermaid = mermaid;
   </script>
+  <script src="/js/mermaid.js"></script>
+{{- end }}
+
+{{- if .Store.Get "hasMarkmap" }}
+  <script>
+    window.markmap = {
+      autoLoader: {
+        provider: (path) => `{{ $.Site.Params.jsdelivrMirror }}/npm/${path}`,
+      }
+    };
+  </script>
+  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/markmap-autoloader@{{ $.Site.Params.markmapVersion }}"></script>
 {{- end }}
 
 <script src="/js/theme.js"></script>
@@ -37,6 +53,7 @@
 
 {{- partial "highlight.html" . }}
 
+{{- partial "shortcode_copy_to_clipboard.html" . }}
 {{- partial "shortcode_image_compare.html" . }}
 {{- partial "shortcode_gallery.html" . }}
 {{- partial "shortcode_pseudocode.html" . }}
@@ -53,8 +70,6 @@
     type="text/css"
     href="{{ "/css/footnote.css" | relURL }}"
   />
-  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/@popperjs/core@{{ $.Site.Params.popperVersion }}/dist/umd/popper.min.js"></script>
-  <script src="{{ $.Site.Params.jsdelivrMirror }}/npm/tippy.js@{{ $.Site.Params.tippyVersion }}/dist/tippy-bundle.umd.min.js"></script>
   <script src="/js/footnote.js"></script>
 {{- end }}
 
