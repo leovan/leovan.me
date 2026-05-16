@@ -1,6 +1,6 @@
 baseURL = "https://leovan.me/"
 hasCJKLanguage = true
-languageCode = "zh-cn"
+locale = "zh-Hans"
 title = "范叶亮 | Leo Van"
 rssLimit = 100
 
@@ -127,7 +127,7 @@ lightgalleryVersion = "2.9.0"
 markmapVersion = "0.18.12"
 mathjaxVersion = "4"
 metingjsVersion = "2.0.2"
-mermaidVersion = "11.14.0"
+mermaidVersion = "11.15.0"
 popperVersion = "2.11.8"
 pseudocodeVersion = "latest"
 swiperVersion = "12.0.3"
