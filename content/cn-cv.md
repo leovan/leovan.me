@@ -111,22 +111,28 @@ _2015.04 ~ 2015.10 算法设计和开发_
 4. 一种数据处理方法、装置、设备及介质 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN110309235B)，**授权**，第一发明人，2019)
 6. 用于生成信息的方法和装置 (发明，[CN 110309235](http://epub.cnipa.gov.cn/patent/CN112395490B)，**授权**，第一发明人，2019)
 
-### 技术项目
+### 开源
 
-- **技术主页**：[https://leovan.tech](https://leovan.tech)
-- **Github**: [https://github.com/leovan](https://github.com/leovan) <img src="https://img.shields.io/github/followers/leovan?style=social&label=Follow">
+- **主页**：[https://leovan.tech](https://leovan.tech)
+- **GitHub**：[https://github.com/leovan](https://github.com/leovan) ![](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
-<br/>
+#### 教程
 
-1. [R 语言数据科学导论](https://ds-r.leovan.tech)：一份以 R 语言为基础的数据科学入门教程。<img src="https://img.shields.io/github/stars/leovan/data-science-introduction-with-r">
-2. [Python 数据科学导论](https://ds-python.leovan.tech)：一份以 Python 为基础的数据科学入门教程。<img src="https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars">
-3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)：Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。<img src="https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars">
-4. [XGMML](https://github.com/leovan/xgmml)：XGMML 是一个用于解析和生成 XGMML 文件的 Python 库。<img src="https://img.shields.io/github/stars/leovan/xgmml.svg?style=social&label=Stars">
-5. [中文 Duckling](https://github.com/leovan/duckling-chinese)：中文 Duckling 是基于 Jpype1 的 [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) 的 Python 封装版本，提供例如时间、日期、数字等中文解析服务。<img src="https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars">
-6. [Hive 函数](https://hive-functions.leovan.tech)：实用自定义 Hive 函数集。<img src="https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars">
-7. [Cytoscape 中文用户手册](https://cytoscape.leovan.tech)：Cytoscape 中文用户手册。<img src="https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars">
-8. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 文档中渲染伪代码的 Quarto 扩展。<img src="https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars">
-9. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。<img src="https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars">
-10. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。<img src="https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars">
+1. [R 语言数据科学导论](https://ds-r.leovan.tech)：一份以 R 语言为基础的数据科学入门教程。![](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r)
+2. [Python 数据科学导论](https://ds-python.leovan.tech)：一份以 Python 为基础的数据科学入门教程。![](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 
-<p style="text-align: right;">更新于：2025-08-23</p>
+#### 项目
+
+1. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA)：Sci-Hub EVA 是一个跨平台的 Sci-Hub 界面化应用。![](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+2. [XGMML](https://github.com/leovan/xgmml)：XGMML 是一个用于解析和生成 XGMML 文件的 Python 库。![](https://img.shields.io/github/stars/leovan/xgmml.svg?style=social&label=Stars)
+3. [中文 Duckling](https://github.com/leovan/duckling-chinese)：中文 Duckling 是基于 Jpype1 的 [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) 的 Python 封装版本，提供例如时间、日期、数字等中文解析服务。![](https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars)
+4. [Hive 函数](https://hive-functions.leovan.tech)：实用自定义 Hive 函数集。![](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+5. [Quarto 伪代码扩展](https://github.com/leovan/quarto-pseudocode)：一个用于在 `html` 和 `pdf` 文档中渲染伪代码的 Quarto 扩展。![](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+6. [Quarto 水印扩展](https://github.com/leovan/quarto-watermark)：一个用于在 `html` 和 `pdf` 文档中添加水印的 Quarto 扩展。![](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
+7. [Quarto 样式文本扩展](https://github.com/leovan/quarto-style-text)：一个用于在 `html` 和 `pdf` 文档中渲染样式文本的 Quarto 扩展。![](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+
+#### 文档
+
+1. [Cytoscape 中文用户手册](https://cytoscape.leovan.tech)：Cytoscape 中文用户手册。![](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+
+<p style="text-align: right;">更新于：2026-05-17</p>

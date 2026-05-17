@@ -111,7 +111,8 @@ weight = 6
 
 [params]
 description = "范叶亮的个人网站 | Leo Van's Personal Website"
-footer = "Copyright &copy; 2017-{Year} 范叶亮 Leo Van"
+copyright = "Copyright &copy; 2017-{Year} 范叶亮 Leo Van"
+icpFiling = "冀ICP备2025124008号-3"
 licenseURL = "https://github.com/leovan/leovan.me/blob/main/LICENSE"
 # googleAdsense = "ca-pub-2608165017777396"
 categories = "分类 | Categories"
@@ -254,7 +255,7 @@ unsafe = true
 
 [markup.goldmark.parser]
 autoIDType = "blackfriday"
-wrapStandAloneImageWithinParagraph = true
+wrapStandAloneImageWithinParagraph = false
 
 [markup.goldmark.parser.attribute]
 block = true

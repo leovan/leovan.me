@@ -15,29 +15,40 @@
 {{- $alt := .PlainText }}
 {{- $caption := .Title }}
 
-<figure class="render-image"> 
-  {{- range $k, $v := .Attributes -}}
-    {{- if $v -}}
-      {{- printf " %s=%q" $k ($v | transform.HTMLEscape) | safeHTMLAttr -}}
+{{- if .IsBlock  -}}
+  <figure class="render-image"> 
+    {{- range $k, $v := .Attributes -}}
+      {{- if $v -}}
+        {{- printf " %s=%q" $k ($v | transform.HTMLEscape) | safeHTMLAttr -}}
+      {{- end -}}
     {{- end -}}
-  {{- end -}}
-  <img
-    class="lazyload"
-    data-src="{{ $src }}"
-    {{- with $alt }}
-    alt="{{ . | markdownify | plainify }}"
+    <img
+      class="lazyload"
+      data-src="{{ $src }}"
+      {{- with $alt }}
+      alt="{{ . | markdownify | plainify }}"
+      {{- end }}
+      {{- with $caption }}
+      title="{{ . | markdownify | plainify }}"
+      {{- end }}
+    />
+    {{- with .Attributes.footnote }}
+      <div class="figure-foot">
+        {{ . | markdownify }}
+      </div>
     {{- end }}
     {{- with $caption }}
-    title="{{ . | markdownify | plainify }}"
+      <figcaption>{{ . | markdownify }}</figcaption>
     {{- end }}
-  />
-  {{- with .Attributes.footnote }}
-    <div class="figure-foot">
-      {{ . | markdownify }}
-    </div>
+  </figure>
+{{- else -}}
+  <img
+  src="{{ $src }}"
+  {{- with $alt }}
+  alt="{{ . | markdownify | plainify }}"
   {{- end }}
   {{- with $caption }}
-    <figcaption>{{ . | markdownify }}</figcaption>
+  title="{{ . | markdownify | plainify }}"
   {{- end }}
-</figure>
-{{- /**/ -}}
+  />
+{{- end -}}

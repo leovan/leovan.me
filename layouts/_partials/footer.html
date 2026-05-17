@@ -79,9 +79,9 @@
 
   <div class="copyright">
     <hr />
-    <span>{{ replace site.Params.footer "{Year}" now.Year | markdownify }}</span>
+    <span>{{ replace site.Params.copyright "{Year}" now.Year | markdownify }}</span>
     <span class="copyright-separator">|</span>
     <span class="copyright-line-break"><br /></span>
-    <a href="https://beian.miit.gov.cn/" target="_blank">冀ICP备2025124008号-3</a>
+    <a href="https://beian.miit.gov.cn/" target="_blank">{{ site.Params.icpFiling }}</a>
   </div>
 </footer>

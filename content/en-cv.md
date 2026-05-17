@@ -113,22 +113,28 @@ _2015.04 ~ 2015.10, Algorithms Engineer_
 4. A kind of data processing method, device, equipment and medium ([CN 110309235](https://patents.google.com/patent/CN110309235B/en), 2019)
 5. Method and apparatus for generating information ([CN 110309235](https://patents.google.com/patent/CN112395490B/en), 2019)
 
-### Technical Projects
+### Open Source
 
-- **Technical Website**: [https://leovan.tech](https://leovan.tech)
-- **Github**: [https://github.com/leovan](https://github.com/leovan) <img src="https://img.shields.io/github/followers/leovan?style=social&label=Follow">
+- **Website**: [https://leovan.tech](https://leovan.tech)
+- **GitHub**: [https://github.com/leovan](https://github.com/leovan) ![](https://img.shields.io/github/followers/leovan?style=social&label=Follow)
 
-<br/>
+#### Tutorials
 
-1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese). <img src="https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars">
-2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese). <img src="https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars">
-3. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. <img src="https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars">
-4. [XGMML](https://github.com/leovan/xgmml): XGMML is a Python library for parsing and generating XGMML files. <img src="https://img.shields.io/github/stars/leovan/xgmml.svg?style=social&label=Stars">
-5. [Duckling Chinese](https://github.com/leovan/duckling-chinese)：Duckling Chinese is Python wrapper of [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) based on Jpype1, which provides parsing service in Chinese of time, data, numeral, etc. <img src="https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars">
-6. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. <img src="https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars">
-7. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). <img src="https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars">
-8. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. <img src="https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars">
-9. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. <img src="https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars">
-10. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. <img src="https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars">
+1. [Data Science Introduction With R](https://ds-r.leovan.tech): a getting started tutorial of data science based on R (in Chinese). ![](https://img.shields.io/github/stars/leovan/data-science-introduction-with-r.svg?style=social&label=Stars)
+2. [Data Science Introduction With Python](https://ds-python.leovan.tech): a getting started tutorial of data science based on Python (in Chinese). ![](https://img.shields.io/github/stars/leovan/data-science-introduction-with-python.svg?style=social&label=Stars)
 
-<p style="text-align: right;">Updated on: 2025-08-23</p>
+#### Projects
+
+1. [Sci-Hub EVA](https://github.com/leovan/SciHubEVA): Sci-Hub EVA is a cross-platform Sci-Hub GUI application. ![](https://img.shields.io/github/stars/leovan/SciHubEVA.svg?style=social&label=Stars)
+2. [XGMML](https://github.com/leovan/xgmml): XGMML is a Python library for parsing and generating XGMML files. ![](https://img.shields.io/github/stars/leovan/xgmml.svg?style=social&label=Stars)
+3. [Duckling Chinese](https://github.com/leovan/duckling-chinese)：Duckling Chinese is Python wrapper of [duckling-fork-chinese](https://github.com/XiaoMi/MiNLP/tree/main/duckling-fork-chinese) based on Jpype1, which provides parsing service in Chinese of time, data, numeral, etc. ![](https://img.shields.io/github/stars/leovan/duckling-chinese.svg?style=social&label=Stars)
+4. [Hive Functions](https://hive-functions.leovan.tech): useful custom Hive functions. ![](https://img.shields.io/github/stars/leovan/hive-functions.svg?style=social&label=Stars)
+5. [Quarto Pseudocode Extension](https://github.com/leovan/quarto-pseudocode): A Quarto extension to render pseudocode for `html` and `pdf` document. ![](https://img.shields.io/github/stars/leovan/quarto-pseudocode.svg?style=social&label=Stars)
+6. [Quarto Watermark Extension](https://github.com/leovan/quarto-watermark): A Quarto extension to add watermark for `html` and `pdf` document. ![](https://img.shields.io/github/stars/leovan/quarto-watermark.svg?style=social&label=Stars)
+7. [Quarto Style Text Extension](https://github.com/leovan/quarto-style-text): A Quarto extension to render style text for `html` and `pdf` document. ![](https://img.shields.io/github/stars/leovan/quarto-style-text.svg?style=social&label=Stars)
+
+#### Documents
+
+1. [Cytoscape Manual](https://cytoscape.leovan.tech): Cytoscape manual (Chinese Version). ![](https://img.shields.io/github/stars/leovan/cytoscape-manual.svg?style=social&label=Stars)
+
+<p style="text-align: right;">Updated on: 2026-05-17</p>
