@@ -1,8 +1,8 @@
 ---
-title: 本地部署 OpenClaw，QwenPaw 和 Hermes Agent
-enTitle: Local Deployment of OpenClaw, QwenPaw and Hermes Agent
+title: 本地部署智能体
+subTitle: OpenClaw，QwenPaw，Hermes Agent ...
 date: 2026-04-18
-slug: local-deployment-of-openclaw-qwenpaw-and-hermes-agent
+slug: local-deployment-of-agents
 categories:
   - AI
   - Tech101
