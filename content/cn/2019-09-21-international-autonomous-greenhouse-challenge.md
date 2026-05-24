@@ -105,4 +105,4 @@ images:
 
 > 大胆的假设，小心的求证。  -- 胡适
 
-<h2><center>💪 壮志未酬，来年再战！💪</center></h2>
+**<center style="font-size: 24px;">💪 壮志未酬，来年再战！💪</center>**

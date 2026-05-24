@@ -404,4 +404,4 @@ $$`
 
 关于流形距离请参见之前的博客：[流形学习 (Manifold Learning)](/cn/2018/03/manifold-learning)。
 
-<h2><center>🎉🎉🎉 Happy New Year! 🎉🎉🎉</center></h2>
+**<center style="font-size: 24px">🎉🎉🎉 Happy New Year! 🎉🎉🎉</center>**
