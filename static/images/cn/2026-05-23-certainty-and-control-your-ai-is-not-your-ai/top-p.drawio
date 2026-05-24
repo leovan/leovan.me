@@ -1,0 +1,43 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="e0oE0NclhJN-0UXqde6J">
+    <mxGraphModel dx="2016" dy="2349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontFamily=Comic Sans MS;" value="" vertex="1">
+          <mxGeometry height="160" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#d5e8d4;sketch=1;horizontal=0;strokeColor=#82b366;fontSize=14;fontFamily=Comic Sans MS;" value="4%" vertex="1">
+          <mxGeometry height="120" width="20" x="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#d5e8d4;sketch=1;strokeColor=#82b366;horizontal=0;fontSize=14;fontFamily=Comic Sans MS;" value="3.5%" vertex="1">
+          <mxGeometry height="100" width="20" x="60" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#d5e8d4;sketch=1;strokeColor=#82b366;horizontal=0;fontSize=14;fontFamily=Comic Sans MS;" value="2.5%" vertex="1">
+          <mxGeometry height="80" width="20" x="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#f8cecc;sketch=1;strokeColor=#b85450;horizontal=0;fontSize=14;fontFamily=Comic Sans MS;" value="2%" vertex="1">
+          <mxGeometry height="60" width="20" x="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#f8cecc;sketch=1;strokeColor=#b85450;horizontal=0;fontSize=14;fontFamily=Comic Sans MS;" value="1%" vertex="1">
+          <mxGeometry height="40" width="20" x="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-11" edge="1" parent="1" style="html=1;rounded=1;sketch=1;fillWeight=4;hachureGap=8;hachureAngle=45;strokeColor=#d79b00;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=#ffe6cc;endArrow=none;endFill=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" as="sourcePoint" />
+            <mxPoint x="140" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-3" edge="1" parent="1" style="html=1;rounded=1;sketch=1;fillWeight=4;hachureGap=8;hachureAngle=45;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;fontColor=default;fillColor=#1ba1e2;endArrow=none;endFill=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint y="120" as="sourcePoint" />
+            <mxPoint x="240" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gEH-m6zA3plpvZTjwLHc-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Comic Sans MS;" value="$$\text{Top}_p = 10\%$$" vertex="1">
+          <mxGeometry height="40" width="240" y="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

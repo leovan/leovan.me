@@ -1,0 +1,25 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="e0oE0NclhJN-0UXqde6J">
+    <mxGraphModel dx="1188" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="160" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=6;horizontal=1;spacing=2;autosizeText=0;fontFamily=Comic Sans MS;" value="&lt;font style=&quot;line-height: 160%; font-size: 14px;&quot;&gt;The sun sets, painting the sky in fiery hues of orange and pink. A gentle breeze whispers through the trees.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="140" as="geometry" />
+        </mxCell>
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;fontSize=24;sketch=1;fillWeight=2;hachureGap=8;fillStyle=dots;align=center;verticalAlign=middle;fontFamily=Comic Sans MS;" value="15" vertex="1">
+          <mxGeometry height="60" width="60" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Token 数&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="140" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="83XW6M7HREqB1XxZt0G0-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontFamily=Comic Sans MS;" value="&lt;font&gt;最大&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

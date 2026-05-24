@@ -1,0 +1,16 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="e0oE0NclhJN-0UXqde6J">
+    <mxGraphModel dx="1192" dy="1184" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VtDzrnpUB6gjwcoilVCX-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="120" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="h-3AYZ04mWhQ-hHgtEwP-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;horizontal=1;spacing=2;autosizeText=0;fontFamily=Comic Sans MS;" value="&lt;div style=&quot;line-height: 160%;&quot;&gt;&lt;font style=&quot;color: rgb(151, 208, 119);&quot;&gt;Puppies nap.&lt;/font&gt; Kittens play. The sun shines. A bird sings. The day is perfect.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" x="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
