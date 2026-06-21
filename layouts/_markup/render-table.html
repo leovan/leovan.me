@@ -1,12 +1,15 @@
-<table
-  {{- range $k, $v := .Attributes }}
-    {{- if $v }}
-      {{- printf " %s=%q" $k ($v | transform.HTMLEscape) | safeHTMLAttr }}
-    {{- end }}
-  {{- end }}>
+<table>
   {{- $caption := or (.Attributes.caption) (.Attributes.title) }}
   {{- with $caption }}
     <caption>{{ . | markdownify }}</caption>
+  {{- end }}
+  {{- $width := (.Attributes.width) }}
+  {{- with $width }}
+    <colgroup>
+    {{- range (split $width ",") }}
+      <col style="width: {{ . }}" />
+    {{- end }}
+    </colgroup>
   {{- end }}
   <thead>
     {{- range .THead }}
