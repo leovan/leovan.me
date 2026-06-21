@@ -3,10 +3,10 @@
   {{- with $caption }}
     <caption>{{ . | markdownify }}</caption>
   {{- end }}
-  {{- $width := (.Attributes.width) }}
-  {{- with $width }}
+  {{- $colwidth := (.Attributes.colwidth) }}
+  {{- with $colwidth }}
     <colgroup>
-    {{- range (split $width ",") }}
+    {{- range (split $colwidth ",") }}
       <col style="width: {{ . }}" />
     {{- end }}
     </colgroup>
