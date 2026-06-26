@@ -644,6 +644,11 @@
     border: none !important;
   }
 
+  /* pseudocode */
+  .ps-root {
+    font-family: var(--font-math);
+  }
+
   /* table of contents */
   .toc {
     background-color: var(--color-block-background);

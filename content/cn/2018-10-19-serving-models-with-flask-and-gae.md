@@ -44,7 +44,7 @@ images:
 
 为了将模型代码和 Flask 服务进行整合，首先假设你已经对模型部分代码做了完美的封装 😎，整个工程先叫做 `model-serving-demo` 吧。整理一下代码的目录结构，给一个我中意的 Python 目录结构风格：
 
-```
+```plain
 model-serving-demo/                # 工程根目录
 ├── bin/                           # 可执行命令目录
 |   ├─ start.sh                    # 启动脚本
@@ -84,7 +84,7 @@ model-serving-demo/                # 工程根目录
 
 我们利用一个极简的示例介绍整个模型部署，相关的库依赖 `requirements.txt` 如下：
 
-```
+```plain
 Flask==1.0.2
 Flask-RESTful==0.3.6
 Flask-Cors==3.0.6
@@ -238,7 +238,7 @@ if __name__ == '__main__':
 
 Flask 主程序配置完毕后，我们通过 `app.run()` 在本地启动 Flask 服务，同时可以指定绑定的主机名，端口，以及是否开启调试模式等。通过 `python main.py` 启动 Flask 服务后，可以在命令行看到如下类似的日志：
 
-```
+```plain
 [2018/10/21 00:00:00] - [INFO] - [XXXModel] - Initializing XXX Model ...
 [2018/10/21 00:00:00] - [INFO] - [XXXModel] - XXX Model Initialized.
  * Serving Flask app "main" (lazy loading)
@@ -274,7 +274,7 @@ curl --header 'Content-Type: application/json; charset=UTF-8' \
 
 三种不同的请求返回的 HTTP 状态码和结果如下：
 
-```
+```plain
 HTTP/1.0 400 BAD REQUEST
 {"message": "No JSON object"}
 
