@@ -3,6 +3,9 @@
     MathJax = {
       loader: {
         load: ["[tex]/boldsymbol"],
+        paths: {
+          fonts: "{{ $.Site.Params.jsdelivrMirror }}/npm/@mathjax",
+        },
       },
       options: {
         enableEnrichment: false,
