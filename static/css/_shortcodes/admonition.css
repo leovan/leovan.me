@@ -143,11 +143,11 @@
   display: none;
 }
 
-.shortcode-admonition-content > :first-child {
+.shortcode-admonition-content > :first-child:is(div, p, ol, ul) {
   margin-top: var(--spacing-shortcode-admonition-margin-y) !important;
 }
 
-.shortcode-admonition-content > :last-child {
+.shortcode-admonition-content > :last-child:is(div, p, ol, ul) {
   margin-bottom: var(--spacing-shortcode-admonition-margin-y) !important;
 }
 
