@@ -89,7 +89,7 @@ opkg install acme acme-acmesh-dnsapi luci-app-acme luci-i18n-acme-zh-cn luci-ssl
 
 同时，系统会启动自动续签，在 `系统 - 计划任务` 中可以看到添加了如下一条记录：
 
-```
+```plain
 0 0 * * * /etc/init.d/acme renew
 ```
 

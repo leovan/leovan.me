@@ -92,7 +92,7 @@ NAS 自带的内存为 2G，后面加了一条 4G 的内存扩容到 6G，最初
 
 通过 `系统 > TTYD终端` 在输入用户名（`root`）和密码后可以进入软路由命令行，输入 `fdisk -l` 可以查看所有可用块设备的信息：
 
-```
+```plain
 Disk /dev/nvme0n1: 119.24 GiB, 128035676160 bytes, 250069680 sectors
 ...
 
@@ -122,7 +122,7 @@ Partition table entries are not in disk order.
 
 提交完毕后使用 `[Quit]` 选项退出分区工具。再次输入 `fdisk -l` 可以查看所有可用块设备的信息：
 
-```
+```plain
 Disk /dev/nvme0n1: 119.24 GiB, 128035676160 bytes, 250069680 sectors
 ...
 
@@ -167,7 +167,7 @@ cp -R /overlay/* /mnt/nvme0n1p3/
 
 单击 `保存&应用` 后重启路由器，重启完毕后在命令行输入 `df -h` 可以看出所有分区均成功挂载：
 
-```
+```plain
 Filesystem                Size      Used Available Use% Mounted on
 ...
 /dev/nvme0n1p3           31.2G     87.9M     26.6G   0% /overlay
@@ -232,7 +232,7 @@ mount.nfs -w 192.168.5.10:/volume4/Disk4 /data/docker/jellyfin/media/nas/disk4 -
 
 进入软路由命令行，输入 `ls /dev/dri`，如果输出如下则表示 CPU 支持硬件加速：
 
-```
+```plain
 card0       renderD128
 ```
 
@@ -373,7 +373,7 @@ mount.nfs -w 192.168.5.10:/volume4/Disk4 /data/docker/tinymediamanager/media/nas
 
 通过 `Docker > 容器` 菜单，单击 `添加` 按钮添加容器。单击 `命令行` 并复制如下内容，单击 `提交` 解析命令行：
 
-```
+```plain
 docker run -d \
  --name=tinymediamanager \
  --hostname=tinymediamanager \

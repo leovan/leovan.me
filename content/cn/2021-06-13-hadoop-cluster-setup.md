@@ -420,7 +420,7 @@ YARN_NODEMANAGER_USER=leo
 
 修改 `/opt/hadoop/etc/hadoop/workers` 内容如下：
 
-```
+```plain
 vm-01
 vm-02
 vm-03
@@ -451,7 +451,7 @@ zkServer.sh status
 
 可能得到如下输出：
 
-```
+```plain
 ZooKeeper JMX enabled by default
 Using config: /opt/zookeeper/bin/../conf/zoo.cfg
 Client port found: 2181. Client address: localhost. Client SSL: false.
@@ -460,7 +460,7 @@ Mode: leader
 
 或
 
-```
+```plain
 ZooKeeper JMX enabled by default
 Using config: /opt/zookeeper/bin/../conf/zoo.cfg
 Client port found: 2181. Client address: localhost. Client SSL: false.
@@ -514,7 +514,7 @@ hdfs --daemon stop journalnode
 
 会得到如下输出：
 
-```
+```plain
 Starting namenodes on [vm-01 vm-02 vm-03]
 Starting datanodes
 Starting journal nodes [vm-01 vm-03 vm-02]
@@ -529,7 +529,7 @@ Starting ZK Failover Controllers on NN hosts [vm-01 vm-02 vm-03]
 
 会得到如下输出：
 
-```
+```plain
 Starting resourcemanagers on [vm-01 vm-02]
 Starting nodemanagers
 ```

@@ -47,7 +47,7 @@ sudo mysql_secure_installation
 
 在密码安全性校验步骤，输入 `N` 关闭密码安全性校验：
 
-```
+```plain
 VALIDATE PASSWORD COMPONENT can be used to test passwords
 and improve security. It checks the strength of password
 and allows the users to set only those passwords which are
@@ -58,14 +58,14 @@ Press y|Y for Yes, any other key for No: N
 
 输入新密码：
 
-```
+```plain
 New password: *********
 Re-enter new password: *********
 ```
 
 在删除匿名用户环节，输入 `Y` 删除匿名用户：
 
-```
+```plain
 By default, a MySQL installation has an anonymous user,
 allowing anyone to log into MySQL without having to have
 a user account created for them. This is intended only for
@@ -78,7 +78,7 @@ Remove anonymous users? (Press y|Y for Yes, any other key for No) : Y
 
 输入 `N` 允许远程登录 `root` 用户：
 
-```
+```plain
 Normally, root should only be allowed to connect from
 'localhost'. This ensures that someone cannot guess at
 the root password from the network.
@@ -88,7 +88,7 @@ Disallow root login remotely? (Press y|Y for Yes, any other key for No) : N
 
 输入 `N` 保留 `test` 数据库：
 
-```
+```plain
 By default, MySQL comes with a database named 'test' that
 anyone can access. This is also intended only for testing,
 and should be removed before moving into a production
@@ -99,7 +99,7 @@ Remove test database and access to it? (Press y|Y for Yes, any other key for No)
 
 输入 `Y` 应用设置并生效：
 
-```
+```plain
 Reloading the privilege tables will ensure that all changes
 made so far will take effect immediately.
 
@@ -245,7 +245,7 @@ schematool -dbType mysql -initSchema
 
 出现如下输出时表示元数据初始化成功：
 
-```
+```plain
 Metastore connection URL:	 jdbc:mysql://vm-01:3306/hive
 Metastore Connection Driver :	 com.mysql.cj.jdbc.Driver
 Metastore connection User:	 hive
@@ -266,7 +266,7 @@ hive
 
 出现如下输出时表示启动成功：
 
-```
+```plain
 Hive Session ID = f3edb53b-5037-47c3-b318-75854e2328c5
 
 Logging initialized using configuration in jar:file:/opt/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true

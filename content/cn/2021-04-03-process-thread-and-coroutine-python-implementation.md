@@ -209,7 +209,7 @@ thread_2.start()
 
 可以得到如下输出：
 
-```
+```plain
 Hello, Python
 Hello, Leo
 Hello, Python
@@ -243,7 +243,7 @@ thread_2.start()
 
 可以得到同上面一样的输出：
 
-```
+```plain
 Hello, Python
 Hello, Leo
 Hello, Python
@@ -314,7 +314,7 @@ t2.start()
 
 运行结果如下：
 
-```
+```plain
 Job1: 1
 Job2: 11
 Job2: 21
@@ -385,7 +385,7 @@ t2.start()
 
 运行结果如下：
 
-```
+```plain
 Job1: 1
 Job1: 2
 Job1: 3
@@ -454,7 +454,7 @@ t.start()
 
 运行结果如下：
 
-```
+```plain
 1
 2
 3
@@ -533,7 +533,7 @@ event.set()
 
 运行结果如下：
 
-```
+```plain
 线程 0 启动于 Thu Apr  1 23:12:32 2021
 线程 1 启动于 Thu Apr  1 23:12:32 2021
 线程 2 启动于 Thu Apr  1 23:12:32 2021
@@ -623,7 +623,7 @@ hider.start()
 
 运行结果如下：
 
-```
+```plain
 Seeker: 我把眼睛蒙好了
 Hider: 我藏好了
 Seeker: 我找到你了
@@ -744,7 +744,7 @@ teacher.call('exit')
 
 运行结果如下：
 
-```
+```plain
 开始点名
 老师: 张三
 张三: 到
@@ -845,7 +845,7 @@ print(line_sep)
 
 运行结果如下：
 
-```
+```plain
 ------------------------------------------------------------
 测试线程池
 ------------------------------------------------------------
@@ -920,7 +920,7 @@ print(line_sep)
 
 **容器**是一种把多个元素组织在一起的数据结构，容器中的元素可以逐个迭代获取，可以用 `in` 或 `not in` 判断元素是否包含在容器中。常见的容器对象有：
 
-```
+```plain
 list, deque, ...
 set, frozensets, ...
 dict, defaultdict, OrderedDict, Counter, ...
@@ -944,7 +944,7 @@ print(isinstance(deque('abc'), Iterable))
 
 运行结果如下：
 
-```
+```plain
 True
 True
 True
@@ -1016,7 +1016,7 @@ while True:
 
 运行结果如下：
 
-```
+```plain
 MyList: [0, 1, 2]
 True
 False
@@ -1072,7 +1072,7 @@ print(isinstance(gen, Generator))
 
 运行结果如下：
 
-```
+```plain
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 False
 <generator object <genexpr> at 0x7fdf84a8a430>
@@ -1102,7 +1102,7 @@ print(next(gen))
 
 运行结果如下：
 
-```
+```plain
 0
 1
 2
@@ -1149,7 +1149,7 @@ print(getgeneratorstate(gen))
 
 运行结果如下：
 
-```
+```plain
 GEN_CREATED
 0
 1
@@ -1192,7 +1192,7 @@ print(next(itr))
 
 运行结果如下：
 
-```
+```plain
 0
 [idx: 0, jump: 2]
 2
@@ -1236,7 +1236,7 @@ print(list(new_gen))
 
 运行结果如下：
 
-```
+```plain
 ['L', 'e', 'o', 1, 2, 3, 'name', 'gender', 4, 5, 6, 7]
 ['L', 'e', 'o', 1, 2, 3, 'name', 'gender', 4, 5, 6, 7]
 ```
@@ -1286,7 +1286,7 @@ calc_average.send(None)
 
 运行结果如下：
 
-```
+```plain
 10.0
 15.0
 20.0
@@ -1311,7 +1311,7 @@ print(isinstance(coroutine, Coroutine))
 
 运行结果如下：
 
-```
+```plain
 True
 ```
 
@@ -1336,7 +1336,7 @@ print(isinstance(coroutine, Coroutine))
 
 运行结果如下：
 
-```
+```plain
 True
 False
 ```
@@ -1372,7 +1372,7 @@ loop.run_until_complete(task)
 
 运行结果如下：
 
-```
+```plain
 Hello, World
 ```
 
@@ -1396,7 +1396,7 @@ print(isinstance(task, Future))
 
 运行结果如下：
 
-```
+```plain
 True
 ```
 
@@ -1422,7 +1422,7 @@ print('返回结果：{}'.format(task.result()))
 
 运行结果如下：
 
-```
+```plain
 返回结果：暂停了 2 秒
 ```
 
@@ -1449,7 +1449,7 @@ loop.run_until_complete(task)
 
 运行结果如下：
 
-```
+```plain
 回调返回结果：暂停了 2 秒
 ```
 
@@ -1485,7 +1485,7 @@ for task in tasks:
 
 运行结果如下：
 
-```
+```plain
 等待中 ...
 等待中 ...
 等待中 ...
@@ -1540,7 +1540,7 @@ for result in results:
 
 运行结果如下：
 
-```
+```plain
 等待中 ...
 等待中 ...
 等待中 ...
@@ -1582,7 +1582,7 @@ finally:
 
 执行顺利的话，运行结果如下：
 
-```
+```plain
 Pending
 Running
 Done
@@ -1590,7 +1590,7 @@ Done
 
 如果在启动后按下 <kbd>Ctrl</kbd> + <kbd>C</kbd> 则会触发 `task.cancel()`，运行结果如下：
 
-```
+```plain
 Pending
 Running
 Cancelled
@@ -1623,7 +1623,7 @@ print('第三次完成的任务数：{}'.format(len(dones)))
 
 运行结果如下：
 
-```
+```plain
 第一次完成的任务数：1
 第二次完成的任务数: 4
 第三次完成的任务数：4

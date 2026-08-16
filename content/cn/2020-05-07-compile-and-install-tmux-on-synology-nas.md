@@ -49,7 +49,7 @@ sudo ./EnvDeploy -v 6.2 -p apollolake
 
 请根据自己机器的系统版本和处理器类型自行调整 `-v` 和 `-p` 参数。如果下载速度较慢可以手动从 https://sourceforge.net/projects/dsgpl/files/toolkit/DSM6.2/ 下载下列文件：
 
-```
+```plain
 base_env-6.2.txz
 ds.apollolake-6.2.dev.txz
 ds.apollolake-6.2.env.txz

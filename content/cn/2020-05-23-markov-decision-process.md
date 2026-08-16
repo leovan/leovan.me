@@ -84,7 +84,7 @@ $$`
 
 从而可以产生多种不同的序列，例如：
 
-```
+```plain
 C1 -> C2 -> C3 -> Pass -> Sleep
 C1 -> FB -> FB -> C1 -> C2 -> Sleep
 C1 -> C2 -> C3 -> Pub -> C2 -> C3 -> Pass -> Sleep

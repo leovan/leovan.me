@@ -203,7 +203,7 @@ spark-submit \
 
 ![](/images/cn/2021-06-19-spark-cluster-setup/spark-yarn-all-applications-web.png)
 
-```
+```plain
 Pi is roughly 3.1424791424791425
 ```
 
@@ -370,6 +370,6 @@ print("Pi is roughly %f" % (4.0 * count / n))
 
 运行结果如下：
 
-```
+```plain
 Pi is roughly 3.147160
 ```
