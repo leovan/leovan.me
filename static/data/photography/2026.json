@@ -1,0 +1,64 @@
+{
+  "justifiedGalleryOptions": {
+    "rowHeight": 160,
+    "maxRowHeight": 320,
+    "captions": true,
+    "captionSettings": {
+      "animationDuration": 400,
+      "visibleOpacity": 0.8,
+      "nonVisibleOpacity": 0.0
+    },
+    "cssAnimation": false,
+    "lastRow": "justify",
+    "margins": 6
+  },
+  "lightGalleryOptions": {
+    "autoplayFirstVideo": false,
+    "iframeMaxHeight": "90%",
+    "iframeMaxWidth": "30%"
+  },
+  "items": [
+    {
+      "alt": "荒野小镖客-01",
+      "download": "荒野小镖客-01.jpg",
+      "src": "/images/photography/2026-07-26-bashang-01.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-01-thumbnail.jpg"
+    },
+    {
+      "alt": "荒野小镖客-02",
+      "download": "荒野小镖客-02.jpg",
+      "src": "/images/photography/2026-07-26-bashang-02.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-02-thumbnail.jpg"
+    },
+    {
+      "alt": "荒野小镖客-03",
+      "download": "荒野小镖客-03.jpg",
+      "src": "/images/photography/2026-07-26-bashang-03.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-03-thumbnail.jpg"
+    },
+    {
+      "alt": "荒野小镖客-04",
+      "download": "荒野小镖客-04.jpg",
+      "src": "/images/photography/2026-07-26-bashang-04.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-04-thumbnail.jpg"
+    },
+    {
+      "alt": "荒野小镖客-05",
+      "download": "荒野小镖客-05.jpg",
+      "src": "/images/photography/2026-07-26-bashang-05.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-05-thumbnail.jpg"
+    },
+    {
+      "alt": "荒野小镖客-06",
+      "download": "荒野小镖客-07.jpg",
+      "src": "/images/photography/2026-07-26-bashang-06.jpg",
+      "thumb": "/images/photography/2026-07-26-bashang-06-thumbnail.jpg"
+    },
+    {
+      "alt": "跑起来，自由的跑起来",
+      "iframe": true,
+      "src": "https://v.qq.com/txp/iframe/player.html?vid=e3298urwmt6",
+      "thumb": "/images/photography/2026-09-05-bashang-thumbnail.jpg"
+    }
+  ]
+}

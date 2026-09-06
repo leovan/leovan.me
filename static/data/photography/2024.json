@@ -1,5 +1,6 @@
 {
   "justifiedGalleryOptions": {
+    "rowHeight": 160,
     "captions": true,
     "captionSettings": {
       "animationDuration": 400,

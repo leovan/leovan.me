@@ -14,6 +14,10 @@ disable_highlight: true
 
 <h2 class="center no-anchor">「人生定格」</h2>
 
+## 2026
+
+{{< gallery data="/data/photography/2026.json" >}}
+
 ## 2025
 
 {{< gallery data="/data/photography/2025.json" >}}
